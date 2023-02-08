@@ -13,15 +13,19 @@ namespace PokemonGame
     {
         public static void Initialize()
         {
-
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("Initializing...");
+            Console.WriteLine("done");
         }
 
         public static void LoadContent(ContentManager content)
         {
+            Console.Write("Loading content...");
             ContentCollection.Textures = new()
             {
                 { "Outside", content.Load<Texture2D>("Tilesets\\Outside") }
             };
+            Console.WriteLine("done");
         }
     }
 }
