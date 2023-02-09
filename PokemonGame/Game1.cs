@@ -16,7 +16,11 @@ namespace PokemonGame
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = false;
-            _game = new PokemonGame();
+
+            _graphics.PreferredBackBufferWidth = Settings.DisplayWidth;
+            _graphics.PreferredBackBufferHeight = Settings.DisplayHeight;
+
+            _game = new PokemonGame(_graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight);
         }
 
         protected override void Initialize()
@@ -34,6 +38,7 @@ namespace PokemonGame
 
             Initialization.LoadContent(Content);
             _game.SetDefaultMap();
+            _game.SetPlayer();
 
             // TODO: use this.Content to load your game content here
         }
