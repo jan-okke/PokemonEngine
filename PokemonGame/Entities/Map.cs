@@ -10,9 +10,11 @@ namespace PokemonGame.Entities
 {
     public class Map
     {
+        private const int TilesetPixels = 32;
+
         private int Width;
         private int Height;
-        private Texture2D Tileset;
+        private TextureAtlas Tileset;
         private Dictionary<int, List<Tile>> TileData; // Layer = key, Tile = value
         public string Name { get; set; }
 
@@ -29,25 +31,32 @@ namespace PokemonGame.Entities
             string attribute;
             string value;
             Map map = new();
-            foreach (string line in File.ReadAllLines(fileName))
-            {
-                var split = line.Split('=');
-                attribute = split[0];
-                value = split[1];
-                try
+            try 
+	    {
+                foreach (string line in File.ReadAllLines(fileName))
                 {
-                    switch (attribute)
+                    var split = line.Split('=');
+                    attribute = split[0];
+                    value = split[1];
+                    try
                     {
-                        case "Name": map.Name = value; break;
-                        case "Width": map.Width = int.Parse(value); break;
-                        case "Height": map.Height = int.Parse(value); break;
-                        case "Tileset": map.Tileset = ContentCollection.Textures[value]; break;
+                        switch (attribute)
+                        {
+                            case "Name": map.Name = value; break;
+                            case "Width": map.Width = int.Parse(value); break;
+                            case "Height": map.Height = int.Parse(value); break;
+                            case "Tileset": map.Tileset = new TextureAtlas(ContentCollection.Textures[value], TilesetPixels); break;
+                        }
+                    }
+                    catch (KeyNotFoundException) 
+                    {
+                        Console.WriteLine($"Error loading Tileset from {fileName}");
                     }
                 }
-                catch (KeyNotFoundException) 
-                {
-                    Console.WriteLine("ERROR.");
-                }
+            }
+            catch (FileNotFoundException)
+            {
+                Console.WriteLine($"Error loading file {fileName}");
             }
             map.TileData = new(); // TODO
             return map; // TODO
