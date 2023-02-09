@@ -17,7 +17,12 @@ namespace PokemonGame.Entities
 
         public TextureAtlas TextureAtlas { get; set; }
         public PlayerState State { get; set; }
-        public int RunningState { get; set; }
+        private int _runningState;
+        public int RunningState 
+        {
+            get => _runningState;
+            set { _runningState = value > 3 ? 0 : value; } // cycle between 0-1-2-3-0...
+        }
 
         public Player(Texture2D texture, int splitSize)
         {

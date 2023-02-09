@@ -11,6 +11,8 @@ namespace PokemonGame
 {
     public class PokemonGame
     {
+        private const int PlayerMoves = 4;
+
         private Map CurrentMap;
         private Player Player;
         private int Width;
@@ -31,13 +33,17 @@ namespace PokemonGame
                 switch (k)
                 {
                     case Keys.Left:
-                        Player.X--; Player.State = Enums.PlayerState.Left; break;
+                        if (Player.State == Enums.PlayerState.Left) { Player.X -= PlayerMoves; Player.RunningState++; break; }
+                        Player.State = Enums.PlayerState.Left; Player.RunningState = 0; break;
                     case Keys.Right:
-                        Player.X++; Player.State = Enums.PlayerState.Right; break;
+                        if (Player.State == Enums.PlayerState.Right) { Player.X += PlayerMoves; Player.RunningState++; break; }
+                        Player.State = Enums.PlayerState.Right; Player.RunningState = 0; break;
                     case Keys.Down:
-                        Player.Y--; Player.State = Enums.PlayerState.Down; break;
+                        if (Player.State == Enums.PlayerState.Down) { Player.Y -= PlayerMoves; Player.RunningState++; break; }
+                        Player.State = Enums.PlayerState.Down; Player.RunningState = 0; break;
                     case Keys.Up:
-                        Player.Y++; Player.State = Enums.PlayerState.Up; break;
+                        if (Player.State == Enums.PlayerState.Up) { Player.Y += PlayerMoves; Player.RunningState++; break; }
+                        Player.State = Enums.PlayerState.Up; Player.RunningState = 0; break;
                 }
             }
             DebugConsole.WriteLine(Player.Position);
