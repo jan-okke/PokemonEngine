@@ -28,8 +28,8 @@ namespace PokemonGame
         }
         public void Update(KeyboardState keyboardState)
         {
-            DebugConsole.WriteLine(Player.InAnimation);
-            DebugConsole.WriteLine(Player.Position);
+            //DebugConsole.WriteLine(Player.InAnimation);
+            //DebugConsole.WriteLine(Player.Position);
             if (Player.InAnimation)
             {
                 switch (Player.State)
