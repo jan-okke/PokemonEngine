@@ -28,9 +28,23 @@ namespace PokemonGame
         }
         public void Update(KeyboardState keyboardState)
         {
-            foreach (Keys k in keyboardState.GetPressedKeys())
+            DebugConsole.WriteLine(Player.InAnimation);
+            DebugConsole.WriteLine(Player.Position);
+            if (Player.InAnimation)
             {
-                switch (k)
+                switch (Player.State)
+                {
+                    case Enums.PlayerState.Left: Player.X -= PlayerMoves; break;
+                    case Enums.PlayerState.Right: Player.X += PlayerMoves; break;
+                    case Enums.PlayerState.Down: Player.Y -= PlayerMoves; break;
+                    case Enums.PlayerState.Up: Player.Y += PlayerMoves; break;
+                }
+                return;
+            }
+            var keys = keyboardState.GetPressedKeys();
+            if (keys.Length > 0)
+            {
+                switch (keys[0])
                 {
                     case Keys.Left:
                         if (Player.State == Enums.PlayerState.Left) { Player.X -= PlayerMoves; Player.RunningState++; break; }
@@ -46,7 +60,6 @@ namespace PokemonGame
                         Player.State = Enums.PlayerState.Up; Player.RunningState = 0; break;
                 }
             }
-            DebugConsole.WriteLine(Player.Position);
         }
         public void Draw(SpriteBatch spriteBatch)
         {

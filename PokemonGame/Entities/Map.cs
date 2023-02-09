@@ -88,7 +88,7 @@ namespace PokemonGame.Entities
             }
             // Draw Player
             var playerTexture = player.GetCurrentTexture();
-            spriteBatch.Draw(playerTexture, new Rectangle(width / 2 - playerTexture.Width, height / 2 - playerTexture.Height, playerTexture.Width, playerTexture.Height), Color.White);
+            spriteBatch.Draw(playerTexture, new Rectangle(width / 2 - playerTexture.Width - TilesetPixels / 2, height / 2 - playerTexture.Height - TilesetPixels / 2, playerTexture.Width, playerTexture.Height), Color.White);
             //
             spriteBatch.End();
         }

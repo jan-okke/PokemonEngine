@@ -18,6 +18,8 @@ namespace PokemonGame.Entities
         public TextureAtlas TextureAtlas { get; set; }
         public PlayerState State { get; set; }
         private int _runningState;
+
+        public bool InAnimation => X % 32 != 0 || Y % 32 != 0;
         public int RunningState 
         {
             get => _runningState;
