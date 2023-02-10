@@ -60,6 +60,10 @@ namespace PokemonGame
                         Player.State = Enums.PlayerState.Up; Player.RunningState = 0; break;
                 }
             }
+            else
+            {
+                Player.RunningState = 0;
+            }
         }
         public void Draw(SpriteBatch spriteBatch)
         {
