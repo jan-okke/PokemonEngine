@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using PokemonGame.Static;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -17,7 +18,8 @@ namespace PokemonGame.Entities
 
         private int Width;
         private int Height;
-        private TextureAtlas Tileset;
+        private TextureAtlas TilesetAtlas;
+        private Tileset Tileset;
         private Dictionary<int, List<int>> TileData; // Layer = key, int = value
         public string Name { get; set; }
 
@@ -28,6 +30,19 @@ namespace PokemonGame.Entities
             Name = name;
             Width = width;
             Height = height;
+        }
+        public bool IsTilePassable(int x, int y)
+        {
+            if (x < 0 || y < 0 || x > Width || y > Height) return false;
+            try
+            {
+                return Tileset.GetMovementPermission(TileData[1][x + y * Width + 1]) && Tileset.GetMovementPermission(TileData[2][x + y * Width + 1]) && Tileset.GetMovementPermission(TileData[3][x + y * Width + 1]);
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                DebugConsole.WriteLine($"Warning - TileData at {x} : {y} was out of range.", ConsoleColor.Yellow);
+                return false;
+            }
         }
         public static Map LoadFromFile(string fileName)
         {
@@ -50,7 +65,8 @@ namespace PokemonGame.Entities
                             case "Name": map.Name = value; break;
                             case "Width": map.Width = int.Parse(value); break;
                             case "Height": map.Height = int.Parse(value); break;
-                            case "Tileset": map.Tileset = new TextureAtlas(ContentCollection.Textures[value], TilesetPixels); break;
+                            case "Tileset": map.TilesetAtlas = new TextureAtlas(ContentCollection.Textures[value], TilesetPixels); break;
+                            case "TilesetKey": map.Tileset = TilesetCollection.Tilesets[int.Parse(value)]; break;
                             case "Tiledata1": map.TileData.Add(1, value.Split(',').Select(s => int.Parse(s)).ToList()); break;
                             case "Tiledata2": map.TileData.Add(2, value.Split(',').Select(s => int.Parse(s)).ToList()); break;
                             case "Tiledata3": map.TileData.Add(3, value.Split(',').Select(s => int.Parse(s)).ToList()); break;
@@ -58,13 +74,17 @@ namespace PokemonGame.Entities
                     }
                     catch (KeyNotFoundException) 
                     {
-                        DebugConsole.WriteLine($"Error loading Tileset from {fileName}", ConsoleColor.Red);
+                        DebugConsole.WriteLine($"error!\nError loading Tileset from {fileName}", ConsoleColor.Red);
+                    }
+                    catch (NullReferenceException)
+                    {
+                        DebugConsole.WriteLine("error!\nMissing Initialization!", ConsoleColor.Red);
                     }
                 }
             }
             catch (FileNotFoundException)
             {
-                DebugConsole.WriteLine($"Error loading file {fileName}", ConsoleColor.Red);
+                DebugConsole.WriteLine($"error!\nError loading file {fileName}", ConsoleColor.Red);
             }
             DebugConsole.WriteLine("done", ConsoleColor.Green);
             return map;
@@ -81,7 +101,7 @@ namespace PokemonGame.Entities
                 foreach (int tile in tileData)
                 {
                     if (tile != 0) 
-                    spriteBatch.Draw(Tileset.GetTextureAt(tile % TilesetWidth, tile / TilesetWidth), new Rectangle(x * TilesetPixels - player.X, y * TilesetPixels - player.Y, TilesetPixels, TilesetPixels), Color.White);
+                    spriteBatch.Draw(TilesetAtlas.GetTextureAt(tile % TilesetWidth, tile / TilesetWidth), new Rectangle(x * TilesetPixels - player.X, y * TilesetPixels - player.Y, TilesetPixels, TilesetPixels), Color.White);
                     x++;
                     if (x > Width) { x = 0; y++; }
                     if (y > Height) { break; }

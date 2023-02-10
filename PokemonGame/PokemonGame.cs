@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using PokemonGame.Entities;
+using PokemonGame.Static;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,16 +50,16 @@ namespace PokemonGame
                 switch (keys[0])
                 {
                     case Keys.Left or Keys.A:
-                        if (Player.State == Enums.PlayerState.Left) { Player.X -= PlayerMoves; Player.RunningState++; break; }
+                        if (Player.State == Enums.PlayerState.Left && CurrentMap.IsTilePassable(Player.Position.X - 1, Player.Position.Y)) { Player.X -= PlayerMoves; Player.RunningState++; break; }
                         Player.State = Enums.PlayerState.Left; Player.RunningState = 0; break;
                     case Keys.Right or Keys.D:
-                        if (Player.State == Enums.PlayerState.Right) { Player.X += PlayerMoves; Player.RunningState++; break; }
+                        if (Player.State == Enums.PlayerState.Right && CurrentMap.IsTilePassable(Player.Position.X + 1, Player.Position.Y)) { Player.X += PlayerMoves; Player.RunningState++; break; }
                         Player.State = Enums.PlayerState.Right; Player.RunningState = 0; break;
                     case Keys.Down or Keys.S:
-                        if (Player.State == Enums.PlayerState.Down) { Player.Y += PlayerMoves; Player.RunningState++; break; }
+                        if (Player.State == Enums.PlayerState.Down && CurrentMap.IsTilePassable(Player.Position.X, Player.Position.Y + 1)) { Player.Y += PlayerMoves; Player.RunningState++; break; }
                         Player.State = Enums.PlayerState.Down; Player.RunningState = 0; break;
                     case Keys.Up or Keys.W:
-                        if (Player.State == Enums.PlayerState.Up) { Player.Y -= PlayerMoves; Player.RunningState++; break; }
+                        if (Player.State == Enums.PlayerState.Up && CurrentMap.IsTilePassable(Player.Position.X, Player.Position.Y - 1)) { Player.Y -= PlayerMoves; Player.RunningState++; break; }
                         Player.State = Enums.PlayerState.Up; Player.RunningState = 0; break;
                     // if some other key is pressed, ignore it.
                     default:

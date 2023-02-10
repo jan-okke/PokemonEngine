@@ -37,6 +37,8 @@ namespace PokemonGame
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             Initialization.LoadContent(Content);
+            Initialization.LoadTilesets();
+
             _game.SetDefaultMap();
             _game.SetPlayer();
             _game.SetPlayerCoord(2, 2);

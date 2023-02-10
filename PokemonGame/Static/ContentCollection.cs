@@ -5,14 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PokemonGame
+namespace PokemonGame.Static
 {
     public class ContentCollection
     {
-        public static Dictionary<string, Texture2D> Textures 
-        { 
-            get; 
-            set; 
+        public static Dictionary<string, Texture2D> Textures
+        {
+            get;
+            set;
         }
     }
 }
