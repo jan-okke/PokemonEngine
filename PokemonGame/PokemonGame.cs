@@ -28,8 +28,7 @@ namespace PokemonGame
         }
         public void Update(KeyboardState keyboardState)
         {
-            //DebugConsole.WriteLine(Player.InAnimation);
-            //DebugConsole.WriteLine(Player.Position);
+            // if the player is currently in an animation, continue animation
             if (Player.InAnimation)
             {
                 switch (Player.State)
@@ -41,25 +40,30 @@ namespace PokemonGame
                 }
                 return;
             }
+            // otherwise get the key press
             var keys = keyboardState.GetPressedKeys();
             if (keys.Length > 0)
             {
                 switch (keys[0])
                 {
-                    case Keys.Left:
+                    case Keys.Left or Keys.A:
                         if (Player.State == Enums.PlayerState.Left) { Player.X -= PlayerMoves; Player.RunningState++; break; }
                         Player.State = Enums.PlayerState.Left; Player.RunningState = 0; break;
-                    case Keys.Right:
+                    case Keys.Right or Keys.D:
                         if (Player.State == Enums.PlayerState.Right) { Player.X += PlayerMoves; Player.RunningState++; break; }
                         Player.State = Enums.PlayerState.Right; Player.RunningState = 0; break;
-                    case Keys.Down:
+                    case Keys.Down or Keys.S:
                         if (Player.State == Enums.PlayerState.Down) { Player.Y -= PlayerMoves; Player.RunningState++; break; }
                         Player.State = Enums.PlayerState.Down; Player.RunningState = 0; break;
-                    case Keys.Up:
+                    case Keys.Up or Keys.W:
                         if (Player.State == Enums.PlayerState.Up) { Player.Y += PlayerMoves; Player.RunningState++; break; }
                         Player.State = Enums.PlayerState.Up; Player.RunningState = 0; break;
+                    // if some other key is pressed, ignore it.
+                    default:
+                        Player.RunningState = 0; break;
                 }
             }
+            // if no key pressed, return to default state
             else
             {
                 Player.RunningState = 0;
