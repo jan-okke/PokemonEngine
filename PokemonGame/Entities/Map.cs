@@ -81,7 +81,7 @@ namespace PokemonGame.Entities
                 foreach (int tile in tileData)
                 {
                     if (tile != 0) 
-                    spriteBatch.Draw(Tileset.GetTextureAt(tile % TilesetWidth, tile / TilesetWidth), new Rectangle(x * TilesetPixels - player.X, y * TilesetPixels + player.Y, TilesetPixels, TilesetPixels), Color.White);
+                    spriteBatch.Draw(Tileset.GetTextureAt(tile % TilesetWidth, tile / TilesetWidth), new Rectangle(x * TilesetPixels - player.X, y * TilesetPixels - player.Y, TilesetPixels, TilesetPixels), Color.White);
                     x++;
                     if (x > Width) { x = 0; y++; }
                     if (y > Height) { break; }

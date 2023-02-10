@@ -35,11 +35,12 @@ namespace PokemonGame
                 {
                     case Enums.PlayerState.Left: Player.X -= PlayerMoves; break;
                     case Enums.PlayerState.Right: Player.X += PlayerMoves; break;
-                    case Enums.PlayerState.Down: Player.Y -= PlayerMoves; break;
-                    case Enums.PlayerState.Up: Player.Y += PlayerMoves; break;
+                    case Enums.PlayerState.Down: Player.Y += PlayerMoves; break;
+                    case Enums.PlayerState.Up: Player.Y -= PlayerMoves; break;
                 }
                 return;
             }
+            DebugConsole.WriteLine(Player.Position);
             // otherwise get the key press
             var keys = keyboardState.GetPressedKeys();
             if (keys.Length > 0)
@@ -53,10 +54,10 @@ namespace PokemonGame
                         if (Player.State == Enums.PlayerState.Right) { Player.X += PlayerMoves; Player.RunningState++; break; }
                         Player.State = Enums.PlayerState.Right; Player.RunningState = 0; break;
                     case Keys.Down or Keys.S:
-                        if (Player.State == Enums.PlayerState.Down) { Player.Y -= PlayerMoves; Player.RunningState++; break; }
+                        if (Player.State == Enums.PlayerState.Down) { Player.Y += PlayerMoves; Player.RunningState++; break; }
                         Player.State = Enums.PlayerState.Down; Player.RunningState = 0; break;
                     case Keys.Up or Keys.W:
-                        if (Player.State == Enums.PlayerState.Up) { Player.Y += PlayerMoves; Player.RunningState++; break; }
+                        if (Player.State == Enums.PlayerState.Up) { Player.Y -= PlayerMoves; Player.RunningState++; break; }
                         Player.State = Enums.PlayerState.Up; Player.RunningState = 0; break;
                     // if some other key is pressed, ignore it.
                     default:
