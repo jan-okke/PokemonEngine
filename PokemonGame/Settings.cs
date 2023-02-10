@@ -8,8 +8,8 @@ namespace PokemonGame
 {
     public class Settings
     {
-        public const int DisplayWidth = 640;
-        public const int DisplayHeight = 480;
+        public const int DisplayWidth = 32 * 20;
+        public const int DisplayHeight = 32 * 15;
         public const int StartMapID = 1;
     }
 }

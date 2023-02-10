@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using PokemonGame.Entities;
 using System;
@@ -83,6 +84,10 @@ namespace PokemonGame
         public void SetPlayer()
         {
             Player = new Player(ContentCollection.Textures["Player"], 64);
+        }
+        public void SetPlayerCoord(int x, int y)
+        {
+            Player.Position = new Point(x, y);
         }
     }
 }

@@ -39,6 +39,7 @@ namespace PokemonGame
             Initialization.LoadContent(Content);
             _game.SetDefaultMap();
             _game.SetPlayer();
+            _game.SetPlayerCoord(2, 2);
 
             // TODO: use this.Content to load your game content here
         }

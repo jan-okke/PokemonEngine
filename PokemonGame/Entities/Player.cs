@@ -13,7 +13,11 @@ namespace PokemonGame.Entities
     {
         public int X { get; set; }
         public int Y { get; set; }
-        public Point Position => new Point(X, Y);
+        public Point Position 
+        { 
+            get => new Point((X - 64 + Settings.DisplayWidth / 2) / 32, (Y - 48 + Settings.DisplayHeight / 2) / 32);
+            set { X = 64 + value.X * 32 - Settings.DisplayWidth / 2; Y = 48 + value.Y * 32 - Settings.DisplayHeight / 2; }
+        }
 
         public TextureAtlas TextureAtlas { get; set; }
         public PlayerState State { get; set; }
