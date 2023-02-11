@@ -16,14 +16,15 @@ namespace PokemonGame.Entities
         private const int TilesetWidth = 8;
         private const int Layers = 3;
 
-        private int Width;
-        private int Height;
+        public int Width { get; private set; }
+        public int Height { get; private set; }
         private TextureAtlas TilesetAtlas;
         private Tileset Tileset;
         private Dictionary<int, List<int>> TileData; // Layer = key, int = value
         public string Name { get; set; }
+        public List<Event> Events;
 
-        private Map() { }
+        private Map() { Events = new(); }
 
         public Map(string name, int width, int height)
         {
@@ -65,6 +66,7 @@ namespace PokemonGame.Entities
                             case "Name": map.Name = value; break;
                             case "Width": map.Width = int.Parse(value); break;
                             case "Height": map.Height = int.Parse(value); break;
+                            case "Events": map.Events.AddRange(value.Split(';').Select(s => Event.Parse(s))); break;
                             case "Tileset": map.TilesetAtlas = new TextureAtlas(ContentCollection.Textures[value], TilesetPixels); break;
                             case "TilesetKey": map.Tileset = TilesetCollection.Tilesets[int.Parse(value)]; break;
                             case "Tiledata1": map.TileData.Add(1, value.Split(',').Select(s => int.Parse(s)).ToList()); break;
@@ -91,7 +93,6 @@ namespace PokemonGame.Entities
         }
         public void Draw(int width, int height, Player player, SpriteBatch spriteBatch)
         {
-            spriteBatch.Begin();
             // Draw Map
             for (int layer = 1; layer <= Layers; layer++) 
             {
@@ -111,7 +112,6 @@ namespace PokemonGame.Entities
             var playerTexture = player.GetCurrentTexture();
             spriteBatch.Draw(playerTexture, new Rectangle(width / 2 - playerTexture.Width - TilesetPixels / 2, height / 2 - playerTexture.Height - TilesetPixels / 2, playerTexture.Width, playerTexture.Height), Color.White);
             //
-            spriteBatch.End();
         }
     }
 }

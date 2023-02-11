@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using PokemonGame.Entities;
+using PokemonGame.Enums;
 using PokemonGame.Static;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,8 @@ namespace PokemonGame
         private Player Player;
         private int Width;
         private int Height;
+
+        public TextBox TextBox;
         public PokemonGame(int preferredBackBufferWidth, int preferredBackBufferHeight) 
         {
             Width = preferredBackBufferWidth;
@@ -28,6 +31,34 @@ namespace PokemonGame
         {
             CurrentMap = map;
         }
+        private void HandleEvents()
+        {
+            foreach (Event e in CurrentMap.Events)
+            {
+                if (e.Handled) continue;
+                if (e.Trigger == EventTrigger.Touch && e.Tile == Player.Position.X + Player.Position.Y * CurrentMap.Width)
+                {
+                    e.Handle(this);
+                } 
+            }
+        }
+        private void HandleEventsActiveButton()
+        {
+            int? tile =
+                Player.State == PlayerState.Left ? Player.Position.X - 1 + Player.Position.Y * CurrentMap.Width :
+                Player.State == PlayerState.Right ? Player.Position.X + 1 + Player.Position.Y * CurrentMap.Width :
+                Player.State == PlayerState.Down ? Player.Position.X + (Player.Position.Y + 1) * CurrentMap.Width :
+                Player.State == PlayerState.Up ? Player.Position.X + (Player.Position.Y - 1) * CurrentMap.Width : null;
+            if (tile is null) { DebugConsole.WriteLine("Invalid Player State!", ConsoleColor.Red); return; }
+            foreach (Event e in CurrentMap.Events)
+            {
+                if (e.Handled) continue;
+                if (e.Trigger == EventTrigger.Button && e.Tile == tile)
+                {
+                    e.Handle(this);
+                }
+            }
+        }
         public void Update(KeyboardState keyboardState)
         {
             // if the player is currently in an animation, continue animation
@@ -35,32 +66,37 @@ namespace PokemonGame
             {
                 switch (Player.State)
                 {
-                    case Enums.PlayerState.Left: Player.X -= PlayerMoves; break;
-                    case Enums.PlayerState.Right: Player.X += PlayerMoves; break;
-                    case Enums.PlayerState.Down: Player.Y += PlayerMoves; break;
-                    case Enums.PlayerState.Up: Player.Y -= PlayerMoves; break;
+                    case PlayerState.Left: Player.X -= PlayerMoves; break;
+                    case PlayerState.Right: Player.X += PlayerMoves; break;
+                    case PlayerState.Down: Player.Y += PlayerMoves; break;
+                    case PlayerState.Up: Player.Y -= PlayerMoves; break;
                 }
                 return;
             }
-            DebugConsole.WriteLine(Player.Position);
+            //DebugConsole.WriteLine(Player.Position);
+
+            HandleEvents();
             // otherwise get the key press
             var keys = keyboardState.GetPressedKeys();
             if (keys.Length > 0)
             {
                 switch (keys[0])
                 {
-                    case Keys.Left or Keys.A:
-                        if (Player.State == Enums.PlayerState.Left && CurrentMap.IsTilePassable(Player.Position.X - 1, Player.Position.Y)) { Player.X -= PlayerMoves; Player.RunningState++; break; }
-                        Player.State = Enums.PlayerState.Left; Player.RunningState = 0; break;
-                    case Keys.Right or Keys.D:
-                        if (Player.State == Enums.PlayerState.Right && CurrentMap.IsTilePassable(Player.Position.X + 1, Player.Position.Y)) { Player.X += PlayerMoves; Player.RunningState++; break; }
-                        Player.State = Enums.PlayerState.Right; Player.RunningState = 0; break;
-                    case Keys.Down or Keys.S:
-                        if (Player.State == Enums.PlayerState.Down && CurrentMap.IsTilePassable(Player.Position.X, Player.Position.Y + 1)) { Player.Y += PlayerMoves; Player.RunningState++; break; }
-                        Player.State = Enums.PlayerState.Down; Player.RunningState = 0; break;
-                    case Keys.Up or Keys.W:
-                        if (Player.State == Enums.PlayerState.Up && CurrentMap.IsTilePassable(Player.Position.X, Player.Position.Y - 1)) { Player.Y -= PlayerMoves; Player.RunningState++; break; }
-                        Player.State = Enums.PlayerState.Up; Player.RunningState = 0; break;
+                    case Keys.A:
+                        HandleEventsActiveButton();
+                        Player.RunningState = 0; break;
+                    case Keys.Left:
+                        if (Player.State == PlayerState.Left && CurrentMap.IsTilePassable(Player.Position.X - 1, Player.Position.Y)) { Player.X -= PlayerMoves; Player.RunningState++; break; }
+                        Player.State = PlayerState.Left; Player.RunningState = 0; break;
+                    case Keys.Right:
+                        if (Player.State == PlayerState.Right && CurrentMap.IsTilePassable(Player.Position.X + 1, Player.Position.Y)) { Player.X += PlayerMoves; Player.RunningState++; break; }
+                        Player.State = PlayerState.Right; Player.RunningState = 0; break;
+                    case Keys.Down:
+                        if (Player.State == PlayerState.Down && CurrentMap.IsTilePassable(Player.Position.X, Player.Position.Y + 1)) { Player.Y += PlayerMoves; Player.RunningState++; break; }
+                        Player.State = PlayerState.Down; Player.RunningState = 0; break;
+                    case Keys.Up:
+                        if (Player.State == PlayerState.Up && CurrentMap.IsTilePassable(Player.Position.X, Player.Position.Y - 1)) { Player.Y -= PlayerMoves; Player.RunningState++; break; }
+                        Player.State = PlayerState.Up; Player.RunningState = 0; break;
                     // if some other key is pressed, ignore it.
                     default:
                         Player.RunningState = 0; break;
@@ -74,7 +110,19 @@ namespace PokemonGame
         }
         public void Draw(SpriteBatch spriteBatch)
         {
+            spriteBatch.Begin();
+            DrawTextBox(spriteBatch);
             CurrentMap.Draw(Width, Height, Player, spriteBatch);
+            spriteBatch.End();
+        }
+        private void DrawTextBox(SpriteBatch spriteBatch)
+        {
+            if (TextBox != null) 
+            {
+                DebugConsole.WriteLine(TextBox.Text);
+                //spriteBatch.DrawString() => TODO
+                TextBox = null;
+            }
         }
 
         public void SetDefaultMap()
