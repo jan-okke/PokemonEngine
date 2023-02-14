@@ -57,7 +57,7 @@ namespace PokemonGame.Entities
             e.Command = GetEventCommand(int.Parse(split[1]));
             e.Trigger = GetEventTrigger(int.Parse(split[2]));
             e.Args = split[3].Split(",");
-            e.AutoHandle = split.Length > 3 ? split[4] == "false" ? false : true : true;
+            e.AutoHandle = split.Length > 4 ? split[4] == "false" ? false : true : true;
             e.Handled = false;
             return e;
         }
