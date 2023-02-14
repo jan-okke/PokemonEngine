@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace PokemonGame.Enums
 {
-    public enum EventCommand
+    public enum EventCommandType
     {
         TextCommand = 0,
-
     }
 }

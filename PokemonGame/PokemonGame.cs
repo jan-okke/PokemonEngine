@@ -20,11 +20,12 @@ namespace PokemonGame
         private int Width;
         private int Height;
 
-        public TextBox TextBox;
+        public TextQueue TextQueue { get; set; }
         public PokemonGame(int preferredBackBufferWidth, int preferredBackBufferHeight) 
         {
             Width = preferredBackBufferWidth;
             Height = preferredBackBufferHeight;
+            TextQueue = new TextQueue();
         }
         public void SetMap(Map map)
         {
@@ -116,11 +117,9 @@ namespace PokemonGame
         }
         private void DrawTextBox(SpriteBatch spriteBatch)
         {
-            if (TextBox != null) 
+            if (TextQueue.HasNext())
             {
-                DebugConsole.WriteLine(TextBox.Text);
-                //spriteBatch.DrawString() => TODO
-                TextBox = null;
+                DebugConsole.WriteLine(TextQueue.Next());
             }
         }
 

@@ -10,9 +10,8 @@ namespace PokemonGame.Entities
     public class Event
     {
         public int Tile { get; set; }
-        public EventCommand Command { get; set; }
+        public List<EventCommand> Commands { get; set; }
         public EventTrigger Trigger { get; set; }
-        public string[] Args { get; set; }
         public bool Handled { get; private set; }
         private bool AutoHandle;
         private Event() 
@@ -20,20 +19,19 @@ namespace PokemonGame.Entities
             Handled = false;
             AutoHandle = true;
         }
-        public Event(int tile, EventCommand command, EventTrigger trigger, string[] args) 
+        public Event(int tile, List<EventCommand> commands, EventTrigger trigger) 
         {
             Tile = tile;
-            Command = command;
+            Commands = commands;
             Trigger = trigger;
-            Args = args;
             Handled = false;
             AutoHandle = true;
         }
-        private static EventCommand GetEventCommand(int id)
+        private static EventCommandType GetEventCommandType(int id)
         {
             return id switch
             {
-                0 => EventCommand.TextCommand,
+                0 => EventCommandType.TextCommand,
                 _ => throw new ArgumentException(null, nameof(id)),
             };
         }
@@ -52,22 +50,40 @@ namespace PokemonGame.Entities
             // Remove first and last char { and }
             eventData = eventData.Remove(eventData.Length - 1, 1)[1..];
             Event e = new();
-            var split = eventData.Split(',');
-            e.Tile = int.Parse(split[0]);
-            e.Command = GetEventCommand(int.Parse(split[1]));
-            e.Trigger = GetEventTrigger(int.Parse(split[2]));
-            e.Args = split[3].Split(",");
-            e.AutoHandle = split.Length > 4 ? split[4] == "false" ? false : true : true;
+            var tileData = eventData.Substring(0, eventData.IndexOf(','));
+            eventData = eventData.Substring(eventData.IndexOf(',') + 1);
+            var triggerData = eventData.Substring(0, eventData.IndexOf(','));
+            eventData = eventData.Substring(eventData.IndexOf(',') + 1);
+            e.Tile = int.Parse(tileData);
+            e.Trigger = GetEventTrigger(int.Parse(triggerData));
+            e.Commands = new();
+            eventData = eventData[1..];
+            var newEventData = eventData;
+            foreach (string s in eventData.Substring(0, eventData.IndexOf(']')).Split('|'))
+            {
+                var s_split = s.Split(',');
+                var commandId = s_split[0];
+                var args = s_split[1].Split(','); // TODO this wont work lol
+                e.Commands.Add(new EventCommand(GetEventCommandType(int.Parse(commandId)), args));
+                newEventData = newEventData.Substring(s.Length + 1);
+            }
+            var split = newEventData.Split(',');
+            e.AutoHandle = split.Length > 1 ? split[1] == "false" ? false : true : true;
             e.Handled = false;
             return e;
         }
         public bool Handle(PokemonGame game)
         {
-            switch (Command)
+            foreach (var cmd in Commands) 
             {
-                case EventCommand.TextCommand:
-                    game.TextBox = new TextBox() { Text = Args[0] }; break;
+                switch (cmd.CommandType)
+                {
+                    case EventCommandType.TextCommand:
+                        game.TextQueue.Add(cmd.Args[0]);
+                        break;
+                }
             }
+            
             if (AutoHandle) Handled = true;
             return true;
         }

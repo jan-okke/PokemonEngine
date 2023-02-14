@@ -1,3 +1,13 @@
 ﻿
+using System;
+
 using var game = new PokemonGame.Game1();
-game.Run();
+try 
+{
+    game.Run();
+}
+catch (Exception e)
+{
+    Console.WriteLine(e);
+    Console.ReadLine();
+}
