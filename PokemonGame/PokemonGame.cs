@@ -134,6 +134,25 @@ namespace PokemonGame
                     Player.Y += PlayerMoves; break;
             }
         }
+        public void RotatePlayer(string direction)
+        {
+            // This method should only be called by Events since it bypasses Collision Detection.
+            switch (direction)
+            {
+                case "left" or "Left":
+                    Player.State = PlayerState.Left;
+                    break;
+                case "right" or "Right":
+                    Player.State = PlayerState.Right;
+                    break;
+                case "up" or "Up":
+                    Player.State = PlayerState.Up;
+                    break;
+                case "down" or "Down":
+                    Player.State = PlayerState.Down;
+                    break;
+            }
+        }
         private void DrawTextBox(SpriteBatch spriteBatch)
         {
             if (TextQueue.HasNext())

@@ -33,6 +33,7 @@ namespace PokemonGame.Entities
             {
                 0 => EventCommandType.TextCommand,
                 1 => EventCommandType.MoveCommmand,
+                2 => EventCommandType.RotateCommand,
                 _ => throw new ArgumentException(null, nameof(id)),
             };
         }
@@ -84,6 +85,9 @@ namespace PokemonGame.Entities
                         break;
                     case EventCommandType.MoveCommmand:
                         game.MovePlayer(cmd.Args[0]);
+                        break;
+                    case EventCommandType.RotateCommand:
+                        game.RotatePlayer(cmd.Args[0]);
                         break;
                 }
             }
