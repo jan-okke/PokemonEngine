@@ -14,9 +14,11 @@ namespace PokemonGame.Entities
         public EventTrigger Trigger { get; set; }
         public string[] Args { get; set; }
         public bool Handled { get; private set; }
+        private bool AutoHandle;
         private Event() 
         {
             Handled = false;
+            AutoHandle = true;
         }
         public Event(int tile, EventCommand command, EventTrigger trigger, string[] args) 
         {
@@ -25,6 +27,7 @@ namespace PokemonGame.Entities
             Trigger = trigger;
             Args = args;
             Handled = false;
+            AutoHandle = true;
         }
         private static EventCommand GetEventCommand(int id)
         {
@@ -54,6 +57,7 @@ namespace PokemonGame.Entities
             e.Command = GetEventCommand(int.Parse(split[1]));
             e.Trigger = GetEventTrigger(int.Parse(split[2]));
             e.Args = split[3].Split(",");
+            e.AutoHandle = split.Length > 3 ? split[4] == "false" ? false : true : true;
             e.Handled = false;
             return e;
         }
@@ -64,7 +68,7 @@ namespace PokemonGame.Entities
                 case EventCommand.TextCommand:
                     game.TextBox = new TextBox() { Text = Args[0] }; break;
             }
-            Handled = true;
+            if (AutoHandle) Handled = true;
             return true;
         }
     }

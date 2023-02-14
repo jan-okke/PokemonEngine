@@ -12,5 +12,6 @@ namespace PokemonGame
         public const int DisplayHeight = 32 * 15;
         public const int StartMapID = 1;
         public const int FrameRate = 60;
+        public const int PlayerMoveSpeed = 4;
     }
 }

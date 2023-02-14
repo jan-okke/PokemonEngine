@@ -14,8 +14,7 @@ namespace PokemonGame
 {
     public class PokemonGame
     {
-        private const int PlayerMoves = 4;
-
+        private const int PlayerMoves = Settings.PlayerMoveSpeed;
         private Map CurrentMap;
         private Player Player;
         private int Width;
