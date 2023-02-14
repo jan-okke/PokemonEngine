@@ -80,6 +80,7 @@ namespace PokemonGame.Entities
             {
                 switch (cmd.CommandType)
                 {
+                    // TODO: MOVE COMMANDS EXECUTE ALL AT ONCE FIX THAT PLS THANKS (MoveQueue?)
                     case EventCommandType.TextCommand:
                         game.TextQueue.Add(cmd.Args[0]);
                         break;
