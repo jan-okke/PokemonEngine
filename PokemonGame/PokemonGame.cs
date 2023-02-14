@@ -115,6 +115,25 @@ namespace PokemonGame
             CurrentMap.Draw(Width, Height, Player, spriteBatch);
             spriteBatch.End();
         }
+        public void MovePlayer(string direction)
+        {
+            // This method should only be called by Events since it bypasses Collision Detection.
+            switch (direction)
+            {
+                case "left" or "Left":
+                    Player.State = PlayerState.Left;
+                    Player.X -= PlayerMoves; break;
+                case "right" or "Right":
+                    Player.State = PlayerState.Right;
+                    Player.X += PlayerMoves; break;
+                case "up" or "Up":
+                    Player.State = PlayerState.Up;
+                    Player.Y -= PlayerMoves; break;
+                case "down" or "Down":
+                    Player.State = PlayerState.Down;
+                    Player.Y += PlayerMoves; break;
+            }
+        }
         private void DrawTextBox(SpriteBatch spriteBatch)
         {
             if (TextQueue.HasNext())

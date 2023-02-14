@@ -32,6 +32,7 @@ namespace PokemonGame.Entities
             return id switch
             {
                 0 => EventCommandType.TextCommand,
+                1 => EventCommandType.MoveCommmand,
                 _ => throw new ArgumentException(null, nameof(id)),
             };
         }
@@ -80,6 +81,9 @@ namespace PokemonGame.Entities
                 {
                     case EventCommandType.TextCommand:
                         game.TextQueue.Add(cmd.Args[0]);
+                        break;
+                    case EventCommandType.MoveCommmand:
+                        game.MovePlayer(cmd.Args[0]);
                         break;
                 }
             }
