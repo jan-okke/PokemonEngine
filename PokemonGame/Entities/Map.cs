@@ -35,9 +35,11 @@ namespace PokemonGame.Entities
         public bool IsTilePassable(int x, int y)
         {
             if (x < 0 || y < 0 || x > Width || y > Height) return false;
-            try
-            {
-                return Tileset.GetMovementPermission(TileData[1][x + y * Width + 1]) && Tileset.GetMovementPermission(TileData[2][x + y * Width + 1]) && Tileset.GetMovementPermission(TileData[3][x + y * Width + 1]);
+            try { 
+                var a = Tileset.GetMovementPermission(TileData[1][x + y * Width + y]);
+                var b = Tileset.GetMovementPermission(TileData[2][x + y * Width + y]);
+                var c = Tileset.GetMovementPermission(TileData[3][x + y * Width + y]);
+                return a && b && c;
             }
             catch (ArgumentOutOfRangeException)
             {
