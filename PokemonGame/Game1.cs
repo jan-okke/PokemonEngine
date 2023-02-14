@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 using PokemonGame.Entities;
 
 namespace PokemonGame
@@ -19,6 +20,11 @@ namespace PokemonGame
 
             _graphics.PreferredBackBufferWidth = Settings.DisplayWidth;
             _graphics.PreferredBackBufferHeight = Settings.DisplayHeight;
+
+            IsFixedTimeStep = true;
+            _graphics.SynchronizeWithVerticalRetrace = false;
+
+            TargetElapsedTime = new TimeSpan(0, 0, 1) / Settings.FrameRate;
 
             _game = new PokemonGame(_graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight);
         }
