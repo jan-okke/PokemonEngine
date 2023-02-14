@@ -25,5 +25,9 @@ namespace PokemonGame.PokemonBattle.Entities
             Stats = new();
             this.CalculateStats();
         }
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }
