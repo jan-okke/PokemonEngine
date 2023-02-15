@@ -20,12 +20,14 @@ namespace PokemonGame
         private int Width;
         private int Height;
 
-        public TextQueue TextQueue { get; set; }
+        public TextQueue TextQueue { get; }
+        public MovementQueue MovementQueue { get; }
         public PokemonGame(int preferredBackBufferWidth, int preferredBackBufferHeight) 
         {
             Width = preferredBackBufferWidth;
             Height = preferredBackBufferHeight;
             TextQueue = new TextQueue();
+            MovementQueue = new MovementQueue();
         }
         public void SetMap(Map map)
         {
@@ -73,6 +75,7 @@ namespace PokemonGame
                 }
                 return;
             }
+            if (HandleMovementQueue()) return;
             //DebugConsole.WriteLine(Player.Position);
 
             HandleEvents();
@@ -108,6 +111,27 @@ namespace PokemonGame
                 Player.RunningState = 0;
             }
         }
+        private bool HandleMovementQueue()
+        {
+            // returns true if forced move
+            if (MovementQueue.HasNext())
+            {
+                var cmd = MovementQueue.Next();
+                switch (cmd.CommandType) 
+                {
+                    case EventCommandType.MoveCommmand:
+                        MovePlayer(cmd.Direction);
+                        return true;
+                    case EventCommandType.RotateCommand:
+                        RotatePlayer(cmd.Direction);
+                        return true;
+                    default:
+                        DebugConsole.WriteLine("Warning - Unknown Movement Command EventCommandType.", ConsoleColor.Yellow);
+                        return false;
+                }
+            }
+            return false;
+        }
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
@@ -115,7 +139,7 @@ namespace PokemonGame
             CurrentMap.Draw(Width, Height, Player, spriteBatch);
             spriteBatch.End();
         }
-        public void MovePlayer(string direction)
+        private void MovePlayer(string direction)
         {
             // This method should only be called by Events since it bypasses Collision Detection.
             switch (direction)
@@ -134,7 +158,7 @@ namespace PokemonGame
                     Player.Y += PlayerMoves; break;
             }
         }
-        public void RotatePlayer(string direction)
+        private void RotatePlayer(string direction)
         {
             // This method should only be called by Events since it bypasses Collision Detection.
             switch (direction)
