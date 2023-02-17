@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Extensions
             if (!party.IsAlive) throw new Exception("Pokemon party not alive!");
             foreach (Pokemon p in party.Pokemons)
             {
-                if (p.IsAlive()) return p;
+                if (p.IsAlive) return p;
             }
             throw new Exception("Party is alive but no Pokemons are.");
         }

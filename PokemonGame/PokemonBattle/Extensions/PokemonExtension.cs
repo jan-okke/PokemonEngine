@@ -1,11 +1,19 @@
 using PokemonGame.PokemonBattle.Entities;
 using System.Linq;
 using System.Collections.Generic;
+using PokemonGame.PokemonBattle.Enums;
 
 namespace PokemonGame.PokemonBattle.Extensions 
 {
     public static class PokemonExtension 
     {
+        public static bool SetStatus(this Pokemon pokemon, StatusConditionType condition, int startingTurns)
+        {
+            if (!pokemon.CanGetStatusCondition(condition)) return false;
+            pokemon.Status = new StatusCondition(condition, startingTurns);
+            return true;
+        }
+        private static bool CanGetStatusCondition(this Pokemon pokemon, StatusConditionType condition) => true; // TODO
         public static void CalculateStats(this Pokemon pokemon) 
         {
             var baseStats = pokemon.BaseStats;
@@ -20,10 +28,19 @@ namespace PokemonGame.PokemonBattle.Extensions
             pokemon.Stats.Speed = ((2 * baseStats.Speed + ivs.Speed + evs.Speed / 4) * level / 100) + 5; // () * natureMod
         }
 
-        public static bool IsAlive(this Pokemon pokemon)
+        public static bool IsFaster(this Pokemon pokemon, Pokemon other)
         {
-            return pokemon.CurrentHP > 0;
+            // TODO: Modifier for Stat Stages!
+            return pokemon.Stats.Speed > other.Stats.Speed;
         }
+
+        public static bool HasType(this Pokemon pokemon, PokemonType t) => pokemon.Types.Contains(t);
+
+        public static bool HasStatusCondition(this Pokemon pokemon, StatusConditionType condition) => pokemon.Status.IsActive && pokemon.Status.Conditon == condition;
+
+        public static double GetStabModBoost(this Pokemon pokemon) => 1.5; // TODO
+
+        public static double GetBurnedModifier(this Pokemon pokemon) => pokemon.Ability.Name == "Guts" ? 1.5 : 0.5;
 
         public static int GetBST(this Pokemon pokemon) 
         {
