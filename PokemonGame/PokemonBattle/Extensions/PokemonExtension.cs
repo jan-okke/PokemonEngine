@@ -2,6 +2,7 @@ using PokemonGame.PokemonBattle.Entities;
 using System.Linq;
 using System.Collections.Generic;
 using PokemonGame.PokemonBattle.Enums;
+using System;
 
 namespace PokemonGame.PokemonBattle.Extensions 
 {
@@ -12,6 +13,23 @@ namespace PokemonGame.PokemonBattle.Extensions
             if (!pokemon.CanGetStatusCondition(condition)) return false;
             pokemon.Status = new StatusCondition(condition, startingTurns);
             return true;
+        }
+        public static void MaxIVS(this Pokemon pokemon, bool ignoreAttack = false, bool ignoreSpeed = false)
+        {
+            pokemon.IVs.HP = 31;
+            pokemon.IVs.Attack = ignoreAttack ? 0 : 31;
+            pokemon.IVs.Defense = 31;
+            pokemon.IVs.SpecialAttack = 31;
+            pokemon.IVs.SpecialDefense = 31;
+            pokemon.IVs.Speed = ignoreSpeed ? 0 : 31;
+        }
+        public static void HealHP(this Pokemon pokemon)
+        {
+            pokemon.CurrentHP = pokemon.Stats.HP;
+        }
+        public static void HealHP(this Pokemon pokemon, int amount)
+        {
+            pokemon.CurrentHP += Math.Min(amount, pokemon.Stats.HP - pokemon.CurrentHP);
         }
         private static bool CanGetStatusCondition(this Pokemon pokemon, StatusConditionType condition) => true; // TODO
         public static void CalculateStats(this Pokemon pokemon) 
@@ -57,7 +75,7 @@ namespace PokemonGame.PokemonBattle.Extensions
 
         public static bool HasAbility(this Pokemon pokemon, params string[] abilityNames) => abilityNames.Any(a => pokemon.HasAbility(a));
 
-        public static bool HasItem(this Pokemon pokemon, string itemName) => pokemon.Item.Name == itemName;
+        public static bool HasItem(this Pokemon pokemon, string itemName) => pokemon.Item != null && pokemon.Item.Name == itemName;
 
         public static bool HasItem(this Pokemon pokemon, params string[] itemNames) => itemNames.Any(i => pokemon.HasItem(i));
         

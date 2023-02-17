@@ -10,5 +10,10 @@ namespace PokemonGame.PokemonBattle.Entities
         public bool IsAlive => Pokemons.Where(p => p.IsAlive).Any();
         public int AliveCount => Pokemons.Where(p => p.IsAlive).Count();
         public int FaintedCount => Pokemons.Where(p => !p.IsAlive).Count();
+
+        public PokemonParty(List<Pokemon> pokemons)
+        {
+            Pokemons = pokemons;
+        }
     }
 }

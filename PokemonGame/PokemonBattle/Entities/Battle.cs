@@ -26,8 +26,14 @@ namespace PokemonGame.PokemonBattle.Entities
         {
             PlayerParty = playerParty;
             EnemyParty = enemyParty;
-            if (weather != null) this.SetWeather(weather.Condition, weather.Turns);
-            if (terrain != null) this.SetTerrain(terrain.Effect, terrain.Turns);
+            if (weather != null) 
+                this.SetWeather(weather.Condition, weather.Turns);
+            else 
+                Weather = new Weather(WeatherCondition.None, -1);
+            if (terrain != null) 
+                this.SetTerrain(terrain.Effect, terrain.Turns);
+            else 
+                Terrain = new Terrain(TerrainEffect.None, -1);
             
             PlayerSide = new BattlerSide();
             EnemySide = new BattlerSide();

@@ -29,14 +29,17 @@ namespace PokemonGame.PokemonBattle.Entities
         public bool IsUnderwater => false; // TODO
         public bool IsProtected => false; // TODO
 
-        public Pokemon(string name, int level, Stats baseStats) 
+        public Pokemon(string name, int level, Stats baseStats, Ability ability, List<PokemonType> types) 
         {
             Name = name;
             Level = level;
             BaseStats = baseStats;
+            Ability = ability;
+            Types = types;
             EVs = new();
             IVs = new();
             Stats = new();
+            Effects = new();
             this.CalculateStats();
         }
         public override string ToString()

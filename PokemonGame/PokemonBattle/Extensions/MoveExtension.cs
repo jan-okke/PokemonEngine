@@ -33,7 +33,7 @@ namespace PokemonGame.PokemonBattle.Extensions
 
         public static bool IsFixedRandom(this Move move)
         {
-            return move.Name != "Spit Up";
+            return move.Name == "Spit Up";
         }
         public static bool IsAffectedByBurn(this Move move) => move.IsPhysical && move.Name != "Facade";
         

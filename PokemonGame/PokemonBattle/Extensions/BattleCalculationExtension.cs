@@ -184,7 +184,7 @@ namespace PokemonGame.PokemonBattle.Extensions
 
         private static double CalculateCritMod(Pokemon attacker) => 1.5; // the crit mod is in otherMod!
 
-        private static double CalculateRandomMod(Move move) => move.IsFixedRandom() ? 1 : new Random().Next(85, 101) / 100;
+        private static double CalculateRandomMod(Move move) => move.IsFixedRandom() ? 1 : new Random().Next(85, 101) * 0.01;
 
         private static double CalculateStabMod(Pokemon attacker, Move move) => attacker.HasType(move.Type) ? attacker.GetStabModBoost() : 1;
 
