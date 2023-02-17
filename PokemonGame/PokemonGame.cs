@@ -75,9 +75,9 @@ namespace PokemonGame
                 }
                 return;
             }
+            // if there are still Movements left in the Queue, handle those first
             if (HandleMovementQueue()) return;
-            //DebugConsole.WriteLine(Player.Position);
-
+            // Handle Events
             HandleEvents();
             // otherwise get the key press
             var keys = keyboardState.GetPressedKeys();

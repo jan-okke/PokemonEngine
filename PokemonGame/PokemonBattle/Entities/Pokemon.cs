@@ -15,6 +15,8 @@ namespace PokemonGame.PokemonBattle.Entities
         public Stats EVs { get; set; }
         public Stats Stats { get; set; }
 
+        public int CurrentHP { get; set; }
+
         public Pokemon(string name, int level, Stats baseStats) 
         {
             Name = name;

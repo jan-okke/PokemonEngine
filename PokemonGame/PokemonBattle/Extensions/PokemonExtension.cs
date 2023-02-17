@@ -20,6 +20,11 @@ namespace PokemonGame.PokemonBattle.Extensions
             pokemon.Stats.Speed = ((2 * baseStats.Speed + ivs.Speed + evs.Speed / 4) * level / 100) + 5; // () * natureMod
         }
 
+        public static bool IsAlive(this Pokemon pokemon)
+        {
+            return pokemon.CurrentHP > 0;
+        }
+
         public static int GetBST(this Pokemon pokemon) 
         {
             return pokemon.BaseStats.Sum();
