@@ -18,9 +18,16 @@ namespace PokemonGame.PokemonBattle.Entities
         public StatusCondition Status { get; set; }
 
         public int CurrentHP { get; set; }
+        public List<Effect> Effects { get; set; }
         public List<PokemonType> Types { get; set; }
+        public Gender Gender { get; set; }
+        public DynamaxState DynamaxState { get; set; }
 
         public bool IsAlive => CurrentHP > 0;
+        public bool IsDynamaxed => DynamaxState.Active;
+        public bool IsUnderground => false; // TODO
+        public bool IsUnderwater => false; // TODO
+        public bool IsProtected => false; // TODO
 
         public Pokemon(string name, int level, Stats baseStats) 
         {

@@ -33,14 +33,45 @@ namespace PokemonGame.PokemonBattle.Extensions
             // TODO: Modifier for Stat Stages!
             return pokemon.Stats.Speed > other.Stats.Speed;
         }
+        public static bool IsSameGender(this Pokemon pokemon, Pokemon other) => pokemon.Gender != Gender.None && pokemon.Gender == other.Gender;
 
+        public static bool IsOpposingGender(this Pokemon pokemon, Pokemon other) => pokemon.Gender != Gender.None && pokemon.Gender == other.Gender;
+
+        public static double GetHPPercentage(this Pokemon pokemon) => pokemon.CurrentHP / pokemon.Stats.HP;
+
+        public static bool BelowHalfHP(this Pokemon pokemon) => pokemon.GetHPPercentage() < 50;
+
+        public static bool AtFullHP(this Pokemon pokemon) => pokemon.CurrentHP == pokemon.Stats.HP;
+
+        public static bool HasEffect(this Pokemon pokemon, EffectType effect) => pokemon.Effects.Any(e => e.Type == effect && e.IsActive);
+
+        public static bool HasEffect(this Pokemon pokemon, params EffectType[] effects) => effects.Any(e => pokemon.HasEffect(e));
+
+        public static int EffectCount(this Pokemon pokemon, EffectType effect) => pokemon.Effects.Where(e => e.Type == effect).Count();
+
+        public static int EffectCount(this Pokemon pokemon, params EffectType[] effects) => effects.Aggregate(0, (result, e) => result += pokemon.EffectCount(e));
+        
         public static bool HasType(this Pokemon pokemon, PokemonType t) => pokemon.Types.Contains(t);
 
-        public static bool HasStatusCondition(this Pokemon pokemon, StatusConditionType condition) => pokemon.Status.IsActive && pokemon.Status.Conditon == condition;
+        public static bool HasAbility(this Pokemon pokemon, string abilityName) => pokemon.Ability.Name == abilityName;
 
-        public static double GetStabModBoost(this Pokemon pokemon) => 1.5; // TODO
+        public static bool HasAbility(this Pokemon pokemon, params string[] abilityNames) => abilityNames.Any(a => pokemon.HasAbility(a));
 
-        public static double GetBurnedModifier(this Pokemon pokemon) => pokemon.Ability.Name == "Guts" ? 1.5 : 0.5;
+        public static bool HasItem(this Pokemon pokemon, string itemName) => pokemon.Item.Name == itemName;
+
+        public static bool HasItem(this Pokemon pokemon, params string[] itemNames) => itemNames.Any(i => pokemon.HasItem(i));
+        
+        public static bool HasStatusCondition(this Pokemon pokemon, StatusConditionType condition) => pokemon.Status != null && pokemon.Status.IsActive && pokemon.Status.Conditon == condition;
+
+        public static bool HasStatusCondition(this Pokemon pokemon) => pokemon.Status == null || pokemon.Status.IsActive;
+
+        public static bool HasStatusCondition(this Pokemon pokemon, List<StatusCondition> conditions) => conditions.Any(c => pokemon.HasStatusCondition(c.Conditon));
+
+        public static bool HasStatusCondition(this Pokemon pokemon, params StatusConditionType[] conditionTypes) => conditionTypes.Any(c => pokemon.HasStatusCondition(c));
+
+        public static double GetStabModBoost(this Pokemon pokemon) => pokemon.HasAbility("Adaptability") ? 2 : 1.5;
+
+        public static double GetBurnedModifier(this Pokemon pokemon) => pokemon.HasAbility("Guts") ? 1.5 : 0.5;
 
         public static int GetBST(this Pokemon pokemon) 
         {

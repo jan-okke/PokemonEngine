@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Constants
         public const int Answer_OK = 0x0000;
         public const int Answer_NotImplemented = -0x0001;
 
-        public const int Answer_Calculation_StatusMove = 0x0001;
-
+        public const int Answer_Calculation_StatusMove = 0x1001;
+        public const int Answer_Calculation_CriticalHit = 0x1002;
     }
 }

@@ -1,5 +1,6 @@
 using PokemonGame.PokemonBattle.Enums;
 using PokemonGame.PokemonBattle.Extensions;
+using System.Collections.Generic;
 
 namespace PokemonGame.PokemonBattle.Entities
 {
@@ -7,10 +8,19 @@ namespace PokemonGame.PokemonBattle.Entities
     {
         public PokemonParty PlayerParty { get; }
         public PokemonParty EnemyParty { get; }
+        public BattlerSide PlayerSide { get; }
+        public BattlerSide EnemySide { get; }
         public Weather Weather { get; set; }
         public Terrain Terrain { get; set; }
+        public Gravity Gravity { get; set; }
+        public List<FieldEffect> FieldEffects { get; }
+
+        public BattleType BattleType { get; }
         public int Turn { get; }
         public bool IsOngoing => PlayerParty.IsAlive && EnemyParty.IsAlive;
+
+        // TODO this is only for single battle
+        public List<Pokemon> ActiveBattlers => new() { PlayerParty.GetFirstAlivePokemon(), EnemyParty.GetFirstAlivePokemon() };
 
         public Battle(PokemonParty playerParty, PokemonParty enemyParty, Weather weather = null, Terrain terrain = null)
         {
@@ -18,6 +28,11 @@ namespace PokemonGame.PokemonBattle.Entities
             EnemyParty = enemyParty;
             if (weather != null) this.SetWeather(weather.Condition, weather.Turns);
             if (terrain != null) this.SetTerrain(terrain.Effect, terrain.Turns);
+            
+            PlayerSide = new BattlerSide();
+            EnemySide = new BattlerSide();
+            FieldEffects = new List<FieldEffect>();
+            Gravity = null;
             Turn = 0;
         }
         

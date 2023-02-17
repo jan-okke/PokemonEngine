@@ -8,13 +8,16 @@ namespace PokemonGame.PokemonBattle.Entities
 {
     public class Answer
     {
-        public int AnswerCode { get; set; }
-        public int Value { get; set; }
+        public int AnswerCode { get; }
+        public int Value { get; }
+
+        public Dictionary<string, string> Attributes { get; }
 
         public Answer(int answerCode, int value)
         {
             AnswerCode = answerCode;
             Value = value;
+            Attributes = new Dictionary<string, string>();
         }
     }
 }

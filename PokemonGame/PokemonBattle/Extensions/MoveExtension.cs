@@ -21,6 +21,13 @@ namespace PokemonGame.PokemonBattle.Extensions
                 _ => throw new NotImplementedException(),
             };
         }
+        public static bool BasePowerBelow(this Move move, int amount) => move.BasePower < amount;
+        
+        public static bool HasType(this Move move, PokemonType type) => move.Type == type;
+
+        public static bool HasType(this Move move, params PokemonType[] types) => types.Any(t => move.HasType(t));
+
+        public static bool NameIsAnyOf(this Move move, params string[] names) => names.Any(n => move.Name == n);
 
         public static int GetTargetCount(this Move move, Battle battle) => 1; // TODO
 
@@ -28,7 +35,7 @@ namespace PokemonGame.PokemonBattle.Extensions
         {
             return move.Name != "Spit Up";
         }
-        public static bool IsAffectedByBurn(this Move move) => move.Category == MoveCategory.Phsyical && move.Name != "Facade";
+        public static bool IsAffectedByBurn(this Move move) => move.IsPhysical && move.Name != "Facade";
         
         public static double GetBurnMod(this Move move) => IsAffectedByBurn(move) ? 0.5 : throw new Exception("Attempted to get Burn Mod without checking if affected by burn.");
     }
