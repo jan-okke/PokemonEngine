@@ -10,6 +10,7 @@ namespace PokemonGame.PokemonBattle.Entities
         public Weather Weather { get; set; }
         public Terrain Terrain { get; set; }
         public int Turn { get; }
+        public bool IsOngoing => PlayerParty.IsAlive && EnemyParty.IsAlive;
 
         public Battle(PokemonParty playerParty, PokemonParty enemyParty, Weather weather = null, Terrain terrain = null)
         {
