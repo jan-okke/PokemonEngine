@@ -8,12 +8,7 @@ namespace PokemonGame.PokemonBattle.Extensions
 {
     public static class PokemonExtension 
     {
-        public static bool SetStatus(this Pokemon pokemon, StatusConditionType condition, int startingTurns)
-        {
-            if (!pokemon.CanGetStatusCondition(condition)) return false;
-            pokemon.Status = new StatusCondition(condition, startingTurns);
-            return true;
-        }
+        
         public static void MaxIVS(this Pokemon pokemon, bool ignoreAttack = false, bool ignoreSpeed = false)
         {
             pokemon.IVs.HP = 31;
@@ -23,19 +18,7 @@ namespace PokemonGame.PokemonBattle.Extensions
             pokemon.IVs.SpecialDefense = 31;
             pokemon.IVs.Speed = ignoreSpeed ? 0 : 31;
         }
-        public static void HealHP(this Pokemon pokemon)
-        {
-            pokemon.CurrentHP = pokemon.Stats.HP;
-        }
-        public static void HealHP(this Pokemon pokemon, int amount)
-        {
-            pokemon.CurrentHP += Math.Min(amount, pokemon.Stats.HP - pokemon.CurrentHP);
-        }
-        public static void TakeDamage(this Pokemon pokemon, int amount)
-        {
-            pokemon.CurrentHP -= Math.Min(amount, pokemon.CurrentHP);
-        }
-        private static bool CanGetStatusCondition(this Pokemon pokemon, StatusConditionType condition) => true; // TODO
+        
         public static void CalculateStats(this Pokemon pokemon) 
         {
             var baseStats = pokemon.BaseStats;

@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace PokemonGame.PokemonBattle.Enums
 {
-    public enum StatusConditionType
+    public enum SecondaryStat
     {
-        None,
-        Burned,
-        Paralyzed,
-        Frozen,
-        Poisoned,
-        BadlyPoisoned,
-        Sleeping
+        Accuracy,
+        Evasion
     }
 }

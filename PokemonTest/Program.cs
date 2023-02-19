@@ -2,6 +2,7 @@
 using PokemonGame.PokemonBattle.Extensions;
 using PokemonGame;
 using PokemonGame.PokemonBattle.Enums;
+using PokemonGame.PokemonBattle.Actions;
 
 static void AssertEqual<T>(T actual, T expected) 
 {
