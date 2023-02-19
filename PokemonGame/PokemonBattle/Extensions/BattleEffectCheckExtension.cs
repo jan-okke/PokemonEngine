@@ -198,6 +198,6 @@ namespace PokemonGame.PokemonBattle.Extensions
                 case "Zing Zap": if (Chance(30)) defendingPokemon.Flinch(); break;
             }
         }
-        private static bool Chance(int outOfHundred) => new Random().Next(0, 100) >= outOfHundred;
+        private static bool Chance(int outOfHundred) => new Random().Next(0, 100) <= outOfHundred;
     }
 }

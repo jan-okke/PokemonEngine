@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace PokemonGame.PokemonBattle.Entities
 {
-    public class BattleLog
+    public class BattleData
     {
-        public List<BattleData> Data { get; }
+        public Dictionary<string, string> Data { get; }
 
-        public BattleLog()
+        public BattleData()
         {
-            Data = new List<BattleData>();
+            Data = new Dictionary<string, string>();
         }
     }
 }

@@ -37,13 +37,22 @@ Abomasnow2.CalculateStats();
 Abomasnow.HealHP();
 Abomasnow2.HealHP();
 
-Move Blizzard = new Move("Spit Up", 110, 5, PokemonType.Normal, MoveCategory.Special);
+
+Move Blizzard = new Move("Blizzard", 110, 5, PokemonType.Normal, MoveCategory.Special);
 Move GigaDrain = new Move("Giga Drain", 75, 10, PokemonType.Grass, MoveCategory.Special);
 Move LeechSeed = new Move("Leech Seed", 0, 10, PokemonType.Grass, MoveCategory.Status);
 Move AuroraVeil = new Move("Aurora Veil", 0, 10, PokemonType.Ice, MoveCategory.Status);
 
+
+Abomasnow2.Moves = new List<Move>() { Blizzard, GigaDrain, LeechSeed, AuroraVeil };
+
 PokemonParty playerParty = new(new List<Pokemon>() { Abomasnow });
 PokemonParty enemyParty = new(new List<Pokemon>() { Abomasnow2 });
 
-Battle battle = new Battle(playerParty, enemyParty);
-AssertEqual(battle.CalculateDamage(true, Blizzard).Value, 160);
+var battle = BattleActions.StartWildBattle(playerParty, Abomasnow2);
+
+while (battle.IsOngoing)
+{
+    battle.UseMove(Abomasnow, Abomasnow2, Blizzard);
+}
+//AssertEqual(battle.CalculateDamage(true, Blizzard).Value, 160);

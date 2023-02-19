@@ -27,6 +27,18 @@ namespace PokemonGame.PokemonBattle.Extensions
 
         public static bool HasActiveFieldEffect(this Battle battle, params FieldEffects[] effects) => effects.Any(e => battle.HasActiveFieldEffect(e));
 
-        public static void Log(this Battle battle) { } // TODO
+        public static void Log(this Battle battle, Move move, int damage, bool critical, bool kill) 
+        {
+            var log = battle.Log;
+            var battleData = new BattleData();
+            var data = battleData.Data;
+            data.Add("TURN", battle.Turn.ToString());
+            data.Add("USED_MOVE_NAME", move.Name);
+            data.Add("USED_MOVE_DAMAGE", damage.ToString());
+            data.Add("USED_MOVE_CRITICAL_HIT", critical.ToString());
+            data.Add("USED_MOVE_KILLED", kill.ToString());
+
+            log.Data.Add(battleData);
+        } 
     }
 }
