@@ -31,6 +31,10 @@ namespace PokemonGame.PokemonBattle.Extensions
         {
             pokemon.CurrentHP += Math.Min(amount, pokemon.Stats.HP - pokemon.CurrentHP);
         }
+        public static void TakeDamage(this Pokemon pokemon, int amount)
+        {
+            pokemon.CurrentHP -= Math.Min(amount, pokemon.CurrentHP);
+        }
         private static bool CanGetStatusCondition(this Pokemon pokemon, StatusConditionType condition) => true; // TODO
         public static void CalculateStats(this Pokemon pokemon) 
         {

@@ -15,6 +15,7 @@ namespace PokemonGame.PokemonBattle.Entities
         public Stats IVs { get; set; }
         public Stats EVs { get; set; }
         public Stats Stats { get; set; }
+        public Stats StatStages { get; set; }
         public StatusCondition Status { get; set; }
 
         public int CurrentHP { get; set; }
@@ -29,6 +30,9 @@ namespace PokemonGame.PokemonBattle.Entities
         public bool IsUnderwater => false; // TODO
         public bool IsProtected => false; // TODO
 
+        public bool Flinched { get; set; } // TODO this has to be reset at the end of turn lol
+        public bool Trapped { get; set; }
+
         public Pokemon(string name, int level, Stats baseStats, Ability ability, List<PokemonType> types) 
         {
             Name = name;
@@ -42,6 +46,13 @@ namespace PokemonGame.PokemonBattle.Entities
             Effects = new();
             this.CalculateStats();
         }
+
+        public Pokemon(string name, int level)
+        {
+            Name = name;
+            Level = level;
+        }
+
         public override string ToString()
         {
             return Name;

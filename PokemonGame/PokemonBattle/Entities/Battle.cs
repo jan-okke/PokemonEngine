@@ -1,3 +1,4 @@
+using PokemonGame.PokemonBattle.Actions;
 using PokemonGame.PokemonBattle.Enums;
 using PokemonGame.PokemonBattle.Extensions;
 using System.Collections.Generic;
@@ -14,9 +15,12 @@ namespace PokemonGame.PokemonBattle.Entities
         public Terrain Terrain { get; set; }
         public Gravity Gravity { get; set; }
         public List<FieldEffect> FieldEffects { get; }
+        public List<BattleFlag> BattleFlags { get; }
 
+
+        public BattleLog Log { get; }
         public BattleType BattleType { get; }
-        public int Turn { get; }
+        public int Turn { get; set; }
         public bool IsOngoing => PlayerParty.IsAlive && EnemyParty.IsAlive;
 
         // TODO this is only for single battle
@@ -38,6 +42,8 @@ namespace PokemonGame.PokemonBattle.Entities
             PlayerSide = new BattlerSide();
             EnemySide = new BattlerSide();
             FieldEffects = new List<FieldEffect>();
+            BattleFlags = new List<BattleFlag>();
+            Log = new BattleLog();
             Gravity = null;
             Turn = 0;
         }
