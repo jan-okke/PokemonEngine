@@ -38,5 +38,10 @@ namespace PokemonGame.PokemonBattle.Extensions
         public static bool IsAffectedByBurn(this Move move) => move.IsPhysical && move.Name != "Facade";
         
         public static double GetBurnMod(this Move move) => IsAffectedByBurn(move) ? 0.5 : throw new Exception("Attempted to get Burn Mod without checking if affected by burn.");
+
+        public static void ReducePowerPoints(this Move move, int amount = 1)
+        {
+            move.PowerPoints -= Math.Max(amount, move.PowerPoints);
+        }
     }
 }

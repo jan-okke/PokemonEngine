@@ -12,12 +12,14 @@ namespace PokemonGame.PokemonBattle.Entities
         public StatusConditionType Conditon { get; set; }
         public int Turns { get; set; }
 
+        public int CurrentTurn { get; set; }
         public bool IsActive => Turns > 0;
 
         public StatusCondition(StatusConditionType conditon, int startingTurns)
         {
             Conditon = conditon;
             Turns = startingTurns;
+            CurrentTurn = 0;
         }
     }
 }

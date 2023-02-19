@@ -68,5 +68,15 @@ namespace PokemonGame.PokemonBattle.Actions
             }
             return false;
         }
+
+        public static bool Confuse(this Pokemon pokemon)
+        {
+            if (pokemon.CanConfused())
+            {
+                pokemon.Confused = true;
+                return true;
+            }
+            return false;
+        }
     }
 }

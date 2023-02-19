@@ -40,6 +40,9 @@ namespace PokemonGame.PokemonBattle.Extensions
             var randomMod = CalculateRandomMod(move);
             var stabMod = CalculateStabMod(attackingPokemon, move);
             var effMod = CalculateEffectivityMod(move, defendingPokemon.Types);
+
+            if (effMod == 0) return new Answer(AnswerCodes.Answer_Calculation_NoEffect, 0);
+
             var burnMod = CalculateBurnMod(attackingPokemon, move);
             var otherMod = CalculateOtherMod(battle, attackingPokemon, defendingPokemon, attackingParty, defendingSide, move, isCriticalHit);
             var zMod = CalculateZMod(defendingPokemon, move);

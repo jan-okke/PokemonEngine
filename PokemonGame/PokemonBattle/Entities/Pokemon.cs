@@ -31,6 +31,8 @@ namespace PokemonGame.PokemonBattle.Entities
         public bool IsProtected => false; // TODO
 
         public bool Flinched { get; set; } // TODO this has to be reset at the end of turn lol
+        
+        public bool Confused { get; set; }
         public bool Trapped { get; set; }
 
         public Pokemon(string name, int level, Stats baseStats, Ability ability, List<PokemonType> types) 

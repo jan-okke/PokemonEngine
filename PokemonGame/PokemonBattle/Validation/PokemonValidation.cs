@@ -12,5 +12,7 @@ namespace PokemonGame.PokemonBattle.Validation
         public static bool CanFlinch(this Pokemon pokemon) => true; // TODO
 
         public static bool CanTrap(this Pokemon pokemon) => true; // TODO
+
+        public static bool CanConfused(this Pokemon pokemon) => true; // TODO
     }
 }
