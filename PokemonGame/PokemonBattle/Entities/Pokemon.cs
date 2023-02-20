@@ -29,6 +29,8 @@ namespace PokemonGame.PokemonBattle.Entities
         public bool IsUnderground => false; // TODO
         public bool IsUnderwater => false; // TODO
         public bool IsProtected => false; // TODO
+        public bool IsFlying => false; // TODO
+        public bool IsMinimized => false; // TODO
 
         public bool Flinched { get; set; } // TODO this has to be reset at the end of turn lol
         

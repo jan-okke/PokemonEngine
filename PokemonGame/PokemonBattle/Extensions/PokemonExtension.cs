@@ -44,6 +44,8 @@ namespace PokemonGame.PokemonBattle.Extensions
 
         public static double GetHPPercentage(this Pokemon pokemon) => pokemon.CurrentHP / pokemon.Stats.HP;
 
+        public static bool BelowThirdHP(this Pokemon pokemon) => pokemon.GetHPPercentage() < 33.33;
+        
         public static bool BelowHalfHP(this Pokemon pokemon) => pokemon.GetHPPercentage() < 50;
 
         public static bool AtFullHP(this Pokemon pokemon) => pokemon.CurrentHP == pokemon.Stats.HP;

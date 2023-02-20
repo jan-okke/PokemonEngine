@@ -76,6 +76,11 @@ namespace PokemonGame.PokemonBattle.Extensions
                 case "Grav Apple": if (battle.Gravity.Active) power *= 1.5; break;
                 case "Misty Explosion": if (battle.IsTerrainEffectActive(TerrainEffect.Fairy) && IsGrounded(battle, attacker)) power *= 1.5; break;
                 case "Expanding Force": if (battle.IsTerrainEffectActive(TerrainEffect.Psychic) && IsGrounded(battle, attacker)) power *= 1.5; break;
+
+                case "Gust" or "Twister": if (defender.IsFlying) power *= 2; break;
+                // TODO Pursuit *= 2 if defender wants to switch
+                case "Smelling Salt": if (defender.HasStatusCondition(StatusConditionType.Paralyzed)) power *= 2; break;
+                case "Wake-Up Slap": if (defender.HasStatusCondition(StatusConditionType.Sleeping)) power *= 2; break;
             }
             // other Boosts
             // TODO: Electromorposis and Wind Power apply this boost too (it counts as the same one and do not stack)
@@ -88,10 +93,21 @@ namespace PokemonGame.PokemonBattle.Extensions
             // Terrain
             if (battle.IsTerrainEffectActive(TerrainEffect.Grass) && IsGrounded(battle, defender) && move.NameIsAnyOf("Earthquake", "Magnitude", "Bulldoze")) power *= 0.5;
             if (battle.IsTerrainEffectActive(TerrainEffect.Fairy) && IsGrounded(battle, defender) && CheckMoveType(move, PokemonType.Dragon, attacker)) power *= 0.5;
+            
+            if (battle.IsTerrainEffectActive(TerrainEffect.Grass) && IsGrounded(battle, attacker) && CheckMoveType(move, PokemonType.Grass, attacker)) power *= 1.5;
+            if (battle.IsTerrainEffectActive(TerrainEffect.Electric) && IsGrounded(battle, attacker) && CheckMoveType(move, PokemonType.Electric, attacker)) power *= 1.5;
+            if (battle.IsTerrainEffectActive(TerrainEffect.Psychic) && IsGrounded(battle, attacker) && CheckMoveType(move, PokemonType.Psychic, attacker)) power *= 1.5;
+            
             // Attacker Ability
             if (attacker.HasAbility("Rivalry")) power *= attacker.IsSameGender(defender) ? 0.75 : attacker.IsOpposingGender(defender) ? 1.25 : 1;
             if (attacker.HasAbility("Supreme Overlord")) power *= Math.Pow(1.1, Math.Min(attackingParty.FaintedCount, 5));
             if (attacker.HasAbility("Reckless") && (move.IsRecoilMove || move.HurtsOnMiss)) power *= 1.2;
+
+            if (attacker.HasAbility("Overgrow") && attacker.BelowThirdHP() && CheckMoveType(move, PokemonType.Grass, attacker)) power *= 1.5;
+            if (attacker.HasAbility("Torrent") && attacker.BelowThirdHP() && CheckMoveType(move, PokemonType.Water, attacker)) power *= 1.5;
+            if (attacker.HasAbility("Blaze") && attacker.BelowThirdHP() && CheckMoveType(move, PokemonType.Fire, attacker)) power *= 1.5;
+            if (attacker.HasAbility("Swarm") && attacker.BelowThirdHP() && CheckMoveType(move, PokemonType.Bug, attacker)) power *= 1.5;
+            
             // Iron Fist and Punching Glove do not stack.
             if ((attacker.HasAbility("Iron Fist") || attacker.HasItem("Punching Glove")) && move.IsPunchingMove) power *= 1.2;
             if (attacker.HasAbility("Normalize")) power *= 1.2;
@@ -114,6 +130,7 @@ namespace PokemonGame.PokemonBattle.Extensions
             // Defender Ability
             if (defender.HasAbility("Heatproof") && move.HasType(PokemonType.Fire) & !attacker.Ability.IgnoresOtherAbilities()) power *= 0.5;
             if (defender.HasAbility("Dry Skin") && move.HasType(PokemonType.Fire) & !attacker.Ability.IgnoresOtherAbilities()) power *= 1.25;
+            if (defender.HasAbility("Thick Fat") && CheckMoveType(move, PokemonType.Fire, attacker) || CheckMoveType(move, PokemonType.Ice, attacker) & !attacker.Ability.IgnoresOtherAbilities()) power *= 0.5;
             // Dark and Faira aura
             if (battle.HasActiveFieldEffect(FieldEffects.DarkAura) & !attacker.Ability.IgnoresOtherAbilities() && CheckMoveType(move, PokemonType.Dark, attacker)) power *= battle.HasActiveFieldEffect(FieldEffects.AuraBreak) ? 0.75 : 4.0 / 3.0;
             if (battle.HasActiveFieldEffect(FieldEffects.FairyAura) & !attacker.Ability.IgnoresOtherAbilities() && CheckMoveType(move, PokemonType.Fairy, attacker)) power *= battle.HasActiveFieldEffect(FieldEffects.AuraBreak) ? 0.75 : 4.0 / 3.0;
@@ -124,6 +141,8 @@ namespace PokemonGame.PokemonBattle.Extensions
             if (LegendaryItemMatches(move, attacker)) power *= 1.2;
             if (GemMatches(move, attacker)) power *= 1.3;
             
+            if (attacker.Name == "Pikachu" && attacker.HasItem("Light Ball")) power *= 2;
+
             return power;
         }
 
@@ -403,7 +422,7 @@ namespace PokemonGame.PokemonBattle.Extensions
                 case "Surf" or "Whirlpool": if (defender.IsUnderwater) mod *= 2; break;
                 case "Collision Course" or "Electro Drift": if (CalculateEffectivityMod(move, defender.Types) > 1) mod *= 4.0 / 3.0; break;
             }
-            if (move.HasExtraDamageOnMinimize) mod *= 2;
+            if (move.HasExtraDamageOnMinimize && defender.IsMinimized) mod *= 2;
             if (move.IsPhysical && defenderSide.HasBuff(BattlerSideBuff.Reflect, BattlerSideBuff.AuroraVeil)) mod *= 0.5;
             if (move.IsSpecial && defenderSide.HasBuff(BattlerSideBuff.LightScreen, BattlerSideBuff.AuroraVeil)) mod *= 0.5;
             // Defender Ability
