@@ -16,5 +16,14 @@ namespace PokemonGame.PokemonBattle.AI
             // this is just max dmg base power move for now.
             return pokemon.GetHighestBPMoves()[0];
         }
+        private static bool CanOHKO(Battle battle, Move move) {
+            var opponent = battle.PlayerParty.GetFirstAlivePokemon();
+            return CalculateDamage(battle, move) > opponent.CurrentHP;
+        }
+        private static bool Can2HKO(Battle battle, Move move) {
+            var opponent = battle.PlayerParty.GetFirstAlivePokemon();
+            return CalculateDamage(battle, move) > opponent.CurrentHP / 2;
+        }
+        private static int CalculateDamage(Battle battle, Move move) => battle.CalculateDamage(false, move).Value;
     }
 }
