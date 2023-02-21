@@ -463,7 +463,24 @@ namespace PokemonGame.PokemonBattle.Extensions
 
         private static bool TypeEnhancingItemMatches(Move move, Pokemon attacker)
         {
-            return false; // TODO
+            if (attacker.HasItem("Silk Scarf") && CheckMoveType(move, PokemonType.Normal, attacker)) return true;
+            if (attacker.HasItem("Charcoal") && CheckMoveType(move, PokemonType.Fire, attacker)) return true;
+            if (attacker.HasItem("Mystic Water") && CheckMoveType(move, PokemonType.Water, attacker)) return true;
+            if (attacker.HasItem("Magnet") && CheckMoveType(move, PokemonType.Electric, attacker)) return true;
+            if (attacker.HasItem("Black Belt") && CheckMoveType(move, PokemonType.Fighting, attacker)) return true;
+            if (attacker.HasItem("Black Glasses") && CheckMoveType(move, PokemonType.Dark, attacker)) return true;
+            if (attacker.HasItem("Dragon Fang") && CheckMoveType(move, PokemonType.Dragon, attacker)) return true;
+            if (attacker.HasItem("Hard Stone") && CheckMoveType(move, PokemonType.Rock, attacker)) return true;
+            if (attacker.HasItem("Metal Coat") && CheckMoveType(move, PokemonType.Steel, attacker)) return true;
+            if (attacker.HasItem("Miracle Seed") && CheckMoveType(move, PokemonType.Grass, attacker)) return true;
+            if (attacker.HasItem("Never-Melt Ice") && CheckMoveType(move, PokemonType.Ice, attacker)) return true;
+            if (attacker.HasItem("Poison Barb") && CheckMoveType(move, PokemonType.Poison, attacker)) return true;
+            if (attacker.HasItem("Sharp Beak") && CheckMoveType(move, PokemonType.Flying, attacker)) return true;
+            if (attacker.HasItem("Silver Powder") && CheckMoveType(move, PokemonType.Bug, attacker)) return true;
+            if (attacker.HasItem("Soft Sand") && CheckMoveType(move, PokemonType.Ground, attacker)) return true;
+            if (attacker.HasItem("Spell Tag") && CheckMoveType(move, PokemonType.Ghost, attacker)) return true;
+            if (attacker.HasItem("Twisted Spoon") && CheckMoveType(move, PokemonType.Psychic, attacker)) return true;
+            return false;
         }
 
         private static bool IncenseMatches(Move move, Pokemon attacker)
