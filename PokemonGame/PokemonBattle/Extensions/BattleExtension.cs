@@ -21,7 +21,10 @@ namespace PokemonGame.PokemonBattle.Extensions
         
         public static bool IsSingleBattle(this Battle battle) => battle.BattleType == BattleType.SingleBattle;
         
-        public static Move GetLastMove(this Battle battle) => null; // TODO
+        public static Move GetLastMove(this Battle battle) {
+            var data = battle.Log.Data.Last().Data;
+            return data["USED_MOVE_NAME"] as Move;
+        }
 
         public static bool HasActiveFieldEffect(this Battle battle, FieldEffects effect) => battle.FieldEffects.Any(f => f.Effects == effect && f.IsActive);
 
@@ -32,11 +35,11 @@ namespace PokemonGame.PokemonBattle.Extensions
             var log = battle.Log;
             var battleData = new BattleData();
             var data = battleData.Data;
-            data.Add("TURN", battle.Turn.ToString());
-            data.Add("USED_MOVE_NAME", move.Name);
-            data.Add("USED_MOVE_DAMAGE", damage.ToString());
-            data.Add("USED_MOVE_CRITICAL_HIT", critical.ToString());
-            data.Add("USED_MOVE_KILLED", kill.ToString());
+            data.Add("TURN", battle.Turn);
+            data.Add("USED_MOVE_NAME", move);
+            data.Add("USED_MOVE_DAMAGE", damage);
+            data.Add("USED_MOVE_CRITICAL_HIT", critical);
+            data.Add("USED_MOVE_KILLED", kill);
 
             log.Data.Add(battleData);
         } 

@@ -41,7 +41,7 @@ namespace PokemonGame.PokemonBattle.Extensions
 
         public static void ReducePowerPoints(this Move move, int amount = 1)
         {
-            move.PowerPoints -= Math.Max(amount, move.PowerPoints);
+            move.CurrentPowerPoints -= Math.Max(amount, move.PowerPoints);
         }
     }
 }

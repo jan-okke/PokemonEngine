@@ -11,6 +11,8 @@ namespace PokemonGame.PokemonBattle.Entities
         public MoveCategory Category { get; }
         public int Priority { get; }
 
+        public int CurrentPowerPoints { get; set; }
+
         public bool IsPhysical => Category == MoveCategory.Phsyical;
         public bool IsSpecial => Category == MoveCategory.Special;
         public bool IsStatus => Category == MoveCategory.Status;
@@ -33,6 +35,7 @@ namespace PokemonGame.PokemonBattle.Entities
             Name = name;
             BasePower = basePower;
             PowerPoints = powerPoints;
+            CurrentPowerPoints = powerPoints; // set to full 
             Type = type;
             Category = category;
             Priority = 0;

@@ -72,7 +72,13 @@ namespace PokemonGame.PokemonBattle.AI
                 }
             }
             // if has status condition move, use it
+            foreach (Move m in pokemon.Moves) {
+                if (m.AffectsPokemon(pokemon, opponent) & !opponent.HasAbility("Guts")) {
+                    // check if status condition is useful
+                }
+            }
             // 
+            return pokemon.GetHighestBPMoves().First();
         }
 
         private static bool CanOHKO(Battle battle, Move move) {

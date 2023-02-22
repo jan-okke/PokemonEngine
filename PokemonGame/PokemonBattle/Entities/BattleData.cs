@@ -8,11 +8,11 @@ namespace PokemonGame.PokemonBattle.Entities
 {
     public class BattleData
     {
-        public Dictionary<string, string> Data { get; }
+        public Dictionary<string, object> Data { get; }
 
         public BattleData()
         {
-            Data = new Dictionary<string, string>();
+            Data = new Dictionary<string, object>();
         }
     }
 }
