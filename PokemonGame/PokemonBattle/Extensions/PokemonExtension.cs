@@ -58,6 +58,12 @@ namespace PokemonGame.PokemonBattle.Extensions
 
         public static int EffectCount(this Pokemon pokemon, params EffectType[] effects) => effects.Aggregate(0, (result, e) => result += pokemon.EffectCount(e));
         
+        public static bool HasMove(this Pokemon pokemon, string name) => pokemon.Moves.Any(m => m.NameIsAnyOf(name));
+
+        public static bool HasMove(this Pokemon pokemon, params string[] names) => names.Any(n => pokemon.HasMove(n));
+
+        public static Move FindMove(this Pokemon pokemon, string moveName) => pokemon.Moves.Find(m => m.Name == moveName);
+
         public static bool HasType(this Pokemon pokemon, PokemonType t) => pokemon.Types.Contains(t);
 
         public static bool HasAbility(this Pokemon pokemon, string abilityName) => pokemon.Ability.Name == abilityName;

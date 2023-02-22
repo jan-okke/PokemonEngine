@@ -4,11 +4,12 @@ namespace PokemonGame.PokemonBattle.Entities
 {
     public class Move 
     {
-        public int BasePower { get; set; }
-        public string Name { get; set; }
-        public int PowerPoints { get; set; }
-        public PokemonType Type { get; set; }
-        public MoveCategory Category { get; set; }
+        public int BasePower { get; }
+        public string Name { get; }
+        public int PowerPoints { get; }
+        public PokemonType Type { get; }
+        public MoveCategory Category { get; }
+        public int Priority { get; }
 
         public bool IsPhysical => Category == MoveCategory.Phsyical;
         public bool IsSpecial => Category == MoveCategory.Special;
@@ -34,6 +35,7 @@ namespace PokemonGame.PokemonBattle.Entities
             PowerPoints = powerPoints;
             Type = type;
             Category = category;
+            Priority = 0;
         }
     }
 }

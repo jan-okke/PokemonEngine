@@ -210,7 +210,7 @@ namespace PokemonGame.PokemonBattle.Extensions
 
         private static double CalculateStabMod(Pokemon attacker, Move move) => attacker.HasType(move.Type) ? attacker.GetStabModBoost() : 1;
 
-        private static double CalculateEffectivityMod(PokemonType moveType, PokemonType defendingType) => moveType switch
+        public static double CalculateEffectivityMod(PokemonType moveType, PokemonType defendingType) => moveType switch
         {
             PokemonType.Normal => defendingType switch
             {
@@ -407,7 +407,7 @@ namespace PokemonGame.PokemonBattle.Extensions
             _ => throw new NotImplementedException(),
         };
 
-        private static double CalculateEffectivityMod(Move move, List<PokemonType> types) => types.Aggregate(1.0, (result, type) => result *= CalculateEffectivityMod(move.Type, type));
+        public static double CalculateEffectivityMod(Move move, List<PokemonType> types) => types.Aggregate(1.0, (result, type) => result *= CalculateEffectivityMod(move.Type, type));
 
         private static double CalculateBurnMod(Pokemon attacker, Move move) => attacker.HasStatusCondition(StatusConditionType.Burned) && move.IsAffectedByBurn() ? move.GetBurnMod() : 1;
 
