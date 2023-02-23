@@ -6,23 +6,25 @@ namespace PokemonGame.PokemonBattle.Entities
 {
     public class Pokemon 
     {
-        public string Name { get; set; }
-        public int Level { get; set; }
-        public Ability Ability { get; set; }
-        public Item Item { get; set; }
-        public List<Move> Moves { get; set; }
-        public Stats BaseStats { get; set; }
-        public Stats IVs { get; set; }
-        public Stats EVs { get; set; }
-        public Stats Stats { get; set; }
-        public Stats StatStages { get; set; }
-        public StatusCondition Status { get; set; }
+        public string Name { get; }
+        public int Level { get; internal set; }
+        public int Experience { get; internal set; }
+        public Ability Ability { get; internal set; }
+        public Item Item { get; internal set; }
+        public List<Move> Moves { get; }
+        public Stats BaseStats { get; }
+        public Stats IVs { get; }
+        public Stats EVs { get; }
+        public Stats Stats { get; }
+        public Stats StatStages { get; }
+        public StatusCondition Status { get; internal set; }
+        public ExperienceGroup ExperienceGroup { get; }
 
-        public int CurrentHP { get; set; }
-        public List<Effect> Effects { get; set; }
-        public List<PokemonType> Types { get; set; }
-        public Gender Gender { get; set; }
-        public DynamaxState DynamaxState { get; set; }
+        public int CurrentHP { get; internal set; }
+        public List<Effect> Effects { get; internal set; }
+        public List<PokemonType> Types { get; internal set; }
+        public Gender Gender { get; internal set; }
+        public DynamaxState DynamaxState { get; internal set; }
 
         public bool IsAlive => CurrentHP > 0;
         public bool IsDynamaxed => DynamaxState.Active;
@@ -32,11 +34,11 @@ namespace PokemonGame.PokemonBattle.Entities
         public bool IsFlying => false; // TODO
         public bool IsMinimized => false; // TODO
 
-        public bool Flinched { get; set; } // TODO this has to be reset at the end of turn lol
+        public bool Flinched { get; internal set; } // TODO this has to be reset at the end of turn lol
         
-        public bool Confused { get; set; }
-        public bool Trapped { get; set; }
-        public bool Muted { get; set; } // can not use sound moves xd
+        public bool Confused { get; internal set; }
+        public bool Trapped { get; internal set; }
+        public bool Muted { get; internal set; } // can not use sound moves xd
         public Pokemon(string name, int level, Stats baseStats, Ability ability, List<PokemonType> types) 
         {
             Name = name;

@@ -78,7 +78,10 @@ namespace PokemonGame.PokemonBattle.AI
                 }
             }
             // 
-            return pokemon.GetHighestBPMoves().First();
+            foreach (Move m in pokemon.Moves) {
+                if (m.AffectsPokemon(pokemon, opponent)) return m;
+            }
+            throw new Exception();
         }
 
         private static bool CanOHKO(Battle battle, Move move) {

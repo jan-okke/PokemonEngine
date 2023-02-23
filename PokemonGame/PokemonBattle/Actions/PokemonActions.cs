@@ -1,6 +1,8 @@
 ﻿using PokemonGame.PokemonBattle.Entities;
 using PokemonGame.PokemonBattle.Enums;
 using PokemonGame.PokemonBattle.Validation;
+using PokemonGame.PokemonBattle.Extensions;
+using PokemonGame.PokemonBattle.Handles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -127,6 +129,30 @@ namespace PokemonGame.PokemonBattle.Actions
                 return true;
             }
             return false;
+        }
+        public static bool Dynamax(this Pokemon pokemon) {
+            if (pokemon.CanDynamax()) {
+                pokemon.DynamaxState = new DynamaxState();
+                return true;
+            }
+            return false;
+        }
+        
+        public static bool LearnMove(this Pokemon pokemon, Move move, int indexToReplace = 0) {
+            if (pokemon.Moves.Count == 4) {
+                pokemon.Moves[indexToReplace] = move;
+            }
+            else {
+                pokemon.Moves.Add(move);
+            }
+            return true;
+        }
+
+        public static void GainExperience(this Pokemon pokemon, int amount) {
+            pokemon.Experience += amount;
+            if (pokemon.Experience.AsLevel(pokemon.ExperienceGroup) > pokemon.Level) {
+                pokemon.OnLevelUp(pokemon.Level, pokemon.Experience.AsLevel(pokemon.ExperienceGroup));
+            }
         }
     }
 }

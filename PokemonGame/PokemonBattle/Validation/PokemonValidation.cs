@@ -20,5 +20,6 @@ namespace PokemonGame.PokemonBattle.Validation
         
         public static bool CanGetStatusCondition(this Pokemon pokemon, StatusConditionType condition) => true; // TODO
 
+        public static bool CanDynamax(this Pokemon pokemon) => false; // TODO
     }
 }

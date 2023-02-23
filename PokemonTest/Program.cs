@@ -43,8 +43,10 @@ Move GigaDrain = new Move("Giga Drain", 75, 10, PokemonType.Grass, MoveCategory.
 Move LeechSeed = new Move("Leech Seed", 0, 10, PokemonType.Grass, MoveCategory.Status);
 Move AuroraVeil = new Move("Aurora Veil", 0, 10, PokemonType.Ice, MoveCategory.Status);
 
-
-Abomasnow2.Moves = new List<Move>() { Blizzard, GigaDrain, LeechSeed, AuroraVeil };
+Abomasnow2.LearnMove(Blizzard);
+Abomasnow2.LearnMove(GigaDrain);
+Abomasnow2.LearnMove(LeechSeed);
+Abomasnow2.LearnMove(AuroraVeil);
 
 PokemonParty playerParty = new(new List<Pokemon>() { Abomasnow });
 PokemonParty enemyParty = new(new List<Pokemon>() { Abomasnow2 });

@@ -6,7 +6,7 @@ namespace PokemonGame.PokemonBattle.Entities
 {
     public class PokemonParty
     {
-        public List<Pokemon> Pokemons { get; set; }
+        public List<Pokemon> Pokemons { get; }
         public bool IsAlive => Pokemons.Where(p => p.IsAlive).Any();
         public int AliveCount => Pokemons.Where(p => p.IsAlive).Count();
         public int FaintedCount => Pokemons.Where(p => !p.IsAlive).Count();

@@ -4,8 +4,8 @@ namespace PokemonGame.PokemonBattle.Entities
 {
     public class Weather
     {
-        public WeatherCondition Condition { get; set; }
-        public int Turns { get; set; }
+        public WeatherCondition Condition { get; }
+        public int Turns { get; internal set; }
 
         public bool Active => Turns > 0;
 

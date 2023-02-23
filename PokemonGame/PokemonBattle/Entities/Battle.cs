@@ -11,9 +11,9 @@ namespace PokemonGame.PokemonBattle.Entities
         public PokemonParty EnemyParty { get; }
         public BattlerSide PlayerSide { get; }
         public BattlerSide EnemySide { get; }
-        public Weather Weather { get; set; }
-        public Terrain Terrain { get; set; }
-        public Gravity Gravity { get; set; }
+        public Weather Weather { get; internal set; }
+        public Terrain Terrain { get; internal set; }
+        public Gravity Gravity { get; internal set; }
         public List<FieldEffect> FieldEffects { get; }
         public List<BattleFlag> BattleFlags { get; }
 

@@ -4,8 +4,8 @@ namespace PokemonGame.PokemonBattle.Entities
 {
     public class Terrain
     {
-        public TerrainEffect Effect { get; set; }
-        public int Turns { get; set; }
+        public TerrainEffect Effect { get; }
+        public int Turns { get; internal set; }
 
         public bool Active => Turns > 0;
 

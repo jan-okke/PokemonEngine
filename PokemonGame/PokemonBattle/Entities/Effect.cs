@@ -9,8 +9,8 @@ namespace PokemonGame.PokemonBattle.Entities
 {
     public class Effect
     {
-        public EffectType Type { get; set; }
-        public int Turns { get; set; }
+        public EffectType Type { get; }
+        public int Turns { get; internal set; }
 
         public bool IsActive => Turns > 0;
 
