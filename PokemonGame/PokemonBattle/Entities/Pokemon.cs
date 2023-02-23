@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using PokemonGame.PokemonBattle.Enums;
 using PokemonGame.PokemonBattle.Extensions;
+using System.Linq;
 
 namespace PokemonGame.PokemonBattle.Entities 
 {
@@ -26,16 +27,18 @@ namespace PokemonGame.PokemonBattle.Entities
         public Gender Gender { get; internal set; }
         public DynamaxState DynamaxState { get; internal set; }
 
+        public int Weight { get; internal set; }
+
         public bool IsAlive => CurrentHP > 0;
         public bool IsDynamaxed => DynamaxState.Active;
         public bool IsUnderground => false; // TODO
         public bool IsUnderwater => false; // TODO
-        public bool IsProtected => false; // TODO
+        public bool IsProtected => Effects.Any(e => e.HasType(EffectType.Protect, EffectType.BanefulBunker));
         public bool IsFlying => false; // TODO
         public bool IsMinimized => false; // TODO
 
         public bool Flinched { get; internal set; } // TODO this has to be reset at the end of turn lol
-        
+        public bool Infatuated { get; internal set; } // in love
         public bool Confused { get; internal set; }
         public bool Trapped { get; internal set; }
         public bool Muted { get; internal set; } // can not use sound moves xd

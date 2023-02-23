@@ -79,6 +79,22 @@ namespace PokemonGame.PokemonBattle.Actions
                 case SecondaryStat.Accuracy: pokemon.StatStages.Accuracy += Math.Min(amount, 6 - pokemon.StatStages.Accuracy); break;
             }
         }
+        public static void IncreaseRandomAvailableStatBy(this Pokemon pokemon, int amount) {
+            // this SHOULD NOT cause an infinite loop
+            if (pokemon.StatStages.Sum() == 42) throw new Exception("Stats maxed out already");
+            while (true) {
+                var statNum = new Random().Next(1, 8); // {1 - 5 Attack - Speed} {6 - 7 Accuracy - Evasion}
+                switch (statNum) {
+                    case 1: if (pokemon.StatStages.Attack < 6) pokemon.IncreaseStatStage(Stat.Attack, amount); return;
+                    case 2: if (pokemon.StatStages.Defense < 6) pokemon.IncreaseStatStage(Stat.Defense, amount); return;
+                    case 3: if (pokemon.StatStages.SpecialAttack < 6) pokemon.IncreaseStatStage(Stat.SpecialAttack, amount); return;
+                    case 4: if (pokemon.StatStages.SpecialDefense < 6) pokemon.IncreaseStatStage(Stat.SpecialDefense, amount); return;
+                    case 5: if (pokemon.StatStages.Speed < 6) pokemon.IncreaseStatStage(Stat.Speed, amount); return;
+                    case 6: if (pokemon.StatStages.Accuracy < 6) pokemon.IncreaseStatStage(SecondaryStat.Accuracy, amount); return;
+                    case 7: if (pokemon.StatStages.Evasion < 6) pokemon.IncreaseStatStage(SecondaryStat.Evasion, amount); return;
+                }
+            }
+        }
 
         public static void IncreaseAllStatStagesBy(this Pokemon pokemon, int amount)
         {
@@ -88,6 +104,12 @@ namespace PokemonGame.PokemonBattle.Actions
             pokemon.IncreaseStatStage(Stat.SpecialAttack, amount);
             pokemon.IncreaseStatStage(Stat.SpecialDefense, amount);
             pokemon.IncreaseStatStage(Stat.Speed, amount);
+        }
+
+        public static bool GiveEffect(this Pokemon pokemon, EffectType effectType, int turns) {
+            if (pokemon.HasEffect(effectType)) return false;
+            pokemon.Effects.Add(new Effect(effectType, turns));
+            return true;
         }
 
         public static bool Flinch(this Pokemon pokemon)
@@ -130,12 +152,28 @@ namespace PokemonGame.PokemonBattle.Actions
             }
             return false;
         }
+
+        public static bool Infatuate(this Pokemon pokemon, Pokemon sender) {
+            if (pokemon.CanInfatuate(sender)) {
+                pokemon.Infatuated = true;
+                return true;
+            }
+            return false;
+        }
+
         public static bool Dynamax(this Pokemon pokemon) {
             if (pokemon.CanDynamax()) {
                 pokemon.DynamaxState = new DynamaxState();
                 return true;
             }
             return false;
+        }
+
+        public static void TransferItem(this Pokemon pokemon, Item item, Pokemon target) {
+            if (item is null) throw new Exception("No Item was given");
+            if (target.Item != null) throw new Exception("Opponent already had an item");
+            pokemon.Item = null;
+            target.Item = item;
         }
         
         public static bool LearnMove(this Pokemon pokemon, Move move, int indexToReplace = 0) {

@@ -11,6 +11,10 @@ namespace PokemonGame.PokemonBattle.Extensions
     {
         #region Weather
         
+        public static bool IsWeatherConditionActive(this Battle battle, WeatherCondition condition) => battle.Weather.IsConditionActive(condition);
+
+        public static bool IsWeatherConditionActive(this Battle battle, params WeatherCondition[] conditions) => battle.Weather.IsConditionActive(conditions);
+        
         #endregion
         #region Terrain
         

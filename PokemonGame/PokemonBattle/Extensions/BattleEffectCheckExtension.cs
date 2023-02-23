@@ -24,6 +24,7 @@ namespace PokemonGame.PokemonBattle.Extensions
 
             switch (move.Name)
             {
+                #region Damaging Moves with secondary effect
                 // TODO: abilities that increase the chance
                 case "Acid": if (Chance(10)) defendingPokemon.LowerStatStage(Stat.SpecialDefense, 1); break;
                 case "Acid Spray": defendingPokemon.LowerStatStage(Stat.SpecialDefense, 2); break;
@@ -196,6 +197,30 @@ namespace PokemonGame.PokemonBattle.Extensions
                 case "Zap Cannon": defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1); break;
                 case "Zen Headbutt": if (Chance(20)) defendingPokemon.Flinch(); break;
                 case "Zing Zap": if (Chance(30)) defendingPokemon.Flinch(); break;
+                #endregion
+
+                case "Acid Armor": attackingPokemon.IncreaseStatStage(Stat.Defense, 2); break;
+                case "Acupressure": attackingPokemon.IncreaseRandomAvailableStatBy(2); break;
+                case "After You": break; //TODO
+                case "Agility": attackingPokemon.IncreaseStatStage(Stat.Speed, 2); break;
+                case "Ally Switch": break; //TODO
+                case "Amnesia": attackingPokemon.IncreaseStatStage(Stat.SpecialDefense, 2); break;
+                case "Aqua Ring": attackingPokemon.GiveEffect(EffectType.AquaRing, -1); break;
+                case "Aromatherapy": attackingParty.Pokemons.ForEach(p => p.HealStatusCondition()); break;
+                case "Aromatic Mist": break; // TODO
+                case "Assist": break; // TODO
+                case "Attract": if (attackingPokemon.IsOpposingGender(defendingPokemon)) defendingPokemon.Infatuate(attackingPokemon); break;
+                case "Aurora Veil": if (battle.IsWeatherConditionActive(WeatherCondition.Hail) & !attackingSide.HasBuff(BattlerSideBuff.AuroraVeil)) attackingSide.GiveBuff(BattlerSideBuff.AuroraVeil); break;
+                case "Autotomize": attackingPokemon.Weight /= 2; attackingPokemon.IncreaseStatStage(Stat.Speed, 2); break;
+                case "Baby-Doll Eyes": defendingPokemon.LowerStatStage(Stat.Attack, 1); break;
+                case "Baneful Bunker": attackingPokemon.GiveEffect(EffectType.BanefulBunker, 1); break;
+                case "Barrier": attackingPokemon.IncreaseStatStage(Stat.Defense, 2); break;
+                case "Baton Pass": break; // TODO
+                case "Belly Drum": if (attackingPokemon.BelowHalfHP()) throw new Exception("Not enough hp left"); attackingPokemon.IncreaseStatStage(Stat.Attack, 12); break;
+                case "Bestow": attackingPokemon.TransferItem(attackingPokemon.Item, defendingPokemon); break;
+                case "Block": defendingPokemon.Trap(); break;
+                case "Bulk Up": attackingPokemon.IncreaseStatStage(Stat.Attack, 1); attackingPokemon.IncreaseStatStage(Stat.Defense, 1); break;
+                case "Calm Mind": attackingPokemon.IncreaseStatStage(Stat.SpecialAttack, 1); attackingPokemon.IncreaseStatStage(Stat.SpecialDefense, 1); break;
             }
         }
         private static bool Chance(int outOfHundred) => new Random().Next(0, 100) <= outOfHundred;
