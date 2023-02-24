@@ -216,11 +216,23 @@ namespace PokemonGame.PokemonBattle.Extensions
                 case "Baneful Bunker": attackingPokemon.GiveEffect(EffectType.BanefulBunker, 1); break;
                 case "Barrier": attackingPokemon.IncreaseStatStage(Stat.Defense, 2); break;
                 case "Baton Pass": break; // TODO
-                case "Belly Drum": if (attackingPokemon.BelowHalfHP()) throw new Exception("Not enough hp left"); attackingPokemon.IncreaseStatStage(Stat.Attack, 12); break;
+                case "Belly Drum": if (attackingPokemon.BelowHalfHP()) throw new Exception("Not enough hp left"); attackingPokemon.TakeDamage(attackingPokemon.Stats.HP / 2); attackingPokemon.IncreaseStatStage(Stat.Attack, 12); break;
                 case "Bestow": attackingPokemon.TransferItem(attackingPokemon.Item, defendingPokemon); break;
                 case "Block": defendingPokemon.Trap(); break;
                 case "Bulk Up": attackingPokemon.IncreaseStatStage(Stat.Attack, 1); attackingPokemon.IncreaseStatStage(Stat.Defense, 1); break;
                 case "Calm Mind": attackingPokemon.IncreaseStatStage(Stat.SpecialAttack, 1); attackingPokemon.IncreaseStatStage(Stat.SpecialDefense, 1); break;
+                case "Camouflage": break; // TODO
+                case "Captivate": if (attackingPokemon.IsOpposingGender(defendingPokemon)) defendingPokemon.LowerStatStage(Stat.SpecialAttack, 2); break;
+                case "Celebrate": break; // no effect
+                case "Charge": attackingPokemon.IncreaseStatStage(Stat.SpecialDefense, 1); attackingPokemon.GiveEffect(EffectType.Charged, 1); break;
+                case "Charm": defendingPokemon.LowerStatStage(Stat.Attack, 2); break;
+                case "Chilly Reception": break; // TOOD this sets up hail then switches user out
+                case "Clangorous Soul": if (attackingPokemon.BelowThirdHP()) throw new Exception("Not enough hp left"); attackingPokemon.TakeDamage(attackingPokemon.Stats.HP / 3); attackingPokemon.IncreaseAllStatStagesBy(1); break;
+                case "Coaching": break; // TODO
+                case "Coil": attackingPokemon.IncreaseStatStage(Stat.Attack, 1); attackingPokemon.IncreaseStatStage(Stat.Defense, 1); attackingPokemon.IncreaseStatStage(SecondaryStat.Accuracy, 1); break;
+                case "Confide": defendingPokemon.LowerStatStage(Stat.SpecialAttack, 1); break;
+                case "Confuse Ray": defendingPokemon.Confuse(); break;
+                case "Conversion": break; // TODO
             }
         }
         private static bool Chance(int outOfHundred) => new Random().Next(0, 100) <= outOfHundred;
