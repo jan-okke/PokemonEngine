@@ -30,6 +30,7 @@ namespace PokemonGame.PokemonBattle.Entities
         public bool HasAdditionalEffect => false; // TODO
         public bool HasExtraDamageOnMinimize => false; // TODO
 
+        public bool IgnoresProtect => false; // TODO
         public Move(string name, int basePower, int powerPoints, PokemonType type, MoveCategory category) 
         {
             Name = name;
