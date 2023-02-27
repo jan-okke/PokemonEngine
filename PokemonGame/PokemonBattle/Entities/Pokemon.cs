@@ -55,6 +55,7 @@ namespace PokemonGame.PokemonBattle.Entities
             Stats = new();
             Effects = new();
             Moves = new();
+            SecondaryStatusConditions= new();
             this.CalculateStats();
         }
 
@@ -68,6 +69,7 @@ namespace PokemonGame.PokemonBattle.Entities
             Stats = new();
             Effects = new();
             Moves = new();
+            SecondaryStatusConditions = new();
         }
 
         public Pokemon() 
@@ -77,6 +79,7 @@ namespace PokemonGame.PokemonBattle.Entities
             Stats = new();
             Effects = new();
             Moves = new();
+            SecondaryStatusConditions = new();
         }
 
         public override string ToString()
