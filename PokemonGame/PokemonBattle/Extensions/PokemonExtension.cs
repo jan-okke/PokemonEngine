@@ -33,11 +33,8 @@ namespace PokemonGame.PokemonBattle.Extensions
             pokemon.Stats.Speed = ((2 * baseStats.Speed + ivs.Speed + evs.Speed / 4) * level / 100) + 5; // () * natureMod
         }
 
-        public static bool IsFaster(this Pokemon pokemon, Pokemon other)
-        {
-            // TODO: Modifier for Stat Stages!
-            return pokemon.Stats.Speed > other.Stats.Speed;
-        }
+        public static bool IsFaster(this Pokemon pokemon, Pokemon other) => pokemon.Stats.Speed.Modify(pokemon.StatStages.Speed, false) > other.Stats.Speed.Modify(other.StatStages.Speed, false);
+        
         public static bool IsSameGender(this Pokemon pokemon, Pokemon other) => pokemon.Gender != Gender.None && pokemon.Gender == other.Gender;
 
         public static bool IsOpposingGender(this Pokemon pokemon, Pokemon other) => pokemon.Gender != Gender.None && pokemon.Gender == other.Gender;
@@ -90,14 +87,9 @@ namespace PokemonGame.PokemonBattle.Extensions
 
         public static double GetBurnedModifier(this Pokemon pokemon) => pokemon.HasAbility("Guts") ? 1.5 : 0.5;
 
-        public static int GetBST(this Pokemon pokemon) 
-        {
-            return pokemon.BaseStats.Sum();
-        }
+        public static int GetBST(this Pokemon pokemon) => pokemon.BaseStats.Sum();
 
-        public static List<Move> GetHighestBPMoves(this Pokemon pokemon)
-        {
-            return pokemon.Moves.Where(m => m.BasePower == pokemon.Moves.Max(m => m.BasePower)).ToList();
-        }
+        public static List<Move> GetHighestBPMoves(this Pokemon pokemon) => pokemon.Moves.Where(m => m.BasePower == pokemon.Moves.Max(m => m.BasePower)).ToList();
+        
     }
 }
