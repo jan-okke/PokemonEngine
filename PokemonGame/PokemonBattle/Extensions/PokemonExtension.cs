@@ -74,13 +74,17 @@ namespace PokemonGame.PokemonBattle.Extensions
 
         public static bool HasItem(this Pokemon pokemon, params string[] itemNames) => itemNames.Any(i => pokemon.HasItem(i));
         
-        public static bool HasStatusCondition(this Pokemon pokemon, StatusConditionType condition) => pokemon.Status != null && pokemon.Status.IsActive && pokemon.Status.Conditon == condition;
+        public static bool HasStatusCondition(this Pokemon pokemon, StatusConditionType conditionType) => pokemon.Status != null && pokemon.Status.IsActive && pokemon.Status.Conditon == conditionType;
 
         public static bool HasStatusCondition(this Pokemon pokemon) => pokemon.Status == null || pokemon.Status.IsActive;
 
         public static bool HasStatusCondition(this Pokemon pokemon, List<StatusCondition> conditions) => conditions.Any(c => pokemon.HasStatusCondition(c.Conditon));
 
         public static bool HasStatusCondition(this Pokemon pokemon, params StatusConditionType[] conditionTypes) => conditionTypes.Any(c => pokemon.HasStatusCondition(c));
+
+        public static bool HasStatusCondition(this Pokemon pokemon, SecondaryStatusConditionType conditionType) => pokemon.SecondaryStatusConditions.Any(c => c.Condition == conditionType && c.IsActive);
+
+        public static bool HasStatusCondition(this Pokemon pokemon, params SecondaryStatusConditionType[] conditionTypes) => conditionTypes.Any(c => pokemon.HasStatusCondition(c));
 
         public static double GetStabModBoost(this Pokemon pokemon) => pokemon.HasAbility("Adaptability") ? 2 : 1.5;
 

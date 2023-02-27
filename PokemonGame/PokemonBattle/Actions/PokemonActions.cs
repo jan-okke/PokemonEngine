@@ -29,6 +29,9 @@ namespace PokemonGame.PokemonBattle.Actions
         {
             pokemon.CurrentHP -= Math.Min(amount, pokemon.CurrentHP);
         }
+        public static void TakeDamage(this Pokemon pokemon, double percentage) {
+            pokemon.TakeDamage(pokemon.Stats.HP * (percentage / 100.0));
+        }
         public static bool SetStatus(this Pokemon pokemon, StatusConditionType condition, int startingTurns)
         {
             if (!pokemon.CanGetStatusCondition(condition)) return false;
