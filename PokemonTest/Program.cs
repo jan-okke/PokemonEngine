@@ -3,6 +3,7 @@ using PokemonGame.PokemonBattle.Extensions;
 using PokemonGame;
 using PokemonGame.PokemonBattle.Enums;
 using PokemonGame.PokemonBattle.Actions;
+using PokemonGame.PokemonBattle.Data.Pokemons;
 
 static void AssertEqual<T>(T actual, T expected) 
 {
@@ -17,24 +18,26 @@ static void AssertEqual<T>(T actual, T expected)
 //AssertEqual(p.Stats.HP, 29);
 //AssertEqual(p.Stats.Attack, 14);
 
-Ability SnowWarning = new Ability("Snow Warning", "---");
+//Ability SnowWarning = new Ability("Snow Warning", "---");
 
-Pokemon Abomasnow = new Pokemon("Abomasnow", 100, new Stats(90, 92, 75, 92, 85, 60), SnowWarning, new List<PokemonType>() { PokemonType.Ice, PokemonType.Grass} );
-Pokemon Abomasnow2 = new Pokemon("Abomasnow", 100, new Stats(90, 92, 75, 92, 85, 60), SnowWarning, new List<PokemonType>() { PokemonType.Ice, PokemonType.Grass} );
+Pokemon Abomasnow1 = new Abomasnow(level: 50); //new Pokemon("Abomasnow", 100, new Stats(90, 92, 75, 92, 85, 60), SnowWarning, new List<PokemonType>() { PokemonType.Ice, PokemonType.Grass} );
+Pokemon Abomasnow2 = new Abomasnow(level: 50); // new Pokemon("Abomasnow", 100, new Stats(90, 92, 75, 92, 85, 60), SnowWarning, new List<PokemonType>() { PokemonType.Ice, PokemonType.Grass} );
 
-Abomasnow.MaxIVS();
+Console.WriteLine(Abomasnow1.GetType() == typeof(Abomasnow));
+
+Abomasnow1.MaxIVS();
 Abomasnow2.MaxIVS();
-Abomasnow.EVs.HP = 248;
-Abomasnow.EVs.SpecialAttack = 252;
-Abomasnow.EVs.SpecialDefense = 8;
+Abomasnow1.EVs.HP = 248;
+Abomasnow1.EVs.SpecialAttack = 252;
+Abomasnow1.EVs.SpecialDefense = 8;
 Abomasnow2.EVs.HP = 248;
 Abomasnow2.EVs.SpecialAttack = 252;
 Abomasnow2.EVs.SpecialDefense = 8;
 
-Abomasnow.CalculateStats();
+Abomasnow1.CalculateStats();
 Abomasnow2.CalculateStats();
 
-Abomasnow.HealHP();
+Abomasnow1.HealHP();
 Abomasnow2.HealHP();
 
 
@@ -48,13 +51,14 @@ Abomasnow2.LearnMove(GigaDrain);
 Abomasnow2.LearnMove(LeechSeed);
 Abomasnow2.LearnMove(AuroraVeil);
 
-PokemonParty playerParty = new(new List<Pokemon>() { Abomasnow });
+PokemonParty playerParty = new(new List<Pokemon>() { Abomasnow1 });
 PokemonParty enemyParty = new(new List<Pokemon>() { Abomasnow2 });
 
 var battle = BattleActions.StartWildBattle(playerParty, Abomasnow2);
 
 while (battle.IsOngoing)
 {
-    battle.UseMove(Abomasnow, Abomasnow2, Blizzard);
+    battle.ActiveBattlers.ForEach(p => DebugConsole.WriteLine($"{p.Name} {p.CurrentHP} {p.GetHPPercentage()}"));
+    battle.UseMove(Abomasnow1, Abomasnow2, Blizzard);
 }
 //AssertEqual(battle.CalculateDamage(true, Blizzard).Value, 160);

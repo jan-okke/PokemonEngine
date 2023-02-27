@@ -18,7 +18,7 @@ namespace PokemonGame.PokemonBattle.AI
             return pokemon.GetHighestBPMoves()[0];
         }
 
-    	public static Move GetBestMove(this Battle battle) {
+    	public static Move GetBestAIMove(this Battle battle) {
             var pokemon = battle.EnemyParty.GetFirstAlivePokemon();
             var opponent = battle.PlayerParty.GetFirstAlivePokemon();
 

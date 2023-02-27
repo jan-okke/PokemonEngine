@@ -50,7 +50,7 @@ namespace PokemonGame.PokemonBattle.Actions
 
         public static void UseMove(this Battle battle, Pokemon user, Pokemon target, Move move)
         {
-            var aiMove = battle.AIChooseMove();
+            var aiMove = battle.GetBestAIMove();
             if (user.IsFaster(target))
             {
                 // Player is faster

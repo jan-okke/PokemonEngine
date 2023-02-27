@@ -7,13 +7,13 @@ namespace PokemonGame.PokemonBattle.Entities
 {
     public class Pokemon 
     {
-        public string Name { get; }
+        public string Name { get; protected set; }
         public int Level { get; internal set; }
         public int Experience { get; internal set; }
         public Ability Ability { get; internal set; }
         public Item Item { get; internal set; }
         public List<Move> Moves { get; }
-        public Stats BaseStats { get; }
+        public Stats BaseStats { get; protected set; }
         public Stats IVs { get; }
         public Stats EVs { get; }
         public Stats Stats { get; }
@@ -53,6 +53,7 @@ namespace PokemonGame.PokemonBattle.Entities
             IVs = new();
             Stats = new();
             Effects = new();
+            Moves = new();
             this.CalculateStats();
         }
 
@@ -60,6 +61,21 @@ namespace PokemonGame.PokemonBattle.Entities
         {
             Name = name;
             Level = level;
+
+            EVs = new();
+            IVs = new();
+            Stats = new();
+            Effects = new();
+            Moves = new();
+        }
+
+        public Pokemon() 
+        {
+            EVs = new();
+            IVs = new();
+            Stats = new();
+            Effects = new();
+            Moves = new();
         }
 
         public override string ToString()

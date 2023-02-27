@@ -42,7 +42,7 @@ namespace PokemonGame.PokemonBattle.Extensions
 
         public static bool IsOpposingGender(this Pokemon pokemon, Pokemon other) => pokemon.Gender != Gender.None && pokemon.Gender == other.Gender;
 
-        public static double GetHPPercentage(this Pokemon pokemon) => pokemon.CurrentHP / pokemon.Stats.HP;
+        public static int GetHPPercentage(this Pokemon pokemon) => (int)(pokemon.CurrentHP * 100.0 / pokemon.Stats.HP);
 
         public static bool BelowThirdHP(this Pokemon pokemon) => pokemon.GetHPPercentage() < 33.33;
         
