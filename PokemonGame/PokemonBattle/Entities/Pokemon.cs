@@ -19,6 +19,7 @@ namespace PokemonGame.PokemonBattle.Entities
         public Stats Stats { get; }
         public Stats StatStages { get; }
         public StatusCondition Status { get; internal set; }
+        public List<SecondaryStatusCondition> SecondaryStatusConditions { get;}
         public ExperienceGroup ExperienceGroup { get; }
 
         public int CurrentHP { get; internal set; }

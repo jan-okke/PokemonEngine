@@ -3,6 +3,7 @@ using PokemonGame.PokemonBattle.Constants;
 using PokemonGame.PokemonBattle.Entities;
 using PokemonGame.PokemonBattle.Enums;
 using PokemonGame.PokemonBattle.Extensions;
+using PokemonGame.PokemonBattle.Handles;
 using PokemonGame.PokemonBattle.Validation;
 using System;
 using System.Collections.Generic;
@@ -54,34 +55,32 @@ namespace PokemonGame.PokemonBattle.Actions
             if (user.IsFaster(target))
             {
                 // Player is faster
-                var playerDamageAnswer = battle.CalculateDamage(true, move);
-                battle.CheckEffects(true, move);
-                target.TakeDamage(playerDamageAnswer.Value);
-                battle.Log(move, playerDamageAnswer.Value, playerDamageAnswer.AnswerCode == AnswerCodes.Answer_Calculation_CriticalHit, !target.IsAlive);
+                battle.HandleMoveTurn(target, move, true);
                 if (target.IsAlive)
                 {
-                    var aiDamageAnswer = battle.CalculateDamage(false, aiMove);
-                    battle.CheckEffects(false, aiMove);
-                    user.TakeDamage(aiDamageAnswer.Value);
-                    battle.Log(aiMove, aiDamageAnswer.Value, aiDamageAnswer.AnswerCode == AnswerCodes.Answer_Calculation_CriticalHit, !user.IsAlive);
+                    battle.HandleMoveTurn(user, aiMove, false);
                 }
             }
             else
             {
                 // AI is faster
-                var aiDamageAnswer = battle.CalculateDamage(false, aiMove);
-                battle.CheckEffects(false, aiMove);
-                user.TakeDamage(aiDamageAnswer.Value);
-                battle.Log(aiMove, aiDamageAnswer.Value, aiDamageAnswer.AnswerCode == AnswerCodes.Answer_Calculation_CriticalHit, !user.IsAlive);
+                battle.HandleMoveTurn(user, aiMove, false);
                 if (user.IsAlive)
                 {
-                    var playerDamageAnswer = battle.CalculateDamage(true, move);
-                    battle.CheckEffects(true, move);
-                    target.TakeDamage(playerDamageAnswer.Value);
-                    battle.Log(move, playerDamageAnswer.Value, playerDamageAnswer.AnswerCode == AnswerCodes.Answer_Calculation_CriticalHit, !target.IsAlive);
+                    battle.HandleMoveTurn(target, move, true);
                 }
             }
+            battle.EndTurn();
+        }
+
+        public static void EndTurn(this Battle battle)
+        {
+            if (!battle.IsOngoing) { DebugConsole.WriteLine("Battle is over!"); return; }
             battle.Turn++;
+            // TODO active battlers might need a fix (can cause to be the new pokemon before its sent out)
+            foreach (Pokemon p in battle.ActiveBattlers) {
+                p.OnTurnEnd();
+            }
         }
     }
 }
