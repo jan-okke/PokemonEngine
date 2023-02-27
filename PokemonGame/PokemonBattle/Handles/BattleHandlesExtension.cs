@@ -7,12 +7,13 @@ namespace PokemonGame.PokemonBattle.Handles
 {
     public static class BattleHandlesExtension
     {
-        public static void HandleMoveTurn(this Battle battle, Pokemon user, Pokemon target, Move firstMove, Move secondMove, bool playerTurn) 
+        public static void HandleMoveTurn(this Battle battle, Pokemon target, Move move, bool playerTurn) 
         {
-            var answer = battle.CalculateDamage(playerTurn, firstMove);
-            battle.CheckEffects(playerTurn, firstMove);
+            var answer = battle.CalculateDamage(playerTurn, move);
+            battle.CheckEffects(playerTurn, move);
             target.TakeDamage(answer.Value);
-            battle.Log(firstMove, answer.Value, answer.AnswerCode == AnswerCodes.Answer_Calculation_CriticalHit, !target.IsAlive);
+            move.ReducePowerPoints(target.HasAbility("Pressure") ? 2 : 1);
+            battle.Log(move, answer.Value, answer.AnswerCode == AnswerCodes.Answer_Calculation_CriticalHit, !target.IsAlive);
         }
     }
 }

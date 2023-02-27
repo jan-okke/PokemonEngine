@@ -55,19 +55,19 @@ namespace PokemonGame.PokemonBattle.Actions
             if (user.IsFaster(target))
             {
                 // Player is faster
-                battle.HandleMoveTurn(user, target, move, aiMove, true);
+                battle.HandleMoveTurn(target, move, true);
                 if (target.IsAlive)
                 {
-                    battle.HandleMoveTurn(target, user, aiMove, move, false);
+                    battle.HandleMoveTurn(user, aiMove, false);
                 }
             }
             else
             {
                 // AI is faster
-                battle.HandleMoveTurn(target, user, aiMove, move, false);
+                battle.HandleMoveTurn(user, aiMove, false);
                 if (user.IsAlive)
                 {
-                    battle.HandleMoveTurn(user, target, move, aiMove, true);
+                    battle.HandleMoveTurn(target, move, true);
                 }
             }
             battle.EndTurn();
