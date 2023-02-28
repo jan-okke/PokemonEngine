@@ -9,10 +9,7 @@ namespace PokemonGame.PokemonBattle.Data.Abilities
 {
     public class SnowWarning : Ability
     {
-        public SnowWarning() 
-        {
-            Name = "Snow Warning";
-            Description = "Sets up hail lol";
-        }
+        public override string Name => "Snow Warning";
+        public override string Description => "Sets up hail lol";
     }
 }

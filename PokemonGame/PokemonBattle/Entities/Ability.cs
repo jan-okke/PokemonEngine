@@ -2,8 +2,8 @@ namespace PokemonGame.PokemonBattle.Entities
 {
     public class Ability 
     {
-        public string Name { get; protected set; }
-        public string Description { get; protected set; }
+        public virtual string Name { get; }
+        public virtual string Description { get; }
         public Ability(string name, string description)
         {
             Name = name;

@@ -7,24 +7,24 @@ namespace PokemonGame.PokemonBattle.Entities
 {
     public class Pokemon 
     {
-        public string Name { get; protected set; }
+        public virtual string Name { get; }
         public int Level { get; internal set; }
         public int Experience { get; internal set; }
-        public Ability Ability { get; internal set; }
+        public virtual Ability Ability { get; }
         public Item Item { get; internal set; }
         public List<Move> Moves { get; }
-        public Stats BaseStats { get; protected set; }
+        public virtual Stats BaseStats { get; }
         public Stats IVs { get; }
         public Stats EVs { get; }
         public Stats Stats { get; }
         public Stats StatStages { get; }
         public StatusCondition Status { get; internal set; }
         public List<SecondaryStatusCondition> SecondaryStatusConditions { get;}
-        public ExperienceGroup ExperienceGroup { get; }
+        public virtual ExperienceGroup ExperienceGroup { get; }
 
         public int CurrentHP { get; internal set; }
         public List<Effect> Effects { get; internal set; }
-        public List<PokemonType> Types { get; internal set; }
+        public virtual List<PokemonType> Types { get; }
         public Gender Gender { get; internal set; }
         public DynamaxState DynamaxState { get; internal set; }
 
