@@ -1,5 +1,6 @@
 ﻿using PokemonGame.PokemonBattle.Entities;
 using PokemonGame.PokemonBattle.Extensions;
+using PokemonGame.PokemonBattle.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,9 +25,10 @@ namespace PokemonGame.PokemonBattle.Validation
             var attackingSide = playerTurn ? battle.PlayerSide : battle.EnemySide;
             var defendingSide = playerTurn ? battle.EnemySide : battle.PlayerSide;
 
-            if (defendingPokemon.IsProtected & !move.IgnoresProtect) return moveFails;
+            if (defendingPokemon.IsProtected & !move.IgnoresProtect) throw new DefenderProtectedException(defendingPokemon);
+            if (move.NameIsAnyOf("Fake Out") && battle.Turn != 1) throw new MoveFailsException(move); // TODO, this should not be battle turn 1 but move turn 1
 
-            if (move.NameIsAnyOf("Fake Out")) return battle.Turn == 1 ? moveSucess : moveFails;
+            return moveSucess;
         }
     }
 }

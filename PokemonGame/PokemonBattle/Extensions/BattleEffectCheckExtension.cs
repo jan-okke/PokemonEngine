@@ -233,6 +233,20 @@ namespace PokemonGame.PokemonBattle.Extensions
                 case "Confide": defendingPokemon.LowerStatStage(Stat.SpecialAttack, 1); break;
                 case "Confuse Ray": defendingPokemon.Confuse(); break;
                 case "Conversion": break; // TODO
+                case "Conversion 2": break; // TODO
+                case "Copycat": break; // TODO
+                case "Corrosive Gas": defendingPokemon.RemoveItem(); break;
+                case "Cosmic Power": attackingPokemon.IncreaseStatStage(Stat.SpecialAttack, 1); attackingPokemon.IncreaseStatStage(Stat.SpecialDefense, 1); break;
+                case "Cotton Guard": attackingPokemon.IncreaseStatStage(Stat.Defense, 3); break;
+                case "Cotton Spore": defendingPokemon.LowerStatStage(Stat.Speed, 2); break;
+                case "Court Change": attackingSide.SwapBuffs(defendingSide); break;
+                case "Crafty Shield": break; // TODO
+                case "Curse": if (attackingPokemon.HasType(PokemonType.Ghost)) {
+                            if (attackingPokemon.BelowHalfHP()) throw new Exception("Not enough hp left");
+                            defendingPokemon.Curse(); }
+                            else { attackingPokemon.LowerStatStage(Stat.Speed, 1); attackingPokemon.IncreaseStatStage(Stat.Attack, 1); attackingPokemon.IncreaseStatStage(Stat.Defense, 1);}
+                            break;
+                case "Dark Void": defendingPokemon.SetStatus(StatusConditionType.Sleeping, new Random().Next(1, 4)); break;
             }
         }
         private static bool Chance(int outOfHundred) => new Random().Next(0, 100) <= outOfHundred;

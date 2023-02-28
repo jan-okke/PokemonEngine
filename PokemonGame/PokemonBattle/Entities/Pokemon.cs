@@ -43,6 +43,7 @@ namespace PokemonGame.PokemonBattle.Entities
         public bool Confused { get; internal set; }
         public bool Trapped { get; internal set; }
         public bool Muted { get; internal set; } // can not use sound moves xd
+        public bool Cursed { get; internal set; }
         public Pokemon(string name, int level, Stats baseStats, Ability ability, List<PokemonType> types) 
         {
             Name = name;

@@ -1,6 +1,7 @@
 ﻿using PokemonGame.PokemonBattle.Constants;
 using PokemonGame.PokemonBattle.Entities;
 using PokemonGame.PokemonBattle.Enums;
+using PokemonGame.PokemonBattle.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,7 +42,7 @@ namespace PokemonGame.PokemonBattle.Extensions
             var stabMod = CalculateStabMod(attackingPokemon, move);
             var effMod = CalculateEffectivityMod(move, defendingPokemon.Types);
 
-            if (effMod == 0) return new Answer(AnswerCodes.Answer_Calculation_NoEffect, 0);
+            if (effMod == 0) throw new MoveHasNoEffectException(move); //return new Answer(AnswerCodes.Answer_Calculation_NoEffect, 0);
 
             var burnMod = CalculateBurnMod(attackingPokemon, move);
             var otherMod = CalculateOtherMod(battle, attackingPokemon, defendingPokemon, attackingParty, defendingSide, move, isCriticalHit);

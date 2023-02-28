@@ -2,6 +2,7 @@ using PokemonGame.PokemonBattle.Actions;
 using PokemonGame.PokemonBattle.Constants;
 using PokemonGame.PokemonBattle.Entities;
 using PokemonGame.PokemonBattle.Extensions;
+using PokemonGame.PokemonBattle.Validation;
 
 namespace PokemonGame.PokemonBattle.Handles
 {
@@ -9,6 +10,9 @@ namespace PokemonGame.PokemonBattle.Handles
     {
         public static void HandleMoveTurn(this Battle battle, Pokemon target, Move move, bool playerTurn) 
         {
+            if (move.Fails(battle, playerTurn)) {
+                return;
+            }
             var answer = battle.CalculateDamage(playerTurn, move);
             battle.CheckEffects(playerTurn, move);
             target.TakeDamage(answer.Value);

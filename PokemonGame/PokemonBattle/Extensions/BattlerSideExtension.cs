@@ -22,5 +22,21 @@ namespace PokemonGame.PokemonBattle.Extensions
         public static int GetHazardCount(this BattlerSide side, Hazard hazard) => side.Hazards.Where(h => h == hazard).Count();
 
         public static int GetHazardCount(this BattlerSide side, params Hazard[] hazards) => hazards.Aggregate(0, (result, hazard) => result += side.GetHazardCount(hazard));
+
+        public static void SwapBuffs(this BattlerSide side, BattlerSide otherSide) {
+            List<BattlerSideBuff> thisSideBuffs = new();
+            List<BattlerSideBuff> otherSideBuffs = new();
+            foreach (BattlerSideBuff b in side.Buffs) {
+                otherSideBuffs.Add(b);
+            }
+            foreach (BattlerSideBuff b in otherSide.Buffs) {
+                thisSideBuffs.Add(b);
+            }
+
+            side.Buffs.Clear();
+            otherSide.Buffs.Clear();
+            side.Buffs.AddRange(thisSideBuffs);
+            otherSide.Buffs.AddRange(otherSideBuffs);
+        }
     }
 }

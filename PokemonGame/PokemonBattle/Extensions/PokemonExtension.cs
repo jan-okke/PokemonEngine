@@ -83,6 +83,8 @@ namespace PokemonGame.PokemonBattle.Extensions
 
         public static bool HasStatusCondition(this Pokemon pokemon, params SecondaryStatusConditionType[] conditionTypes) => conditionTypes.Any(c => pokemon.HasStatusCondition(c));
 
+        public static void RemoveItem(this Pokemon pokemon) { if (pokemon.Item == null) return; if (pokemon.Item.CanGetRemoved()) pokemon.Item = null; }
+
         public static double GetStabModBoost(this Pokemon pokemon) => pokemon.HasAbility("Adaptability") ? 2 : 1.5;
 
         public static double GetBurnedModifier(this Pokemon pokemon) => pokemon.HasAbility("Guts") ? 1.5 : 0.5;

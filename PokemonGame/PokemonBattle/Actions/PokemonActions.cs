@@ -164,6 +164,14 @@ namespace PokemonGame.PokemonBattle.Actions
             return false;
         }
 
+        public static bool Curse(this Pokemon pokemon) {
+            if (pokemon.CanCursed()) {
+                pokemon.Cursed = true;
+                return true;
+            }
+            return false;
+        }
+
         public static bool Dynamax(this Pokemon pokemon) {
             if (pokemon.CanDynamax()) {
                 pokemon.DynamaxState = new DynamaxState();
