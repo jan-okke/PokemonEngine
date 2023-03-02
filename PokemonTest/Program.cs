@@ -5,6 +5,7 @@ using PokemonGame.PokemonBattle.Enums;
 using PokemonGame.PokemonBattle.Actions;
 using PokemonGame.PokemonBattle.Data.Pokemons;
 using PokemonGame.PokemonBattle.Data.Moves;
+using PokemonGame.PokemonBattle.Handles;
 
 static void AssertEqual<T>(T actual, T expected) 
 {
@@ -14,6 +15,8 @@ static void AssertEqual<T>(T actual, T expected)
         DebugConsole.WriteLine($"Assertion failed! Expected: {expected}. Actual: {actual} ", ConsoleColor.Red);
     }
 }
+
+new ConsoleTest();
 
 //Pokemon p = new Pokemon("Bulbasaur", 10, new Stats() {HP = 45, Attack = 49, Defense = 49, SpecialAttack = 65, SpecialDefense = 65, Speed = 45});
 //AssertEqual(p.Stats.HP, 29);
@@ -70,4 +73,5 @@ foreach (var d in battle.Log.Data) {
         DebugConsole.WriteLine($"{key}: {d.Data[key]}");
     }
 }
+AssertEqual(battle.IsOngoing, false);
 //AssertEqual(battle.CalculateDamage(true, Blizzard).Value, 160);

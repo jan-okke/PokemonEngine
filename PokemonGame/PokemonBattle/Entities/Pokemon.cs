@@ -1,7 +1,9 @@
 using System.Collections.Generic;
 using PokemonGame.PokemonBattle.Enums;
 using PokemonGame.PokemonBattle.Extensions;
+using PokemonGame.PokemonBattle.Actions;
 using System.Linq;
+using System;
 
 namespace PokemonGame.PokemonBattle.Entities 
 {
@@ -63,6 +65,30 @@ namespace PokemonGame.PokemonBattle.Entities
         public Pokemon() 
         {
 
+        }
+
+        public static Pokemon GetPokemon(string name) {
+            var _namespace = "PokemonGame.PokemonBattle.Data.Pokemons";
+            var pkmn = System.Type.GetType($"{_namespace}.{name}");
+            if (pkmn == null)
+            {
+                throw new ArgumentException($"Object name {name} not recognized.", nameof(name));
+            }
+            var result = Activator.CreateInstance(pkmn) as Pokemon;
+            result.CalculateStats();
+            result.HealHP();
+
+            DebugConsole.WriteLine(result.IsAlive);
+
+            return result;
+        }
+
+        public static Pokemon GetPokemon(string name, int level) {
+            var pkmn = GetPokemon(name);
+            pkmn.Level = level;
+            pkmn.CalculateStats();
+            pkmn.HealHP();
+            return pkmn;
         }
 
         public override string ToString()

@@ -18,7 +18,7 @@ namespace PokemonGame.PokemonBattle.Actions
 
         public static Battle StartWildBattle(PokemonParty playerParty, string pokemonName, int level)
         {
-            var opponent = new Pokemon(pokemonName, level);
+            var opponent = Pokemon.GetPokemon(pokemonName, level);
             var battle = new Battle(playerParty, new PokemonParty(new List<Pokemon> { opponent }));
             battle.SetFlag(BattleFlag.WildBattle);
             return battle;
