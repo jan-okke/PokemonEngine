@@ -12,7 +12,7 @@ namespace PokemonGame.PokemonBattle.Extensions
     {
         public static Stat GetTargetDefense(this Move move)
         {
-            if (move.Name == "Psyshock") return Stat.Defense;
+            if (move.NameIsAnyOf("Psyshock")) return Stat.Defense;
             return move.Category switch
             {
                 MoveCategory.Phsyical => Stat.Defense,

@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Handles
     {
         public static void HandleMoveTurn(this Battle battle, Pokemon target, Move move, bool playerTurn) 
         {
-            if (move.Fails(battle, playerTurn)) {
+            if (!move.CanUse(playerTurn ? battle.PlayerParty.GetFirstAlivePokemon() : battle.EnemyParty.GetFirstAlivePokemon()) || move.Fails(battle, playerTurn)) {
                 return;
             }
             var answer = battle.CalculateDamage(playerTurn, move);

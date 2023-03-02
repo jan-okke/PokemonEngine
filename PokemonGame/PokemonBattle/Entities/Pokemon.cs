@@ -12,21 +12,21 @@ namespace PokemonGame.PokemonBattle.Entities
         public int Experience { get; internal set; }
         public virtual Ability Ability { get; }
         public Item Item { get; internal set; }
-        public List<Move> Moves { get; }
+        public List<Move> Moves { get; } = new();
         public virtual Stats BaseStats { get; }
-        public Stats IVs { get; }
-        public Stats EVs { get; }
-        public Stats Stats { get; }
-        public Stats StatStages { get; }
+        public Stats IVs { get; } = new();
+        public Stats EVs { get; } = new();
+        public Stats Stats { get; } = new();
+        public Stats StatStages { get; } = new();
         public StatusCondition Status { get; internal set; }
-        public List<SecondaryStatusCondition> SecondaryStatusConditions { get;}
+        public List<SecondaryStatusCondition> SecondaryStatusConditions { get; } = new();
         public virtual ExperienceGroup ExperienceGroup { get; }
 
         public int CurrentHP { get; internal set; }
-        public List<Effect> Effects { get; internal set; }
-        public virtual List<PokemonType> Types { get; }
+        public List<Effect> Effects { get; internal set; } = new();
+        public virtual List<PokemonType> Types { get; } = new();
         public Gender Gender { get; internal set; }
-        public DynamaxState DynamaxState { get; internal set; }
+        public DynamaxState DynamaxState { get; internal set; } = new(0);
 
         public int Weight { get; internal set; }
 
@@ -51,12 +51,6 @@ namespace PokemonGame.PokemonBattle.Entities
             BaseStats = baseStats;
             Ability = ability;
             Types = types;
-            EVs = new();
-            IVs = new();
-            Stats = new();
-            Effects = new();
-            Moves = new();
-            SecondaryStatusConditions= new();
             this.CalculateStats();
         }
 
@@ -64,23 +58,11 @@ namespace PokemonGame.PokemonBattle.Entities
         {
             Name = name;
             Level = level;
-
-            EVs = new();
-            IVs = new();
-            Stats = new();
-            Effects = new();
-            Moves = new();
-            SecondaryStatusConditions = new();
         }
 
         public Pokemon() 
         {
-            EVs = new();
-            IVs = new();
-            Stats = new();
-            Effects = new();
-            Moves = new();
-            SecondaryStatusConditions = new();
+
         }
 
         public override string ToString()

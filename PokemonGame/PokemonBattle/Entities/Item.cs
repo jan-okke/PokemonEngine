@@ -2,13 +2,14 @@ namespace PokemonGame.PokemonBattle.Entities
 {
     public class Item 
     {
-        public string Name { get; }
-        public string Description { get; }
+        public virtual string Name { get; }
+        public virtual string Description { get; }
 
         public Item(string name, string description)
         {
             Name = name;
             Description = description;
         }
+        public Item() {}
     }
 }

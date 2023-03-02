@@ -2,6 +2,7 @@ using PokemonGame.PokemonBattle.Enums;
 using PokemonGame.PokemonBattle.Entities;
 using PokemonGame.PokemonBattle.Extensions;
 using PokemonGame.PokemonBattle.Actions;
+using PokemonGame.PokemonBattle.Exceptions;
 using System;
 
 namespace PokemonGame.PokemonBattle.Handles
@@ -11,7 +12,7 @@ namespace PokemonGame.PokemonBattle.Handles
         public static void OnLevelUp(this Pokemon pokemon, int oldLevel, int newLevel) { pokemon.Level = newLevel; }
 
         public static void OnTurnEnd(this Pokemon pokemon) {
-            if (!pokemon.IsAlive) throw new Exception("Pokemon not alive");
+            if (!pokemon.IsAlive) throw new PokemonNotAliveException(pokemon);
             foreach (Effect e in pokemon.Effects) {
                 if (e.IsActive) e.Turns--;
             }

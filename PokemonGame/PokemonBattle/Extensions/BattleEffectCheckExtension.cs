@@ -1,6 +1,7 @@
 ﻿using PokemonGame.PokemonBattle.Actions;
 using PokemonGame.PokemonBattle.Entities;
 using PokemonGame.PokemonBattle.Enums;
+using PokemonGame.PokemonBattle.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -242,7 +243,7 @@ namespace PokemonGame.PokemonBattle.Extensions
                 case "Court Change": attackingSide.SwapBuffs(defendingSide); break;
                 case "Crafty Shield": break; // TODO
                 case "Curse": if (attackingPokemon.HasType(PokemonType.Ghost)) {
-                            if (attackingPokemon.BelowHalfHP()) throw new Exception("Not enough hp left");
+                            if (attackingPokemon.BelowHalfHP()) throw new MoveFailsException(move);
                             defendingPokemon.Curse(); }
                             else { attackingPokemon.LowerStatStage(Stat.Speed, 1); attackingPokemon.IncreaseStatStage(Stat.Attack, 1); attackingPokemon.IncreaseStatStage(Stat.Defense, 1);}
                             break;

@@ -3,6 +3,7 @@ using PokemonGame.PokemonBattle.Enums;
 using PokemonGame.PokemonBattle.Validation;
 using PokemonGame.PokemonBattle.Extensions;
 using PokemonGame.PokemonBattle.Handles;
+using PokemonGame.PokemonBattle.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,11 +45,11 @@ namespace PokemonGame.PokemonBattle.Actions
             switch (stat)
             {
                 case Stat.HP: throw new ArgumentException(null, nameof(stat));
-                case Stat.Attack: pokemon.StatStages.Attack -= Math.Min(amount, 6 + pokemon.StatStages.Attack); break;
-                case Stat.Defense: pokemon.StatStages.Defense -= Math.Min(amount, 6 + pokemon.StatStages.Defense); break;
-                case Stat.SpecialAttack: pokemon.StatStages.SpecialAttack -= Math.Min(amount, 6 + pokemon.StatStages.SpecialAttack); break;
-                case Stat.SpecialDefense: pokemon.StatStages.SpecialDefense -= Math.Min(amount, 6 + pokemon.StatStages.SpecialDefense); break;
-                case Stat.Speed: pokemon.StatStages.Speed -= Math.Min(amount, 6 + pokemon.StatStages.Speed); break;
+                case Stat.Attack: if(pokemon.StatStages.Attack == -6) throw new StatCantBeLoweredException(); pokemon.StatStages.Attack -= Math.Min(amount, 6 + pokemon.StatStages.Attack); break;
+                case Stat.Defense: if(pokemon.StatStages.Defense == -6) throw new StatCantBeLoweredException(); pokemon.StatStages.Defense -= Math.Min(amount, 6 + pokemon.StatStages.Defense); break;
+                case Stat.SpecialAttack: if(pokemon.StatStages.SpecialAttack == -6) throw new StatCantBeLoweredException(); pokemon.StatStages.SpecialAttack -= Math.Min(amount, 6 + pokemon.StatStages.SpecialAttack); break;
+                case Stat.SpecialDefense: if(pokemon.StatStages.SpecialDefense == -6) throw new StatCantBeLoweredException(); pokemon.StatStages.SpecialDefense -= Math.Min(amount, 6 + pokemon.StatStages.SpecialDefense); break;
+                case Stat.Speed: if(pokemon.StatStages.Speed == -6) throw new StatCantBeLoweredException(); pokemon.StatStages.Speed -= Math.Min(amount, 6 + pokemon.StatStages.Speed); break;
             }
         }
         public static void LowerStatStage(this Pokemon pokemon, SecondaryStat stat, int amount)
@@ -56,8 +57,8 @@ namespace PokemonGame.PokemonBattle.Actions
             if (amount <= 0) throw new ArgumentException(null, nameof(amount));
             switch (stat)
             {
-                case SecondaryStat.Evasion: pokemon.StatStages.Evasion -= Math.Min(amount, 6 + pokemon.StatStages.Evasion); break;
-                case SecondaryStat.Accuracy: pokemon.StatStages.Accuracy -= Math.Min(amount, 6 + pokemon.StatStages.Accuracy); break;
+                case SecondaryStat.Evasion: if(pokemon.StatStages.Evasion == -6) throw new StatCantBeLoweredException(); pokemon.StatStages.Evasion -= Math.Min(amount, 6 + pokemon.StatStages.Evasion); break;
+                case SecondaryStat.Accuracy: if(pokemon.StatStages.Accuracy == -6) throw new StatCantBeLoweredException(); pokemon.StatStages.Accuracy -= Math.Min(amount, 6 + pokemon.StatStages.Accuracy); break;
             }
         }
         public static void IncreaseStatStage(this Pokemon pokemon, Stat stat, int amount)
@@ -66,11 +67,11 @@ namespace PokemonGame.PokemonBattle.Actions
             switch (stat)
             {
                 case Stat.HP: throw new ArgumentException(null, nameof(stat));
-                case Stat.Attack: pokemon.StatStages.Attack += Math.Min(amount, 6 - pokemon.StatStages.Attack); break;
-                case Stat.Defense: pokemon.StatStages.Defense += Math.Min(amount, 6 - pokemon.StatStages.Defense); break;
-                case Stat.SpecialAttack: pokemon.StatStages.SpecialAttack += Math.Min(amount, 6 - pokemon.StatStages.SpecialAttack); break;
-                case Stat.SpecialDefense: pokemon.StatStages.SpecialDefense += Math.Min(amount, 6 - pokemon.StatStages.SpecialDefense); break;
-                case Stat.Speed: pokemon.StatStages.Speed += Math.Min(amount, 6 - pokemon.StatStages.Speed); break;
+                case Stat.Attack: if(pokemon.StatStages.Attack == 6) throw new StatCantBeRaisedException(); pokemon.StatStages.Attack += Math.Min(amount, 6 - pokemon.StatStages.Attack); break;
+                case Stat.Defense: if(pokemon.StatStages.Defense == 6) throw new StatCantBeRaisedException(); pokemon.StatStages.Defense += Math.Min(amount, 6 - pokemon.StatStages.Defense); break;
+                case Stat.SpecialAttack: if(pokemon.StatStages.SpecialAttack == 6) throw new StatCantBeRaisedException(); pokemon.StatStages.SpecialAttack += Math.Min(amount, 6 - pokemon.StatStages.SpecialAttack); break;
+                case Stat.SpecialDefense: if(pokemon.StatStages.SpecialDefense == 6) throw new StatCantBeRaisedException(); pokemon.StatStages.SpecialDefense += Math.Min(amount, 6 - pokemon.StatStages.SpecialDefense); break;
+                case Stat.Speed: if(pokemon.StatStages.Speed == 6) throw new StatCantBeRaisedException(); pokemon.StatStages.Speed += Math.Min(amount, 6 - pokemon.StatStages.Speed); break;
             }
         }
         public static void IncreaseStatStage(this Pokemon pokemon, SecondaryStat stat, int amount)
@@ -78,13 +79,13 @@ namespace PokemonGame.PokemonBattle.Actions
             if (amount <= 0) throw new ArgumentException(null, nameof(amount));
             switch (stat)
             {
-                case SecondaryStat.Evasion: pokemon.StatStages.Evasion += Math.Min(amount, 6 - pokemon.StatStages.Evasion); break;
-                case SecondaryStat.Accuracy: pokemon.StatStages.Accuracy += Math.Min(amount, 6 - pokemon.StatStages.Accuracy); break;
+                case SecondaryStat.Evasion: if(pokemon.StatStages.Evasion == 6) throw new StatCantBeRaisedException(); pokemon.StatStages.Evasion += Math.Min(amount, 6 - pokemon.StatStages.Evasion); break;
+                case SecondaryStat.Accuracy: if(pokemon.StatStages.Accuracy == 6) throw new StatCantBeRaisedException(); pokemon.StatStages.Accuracy += Math.Min(amount, 6 - pokemon.StatStages.Accuracy); break;
             }
         }
         public static void IncreaseRandomAvailableStatBy(this Pokemon pokemon, int amount) {
             // this SHOULD NOT cause an infinite loop
-            if (pokemon.StatStages.Sum() == 42) throw new Exception("Stats maxed out already");
+            if (pokemon.StatStages.Sum() == 42) throw new StatCantBeRaisedException();
             while (true) {
                 var statNum = new Random().Next(1, 8); // {1 - 5 Attack - Speed} {6 - 7 Accuracy - Evasion}
                 switch (statNum) {
