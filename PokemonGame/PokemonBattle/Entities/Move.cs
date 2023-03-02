@@ -1,4 +1,5 @@
 using PokemonGame.PokemonBattle.Enums;
+using System;
 
 namespace PokemonGame.PokemonBattle.Entities 
 {
@@ -10,6 +11,7 @@ namespace PokemonGame.PokemonBattle.Entities
         public virtual PokemonType Type { get; }
         public virtual MoveCategory Category { get; }
         public virtual int Priority { get; }
+        public virtual string Description { get; }
 
         public int CurrentPowerPoints { get; internal set; }
 
@@ -30,9 +32,10 @@ namespace PokemonGame.PokemonBattle.Entities
         public virtual bool HasAdditionalEffect => false; // TODO
         public virtual bool HasExtraDamageOnMinimize => false; // TODO
         public virtual bool IgnoresProtect => false; // TODO
-        public Move(string name, int basePower, int powerPoints, PokemonType type, MoveCategory category) 
+        public Move(string name, string description, int basePower, int powerPoints, PokemonType type, MoveCategory category) 
         {
             Name = name;
+            Description = description;
             BasePower = basePower;
             PowerPoints = powerPoints;
             CurrentPowerPoints = powerPoints; // set to full 
@@ -41,5 +44,18 @@ namespace PokemonGame.PokemonBattle.Entities
             Priority = 0;
         }
         public Move() {}
+
+        public static Move GetMove(string name) {
+            var _namespace = "PokemonGame.PokemonBattle.Data.Moves";
+            var move = System.Type.GetType($"{_namespace}.{name}");
+            if (move == null)
+            {
+                throw new ArgumentException($"Object name {name} not recognized.", nameof(name));
+            }
+
+            return Activator.CreateInstance(move) as Move;
+        }
+
+        public override string ToString() => Name;
     }
 }

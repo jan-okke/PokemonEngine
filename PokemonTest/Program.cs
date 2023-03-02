@@ -42,11 +42,11 @@ Abomasnow2.HealHP();
 
 
 //Move Blizzard = new Move("Blizzard", 110, 5, PokemonType.Normal, MoveCategory.Special);
-Move GigaDrain = new Move("Giga Drain", 75, 10, PokemonType.Grass, MoveCategory.Special);
-Move LeechSeed = new Move("Leech Seed", 0, 10, PokemonType.Grass, MoveCategory.Status);
-Move AuroraVeil = new Move("Aurora Veil", 0, 10, PokemonType.Ice, MoveCategory.Status);
+Move GigaDrain = new Move("Giga Drain", "Drains your ass", 75, 10, PokemonType.Grass, MoveCategory.Special);
+Move LeechSeed = new Move("Leech Seed", "Seeds your ass", 0, 10, PokemonType.Grass, MoveCategory.Status);
+Move AuroraVeil = new Move("Aurora Veil", "Requires hail lol", 0, 10, PokemonType.Ice, MoveCategory.Status);
 
-Abomasnow2.LearnMove(new Blizzard());
+Abomasnow2.LearnMove(Move.GetMove("Blizzard"));
 Abomasnow2.LearnMove(GigaDrain);
 Abomasnow2.LearnMove(LeechSeed);
 Abomasnow2.LearnMove(AuroraVeil);
@@ -62,5 +62,12 @@ while (battle.IsOngoing)
 {
     battle.ActiveBattlers.ForEach(p => DebugConsole.WriteLine($"{p.Name} {p.CurrentHP} ({p.GetHPPercentage()}%)"));
     battle.UseMove(Abomasnow1, Abomasnow2, Abomasnow1.FindMove("Blizzard"));
+}
+
+foreach (var d in battle.Log.Data) {
+    DebugConsole.WriteLine("=====");
+    foreach (var key in d.Data.Keys) {
+        DebugConsole.WriteLine($"{key}: {d.Data[key]}");
+    }
 }
 //AssertEqual(battle.CalculateDamage(true, Blizzard).Value, 160);
