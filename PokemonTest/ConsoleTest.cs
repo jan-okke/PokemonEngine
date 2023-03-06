@@ -1,6 +1,9 @@
 using PokemonGame.PokemonBattle.Entities;
 using PokemonGame.PokemonBattle.Extensions;
 using PokemonGame.PokemonBattle.Actions;
+using PokemonGame.PokemonBattle.Data.Pokemons;
+using PokemonGame.PokemonBattle.Data.Moves;
+
 public class ConsoleTest {
 
     private PokemonParty party;
@@ -8,7 +11,7 @@ public class ConsoleTest {
 
     private string GetCmd() {
         Console.Write("> ");
-        return Console.ReadLine();
+        return Console.ReadLine() ?? "";
     }
 
     private string GetFirstWord(string command) {
@@ -38,10 +41,10 @@ public class ConsoleTest {
                     case "pokemon": party.Pokemons.Add(Pokemon.GetPokemon(GetThirdWord(command), int.Parse(GetFourthWord(command)))); break;
                 } break;
                 case "battle": switch (GetSecondWord(command)) {
-                    case "start": battle = BattleActions.StartWildBattle(party, "Abomasnow", 20); break;
+                    case "start": var opp = new Abomasnow(50); opp.CalculateStats(); opp.HealHP(); opp.LearnMove(new Blizzard()); battle = BattleActions.StartWildBattle(party, opp); break;
                     case "use": if (battle is null) break; battle.UseMove(party.GetFirstAlivePokemon(), battle.EnemyParty.GetFirstAlivePokemon(), Move.GetMove(GetThirdWord(command))); break;
                 } break;
-                case "show": if (battle is null) break; Console.WriteLine($"Active: {battle.IsOngoing} Your Pkmn: {battle.PlayerParty.GetFirstAlivePokemon()} Enemy Pkmn: {battle.EnemyParty.GetFirstAlivePokemon()}"); break;
+                case "show": if (battle is null) break; Console.WriteLine($"Active: {battle.IsOngoing} Your Pkmn: {battle.PlayerParty.GetFirstAlivePokemon()} ({battle.PlayerParty.GetFirstAlivePokemon().CurrentHP} HP) Enemy Pkmn: {battle.EnemyParty.GetFirstAlivePokemon()} ({battle.EnemyParty.GetFirstAlivePokemon().CurrentHP} HP)"); break;
             }
         }
     }

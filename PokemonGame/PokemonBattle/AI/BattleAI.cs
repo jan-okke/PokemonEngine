@@ -81,7 +81,7 @@ namespace PokemonGame.PokemonBattle.AI
             foreach (Move m in pokemon.Moves) {
                 if (m.AffectsPokemon(pokemon, opponent)) return m;
             }
-            throw new Exception();
+            return pokemon.Moves[0];
         }
 
         private static bool CanOHKO(Battle battle, Move move) {
