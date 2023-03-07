@@ -44,7 +44,7 @@ public class ConsoleTest {
                     case "start": var opp = new Abomasnow(50); opp.CalculateStats(); opp.HealHP(); opp.LearnMove(new Blizzard()); battle = BattleActions.StartWildBattle(party, opp); break;
                     case "use": if (battle is null) break; battle.UseMove(party.GetFirstAlivePokemon(), battle.EnemyParty.GetFirstAlivePokemon(), Move.GetMove(GetThirdWord(command))); break;
                 } break;
-                case "show": if (battle is null) break; Console.WriteLine($"Active: {battle.IsOngoing} Your Pkmn: {battle.PlayerParty.GetFirstAlivePokemon()} ({battle.PlayerParty.GetFirstAlivePokemon().CurrentHP} HP) Enemy Pkmn: {battle.EnemyParty.GetFirstAlivePokemon()} ({battle.EnemyParty.GetFirstAlivePokemon().CurrentHP} HP)"); break;
+                case "show": if (battle is null || !battle.IsOngoing) break; Console.WriteLine($"Active: {battle.IsOngoing} Your Pkmn: {battle.PlayerParty.GetFirstAlivePokemon()} ({battle.PlayerParty.GetFirstAlivePokemon().CurrentHP} HP) Enemy Pkmn: {battle.EnemyParty.GetFirstAlivePokemon()} ({battle.EnemyParty.GetFirstAlivePokemon().CurrentHP} HP)"); break;
             }
         }
     }
