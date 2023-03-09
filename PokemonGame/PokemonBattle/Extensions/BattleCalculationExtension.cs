@@ -12,15 +12,15 @@ namespace PokemonGame.PokemonBattle.Extensions
 {
     public static class BattleCalculationExtension
     {
-        public static Answer CalculateDamage(this Battle battle, bool playerTurn, Move move)
+        public static Answer CalculateDamage(this Battle battle, Pokemon attackingPokemon, Pokemon defendingPokemon, bool playerTurn, Move move)
         {
             int answerCode;
 
             var attackingParty = playerTurn ? battle.PlayerParty : battle.EnemyParty;
             var defendingParty = playerTurn ? battle.EnemyParty : battle.PlayerParty;
 
-            var attackingPokemon = attackingParty.GetFirstAlivePokemon();
-            var defendingPokemon = defendingParty.GetFirstAlivePokemon();
+            //var attackingPokemon = attackingParty.GetFirstAlivePokemon();
+            //var defendingPokemon = defendingParty.GetFirstAlivePokemon();
 
             var attackingSide = playerTurn ? battle.PlayerSide : battle.EnemySide;
             var defendingSide = playerTurn ? battle.EnemySide : battle.PlayerSide;

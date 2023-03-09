@@ -55,19 +55,19 @@ namespace PokemonGame.PokemonBattle.Actions
             if (user.IsFaster(target))
             {
                 // Player is faster
-                battle.HandleMoveTurn(target, move, true);
+                battle.HandleMoveTurn(user, target, move, true);
                 if (target.IsAlive)
                 {
-                    battle.HandleMoveTurn(user, aiMove, false);
+                    battle.HandleMoveTurn(target, user, aiMove, false);
                 }
             }
             else
             {
                 // AI is faster
-                battle.HandleMoveTurn(user, aiMove, false);
+                battle.HandleMoveTurn(target, user, aiMove, false);
                 if (user.IsAlive)
                 {
-                    battle.HandleMoveTurn(target, move, true);
+                    battle.HandleMoveTurn(user, target, move, true);
                 }
             }
             battle.EndTurn();
@@ -81,6 +81,13 @@ namespace PokemonGame.PokemonBattle.Actions
             foreach (Pokemon p in battle.ActiveBattlers) {
                 p.OnTurnEnd();
             }
+        }
+
+        public static bool SwitchTo(this Battle battle, Pokemon otherPokemon)
+        {
+            // TODO
+            var party = battle.PlayerParty;
+            return false;
         }
     }
 }

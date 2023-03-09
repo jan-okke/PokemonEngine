@@ -89,14 +89,15 @@ namespace PokemonGame.PokemonBattle.AI
             return CalculateDamage(battle, move) > opponent.CurrentHP;
         }
         private static bool CanOppOHKO(Battle battle, Move move) {
-            var user = battle.EnemyParty.GetFirstAlivePokemon();
-            return battle.CalculateDamage(true, move).Value > user.CurrentHP;
+            var user = battle.ActiveOpponentBattler;
+            var target = battle.ActivePlayerBattler;
+            return battle.CalculateDamage(target, user, true, move).Value > user.CurrentHP;
         }
         private static bool Can2HKO(Battle battle, Move move) {
             var opponent = battle.PlayerParty.GetFirstAlivePokemon();
             return CalculateDamage(battle, move) > opponent.CurrentHP / 2;
         }
-        private static int CalculateDamage(Battle battle, Move move) => battle.CalculateDamage(false, move).Value;
+        private static int CalculateDamage(Battle battle, Move move) => battle.CalculateDamage(battle.ActiveOpponentBattler, battle.ActivePlayerBattler, false, move).Value;
 
         private static bool ShouldUseHazards(Battle battle, Hazard hazard) {
             // assumes enemy side doesnt have hazards already

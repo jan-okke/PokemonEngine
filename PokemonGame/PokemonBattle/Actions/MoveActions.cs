@@ -11,5 +11,14 @@ namespace PokemonGame.PokemonBattle.Actions
             if (move.CurrentPowerPoints == 0) throw new MoveNoPowerPointsLeftException();
             move.CurrentPowerPoints -= Math.Min(amount, move.PowerPoints);
         }
+
+        public static void RestorePowerPoints(this Move move, int amount)
+        {
+            move.CurrentPowerPoints += Math.Min(amount, move.PowerPoints - move.CurrentPowerPoints);
+        }
+        public static void RestorePowerPoints(this Move move)
+        {
+            move.CurrentPowerPoints = move.PowerPoints;
+        }
     }
 }

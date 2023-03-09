@@ -25,6 +25,8 @@ namespace PokemonGame.PokemonBattle.Entities
 
         // TODO this is only for single battle
         public List<Pokemon> ActiveBattlers => new() { PlayerParty.GetFirstAlivePokemon(), EnemyParty.GetFirstAlivePokemon() };
+        public Pokemon ActivePlayerBattler => PlayerParty.GetFirstAlivePokemon();
+        public Pokemon ActiveOpponentBattler => EnemyParty.GetFirstAlivePokemon();
 
         public Battle(PokemonParty playerParty, PokemonParty enemyParty, Weather weather = null, Terrain terrain = null)
         {

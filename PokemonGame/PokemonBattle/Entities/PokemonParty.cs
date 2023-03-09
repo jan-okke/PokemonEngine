@@ -15,5 +15,9 @@ namespace PokemonGame.PokemonBattle.Entities
         {
             Pokemons = pokemons;
         }
+
+        public PokemonParty(Pokemon pokemon) {
+            Pokemons = new List<Pokemon> { pokemon };
+        }
     }
 }

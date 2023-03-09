@@ -31,7 +31,7 @@ public class ConsoleTest {
     }
 
     public ConsoleTest() {
-        party = new(new());
+        party = new(new List<Pokemon>());
 
         while (true) {
             var command = GetCmd();
