@@ -71,6 +71,8 @@ namespace PokemonGame.PokemonBattle.Extensions
 
         public static bool HasItem(this Pokemon pokemon, params string[] itemNames) => itemNames.Any(i => pokemon.HasItem(i));
         
+        public static bool HasItem(this Pokemon pokemon) => pokemon.Item != null;
+
         public static bool HasStatusCondition(this Pokemon pokemon, StatusConditionType conditionType) => pokemon.Status != null && pokemon.Status.IsActive && pokemon.Status.Conditon == conditionType;
 
         public static bool HasStatusCondition(this Pokemon pokemon) => pokemon.Status == null || pokemon.Status.IsActive;

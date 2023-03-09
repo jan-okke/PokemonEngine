@@ -486,12 +486,38 @@ namespace PokemonGame.PokemonBattle.Extensions
 
         private static bool IncenseMatches(Move move, Pokemon attacker)
         {
-            return false; // TODO
+            if (!attacker.HasItem()) return false; // save time if not needed to check for specific item
+            if (attacker.HasItem("Odd Incense") && CheckMoveType(move, PokemonType.Psychic, attacker)) return true;
+            if (attacker.HasItem("Rock Incense") && CheckMoveType(move, PokemonType.Rock, attacker)) return true;
+            if (attacker.HasItem("Rose Incense") && CheckMoveType(move, PokemonType.Grass, attacker)) return true;
+            if (attacker.HasItem("Sea Incense", "Wave Incense") && CheckMoveType(move, PokemonType.Water, attacker)) return true;
+
+            return false; 
         }
 
         private static bool PlateMatches(Move move, Pokemon attacker)
         {
-            return false; // TODO
+            if (!attacker.HasItem()) return false; // save time if not needed to check for specific item
+            if (attacker.HasItem("Blank Plate") && CheckMoveType(move, PokemonType.Normal, attacker)) 
+            if (attacker.HasItem("Draco Plate") && CheckMoveType(move, PokemonType.Dragon, attacker)) return true;
+            if (attacker.HasItem("Dread Plate") && CheckMoveType(move, PokemonType.Dark, attacker)) return true;
+            if (attacker.HasItem("Earth Plate") && CheckMoveType(move, PokemonType.Ground, attacker)) return true;
+            if (attacker.HasItem("Fist Plate") && CheckMoveType(move, PokemonType.Fighting, attacker)) return true;
+            if (attacker.HasItem("Flame Plate") && CheckMoveType(move, PokemonType.Fire, attacker)) return true;
+            if (attacker.HasItem("Icicle Plate") && CheckMoveType(move, PokemonType.Ice, attacker)) return true;
+            if (attacker.HasItem("Insect Plate") && CheckMoveType(move, PokemonType.Bug, attacker)) return true;
+            if (attacker.HasItem("Iron Plate") && CheckMoveType(move, PokemonType.Steel, attacker)) return true;
+            if (attacker.HasItem("Meadow Plate") && CheckMoveType(move, PokemonType.Grass, attacker)) return true;
+            if (attacker.HasItem("Mind Plate") && CheckMoveType(move, PokemonType.Psychic, attacker)) return true;
+            if (attacker.HasItem("Pixie Plate") && CheckMoveType(move, PokemonType.Fairy, attacker)) return true;
+            if (attacker.HasItem("Sky Plate") && CheckMoveType(move, PokemonType.Flying, attacker)) return true;
+            if (attacker.HasItem("Splash Plate") && CheckMoveType(move, PokemonType.Water, attacker)) return true;
+            if (attacker.HasItem("Spooky Plate") && CheckMoveType(move, PokemonType.Ghost, attacker)) return true;
+            if (attacker.HasItem("Stone Plate") && CheckMoveType(move, PokemonType.Rock, attacker)) return true;
+            if (attacker.HasItem("Toxic Plate") && CheckMoveType(move, PokemonType.Poison, attacker)) return true;
+            if (attacker.HasItem("Zap Plate") && CheckMoveType(move, PokemonType.Electric, attacker)) return true;
+
+            return false;
         }
 
         private static bool LegendaryItemMatches(Move move, Pokemon attacker)
