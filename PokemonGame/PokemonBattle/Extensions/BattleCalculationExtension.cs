@@ -498,7 +498,7 @@ namespace PokemonGame.PokemonBattle.Extensions
         private static bool PlateMatches(Move move, Pokemon attacker)
         {
             if (!attacker.HasItem()) return false; // save time if not needed to check for specific item
-            if (attacker.HasItem("Blank Plate") && CheckMoveType(move, PokemonType.Normal, attacker)) 
+            if (attacker.HasItem("Blank Plate") && CheckMoveType(move, PokemonType.Normal, attacker)) return true;
             if (attacker.HasItem("Draco Plate") && CheckMoveType(move, PokemonType.Dragon, attacker)) return true;
             if (attacker.HasItem("Dread Plate") && CheckMoveType(move, PokemonType.Dark, attacker)) return true;
             if (attacker.HasItem("Earth Plate") && CheckMoveType(move, PokemonType.Ground, attacker)) return true;
@@ -527,7 +527,27 @@ namespace PokemonGame.PokemonBattle.Extensions
 
         private static bool GemMatches(Move move, Pokemon attacker)
         {
-            return false; // TODO
+            if (!attacker.HasItem()) return false; // save time if not needed to check for specific item
+            if (attacker.HasItem("Normal Gem") && CheckMoveType(move, PokemonType.Normal, attacker)) return true;
+            if (attacker.HasItem("Dragon Gem") && CheckMoveType(move, PokemonType.Dragon, attacker)) return true;
+            if (attacker.HasItem("Dark Gem") && CheckMoveType(move, PokemonType.Dark, attacker)) return true;
+            if (attacker.HasItem("Ground Gem") && CheckMoveType(move, PokemonType.Ground, attacker)) return true;
+            if (attacker.HasItem("Fighting Gem") && CheckMoveType(move, PokemonType.Fighting, attacker)) return true;
+            if (attacker.HasItem("Fire Gem") && CheckMoveType(move, PokemonType.Fire, attacker)) return true;
+            if (attacker.HasItem("Ice Gem") && CheckMoveType(move, PokemonType.Ice, attacker)) return true;
+            if (attacker.HasItem("Bug Gem") && CheckMoveType(move, PokemonType.Bug, attacker)) return true;
+            if (attacker.HasItem("Steel Gem") && CheckMoveType(move, PokemonType.Steel, attacker)) return true;
+            if (attacker.HasItem("Grass Gem") && CheckMoveType(move, PokemonType.Grass, attacker)) return true;
+            if (attacker.HasItem("Psychic Gem") && CheckMoveType(move, PokemonType.Psychic, attacker)) return true;
+            if (attacker.HasItem("Fairy Gem") && CheckMoveType(move, PokemonType.Fairy, attacker)) return true;
+            if (attacker.HasItem("Flying Gem") && CheckMoveType(move, PokemonType.Flying, attacker)) return true;
+            if (attacker.HasItem("Water Gem") && CheckMoveType(move, PokemonType.Water, attacker)) return true;
+            if (attacker.HasItem("Ghost Gem") && CheckMoveType(move, PokemonType.Ghost, attacker)) return true;
+            if (attacker.HasItem("Rock Gem") && CheckMoveType(move, PokemonType.Rock, attacker)) return true;
+            if (attacker.HasItem("Poison Gem") && CheckMoveType(move, PokemonType.Poison, attacker)) return true;
+            if (attacker.HasItem("Electric Gem") && CheckMoveType(move, PokemonType.Electric, attacker)) return true;
+
+            return false;
         }
 
         private static bool TypeResistBerryMatches(Move move, Pokemon defender)
