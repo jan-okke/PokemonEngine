@@ -443,6 +443,8 @@ namespace PokemonGame.PokemonBattle.Extensions
             if (TypeResistBerryMatches(move, defender)) mod *= 0.5;
             if (attacker.HasItem("Expert Belt") && CalculateEffectivityMod(move, defender.Types) > 1) mod *= 1.2;
             if (attacker.HasItem("Life Orb")) mod *= 1.3;
+            if (attacker.HasItem("Choice Band") && move.IsPhysical) mod *= 1.5;
+            if (attacker.HasItem("Choice Specs") && move.IsSpecial) mod *= 1.5;
             if (attacker.HasItem("Metronome")) mod *= Math.Min(1 + 0.2 * attacker.EffectCount(EffectType.MetronomeStack), 2);
             
             return mod;

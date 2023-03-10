@@ -110,6 +110,10 @@ namespace PokemonGame.PokemonBattle.Actions
             pokemon.IncreaseStatStage(Stat.Speed, amount);
         }
 
+        public static void GiveItem(this Pokemon pokemon, Item item) {
+            pokemon.Item = item;
+        }
+
         public static bool GiveEffect(this Pokemon pokemon, EffectType effectType, int turns) {
             if (pokemon.HasEffect(effectType)) return false;
             pokemon.Effects.Add(new Effect(effectType, turns));

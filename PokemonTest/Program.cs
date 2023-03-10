@@ -94,6 +94,8 @@ namespace Test
             attacker.OnLevelUp(attacker.Level, 50);
             defender.OnLevelUp(attacker.Level, 50);
 
+            attacker.GiveItem(new Item("Choice Band", "burn em up"));
+
             attacker.CalculateStats();
             defender.CalculateStats();
             attacker.HealHP();
