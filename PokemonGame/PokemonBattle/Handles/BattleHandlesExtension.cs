@@ -17,7 +17,7 @@ namespace PokemonGame.PokemonBattle.Handles
             battle.CheckEffects(playerTurn, move);
             target.TakeDamage(answer.Value);
             move.ReducePowerPoints(target.HasAbility("Pressure") ? 2 : 1);
-            battle.Log(move, answer.Value, answer.AnswerCode == AnswerCodes.Answer_Calculation_CriticalHit, !target.IsAlive);
+            battle.Log(move, answer.Value, answer.AnswerCode == AnswerCodes.Answer_Calculation_CriticalHit, !target.IsAlive, answer.Attributes);
         }
     }
 }

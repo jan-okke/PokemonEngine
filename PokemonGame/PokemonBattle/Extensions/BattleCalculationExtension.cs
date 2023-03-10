@@ -52,8 +52,24 @@ namespace PokemonGame.PokemonBattle.Extensions
             int damage = (int)(((2 * attackingPokemon.Level / 5 + 2) * power * attack / defense / 50 + 2) * targetMod * parentalBondMod * weatherMod * glaiveRushMod * critMod * randomMod * stabMod * effMod * burnMod * otherMod * zMod * terraMod);
 
             var answer = new Answer(answerCode, damage);
-            //answer.Attributes.Add("Knocking off Item", "true"); (e.g. for knock off) => TODO
 
+            answer.Attributes.Add("BASE_POWER", power);
+            answer.Attributes.Add("ATTACKER_ATTACK", attack);
+            answer.Attributes.Add("DEFENDER_DEFENSE", defense);
+            answer.Attributes.Add("TARGET_MOD", targetMod);
+            answer.Attributes.Add("PARENTAL_BOND_MOD", parentalBondMod);
+            answer.Attributes.Add("WEATHER_MOD", weatherMod);
+            answer.Attributes.Add("GLAIVE_RUSH_MOD", glaiveRushMod);
+            answer.Attributes.Add("CRIT_MOD", critMod);
+            answer.Attributes.Add("RANDOM_MOD", randomMod);
+            answer.Attributes.Add("STAB_MOD", stabMod);
+            answer.Attributes.Add("EFFECTIVITY_MOD", effMod);
+            answer.Attributes.Add("BURN_MOD", burnMod);
+            answer.Attributes.Add("OTHER_MOD", otherMod);
+            answer.Attributes.Add("Z_MOD", zMod);
+            answer.Attributes.Add("TERRA_MOD", terraMod);
+
+            
             return answer; // TODO
         }
 

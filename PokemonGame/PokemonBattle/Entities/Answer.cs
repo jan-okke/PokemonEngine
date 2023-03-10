@@ -11,13 +11,13 @@ namespace PokemonGame.PokemonBattle.Entities
         public int AnswerCode { get; }
         public int Value { get; }
 
-        public Dictionary<string, string> Attributes { get; }
+        public Dictionary<string, object> Attributes { get; }
 
         public Answer(int answerCode, int value)
         {
             AnswerCode = answerCode;
             Value = value;
-            Attributes = new Dictionary<string, string>();
+            Attributes = new Dictionary<string, object>();
         }
     }
 }

@@ -34,7 +34,7 @@ namespace PokemonGame.PokemonBattle.Extensions
 
         public static bool HasActiveFieldEffect(this Battle battle, params FieldEffects[] effects) => effects.Any(e => battle.HasActiveFieldEffect(e));
 
-        public static void Log(this Battle battle, Move move, int damage, bool critical, bool kill) 
+        public static void Log(this Battle battle, Move move, int damage, bool critical, bool kill, Dictionary<string, object> attributes) 
         {
             var log = battle.Log;
             var battleData = new BattleData();
@@ -44,6 +44,10 @@ namespace PokemonGame.PokemonBattle.Extensions
             data.Add("USED_MOVE_DAMAGE", damage);
             data.Add("USED_MOVE_CRITICAL_HIT", critical);
             data.Add("USED_MOVE_KILLED", kill);
+
+            foreach (var key in attributes.Keys) {
+                data.Add($"ATTRIBUTE_{key}", attributes[key]);
+            }
 
             log.Data.Add(battleData);
         } 
