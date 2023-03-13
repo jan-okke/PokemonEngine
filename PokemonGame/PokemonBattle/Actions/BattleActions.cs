@@ -5,6 +5,7 @@ using PokemonGame.PokemonBattle.Enums;
 using PokemonGame.PokemonBattle.Extensions;
 using PokemonGame.PokemonBattle.Handles;
 using PokemonGame.PokemonBattle.Validation;
+using PokemonGame.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,6 +48,64 @@ namespace PokemonGame.PokemonBattle.Actions
         public static void SetFlag(this Battle battle, BattleFlag flag)
         {
             battle.BattleFlags.Add(flag);
+        }
+
+        public static bool UseItem(this Battle battle, Player player, Pokemon user, Pokemon target, Item item)
+        {
+            if (item.IsPokeball) {
+                if (TryCatchPokemon(target, item, out Pokemon p)) {
+                    if (battle.PlayerParty.PokemonCount >= 6) {
+                        player.PokemonBox.Add(p);
+                    }
+                    else {
+                        battle.PlayerParty.AddPokemon(p);
+                    }
+                    return true;
+                }
+                return false;
+            }
+            if (item.IsMedicine) {
+                switch (item.Name) {
+                    case "Full Restore": user.HealHP(); user.HealStatusCondition(); break;
+                    case "Max Potion": user.HealHP(); break;
+                    case "Hyper Potion": user.HealHP(120); break;
+                    case "Super Potion": user.HealHP(60); break;
+                    case "Potion": user.HealHP(20); break;
+                    case "Full Heal": user.HealStatusCondition(); break;
+                    case "Burn Heal": if (user.HasStatusCondition(StatusConditionType.Burned)) user.HealStatusCondition(); break;
+                    case "Antidote": if (user.HasStatusCondition(StatusConditionType.Poisoned, StatusConditionType.BadlyPoisoned)) user.HealStatusCondition(); break;
+                    case "Paralyze Heal": if (user.HasStatusCondition(StatusConditionType.Paralyzed)) user.HealStatusCondition(); break;
+                    case "Ice Heal": if (user.HasStatusCondition(StatusConditionType.Frozen)) user.HealStatusCondition(); break;
+                    default: throw new Exception("Item was unknown medicine.");
+                }
+                return true;
+            }
+            if (item.IsXItem) {
+                switch (item.Name) {
+                    // TODO those item names are not correct i think?
+                    case "X Attack": user.IncreaseStatStage(Stat.Attack, 2); break;
+                    case "X Defense": user.IncreaseStatStage(Stat.Defense, 2); break;
+                    case "X SpAtk": user.IncreaseStatStage(Stat.SpecialAttack, 2); break;
+                    case "X SpDef": user.IncreaseStatStage(Stat.SpecialDefense, 2); break;
+                    case "X Speed": user.IncreaseStatStage(Stat.Speed, 2); break;
+                    case "X Accuracy": user.IncreaseStatStage(SecondaryStat.Accuracy, 2); break;
+                    default: throw new Exception("Item was unknown X item."); // TODO safeguard effects and such via x items
+                }
+                return true;
+            }
+            if (item.IsBerry) {
+                throw new NotImplementedException(); // TODO
+            }
+            return false;
+        }
+
+        private static bool TryCatchPokemon(Pokemon target, Item ball, out Pokemon p) {
+            if (ball.HasName("Master Ball")) {
+                p = target.DeepClone();
+                return true;
+            }
+            p = null;
+            return false;
         }
 
         public static void UseMove(this Battle battle, Pokemon user, Pokemon target, Move move)

@@ -45,5 +45,9 @@ namespace PokemonGame.PokemonBattle.Extensions
             }
             return result;
         }
+
+        public static void AddPokemon(this PokemonParty party, Pokemon p) {
+            party.Pokemons.Add(p);
+        }
     }
 }
