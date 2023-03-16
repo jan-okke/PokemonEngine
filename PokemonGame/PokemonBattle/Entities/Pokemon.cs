@@ -15,6 +15,10 @@ namespace PokemonGame.PokemonBattle.Entities
         public virtual Ability Ability { get; }
         public Item Item { get; internal set; }
         public List<Move> Moves { get; } = new();
+        public virtual Dictionary<int, List<Move>> LevelUpLearnSet { get; }
+        public virtual List<Move> TMLearnset { get; }
+        public virtual List<Move> EggMoves { get; }
+        public virtual List<Move> TutorMoves { get; }
         public virtual Stats BaseStats { get; }
         public Stats IVs { get; } = new();
         public Stats EVs { get; } = new();
