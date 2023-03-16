@@ -92,6 +92,9 @@ namespace PokemonGame.PokemonBattle.Entities
             pkmn.Level = level;
             pkmn.CalculateStats();
             pkmn.HealHP();
+            foreach (Move m in pkmn.GetUpTo4MovesAtLevel(level)) {
+                pkmn.LearnMove(m);
+            }
             return pkmn;
         }
 
