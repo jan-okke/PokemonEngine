@@ -369,7 +369,30 @@ namespace PBSMaker
                     $"\t\tpublic override MoveCategory Category => MoveCategory.{m.Category};\n" +
                     $"\t\tpublic override PokemonType Type => PokemonType.{m.Type[0] + m.Type[1..].ToLower()};\n");
 
-                
+                if (m.Flags != null)
+                {
+                    foreach (string flag in m.Flags)
+                    {
+                        switch(flag)
+                        {
+                            case "Contact": stream.AddText("\t\tpublic override bool IsContactMove => true;\n"); break;
+                            case "CanProtect": stream.AddText("\t\tpublic override bool IgnoresProtect => false;\n"); break;
+                            case "CanMirrorMove": break; // TODO
+                            case "Sound": stream.AddText("\t\tpublic override bool IsSoundMove => true;\n"); break;
+                            case "Bomb": stream.AddText("\t\tpublic override bool IsBombMove => true;\n"); break;
+                            case "TramplesMinimize": stream.AddText("\t\tpublic override bool HasExtraDamageOnMinimize => true;\n"); break;
+                            case "Powder": stream.AddText("\t\tpublic override bool IsPowderMove => true;\n"); break;
+                            case "Dance": stream.AddText("\t\tpublic override bool IsDanceMove => true;\n"); break;
+                            case "CannotMetronome": stream.AddText("\t\tpublic override bool CanMetronome => false;\n"); break;
+                            case "Biting": stream.AddText("\t\tpublic override bool IsBitingMove => true;\n"); break;
+                            case "Pulse": stream.AddText("\t\tpublic override bool IsPulseMove => true;\n"); break;
+                            case "Punching": stream.AddText("\t\tpublic override bool IsPunchingMove => true;\n"); break;
+                            case "ThawsUser": stream.AddText("\t\tpublic override bool ThawsUser => true;\n"); break;
+                            case "HighCriticalHitRate": stream.AddText("\t\tpublic override bool HasHighCriticalHitRate => true;\n"); break;
+                            default: throw new ArgumentException(flag);
+                        }
+                    }
+                }
 
                 stream.AddText($"\t\tpublic {m.InternalName[0] + m.InternalName[1..].ToLower()}()\n" +
                     "\t\t{\n" +

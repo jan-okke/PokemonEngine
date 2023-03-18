@@ -13,6 +13,7 @@ namespace PokemonGame.PokemonBattle.Data.Moves
 		public override int Priority => -6;
 		public override MoveCategory Category => MoveCategory.Status;
 		public override PokemonType Type => PokemonType.Normal;
+		public override bool IsSoundMove => true;
 		public Roar()
 		{
 			CurrentPowerPoints = PowerPoints;

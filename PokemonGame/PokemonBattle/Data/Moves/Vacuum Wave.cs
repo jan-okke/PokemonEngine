@@ -13,6 +13,7 @@ namespace PokemonGame.PokemonBattle.Data.Moves
 		public override int Priority => 1;
 		public override MoveCategory Category => MoveCategory.Special;
 		public override PokemonType Type => PokemonType.Fighting;
+		public override bool IgnoresProtect => false;
 		public Vacuumwave()
 		{
 			CurrentPowerPoints = PowerPoints;

@@ -13,6 +13,10 @@ namespace PokemonGame.PokemonBattle.Data.Moves
 		public override int Priority => 0;
 		public override MoveCategory Category => MoveCategory.Physical;
 		public override PokemonType Type => PokemonType.Fire;
+		public override bool IgnoresProtect => false;
+		public override bool ThawsUser => true;
+		public override bool IsBombMove => true;
+		public override bool CanMetronome => false;
 		public Pyroball()
 		{
 			CurrentPowerPoints = PowerPoints;

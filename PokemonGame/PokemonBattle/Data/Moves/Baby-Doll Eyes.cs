@@ -13,6 +13,7 @@ namespace PokemonGame.PokemonBattle.Data.Moves
 		public override int Priority => 1;
 		public override MoveCategory Category => MoveCategory.Status;
 		public override PokemonType Type => PokemonType.Fairy;
+		public override bool IgnoresProtect => false;
 		public Babydolleyes()
 		{
 			CurrentPowerPoints = PowerPoints;

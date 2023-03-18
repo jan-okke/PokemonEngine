@@ -13,6 +13,9 @@ namespace PokemonGame.PokemonBattle.Data.Moves
 		public override int Priority => 0;
 		public override MoveCategory Category => MoveCategory.Special;
 		public override PokemonType Type => PokemonType.Normal;
+		public override bool IgnoresProtect => false;
+		public override bool IsSoundMove => true;
+		public override bool CanMetronome => false;
 		public Relicsong()
 		{
 			CurrentPowerPoints = PowerPoints;

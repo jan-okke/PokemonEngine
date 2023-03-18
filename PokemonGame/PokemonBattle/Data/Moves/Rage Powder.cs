@@ -13,6 +13,7 @@ namespace PokemonGame.PokemonBattle.Data.Moves
 		public override int Priority => 2;
 		public override MoveCategory Category => MoveCategory.Status;
 		public override PokemonType Type => PokemonType.Bug;
+		public override bool IsPowderMove => true;
 		public Ragepowder()
 		{
 			CurrentPowerPoints = PowerPoints;

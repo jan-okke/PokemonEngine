@@ -13,6 +13,7 @@ namespace PokemonGame.PokemonBattle.Data.Moves
 		public override int Priority => 0;
 		public override MoveCategory Category => MoveCategory.Special;
 		public override PokemonType Type => PokemonType.Water;
+		public override bool IgnoresProtect => false;
 		public Muddywater()
 		{
 			CurrentPowerPoints = PowerPoints;

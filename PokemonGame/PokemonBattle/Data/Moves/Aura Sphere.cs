@@ -13,6 +13,9 @@ namespace PokemonGame.PokemonBattle.Data.Moves
 		public override int Priority => 0;
 		public override MoveCategory Category => MoveCategory.Special;
 		public override PokemonType Type => PokemonType.Fighting;
+		public override bool IgnoresProtect => false;
+		public override bool IsPulseMove => true;
+		public override bool IsBombMove => true;
 		public Aurasphere()
 		{
 			CurrentPowerPoints = PowerPoints;

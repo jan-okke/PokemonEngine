@@ -13,6 +13,8 @@ namespace PokemonGame.PokemonBattle.Data.Moves
 		public override int Priority => 0;
 		public override MoveCategory Category => MoveCategory.Status;
 		public override PokemonType Type => PokemonType.Dragon;
+		public override bool IsSoundMove => true;
+		public override bool CanMetronome => false;
 		public Clangoroussoul()
 		{
 			CurrentPowerPoints = PowerPoints;

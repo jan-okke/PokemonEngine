@@ -13,6 +13,8 @@ namespace PokemonGame.PokemonBattle.Data.Moves
 		public override int Priority => 0;
 		public override MoveCategory Category => MoveCategory.Physical;
 		public override PokemonType Type => PokemonType.Psychic;
+		public override bool IgnoresProtect => false;
+		public override bool HasHighCriticalHitRate => true;
 		public Psychocut()
 		{
 			CurrentPowerPoints = PowerPoints;

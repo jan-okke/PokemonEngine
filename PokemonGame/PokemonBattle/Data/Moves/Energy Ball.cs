@@ -13,6 +13,8 @@ namespace PokemonGame.PokemonBattle.Data.Moves
 		public override int Priority => 0;
 		public override MoveCategory Category => MoveCategory.Special;
 		public override PokemonType Type => PokemonType.Grass;
+		public override bool IgnoresProtect => false;
+		public override bool IsBombMove => true;
 		public Energyball()
 		{
 			CurrentPowerPoints = PowerPoints;

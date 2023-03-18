@@ -27,11 +27,17 @@ namespace PokemonGame.PokemonBattle.Entities
         public virtual bool IsAuraMove => false; // TODO
         public virtual bool IsPulseMove => false; // TODO
         public virtual bool IsSlasingMove => false; // TODO
+        public virtual bool IsBombMove => false; // TODO
+        public virtual bool IsPowderMove => false; // TODO
+        public virtual bool IsDanceMove => false; // TODO
         public virtual bool IsZMove => false; // TODO
         public virtual bool HurtsOnMiss => false; // TODO
         public virtual bool HasAdditionalEffect => false; // TODO
         public virtual bool HasExtraDamageOnMinimize => false; // TODO
-        public virtual bool IgnoresProtect => false; // TODO
+        public virtual bool IgnoresProtect => true; // TODO
+        public virtual bool HasHighCriticalHitRate => false; // TODO
+        public virtual bool CanMetronome => true; // TODO
+        public virtual bool ThawsUser => false; // TODO
         public Move(string name, string description, int basePower, int powerPoints, PokemonType type, MoveCategory category) 
         {
             Name = name;

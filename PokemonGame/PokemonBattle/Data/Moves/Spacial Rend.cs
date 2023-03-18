@@ -13,6 +13,8 @@ namespace PokemonGame.PokemonBattle.Data.Moves
 		public override int Priority => 0;
 		public override MoveCategory Category => MoveCategory.Special;
 		public override PokemonType Type => PokemonType.Dragon;
+		public override bool IgnoresProtect => false;
+		public override bool HasHighCriticalHitRate => true;
 		public Spacialrend()
 		{
 			CurrentPowerPoints = PowerPoints;

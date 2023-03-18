@@ -13,6 +13,10 @@ namespace PokemonGame.PokemonBattle.Data.Moves
 		public override int Priority => 0;
 		public override MoveCategory Category => MoveCategory.Physical;
 		public override PokemonType Type => PokemonType.Steel;
+		public override bool IsContactMove => true;
+		public override bool IgnoresProtect => false;
+		public override bool IsPunchingMove => true;
+		public override bool CanMetronome => false;
 		public Doubleironbash()
 		{
 			CurrentPowerPoints = PowerPoints;

@@ -13,6 +13,9 @@ namespace PokemonGame.PokemonBattle.Data.Moves
 		public override int Priority => 0;
 		public override MoveCategory Category => MoveCategory.Physical;
 		public override PokemonType Type => PokemonType.Flying;
+		public override bool IsContactMove => true;
+		public override bool IgnoresProtect => false;
+		public override bool CanMetronome => false;
 		public Dragonascent()
 		{
 			CurrentPowerPoints = PowerPoints;

@@ -13,6 +13,7 @@ namespace PokemonGame.PokemonBattle.Data.Moves
 		public override int Priority => 0;
 		public override MoveCategory Category => MoveCategory.Status;
 		public override PokemonType Type => PokemonType.Psychic;
+		public override bool IgnoresProtect => false;
 		public Hypnosis()
 		{
 			CurrentPowerPoints = PowerPoints;

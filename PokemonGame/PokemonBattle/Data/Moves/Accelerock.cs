@@ -13,6 +13,8 @@ namespace PokemonGame.PokemonBattle.Data.Moves
 		public override int Priority => 1;
 		public override MoveCategory Category => MoveCategory.Physical;
 		public override PokemonType Type => PokemonType.Rock;
+		public override bool IsContactMove => true;
+		public override bool IgnoresProtect => false;
 		public Accelerock()
 		{
 			CurrentPowerPoints = PowerPoints;
