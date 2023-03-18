@@ -2,7 +2,7 @@ namespace PokemonGame.PokemonBattle.Enums
 {
     public enum MoveCategory
     {
-        Phsyical,
+        Physical,
         Special,
         Status
     }

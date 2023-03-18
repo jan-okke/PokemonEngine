@@ -1,0 +1,21 @@
+using PokemonGame.PokemonBattle.Entities;
+using PokemonGame.PokemonBattle.Enums;
+using System.Collections.Generic;
+
+namespace PokemonGame.PokemonBattle.Data.Moves
+{
+	public class Smellingsalts : Move
+	{
+		public override string Name => "Smelling Salts";
+		public override string Description => "This attack inflicts double damage on a paralyzed foe. It also cures the target's paralysis, however.";
+		public override int BasePower => 70;
+		public override int PowerPoints => 10;
+		public override int Priority => 0;
+		public override MoveCategory Category => MoveCategory.Physical;
+		public override PokemonType Type => PokemonType.Normal;
+		public Smellingsalts()
+		{
+			CurrentPowerPoints = PowerPoints;
+		}
+	}
+}

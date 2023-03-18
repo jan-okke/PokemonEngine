@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace PokemonGame.PokemonBattle.Data.Pokemons
 {
-	public class Tapu Koko : Pokemon
+	public class Tapukoko : Pokemon
 	{
 		public override string Name => "Tapu Koko";
 		public override List<Ability> AvailableAbilities => new() {new Electricsurge() };

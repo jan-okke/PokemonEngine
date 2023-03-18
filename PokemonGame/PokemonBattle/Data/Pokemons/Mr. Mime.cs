@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace PokemonGame.PokemonBattle.Data.Pokemons
 {
-	public class Mr. Mime : Pokemon
+	public class Mrmime : Pokemon
 	{
 		public override string Name => "Mr. Mime";
 		public override List<Ability> AvailableAbilities => new() {new Soundproof(), new Filter() };

@@ -1,0 +1,21 @@
+using PokemonGame.PokemonBattle.Entities;
+using PokemonGame.PokemonBattle.Enums;
+using System.Collections.Generic;
+
+namespace PokemonGame.PokemonBattle.Data.Moves
+{
+	public class Confusion : Move
+	{
+		public override string Name => "Confusion";
+		public override string Description => "The target is hit by a weak telekinetic force. It may also leave the target confused.";
+		public override int BasePower => 50;
+		public override int PowerPoints => 25;
+		public override int Priority => 0;
+		public override MoveCategory Category => MoveCategory.Special;
+		public override PokemonType Type => PokemonType.Psychic;
+		public Confusion()
+		{
+			CurrentPowerPoints = PowerPoints;
+		}
+	}
+}

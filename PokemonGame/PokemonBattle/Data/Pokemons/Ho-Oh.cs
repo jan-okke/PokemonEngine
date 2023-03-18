@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace PokemonGame.PokemonBattle.Data.Pokemons
 {
-	public class Ho-Oh : Pokemon
+	public class Hooh : Pokemon
 	{
 		public override string Name => "Ho-Oh";
 		public override List<Ability> AvailableAbilities => new() {new Pressure() };

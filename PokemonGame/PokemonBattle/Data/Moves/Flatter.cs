@@ -1,0 +1,21 @@
+using PokemonGame.PokemonBattle.Entities;
+using PokemonGame.PokemonBattle.Enums;
+using System.Collections.Generic;
+
+namespace PokemonGame.PokemonBattle.Data.Moves
+{
+	public class Flatter : Move
+	{
+		public override string Name => "Flatter";
+		public override string Description => "Flattery is used to confuse the target. However, it also raises the target's Sp. Atk stat.";
+		public override int BasePower => 0;
+		public override int PowerPoints => 15;
+		public override int Priority => 0;
+		public override MoveCategory Category => MoveCategory.Status;
+		public override PokemonType Type => PokemonType.Dark;
+		public Flatter()
+		{
+			CurrentPowerPoints = PowerPoints;
+		}
+	}
+}

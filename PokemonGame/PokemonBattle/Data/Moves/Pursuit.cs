@@ -1,0 +1,21 @@
+using PokemonGame.PokemonBattle.Entities;
+using PokemonGame.PokemonBattle.Enums;
+using System.Collections.Generic;
+
+namespace PokemonGame.PokemonBattle.Data.Moves
+{
+	public class Pursuit : Move
+	{
+		public override string Name => "Pursuit";
+		public override string Description => "An attack move that inflicts double damage if used on a target that is switching out of battle.";
+		public override int BasePower => 40;
+		public override int PowerPoints => 20;
+		public override int Priority => 0;
+		public override MoveCategory Category => MoveCategory.Physical;
+		public override PokemonType Type => PokemonType.Dark;
+		public Pursuit()
+		{
+			CurrentPowerPoints = PowerPoints;
+		}
+	}
+}

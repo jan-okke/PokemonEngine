@@ -1,0 +1,21 @@
+using PokemonGame.PokemonBattle.Entities;
+using PokemonGame.PokemonBattle.Enums;
+using System.Collections.Generic;
+
+namespace PokemonGame.PokemonBattle.Data.Moves
+{
+	public class Mudsport : Move
+	{
+		public override string Name => "Mud Sport";
+		public override string Description => "The user covers itself with mud. It weakens Electric-type moves while the user is in the battle.";
+		public override int BasePower => 0;
+		public override int PowerPoints => 15;
+		public override int Priority => 0;
+		public override MoveCategory Category => MoveCategory.Status;
+		public override PokemonType Type => PokemonType.Ground;
+		public Mudsport()
+		{
+			CurrentPowerPoints = PowerPoints;
+		}
+	}
+}

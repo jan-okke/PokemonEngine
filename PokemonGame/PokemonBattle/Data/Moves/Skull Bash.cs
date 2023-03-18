@@ -1,0 +1,21 @@
+using PokemonGame.PokemonBattle.Entities;
+using PokemonGame.PokemonBattle.Enums;
+using System.Collections.Generic;
+
+namespace PokemonGame.PokemonBattle.Data.Moves
+{
+	public class Skullbash : Move
+	{
+		public override string Name => "Skull Bash";
+		public override string Description => "The user tucks in its head to raise its Defense in the first turn, then rams the foe on the next turn.";
+		public override int BasePower => 130;
+		public override int PowerPoints => 10;
+		public override int Priority => 0;
+		public override MoveCategory Category => MoveCategory.Physical;
+		public override PokemonType Type => PokemonType.Normal;
+		public Skullbash()
+		{
+			CurrentPowerPoints = PowerPoints;
+		}
+	}
+}

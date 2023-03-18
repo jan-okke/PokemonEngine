@@ -1,0 +1,21 @@
+using PokemonGame.PokemonBattle.Entities;
+using PokemonGame.PokemonBattle.Enums;
+using System.Collections.Generic;
+
+namespace PokemonGame.PokemonBattle.Data.Moves
+{
+	public class Drillpeck : Move
+	{
+		public override string Name => "Drill Peck";
+		public override string Description => "A corkscrewing attack with the sharp beak acting as a drill.";
+		public override int BasePower => 80;
+		public override int PowerPoints => 20;
+		public override int Priority => 0;
+		public override MoveCategory Category => MoveCategory.Physical;
+		public override PokemonType Type => PokemonType.Flying;
+		public Drillpeck()
+		{
+			CurrentPowerPoints = PowerPoints;
+		}
+	}
+}

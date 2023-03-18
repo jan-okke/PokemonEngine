@@ -1,0 +1,21 @@
+using PokemonGame.PokemonBattle.Entities;
+using PokemonGame.PokemonBattle.Enums;
+using System.Collections.Generic;
+
+namespace PokemonGame.PokemonBattle.Data.Moves
+{
+	public class Dracometeor : Move
+	{
+		public override string Name => "Draco Meteor";
+		public override string Description => "Comets are summoned down from the sky. The attack's recoil harshly reduces the user's Sp. Atk stat.";
+		public override int BasePower => 130;
+		public override int PowerPoints => 5;
+		public override int Priority => 0;
+		public override MoveCategory Category => MoveCategory.Special;
+		public override PokemonType Type => PokemonType.Dragon;
+		public Dracometeor()
+		{
+			CurrentPowerPoints = PowerPoints;
+		}
+	}
+}

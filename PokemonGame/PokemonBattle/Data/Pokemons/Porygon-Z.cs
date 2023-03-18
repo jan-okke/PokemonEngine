@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace PokemonGame.PokemonBattle.Data.Pokemons
 {
-	public class Porygon-Z : Pokemon
+	public class Porygonz : Pokemon
 	{
 		public override string Name => "Porygon-Z";
 		public override List<Ability> AvailableAbilities => new() {new Adaptability(), new Download() };

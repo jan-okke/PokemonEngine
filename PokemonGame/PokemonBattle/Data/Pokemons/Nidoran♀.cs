@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace PokemonGame.PokemonBattle.Data.Pokemons
 {
-	public class Nidoran♀ : Pokemon
+	public class Nidoranfe : Pokemon
 	{
 		public override string Name => "Nidoran♀";
 		public override List<Ability> AvailableAbilities => new() {new Poisonpoint(), new Rivalry() };

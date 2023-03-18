@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace PokemonGame.PokemonBattle.Data.Pokemons
 {
-	public class Kommo-o : Pokemon
+	public class Kommoo : Pokemon
 	{
 		public override string Name => "Kommo-o";
 		public override List<Ability> AvailableAbilities => new() {new Bulletproof(), new Soundproof() };

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace PokemonGame.PokemonBattle.Data.Pokemons
 {
-	public class Tapu Fini : Pokemon
+	public class Tapufini : Pokemon
 	{
 		public override string Name => "Tapu Fini";
 		public override List<Ability> AvailableAbilities => new() {new Mistysurge() };

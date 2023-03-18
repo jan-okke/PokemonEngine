@@ -1,0 +1,21 @@
+using PokemonGame.PokemonBattle.Entities;
+using PokemonGame.PokemonBattle.Enums;
+using System.Collections.Generic;
+
+namespace PokemonGame.PokemonBattle.Data.Moves
+{
+	public class Bulldoze : Move
+	{
+		public override string Name => "Bulldoze";
+		public override string Description => "The user strikes everything around it by stomping on the ground. It reduces hit Pokémon's Speed.";
+		public override int BasePower => 60;
+		public override int PowerPoints => 20;
+		public override int Priority => 0;
+		public override MoveCategory Category => MoveCategory.Physical;
+		public override PokemonType Type => PokemonType.Ground;
+		public Bulldoze()
+		{
+			CurrentPowerPoints = PowerPoints;
+		}
+	}
+}

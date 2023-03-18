@@ -1,0 +1,21 @@
+using PokemonGame.PokemonBattle.Entities;
+using PokemonGame.PokemonBattle.Enums;
+using System.Collections.Generic;
+
+namespace PokemonGame.PokemonBattle.Data.Moves
+{
+	public class Assurance : Move
+	{
+		public override string Name => "Assurance";
+		public override string Description => "If the target has already taken some damage in the same turn, this attack's power is doubled.";
+		public override int BasePower => 60;
+		public override int PowerPoints => 10;
+		public override int Priority => 0;
+		public override MoveCategory Category => MoveCategory.Physical;
+		public override PokemonType Type => PokemonType.Dark;
+		public Assurance()
+		{
+			CurrentPowerPoints = PowerPoints;
+		}
+	}
+}

@@ -27,6 +27,21 @@ namespace PBSMaker
         public int Generation;
         public string[] EvolutionInfo;
     }
+    struct BasicMove
+    {
+        public string InternalName;
+        public string Name;
+        public string Type;
+        public string Category;
+        public int Power;
+        public int Accuracy;
+        public int PowerPoints;
+        public int EffectChance;
+        public int Priority;
+        public string Target;
+        public string[] Flags;
+        public string Description;
+    }
     public static class Program
     {
         private static void AddText(this FileStream stream, string text)
@@ -34,6 +49,24 @@ namespace PBSMaker
             byte[] info = new UTF8Encoding(true).GetBytes(text);
             stream.Write(info, 0, info.Length);
         }
+        private static object SetParams(string key, string value, ref BasicMove move)
+            => key switch
+            {
+                "Name" => move.Name = value,
+                "Type" => move.Type = value,
+                "Category" => move.Category = value,
+                "Power" => move.Power = int.Parse(value),
+                "Accuracy" => move.Accuracy = int.Parse(value),
+                "TotalPP" => move.PowerPoints = int.Parse(value),
+                "Target" => move.Target = value,
+                "Flags" => move.Flags = value.Split(','),
+                "FunctionCode" => 0,
+                "EffectChance" => move.EffectChance = int.Parse(value),
+                "Priority" => move.Priority = int.Parse(value),
+                "Description" => move.Description = value,
+
+                _ => throw new ArgumentException(key)
+            };
         private static object SetParams(string key, string value, ref BasicPokemon poke)
             => key switch
             {
@@ -83,6 +116,7 @@ namespace PBSMaker
             var gamebin = gamedir + "\\bin\\Debug\\net6.0";
             var pbsdir = gamebin + "\\GameFiles\\PBS";
 
+            #region Pokemons
             var pokemontxt = pbsdir + "\\pokemon.txt";
 
             List<BasicPokemon> pokemons = new List<BasicPokemon>();
@@ -133,14 +167,14 @@ namespace PBSMaker
                     "\n" +
                     "namespace PokemonGame.PokemonBattle.Data.Pokemons\n" +
                     "{\n" +
-                    $"\tpublic class {p.Name} : Pokemon\n" +
+                    $"\tpublic class {p.InternalName[0] + p.InternalName[1..].ToLower()} : Pokemon\n" +
                     "\t{\n" +
                     $"\t\tpublic override string Name => \"{p.Name}\";\n" +
                     "\t\tpublic override List<Ability> AvailableAbilities => new() {");
                 for (int i = 0; i < p.Abilities.Length; i++)
                 {
                     var upperAbility = p.Abilities[i];
-                    var ability = upperAbility[0] + upperAbility.Substring(1).ToLower();
+                    var ability = upperAbility[0] + upperAbility[1..].ToLower();
                     stream.AddText($"new {ability}()" + (p.Abilities.Length - i > 1 ? ", " : ""));
                 }
                 stream.AddText(" };\n");
@@ -150,7 +184,7 @@ namespace PBSMaker
                     for (int i = 0; i < p.HiddenAbilities.Length; i++)
                     {
                         var upperAbility = p.HiddenAbilities[i];
-                        var ability = upperAbility[0] + upperAbility.Substring(1).ToLower();
+                        var ability = upperAbility[0] + upperAbility[1..].ToLower();
                         stream.AddText($"new {ability}()" + (p.HiddenAbilities.Length - i > 1 ? ", " : ""));
                     }
                     stream.AddText(" };\n");
@@ -170,7 +204,7 @@ namespace PBSMaker
                 for (int i = 0; i < p.Types.Length; i++)
                 {
                     var upperType = p.Types[i];
-                    var type = upperType[0] + upperType.Substring(1).ToLower();
+                    var type = upperType[0] + upperType[1..].ToLower();
                     stream.AddText($"PokemonType.{type}" + (p.Types.Length - i > 1 ? ", " : ""));
                 }
                 stream.AddText(" };\n" +
@@ -198,7 +232,7 @@ namespace PBSMaker
                     for (int i = 0; i < data[level].Count; i++)
                     {
                         var upperMove = data[level][i];
-                        var move = upperMove[0] + upperMove.Substring(1).ToLower();
+                        var move = upperMove[0] + upperMove[1..].ToLower();
                         stream.AddText($"new {move}()" + (data[level].Count - i > 1 ? ", " : ""));
                     }
 
@@ -211,7 +245,7 @@ namespace PBSMaker
                     for (int i = 0; i < p.TutorMoves.Length; i++)
                     {
                         var upperMove = p.TutorMoves[i];
-                        var move = upperMove[0] + upperMove.Substring(1).ToLower();
+                        var move = upperMove[0] + upperMove[1..].ToLower();
                         stream.AddText($"new {move}()" + (p.TutorMoves.Length - i > 1 ? ", " : ""));
                     }
                     stream.AddText(" };\n");
@@ -256,6 +290,76 @@ namespace PBSMaker
                 
                 stream.AddText("\t}\n}");
 
+                stream.Close();
+            }
+            #endregion
+
+            var movetxt = pbsdir + "\\moves.txt";
+
+            List<BasicMove> moves = new List<BasicMove>();
+
+            BasicMove mov = new BasicMove();
+            initialized = false;
+
+            foreach (string line in File.ReadAllLines(movetxt))
+            {
+                if (line.StartsWith("#")) continue;
+                if (line.StartsWith("["))
+                {
+                    string moveName = line[1..^1];
+                    if (initialized)
+                    {
+                        moves.Add(mov);
+                    }
+                    mov = new();
+                    mov.InternalName = moveName;
+                    Console.WriteLine(moveName);
+                    initialized = true;
+                    continue;
+                }
+                string key, value;
+                key = line.Split(" = ")[0];
+                value = line.Split(" = ")[1];
+                SetParams(key, value, ref mov);
+            }
+
+            // Data is in moves now
+
+            targetdir = gamedir + "\\PokemonBattle\\Data\\Moves";
+
+            foreach (BasicMove m in moves)
+            {
+                var path = targetdir + $"\\{m.Name}.cs";
+                if (File.Exists(path))
+                {
+                    File.Delete(path);
+                }
+                using FileStream stream = File.Create(path);
+                stream.AddText("" +
+                    "using PokemonGame.PokemonBattle.Entities;\n" +
+                    "using PokemonGame.PokemonBattle.Enums;\n" +
+                    "using System.Collections.Generic;\n" +
+                    "\n" +
+                    "namespace PokemonGame.PokemonBattle.Data.Moves\n" +
+                    "{\n" +
+                    $"\tpublic class {m.InternalName[0] + m.InternalName[1..].ToLower()} : Move\n" +
+                    "\t{\n" +
+                    $"\t\tpublic override string Name => \"{m.Name}\";\n" +
+                    $"\t\tpublic override string Description => \"{m.Description}\";\n" +
+                    $"\t\tpublic override int BasePower => {m.Power};\n" +
+                    $"\t\tpublic override int PowerPoints => {m.PowerPoints};\n" +
+                    $"\t\tpublic override int Priority => {m.Priority};\n" +
+                    $"\t\tpublic override MoveCategory Category => MoveCategory.{m.Category};\n" +
+                    $"\t\tpublic override PokemonType Type => PokemonType.{m.Type[0] + m.Type[1..].ToLower()};\n");
+
+                
+
+                stream.AddText($"\t\tpublic {m.InternalName[0] + m.InternalName[1..].ToLower()}()\n" +
+                    "\t\t{\n" +
+                    "\t\t\tCurrentPowerPoints = PowerPoints;\n" +
+                    "\t\t}\n");
+
+                stream.AddText("\t}\n}");
                 stream.Close();
             }
         }

@@ -1,0 +1,21 @@
+using PokemonGame.PokemonBattle.Entities;
+using PokemonGame.PokemonBattle.Enums;
+using System.Collections.Generic;
+
+namespace PokemonGame.PokemonBattle.Data.Moves
+{
+	public class Superpower : Move
+	{
+		public override string Name => "Superpower";
+		public override string Description => "The user attacks the target with great power. However, it also lowers the user's Attack and Defense.";
+		public override int BasePower => 120;
+		public override int PowerPoints => 5;
+		public override int Priority => 0;
+		public override MoveCategory Category => MoveCategory.Physical;
+		public override PokemonType Type => PokemonType.Fighting;
+		public Superpower()
+		{
+			CurrentPowerPoints = PowerPoints;
+		}
+	}
+}

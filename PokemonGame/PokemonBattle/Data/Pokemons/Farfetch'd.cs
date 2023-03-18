@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace PokemonGame.PokemonBattle.Data.Pokemons
 {
-	public class Farfetch'd : Pokemon
+	public class Farfetchd : Pokemon
 	{
 		public override string Name => "Farfetch'd";
 		public override List<Ability> AvailableAbilities => new() {new Keeneye(), new Innerfocus() };

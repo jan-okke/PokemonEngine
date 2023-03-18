@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace PokemonGame.PokemonBattle.Data.Pokemons
 {
-	public class Flabébé : Pokemon
+	public class Flabebe : Pokemon
 	{
 		public override string Name => "Flabébé";
 		public override List<Ability> AvailableAbilities => new() {new Flowerveil() };
