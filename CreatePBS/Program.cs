@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Runtime.Intrinsics.X86;
+using System.Text;
 
 namespace PBSMaker
 {
@@ -125,6 +126,7 @@ namespace PBSMaker
                 using FileStream stream = File.Create(path);
                 stream.AddText("" +
                     "using PokemonGame.PokemonBattle.Data.Abilities;\n" +
+                    "using PokemonGame.PokemonBattle.Data.Moves;\n" +
                     "using PokemonGame.PokemonBattle.Entities;\n" +
                     "using PokemonGame.PokemonBattle.Enums;\n" +
                     "using System.Collections.Generic;\n" +
@@ -168,7 +170,88 @@ namespace PBSMaker
                     var type = upperType[0] + upperType.Substring(1).ToLower();
                     stream.AddText($"PokemonType.{type}" + (p.Types.Length - i > 1 ? ", " : ""));
                 }
-                stream.AddText(" };\n");
+                stream.AddText(" };\n" +
+                    "\t\tpublic override Dictionary<int, List<Move>> LevelUpLearnSet => new()\n" +
+                    "\t\t{\n");
+                Dictionary<int, List<string>> data = new Dictionary<int, List<string>>();
+                int lastNumber = 0; // should not be 0 because initialized anyway
+                string lastValue;
+                for (int i = 0; i < p.MoveInfo.Length; i++)
+                {
+                    if (i % 2 == 0)
+                    {
+                        lastNumber = int.Parse(p.MoveInfo[i]);
+                        data.TryAdd(lastNumber, new List<string>());
+                    }
+                    else
+                    {
+                        lastValue = p.MoveInfo[i];
+                        data[lastNumber].Add(lastValue);
+                    }
+                }
+                foreach (int level in data.Keys)
+                {
+                    stream.AddText($"\t\t\t[{level}] = new List<Move>() " + "{ ");
+                    for (int i = 0; i < data[level].Count; i++)
+                    {
+                        var upperMove = data[level][i];
+                        var move = upperMove[0] + upperMove.Substring(1).ToLower();
+                        stream.AddText($"new {move}()" + (data[level].Count - i > 1 ? ", " : ""));
+                    }
+
+                    stream.AddText(" },\n");
+                }
+                stream.AddText("\t\t};\n");
+                if (p.TutorMoves != null)
+                {
+                    stream.AddText("\t\tpublic override List<Move> TutorMoves => new List<Move>() { ");
+                    for (int i = 0; i < p.TutorMoves.Length; i++)
+                    {
+                        var upperMove = p.TutorMoves[i];
+                        var move = upperMove[0] + upperMove.Substring(1).ToLower();
+                        stream.AddText($"new {move}()" + (p.TutorMoves.Length - i > 1 ? ", " : ""));
+                    }
+                    stream.AddText(" };\n");
+                }
+                if (p.EggMoves != null)
+                {
+                    stream.AddText("\t\tpublic override List<Move> EggMoves => new List<Move>() { ");
+                    for (int i = 0; i < p.EggMoves.Length; i++)
+                    {
+                        var upperMove = p.EggMoves[i];
+                        var move = upperMove[0] + upperMove.Substring(1).ToLower();
+                        stream.AddText($"new {move}()" + (p.EggMoves.Length - i > 1 ? ", " : ""));
+                    }
+                    stream.AddText(" };\n");
+                }
+                stream.AddText($"\t\tpublic override int Weight => {p.Weight};\n");
+                stream.AddText($"\t\tpublic override int ExpYield => {p.BaseExp};\n");
+                stream.AddText($"\t\tpublic override int CatchRate => {p.CatchRate};\n");
+                Dictionary<string, int> evdata = new Dictionary<string, int>();
+                lastValue = ""; // should never be empty.
+                for (int i = 0; i < p.RewardEVs.Length; i++)
+                {
+                    if (i % 2 == 0)
+                    {
+                        lastValue = p.RewardEVs[i];
+                    }
+                    else
+                    {
+                        lastNumber = int.Parse(p.RewardEVs[i]);
+                        evdata.Add(lastValue, lastNumber);
+                    }
+                }
+
+                stream.AddText("\t\tpublic override Dictionary<Stat, int> EVYield => new()\n\t\t{\n");
+                stream.AddText($"\t\t\t[Stat.HP] = {(evdata.ContainsKey("HP") ? evdata["HP"] : 0)},\n");
+                stream.AddText($"\t\t\t[Stat.Attack] = {(evdata.ContainsKey("ATTACK") ? evdata["ATTACK"] : 0)},\n");
+                stream.AddText($"\t\t\t[Stat.Defense] = {(evdata.ContainsKey("DEFENSE") ? evdata["DEFENSE"] : 0)},\n");
+                stream.AddText($"\t\t\t[Stat.SpecialAttack] = {(evdata.ContainsKey("SPECIAL_ATTACK") ? evdata["SPECIAL_ATTACK"] : 0)},\n");
+                stream.AddText($"\t\t\t[Stat.SpecialDefense] = {(evdata.ContainsKey("SPECIAL_DEFENSE") ? evdata["SPECIAL_DEFENSE"] : 0)},\n");
+                stream.AddText($"\t\t\t[Stat.Speed] = {(evdata.ContainsKey("SPEED") ? evdata["SPEED"] : 0)}\n");
+                stream.AddText("\t\t};\n");
+                
+                stream.AddText("\t}\n}");
 
                 stream.Close();
             }

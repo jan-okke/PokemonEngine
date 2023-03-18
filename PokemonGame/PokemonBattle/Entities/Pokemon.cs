@@ -18,7 +18,6 @@ namespace PokemonGame.PokemonBattle.Entities
         public Item Item { get; internal set; }
         public List<Move> Moves { get; } = new();
         public virtual Dictionary<int, List<Move>> LevelUpLearnSet { get; }
-        public virtual List<Move> TMLearnset { get; }
         public virtual List<Move> EggMoves { get; }
         public virtual List<Move> TutorMoves { get; }
         public virtual Stats BaseStats { get; }
@@ -40,7 +39,6 @@ namespace PokemonGame.PokemonBattle.Entities
         public virtual int ExpYield { get; }
         public virtual Dictionary<Stat, int> EVYield { get; }
         public virtual int CatchRate { get; }
-        public virtual 
 
         public bool IsAlive => CurrentHP > 0;
         public bool IsDynamaxed => DynamaxState.Active;

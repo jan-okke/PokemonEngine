@@ -1,4 +1,5 @@
 using PokemonGame.PokemonBattle.Data.Abilities;
+using PokemonGame.PokemonBattle.Data.Moves;
 using PokemonGame.PokemonBattle.Entities;
 using PokemonGame.PokemonBattle.Enums;
 using System.Collections.Generic;
@@ -13,3 +14,30 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override Stats BaseStats => new Stats(55, 20, 35, 75, 20, 45);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
+		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
+		{
+			[1] = new List<Move>() { new Sketch() },
+			[11] = new List<Move>() { new Sketch() },
+			[21] = new List<Move>() { new Sketch() },
+			[31] = new List<Move>() { new Sketch() },
+			[41] = new List<Move>() { new Sketch() },
+			[51] = new List<Move>() { new Sketch() },
+			[61] = new List<Move>() { new Sketch() },
+			[71] = new List<Move>() { new Sketch() },
+			[81] = new List<Move>() { new Sketch() },
+			[91] = new List<Move>() { new Sketch() },
+		};
+		public override int Weight => 580;
+		public override int ExpYield => 88;
+		public override int CatchRate => 45;
+		public override Dictionary<Stat, int> EVYield => new()
+		{
+			[Stat.HP] = 0,
+			[Stat.Attack] = 0,
+			[Stat.Defense] = 0,
+			[Stat.SpecialAttack] = 0,
+			[Stat.SpecialDefense] = 0,
+			[Stat.Speed] = 1
+		};
+	}
+}
