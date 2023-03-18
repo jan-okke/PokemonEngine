@@ -1,6 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using PokemonGame.Enums;
+
+using PokemonGame.PokemonBattle.Entities;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +14,8 @@ namespace PokemonGame.Entities
 {
     public class Player
     {
+        public List<Pokemon> PokemonBox { get; } = new List<Pokemon>();
+
         public int X { get; set; }
         public int Y { get; set; }
         public Point Position 

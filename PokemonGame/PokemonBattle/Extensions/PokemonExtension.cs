@@ -95,5 +95,17 @@ namespace PokemonGame.PokemonBattle.Extensions
 
         public static List<Move> GetHighestBPMoves(this Pokemon pokemon) => pokemon.Moves.Where(m => m.BasePower == pokemon.Moves.Max(m => m.BasePower)).ToList();
         
+        public static List<Move> GetMovesAtLevel(this Pokemon pokemon, int level) => pokemon.LevelUpLearnSet.Where(l => l.Key <= level).SelectMany(x => x.Value).ToList();
+
+        public static List<Move> GetUpTo4MovesAtLevel(this Pokemon pokemon, int level) => pokemon.GetMovesAtLevel(level).Take(4).ToList();
+
+        public static bool CheckMoveTutorCompatability(this Pokemon pokemon, Move move) => pokemon.TutorMoves.Any(m => m.NameIsAnyOf(move.Name));
+
+        public static bool CheckEggMoveCompatability(this Pokemon pokemon, Move move) => pokemon.EggMoves.Any(m => m.NameIsAnyOf(move.Name));
+
+        // TODO this might not? work
+        public static List<Move> GetAvailableMoves(this Pokemon pokemon) => pokemon.EggMoves.Concat(pokemon.TutorMoves).Concat(pokemon.LevelUpLearnSet.Where(l => l.Key > 0).SelectMany(x => x.Value)).ToList();
+        
+       
     }
 }

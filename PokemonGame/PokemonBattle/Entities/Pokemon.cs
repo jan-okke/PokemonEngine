@@ -17,6 +17,10 @@ namespace PokemonGame.PokemonBattle.Entities
         public virtual List<Ability> AvailableHiddenAbilities { get; }
         public Item Item { get; internal set; }
         public List<Move> Moves { get; } = new();
+        public virtual Dictionary<int, List<Move>> LevelUpLearnSet { get; }
+        public virtual List<Move> TMLearnset { get; }
+        public virtual List<Move> EggMoves { get; }
+        public virtual List<Move> TutorMoves { get; }
         public virtual Stats BaseStats { get; }
         public Stats IVs { get; } = new();
         public Stats EVs { get; } = new();
@@ -94,6 +98,9 @@ namespace PokemonGame.PokemonBattle.Entities
             pkmn.Level = level;
             pkmn.CalculateStats();
             pkmn.HealHP();
+            foreach (Move m in pkmn.GetUpTo4MovesAtLevel(level)) {
+                pkmn.LearnMove(m);
+            }
             return pkmn;
         }
 
