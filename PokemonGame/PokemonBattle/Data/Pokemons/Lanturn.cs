@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Lanturn";
 		public override List<Ability> AvailableAbilities => new() {new Voltabsorb(), new Illuminate() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Waterabsorb() };
-		public override Stats BaseStats => new Stats(125, 58, 58, 67, 76, 76);
+		public override Stats BaseStats => new Stats(125, 58, 58, 76, 76, 67);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Water, PokemonType.Electric };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

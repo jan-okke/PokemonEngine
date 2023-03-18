@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Gossifleur";
 		public override List<Ability> AvailableAbilities => new() {new Cottondown(), new Regenerator() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Effectspore() };
-		public override Stats BaseStats => new Stats(40, 40, 60, 10, 40, 60);
+		public override Stats BaseStats => new Stats(40, 40, 60, 40, 60, 10);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

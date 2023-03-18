@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Cinderace";
 		public override List<Ability> AvailableAbilities => new() {new Blaze() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Libero() };
-		public override Stats BaseStats => new Stats(80, 116, 75, 119, 65, 75);
+		public override Stats BaseStats => new Stats(80, 116, 75, 65, 75, 119);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

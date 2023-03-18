@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Zoroark";
 		public override List<Ability> AvailableAbilities => new() {new Illusion() };
-		public override Stats BaseStats => new Stats(60, 105, 60, 105, 120, 60);
+		public override Stats BaseStats => new Stats(60, 105, 60, 120, 60, 105);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Dark };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

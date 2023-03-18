@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Inkay";
 		public override List<Ability> AvailableAbilities => new() {new Contrary(), new Suctioncups() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Infiltrator() };
-		public override Stats BaseStats => new Stats(53, 54, 53, 45, 37, 46);
+		public override Stats BaseStats => new Stats(53, 54, 53, 37, 46, 45);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Dark, PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

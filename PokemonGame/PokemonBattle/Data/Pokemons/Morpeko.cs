@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Morpeko";
 		public override List<Ability> AvailableAbilities => new() {new Hungerswitch() };
-		public override Stats BaseStats => new Stats(58, 95, 58, 97, 70, 58);
+		public override Stats BaseStats => new Stats(58, 95, 58, 70, 58, 97);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Electric, PokemonType.Dark };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

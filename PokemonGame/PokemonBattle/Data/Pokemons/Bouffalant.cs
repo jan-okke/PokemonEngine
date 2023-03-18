@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Bouffalant";
 		public override List<Ability> AvailableAbilities => new() {new Reckless(), new Sapsipper() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Soundproof() };
-		public override Stats BaseStats => new Stats(95, 110, 95, 55, 40, 95);
+		public override Stats BaseStats => new Stats(95, 110, 95, 40, 95, 55);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

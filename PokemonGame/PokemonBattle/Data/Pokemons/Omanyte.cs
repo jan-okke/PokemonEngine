@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Omanyte";
 		public override List<Ability> AvailableAbilities => new() {new Swiftswim(), new Shellarmor() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Weakarmor() };
-		public override Stats BaseStats => new Stats(35, 40, 100, 35, 90, 55);
+		public override Stats BaseStats => new Stats(35, 40, 100, 90, 55, 35);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

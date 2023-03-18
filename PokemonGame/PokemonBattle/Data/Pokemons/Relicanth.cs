@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Relicanth";
 		public override List<Ability> AvailableAbilities => new() {new Swiftswim(), new Rockhead() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sturdy() };
-		public override Stats BaseStats => new Stats(100, 90, 130, 55, 45, 65);
+		public override Stats BaseStats => new Stats(100, 90, 130, 45, 65, 55);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Water, PokemonType.Rock };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

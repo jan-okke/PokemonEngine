@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Shiftry";
 		public override List<Ability> AvailableAbilities => new() {new Chlorophyll(), new Earlybird() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Pickpocket() };
-		public override Stats BaseStats => new Stats(90, 100, 60, 80, 90, 60);
+		public override Stats BaseStats => new Stats(90, 100, 60, 90, 60, 80);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Grass, PokemonType.Dark };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

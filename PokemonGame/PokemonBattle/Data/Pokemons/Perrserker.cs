@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Perrserker";
 		public override List<Ability> AvailableAbilities => new() {new Battlearmor(), new Toughclaws() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Steelyspirit() };
-		public override Stats BaseStats => new Stats(70, 110, 100, 50, 50, 60);
+		public override Stats BaseStats => new Stats(70, 110, 100, 50, 60, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

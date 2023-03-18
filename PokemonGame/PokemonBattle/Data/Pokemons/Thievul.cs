@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Thievul";
 		public override List<Ability> AvailableAbilities => new() {new Runaway(), new Unburden() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Stakeout() };
-		public override Stats BaseStats => new Stats(70, 58, 58, 90, 87, 92);
+		public override Stats BaseStats => new Stats(70, 58, 58, 87, 92, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Dark };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

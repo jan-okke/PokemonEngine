@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Pidove";
 		public override List<Ability> AvailableAbilities => new() {new Bigpecks(), new Superluck() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Rivalry() };
-		public override Stats BaseStats => new Stats(50, 55, 50, 43, 36, 30);
+		public override Stats BaseStats => new Stats(50, 55, 50, 36, 30, 43);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Normal, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

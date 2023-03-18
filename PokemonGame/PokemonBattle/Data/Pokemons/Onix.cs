@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Onix";
 		public override List<Ability> AvailableAbilities => new() {new Rockhead(), new Sturdy() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Weakarmor() };
-		public override Stats BaseStats => new Stats(35, 45, 160, 70, 30, 45);
+		public override Stats BaseStats => new Stats(35, 45, 160, 30, 45, 70);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Ground };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

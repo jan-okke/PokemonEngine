@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Umbreon";
 		public override List<Ability> AvailableAbilities => new() {new Synchronize() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Innerfocus() };
-		public override Stats BaseStats => new Stats(95, 65, 110, 65, 60, 130);
+		public override Stats BaseStats => new Stats(95, 65, 110, 60, 130, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Dark };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

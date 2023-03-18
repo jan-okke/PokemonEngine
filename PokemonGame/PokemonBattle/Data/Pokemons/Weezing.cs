@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Weezing";
 		public override List<Ability> AvailableAbilities => new() {new Levitate(), new Neutralizinggas() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Stench() };
-		public override Stats BaseStats => new Stats(65, 90, 120, 60, 85, 70);
+		public override Stats BaseStats => new Stats(65, 90, 120, 85, 70, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Poison };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

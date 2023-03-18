@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Kyurem";
 		public override List<Ability> AvailableAbilities => new() {new Pressure() };
-		public override Stats BaseStats => new Stats(125, 130, 90, 95, 130, 90);
+		public override Stats BaseStats => new Stats(125, 130, 90, 130, 90, 95);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dragon, PokemonType.Ice };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

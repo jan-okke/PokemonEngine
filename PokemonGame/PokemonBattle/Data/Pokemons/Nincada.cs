@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Nincada";
 		public override List<Ability> AvailableAbilities => new() {new Compoundeyes() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Runaway() };
-		public override Stats BaseStats => new Stats(31, 45, 90, 40, 30, 30);
+		public override Stats BaseStats => new Stats(31, 45, 90, 30, 30, 40);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Erratic;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Ground };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

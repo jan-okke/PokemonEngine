@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Shellder";
 		public override List<Ability> AvailableAbilities => new() {new Shellarmor(), new Skilllink() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Overcoat() };
-		public override Stats BaseStats => new Stats(30, 65, 100, 40, 45, 25);
+		public override Stats BaseStats => new Stats(30, 65, 100, 45, 25, 40);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Rampardos";
 		public override List<Ability> AvailableAbilities => new() {new Moldbreaker() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sheerforce() };
-		public override Stats BaseStats => new Stats(97, 165, 60, 58, 65, 50);
+		public override Stats BaseStats => new Stats(97, 165, 60, 65, 50, 58);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Erratic;
 		public override List<PokemonType> Types => new() {PokemonType.Rock };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

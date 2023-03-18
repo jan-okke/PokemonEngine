@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Tyrunt";
 		public override List<Ability> AvailableAbilities => new() {new Strongjaw() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sturdy() };
-		public override Stats BaseStats => new Stats(58, 89, 77, 48, 45, 45);
+		public override Stats BaseStats => new Stats(58, 89, 77, 45, 45, 48);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Dragon };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

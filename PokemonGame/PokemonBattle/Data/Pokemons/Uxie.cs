@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Uxie";
 		public override List<Ability> AvailableAbilities => new() {new Levitate() };
-		public override Stats BaseStats => new Stats(75, 75, 130, 95, 75, 130);
+		public override Stats BaseStats => new Stats(75, 75, 130, 75, 130, 95);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

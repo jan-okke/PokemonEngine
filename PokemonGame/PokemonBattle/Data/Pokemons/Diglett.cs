@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Diglett";
 		public override List<Ability> AvailableAbilities => new() {new Sandveil(), new Arenatrap() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sandforce() };
-		public override Stats BaseStats => new Stats(10, 55, 25, 95, 35, 45);
+		public override Stats BaseStats => new Stats(10, 55, 25, 35, 45, 95);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Ground };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

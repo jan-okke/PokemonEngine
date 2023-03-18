@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Nickit";
 		public override List<Ability> AvailableAbilities => new() {new Runaway(), new Unburden() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Stakeout() };
-		public override Stats BaseStats => new Stats(40, 28, 28, 50, 47, 52);
+		public override Stats BaseStats => new Stats(40, 28, 28, 47, 52, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Dark };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

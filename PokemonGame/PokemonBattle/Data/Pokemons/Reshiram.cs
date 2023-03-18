@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Reshiram";
 		public override List<Ability> AvailableAbilities => new() {new Turboblaze() };
-		public override Stats BaseStats => new Stats(100, 120, 100, 90, 150, 120);
+		public override Stats BaseStats => new Stats(100, 120, 100, 150, 120, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dragon, PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

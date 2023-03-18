@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Cottonee";
 		public override List<Ability> AvailableAbilities => new() {new Prankster(), new Infiltrator() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Chlorophyll() };
-		public override Stats BaseStats => new Stats(40, 27, 60, 66, 37, 50);
+		public override Stats BaseStats => new Stats(40, 27, 60, 37, 50, 66);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Grass, PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

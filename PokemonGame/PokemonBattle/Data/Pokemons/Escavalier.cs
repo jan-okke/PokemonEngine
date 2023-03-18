@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Escavalier";
 		public override List<Ability> AvailableAbilities => new() {new Swarm(), new Shellarmor() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Overcoat() };
-		public override Stats BaseStats => new Stats(70, 135, 105, 20, 60, 105);
+		public override Stats BaseStats => new Stats(70, 135, 105, 60, 105, 20);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

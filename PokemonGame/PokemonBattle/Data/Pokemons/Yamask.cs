@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Yamask";
 		public override List<Ability> AvailableAbilities => new() {new Mummy() };
-		public override Stats BaseStats => new Stats(38, 30, 85, 30, 55, 65);
+		public override Stats BaseStats => new Stats(38, 30, 85, 55, 65, 30);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Ghost };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

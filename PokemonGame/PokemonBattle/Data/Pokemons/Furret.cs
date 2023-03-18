@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Furret";
 		public override List<Ability> AvailableAbilities => new() {new Runaway(), new Keeneye() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Frisk() };
-		public override Stats BaseStats => new Stats(85, 76, 64, 90, 45, 55);
+		public override Stats BaseStats => new Stats(85, 76, 64, 45, 55, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

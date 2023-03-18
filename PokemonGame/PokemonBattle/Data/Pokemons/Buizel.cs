@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Buizel";
 		public override List<Ability> AvailableAbilities => new() {new Swiftswim() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Waterveil() };
-		public override Stats BaseStats => new Stats(55, 65, 35, 85, 60, 30);
+		public override Stats BaseStats => new Stats(55, 65, 35, 60, 30, 85);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

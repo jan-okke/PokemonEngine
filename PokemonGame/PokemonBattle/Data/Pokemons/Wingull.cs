@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Wingull";
 		public override List<Ability> AvailableAbilities => new() {new Keeneye(), new Hydration() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Raindish() };
-		public override Stats BaseStats => new Stats(40, 30, 30, 85, 55, 30);
+		public override Stats BaseStats => new Stats(40, 30, 30, 55, 30, 85);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Water, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Hitmontop";
 		public override List<Ability> AvailableAbilities => new() {new Intimidate(), new Technician() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Steadfast() };
-		public override Stats BaseStats => new Stats(50, 95, 95, 70, 35, 110);
+		public override Stats BaseStats => new Stats(50, 95, 95, 35, 110, 70);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

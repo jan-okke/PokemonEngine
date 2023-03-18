@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Dedenne";
 		public override List<Ability> AvailableAbilities => new() {new Cheekpouch(), new Pickup() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Plus() };
-		public override Stats BaseStats => new Stats(67, 58, 57, 101, 81, 67);
+		public override Stats BaseStats => new Stats(67, 58, 57, 81, 67, 101);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Electric, PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

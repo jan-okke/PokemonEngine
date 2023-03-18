@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Houndour";
 		public override List<Ability> AvailableAbilities => new() {new Earlybird(), new Flashfire() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Unnerve() };
-		public override Stats BaseStats => new Stats(45, 60, 30, 65, 80, 50);
+		public override Stats BaseStats => new Stats(45, 60, 30, 80, 50, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dark, PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Bounsweet";
 		public override List<Ability> AvailableAbilities => new() {new Leafguard(), new Oblivious() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sweetveil() };
-		public override Stats BaseStats => new Stats(42, 30, 38, 32, 30, 38);
+		public override Stats BaseStats => new Stats(42, 30, 38, 30, 38, 32);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

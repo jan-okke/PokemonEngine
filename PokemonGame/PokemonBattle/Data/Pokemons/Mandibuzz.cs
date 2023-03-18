@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Mandibuzz";
 		public override List<Ability> AvailableAbilities => new() {new Bigpecks(), new Overcoat() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Weakarmor() };
-		public override Stats BaseStats => new Stats(110, 65, 105, 80, 55, 95);
+		public override Stats BaseStats => new Stats(110, 65, 105, 55, 95, 80);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dark, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

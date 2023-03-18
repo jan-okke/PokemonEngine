@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Espurr";
 		public override List<Ability> AvailableAbilities => new() {new Keeneye(), new Infiltrator() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Owntempo() };
-		public override Stats BaseStats => new Stats(62, 48, 54, 68, 63, 60);
+		public override Stats BaseStats => new Stats(62, 48, 54, 63, 60, 68);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

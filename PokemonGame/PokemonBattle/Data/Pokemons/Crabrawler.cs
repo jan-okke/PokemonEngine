@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Crabrawler";
 		public override List<Ability> AvailableAbilities => new() {new Hypercutter(), new Ironfist() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Angerpoint() };
-		public override Stats BaseStats => new Stats(47, 82, 57, 63, 42, 47);
+		public override Stats BaseStats => new Stats(47, 82, 57, 42, 47, 63);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

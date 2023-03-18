@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Sceptile";
 		public override List<Ability> AvailableAbilities => new() {new Overgrow() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Unburden() };
-		public override Stats BaseStats => new Stats(70, 85, 65, 120, 105, 85);
+		public override Stats BaseStats => new Stats(70, 85, 65, 105, 85, 120);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

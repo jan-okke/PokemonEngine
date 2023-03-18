@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Herdier";
 		public override List<Ability> AvailableAbilities => new() {new Intimidate(), new Sandrush() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Scrappy() };
-		public override Stats BaseStats => new Stats(65, 80, 65, 60, 35, 65);
+		public override Stats BaseStats => new Stats(65, 80, 65, 35, 65, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

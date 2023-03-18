@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Thwackey";
 		public override List<Ability> AvailableAbilities => new() {new Overgrow() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Grassysurge() };
-		public override Stats BaseStats => new Stats(70, 85, 70, 80, 55, 60);
+		public override Stats BaseStats => new Stats(70, 85, 70, 55, 60, 80);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

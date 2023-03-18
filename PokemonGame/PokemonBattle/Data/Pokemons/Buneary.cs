@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Buneary";
 		public override List<Ability> AvailableAbilities => new() {new Runaway(), new Klutz() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Limber() };
-		public override Stats BaseStats => new Stats(55, 66, 44, 85, 44, 56);
+		public override Stats BaseStats => new Stats(55, 66, 44, 44, 56, 85);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

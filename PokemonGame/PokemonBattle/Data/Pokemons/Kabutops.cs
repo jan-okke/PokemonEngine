@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Kabutops";
 		public override List<Ability> AvailableAbilities => new() {new Swiftswim(), new Battlearmor() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Weakarmor() };
-		public override Stats BaseStats => new Stats(60, 115, 105, 80, 65, 70);
+		public override Stats BaseStats => new Stats(60, 115, 105, 65, 70, 80);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Palossand";
 		public override List<Ability> AvailableAbilities => new() {new Watercompaction() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sandveil() };
-		public override Stats BaseStats => new Stats(85, 75, 110, 35, 100, 75);
+		public override Stats BaseStats => new Stats(85, 75, 110, 100, 75, 35);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Ghost, PokemonType.Ground };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

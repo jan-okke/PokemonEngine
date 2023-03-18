@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Solgaleo";
 		public override List<Ability> AvailableAbilities => new() {new Fullmetalbody() };
-		public override Stats BaseStats => new Stats(137, 137, 107, 97, 113, 89);
+		public override Stats BaseStats => new Stats(137, 137, 107, 113, 89, 97);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic, PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

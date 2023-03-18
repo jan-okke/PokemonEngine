@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Kubfu";
 		public override List<Ability> AvailableAbilities => new() {new Innerfocus() };
-		public override Stats BaseStats => new Stats(60, 90, 60, 72, 53, 50);
+		public override Stats BaseStats => new Stats(60, 90, 60, 53, 50, 72);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

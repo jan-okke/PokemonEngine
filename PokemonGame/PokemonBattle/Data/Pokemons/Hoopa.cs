@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Hoopa";
 		public override List<Ability> AvailableAbilities => new() {new Magician() };
-		public override Stats BaseStats => new Stats(80, 110, 60, 70, 150, 130);
+		public override Stats BaseStats => new Stats(80, 110, 60, 150, 130, 70);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic, PokemonType.Ghost };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

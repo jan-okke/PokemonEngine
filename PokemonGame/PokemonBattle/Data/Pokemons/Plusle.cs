@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Plusle";
 		public override List<Ability> AvailableAbilities => new() {new Plus() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Lightningrod() };
-		public override Stats BaseStats => new Stats(60, 50, 40, 95, 85, 75);
+		public override Stats BaseStats => new Stats(60, 50, 40, 85, 75, 95);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Electric };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

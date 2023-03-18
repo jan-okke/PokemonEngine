@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Urshifu";
 		public override List<Ability> AvailableAbilities => new() {new Unseenfist() };
-		public override Stats BaseStats => new Stats(100, 130, 100, 97, 63, 60);
+		public override Stats BaseStats => new Stats(100, 130, 100, 63, 60, 97);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Fighting, PokemonType.Dark };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

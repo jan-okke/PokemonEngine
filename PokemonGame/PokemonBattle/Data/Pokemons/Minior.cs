@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Minior";
 		public override List<Ability> AvailableAbilities => new() {new Shieldsdown() };
-		public override Stats BaseStats => new Stats(60, 60, 100, 60, 60, 100);
+		public override Stats BaseStats => new Stats(60, 60, 100, 60, 100, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

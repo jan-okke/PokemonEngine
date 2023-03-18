@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Arcanine";
 		public override List<Ability> AvailableAbilities => new() {new Intimidate(), new Flashfire() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Justified() };
-		public override Stats BaseStats => new Stats(90, 110, 80, 95, 100, 80);
+		public override Stats BaseStats => new Stats(90, 110, 80, 100, 80, 95);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Walrein";
 		public override List<Ability> AvailableAbilities => new() {new Thickfat(), new Icebody() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Oblivious() };
-		public override Stats BaseStats => new Stats(110, 80, 90, 65, 95, 90);
+		public override Stats BaseStats => new Stats(110, 80, 90, 95, 90, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Ice, PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

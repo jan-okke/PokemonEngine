@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Bellsprout";
 		public override List<Ability> AvailableAbilities => new() {new Chlorophyll() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Gluttony() };
-		public override Stats BaseStats => new Stats(50, 75, 35, 40, 70, 30);
+		public override Stats BaseStats => new Stats(50, 75, 35, 70, 30, 40);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Grass, PokemonType.Poison };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

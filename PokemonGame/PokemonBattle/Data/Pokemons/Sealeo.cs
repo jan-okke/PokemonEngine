@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Sealeo";
 		public override List<Ability> AvailableAbilities => new() {new Thickfat(), new Icebody() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Oblivious() };
-		public override Stats BaseStats => new Stats(90, 60, 70, 45, 75, 70);
+		public override Stats BaseStats => new Stats(90, 60, 70, 75, 70, 45);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Ice, PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Samurott";
 		public override List<Ability> AvailableAbilities => new() {new Torrent() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Shellarmor() };
-		public override Stats BaseStats => new Stats(95, 100, 85, 70, 108, 70);
+		public override Stats BaseStats => new Stats(95, 100, 85, 108, 70, 70);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Kingler";
 		public override List<Ability> AvailableAbilities => new() {new Hypercutter(), new Shellarmor() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sheerforce() };
-		public override Stats BaseStats => new Stats(55, 130, 115, 75, 50, 50);
+		public override Stats BaseStats => new Stats(55, 130, 115, 50, 50, 75);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

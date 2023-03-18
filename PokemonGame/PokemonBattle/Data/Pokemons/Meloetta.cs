@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Meloetta";
 		public override List<Ability> AvailableAbilities => new() {new Serenegrace() };
-		public override Stats BaseStats => new Stats(100, 77, 77, 90, 128, 128);
+		public override Stats BaseStats => new Stats(100, 77, 77, 128, 128, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Normal, PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

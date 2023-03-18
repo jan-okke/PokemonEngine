@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Copperajah";
 		public override List<Ability> AvailableAbilities => new() {new Sheerforce() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Heavymetal() };
-		public override Stats BaseStats => new Stats(122, 130, 69, 30, 80, 69);
+		public override Stats BaseStats => new Stats(122, 130, 69, 80, 69, 30);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

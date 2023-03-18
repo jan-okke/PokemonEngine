@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Clefable";
 		public override List<Ability> AvailableAbilities => new() {new Cutecharm(), new Magicguard() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Unaware() };
-		public override Stats BaseStats => new Stats(95, 70, 73, 60, 95, 90);
+		public override Stats BaseStats => new Stats(95, 70, 73, 95, 90, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

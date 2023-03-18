@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Bisharp";
 		public override List<Ability> AvailableAbilities => new() {new Defiant(), new Innerfocus() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Pressure() };
-		public override Stats BaseStats => new Stats(65, 125, 100, 70, 60, 70);
+		public override Stats BaseStats => new Stats(65, 125, 100, 60, 70, 70);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Dark, PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

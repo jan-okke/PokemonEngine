@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Bewear";
 		public override List<Ability> AvailableAbilities => new() {new Fluffy(), new Klutz() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Unnerve() };
-		public override Stats BaseStats => new Stats(120, 125, 80, 60, 55, 60);
+		public override Stats BaseStats => new Stats(120, 125, 80, 55, 60, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal, PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

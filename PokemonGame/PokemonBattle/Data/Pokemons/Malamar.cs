@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Malamar";
 		public override List<Ability> AvailableAbilities => new() {new Contrary(), new Suctioncups() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Infiltrator() };
-		public override Stats BaseStats => new Stats(86, 92, 88, 73, 68, 75);
+		public override Stats BaseStats => new Stats(86, 92, 88, 68, 75, 73);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Dark, PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

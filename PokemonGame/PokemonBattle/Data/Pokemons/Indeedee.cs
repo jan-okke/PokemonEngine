@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Indeedee";
 		public override List<Ability> AvailableAbilities => new() {new Innerfocus(), new Synchronize() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Psychicsurge() };
-		public override Stats BaseStats => new Stats(60, 65, 55, 95, 105, 95);
+		public override Stats BaseStats => new Stats(60, 65, 55, 105, 95, 95);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic, PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

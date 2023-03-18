@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Applin";
 		public override List<Ability> AvailableAbilities => new() {new Ripen(), new Gluttony() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Bulletproof() };
-		public override Stats BaseStats => new Stats(40, 40, 80, 20, 40, 40);
+		public override Stats BaseStats => new Stats(40, 40, 80, 40, 40, 20);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Erratic;
 		public override List<PokemonType> Types => new() {PokemonType.Grass, PokemonType.Dragon };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

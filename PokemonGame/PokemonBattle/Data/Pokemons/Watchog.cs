@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Watchog";
 		public override List<Ability> AvailableAbilities => new() {new Illuminate(), new Keeneye() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Analytic() };
-		public override Stats BaseStats => new Stats(60, 85, 69, 77, 60, 69);
+		public override Stats BaseStats => new Stats(60, 85, 69, 60, 69, 77);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

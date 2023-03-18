@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Skuntank";
 		public override List<Ability> AvailableAbilities => new() {new Stench(), new Aftermath() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Keeneye() };
-		public override Stats BaseStats => new Stats(103, 93, 67, 84, 71, 61);
+		public override Stats BaseStats => new Stats(103, 93, 67, 71, 61, 84);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Poison, PokemonType.Dark };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

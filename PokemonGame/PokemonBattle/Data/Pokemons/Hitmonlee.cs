@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Hitmonlee";
 		public override List<Ability> AvailableAbilities => new() {new Limber(), new Reckless() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Unburden() };
-		public override Stats BaseStats => new Stats(50, 120, 53, 87, 35, 110);
+		public override Stats BaseStats => new Stats(50, 120, 53, 35, 110, 87);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Skrelp";
 		public override List<Ability> AvailableAbilities => new() {new Poisonpoint(), new Poisontouch() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Adaptability() };
-		public override Stats BaseStats => new Stats(50, 60, 60, 30, 60, 60);
+		public override Stats BaseStats => new Stats(50, 60, 60, 60, 60, 30);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Poison, PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

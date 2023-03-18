@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Gastrodon";
 		public override List<Ability> AvailableAbilities => new() {new Stickyhold(), new Stormdrain() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sandforce() };
-		public override Stats BaseStats => new Stats(111, 83, 68, 39, 92, 82);
+		public override Stats BaseStats => new Stats(111, 83, 68, 92, 82, 39);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Water, PokemonType.Ground };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

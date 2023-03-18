@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Ferrothorn";
 		public override List<Ability> AvailableAbilities => new() {new Ironbarbs() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Anticipation() };
-		public override Stats BaseStats => new Stats(74, 94, 131, 20, 54, 116);
+		public override Stats BaseStats => new Stats(74, 94, 131, 54, 116, 20);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Grass, PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

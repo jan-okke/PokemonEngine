@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Sewaddle";
 		public override List<Ability> AvailableAbilities => new() {new Swarm(), new Chlorophyll() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Overcoat() };
-		public override Stats BaseStats => new Stats(45, 53, 70, 42, 40, 60);
+		public override Stats BaseStats => new Stats(45, 53, 70, 40, 60, 42);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

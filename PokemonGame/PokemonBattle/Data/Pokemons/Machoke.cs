@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Machoke";
 		public override List<Ability> AvailableAbilities => new() {new Guts(), new Noguard() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Steadfast() };
-		public override Stats BaseStats => new Stats(80, 100, 70, 45, 50, 60);
+		public override Stats BaseStats => new Stats(80, 100, 70, 50, 60, 45);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

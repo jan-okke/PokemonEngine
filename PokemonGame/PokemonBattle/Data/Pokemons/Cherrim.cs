@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Cherrim";
 		public override List<Ability> AvailableAbilities => new() {new Flowergift() };
-		public override Stats BaseStats => new Stats(70, 60, 70, 85, 87, 78);
+		public override Stats BaseStats => new Stats(70, 60, 70, 87, 78, 85);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

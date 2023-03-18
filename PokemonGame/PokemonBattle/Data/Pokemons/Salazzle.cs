@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Salazzle";
 		public override List<Ability> AvailableAbilities => new() {new Corrosion() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Oblivious() };
-		public override Stats BaseStats => new Stats(68, 64, 60, 117, 111, 60);
+		public override Stats BaseStats => new Stats(68, 64, 60, 111, 60, 117);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Poison, PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

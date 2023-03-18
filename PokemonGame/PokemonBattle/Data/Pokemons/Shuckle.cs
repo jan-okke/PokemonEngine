@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Shuckle";
 		public override List<Ability> AvailableAbilities => new() {new Sturdy(), new Gluttony() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Contrary() };
-		public override Stats BaseStats => new Stats(20, 10, 230, 5, 10, 230);
+		public override Stats BaseStats => new Stats(20, 10, 230, 10, 230, 5);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Rock };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

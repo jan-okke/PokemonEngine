@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Luxio";
 		public override List<Ability> AvailableAbilities => new() {new Rivalry(), new Intimidate() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Guts() };
-		public override Stats BaseStats => new Stats(60, 85, 49, 60, 60, 49);
+		public override Stats BaseStats => new Stats(60, 85, 49, 60, 49, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Electric };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Hattrem";
 		public override List<Ability> AvailableAbilities => new() {new Healer(), new Anticipation() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Magicbounce() };
-		public override Stats BaseStats => new Stats(57, 40, 65, 49, 86, 73);
+		public override Stats BaseStats => new Stats(57, 40, 65, 86, 73, 49);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

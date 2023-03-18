@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Hitmonchan";
 		public override List<Ability> AvailableAbilities => new() {new Keeneye(), new Ironfist() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Innerfocus() };
-		public override Stats BaseStats => new Stats(50, 105, 79, 76, 35, 110);
+		public override Stats BaseStats => new Stats(50, 105, 79, 35, 110, 76);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

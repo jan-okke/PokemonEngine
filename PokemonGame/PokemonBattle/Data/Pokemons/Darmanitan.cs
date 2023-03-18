@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Darmanitan";
 		public override List<Ability> AvailableAbilities => new() {new Sheerforce() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Zenmode() };
-		public override Stats BaseStats => new Stats(105, 140, 55, 95, 30, 55);
+		public override Stats BaseStats => new Stats(105, 140, 55, 30, 55, 95);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Xatu";
 		public override List<Ability> AvailableAbilities => new() {new Synchronize(), new Earlybird() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Magicbounce() };
-		public override Stats BaseStats => new Stats(65, 75, 70, 95, 95, 70);
+		public override Stats BaseStats => new Stats(65, 75, 70, 95, 70, 95);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

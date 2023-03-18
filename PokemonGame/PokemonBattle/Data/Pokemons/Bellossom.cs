@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Bellossom";
 		public override List<Ability> AvailableAbilities => new() {new Chlorophyll() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Healer() };
-		public override Stats BaseStats => new Stats(75, 80, 95, 50, 90, 100);
+		public override Stats BaseStats => new Stats(75, 80, 95, 90, 100, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

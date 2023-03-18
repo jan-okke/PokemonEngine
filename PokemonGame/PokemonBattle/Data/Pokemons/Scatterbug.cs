@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Scatterbug";
 		public override List<Ability> AvailableAbilities => new() {new Shielddust(), new Compoundeyes() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Friendguard() };
-		public override Stats BaseStats => new Stats(38, 35, 40, 35, 27, 25);
+		public override Stats BaseStats => new Stats(38, 35, 40, 27, 25, 35);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

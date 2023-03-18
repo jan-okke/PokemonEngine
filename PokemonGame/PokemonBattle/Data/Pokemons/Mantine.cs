@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Mantine";
 		public override List<Ability> AvailableAbilities => new() {new Swiftswim(), new Waterabsorb() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Waterveil() };
-		public override Stats BaseStats => new Stats(85, 40, 70, 70, 80, 140);
+		public override Stats BaseStats => new Stats(85, 40, 70, 80, 140, 70);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Water, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

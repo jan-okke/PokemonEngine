@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Gumshoos";
 		public override List<Ability> AvailableAbilities => new() {new Stakeout(), new Strongjaw() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Adaptability() };
-		public override Stats BaseStats => new Stats(88, 110, 60, 45, 55, 60);
+		public override Stats BaseStats => new Stats(88, 110, 60, 55, 60, 45);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Gigalith";
 		public override List<Ability> AvailableAbilities => new() {new Sturdy(), new Sandstream() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sandforce() };
-		public override Stats BaseStats => new Stats(85, 135, 130, 25, 60, 80);
+		public override Stats BaseStats => new Stats(85, 135, 130, 60, 80, 25);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Rock };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

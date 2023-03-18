@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Bagon";
 		public override List<Ability> AvailableAbilities => new() {new Rockhead() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sheerforce() };
-		public override Stats BaseStats => new Stats(45, 75, 60, 50, 40, 30);
+		public override Stats BaseStats => new Stats(45, 75, 60, 40, 30, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dragon };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Sirfetch'd";
 		public override List<Ability> AvailableAbilities => new() {new Steadfast() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Scrappy() };
-		public override Stats BaseStats => new Stats(62, 135, 95, 65, 68, 82);
+		public override Stats BaseStats => new Stats(62, 135, 95, 68, 82, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

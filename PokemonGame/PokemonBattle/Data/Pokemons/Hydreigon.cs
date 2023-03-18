@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Hydreigon";
 		public override List<Ability> AvailableAbilities => new() {new Levitate() };
-		public override Stats BaseStats => new Stats(92, 105, 90, 98, 125, 90);
+		public override Stats BaseStats => new Stats(92, 105, 90, 125, 90, 98);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dark, PokemonType.Dragon };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

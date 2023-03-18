@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Regice";
 		public override List<Ability> AvailableAbilities => new() {new Clearbody() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Icebody() };
-		public override Stats BaseStats => new Stats(80, 50, 100, 50, 100, 200);
+		public override Stats BaseStats => new Stats(80, 50, 100, 100, 200, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Ice };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

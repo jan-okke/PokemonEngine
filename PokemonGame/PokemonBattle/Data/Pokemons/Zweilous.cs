@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Zweilous";
 		public override List<Ability> AvailableAbilities => new() {new Hustle() };
-		public override Stats BaseStats => new Stats(72, 85, 70, 58, 65, 70);
+		public override Stats BaseStats => new Stats(72, 85, 70, 65, 70, 58);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dark, PokemonType.Dragon };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

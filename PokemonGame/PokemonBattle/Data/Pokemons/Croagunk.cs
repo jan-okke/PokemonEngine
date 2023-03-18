@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Croagunk";
 		public override List<Ability> AvailableAbilities => new() {new Anticipation(), new Dryskin() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Poisontouch() };
-		public override Stats BaseStats => new Stats(48, 61, 40, 50, 61, 40);
+		public override Stats BaseStats => new Stats(48, 61, 40, 61, 40, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Poison, PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

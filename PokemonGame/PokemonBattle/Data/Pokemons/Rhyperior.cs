@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Rhyperior";
 		public override List<Ability> AvailableAbilities => new() {new Lightningrod(), new Solidrock() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Reckless() };
-		public override Stats BaseStats => new Stats(115, 140, 130, 40, 55, 55);
+		public override Stats BaseStats => new Stats(115, 140, 130, 55, 55, 40);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Ground, PokemonType.Rock };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

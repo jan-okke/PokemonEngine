@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Meowth";
 		public override List<Ability> AvailableAbilities => new() {new Pickup(), new Technician() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Unnerve() };
-		public override Stats BaseStats => new Stats(40, 45, 35, 90, 40, 40);
+		public override Stats BaseStats => new Stats(40, 45, 35, 40, 40, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

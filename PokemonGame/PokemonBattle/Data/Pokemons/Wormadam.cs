@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Wormadam";
 		public override List<Ability> AvailableAbilities => new() {new Anticipation() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Overcoat() };
-		public override Stats BaseStats => new Stats(60, 59, 85, 36, 79, 105);
+		public override Stats BaseStats => new Stats(60, 59, 85, 79, 105, 36);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

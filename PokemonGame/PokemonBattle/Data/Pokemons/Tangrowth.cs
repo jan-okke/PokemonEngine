@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Tangrowth";
 		public override List<Ability> AvailableAbilities => new() {new Chlorophyll(), new Leafguard() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Regenerator() };
-		public override Stats BaseStats => new Stats(100, 100, 125, 50, 110, 50);
+		public override Stats BaseStats => new Stats(100, 100, 125, 110, 50, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

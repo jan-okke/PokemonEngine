@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Eevee";
 		public override List<Ability> AvailableAbilities => new() {new Runaway(), new Adaptability() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Anticipation() };
-		public override Stats BaseStats => new Stats(55, 55, 50, 55, 45, 65);
+		public override Stats BaseStats => new Stats(55, 55, 50, 45, 65, 55);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

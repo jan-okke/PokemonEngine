@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Xerneas";
 		public override List<Ability> AvailableAbilities => new() {new Fairyaura() };
-		public override Stats BaseStats => new Stats(126, 131, 95, 99, 131, 98);
+		public override Stats BaseStats => new Stats(126, 131, 95, 131, 98, 99);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

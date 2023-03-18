@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Ambipom";
 		public override List<Ability> AvailableAbilities => new() {new Technician(), new Pickup() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Skilllink() };
-		public override Stats BaseStats => new Stats(75, 100, 66, 115, 60, 66);
+		public override Stats BaseStats => new Stats(75, 100, 66, 60, 66, 115);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

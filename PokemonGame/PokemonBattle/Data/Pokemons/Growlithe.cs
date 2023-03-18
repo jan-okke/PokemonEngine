@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Growlithe";
 		public override List<Ability> AvailableAbilities => new() {new Intimidate(), new Flashfire() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Justified() };
-		public override Stats BaseStats => new Stats(55, 70, 45, 60, 70, 50);
+		public override Stats BaseStats => new Stats(55, 70, 45, 70, 50, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

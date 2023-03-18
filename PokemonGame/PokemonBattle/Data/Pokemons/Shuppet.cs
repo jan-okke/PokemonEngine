@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Shuppet";
 		public override List<Ability> AvailableAbilities => new() {new Insomnia(), new Frisk() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Cursedbody() };
-		public override Stats BaseStats => new Stats(44, 75, 35, 45, 63, 33);
+		public override Stats BaseStats => new Stats(44, 75, 35, 63, 33, 45);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Ghost };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

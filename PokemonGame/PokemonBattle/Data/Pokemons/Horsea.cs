@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Horsea";
 		public override List<Ability> AvailableAbilities => new() {new Swiftswim(), new Sniper() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Damp() };
-		public override Stats BaseStats => new Stats(30, 40, 70, 60, 70, 25);
+		public override Stats BaseStats => new Stats(30, 40, 70, 70, 25, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Persian";
 		public override List<Ability> AvailableAbilities => new() {new Limber(), new Technician() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Unnerve() };
-		public override Stats BaseStats => new Stats(65, 70, 60, 115, 65, 65);
+		public override Stats BaseStats => new Stats(65, 70, 60, 65, 65, 115);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

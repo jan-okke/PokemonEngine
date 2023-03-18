@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Roselia";
 		public override List<Ability> AvailableAbilities => new() {new Naturalcure(), new Poisonpoint() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Leafguard() };
-		public override Stats BaseStats => new Stats(50, 60, 45, 65, 100, 80);
+		public override Stats BaseStats => new Stats(50, 60, 45, 100, 80, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Grass, PokemonType.Poison };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Regirock";
 		public override List<Ability> AvailableAbilities => new() {new Clearbody() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sturdy() };
-		public override Stats BaseStats => new Stats(80, 100, 200, 50, 50, 100);
+		public override Stats BaseStats => new Stats(80, 100, 200, 50, 100, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Rock };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

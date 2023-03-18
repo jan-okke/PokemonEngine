@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Koffing";
 		public override List<Ability> AvailableAbilities => new() {new Levitate(), new Neutralizinggas() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Stench() };
-		public override Stats BaseStats => new Stats(40, 65, 95, 35, 60, 45);
+		public override Stats BaseStats => new Stats(40, 65, 95, 60, 45, 35);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Poison };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

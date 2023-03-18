@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Mawile";
 		public override List<Ability> AvailableAbilities => new() {new Hypercutter(), new Intimidate() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sheerforce() };
-		public override Stats BaseStats => new Stats(50, 85, 85, 50, 55, 55);
+		public override Stats BaseStats => new Stats(50, 85, 85, 55, 55, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Steel, PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Whismur";
 		public override List<Ability> AvailableAbilities => new() {new Soundproof() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Rattled() };
-		public override Stats BaseStats => new Stats(64, 51, 23, 28, 51, 23);
+		public override Stats BaseStats => new Stats(64, 51, 23, 51, 23, 28);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

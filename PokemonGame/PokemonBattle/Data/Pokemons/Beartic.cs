@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Beartic";
 		public override List<Ability> AvailableAbilities => new() {new Snowcloak(), new Slushrush() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Swiftswim() };
-		public override Stats BaseStats => new Stats(95, 130, 80, 50, 70, 80);
+		public override Stats BaseStats => new Stats(95, 130, 80, 70, 80, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Ice };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Lilligant";
 		public override List<Ability> AvailableAbilities => new() {new Chlorophyll(), new Owntempo() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Leafguard() };
-		public override Stats BaseStats => new Stats(70, 60, 75, 90, 110, 75);
+		public override Stats BaseStats => new Stats(70, 60, 75, 110, 75, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

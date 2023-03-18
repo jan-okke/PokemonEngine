@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Ho-Oh";
 		public override List<Ability> AvailableAbilities => new() {new Pressure() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Regenerator() };
-		public override Stats BaseStats => new Stats(106, 130, 90, 90, 110, 154);
+		public override Stats BaseStats => new Stats(106, 130, 90, 110, 154, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Fire, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Vikavolt";
 		public override List<Ability> AvailableAbilities => new() {new Levitate() };
-		public override Stats BaseStats => new Stats(77, 70, 90, 43, 145, 75);
+		public override Stats BaseStats => new Stats(77, 70, 90, 145, 75, 43);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Electric };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

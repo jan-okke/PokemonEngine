@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Swanna";
 		public override List<Ability> AvailableAbilities => new() {new Keeneye(), new Bigpecks() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Hydration() };
-		public override Stats BaseStats => new Stats(75, 87, 63, 98, 87, 63);
+		public override Stats BaseStats => new Stats(75, 87, 63, 87, 63, 98);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Water, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

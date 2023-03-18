@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Bonsly";
 		public override List<Ability> AvailableAbilities => new() {new Sturdy(), new Rockhead() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Rattled() };
-		public override Stats BaseStats => new Stats(50, 80, 95, 10, 10, 45);
+		public override Stats BaseStats => new Stats(50, 80, 95, 10, 45, 10);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Rock };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

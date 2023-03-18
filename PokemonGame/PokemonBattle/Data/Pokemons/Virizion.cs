@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Virizion";
 		public override List<Ability> AvailableAbilities => new() {new Justified() };
-		public override Stats BaseStats => new Stats(91, 90, 72, 108, 90, 129);
+		public override Stats BaseStats => new Stats(91, 90, 72, 90, 129, 108);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Grass, PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

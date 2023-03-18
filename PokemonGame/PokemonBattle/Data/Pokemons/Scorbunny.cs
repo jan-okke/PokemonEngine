@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Scorbunny";
 		public override List<Ability> AvailableAbilities => new() {new Blaze() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Libero() };
-		public override Stats BaseStats => new Stats(50, 71, 40, 69, 40, 40);
+		public override Stats BaseStats => new Stats(50, 71, 40, 40, 40, 69);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

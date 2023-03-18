@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Sudowoodo";
 		public override List<Ability> AvailableAbilities => new() {new Sturdy(), new Rockhead() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Rattled() };
-		public override Stats BaseStats => new Stats(70, 100, 115, 30, 30, 65);
+		public override Stats BaseStats => new Stats(70, 100, 115, 30, 65, 30);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Rock };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

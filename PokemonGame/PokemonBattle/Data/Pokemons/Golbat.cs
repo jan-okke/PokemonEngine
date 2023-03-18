@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Golbat";
 		public override List<Ability> AvailableAbilities => new() {new Innerfocus() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Infiltrator() };
-		public override Stats BaseStats => new Stats(75, 80, 70, 90, 65, 75);
+		public override Stats BaseStats => new Stats(75, 80, 70, 65, 75, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Poison, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

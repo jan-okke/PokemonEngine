@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Pheromosa";
 		public override List<Ability> AvailableAbilities => new() {new Beastboost() };
-		public override Stats BaseStats => new Stats(71, 137, 37, 151, 137, 37);
+		public override Stats BaseStats => new Stats(71, 137, 37, 137, 37, 151);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

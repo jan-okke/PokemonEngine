@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Spritzee";
 		public override List<Ability> AvailableAbilities => new() {new Healer() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Aromaveil() };
-		public override Stats BaseStats => new Stats(78, 52, 60, 23, 63, 65);
+		public override Stats BaseStats => new Stats(78, 52, 60, 63, 65, 23);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

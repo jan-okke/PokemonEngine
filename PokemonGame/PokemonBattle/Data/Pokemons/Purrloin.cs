@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Purrloin";
 		public override List<Ability> AvailableAbilities => new() {new Limber(), new Unburden() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Prankster() };
-		public override Stats BaseStats => new Stats(41, 50, 37, 66, 50, 37);
+		public override Stats BaseStats => new Stats(41, 50, 37, 50, 37, 66);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Dark };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

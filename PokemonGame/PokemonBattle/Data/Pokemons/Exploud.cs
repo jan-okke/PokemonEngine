@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Exploud";
 		public override List<Ability> AvailableAbilities => new() {new Soundproof() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Scrappy() };
-		public override Stats BaseStats => new Stats(104, 91, 63, 68, 91, 73);
+		public override Stats BaseStats => new Stats(104, 91, 63, 91, 73, 68);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

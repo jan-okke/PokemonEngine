@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Primarina";
 		public override List<Ability> AvailableAbilities => new() {new Torrent() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Liquidvoice() };
-		public override Stats BaseStats => new Stats(80, 74, 74, 60, 126, 116);
+		public override Stats BaseStats => new Stats(80, 74, 74, 126, 116, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Water, PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

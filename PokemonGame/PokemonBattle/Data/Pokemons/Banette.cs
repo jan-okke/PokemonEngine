@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Banette";
 		public override List<Ability> AvailableAbilities => new() {new Insomnia(), new Frisk() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Cursedbody() };
-		public override Stats BaseStats => new Stats(64, 115, 65, 65, 83, 63);
+		public override Stats BaseStats => new Stats(64, 115, 65, 83, 63, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Ghost };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

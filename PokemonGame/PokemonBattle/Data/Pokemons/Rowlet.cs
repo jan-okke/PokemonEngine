@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Rowlet";
 		public override List<Ability> AvailableAbilities => new() {new Overgrow() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Longreach() };
-		public override Stats BaseStats => new Stats(68, 55, 55, 42, 50, 50);
+		public override Stats BaseStats => new Stats(68, 55, 55, 50, 50, 42);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Grass, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

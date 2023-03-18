@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Zubat";
 		public override List<Ability> AvailableAbilities => new() {new Innerfocus() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Infiltrator() };
-		public override Stats BaseStats => new Stats(40, 45, 35, 55, 30, 40);
+		public override Stats BaseStats => new Stats(40, 45, 35, 30, 40, 55);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Poison, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

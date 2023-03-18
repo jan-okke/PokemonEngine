@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Pancham";
 		public override List<Ability> AvailableAbilities => new() {new Ironfist(), new Moldbreaker() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Scrappy() };
-		public override Stats BaseStats => new Stats(67, 82, 62, 43, 46, 48);
+		public override Stats BaseStats => new Stats(67, 82, 62, 46, 48, 43);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

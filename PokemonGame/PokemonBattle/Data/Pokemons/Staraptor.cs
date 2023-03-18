@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Staraptor";
 		public override List<Ability> AvailableAbilities => new() {new Intimidate() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Reckless() };
-		public override Stats BaseStats => new Stats(85, 120, 70, 100, 50, 60);
+		public override Stats BaseStats => new Stats(85, 120, 70, 50, 60, 100);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Normal, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

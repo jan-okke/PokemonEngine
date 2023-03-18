@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Guzzlord";
 		public override List<Ability> AvailableAbilities => new() {new Beastboost() };
-		public override Stats BaseStats => new Stats(223, 101, 53, 43, 97, 53);
+		public override Stats BaseStats => new Stats(223, 101, 53, 97, 53, 43);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dark, PokemonType.Dragon };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

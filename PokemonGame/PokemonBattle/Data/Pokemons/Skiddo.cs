@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Skiddo";
 		public override List<Ability> AvailableAbilities => new() {new Sapsipper() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Grasspelt() };
-		public override Stats BaseStats => new Stats(66, 65, 48, 52, 62, 57);
+		public override Stats BaseStats => new Stats(66, 65, 48, 62, 57, 52);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

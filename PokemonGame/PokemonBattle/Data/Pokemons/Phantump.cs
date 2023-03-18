@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Phantump";
 		public override List<Ability> AvailableAbilities => new() {new Naturalcure(), new Frisk() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Harvest() };
-		public override Stats BaseStats => new Stats(43, 70, 48, 38, 50, 60);
+		public override Stats BaseStats => new Stats(43, 70, 48, 50, 60, 38);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Ghost, PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

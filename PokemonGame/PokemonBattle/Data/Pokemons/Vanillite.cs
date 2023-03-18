@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Vanillite";
 		public override List<Ability> AvailableAbilities => new() {new Icebody(), new Snowcloak() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Weakarmor() };
-		public override Stats BaseStats => new Stats(36, 50, 50, 44, 65, 60);
+		public override Stats BaseStats => new Stats(36, 50, 50, 65, 60, 44);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Ice };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

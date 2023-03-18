@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Loudred";
 		public override List<Ability> AvailableAbilities => new() {new Soundproof() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Scrappy() };
-		public override Stats BaseStats => new Stats(84, 71, 43, 48, 71, 43);
+		public override Stats BaseStats => new Stats(84, 71, 43, 71, 43, 48);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

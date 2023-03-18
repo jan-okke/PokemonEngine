@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Chinchou";
 		public override List<Ability> AvailableAbilities => new() {new Voltabsorb(), new Illuminate() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Waterabsorb() };
-		public override Stats BaseStats => new Stats(75, 38, 38, 67, 56, 56);
+		public override Stats BaseStats => new Stats(75, 38, 38, 56, 56, 67);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Water, PokemonType.Electric };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

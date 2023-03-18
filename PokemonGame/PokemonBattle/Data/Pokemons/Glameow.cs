@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Glameow";
 		public override List<Ability> AvailableAbilities => new() {new Limber(), new Owntempo() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Keeneye() };
-		public override Stats BaseStats => new Stats(49, 55, 42, 85, 42, 37);
+		public override Stats BaseStats => new Stats(49, 55, 42, 42, 37, 85);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Buzzwole";
 		public override List<Ability> AvailableAbilities => new() {new Beastboost() };
-		public override Stats BaseStats => new Stats(107, 139, 139, 79, 53, 53);
+		public override Stats BaseStats => new Stats(107, 139, 139, 53, 53, 79);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

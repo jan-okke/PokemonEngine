@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Orbeetle";
 		public override List<Ability> AvailableAbilities => new() {new Swarm(), new Frisk() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Telepathy() };
-		public override Stats BaseStats => new Stats(60, 45, 110, 90, 80, 120);
+		public override Stats BaseStats => new Stats(60, 45, 110, 80, 120, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

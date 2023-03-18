@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Centiskorch";
 		public override List<Ability> AvailableAbilities => new() {new Flashfire(), new Whitesmoke() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Flamebody() };
-		public override Stats BaseStats => new Stats(100, 115, 65, 65, 90, 90);
+		public override Stats BaseStats => new Stats(100, 115, 65, 90, 90, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Fire, PokemonType.Bug };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

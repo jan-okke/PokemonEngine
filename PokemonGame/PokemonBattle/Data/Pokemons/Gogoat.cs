@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Gogoat";
 		public override List<Ability> AvailableAbilities => new() {new Sapsipper() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Grasspelt() };
-		public override Stats BaseStats => new Stats(123, 100, 62, 68, 97, 81);
+		public override Stats BaseStats => new Stats(123, 100, 62, 97, 81, 68);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

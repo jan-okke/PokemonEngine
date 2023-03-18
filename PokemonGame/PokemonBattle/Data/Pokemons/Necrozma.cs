@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Necrozma";
 		public override List<Ability> AvailableAbilities => new() {new Prismarmor() };
-		public override Stats BaseStats => new Stats(97, 107, 101, 79, 127, 89);
+		public override Stats BaseStats => new Stats(97, 107, 101, 127, 89, 79);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

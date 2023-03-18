@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Musharna";
 		public override List<Ability> AvailableAbilities => new() {new Forewarn(), new Synchronize() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Telepathy() };
-		public override Stats BaseStats => new Stats(116, 55, 85, 29, 107, 95);
+		public override Stats BaseStats => new Stats(116, 55, 85, 107, 95, 29);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

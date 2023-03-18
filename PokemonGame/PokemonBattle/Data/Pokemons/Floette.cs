@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Floette";
 		public override List<Ability> AvailableAbilities => new() {new Flowerveil() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Symbiosis() };
-		public override Stats BaseStats => new Stats(54, 45, 47, 52, 75, 98);
+		public override Stats BaseStats => new Stats(54, 45, 47, 75, 98, 52);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

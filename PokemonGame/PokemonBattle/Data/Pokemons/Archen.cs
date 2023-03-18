@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Archen";
 		public override List<Ability> AvailableAbilities => new() {new Defeatist() };
-		public override Stats BaseStats => new Stats(55, 112, 45, 70, 74, 45);
+		public override Stats BaseStats => new Stats(55, 112, 45, 74, 45, 70);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

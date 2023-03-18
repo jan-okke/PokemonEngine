@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Hippopotas";
 		public override List<Ability> AvailableAbilities => new() {new Sandstream() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sandforce() };
-		public override Stats BaseStats => new Stats(68, 72, 78, 32, 38, 42);
+		public override Stats BaseStats => new Stats(68, 72, 78, 38, 42, 32);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Ground };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

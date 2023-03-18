@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Arctozolt";
 		public override List<Ability> AvailableAbilities => new() {new Voltabsorb(), new Static() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Slushrush() };
-		public override Stats BaseStats => new Stats(90, 100, 90, 55, 90, 80);
+		public override Stats BaseStats => new Stats(90, 100, 90, 90, 80, 55);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Electric, PokemonType.Ice };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

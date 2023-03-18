@@ -156,11 +156,14 @@ namespace PBSMaker
                     stream.AddText(" };\n");
                 }
                 stream.AddText("\t\tpublic override Stats BaseStats => new Stats(");
-                for (int i = 0; i < p.BaseStats.Length; i++)
-                {
-                    var value = int.Parse(p.BaseStats[i]);
-                    stream.AddText($"{value}" + (p.BaseStats.Length - i > 1 ? ", " : ""));
-                }
+                var baseHP = p.BaseStats[0];
+                var baseAttack = p.BaseStats[1];
+                var baseDefense = p.BaseStats[2];
+                var baseSpeed = p.BaseStats[3];
+                var baseSpAtk = p.BaseStats[4];
+                var baseSpDef = p.BaseStats[5];
+                stream.AddText($"{baseHP}, {baseAttack}, {baseDefense}, {baseSpAtk}, {baseSpDef}, {baseSpeed}");
+                
                 stream.AddText(
                     $");\n\t\tpublic override ExperienceGroup ExperienceGroup => ExperienceGroup.{p.GrowthRate};\n" +
                     "\t\tpublic override List<PokemonType> Types => new() {");

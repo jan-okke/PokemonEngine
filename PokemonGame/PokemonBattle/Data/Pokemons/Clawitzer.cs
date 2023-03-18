@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Clawitzer";
 		public override List<Ability> AvailableAbilities => new() {new Megalauncher() };
-		public override Stats BaseStats => new Stats(71, 73, 88, 59, 120, 89);
+		public override Stats BaseStats => new Stats(71, 73, 88, 120, 89, 59);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

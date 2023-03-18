@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Duraludon";
 		public override List<Ability> AvailableAbilities => new() {new Lightmetal(), new Heavymetal() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Stalwart() };
-		public override Stats BaseStats => new Stats(70, 95, 115, 85, 120, 50);
+		public override Stats BaseStats => new Stats(70, 95, 115, 120, 50, 85);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Steel, PokemonType.Dragon };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

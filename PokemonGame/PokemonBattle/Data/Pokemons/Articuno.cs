@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Articuno";
 		public override List<Ability> AvailableAbilities => new() {new Pressure() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Snowcloak() };
-		public override Stats BaseStats => new Stats(90, 85, 100, 85, 95, 125);
+		public override Stats BaseStats => new Stats(90, 85, 100, 95, 125, 85);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Ice, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

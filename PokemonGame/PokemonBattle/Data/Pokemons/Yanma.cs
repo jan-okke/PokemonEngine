@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Yanma";
 		public override List<Ability> AvailableAbilities => new() {new Speedboost(), new Compoundeyes() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Frisk() };
-		public override Stats BaseStats => new Stats(65, 65, 45, 95, 75, 45);
+		public override Stats BaseStats => new Stats(65, 65, 45, 75, 45, 95);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

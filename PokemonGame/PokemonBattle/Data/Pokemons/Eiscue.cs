@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Eiscue";
 		public override List<Ability> AvailableAbilities => new() {new Iceface() };
-		public override Stats BaseStats => new Stats(75, 80, 110, 50, 65, 90);
+		public override Stats BaseStats => new Stats(75, 80, 110, 65, 90, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Ice };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

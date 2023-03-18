@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Tornadus";
 		public override List<Ability> AvailableAbilities => new() {new Prankster() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Defiant() };
-		public override Stats BaseStats => new Stats(79, 115, 70, 111, 125, 80);
+		public override Stats BaseStats => new Stats(79, 115, 70, 125, 80, 111);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

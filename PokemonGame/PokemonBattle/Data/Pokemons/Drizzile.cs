@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Drizzile";
 		public override List<Ability> AvailableAbilities => new() {new Torrent() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sniper() };
-		public override Stats BaseStats => new Stats(65, 60, 55, 90, 95, 55);
+		public override Stats BaseStats => new Stats(65, 60, 55, 95, 55, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

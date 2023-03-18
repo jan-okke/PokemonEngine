@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Drampa";
 		public override List<Ability> AvailableAbilities => new() {new Berserk(), new Sapsipper() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Cloudnine() };
-		public override Stats BaseStats => new Stats(78, 60, 85, 36, 135, 91);
+		public override Stats BaseStats => new Stats(78, 60, 85, 135, 91, 36);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal, PokemonType.Dragon };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

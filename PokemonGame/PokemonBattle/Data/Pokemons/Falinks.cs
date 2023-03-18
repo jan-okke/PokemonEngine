@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Falinks";
 		public override List<Ability> AvailableAbilities => new() {new Battlearmor() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Defiant() };
-		public override Stats BaseStats => new Stats(65, 100, 100, 75, 70, 60);
+		public override Stats BaseStats => new Stats(65, 100, 100, 70, 60, 75);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

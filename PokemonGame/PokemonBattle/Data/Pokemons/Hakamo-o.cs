@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Hakamo-o";
 		public override List<Ability> AvailableAbilities => new() {new Bulletproof(), new Soundproof() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Overcoat() };
-		public override Stats BaseStats => new Stats(55, 75, 90, 65, 65, 70);
+		public override Stats BaseStats => new Stats(55, 75, 90, 65, 70, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dragon, PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

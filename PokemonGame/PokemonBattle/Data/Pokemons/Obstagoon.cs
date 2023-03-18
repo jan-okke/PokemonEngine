@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Obstagoon";
 		public override List<Ability> AvailableAbilities => new() {new Reckless(), new Guts() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Defiant() };
-		public override Stats BaseStats => new Stats(93, 90, 101, 95, 60, 81);
+		public override Stats BaseStats => new Stats(93, 90, 101, 60, 81, 95);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Dark, PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Polteageist";
 		public override List<Ability> AvailableAbilities => new() {new Weakarmor() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Cursedbody() };
-		public override Stats BaseStats => new Stats(60, 65, 65, 70, 134, 114);
+		public override Stats BaseStats => new Stats(60, 65, 65, 134, 114, 70);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Ghost };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

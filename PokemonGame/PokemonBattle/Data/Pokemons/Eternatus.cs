@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Eternatus";
 		public override List<Ability> AvailableAbilities => new() {new Pressure() };
-		public override Stats BaseStats => new Stats(140, 85, 95, 130, 145, 95);
+		public override Stats BaseStats => new Stats(140, 85, 95, 145, 95, 130);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Poison, PokemonType.Dragon };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Drifloon";
 		public override List<Ability> AvailableAbilities => new() {new Aftermath(), new Unburden() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Flareboost() };
-		public override Stats BaseStats => new Stats(90, 50, 34, 70, 60, 44);
+		public override Stats BaseStats => new Stats(90, 50, 34, 60, 44, 70);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fluctuating;
 		public override List<PokemonType> Types => new() {PokemonType.Ghost, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

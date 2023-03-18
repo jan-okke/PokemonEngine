@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Stoutland";
 		public override List<Ability> AvailableAbilities => new() {new Intimidate(), new Sandrush() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Scrappy() };
-		public override Stats BaseStats => new Stats(85, 110, 90, 80, 45, 90);
+		public override Stats BaseStats => new Stats(85, 110, 90, 45, 90, 80);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

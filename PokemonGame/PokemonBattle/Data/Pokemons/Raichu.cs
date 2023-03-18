@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Raichu";
 		public override List<Ability> AvailableAbilities => new() {new Static() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Lightningrod() };
-		public override Stats BaseStats => new Stats(60, 90, 55, 110, 90, 80);
+		public override Stats BaseStats => new Stats(60, 90, 55, 90, 80, 110);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Electric };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

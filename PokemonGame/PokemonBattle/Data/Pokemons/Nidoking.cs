@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Nidoking";
 		public override List<Ability> AvailableAbilities => new() {new Poisonpoint(), new Rivalry() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sheerforce() };
-		public override Stats BaseStats => new Stats(81, 102, 77, 85, 85, 75);
+		public override Stats BaseStats => new Stats(81, 102, 77, 85, 75, 85);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Poison, PokemonType.Ground };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

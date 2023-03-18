@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Druddigon";
 		public override List<Ability> AvailableAbilities => new() {new Roughskin(), new Sheerforce() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Moldbreaker() };
-		public override Stats BaseStats => new Stats(77, 120, 90, 48, 60, 90);
+		public override Stats BaseStats => new Stats(77, 120, 90, 60, 90, 48);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Dragon };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

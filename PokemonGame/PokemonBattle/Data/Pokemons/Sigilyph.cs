@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Sigilyph";
 		public override List<Ability> AvailableAbilities => new() {new Wonderskin(), new Magicguard() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Tintedlens() };
-		public override Stats BaseStats => new Stats(72, 58, 80, 97, 103, 80);
+		public override Stats BaseStats => new Stats(72, 58, 80, 103, 80, 97);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

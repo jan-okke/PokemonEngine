@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Flareon";
 		public override List<Ability> AvailableAbilities => new() {new Flashfire() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Guts() };
-		public override Stats BaseStats => new Stats(65, 130, 60, 65, 95, 110);
+		public override Stats BaseStats => new Stats(65, 130, 60, 95, 110, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

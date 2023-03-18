@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Goldeen";
 		public override List<Ability> AvailableAbilities => new() {new Swiftswim(), new Waterveil() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Lightningrod() };
-		public override Stats BaseStats => new Stats(45, 67, 60, 63, 35, 50);
+		public override Stats BaseStats => new Stats(45, 67, 60, 35, 50, 63);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

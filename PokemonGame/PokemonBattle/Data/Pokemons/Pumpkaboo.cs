@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Pumpkaboo";
 		public override List<Ability> AvailableAbilities => new() {new Pickup(), new Frisk() };
-		public override Stats BaseStats => new Stats(44, 66, 70, 56, 44, 55);
+		public override Stats BaseStats => new Stats(44, 66, 70, 44, 55, 56);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Ghost, PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

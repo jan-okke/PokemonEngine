@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Chikorita";
 		public override List<Ability> AvailableAbilities => new() {new Overgrow() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Leafguard() };
-		public override Stats BaseStats => new Stats(45, 49, 65, 45, 49, 65);
+		public override Stats BaseStats => new Stats(45, 49, 65, 49, 65, 45);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

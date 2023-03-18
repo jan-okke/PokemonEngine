@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Maractus";
 		public override List<Ability> AvailableAbilities => new() {new Waterabsorb(), new Chlorophyll() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Stormdrain() };
-		public override Stats BaseStats => new Stats(75, 86, 67, 60, 106, 67);
+		public override Stats BaseStats => new Stats(75, 86, 67, 106, 67, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

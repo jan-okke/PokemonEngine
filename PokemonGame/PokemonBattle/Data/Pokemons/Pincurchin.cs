@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Pincurchin";
 		public override List<Ability> AvailableAbilities => new() {new Lightningrod() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Electricsurge() };
-		public override Stats BaseStats => new Stats(48, 101, 95, 15, 91, 85);
+		public override Stats BaseStats => new Stats(48, 101, 95, 91, 85, 15);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Electric };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Corvisquire";
 		public override List<Ability> AvailableAbilities => new() {new Keeneye(), new Unnerve() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Bigpecks() };
-		public override Stats BaseStats => new Stats(68, 67, 55, 77, 43, 55);
+		public override Stats BaseStats => new Stats(68, 67, 55, 43, 55, 77);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

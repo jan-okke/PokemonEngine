@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Fearow";
 		public override List<Ability> AvailableAbilities => new() {new Keeneye() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sniper() };
-		public override Stats BaseStats => new Stats(65, 90, 65, 100, 61, 61);
+		public override Stats BaseStats => new Stats(65, 90, 65, 61, 61, 100);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

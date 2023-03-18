@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Gulpin";
 		public override List<Ability> AvailableAbilities => new() {new Liquidooze(), new Stickyhold() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Gluttony() };
-		public override Stats BaseStats => new Stats(70, 43, 53, 40, 43, 53);
+		public override Stats BaseStats => new Stats(70, 43, 53, 43, 53, 40);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fluctuating;
 		public override List<PokemonType> Types => new() {PokemonType.Poison };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

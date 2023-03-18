@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Quilladin";
 		public override List<Ability> AvailableAbilities => new() {new Overgrow() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Bulletproof() };
-		public override Stats BaseStats => new Stats(61, 78, 95, 57, 56, 58);
+		public override Stats BaseStats => new Stats(61, 78, 95, 56, 58, 57);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

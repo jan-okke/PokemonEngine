@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Aron";
 		public override List<Ability> AvailableAbilities => new() {new Sturdy(), new Rockhead() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Heavymetal() };
-		public override Stats BaseStats => new Stats(50, 70, 100, 30, 40, 40);
+		public override Stats BaseStats => new Stats(50, 70, 100, 40, 40, 30);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Steel, PokemonType.Rock };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

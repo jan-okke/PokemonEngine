@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Golem";
 		public override List<Ability> AvailableAbilities => new() {new Rockhead(), new Sturdy() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sandveil() };
-		public override Stats BaseStats => new Stats(80, 120, 130, 45, 55, 65);
+		public override Stats BaseStats => new Stats(80, 120, 130, 55, 65, 45);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Ground };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

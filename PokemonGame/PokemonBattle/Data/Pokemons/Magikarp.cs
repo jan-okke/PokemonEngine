@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Magikarp";
 		public override List<Ability> AvailableAbilities => new() {new Swiftswim() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Rattled() };
-		public override Stats BaseStats => new Stats(20, 10, 55, 80, 15, 20);
+		public override Stats BaseStats => new Stats(20, 10, 55, 15, 20, 80);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

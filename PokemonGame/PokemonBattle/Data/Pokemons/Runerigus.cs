@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Runerigus";
 		public override List<Ability> AvailableAbilities => new() {new Wanderingspirit() };
-		public override Stats BaseStats => new Stats(58, 95, 145, 30, 50, 105);
+		public override Stats BaseStats => new Stats(58, 95, 145, 50, 105, 30);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Ground, PokemonType.Ghost };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

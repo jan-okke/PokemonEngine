@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Kirlia";
 		public override List<Ability> AvailableAbilities => new() {new Synchronize(), new Trace() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Telepathy() };
-		public override Stats BaseStats => new Stats(38, 35, 35, 50, 65, 55);
+		public override Stats BaseStats => new Stats(38, 35, 35, 65, 55, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic, PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

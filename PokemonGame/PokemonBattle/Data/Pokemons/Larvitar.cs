@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Larvitar";
 		public override List<Ability> AvailableAbilities => new() {new Guts() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sandveil() };
-		public override Stats BaseStats => new Stats(50, 64, 50, 41, 45, 50);
+		public override Stats BaseStats => new Stats(50, 64, 50, 45, 50, 41);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Ground };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

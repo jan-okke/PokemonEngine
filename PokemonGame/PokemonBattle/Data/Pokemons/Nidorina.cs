@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Nidorina";
 		public override List<Ability> AvailableAbilities => new() {new Poisonpoint(), new Rivalry() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Hustle() };
-		public override Stats BaseStats => new Stats(70, 62, 67, 56, 55, 55);
+		public override Stats BaseStats => new Stats(70, 62, 67, 55, 55, 56);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Poison };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

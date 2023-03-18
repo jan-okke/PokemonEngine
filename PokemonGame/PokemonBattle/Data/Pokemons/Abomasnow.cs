@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Abomasnow";
 		public override List<Ability> AvailableAbilities => new() {new Snowwarning() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Soundproof() };
-		public override Stats BaseStats => new Stats(90, 92, 75, 60, 92, 85);
+		public override Stats BaseStats => new Stats(90, 92, 75, 92, 85, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Grass, PokemonType.Ice };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

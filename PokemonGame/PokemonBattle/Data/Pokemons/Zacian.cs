@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Zacian";
 		public override List<Ability> AvailableAbilities => new() {new Intrepidsword() };
-		public override Stats BaseStats => new Stats(92, 130, 115, 138, 80, 115);
+		public override Stats BaseStats => new Stats(92, 130, 115, 80, 115, 138);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

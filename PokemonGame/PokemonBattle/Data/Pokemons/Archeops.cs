@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Archeops";
 		public override List<Ability> AvailableAbilities => new() {new Defeatist() };
-		public override Stats BaseStats => new Stats(75, 140, 65, 110, 112, 65);
+		public override Stats BaseStats => new Stats(75, 140, 65, 112, 65, 110);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Gorebyss";
 		public override List<Ability> AvailableAbilities => new() {new Swiftswim() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Hydration() };
-		public override Stats BaseStats => new Stats(55, 84, 105, 52, 114, 75);
+		public override Stats BaseStats => new Stats(55, 84, 105, 114, 75, 52);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Erratic;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

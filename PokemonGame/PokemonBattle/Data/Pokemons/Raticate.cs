@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Raticate";
 		public override List<Ability> AvailableAbilities => new() {new Runaway(), new Guts() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Hustle() };
-		public override Stats BaseStats => new Stats(55, 81, 60, 97, 50, 70);
+		public override Stats BaseStats => new Stats(55, 81, 60, 50, 70, 97);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Beldum";
 		public override List<Ability> AvailableAbilities => new() {new Clearbody() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Lightmetal() };
-		public override Stats BaseStats => new Stats(40, 55, 80, 30, 35, 60);
+		public override Stats BaseStats => new Stats(40, 55, 80, 35, 60, 30);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Steel, PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

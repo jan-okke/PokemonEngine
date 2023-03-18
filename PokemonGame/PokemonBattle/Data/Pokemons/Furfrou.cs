@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Furfrou";
 		public override List<Ability> AvailableAbilities => new() {new Furcoat() };
-		public override Stats BaseStats => new Stats(75, 80, 60, 102, 65, 90);
+		public override Stats BaseStats => new Stats(75, 80, 60, 65, 90, 102);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

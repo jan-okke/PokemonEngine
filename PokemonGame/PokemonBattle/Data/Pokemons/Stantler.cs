@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Stantler";
 		public override List<Ability> AvailableAbilities => new() {new Intimidate(), new Frisk() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sapsipper() };
-		public override Stats BaseStats => new Stats(73, 95, 62, 85, 85, 65);
+		public override Stats BaseStats => new Stats(73, 95, 62, 85, 65, 85);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

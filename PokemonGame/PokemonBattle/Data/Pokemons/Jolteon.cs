@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Jolteon";
 		public override List<Ability> AvailableAbilities => new() {new Voltabsorb() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Quickfeet() };
-		public override Stats BaseStats => new Stats(65, 65, 60, 130, 110, 95);
+		public override Stats BaseStats => new Stats(65, 65, 60, 110, 95, 130);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Electric };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

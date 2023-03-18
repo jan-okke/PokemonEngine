@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Delcatty";
 		public override List<Ability> AvailableAbilities => new() {new Cutecharm(), new Normalize() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Wonderskin() };
-		public override Stats BaseStats => new Stats(70, 65, 65, 90, 55, 55);
+		public override Stats BaseStats => new Stats(70, 65, 65, 55, 55, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

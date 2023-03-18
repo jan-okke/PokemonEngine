@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Ribombee";
 		public override List<Ability> AvailableAbilities => new() {new Honeygather(), new Shielddust() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sweetveil() };
-		public override Stats BaseStats => new Stats(60, 55, 60, 124, 95, 70);
+		public override Stats BaseStats => new Stats(60, 55, 60, 95, 70, 124);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

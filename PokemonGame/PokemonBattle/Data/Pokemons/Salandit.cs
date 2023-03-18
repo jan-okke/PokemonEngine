@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Salandit";
 		public override List<Ability> AvailableAbilities => new() {new Corrosion() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Oblivious() };
-		public override Stats BaseStats => new Stats(48, 44, 40, 77, 71, 40);
+		public override Stats BaseStats => new Stats(48, 44, 40, 71, 40, 77);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Poison, PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

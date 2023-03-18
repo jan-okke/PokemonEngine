@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Zebstrika";
 		public override List<Ability> AvailableAbilities => new() {new Lightningrod(), new Motordrive() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sapsipper() };
-		public override Stats BaseStats => new Stats(75, 100, 63, 116, 80, 63);
+		public override Stats BaseStats => new Stats(75, 100, 63, 80, 63, 116);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Electric };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

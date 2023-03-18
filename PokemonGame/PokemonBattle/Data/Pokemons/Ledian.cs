@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Ledian";
 		public override List<Ability> AvailableAbilities => new() {new Swarm(), new Earlybird() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Ironfist() };
-		public override Stats BaseStats => new Stats(55, 35, 50, 85, 55, 110);
+		public override Stats BaseStats => new Stats(55, 35, 50, 55, 110, 85);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

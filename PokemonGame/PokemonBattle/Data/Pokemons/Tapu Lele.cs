@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Tapu Lele";
 		public override List<Ability> AvailableAbilities => new() {new Psychicsurge() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Telepathy() };
-		public override Stats BaseStats => new Stats(70, 85, 75, 95, 130, 115);
+		public override Stats BaseStats => new Stats(70, 85, 75, 130, 115, 95);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic, PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

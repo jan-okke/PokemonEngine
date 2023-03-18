@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Gallade";
 		public override List<Ability> AvailableAbilities => new() {new Steadfast() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Justified() };
-		public override Stats BaseStats => new Stats(68, 125, 65, 80, 65, 115);
+		public override Stats BaseStats => new Stats(68, 125, 65, 65, 115, 80);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic, PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

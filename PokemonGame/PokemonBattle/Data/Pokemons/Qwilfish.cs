@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Qwilfish";
 		public override List<Ability> AvailableAbilities => new() {new Poisonpoint(), new Swiftswim() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Intimidate() };
-		public override Stats BaseStats => new Stats(65, 95, 85, 85, 55, 55);
+		public override Stats BaseStats => new Stats(65, 95, 85, 55, 55, 85);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Water, PokemonType.Poison };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Nidoqueen";
 		public override List<Ability> AvailableAbilities => new() {new Poisonpoint(), new Rivalry() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sheerforce() };
-		public override Stats BaseStats => new Stats(90, 92, 87, 76, 75, 85);
+		public override Stats BaseStats => new Stats(90, 92, 87, 75, 85, 76);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Poison, PokemonType.Ground };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

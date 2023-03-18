@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Happiny";
 		public override List<Ability> AvailableAbilities => new() {new Naturalcure(), new Serenegrace() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Friendguard() };
-		public override Stats BaseStats => new Stats(100, 5, 5, 30, 15, 65);
+		public override Stats BaseStats => new Stats(100, 5, 5, 15, 65, 30);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

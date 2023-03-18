@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Luvdisc";
 		public override List<Ability> AvailableAbilities => new() {new Swiftswim() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Hydration() };
-		public override Stats BaseStats => new Stats(43, 30, 55, 97, 40, 65);
+		public override Stats BaseStats => new Stats(43, 30, 55, 40, 65, 97);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

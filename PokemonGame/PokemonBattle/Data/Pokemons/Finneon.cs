@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Finneon";
 		public override List<Ability> AvailableAbilities => new() {new Swiftswim(), new Stormdrain() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Waterveil() };
-		public override Stats BaseStats => new Stats(49, 49, 56, 66, 49, 61);
+		public override Stats BaseStats => new Stats(49, 49, 56, 49, 61, 66);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Erratic;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

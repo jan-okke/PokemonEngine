@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Volcanion";
 		public override List<Ability> AvailableAbilities => new() {new Waterabsorb() };
-		public override Stats BaseStats => new Stats(80, 110, 120, 70, 130, 90);
+		public override Stats BaseStats => new Stats(80, 110, 120, 130, 90, 70);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Fire, PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

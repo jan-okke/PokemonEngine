@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Electrode";
 		public override List<Ability> AvailableAbilities => new() {new Soundproof(), new Static() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Aftermath() };
-		public override Stats BaseStats => new Stats(60, 50, 70, 150, 80, 80);
+		public override Stats BaseStats => new Stats(60, 50, 70, 80, 80, 150);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Electric };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

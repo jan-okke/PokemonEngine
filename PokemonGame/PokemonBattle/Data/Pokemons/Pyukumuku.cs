@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Pyukumuku";
 		public override List<Ability> AvailableAbilities => new() {new Innardsout() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Unaware() };
-		public override Stats BaseStats => new Stats(55, 60, 130, 5, 30, 130);
+		public override Stats BaseStats => new Stats(55, 60, 130, 30, 130, 5);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

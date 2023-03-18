@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Togedemaru";
 		public override List<Ability> AvailableAbilities => new() {new Ironbarbs(), new Lightningrod() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sturdy() };
-		public override Stats BaseStats => new Stats(65, 98, 63, 96, 40, 73);
+		public override Stats BaseStats => new Stats(65, 98, 63, 40, 73, 96);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Electric, PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Cacnea";
 		public override List<Ability> AvailableAbilities => new() {new Sandveil() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Waterabsorb() };
-		public override Stats BaseStats => new Stats(50, 85, 40, 35, 85, 40);
+		public override Stats BaseStats => new Stats(50, 85, 40, 85, 40, 35);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

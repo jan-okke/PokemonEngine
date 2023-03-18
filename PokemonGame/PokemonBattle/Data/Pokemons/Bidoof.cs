@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Bidoof";
 		public override List<Ability> AvailableAbilities => new() {new Simple(), new Unaware() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Moody() };
-		public override Stats BaseStats => new Stats(59, 45, 40, 31, 35, 40);
+		public override Stats BaseStats => new Stats(59, 45, 40, 35, 40, 31);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

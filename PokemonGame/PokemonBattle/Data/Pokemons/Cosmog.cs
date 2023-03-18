@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Cosmog";
 		public override List<Ability> AvailableAbilities => new() {new Unaware() };
-		public override Stats BaseStats => new Stats(43, 29, 31, 37, 29, 31);
+		public override Stats BaseStats => new Stats(43, 29, 31, 29, 31, 37);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

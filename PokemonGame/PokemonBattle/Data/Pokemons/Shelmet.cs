@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Shelmet";
 		public override List<Ability> AvailableAbilities => new() {new Hydration(), new Shellarmor() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Overcoat() };
-		public override Stats BaseStats => new Stats(50, 40, 85, 25, 40, 65);
+		public override Stats BaseStats => new Stats(50, 40, 85, 40, 65, 25);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Weavile";
 		public override List<Ability> AvailableAbilities => new() {new Pressure() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Pickpocket() };
-		public override Stats BaseStats => new Stats(70, 120, 65, 125, 45, 85);
+		public override Stats BaseStats => new Stats(70, 120, 65, 45, 85, 125);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Dark, PokemonType.Ice };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Purugly";
 		public override List<Ability> AvailableAbilities => new() {new Thickfat(), new Owntempo() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Defiant() };
-		public override Stats BaseStats => new Stats(71, 82, 64, 112, 64, 59);
+		public override Stats BaseStats => new Stats(71, 82, 64, 64, 59, 112);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

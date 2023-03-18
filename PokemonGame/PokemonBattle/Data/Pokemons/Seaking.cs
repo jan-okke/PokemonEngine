@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Seaking";
 		public override List<Ability> AvailableAbilities => new() {new Swiftswim(), new Waterveil() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Lightningrod() };
-		public override Stats BaseStats => new Stats(80, 92, 65, 68, 65, 80);
+		public override Stats BaseStats => new Stats(80, 92, 65, 65, 80, 68);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

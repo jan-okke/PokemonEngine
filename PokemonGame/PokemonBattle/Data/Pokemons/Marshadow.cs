@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Marshadow";
 		public override List<Ability> AvailableAbilities => new() {new Technician() };
-		public override Stats BaseStats => new Stats(90, 125, 80, 125, 90, 90);
+		public override Stats BaseStats => new Stats(90, 125, 80, 90, 90, 125);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Fighting, PokemonType.Ghost };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

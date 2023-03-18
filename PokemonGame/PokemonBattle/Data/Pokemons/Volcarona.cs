@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Volcarona";
 		public override List<Ability> AvailableAbilities => new() {new Flamebody() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Swarm() };
-		public override Stats BaseStats => new Stats(85, 60, 65, 100, 135, 105);
+		public override Stats BaseStats => new Stats(85, 60, 65, 135, 105, 100);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

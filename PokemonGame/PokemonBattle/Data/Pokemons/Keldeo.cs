@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Keldeo";
 		public override List<Ability> AvailableAbilities => new() {new Justified() };
-		public override Stats BaseStats => new Stats(91, 72, 90, 108, 129, 90);
+		public override Stats BaseStats => new Stats(91, 72, 90, 129, 90, 108);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Water, PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

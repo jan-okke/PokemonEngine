@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Chimchar";
 		public override List<Ability> AvailableAbilities => new() {new Blaze() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Ironfist() };
-		public override Stats BaseStats => new Stats(44, 58, 44, 61, 58, 44);
+		public override Stats BaseStats => new Stats(44, 58, 44, 58, 44, 61);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

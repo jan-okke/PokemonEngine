@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Shedinja";
 		public override List<Ability> AvailableAbilities => new() {new Wonderguard() };
-		public override Stats BaseStats => new Stats(1, 90, 45, 40, 30, 30);
+		public override Stats BaseStats => new Stats(1, 90, 45, 30, 30, 40);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Erratic;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Ghost };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

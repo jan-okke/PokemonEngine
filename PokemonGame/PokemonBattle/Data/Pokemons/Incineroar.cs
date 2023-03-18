@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Incineroar";
 		public override List<Ability> AvailableAbilities => new() {new Blaze() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Intimidate() };
-		public override Stats BaseStats => new Stats(95, 115, 90, 60, 80, 90);
+		public override Stats BaseStats => new Stats(95, 115, 90, 80, 90, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Fire, PokemonType.Dark };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

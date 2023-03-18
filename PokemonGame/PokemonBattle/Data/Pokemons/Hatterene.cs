@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Hatterene";
 		public override List<Ability> AvailableAbilities => new() {new Healer(), new Anticipation() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Magicbounce() };
-		public override Stats BaseStats => new Stats(57, 90, 95, 29, 136, 103);
+		public override Stats BaseStats => new Stats(57, 90, 95, 136, 103, 29);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic, PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Sandile";
 		public override List<Ability> AvailableAbilities => new() {new Intimidate(), new Moxie() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Angerpoint() };
-		public override Stats BaseStats => new Stats(50, 72, 35, 65, 35, 35);
+		public override Stats BaseStats => new Stats(50, 72, 35, 35, 35, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Ground, PokemonType.Dark };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

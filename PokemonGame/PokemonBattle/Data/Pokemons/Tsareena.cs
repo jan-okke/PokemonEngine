@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Tsareena";
 		public override List<Ability> AvailableAbilities => new() {new Leafguard(), new Queenlymajesty() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sweetveil() };
-		public override Stats BaseStats => new Stats(72, 120, 98, 72, 50, 98);
+		public override Stats BaseStats => new Stats(72, 120, 98, 50, 98, 72);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

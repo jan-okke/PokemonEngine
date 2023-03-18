@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Groudon";
 		public override List<Ability> AvailableAbilities => new() {new Drought() };
-		public override Stats BaseStats => new Stats(100, 150, 140, 90, 100, 90);
+		public override Stats BaseStats => new Stats(100, 150, 140, 100, 90, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Ground };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Voltorb";
 		public override List<Ability> AvailableAbilities => new() {new Soundproof(), new Static() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Aftermath() };
-		public override Stats BaseStats => new Stats(40, 30, 50, 100, 55, 55);
+		public override Stats BaseStats => new Stats(40, 30, 50, 55, 55, 100);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Electric };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

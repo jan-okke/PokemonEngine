@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Blacephalon";
 		public override List<Ability> AvailableAbilities => new() {new Beastboost() };
-		public override Stats BaseStats => new Stats(53, 127, 53, 107, 151, 79);
+		public override Stats BaseStats => new Stats(53, 127, 53, 151, 79, 107);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Fire, PokemonType.Ghost };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Swinub";
 		public override List<Ability> AvailableAbilities => new() {new Oblivious(), new Snowcloak() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Thickfat() };
-		public override Stats BaseStats => new Stats(50, 50, 40, 50, 30, 30);
+		public override Stats BaseStats => new Stats(50, 50, 40, 30, 30, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Ice, PokemonType.Ground };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

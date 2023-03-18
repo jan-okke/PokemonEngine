@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Doduo";
 		public override List<Ability> AvailableAbilities => new() {new Runaway(), new Earlybird() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Tangledfeet() };
-		public override Stats BaseStats => new Stats(35, 85, 45, 75, 35, 35);
+		public override Stats BaseStats => new Stats(35, 85, 45, 35, 35, 75);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

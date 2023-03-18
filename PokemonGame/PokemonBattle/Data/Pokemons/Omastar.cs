@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Omastar";
 		public override List<Ability> AvailableAbilities => new() {new Swiftswim(), new Shellarmor() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Weakarmor() };
-		public override Stats BaseStats => new Stats(70, 60, 125, 55, 115, 70);
+		public override Stats BaseStats => new Stats(70, 60, 125, 115, 70, 55);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Gothitelle";
 		public override List<Ability> AvailableAbilities => new() {new Frisk(), new Competitive() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Shadowtag() };
-		public override Stats BaseStats => new Stats(70, 55, 95, 65, 95, 110);
+		public override Stats BaseStats => new Stats(70, 55, 95, 95, 110, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

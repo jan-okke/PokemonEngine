@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Deoxys";
 		public override List<Ability> AvailableAbilities => new() {new Pressure() };
-		public override Stats BaseStats => new Stats(50, 150, 50, 150, 150, 50);
+		public override Stats BaseStats => new Stats(50, 150, 50, 150, 50, 150);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

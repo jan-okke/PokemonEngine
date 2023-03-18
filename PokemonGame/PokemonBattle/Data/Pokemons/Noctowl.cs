@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Noctowl";
 		public override List<Ability> AvailableAbilities => new() {new Insomnia(), new Keeneye() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Tintedlens() };
-		public override Stats BaseStats => new Stats(100, 50, 50, 70, 86, 96);
+		public override Stats BaseStats => new Stats(100, 50, 50, 86, 96, 70);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

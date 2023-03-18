@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Bergmite";
 		public override List<Ability> AvailableAbilities => new() {new Owntempo(), new Icebody() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sturdy() };
-		public override Stats BaseStats => new Stats(55, 69, 85, 28, 32, 35);
+		public override Stats BaseStats => new Stats(55, 69, 85, 32, 35, 28);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Ice };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

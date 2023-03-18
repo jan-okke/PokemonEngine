@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Rapidash";
 		public override List<Ability> AvailableAbilities => new() {new Runaway(), new Flashfire() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Flamebody() };
-		public override Stats BaseStats => new Stats(65, 100, 70, 105, 80, 80);
+		public override Stats BaseStats => new Stats(65, 100, 70, 80, 80, 105);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

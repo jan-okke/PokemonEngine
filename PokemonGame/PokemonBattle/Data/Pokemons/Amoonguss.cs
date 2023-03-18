@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Amoonguss";
 		public override List<Ability> AvailableAbilities => new() {new Effectspore() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Regenerator() };
-		public override Stats BaseStats => new Stats(114, 85, 70, 30, 85, 80);
+		public override Stats BaseStats => new Stats(114, 85, 70, 85, 80, 30);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Grass, PokemonType.Poison };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

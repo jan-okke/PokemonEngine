@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Accelgor";
 		public override List<Ability> AvailableAbilities => new() {new Hydration(), new Stickyhold() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Unburden() };
-		public override Stats BaseStats => new Stats(80, 70, 40, 145, 100, 60);
+		public override Stats BaseStats => new Stats(80, 70, 40, 100, 60, 145);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

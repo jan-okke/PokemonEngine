@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Lunala";
 		public override List<Ability> AvailableAbilities => new() {new Shadowshield() };
-		public override Stats BaseStats => new Stats(137, 113, 89, 97, 137, 107);
+		public override Stats BaseStats => new Stats(137, 113, 89, 137, 107, 97);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic, PokemonType.Ghost };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

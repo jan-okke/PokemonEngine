@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Grumpig";
 		public override List<Ability> AvailableAbilities => new() {new Thickfat(), new Owntempo() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Gluttony() };
-		public override Stats BaseStats => new Stats(80, 45, 65, 80, 90, 110);
+		public override Stats BaseStats => new Stats(80, 45, 65, 90, 110, 80);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

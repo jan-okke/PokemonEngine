@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Fletchinder";
 		public override List<Ability> AvailableAbilities => new() {new Flamebody() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Galewings() };
-		public override Stats BaseStats => new Stats(62, 73, 55, 84, 56, 52);
+		public override Stats BaseStats => new Stats(62, 73, 55, 56, 52, 84);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Fire, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

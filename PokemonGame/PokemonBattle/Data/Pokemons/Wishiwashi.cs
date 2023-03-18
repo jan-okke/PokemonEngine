@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Wishiwashi";
 		public override List<Ability> AvailableAbilities => new() {new Schooling() };
-		public override Stats BaseStats => new Stats(45, 20, 20, 40, 25, 25);
+		public override Stats BaseStats => new Stats(45, 20, 20, 25, 25, 40);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

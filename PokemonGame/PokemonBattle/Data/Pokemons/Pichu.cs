@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Pichu";
 		public override List<Ability> AvailableAbilities => new() {new Static() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Lightningrod() };
-		public override Stats BaseStats => new Stats(20, 40, 15, 60, 35, 35);
+		public override Stats BaseStats => new Stats(20, 40, 15, 35, 35, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Electric };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

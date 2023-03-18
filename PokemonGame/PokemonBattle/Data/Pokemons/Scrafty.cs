@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Scrafty";
 		public override List<Ability> AvailableAbilities => new() {new Shedskin(), new Moxie() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Intimidate() };
-		public override Stats BaseStats => new Stats(65, 90, 115, 58, 45, 115);
+		public override Stats BaseStats => new Stats(65, 90, 115, 45, 115, 58);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Dark, PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

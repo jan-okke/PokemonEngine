@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Solosis";
 		public override List<Ability> AvailableAbilities => new() {new Overcoat(), new Magicguard() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Regenerator() };
-		public override Stats BaseStats => new Stats(45, 30, 40, 20, 105, 50);
+		public override Stats BaseStats => new Stats(45, 30, 40, 105, 50, 20);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

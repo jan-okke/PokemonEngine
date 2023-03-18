@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Golett";
 		public override List<Ability> AvailableAbilities => new() {new Ironfist(), new Klutz() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Noguard() };
-		public override Stats BaseStats => new Stats(59, 74, 50, 35, 35, 50);
+		public override Stats BaseStats => new Stats(59, 74, 50, 35, 50, 35);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Ground, PokemonType.Ghost };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

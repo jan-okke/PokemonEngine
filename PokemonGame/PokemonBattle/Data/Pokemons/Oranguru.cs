@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Oranguru";
 		public override List<Ability> AvailableAbilities => new() {new Innerfocus(), new Telepathy() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Symbiosis() };
-		public override Stats BaseStats => new Stats(90, 60, 80, 60, 90, 110);
+		public override Stats BaseStats => new Stats(90, 60, 80, 90, 110, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Normal, PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

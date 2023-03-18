@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Pidgey";
 		public override List<Ability> AvailableAbilities => new() {new Keeneye(), new Tangledfeet() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Bigpecks() };
-		public override Stats BaseStats => new Stats(40, 45, 40, 56, 35, 35);
+		public override Stats BaseStats => new Stats(40, 45, 40, 35, 35, 56);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Normal, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

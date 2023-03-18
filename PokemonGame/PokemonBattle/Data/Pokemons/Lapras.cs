@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Lapras";
 		public override List<Ability> AvailableAbilities => new() {new Waterabsorb(), new Shellarmor() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Hydration() };
-		public override Stats BaseStats => new Stats(130, 85, 80, 60, 85, 95);
+		public override Stats BaseStats => new Stats(130, 85, 80, 85, 95, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Water, PokemonType.Ice };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Trapinch";
 		public override List<Ability> AvailableAbilities => new() {new Hypercutter(), new Arenatrap() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sheerforce() };
-		public override Stats BaseStats => new Stats(45, 100, 45, 10, 45, 45);
+		public override Stats BaseStats => new Stats(45, 100, 45, 45, 45, 10);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Ground };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

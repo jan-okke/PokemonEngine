@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Snom";
 		public override List<Ability> AvailableAbilities => new() {new Shielddust() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Icescales() };
-		public override Stats BaseStats => new Stats(30, 25, 35, 20, 45, 30);
+		public override Stats BaseStats => new Stats(30, 25, 35, 45, 30, 20);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Ice, PokemonType.Bug };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

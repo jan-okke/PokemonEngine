@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Sentret";
 		public override List<Ability> AvailableAbilities => new() {new Runaway(), new Keeneye() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Frisk() };
-		public override Stats BaseStats => new Stats(35, 46, 34, 20, 35, 45);
+		public override Stats BaseStats => new Stats(35, 46, 34, 35, 45, 20);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

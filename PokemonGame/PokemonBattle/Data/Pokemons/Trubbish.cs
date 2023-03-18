@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Trubbish";
 		public override List<Ability> AvailableAbilities => new() {new Stench(), new Stickyhold() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Aftermath() };
-		public override Stats BaseStats => new Stats(50, 50, 62, 65, 40, 62);
+		public override Stats BaseStats => new Stats(50, 50, 62, 40, 62, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Poison };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

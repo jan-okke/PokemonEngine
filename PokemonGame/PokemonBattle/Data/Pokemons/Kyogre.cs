@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Kyogre";
 		public override List<Ability> AvailableAbilities => new() {new Drizzle() };
-		public override Stats BaseStats => new Stats(100, 100, 90, 90, 150, 140);
+		public override Stats BaseStats => new Stats(100, 100, 90, 150, 140, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

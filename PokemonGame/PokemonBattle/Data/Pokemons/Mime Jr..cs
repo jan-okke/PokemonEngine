@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Mime Jr.";
 		public override List<Ability> AvailableAbilities => new() {new Soundproof(), new Filter() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Technician() };
-		public override Stats BaseStats => new Stats(20, 25, 45, 60, 70, 90);
+		public override Stats BaseStats => new Stats(20, 25, 45, 70, 90, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic, PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Dubwool";
 		public override List<Ability> AvailableAbilities => new() {new Fluffy(), new Steadfast() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Bulletproof() };
-		public override Stats BaseStats => new Stats(72, 80, 100, 88, 60, 90);
+		public override Stats BaseStats => new Stats(72, 80, 100, 60, 90, 88);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

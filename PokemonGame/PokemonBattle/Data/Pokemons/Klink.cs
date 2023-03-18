@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Klink";
 		public override List<Ability> AvailableAbilities => new() {new Plus(), new Minus() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Clearbody() };
-		public override Stats BaseStats => new Stats(40, 55, 70, 30, 45, 60);
+		public override Stats BaseStats => new Stats(40, 55, 70, 45, 60, 30);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

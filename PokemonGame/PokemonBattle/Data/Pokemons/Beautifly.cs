@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Beautifly";
 		public override List<Ability> AvailableAbilities => new() {new Swarm() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Rivalry() };
-		public override Stats BaseStats => new Stats(60, 70, 50, 65, 100, 50);
+		public override Stats BaseStats => new Stats(60, 70, 50, 100, 50, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

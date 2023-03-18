@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Galvantula";
 		public override List<Ability> AvailableAbilities => new() {new Compoundeyes(), new Unnerve() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Swarm() };
-		public override Stats BaseStats => new Stats(70, 77, 60, 108, 97, 60);
+		public override Stats BaseStats => new Stats(70, 77, 60, 97, 60, 108);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Electric };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Sawsbuck";
 		public override List<Ability> AvailableAbilities => new() {new Chlorophyll(), new Sapsipper() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Serenegrace() };
-		public override Stats BaseStats => new Stats(80, 100, 70, 95, 60, 70);
+		public override Stats BaseStats => new Stats(80, 100, 70, 60, 70, 95);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal, PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

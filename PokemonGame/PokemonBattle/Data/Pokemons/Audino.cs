@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Audino";
 		public override List<Ability> AvailableAbilities => new() {new Healer(), new Regenerator() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Klutz() };
-		public override Stats BaseStats => new Stats(103, 60, 86, 50, 60, 86);
+		public override Stats BaseStats => new Stats(103, 60, 86, 60, 86, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

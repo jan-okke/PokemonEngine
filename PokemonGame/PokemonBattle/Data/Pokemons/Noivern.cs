@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Noivern";
 		public override List<Ability> AvailableAbilities => new() {new Frisk(), new Infiltrator() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Telepathy() };
-		public override Stats BaseStats => new Stats(85, 70, 80, 123, 97, 80);
+		public override Stats BaseStats => new Stats(85, 70, 80, 97, 80, 123);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Flying, PokemonType.Dragon };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

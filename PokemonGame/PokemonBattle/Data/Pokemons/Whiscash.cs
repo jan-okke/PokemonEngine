@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Whiscash";
 		public override List<Ability> AvailableAbilities => new() {new Oblivious(), new Anticipation() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Hydration() };
-		public override Stats BaseStats => new Stats(110, 78, 73, 60, 76, 71);
+		public override Stats BaseStats => new Stats(110, 78, 73, 76, 71, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Water, PokemonType.Ground };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

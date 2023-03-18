@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Gourgeist";
 		public override List<Ability> AvailableAbilities => new() {new Pickup(), new Frisk() };
-		public override Stats BaseStats => new Stats(55, 85, 122, 99, 58, 75);
+		public override Stats BaseStats => new Stats(55, 85, 122, 58, 75, 99);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Ghost, PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

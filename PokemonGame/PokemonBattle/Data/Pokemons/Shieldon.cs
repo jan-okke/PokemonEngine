@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Shieldon";
 		public override List<Ability> AvailableAbilities => new() {new Sturdy() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Soundproof() };
-		public override Stats BaseStats => new Stats(30, 42, 118, 30, 42, 88);
+		public override Stats BaseStats => new Stats(30, 42, 118, 42, 88, 30);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Erratic;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

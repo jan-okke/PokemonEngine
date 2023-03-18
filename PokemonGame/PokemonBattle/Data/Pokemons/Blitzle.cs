@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Blitzle";
 		public override List<Ability> AvailableAbilities => new() {new Lightningrod(), new Motordrive() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sapsipper() };
-		public override Stats BaseStats => new Stats(45, 60, 32, 76, 50, 32);
+		public override Stats BaseStats => new Stats(45, 60, 32, 50, 32, 76);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Electric };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

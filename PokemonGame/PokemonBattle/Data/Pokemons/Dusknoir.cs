@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Dusknoir";
 		public override List<Ability> AvailableAbilities => new() {new Pressure() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Frisk() };
-		public override Stats BaseStats => new Stats(45, 100, 135, 45, 65, 135);
+		public override Stats BaseStats => new Stats(45, 100, 135, 65, 135, 45);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Ghost };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

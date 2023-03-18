@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Magnezone";
 		public override List<Ability> AvailableAbilities => new() {new Magnetpull(), new Sturdy() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Analytic() };
-		public override Stats BaseStats => new Stats(70, 70, 115, 60, 130, 90);
+		public override Stats BaseStats => new Stats(70, 70, 115, 130, 90, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Electric, PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Torracat";
 		public override List<Ability> AvailableAbilities => new() {new Blaze() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Intimidate() };
-		public override Stats BaseStats => new Stats(65, 85, 50, 90, 80, 50);
+		public override Stats BaseStats => new Stats(65, 85, 50, 80, 50, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

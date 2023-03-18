@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Cufant";
 		public override List<Ability> AvailableAbilities => new() {new Sheerforce() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Heavymetal() };
-		public override Stats BaseStats => new Stats(72, 80, 49, 40, 40, 49);
+		public override Stats BaseStats => new Stats(72, 80, 49, 40, 49, 40);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

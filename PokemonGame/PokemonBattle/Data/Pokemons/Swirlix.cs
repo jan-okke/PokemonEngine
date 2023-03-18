@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Swirlix";
 		public override List<Ability> AvailableAbilities => new() {new Sweetveil() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Unburden() };
-		public override Stats BaseStats => new Stats(62, 48, 66, 49, 59, 57);
+		public override Stats BaseStats => new Stats(62, 48, 66, 59, 57, 49);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

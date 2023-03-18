@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Charjabug";
 		public override List<Ability> AvailableAbilities => new() {new Battery() };
-		public override Stats BaseStats => new Stats(57, 82, 95, 36, 55, 75);
+		public override Stats BaseStats => new Stats(57, 82, 95, 55, 75, 36);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Electric };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

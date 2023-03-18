@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Girafarig";
 		public override List<Ability> AvailableAbilities => new() {new Innerfocus(), new Earlybird() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sapsipper() };
-		public override Stats BaseStats => new Stats(70, 80, 65, 85, 90, 65);
+		public override Stats BaseStats => new Stats(70, 80, 65, 90, 65, 85);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal, PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

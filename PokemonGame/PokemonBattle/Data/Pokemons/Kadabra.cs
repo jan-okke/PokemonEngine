@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Kadabra";
 		public override List<Ability> AvailableAbilities => new() {new Synchronize(), new Innerfocus() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Magicguard() };
-		public override Stats BaseStats => new Stats(40, 35, 30, 105, 120, 70);
+		public override Stats BaseStats => new Stats(40, 35, 30, 120, 70, 105);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

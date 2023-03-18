@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Masquerain";
 		public override List<Ability> AvailableAbilities => new() {new Intimidate() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Unnerve() };
-		public override Stats BaseStats => new Stats(70, 60, 62, 80, 100, 82);
+		public override Stats BaseStats => new Stats(70, 60, 62, 100, 82, 80);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

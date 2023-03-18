@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Hawlucha";
 		public override List<Ability> AvailableAbilities => new() {new Limber(), new Unburden() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Moldbreaker() };
-		public override Stats BaseStats => new Stats(78, 92, 75, 118, 74, 63);
+		public override Stats BaseStats => new Stats(78, 92, 75, 74, 63, 118);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Fighting, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

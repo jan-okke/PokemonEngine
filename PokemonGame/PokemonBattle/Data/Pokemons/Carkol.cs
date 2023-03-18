@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Carkol";
 		public override List<Ability> AvailableAbilities => new() {new Steamengine(), new Flamebody() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Flashfire() };
-		public override Stats BaseStats => new Stats(80, 60, 90, 50, 60, 70);
+		public override Stats BaseStats => new Stats(80, 60, 90, 60, 70, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

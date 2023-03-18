@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Magearna";
 		public override List<Ability> AvailableAbilities => new() {new Soulheart() };
-		public override Stats BaseStats => new Stats(80, 95, 115, 65, 130, 115);
+		public override Stats BaseStats => new Stats(80, 95, 115, 130, 115, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Steel, PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

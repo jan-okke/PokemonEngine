@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Meowstic";
 		public override List<Ability> AvailableAbilities => new() {new Keeneye(), new Infiltrator() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Prankster() };
-		public override Stats BaseStats => new Stats(74, 48, 76, 104, 83, 81);
+		public override Stats BaseStats => new Stats(74, 48, 76, 83, 81, 104);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

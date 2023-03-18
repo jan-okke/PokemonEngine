@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Clobbopus";
 		public override List<Ability> AvailableAbilities => new() {new Limber() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Technician() };
-		public override Stats BaseStats => new Stats(50, 68, 60, 32, 50, 50);
+		public override Stats BaseStats => new Stats(50, 68, 60, 50, 50, 32);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

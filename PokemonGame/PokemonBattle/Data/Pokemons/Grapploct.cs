@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Grapploct";
 		public override List<Ability> AvailableAbilities => new() {new Limber() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Technician() };
-		public override Stats BaseStats => new Stats(80, 118, 90, 42, 70, 80);
+		public override Stats BaseStats => new Stats(80, 118, 90, 70, 80, 42);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

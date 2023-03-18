@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Cloyster";
 		public override List<Ability> AvailableAbilities => new() {new Shellarmor(), new Skilllink() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Overcoat() };
-		public override Stats BaseStats => new Stats(50, 95, 180, 70, 85, 45);
+		public override Stats BaseStats => new Stats(50, 95, 180, 85, 45, 70);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Water, PokemonType.Ice };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

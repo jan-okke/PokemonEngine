@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Zapdos";
 		public override List<Ability> AvailableAbilities => new() {new Pressure() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Static() };
-		public override Stats BaseStats => new Stats(90, 90, 85, 100, 125, 90);
+		public override Stats BaseStats => new Stats(90, 90, 85, 125, 90, 100);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Electric, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

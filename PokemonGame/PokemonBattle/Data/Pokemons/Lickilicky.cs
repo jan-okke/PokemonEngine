@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Lickilicky";
 		public override List<Ability> AvailableAbilities => new() {new Owntempo(), new Oblivious() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Cloudnine() };
-		public override Stats BaseStats => new Stats(110, 85, 95, 50, 80, 95);
+		public override Stats BaseStats => new Stats(110, 85, 95, 80, 95, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

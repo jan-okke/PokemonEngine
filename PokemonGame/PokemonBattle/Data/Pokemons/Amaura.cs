@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Amaura";
 		public override List<Ability> AvailableAbilities => new() {new Refrigerate() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Snowwarning() };
-		public override Stats BaseStats => new Stats(77, 59, 50, 46, 67, 63);
+		public override Stats BaseStats => new Stats(77, 59, 50, 67, 63, 46);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Ice };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

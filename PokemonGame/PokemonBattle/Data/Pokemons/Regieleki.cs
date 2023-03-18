@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Regieleki";
 		public override List<Ability> AvailableAbilities => new() {new Transistor() };
-		public override Stats BaseStats => new Stats(80, 100, 50, 200, 100, 50);
+		public override Stats BaseStats => new Stats(80, 100, 50, 100, 50, 200);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Electric };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

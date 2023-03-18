@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Lotad";
 		public override List<Ability> AvailableAbilities => new() {new Swiftswim(), new Raindish() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Owntempo() };
-		public override Stats BaseStats => new Stats(40, 30, 30, 30, 40, 50);
+		public override Stats BaseStats => new Stats(40, 30, 30, 40, 50, 30);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Water, PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

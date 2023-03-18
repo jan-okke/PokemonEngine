@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Flaaffy";
 		public override List<Ability> AvailableAbilities => new() {new Static() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Plus() };
-		public override Stats BaseStats => new Stats(70, 55, 55, 45, 80, 60);
+		public override Stats BaseStats => new Stats(70, 55, 55, 80, 60, 45);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Electric };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

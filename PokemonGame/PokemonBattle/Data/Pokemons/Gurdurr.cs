@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Gurdurr";
 		public override List<Ability> AvailableAbilities => new() {new Guts(), new Sheerforce() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Ironfist() };
-		public override Stats BaseStats => new Stats(85, 105, 85, 40, 40, 50);
+		public override Stats BaseStats => new Stats(85, 105, 85, 40, 50, 40);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

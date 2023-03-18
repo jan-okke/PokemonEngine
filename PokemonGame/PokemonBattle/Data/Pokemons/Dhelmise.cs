@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Dhelmise";
 		public override List<Ability> AvailableAbilities => new() {new Steelworker() };
-		public override Stats BaseStats => new Stats(70, 131, 100, 40, 86, 90);
+		public override Stats BaseStats => new Stats(70, 131, 100, 86, 90, 40);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Ghost, PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Cosmoem";
 		public override List<Ability> AvailableAbilities => new() {new Sturdy() };
-		public override Stats BaseStats => new Stats(43, 29, 131, 37, 29, 131);
+		public override Stats BaseStats => new Stats(43, 29, 131, 29, 131, 37);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Linoone";
 		public override List<Ability> AvailableAbilities => new() {new Pickup(), new Gluttony() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Quickfeet() };
-		public override Stats BaseStats => new Stats(78, 70, 61, 100, 50, 61);
+		public override Stats BaseStats => new Stats(78, 70, 61, 50, 61, 100);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

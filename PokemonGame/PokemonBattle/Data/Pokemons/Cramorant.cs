@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Cramorant";
 		public override List<Ability> AvailableAbilities => new() {new Gulpmissile() };
-		public override Stats BaseStats => new Stats(70, 85, 55, 85, 85, 95);
+		public override Stats BaseStats => new Stats(70, 85, 55, 85, 95, 85);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Flying, PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

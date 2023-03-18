@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Nihilego";
 		public override List<Ability> AvailableAbilities => new() {new Beastboost() };
-		public override Stats BaseStats => new Stats(109, 53, 47, 103, 127, 131);
+		public override Stats BaseStats => new Stats(109, 53, 47, 127, 131, 103);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Poison };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

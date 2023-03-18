@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Sandaconda";
 		public override List<Ability> AvailableAbilities => new() {new Sandspit(), new Shedskin() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sandveil() };
-		public override Stats BaseStats => new Stats(72, 107, 125, 71, 65, 70);
+		public override Stats BaseStats => new Stats(72, 107, 125, 65, 70, 71);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Ground };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

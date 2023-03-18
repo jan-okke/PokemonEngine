@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Chansey";
 		public override List<Ability> AvailableAbilities => new() {new Naturalcure(), new Serenegrace() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Healer() };
-		public override Stats BaseStats => new Stats(250, 5, 5, 50, 35, 105);
+		public override Stats BaseStats => new Stats(250, 5, 5, 35, 105, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

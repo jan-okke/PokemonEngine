@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Liepard";
 		public override List<Ability> AvailableAbilities => new() {new Limber(), new Unburden() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Prankster() };
-		public override Stats BaseStats => new Stats(64, 88, 50, 106, 88, 50);
+		public override Stats BaseStats => new Stats(64, 88, 50, 88, 50, 106);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Dark };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

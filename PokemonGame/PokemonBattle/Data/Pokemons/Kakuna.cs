@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Kakuna";
 		public override List<Ability> AvailableAbilities => new() {new Shedskin() };
-		public override Stats BaseStats => new Stats(45, 25, 50, 35, 25, 25);
+		public override Stats BaseStats => new Stats(45, 25, 50, 25, 25, 35);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Poison };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

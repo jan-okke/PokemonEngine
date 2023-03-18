@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Dracovish";
 		public override List<Ability> AvailableAbilities => new() {new Waterabsorb(), new Strongjaw() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sandrush() };
-		public override Stats BaseStats => new Stats(90, 90, 100, 75, 70, 80);
+		public override Stats BaseStats => new Stats(90, 90, 100, 70, 80, 75);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Water, PokemonType.Dragon };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

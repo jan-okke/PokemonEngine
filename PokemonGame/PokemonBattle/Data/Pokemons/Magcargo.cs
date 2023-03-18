@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Magcargo";
 		public override List<Ability> AvailableAbilities => new() {new Magmaarmor(), new Flamebody() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Weakarmor() };
-		public override Stats BaseStats => new Stats(60, 50, 120, 30, 90, 80);
+		public override Stats BaseStats => new Stats(60, 50, 120, 90, 80, 30);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Fire, PokemonType.Rock };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

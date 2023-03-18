@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Skwovet";
 		public override List<Ability> AvailableAbilities => new() {new Cheekpouch() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Gluttony() };
-		public override Stats BaseStats => new Stats(70, 55, 55, 25, 35, 35);
+		public override Stats BaseStats => new Stats(70, 55, 55, 35, 35, 25);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

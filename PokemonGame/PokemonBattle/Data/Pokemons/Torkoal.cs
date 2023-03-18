@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Torkoal";
 		public override List<Ability> AvailableAbilities => new() {new Whitesmoke(), new Drought() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Shellarmor() };
-		public override Stats BaseStats => new Stats(70, 85, 140, 20, 85, 70);
+		public override Stats BaseStats => new Stats(70, 85, 140, 85, 70, 20);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

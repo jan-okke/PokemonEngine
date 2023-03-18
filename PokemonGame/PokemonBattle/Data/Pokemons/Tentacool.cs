@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Tentacool";
 		public override List<Ability> AvailableAbilities => new() {new Clearbody(), new Liquidooze() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Raindish() };
-		public override Stats BaseStats => new Stats(40, 40, 35, 70, 50, 100);
+		public override Stats BaseStats => new Stats(40, 40, 35, 50, 100, 70);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Water, PokemonType.Poison };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Darumaka";
 		public override List<Ability> AvailableAbilities => new() {new Hustle() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Innerfocus() };
-		public override Stats BaseStats => new Stats(70, 90, 45, 50, 15, 45);
+		public override Stats BaseStats => new Stats(70, 90, 45, 15, 45, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Woobat";
 		public override List<Ability> AvailableAbilities => new() {new Unaware(), new Klutz() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Simple() };
-		public override Stats BaseStats => new Stats(65, 45, 43, 72, 55, 43);
+		public override Stats BaseStats => new Stats(65, 45, 43, 55, 43, 72);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

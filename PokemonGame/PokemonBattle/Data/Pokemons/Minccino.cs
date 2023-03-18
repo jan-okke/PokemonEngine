@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Minccino";
 		public override List<Ability> AvailableAbilities => new() {new Cutecharm(), new Technician() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Skilllink() };
-		public override Stats BaseStats => new Stats(55, 50, 40, 75, 40, 40);
+		public override Stats BaseStats => new Stats(55, 50, 40, 40, 40, 75);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

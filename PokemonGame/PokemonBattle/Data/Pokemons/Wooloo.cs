@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Wooloo";
 		public override List<Ability> AvailableAbilities => new() {new Fluffy(), new Runaway() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Bulletproof() };
-		public override Stats BaseStats => new Stats(42, 40, 55, 48, 40, 45);
+		public override Stats BaseStats => new Stats(42, 40, 55, 40, 45, 48);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

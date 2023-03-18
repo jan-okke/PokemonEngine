@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Rayquaza";
 		public override List<Ability> AvailableAbilities => new() {new Airlock() };
-		public override Stats BaseStats => new Stats(105, 150, 90, 95, 150, 90);
+		public override Stats BaseStats => new Stats(105, 150, 90, 150, 90, 95);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dragon, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

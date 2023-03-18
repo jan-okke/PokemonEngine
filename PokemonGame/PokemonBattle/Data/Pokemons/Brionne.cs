@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Brionne";
 		public override List<Ability> AvailableAbilities => new() {new Torrent() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Liquidvoice() };
-		public override Stats BaseStats => new Stats(60, 69, 69, 50, 91, 81);
+		public override Stats BaseStats => new Stats(60, 69, 69, 91, 81, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Leavanny";
 		public override List<Ability> AvailableAbilities => new() {new Swarm(), new Chlorophyll() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Overcoat() };
-		public override Stats BaseStats => new Stats(75, 103, 80, 92, 70, 80);
+		public override Stats BaseStats => new Stats(75, 103, 80, 70, 80, 92);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

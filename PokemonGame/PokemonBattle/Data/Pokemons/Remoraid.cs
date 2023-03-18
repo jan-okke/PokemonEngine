@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Remoraid";
 		public override List<Ability> AvailableAbilities => new() {new Hustle(), new Sniper() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Moody() };
-		public override Stats BaseStats => new Stats(35, 65, 35, 65, 65, 35);
+		public override Stats BaseStats => new Stats(35, 65, 35, 65, 35, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

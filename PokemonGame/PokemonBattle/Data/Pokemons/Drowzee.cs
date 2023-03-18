@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Drowzee";
 		public override List<Ability> AvailableAbilities => new() {new Insomnia(), new Forewarn() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Innerfocus() };
-		public override Stats BaseStats => new Stats(60, 48, 45, 42, 43, 90);
+		public override Stats BaseStats => new Stats(60, 48, 45, 43, 90, 42);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

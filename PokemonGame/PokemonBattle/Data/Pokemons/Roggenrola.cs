@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Roggenrola";
 		public override List<Ability> AvailableAbilities => new() {new Sturdy(), new Weakarmor() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Sandforce() };
-		public override Stats BaseStats => new Stats(55, 75, 85, 15, 25, 25);
+		public override Stats BaseStats => new Stats(55, 75, 85, 25, 25, 15);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Rock };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

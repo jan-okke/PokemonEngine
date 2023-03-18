@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Weedle";
 		public override List<Ability> AvailableAbilities => new() {new Shielddust() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Runaway() };
-		public override Stats BaseStats => new Stats(40, 35, 30, 50, 20, 20);
+		public override Stats BaseStats => new Stats(40, 35, 30, 20, 20, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Poison };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

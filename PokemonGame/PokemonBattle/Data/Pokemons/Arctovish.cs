@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Arctovish";
 		public override List<Ability> AvailableAbilities => new() {new Waterabsorb(), new Icebody() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Slushrush() };
-		public override Stats BaseStats => new Stats(90, 90, 100, 55, 80, 90);
+		public override Stats BaseStats => new Stats(90, 90, 100, 80, 90, 55);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Water, PokemonType.Ice };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

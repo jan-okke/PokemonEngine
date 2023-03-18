@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Armaldo";
 		public override List<Ability> AvailableAbilities => new() {new Battlearmor() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Swiftswim() };
-		public override Stats BaseStats => new Stats(75, 125, 100, 45, 70, 80);
+		public override Stats BaseStats => new Stats(75, 125, 100, 70, 80, 45);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Erratic;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Bug };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

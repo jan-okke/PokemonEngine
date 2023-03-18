@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Togepi";
 		public override List<Ability> AvailableAbilities => new() {new Hustle(), new Serenegrace() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Superluck() };
-		public override Stats BaseStats => new Stats(35, 20, 65, 20, 40, 65);
+		public override Stats BaseStats => new Stats(35, 20, 65, 40, 65, 20);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

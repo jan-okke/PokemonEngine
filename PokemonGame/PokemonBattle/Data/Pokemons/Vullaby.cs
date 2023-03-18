@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Vullaby";
 		public override List<Ability> AvailableAbilities => new() {new Bigpecks(), new Overcoat() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Weakarmor() };
-		public override Stats BaseStats => new Stats(70, 55, 75, 60, 45, 65);
+		public override Stats BaseStats => new Stats(70, 55, 75, 45, 65, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dark, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

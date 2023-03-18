@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Zarude";
 		public override List<Ability> AvailableAbilities => new() {new Leafguard() };
-		public override Stats BaseStats => new Stats(105, 120, 105, 105, 70, 95);
+		public override Stats BaseStats => new Stats(105, 120, 105, 70, 95, 105);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dark, PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

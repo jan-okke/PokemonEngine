@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Vigoroth";
 		public override List<Ability> AvailableAbilities => new() {new Vitalspirit() };
-		public override Stats BaseStats => new Stats(80, 80, 80, 90, 55, 55);
+		public override Stats BaseStats => new Stats(80, 80, 80, 55, 55, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

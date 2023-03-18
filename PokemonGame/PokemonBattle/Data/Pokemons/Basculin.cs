@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Basculin";
 		public override List<Ability> AvailableAbilities => new() {new Reckless(), new Adaptability() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Moldbreaker() };
-		public override Stats BaseStats => new Stats(70, 92, 65, 98, 80, 55);
+		public override Stats BaseStats => new Stats(70, 92, 65, 80, 55, 98);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

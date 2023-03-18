@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Komala";
 		public override List<Ability> AvailableAbilities => new() {new Comatose() };
-		public override Stats BaseStats => new Stats(65, 115, 65, 65, 75, 95);
+		public override Stats BaseStats => new Stats(65, 115, 65, 75, 95, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

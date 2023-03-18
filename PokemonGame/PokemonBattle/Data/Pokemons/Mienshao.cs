@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Mienshao";
 		public override List<Ability> AvailableAbilities => new() {new Innerfocus(), new Regenerator() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Reckless() };
-		public override Stats BaseStats => new Stats(65, 125, 60, 105, 95, 60);
+		public override Stats BaseStats => new Stats(65, 125, 60, 95, 60, 105);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

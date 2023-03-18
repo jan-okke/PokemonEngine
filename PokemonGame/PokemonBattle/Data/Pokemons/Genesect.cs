@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Genesect";
 		public override List<Ability> AvailableAbilities => new() {new Download() };
-		public override Stats BaseStats => new Stats(71, 120, 95, 99, 120, 95);
+		public override Stats BaseStats => new Stats(71, 120, 95, 120, 95, 99);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

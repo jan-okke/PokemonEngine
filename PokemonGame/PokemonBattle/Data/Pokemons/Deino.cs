@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Deino";
 		public override List<Ability> AvailableAbilities => new() {new Hustle() };
-		public override Stats BaseStats => new Stats(52, 65, 50, 38, 45, 50);
+		public override Stats BaseStats => new Stats(52, 65, 50, 45, 50, 38);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dark, PokemonType.Dragon };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

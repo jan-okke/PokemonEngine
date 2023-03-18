@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Volbeat";
 		public override List<Ability> AvailableAbilities => new() {new Illuminate(), new Swarm() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Prankster() };
-		public override Stats BaseStats => new Stats(65, 73, 75, 85, 47, 85);
+		public override Stats BaseStats => new Stats(65, 73, 75, 47, 85, 85);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Erratic;
 		public override List<PokemonType> Types => new() {PokemonType.Bug };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

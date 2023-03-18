@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Piplup";
 		public override List<Ability> AvailableAbilities => new() {new Torrent() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Defiant() };
-		public override Stats BaseStats => new Stats(53, 51, 53, 40, 61, 56);
+		public override Stats BaseStats => new Stats(53, 51, 53, 61, 56, 40);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

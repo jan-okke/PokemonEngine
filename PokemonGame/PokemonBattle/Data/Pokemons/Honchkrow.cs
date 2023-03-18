@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Honchkrow";
 		public override List<Ability> AvailableAbilities => new() {new Insomnia(), new Superluck() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Moxie() };
-		public override Stats BaseStats => new Stats(100, 125, 52, 71, 105, 52);
+		public override Stats BaseStats => new Stats(100, 125, 52, 105, 52, 71);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Dark, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

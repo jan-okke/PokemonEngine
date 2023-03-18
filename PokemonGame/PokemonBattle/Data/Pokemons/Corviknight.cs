@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Corviknight";
 		public override List<Ability> AvailableAbilities => new() {new Pressure(), new Unnerve() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Mirrorarmor() };
-		public override Stats BaseStats => new Stats(98, 87, 105, 67, 53, 85);
+		public override Stats BaseStats => new Stats(98, 87, 105, 53, 85, 67);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Flying, PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

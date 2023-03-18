@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Riolu";
 		public override List<Ability> AvailableAbilities => new() {new Steadfast(), new Innerfocus() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Prankster() };
-		public override Stats BaseStats => new Stats(40, 70, 40, 60, 35, 40);
+		public override Stats BaseStats => new Stats(40, 70, 40, 35, 40, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

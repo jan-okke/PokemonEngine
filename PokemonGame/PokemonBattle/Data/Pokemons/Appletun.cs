@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Appletun";
 		public override List<Ability> AvailableAbilities => new() {new Ripen(), new Gluttony() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Thickfat() };
-		public override Stats BaseStats => new Stats(110, 85, 80, 30, 100, 80);
+		public override Stats BaseStats => new Stats(110, 85, 80, 100, 80, 30);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Erratic;
 		public override List<PokemonType> Types => new() {PokemonType.Grass, PokemonType.Dragon };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

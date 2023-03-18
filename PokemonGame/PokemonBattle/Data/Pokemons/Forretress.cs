@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Forretress";
 		public override List<Ability> AvailableAbilities => new() {new Sturdy() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Overcoat() };
-		public override Stats BaseStats => new Stats(75, 90, 140, 40, 60, 60);
+		public override Stats BaseStats => new Stats(75, 90, 140, 60, 60, 40);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

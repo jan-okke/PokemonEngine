@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Zekrom";
 		public override List<Ability> AvailableAbilities => new() {new Teravolt() };
-		public override Stats BaseStats => new Stats(100, 150, 120, 90, 120, 100);
+		public override Stats BaseStats => new Stats(100, 150, 120, 120, 100, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dragon, PokemonType.Electric };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

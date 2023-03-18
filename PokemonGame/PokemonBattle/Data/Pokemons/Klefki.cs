@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Klefki";
 		public override List<Ability> AvailableAbilities => new() {new Prankster() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Magician() };
-		public override Stats BaseStats => new Stats(57, 80, 91, 75, 80, 87);
+		public override Stats BaseStats => new Stats(57, 80, 91, 80, 87, 75);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Steel, PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

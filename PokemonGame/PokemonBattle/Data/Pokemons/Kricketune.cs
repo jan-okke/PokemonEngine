@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Kricketune";
 		public override List<Ability> AvailableAbilities => new() {new Swarm() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Technician() };
-		public override Stats BaseStats => new Stats(77, 85, 51, 65, 55, 51);
+		public override Stats BaseStats => new Stats(77, 85, 51, 55, 51, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Bug };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

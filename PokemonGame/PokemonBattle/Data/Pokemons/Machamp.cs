@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Machamp";
 		public override List<Ability> AvailableAbilities => new() {new Guts(), new Noguard() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Steadfast() };
-		public override Stats BaseStats => new Stats(90, 130, 80, 55, 65, 85);
+		public override Stats BaseStats => new Stats(90, 130, 80, 65, 85, 55);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

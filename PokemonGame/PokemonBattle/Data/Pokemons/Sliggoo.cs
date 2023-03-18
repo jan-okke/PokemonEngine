@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Sliggoo";
 		public override List<Ability> AvailableAbilities => new() {new Sapsipper(), new Hydration() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Gooey() };
-		public override Stats BaseStats => new Stats(68, 75, 53, 60, 83, 113);
+		public override Stats BaseStats => new Stats(68, 75, 53, 83, 113, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dragon };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

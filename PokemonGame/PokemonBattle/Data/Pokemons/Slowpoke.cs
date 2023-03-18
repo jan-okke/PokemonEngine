@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Slowpoke";
 		public override List<Ability> AvailableAbilities => new() {new Oblivious(), new Owntempo() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Regenerator() };
-		public override Stats BaseStats => new Stats(90, 65, 65, 15, 40, 40);
+		public override Stats BaseStats => new Stats(90, 65, 65, 40, 40, 15);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Water, PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

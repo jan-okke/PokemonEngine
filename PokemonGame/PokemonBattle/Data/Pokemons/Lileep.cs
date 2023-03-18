@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Lileep";
 		public override List<Ability> AvailableAbilities => new() {new Suctioncups() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Stormdrain() };
-		public override Stats BaseStats => new Stats(66, 41, 77, 23, 61, 87);
+		public override Stats BaseStats => new Stats(66, 41, 77, 61, 87, 23);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Erratic;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

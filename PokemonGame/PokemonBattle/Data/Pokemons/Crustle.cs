@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Crustle";
 		public override List<Ability> AvailableAbilities => new() {new Sturdy(), new Shellarmor() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Weakarmor() };
-		public override Stats BaseStats => new Stats(70, 105, 125, 45, 65, 75);
+		public override Stats BaseStats => new Stats(70, 105, 125, 65, 75, 45);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Rock };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

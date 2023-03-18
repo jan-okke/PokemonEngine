@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Sawk";
 		public override List<Ability> AvailableAbilities => new() {new Sturdy(), new Innerfocus() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Moldbreaker() };
-		public override Stats BaseStats => new Stats(75, 125, 75, 85, 30, 75);
+		public override Stats BaseStats => new Stats(75, 125, 75, 30, 75, 85);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

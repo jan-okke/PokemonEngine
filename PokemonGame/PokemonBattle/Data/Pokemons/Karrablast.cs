@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Karrablast";
 		public override List<Ability> AvailableAbilities => new() {new Swarm(), new Shedskin() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Noguard() };
-		public override Stats BaseStats => new Stats(50, 75, 45, 60, 40, 45);
+		public override Stats BaseStats => new Stats(50, 75, 45, 40, 45, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

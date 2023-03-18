@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Lycanroc";
 		public override List<Ability> AvailableAbilities => new() {new Keeneye(), new Sandrush() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Steadfast() };
-		public override Stats BaseStats => new Stats(75, 115, 65, 112, 55, 65);
+		public override Stats BaseStats => new Stats(75, 115, 65, 55, 65, 112);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Rock };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

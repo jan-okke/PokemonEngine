@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Rhydon";
 		public override List<Ability> AvailableAbilities => new() {new Lightningrod(), new Rockhead() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Reckless() };
-		public override Stats BaseStats => new Stats(105, 130, 120, 40, 45, 45);
+		public override Stats BaseStats => new Stats(105, 130, 120, 45, 45, 40);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Ground, PokemonType.Rock };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

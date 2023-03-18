@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Heliolisk";
 		public override List<Ability> AvailableAbilities => new() {new Dryskin(), new Sandveil() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Solarpower() };
-		public override Stats BaseStats => new Stats(62, 55, 52, 109, 109, 94);
+		public override Stats BaseStats => new Stats(62, 55, 52, 109, 94, 109);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Electric, PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

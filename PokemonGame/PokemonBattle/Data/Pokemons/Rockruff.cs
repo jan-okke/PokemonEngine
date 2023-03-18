@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Rockruff";
 		public override List<Ability> AvailableAbilities => new() {new Keeneye(), new Vitalspirit() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Steadfast() };
-		public override Stats BaseStats => new Stats(45, 65, 40, 60, 30, 40);
+		public override Stats BaseStats => new Stats(45, 65, 40, 30, 40, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Rock };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

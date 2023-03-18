@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Ninjask";
 		public override List<Ability> AvailableAbilities => new() {new Speedboost() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Infiltrator() };
-		public override Stats BaseStats => new Stats(61, 90, 45, 160, 50, 50);
+		public override Stats BaseStats => new Stats(61, 90, 45, 50, 50, 160);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Erratic;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

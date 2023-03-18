@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Dustox";
 		public override List<Ability> AvailableAbilities => new() {new Shielddust() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Compoundeyes() };
-		public override Stats BaseStats => new Stats(60, 50, 70, 65, 50, 90);
+		public override Stats BaseStats => new Stats(60, 50, 70, 50, 90, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Poison };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

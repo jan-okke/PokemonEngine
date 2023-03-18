@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Zangoose";
 		public override List<Ability> AvailableAbilities => new() {new Immunity() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Toxicboost() };
-		public override Stats BaseStats => new Stats(73, 115, 60, 90, 60, 60);
+		public override Stats BaseStats => new Stats(73, 115, 60, 60, 60, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Erratic;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

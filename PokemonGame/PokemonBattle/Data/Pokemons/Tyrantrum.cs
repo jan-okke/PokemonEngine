@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Tyrantrum";
 		public override List<Ability> AvailableAbilities => new() {new Strongjaw() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Rockhead() };
-		public override Stats BaseStats => new Stats(82, 121, 119, 71, 69, 59);
+		public override Stats BaseStats => new Stats(82, 121, 119, 69, 59, 71);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Dragon };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

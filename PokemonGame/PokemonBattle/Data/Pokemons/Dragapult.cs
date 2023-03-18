@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Dragapult";
 		public override List<Ability> AvailableAbilities => new() {new Clearbody(), new Infiltrator() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Cursedbody() };
-		public override Stats BaseStats => new Stats(88, 120, 75, 142, 100, 75);
+		public override Stats BaseStats => new Stats(88, 120, 75, 100, 75, 142);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dragon, PokemonType.Ghost };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

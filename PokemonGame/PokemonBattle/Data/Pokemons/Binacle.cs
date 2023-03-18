@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Binacle";
 		public override List<Ability> AvailableAbilities => new() {new Toughclaws(), new Sniper() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Pickpocket() };
-		public override Stats BaseStats => new Stats(42, 52, 67, 50, 39, 56);
+		public override Stats BaseStats => new Stats(42, 52, 67, 39, 56, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Tangela";
 		public override List<Ability> AvailableAbilities => new() {new Chlorophyll(), new Leafguard() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Regenerator() };
-		public override Stats BaseStats => new Stats(65, 55, 115, 60, 100, 40);
+		public override Stats BaseStats => new Stats(65, 55, 115, 100, 40, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Zygarde";
 		public override List<Ability> AvailableAbilities => new() {new Aurabreak(), new Powerconstruct() };
-		public override Stats BaseStats => new Stats(108, 100, 121, 95, 81, 95);
+		public override Stats BaseStats => new Stats(108, 100, 121, 81, 95, 95);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dragon, PokemonType.Ground };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

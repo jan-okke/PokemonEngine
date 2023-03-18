@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Petilil";
 		public override List<Ability> AvailableAbilities => new() {new Chlorophyll(), new Owntempo() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Leafguard() };
-		public override Stats BaseStats => new Stats(45, 35, 50, 30, 70, 50);
+		public override Stats BaseStats => new Stats(45, 35, 50, 70, 50, 30);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

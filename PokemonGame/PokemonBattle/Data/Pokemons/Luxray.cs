@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Luxray";
 		public override List<Ability> AvailableAbilities => new() {new Rivalry(), new Intimidate() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Guts() };
-		public override Stats BaseStats => new Stats(80, 120, 79, 70, 95, 79);
+		public override Stats BaseStats => new Stats(80, 120, 79, 95, 79, 70);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Electric };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

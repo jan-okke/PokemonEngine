@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Drapion";
 		public override List<Ability> AvailableAbilities => new() {new Battlearmor(), new Sniper() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Keeneye() };
-		public override Stats BaseStats => new Stats(70, 90, 110, 95, 60, 75);
+		public override Stats BaseStats => new Stats(70, 90, 110, 60, 75, 95);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Poison, PokemonType.Dark };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

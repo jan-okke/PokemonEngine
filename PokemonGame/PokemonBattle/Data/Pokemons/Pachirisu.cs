@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Pachirisu";
 		public override List<Ability> AvailableAbilities => new() {new Runaway(), new Pickup() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Voltabsorb() };
-		public override Stats BaseStats => new Stats(60, 45, 70, 95, 45, 90);
+		public override Stats BaseStats => new Stats(60, 45, 70, 45, 90, 95);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Electric };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

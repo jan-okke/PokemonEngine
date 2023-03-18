@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Cursola";
 		public override List<Ability> AvailableAbilities => new() {new Weakarmor() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Perishbody() };
-		public override Stats BaseStats => new Stats(60, 95, 50, 30, 145, 130);
+		public override Stats BaseStats => new Stats(60, 95, 50, 145, 130, 30);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Ghost };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

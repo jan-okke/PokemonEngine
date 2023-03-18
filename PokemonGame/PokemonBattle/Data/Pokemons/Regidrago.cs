@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Regidrago";
 		public override List<Ability> AvailableAbilities => new() {new Dragonsmaw() };
-		public override Stats BaseStats => new Stats(200, 100, 50, 80, 100, 50);
+		public override Stats BaseStats => new Stats(200, 100, 50, 100, 50, 80);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dragon };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

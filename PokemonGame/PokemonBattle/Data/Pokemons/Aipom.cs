@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Aipom";
 		public override List<Ability> AvailableAbilities => new() {new Runaway(), new Pickup() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Skilllink() };
-		public override Stats BaseStats => new Stats(55, 70, 55, 85, 40, 55);
+		public override Stats BaseStats => new Stats(55, 70, 55, 40, 55, 85);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

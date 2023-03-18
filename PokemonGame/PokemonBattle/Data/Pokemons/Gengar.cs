@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Gengar";
 		public override List<Ability> AvailableAbilities => new() {new Cursedbody() };
-		public override Stats BaseStats => new Stats(60, 65, 60, 110, 130, 75);
+		public override Stats BaseStats => new Stats(60, 65, 60, 130, 75, 110);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Ghost, PokemonType.Poison };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

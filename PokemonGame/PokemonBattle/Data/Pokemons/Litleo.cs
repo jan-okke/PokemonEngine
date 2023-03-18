@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Litleo";
 		public override List<Ability> AvailableAbilities => new() {new Rivalry(), new Unnerve() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Moxie() };
-		public override Stats BaseStats => new Stats(62, 50, 58, 72, 73, 54);
+		public override Stats BaseStats => new Stats(62, 50, 58, 73, 54, 72);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Fire, PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

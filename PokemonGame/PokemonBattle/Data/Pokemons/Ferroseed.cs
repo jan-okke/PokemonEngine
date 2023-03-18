@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Ferroseed";
 		public override List<Ability> AvailableAbilities => new() {new Ironbarbs() };
-		public override Stats BaseStats => new Stats(44, 50, 91, 10, 24, 86);
+		public override Stats BaseStats => new Stats(44, 50, 91, 24, 86, 10);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Grass, PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

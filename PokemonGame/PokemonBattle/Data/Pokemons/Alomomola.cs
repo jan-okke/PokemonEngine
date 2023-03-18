@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Alomomola";
 		public override List<Ability> AvailableAbilities => new() {new Healer(), new Hydration() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Regenerator() };
-		public override Stats BaseStats => new Stats(165, 75, 80, 65, 40, 45);
+		public override Stats BaseStats => new Stats(165, 75, 80, 40, 45, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

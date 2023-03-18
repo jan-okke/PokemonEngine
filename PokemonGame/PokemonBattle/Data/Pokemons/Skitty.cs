@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Skitty";
 		public override List<Ability> AvailableAbilities => new() {new Cutecharm(), new Normalize() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Wonderskin() };
-		public override Stats BaseStats => new Stats(50, 45, 45, 50, 35, 35);
+		public override Stats BaseStats => new Stats(50, 45, 45, 35, 35, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

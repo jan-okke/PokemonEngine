@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Porygon";
 		public override List<Ability> AvailableAbilities => new() {new Trace(), new Download() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Analytic() };
-		public override Stats BaseStats => new Stats(65, 60, 70, 40, 85, 75);
+		public override Stats BaseStats => new Stats(65, 60, 70, 85, 75, 40);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

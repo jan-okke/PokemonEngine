@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Stonjourner";
 		public override List<Ability> AvailableAbilities => new() {new Powerspot() };
-		public override Stats BaseStats => new Stats(100, 125, 135, 70, 20, 20);
+		public override Stats BaseStats => new Stats(100, 125, 135, 20, 20, 70);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Rock };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

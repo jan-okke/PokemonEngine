@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Dragonite";
 		public override List<Ability> AvailableAbilities => new() {new Innerfocus() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Multiscale() };
-		public override Stats BaseStats => new Stats(91, 134, 95, 80, 100, 100);
+		public override Stats BaseStats => new Stats(91, 134, 95, 100, 100, 80);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dragon, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

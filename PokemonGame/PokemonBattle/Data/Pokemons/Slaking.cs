@@ -10,7 +10,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	{
 		public override string Name => "Slaking";
 		public override List<Ability> AvailableAbilities => new() {new Truant() };
-		public override Stats BaseStats => new Stats(150, 160, 100, 100, 95, 65);
+		public override Stats BaseStats => new Stats(150, 160, 100, 95, 65, 100);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

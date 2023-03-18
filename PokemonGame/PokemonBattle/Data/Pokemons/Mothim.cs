@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Mothim";
 		public override List<Ability> AvailableAbilities => new() {new Swarm() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Tintedlens() };
-		public override Stats BaseStats => new Stats(70, 94, 50, 66, 94, 50);
+		public override Stats BaseStats => new Stats(70, 94, 50, 94, 50, 66);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

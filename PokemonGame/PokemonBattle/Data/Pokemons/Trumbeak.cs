@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Trumbeak";
 		public override List<Ability> AvailableAbilities => new() {new Keeneye(), new Skilllink() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Pickup() };
-		public override Stats BaseStats => new Stats(55, 85, 50, 75, 40, 50);
+		public override Stats BaseStats => new Stats(55, 85, 50, 40, 50, 75);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

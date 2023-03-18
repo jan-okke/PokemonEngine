@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Dunsparce";
 		public override List<Ability> AvailableAbilities => new() {new Serenegrace(), new Runaway() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Rattled() };
-		public override Stats BaseStats => new Stats(100, 70, 70, 45, 65, 65);
+		public override Stats BaseStats => new Stats(100, 70, 70, 65, 65, 45);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

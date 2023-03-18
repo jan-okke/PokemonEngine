@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Lucario";
 		public override List<Ability> AvailableAbilities => new() {new Steadfast(), new Innerfocus() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Justified() };
-		public override Stats BaseStats => new Stats(70, 110, 70, 90, 115, 70);
+		public override Stats BaseStats => new Stats(70, 110, 70, 115, 70, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Fighting, PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()

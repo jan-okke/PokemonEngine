@@ -11,7 +11,7 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 		public override string Name => "Seel";
 		public override List<Ability> AvailableAbilities => new() {new Thickfat(), new Hydration() };
 		public override List<Ability> AvailableHiddenAbilities => new() {new Icebody() };
-		public override Stats BaseStats => new Stats(65, 45, 55, 45, 45, 70);
+		public override Stats BaseStats => new Stats(65, 45, 55, 45, 70, 45);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
