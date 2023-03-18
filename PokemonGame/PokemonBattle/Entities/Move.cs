@@ -15,7 +15,7 @@ namespace PokemonGame.PokemonBattle.Entities
 
         public int CurrentPowerPoints { get; internal set; }
 
-        public bool IsPhysical => Category == MoveCategory.Phsyical;
+        public bool IsPhysical => Category == MoveCategory.Physical;
         public bool IsSpecial => Category == MoveCategory.Special;
         public bool IsStatus => Category == MoveCategory.Status;
 

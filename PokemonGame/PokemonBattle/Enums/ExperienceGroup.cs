@@ -3,6 +3,7 @@ namespace PokemonGame.PokemonBattle.Enums
     public enum ExperienceGroup
     {
         Normal,
-        Slow
+        Slow,
+        Medium,
     }
 }

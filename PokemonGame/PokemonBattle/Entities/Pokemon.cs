@@ -35,7 +35,7 @@ namespace PokemonGame.PokemonBattle.Entities
         public Gender Gender { get; internal set; }
         public DynamaxState DynamaxState { get; internal set; } = new(0);
 
-        public virtual int Weight { get;}
+        public virtual int Weight { get; internal set; }
         public virtual int ExpYield { get; }
         public virtual Dictionary<Stat, int> EVYield { get; }
         public virtual int CatchRate { get; }

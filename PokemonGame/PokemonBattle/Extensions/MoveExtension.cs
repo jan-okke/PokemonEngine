@@ -15,7 +15,7 @@ namespace PokemonGame.PokemonBattle.Extensions
             if (move.NameIsAnyOf("Psyshock")) return Stat.Defense;
             return move.Category switch
             {
-                MoveCategory.Phsyical => Stat.Defense,
+                MoveCategory.Physical => Stat.Defense,
                 MoveCategory.Special => Stat.SpecialDefense,
                 MoveCategory.Status => throw new ArgumentException(null, nameof(move)),
                 _ => throw new NotImplementedException(),

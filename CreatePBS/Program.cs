@@ -42,6 +42,12 @@ namespace PBSMaker
         public string[] Flags;
         public string Description;
     }
+    struct BasicAbility
+    {
+        public string InternalName;
+        public string Name;
+        public string Description;
+    }
     public static class Program
     {
         private static void AddText(this FileStream stream, string text)
@@ -64,6 +70,15 @@ namespace PBSMaker
                 "EffectChance" => move.EffectChance = int.Parse(value),
                 "Priority" => move.Priority = int.Parse(value),
                 "Description" => move.Description = value,
+
+                _ => throw new ArgumentException(key)
+            };
+        private static object SetParams(string key, string value, ref BasicAbility ability)
+            => key switch
+            {
+                "Name" => ability.Name = value,
+                "Description" => ability.Description = value,
+                "Flags" => 0,
 
                 _ => throw new ArgumentException(key)
             };
@@ -293,7 +308,7 @@ namespace PBSMaker
                 stream.Close();
             }
             #endregion
-
+            #region Moves
             var movetxt = pbsdir + "\\moves.txt";
 
             List<BasicMove> moves = new List<BasicMove>();
@@ -360,6 +375,64 @@ namespace PBSMaker
                     "\t\t}\n");
 
                 stream.AddText("\t}\n}");
+                stream.Close();
+            }
+            #endregion
+
+            var abilitiestxt = pbsdir + "\\abilities.txt";
+
+            List<BasicAbility> abilities = new List<BasicAbility>();
+
+            BasicAbility abil = new BasicAbility();
+            initialized = false;
+
+            foreach (string line in File.ReadAllLines(abilitiestxt))
+            {
+                if (line.StartsWith("#")) continue;
+                if (line.StartsWith("["))
+                {
+                    string abilityName = line[1..^1];
+                    if (initialized)
+                    {
+                        abilities.Add(abil);
+                    }
+                    abil = new();
+                    abil.InternalName = abilityName;
+                    Console.WriteLine(abilityName);
+                    initialized = true;
+                    continue;
+                }
+                string key, value;
+                key = line.Split(" = ")[0];
+                value = line.Split(" = ")[1];
+                SetParams(key, value, ref abil);
+            }
+
+            // Data is in abilities now
+
+            targetdir = gamedir + "\\PokemonBattle\\Data\\Abilities";
+
+            foreach (BasicAbility a in abilities)
+            {
+                var path = targetdir + $"\\{a.Name}.cs";
+                if (File.Exists(path))
+                {
+                    File.Delete(path);
+                }
+                using FileStream stream = File.Create(path);
+                stream.AddText("" +
+                    "using PokemonGame.PokemonBattle.Entities;\n" +
+                    "using PokemonGame.PokemonBattle.Enums;\n" +
+                    "using System.Collections.Generic;\n" +
+                    "\n" +
+                    "namespace PokemonGame.PokemonBattle.Data.Abilities\n" +
+                    "{\n" +
+                    $"\tpublic class {a.InternalName[0] + a.InternalName[1..].ToLower()} : Ability\n" +
+                    "\t{\n" +
+                    $"\t\tpublic override string Name => \"{a.Name}\";\n" +
+                    $"\t\tpublic override string Description => \"{a.Description.Replace("\"", "'")}\";\n" +
+                    "\t}\n}");
+
                 stream.Close();
             }
         }
