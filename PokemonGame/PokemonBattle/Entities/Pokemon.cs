@@ -12,7 +12,9 @@ namespace PokemonGame.PokemonBattle.Entities
         public virtual string Name { get; }
         public int Level { get; internal set; }
         public int Experience { get; internal set; }
-        public virtual Ability Ability { get; }
+        public Ability Ability { get; internal set; }
+        public virtual List<Ability> AvailableAbilities { get; }
+        public virtual List<Ability> AvailableHiddenAbilities { get; }
         public Item Item { get; internal set; }
         public List<Move> Moves { get; } = new();
         public virtual Stats BaseStats { get; }
@@ -30,7 +32,11 @@ namespace PokemonGame.PokemonBattle.Entities
         public Gender Gender { get; internal set; }
         public DynamaxState DynamaxState { get; internal set; } = new(0);
 
-        public int Weight { get; internal set; }
+        public virtual int Weight { get;}
+        public virtual int ExpYield { get; }
+        public virtual Dictionary<Stat, int> EVYield { get; }
+        public virtual int CatchRate { get; }
+        public virtual 
 
         public bool IsAlive => CurrentHP > 0;
         public bool IsDynamaxed => DynamaxState.Active;
