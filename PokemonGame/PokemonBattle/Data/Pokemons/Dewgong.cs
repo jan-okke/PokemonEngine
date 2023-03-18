@@ -9,33 +9,33 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Dewgong : Pokemon
 	{
 		public override string Name => "Dewgong";
-		public override List<Ability> AvailableAbilities => new() {new Thickfat(), new Hydration() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Icebody() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Thickfat(), new Abilities.Hydration() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Icebody() };
 		public override Stats BaseStats => new Stats(90, 70, 80, 70, 95, 70);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Water, PokemonType.Ice };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Sheercold() },
-			[1] = new List<Move>() { new Sheercold(), new Headbutt(), new Growl(), new Bubblebeam(), new Icywind() },
-			[3] = new List<Move>() { new Growl() },
-			[7] = new List<Move>() { new Bubblebeam() },
-			[11] = new List<Move>() { new Icywind() },
-			[13] = new List<Move>() { new Encore() },
-			[17] = new List<Move>() { new Iceshard() },
-			[21] = new List<Move>() { new Rest() },
-			[23] = new List<Move>() { new Aquaring() },
-			[27] = new List<Move>() { new Aurorabeam() },
-			[31] = new List<Move>() { new Aquajet() },
-			[33] = new List<Move>() { new Brine() },
-			[39] = new List<Move>() { new Takedown() },
-			[45] = new List<Move>() { new Dive() },
-			[49] = new List<Move>() { new Aquatail() },
-			[55] = new List<Move>() { new Icebeam() },
-			[61] = new List<Move>() { new Safeguard() },
-			[65] = new List<Move>() { new Hail() },
+			[0] = new List<Move>() { new Moves.Sheercold() },
+			[1] = new List<Move>() { new Moves.Sheercold(), new Moves.Headbutt(), new Moves.Growl(), new Moves.Bubblebeam(), new Moves.Icywind() },
+			[3] = new List<Move>() { new Moves.Growl() },
+			[7] = new List<Move>() { new Moves.Bubblebeam() },
+			[11] = new List<Move>() { new Moves.Icywind() },
+			[13] = new List<Move>() { new Moves.Encore() },
+			[17] = new List<Move>() { new Moves.Iceshard() },
+			[21] = new List<Move>() { new Moves.Rest() },
+			[23] = new List<Move>() { new Moves.Aquaring() },
+			[27] = new List<Move>() { new Moves.Aurorabeam() },
+			[31] = new List<Move>() { new Moves.Aquajet() },
+			[33] = new List<Move>() { new Moves.Brine() },
+			[39] = new List<Move>() { new Moves.Takedown() },
+			[45] = new List<Move>() { new Moves.Dive() },
+			[49] = new List<Move>() { new Moves.Aquatail() },
+			[55] = new List<Move>() { new Moves.Icebeam() },
+			[61] = new List<Move>() { new Moves.Safeguard() },
+			[65] = new List<Move>() { new Moves.Hail() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Aquatail(), new Attract(), new Avalanche(), new Blizzard(), new Brine(), new Confide(), new Dive(), new Doubleteam(), new Drillrun(), new Echoedvoice(), new Endure(), new Facade(), new Fling(), new Frostbreath(), new Frustration(), new Gigaimpact(), new Hail(), new Hiddenpower(), new Hyperbeam(), new Icebeam(), new Icywind(), new Irontail(), new Liquidation(), new Protect(), new Raindance(), new Rest(), new Return(), new Round(), new Safeguard(), new Signalbeam(), new Sleeptalk(), new Smartstrike(), new Snore(), new Substitute(), new Surf(), new Swagger(), new Thief(), new Waterfall(), new Waterpulse() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Aquatail(), new Moves.Attract(), new Moves.Avalanche(), new Moves.Blizzard(), new Moves.Brine(), new Moves.Confide(), new Moves.Dive(), new Moves.Doubleteam(), new Moves.Drillrun(), new Moves.Echoedvoice(), new Moves.Endure(), new Moves.Facade(), new Moves.Fling(), new Moves.Frostbreath(), new Moves.Frustration(), new Moves.Gigaimpact(), new Moves.Hail(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Icebeam(), new Moves.Icywind(), new Moves.Irontail(), new Moves.Liquidation(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Return(), new Moves.Round(), new Moves.Safeguard(), new Moves.Signalbeam(), new Moves.Sleeptalk(), new Moves.Smartstrike(), new Moves.Snore(), new Moves.Substitute(), new Moves.Surf(), new Moves.Swagger(), new Moves.Thief(), new Moves.Waterfall(), new Moves.Waterpulse() };
 		public override int Weight => 1200;
 		public override int ExpYield => 166;
 		public override int CatchRate => 75;

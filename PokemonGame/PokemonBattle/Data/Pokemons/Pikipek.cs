@@ -9,29 +9,29 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Pikipek : Pokemon
 	{
 		public override string Name => "Pikipek";
-		public override List<Ability> AvailableAbilities => new() {new Keeneye(), new Skilllink() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Pickup() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Keeneye(), new Abilities.Skilllink() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Pickup() };
 		public override Stats BaseStats => new Stats(35, 75, 30, 30, 30, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Peck() },
-			[3] = new List<Move>() { new Growl() },
-			[7] = new List<Move>() { new Echoedvoice() },
-			[9] = new List<Move>() { new Rocksmash() },
-			[13] = new List<Move>() { new Supersonic() },
-			[15] = new List<Move>() { new Pluck() },
-			[19] = new List<Move>() { new Roost() },
-			[21] = new List<Move>() { new Furyattack() },
-			[25] = new List<Move>() { new Screech() },
-			[27] = new List<Move>() { new Drillpeck() },
-			[31] = new List<Move>() { new Bulletseed() },
-			[33] = new List<Move>() { new Featherdance() },
-			[37] = new List<Move>() { new Hypervoice() },
+			[1] = new List<Move>() { new Moves.Peck() },
+			[3] = new List<Move>() { new Moves.Growl() },
+			[7] = new List<Move>() { new Moves.Echoedvoice() },
+			[9] = new List<Move>() { new Moves.Rocksmash() },
+			[13] = new List<Move>() { new Moves.Supersonic() },
+			[15] = new List<Move>() { new Moves.Pluck() },
+			[19] = new List<Move>() { new Moves.Roost() },
+			[21] = new List<Move>() { new Moves.Furyattack() },
+			[25] = new List<Move>() { new Moves.Screech() },
+			[27] = new List<Move>() { new Moves.Drillpeck() },
+			[31] = new List<Move>() { new Moves.Bulletseed() },
+			[33] = new List<Move>() { new Moves.Featherdance() },
+			[37] = new List<Move>() { new Moves.Hypervoice() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Aerialace(), new Attract(), new Brickbreak(), new Confide(), new Defog(), new Doubleteam(), new Echoedvoice(), new Flamecharge(), new Fly(), new Frustration(), new Gunkshot(), new Heatwave(), new Hiddenpower(), new Hypervoice(), new Knockoff(), new Protect(), new Rest(), new Return(), new Roost(), new Round(), new Skyattack(), new Sleeptalk(), new Smackdown(), new Snore(), new Steelwing(), new Substitute(), new Sunnyday(), new Swagger(), new Swordsdance(), new Tailwind(), new Thief(), new Toxic(), new Uproar(), new Uturn(), new Workup() };
-		public override List<Move> EggMoves => new List<Move>() { new Boomburst(), new Bravebird(), new Mirrormove(), new Tailwind(), new Uproar() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Aerialace(), new Moves.Attract(), new Moves.Brickbreak(), new Moves.Confide(), new Moves.Defog(), new Moves.Doubleteam(), new Moves.Echoedvoice(), new Moves.Flamecharge(), new Moves.Fly(), new Moves.Frustration(), new Moves.Gunkshot(), new Moves.Heatwave(), new Moves.Hiddenpower(), new Moves.Hypervoice(), new Moves.Knockoff(), new Moves.Protect(), new Moves.Rest(), new Moves.Return(), new Moves.Roost(), new Moves.Round(), new Moves.Skyattack(), new Moves.Sleeptalk(), new Moves.Smackdown(), new Moves.Snore(), new Moves.Steelwing(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Swordsdance(), new Moves.Tailwind(), new Moves.Thief(), new Moves.Toxic(), new Moves.Uproar(), new Moves.Uturn(), new Moves.Workup() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Boomburst(), new Moves.Bravebird(), new Moves.Mirrormove(), new Moves.Tailwind(), new Moves.Uproar() };
 		public override int Weight => 12;
 		public override int ExpYield => 53;
 		public override int CatchRate => 255;

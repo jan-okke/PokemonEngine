@@ -9,26 +9,26 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Poliwag : Pokemon
 	{
 		public override string Name => "Poliwag";
-		public override List<Ability> AvailableAbilities => new() {new Waterabsorb(), new Damp() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Swiftswim() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Waterabsorb(), new Abilities.Damp() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Swiftswim() };
 		public override Stats BaseStats => new Stats(40, 50, 40, 40, 40, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Watergun(), new Hypnosis() },
-			[6] = new List<Move>() { new Pound() },
-			[12] = new List<Move>() { new Mudshot() },
-			[18] = new List<Move>() { new Bubblebeam() },
-			[24] = new List<Move>() { new Raindance() },
-			[30] = new List<Move>() { new Bodyslam() },
-			[36] = new List<Move>() { new Earthpower() },
-			[42] = new List<Move>() { new Hydropump() },
-			[48] = new List<Move>() { new Bellydrum() },
-			[54] = new List<Move>() { new Doubleedge() },
+			[1] = new List<Move>() { new Moves.Watergun(), new Moves.Hypnosis() },
+			[6] = new List<Move>() { new Moves.Pound() },
+			[12] = new List<Move>() { new Moves.Mudshot() },
+			[18] = new List<Move>() { new Moves.Bubblebeam() },
+			[24] = new List<Move>() { new Moves.Raindance() },
+			[30] = new List<Move>() { new Moves.Bodyslam() },
+			[36] = new List<Move>() { new Moves.Earthpower() },
+			[42] = new List<Move>() { new Moves.Hydropump() },
+			[48] = new List<Move>() { new Moves.Bellydrum() },
+			[54] = new List<Move>() { new Moves.Doubleedge() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Blizzard(), new Bodyslam(), new Bulldoze(), new Dig(), new Dive(), new Doubleteam(), new Earthpower(), new Encore(), new Endure(), new Facade(), new Hail(), new Helpinghand(), new Hiddenpower(), new Hydropump(), new Icebeam(), new Icywind(), new Muddywater(), new Mudshot(), new Protect(), new Psychic(), new Raindance(), new Rest(), new Round(), new Scald(), new Sleeptalk(), new Snore(), new Substitute(), new Surf(), new Swagger(), new Thief(), new Waterfall(), new Waterpulse(), new Whirlpool() };
-		public override List<Move> EggMoves => new List<Move>() { new Bubblebeam(), new Encore(), new Endeavor(), new Haze(), new Mindreader(), new Mist(), new Mudshot(), new Splash() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Blizzard(), new Moves.Bodyslam(), new Moves.Bulldoze(), new Moves.Dig(), new Moves.Dive(), new Moves.Doubleteam(), new Moves.Earthpower(), new Moves.Encore(), new Moves.Endure(), new Moves.Facade(), new Moves.Hail(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Hydropump(), new Moves.Icebeam(), new Moves.Icywind(), new Moves.Muddywater(), new Moves.Mudshot(), new Moves.Protect(), new Moves.Psychic(), new Moves.Raindance(), new Moves.Rest(), new Moves.Round(), new Moves.Scald(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Substitute(), new Moves.Surf(), new Moves.Swagger(), new Moves.Thief(), new Moves.Waterfall(), new Moves.Waterpulse(), new Moves.Whirlpool() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Bubblebeam(), new Moves.Encore(), new Moves.Endeavor(), new Moves.Haze(), new Moves.Mindreader(), new Moves.Mist(), new Moves.Mudshot(), new Moves.Splash() };
 		public override int Weight => 124;
 		public override int ExpYield => 60;
 		public override int CatchRate => 255;

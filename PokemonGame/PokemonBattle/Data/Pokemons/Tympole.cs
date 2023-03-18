@@ -9,29 +9,29 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Tympole : Pokemon
 	{
 		public override string Name => "Tympole";
-		public override List<Ability> AvailableAbilities => new() {new Swiftswim(), new Hydration() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Waterabsorb() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Swiftswim(), new Abilities.Hydration() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Waterabsorb() };
 		public override Stats BaseStats => new Stats(50, 50, 40, 50, 40, 64);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Echoedvoice(), new Growl() },
-			[4] = new List<Move>() { new Acid() },
-			[8] = new List<Move>() { new Supersonic() },
-			[12] = new List<Move>() { new Mudshot() },
-			[16] = new List<Move>() { new Round() },
-			[20] = new List<Move>() { new Bubblebeam() },
-			[24] = new List<Move>() { new Flail() },
-			[28] = new List<Move>() { new Uproar() },
-			[32] = new List<Move>() { new Aquaring() },
-			[36] = new List<Move>() { new Hypervoice() },
-			[40] = new List<Move>() { new Muddywater() },
-			[44] = new List<Move>() { new Raindance() },
-			[48] = new List<Move>() { new Hydropump() },
+			[1] = new List<Move>() { new Moves.Echoedvoice(), new Moves.Growl() },
+			[4] = new List<Move>() { new Moves.Acid() },
+			[8] = new List<Move>() { new Moves.Supersonic() },
+			[12] = new List<Move>() { new Moves.Mudshot() },
+			[16] = new List<Move>() { new Moves.Round() },
+			[20] = new List<Move>() { new Moves.Bubblebeam() },
+			[24] = new List<Move>() { new Moves.Flail() },
+			[28] = new List<Move>() { new Moves.Uproar() },
+			[32] = new List<Move>() { new Moves.Aquaring() },
+			[36] = new List<Move>() { new Moves.Hypervoice() },
+			[40] = new List<Move>() { new Moves.Muddywater() },
+			[44] = new List<Move>() { new Moves.Raindance() },
+			[48] = new List<Move>() { new Moves.Hydropump() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Bounce(), new Earthpower(), new Endure(), new Facade(), new Hail(), new Hiddenpower(), new Hydropump(), new Hypervoice(), new Icywind(), new Muddywater(), new Mudshot(), new Protect(), new Raindance(), new Rest(), new Round(), new Scald(), new Screech(), new Sleeptalk(), new Sludgebomb(), new Sludgewave(), new Snore(), new Substitute(), new Surf(), new Uproar(), new Venomdrench(), new Weatherball() };
-		public override List<Move> EggMoves => new List<Move>() { new Mist(), new Mudslap(), new Toxic(), new Waterpulse() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Bounce(), new Moves.Earthpower(), new Moves.Endure(), new Moves.Facade(), new Moves.Hail(), new Moves.Hiddenpower(), new Moves.Hydropump(), new Moves.Hypervoice(), new Moves.Icywind(), new Moves.Muddywater(), new Moves.Mudshot(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Round(), new Moves.Scald(), new Moves.Screech(), new Moves.Sleeptalk(), new Moves.Sludgebomb(), new Moves.Sludgewave(), new Moves.Snore(), new Moves.Substitute(), new Moves.Surf(), new Moves.Uproar(), new Moves.Venomdrench(), new Moves.Weatherball() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Mist(), new Moves.Mudslap(), new Moves.Toxic(), new Moves.Waterpulse() };
 		public override int Weight => 45;
 		public override int ExpYield => 59;
 		public override int CatchRate => 255;

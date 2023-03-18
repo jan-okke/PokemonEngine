@@ -9,27 +9,27 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Spectrier : Pokemon
 	{
 		public override string Name => "Spectrier";
-		public override List<Ability> AvailableAbilities => new() {new Grimneigh() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Grimneigh() };
 		public override Stats BaseStats => new Stats(100, 65, 60, 145, 80, 130);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Ghost };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Tackle(), new Tailwhip() },
-			[6] = new List<Move>() { new Doublekick() },
-			[12] = new List<Move>() { new Hex() },
-			[18] = new List<Move>() { new Stomp() },
-			[24] = new List<Move>() { new Confuseray() },
-			[30] = new List<Move>() { new Haze() },
-			[36] = new List<Move>() { new Shadowball() },
-			[42] = new List<Move>() { new Takedown() },
-			[48] = new List<Move>() { new Agility() },
-			[54] = new List<Move>() { new Thrash() },
-			[60] = new List<Move>() { new Disable() },
-			[66] = new List<Move>() { new Doubleedge() },
-			[72] = new List<Move>() { new Nastyplot() },
+			[1] = new List<Move>() { new Moves.Tackle(), new Moves.Tailwhip() },
+			[6] = new List<Move>() { new Moves.Doublekick() },
+			[12] = new List<Move>() { new Moves.Hex() },
+			[18] = new List<Move>() { new Moves.Stomp() },
+			[24] = new List<Move>() { new Moves.Confuseray() },
+			[30] = new List<Move>() { new Moves.Haze() },
+			[36] = new List<Move>() { new Moves.Shadowball() },
+			[42] = new List<Move>() { new Moves.Takedown() },
+			[48] = new List<Move>() { new Moves.Agility() },
+			[54] = new List<Move>() { new Moves.Thrash() },
+			[60] = new List<Move>() { new Moves.Disable() },
+			[66] = new List<Move>() { new Moves.Doubleedge() },
+			[72] = new List<Move>() { new Moves.Nastyplot() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Agility(), new Assurance(), new Bodyslam(), new Bulldoze(), new Calmmind(), new Crunch(), new Darkpulse(), new Endure(), new Facade(), new Foulplay(), new Gigaimpact(), new Hex(), new Hiddenpower(), new Hyperbeam(), new Lashout(), new Mudshot(), new Nastyplot(), new Payback(), new Phantomforce(), new Protect(), new Psychocut(), new Rest(), new Round(), new Scaryface(), new Shadowball(), new Sleeptalk(), new Snarl(), new Snore(), new Stompingtantrum(), new Substitute(), new Swift(), new Taunt(), new Uproar(), new Willowisp() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Agility(), new Moves.Assurance(), new Moves.Bodyslam(), new Moves.Bulldoze(), new Moves.Calmmind(), new Moves.Crunch(), new Moves.Darkpulse(), new Moves.Endure(), new Moves.Facade(), new Moves.Foulplay(), new Moves.Gigaimpact(), new Moves.Hex(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Lashout(), new Moves.Mudshot(), new Moves.Nastyplot(), new Moves.Payback(), new Moves.Phantomforce(), new Moves.Protect(), new Moves.Psychocut(), new Moves.Rest(), new Moves.Round(), new Moves.Scaryface(), new Moves.Shadowball(), new Moves.Sleeptalk(), new Moves.Snarl(), new Moves.Snore(), new Moves.Stompingtantrum(), new Moves.Substitute(), new Moves.Swift(), new Moves.Taunt(), new Moves.Uproar(), new Moves.Willowisp() };
 		public override int Weight => 445;
 		public override int ExpYield => 290;
 		public override int CatchRate => 3;

@@ -9,24 +9,24 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Phione : Pokemon
 	{
 		public override string Name => "Phione";
-		public override List<Ability> AvailableAbilities => new() {new Hydration() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Hydration() };
 		public override Stats BaseStats => new Stats(80, 80, 80, 80, 80, 80);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Watergun() },
-			[9] = new List<Move>() { new Charm() },
-			[16] = new List<Move>() { new Supersonic() },
-			[24] = new List<Move>() { new Bubblebeam() },
-			[31] = new List<Move>() { new Acidarmor() },
-			[39] = new List<Move>() { new Whirlpool() },
-			[46] = new List<Move>() { new Waterpulse() },
-			[54] = new List<Move>() { new Aquaring() },
-			[61] = new List<Move>() { new Dive() },
-			[69] = new List<Move>() { new Raindance() },
+			[1] = new List<Move>() { new Moves.Watergun() },
+			[9] = new List<Move>() { new Moves.Charm() },
+			[16] = new List<Move>() { new Moves.Supersonic() },
+			[24] = new List<Move>() { new Moves.Bubblebeam() },
+			[31] = new List<Move>() { new Moves.Acidarmor() },
+			[39] = new List<Move>() { new Moves.Whirlpool() },
+			[46] = new List<Move>() { new Moves.Waterpulse() },
+			[54] = new List<Move>() { new Moves.Aquaring() },
+			[61] = new List<Move>() { new Moves.Dive() },
+			[69] = new List<Move>() { new Moves.Raindance() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Blizzard(), new Bounce(), new Brine(), new Confide(), new Covet(), new Dazzlinggleam(), new Dive(), new Doubleteam(), new Endure(), new Facade(), new Fling(), new Frustration(), new Grassknot(), new Hail(), new Healbell(), new Helpinghand(), new Hiddenpower(), new Icebeam(), new Icywind(), new Knockoff(), new Lastresort(), new Liquidation(), new Protect(), new Psychup(), new Raindance(), new Rest(), new Return(), new Round(), new Safeguard(), new Scald(), new Signalbeam(), new Sleeptalk(), new Snore(), new Substitute(), new Surf(), new Swagger(), new Uproar(), new Uturn(), new Waterfall(), new Waterpulse() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Blizzard(), new Moves.Bounce(), new Moves.Brine(), new Moves.Confide(), new Moves.Covet(), new Moves.Dazzlinggleam(), new Moves.Dive(), new Moves.Doubleteam(), new Moves.Endure(), new Moves.Facade(), new Moves.Fling(), new Moves.Frustration(), new Moves.Grassknot(), new Moves.Hail(), new Moves.Healbell(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Icebeam(), new Moves.Icywind(), new Moves.Knockoff(), new Moves.Lastresort(), new Moves.Liquidation(), new Moves.Protect(), new Moves.Psychup(), new Moves.Raindance(), new Moves.Rest(), new Moves.Return(), new Moves.Round(), new Moves.Safeguard(), new Moves.Scald(), new Moves.Signalbeam(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Substitute(), new Moves.Surf(), new Moves.Swagger(), new Moves.Uproar(), new Moves.Uturn(), new Moves.Waterfall(), new Moves.Waterpulse() };
 		public override int Weight => 31;
 		public override int ExpYield => 240;
 		public override int CatchRate => 30;

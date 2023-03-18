@@ -9,28 +9,28 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Slurpuff : Pokemon
 	{
 		public override string Name => "Slurpuff";
-		public override List<Ability> AvailableAbilities => new() {new Sweetveil() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Unburden() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Sweetveil() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Unburden() };
 		public override Stats BaseStats => new Stats(82, 80, 86, 85, 75, 72);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Tackle(), new Sweetscent(), new Playnice(), new Fairywind() },
-			[9] = new List<Move>() { new Aromatherapy() },
-			[12] = new List<Move>() { new Drainingkiss() },
-			[15] = new List<Move>() { new Faketears() },
-			[18] = new List<Move>() { new Round() },
-			[21] = new List<Move>() { new Stringshot() },
-			[24] = new List<Move>() { new Cottonspore() },
-			[27] = new List<Move>() { new Energyball() },
-			[30] = new List<Move>() { new Wish() },
-			[33] = new List<Move>() { new Playrough() },
-			[36] = new List<Move>() { new Cottonguard() },
-			[39] = new List<Move>() { new Endeavor() },
-			[42] = new List<Move>() { new Stickyweb() },
+			[1] = new List<Move>() { new Moves.Tackle(), new Moves.Sweetscent(), new Moves.Playnice(), new Moves.Fairywind() },
+			[9] = new List<Move>() { new Moves.Aromatherapy() },
+			[12] = new List<Move>() { new Moves.Drainingkiss() },
+			[15] = new List<Move>() { new Moves.Faketears() },
+			[18] = new List<Move>() { new Moves.Round() },
+			[21] = new List<Move>() { new Moves.Stringshot() },
+			[24] = new List<Move>() { new Moves.Cottonspore() },
+			[27] = new List<Move>() { new Moves.Energyball() },
+			[30] = new List<Move>() { new Moves.Wish() },
+			[33] = new List<Move>() { new Moves.Playrough() },
+			[36] = new List<Move>() { new Moves.Cottonguard() },
+			[39] = new List<Move>() { new Moves.Endeavor() },
+			[42] = new List<Move>() { new Moves.Stickyweb() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Amnesia(), new Attract(), new Calmmind(), new Charm(), new Dazzlinggleam(), new Drainingkiss(), new Drainpunch(), new Endure(), new Energyball(), new Facade(), new Faketears(), new Flamethrower(), new Gigaimpact(), new Helpinghand(), new Hiddenpower(), new Hyperbeam(), new Lightscreen(), new Metronome(), new Mistyexplosion(), new Playrough(), new Protect(), new Psychic(), new Raindance(), new Rest(), new Round(), new Safeguard(), new Sleeptalk(), new Snore(), new Substitute(), new Sunnyday(), new Surf(), new Thief(), new Thunder(), new Thunderbolt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Amnesia(), new Moves.Attract(), new Moves.Calmmind(), new Moves.Charm(), new Moves.Dazzlinggleam(), new Moves.Drainingkiss(), new Moves.Drainpunch(), new Moves.Endure(), new Moves.Energyball(), new Moves.Facade(), new Moves.Faketears(), new Moves.Flamethrower(), new Moves.Gigaimpact(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Lightscreen(), new Moves.Metronome(), new Moves.Mistyexplosion(), new Moves.Playrough(), new Moves.Protect(), new Moves.Psychic(), new Moves.Raindance(), new Moves.Rest(), new Moves.Round(), new Moves.Safeguard(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Surf(), new Moves.Thief(), new Moves.Thunder(), new Moves.Thunderbolt() };
 		public override int Weight => 50;
 		public override int ExpYield => 168;
 		public override int CatchRate => 140;

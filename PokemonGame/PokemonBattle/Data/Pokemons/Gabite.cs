@@ -9,24 +9,24 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Gabite : Pokemon
 	{
 		public override string Name => "Gabite";
-		public override List<Ability> AvailableAbilities => new() {new Sandveil() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Roughskin() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Sandveil() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Roughskin() };
 		public override Stats BaseStats => new Stats(68, 90, 65, 50, 55, 82);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dragon, PokemonType.Ground };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Dualchop(), new Sandtomb(), new Tackle(), new Sandattack(), new Dragonbreath() },
-			[18] = new List<Move>() { new Bulldoze() },
-			[27] = new List<Move>() { new Bite() },
-			[34] = new List<Move>() { new Slash() },
-			[42] = new List<Move>() { new Dragonclaw() },
-			[50] = new List<Move>() { new Dig() },
-			[58] = new List<Move>() { new Sandstorm() },
-			[66] = new List<Move>() { new Takedown() },
-			[74] = new List<Move>() { new Dragonrush() },
+			[1] = new List<Move>() { new Moves.Dualchop(), new Moves.Sandtomb(), new Moves.Tackle(), new Moves.Sandattack(), new Moves.Dragonbreath() },
+			[18] = new List<Move>() { new Moves.Bulldoze() },
+			[27] = new List<Move>() { new Moves.Bite() },
+			[34] = new List<Move>() { new Moves.Slash() },
+			[42] = new List<Move>() { new Moves.Dragonclaw() },
+			[50] = new List<Move>() { new Moves.Dig() },
+			[58] = new List<Move>() { new Moves.Sandstorm() },
+			[66] = new List<Move>() { new Moves.Takedown() },
+			[74] = new List<Move>() { new Moves.Dragonrush() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Aerialace(), new Attract(), new Bodyslam(), new Bulldoze(), new Cut(), new Dig(), new Doubleteam(), new Dracometeor(), new Dragonclaw(), new Dragonpulse(), new Earthpower(), new Earthquake(), new Endure(), new Facade(), new Fireblast(), new Flamethrower(), new Hiddenpower(), new Ironhead(), new Irontail(), new Mudshot(), new Outrage(), new Protect(), new Raindance(), new Rest(), new Roar(), new Rockclimb(), new Rockslide(), new Rocksmash(), new Rocktomb(), new Round(), new Sandstorm(), new Sandtomb(), new Scaleshot(), new Scaryface(), new Scorchingsands(), new Shadowclaw(), new Sleeptalk(), new Snore(), new Stealthrock(), new Stoneedge(), new Strength(), new Substitute(), new Sunnyday(), new Swagger(), new Swift() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Aerialace(), new Moves.Attract(), new Moves.Bodyslam(), new Moves.Bulldoze(), new Moves.Cut(), new Moves.Dig(), new Moves.Doubleteam(), new Moves.Dracometeor(), new Moves.Dragonclaw(), new Moves.Dragonpulse(), new Moves.Earthpower(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Facade(), new Moves.Fireblast(), new Moves.Flamethrower(), new Moves.Hiddenpower(), new Moves.Ironhead(), new Moves.Irontail(), new Moves.Mudshot(), new Moves.Outrage(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Roar(), new Moves.Rockclimb(), new Moves.Rockslide(), new Moves.Rocksmash(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Sandstorm(), new Moves.Sandtomb(), new Moves.Scaleshot(), new Moves.Scaryface(), new Moves.Scorchingsands(), new Moves.Shadowclaw(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Stealthrock(), new Moves.Stoneedge(), new Moves.Strength(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Swift() };
 		public override int Weight => 560;
 		public override int ExpYield => 144;
 		public override int CatchRate => 45;

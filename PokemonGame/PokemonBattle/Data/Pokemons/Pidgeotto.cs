@@ -9,29 +9,29 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Pidgeotto : Pokemon
 	{
 		public override string Name => "Pidgeotto";
-		public override List<Ability> AvailableAbilities => new() {new Keeneye(), new Tangledfeet() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Bigpecks() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Keeneye(), new Abilities.Tangledfeet() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Bigpecks() };
 		public override Stats BaseStats => new Stats(63, 60, 55, 50, 50, 71);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Normal, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Tackle(), new Sandattack(), new Gust() },
-			[5] = new List<Move>() { new Sandattack() },
-			[9] = new List<Move>() { new Gust() },
-			[13] = new List<Move>() { new Quickattack() },
-			[17] = new List<Move>() { new Whirlwind() },
-			[22] = new List<Move>() { new Twister() },
-			[27] = new List<Move>() { new Featherdance() },
-			[32] = new List<Move>() { new Agility() },
-			[37] = new List<Move>() { new Wingattack() },
-			[42] = new List<Move>() { new Roost() },
-			[47] = new List<Move>() { new Tailwind() },
-			[52] = new List<Move>() { new Aerialace() },
-			[57] = new List<Move>() { new Airslash() },
-			[62] = new List<Move>() { new Hurricane() },
+			[1] = new List<Move>() { new Moves.Tackle(), new Moves.Sandattack(), new Moves.Gust() },
+			[5] = new List<Move>() { new Moves.Sandattack() },
+			[9] = new List<Move>() { new Moves.Gust() },
+			[13] = new List<Move>() { new Moves.Quickattack() },
+			[17] = new List<Move>() { new Moves.Whirlwind() },
+			[22] = new List<Move>() { new Moves.Twister() },
+			[27] = new List<Move>() { new Moves.Featherdance() },
+			[32] = new List<Move>() { new Moves.Agility() },
+			[37] = new List<Move>() { new Moves.Wingattack() },
+			[42] = new List<Move>() { new Moves.Roost() },
+			[47] = new List<Move>() { new Moves.Tailwind() },
+			[52] = new List<Move>() { new Moves.Aerialace() },
+			[57] = new List<Move>() { new Moves.Airslash() },
+			[62] = new List<Move>() { new Moves.Hurricane() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Aerialace(), new Attract(), new Confide(), new Defog(), new Doubleteam(), new Endure(), new Facade(), new Fly(), new Frustration(), new Heatwave(), new Hiddenpower(), new Pluck(), new Protect(), new Raindance(), new Rest(), new Return(), new Roost(), new Round(), new Skyattack(), new Sleeptalk(), new Snore(), new Steelwing(), new Substitute(), new Sunnyday(), new Swagger(), new Tailwind(), new Thief(), new Uproar(), new Uturn(), new Workup() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Aerialace(), new Moves.Attract(), new Moves.Confide(), new Moves.Defog(), new Moves.Doubleteam(), new Moves.Endure(), new Moves.Facade(), new Moves.Fly(), new Moves.Frustration(), new Moves.Heatwave(), new Moves.Hiddenpower(), new Moves.Pluck(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Return(), new Moves.Roost(), new Moves.Round(), new Moves.Skyattack(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Steelwing(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Tailwind(), new Moves.Thief(), new Moves.Uproar(), new Moves.Uturn(), new Moves.Workup() };
 		public override int Weight => 300;
 		public override int ExpYield => 122;
 		public override int CatchRate => 120;

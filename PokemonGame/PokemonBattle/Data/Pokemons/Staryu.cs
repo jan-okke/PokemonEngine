@@ -9,30 +9,30 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Staryu : Pokemon
 	{
 		public override string Name => "Staryu";
-		public override List<Ability> AvailableAbilities => new() {new Illuminate(), new Naturalcure() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Analytic() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Illuminate(), new Abilities.Naturalcure() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Analytic() };
 		public override Stats BaseStats => new Stats(30, 45, 55, 70, 55, 85);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Tackle(), new Harden() },
-			[4] = new List<Move>() { new Watergun() },
-			[8] = new List<Move>() { new Confuseray() },
-			[12] = new List<Move>() { new Rapidspin() },
-			[16] = new List<Move>() { new Minimize() },
-			[20] = new List<Move>() { new Swift() },
-			[24] = new List<Move>() { new Psybeam() },
-			[28] = new List<Move>() { new Brine() },
-			[32] = new List<Move>() { new Lightscreen() },
-			[36] = new List<Move>() { new Powergem() },
-			[40] = new List<Move>() { new Psychic() },
-			[44] = new List<Move>() { new Surf() },
-			[48] = new List<Move>() { new Recover() },
-			[52] = new List<Move>() { new Cosmicpower() },
-			[56] = new List<Move>() { new Hydropump() },
+			[1] = new List<Move>() { new Moves.Tackle(), new Moves.Harden() },
+			[4] = new List<Move>() { new Moves.Watergun() },
+			[8] = new List<Move>() { new Moves.Confuseray() },
+			[12] = new List<Move>() { new Moves.Rapidspin() },
+			[16] = new List<Move>() { new Moves.Minimize() },
+			[20] = new List<Move>() { new Moves.Swift() },
+			[24] = new List<Move>() { new Moves.Psybeam() },
+			[28] = new List<Move>() { new Moves.Brine() },
+			[32] = new List<Move>() { new Moves.Lightscreen() },
+			[36] = new List<Move>() { new Moves.Powergem() },
+			[40] = new List<Move>() { new Moves.Psychic() },
+			[44] = new List<Move>() { new Moves.Surf() },
+			[48] = new List<Move>() { new Moves.Recover() },
+			[52] = new List<Move>() { new Moves.Cosmicpower() },
+			[56] = new List<Move>() { new Moves.Hydropump() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Blizzard(), new Brine(), new Cosmicpower(), new Dazzlinggleam(), new Dive(), new Doubleteam(), new Endure(), new Facade(), new Flash(), new Flashcannon(), new Flipturn(), new Gyroball(), new Hail(), new Hiddenpower(), new Hydropump(), new Icebeam(), new Icywind(), new Lightscreen(), new Powergem(), new Protect(), new Psychic(), new Psychup(), new Raindance(), new Recycle(), new Reflect(), new Rest(), new Round(), new Scald(), new Sleeptalk(), new Snore(), new Substitute(), new Surf(), new Swagger(), new Swift(), new Thunder(), new Thunderbolt(), new Thunderwave(), new Triattack(), new Waterfall(), new Waterpulse(), new Whirlpool() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Blizzard(), new Moves.Brine(), new Moves.Cosmicpower(), new Moves.Dazzlinggleam(), new Moves.Dive(), new Moves.Doubleteam(), new Moves.Endure(), new Moves.Facade(), new Moves.Flash(), new Moves.Flashcannon(), new Moves.Flipturn(), new Moves.Gyroball(), new Moves.Hail(), new Moves.Hiddenpower(), new Moves.Hydropump(), new Moves.Icebeam(), new Moves.Icywind(), new Moves.Lightscreen(), new Moves.Powergem(), new Moves.Protect(), new Moves.Psychic(), new Moves.Psychup(), new Moves.Raindance(), new Moves.Recycle(), new Moves.Reflect(), new Moves.Rest(), new Moves.Round(), new Moves.Scald(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Substitute(), new Moves.Surf(), new Moves.Swagger(), new Moves.Swift(), new Moves.Thunder(), new Moves.Thunderbolt(), new Moves.Thunderwave(), new Moves.Triattack(), new Moves.Waterfall(), new Moves.Waterpulse(), new Moves.Whirlpool() };
 		public override int Weight => 345;
 		public override int ExpYield => 68;
 		public override int CatchRate => 225;

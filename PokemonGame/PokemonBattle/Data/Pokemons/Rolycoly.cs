@@ -9,25 +9,25 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Rolycoly : Pokemon
 	{
 		public override string Name => "Rolycoly";
-		public override List<Ability> AvailableAbilities => new() {new Steamengine(), new Heatproof() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Flashfire() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Steamengine(), new Abilities.Heatproof() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Flashfire() };
 		public override Stats BaseStats => new Stats(30, 40, 50, 40, 50, 30);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Rock };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Tackle(), new Smokescreen() },
-			[5] = new List<Move>() { new Rapidspin() },
-			[10] = new List<Move>() { new Smackdown() },
-			[15] = new List<Move>() { new Rockpolish() },
-			[20] = new List<Move>() { new Ancientpower() },
-			[25] = new List<Move>() { new Incinerate() },
-			[30] = new List<Move>() { new Stealthrock() },
-			[35] = new List<Move>() { new Heatcrash() },
-			[40] = new List<Move>() { new Rockblast() },
+			[1] = new List<Move>() { new Moves.Tackle(), new Moves.Smokescreen() },
+			[5] = new List<Move>() { new Moves.Rapidspin() },
+			[10] = new List<Move>() { new Moves.Smackdown() },
+			[15] = new List<Move>() { new Moves.Rockpolish() },
+			[20] = new List<Move>() { new Moves.Ancientpower() },
+			[25] = new List<Move>() { new Moves.Incinerate() },
+			[30] = new List<Move>() { new Moves.Stealthrock() },
+			[35] = new List<Move>() { new Moves.Heatcrash() },
+			[40] = new List<Move>() { new Moves.Rockblast() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Dig(), new Endure(), new Facade(), new Gyroball(), new Heatcrash(), new Hiddenpower(), new Irondefense(), new Ironhead(), new Meteorbeam(), new Protect(), new Reflect(), new Rest(), new Rockblast(), new Rockslide(), new Rocktomb(), new Round(), new Sandstorm(), new Sandtomb(), new Selfdestruct(), new Sleeptalk(), new Snore(), new Spikes(), new Stealthrock(), new Stoneedge(), new Substitute(), new Willowisp() };
-		public override List<Move> EggMoves => new List<Move>() { new Block(), new Explosion(), new Mudslap() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Dig(), new Moves.Endure(), new Moves.Facade(), new Moves.Gyroball(), new Moves.Heatcrash(), new Moves.Hiddenpower(), new Moves.Irondefense(), new Moves.Ironhead(), new Moves.Meteorbeam(), new Moves.Protect(), new Moves.Reflect(), new Moves.Rest(), new Moves.Rockblast(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Sandstorm(), new Moves.Sandtomb(), new Moves.Selfdestruct(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Spikes(), new Moves.Stealthrock(), new Moves.Stoneedge(), new Moves.Substitute(), new Moves.Willowisp() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Block(), new Moves.Explosion(), new Moves.Mudslap() };
 		public override int Weight => 120;
 		public override int ExpYield => 48;
 		public override int CatchRate => 255;

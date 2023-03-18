@@ -9,29 +9,29 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Prinplup : Pokemon
 	{
 		public override string Name => "Prinplup";
-		public override List<Ability> AvailableAbilities => new() {new Torrent() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Defiant() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Torrent() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Defiant() };
 		public override Stats BaseStats => new Stats(64, 66, 68, 81, 76, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Metalclaw() },
-			[1] = new List<Move>() { new Metalclaw(), new Tackle(), new Growl() },
-			[4] = new List<Move>() { new Growl() },
-			[8] = new List<Move>() { new Watergun() },
-			[11] = new List<Move>() { new Charm() },
-			[15] = new List<Move>() { new Peck() },
-			[19] = new List<Move>() { new Bubblebeam() },
-			[24] = new List<Move>() { new Swagger() },
-			[28] = new List<Move>() { new Furyattack() },
-			[33] = new List<Move>() { new Brine() },
-			[37] = new List<Move>() { new Whirlpool() },
-			[42] = new List<Move>() { new Mist() },
-			[46] = new List<Move>() { new Drillpeck() },
-			[50] = new List<Move>() { new Hydropump() },
+			[0] = new List<Move>() { new Moves.Metalclaw() },
+			[1] = new List<Move>() { new Moves.Metalclaw(), new Moves.Tackle(), new Moves.Growl() },
+			[4] = new List<Move>() { new Moves.Growl() },
+			[8] = new List<Move>() { new Moves.Watergun() },
+			[11] = new List<Move>() { new Moves.Charm() },
+			[15] = new List<Move>() { new Moves.Peck() },
+			[19] = new List<Move>() { new Moves.Bubblebeam() },
+			[24] = new List<Move>() { new Moves.Swagger() },
+			[28] = new List<Move>() { new Moves.Furyattack() },
+			[33] = new List<Move>() { new Moves.Brine() },
+			[37] = new List<Move>() { new Moves.Whirlpool() },
+			[42] = new List<Move>() { new Moves.Mist() },
+			[46] = new List<Move>() { new Moves.Drillpeck() },
+			[50] = new List<Move>() { new Moves.Hydropump() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Aerialace(), new Attract(), new Blizzard(), new Brickbreak(), new Brine(), new Confide(), new Covet(), new Cut(), new Defog(), new Dig(), new Dive(), new Doubleteam(), new Echoedvoice(), new Endure(), new Facade(), new Fling(), new Frustration(), new Grassknot(), new Hail(), new Hiddenpower(), new Icebeam(), new Icywind(), new Pluck(), new Protect(), new Quash(), new Raindance(), new Rest(), new Return(), new Rocksmash(), new Rocktomb(), new Round(), new Scald(), new Shadowclaw(), new Signalbeam(), new Sleeptalk(), new Snore(), new Stealthrock(), new Strength(), new Substitute(), new Surf(), new Swagger(), new Waterfall(), new Waterpledge(), new Waterpulse(), new Workup() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Aerialace(), new Moves.Attract(), new Moves.Blizzard(), new Moves.Brickbreak(), new Moves.Brine(), new Moves.Confide(), new Moves.Covet(), new Moves.Cut(), new Moves.Defog(), new Moves.Dig(), new Moves.Dive(), new Moves.Doubleteam(), new Moves.Echoedvoice(), new Moves.Endure(), new Moves.Facade(), new Moves.Fling(), new Moves.Frustration(), new Moves.Grassknot(), new Moves.Hail(), new Moves.Hiddenpower(), new Moves.Icebeam(), new Moves.Icywind(), new Moves.Pluck(), new Moves.Protect(), new Moves.Quash(), new Moves.Raindance(), new Moves.Rest(), new Moves.Return(), new Moves.Rocksmash(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Scald(), new Moves.Shadowclaw(), new Moves.Signalbeam(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Stealthrock(), new Moves.Strength(), new Moves.Substitute(), new Moves.Surf(), new Moves.Swagger(), new Moves.Waterfall(), new Moves.Waterpledge(), new Moves.Waterpulse(), new Moves.Workup() };
 		public override int Weight => 230;
 		public override int ExpYield => 142;
 		public override int CatchRate => 45;

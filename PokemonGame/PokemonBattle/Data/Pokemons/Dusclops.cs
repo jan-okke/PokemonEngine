@@ -9,26 +9,26 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Dusclops : Pokemon
 	{
 		public override string Name => "Dusclops";
-		public override List<Ability> AvailableAbilities => new() {new Pressure() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Frisk() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Pressure() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Frisk() };
 		public override Stats BaseStats => new Stats(40, 70, 130, 60, 130, 25);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Ghost };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Shadowpunch() },
-			[1] = new List<Move>() { new Shadowpunch(), new Firepunch(), new Icepunch(), new Thunderpunch(), new Gravity(), new Bind(), new Astonish(), new Leer(), new Disable(), new Shadowsneak() },
-			[12] = new List<Move>() { new Confuseray() },
-			[16] = new List<Move>() { new Nightshade() },
-			[20] = new List<Move>() { new Payback() },
-			[24] = new List<Move>() { new Willowisp() },
-			[28] = new List<Move>() { new Meanlook() },
-			[32] = new List<Move>() { new Hex() },
-			[36] = new List<Move>() { new Curse() },
-			[42] = new List<Move>() { new Shadowball() },
-			[48] = new List<Move>() { new Futuresight() },
+			[0] = new List<Move>() { new Moves.Shadowpunch() },
+			[1] = new List<Move>() { new Moves.Shadowpunch(), new Moves.Firepunch(), new Moves.Icepunch(), new Moves.Thunderpunch(), new Moves.Gravity(), new Moves.Bind(), new Moves.Astonish(), new Moves.Leer(), new Moves.Disable(), new Moves.Shadowsneak() },
+			[12] = new List<Move>() { new Moves.Confuseray() },
+			[16] = new List<Move>() { new Moves.Nightshade() },
+			[20] = new List<Move>() { new Moves.Payback() },
+			[24] = new List<Move>() { new Moves.Willowisp() },
+			[28] = new List<Move>() { new Moves.Meanlook() },
+			[32] = new List<Move>() { new Moves.Hex() },
+			[36] = new List<Move>() { new Moves.Curse() },
+			[42] = new List<Move>() { new Moves.Shadowball() },
+			[48] = new List<Move>() { new Moves.Futuresight() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Allyswitch(), new Attract(), new Blizzard(), new Bodyslam(), new Brickbreak(), new Bulldoze(), new Calmmind(), new Chargebeam(), new Darkpulse(), new Doubleteam(), new Dreameater(), new Earthquake(), new Endure(), new Facade(), new Firepunch(), new Flash(), new Fling(), new Focuspunch(), new Futuresight(), new Gigaimpact(), new Helpinghand(), new Hex(), new Hiddenpower(), new Hyperbeam(), new Icebeam(), new Icepunch(), new Icywind(), new Imprison(), new Megakick(), new Megapunch(), new Metronome(), new Payback(), new Poltergeist(), new Protect(), new Psychic(), new Psychup(), new Raindance(), new Rest(), new Revenge(), new Rockslide(), new Rocksmash(), new Rocktomb(), new Round(), new Shadowball(), new Skillswap(), new Skittersmack(), new Sleeptalk(), new Snore(), new Strength(), new Substitute(), new Sunnyday(), new Swagger(), new Taunt(), new Thief(), new Thunderpunch(), new Torment(), new Trick(), new Trickroom(), new Willowisp(), new Wonderroom() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Allyswitch(), new Moves.Attract(), new Moves.Blizzard(), new Moves.Bodyslam(), new Moves.Brickbreak(), new Moves.Bulldoze(), new Moves.Calmmind(), new Moves.Chargebeam(), new Moves.Darkpulse(), new Moves.Doubleteam(), new Moves.Dreameater(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Facade(), new Moves.Firepunch(), new Moves.Flash(), new Moves.Fling(), new Moves.Focuspunch(), new Moves.Futuresight(), new Moves.Gigaimpact(), new Moves.Helpinghand(), new Moves.Hex(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Icebeam(), new Moves.Icepunch(), new Moves.Icywind(), new Moves.Imprison(), new Moves.Megakick(), new Moves.Megapunch(), new Moves.Metronome(), new Moves.Payback(), new Moves.Poltergeist(), new Moves.Protect(), new Moves.Psychic(), new Moves.Psychup(), new Moves.Raindance(), new Moves.Rest(), new Moves.Revenge(), new Moves.Rockslide(), new Moves.Rocksmash(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Shadowball(), new Moves.Skillswap(), new Moves.Skittersmack(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Strength(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Taunt(), new Moves.Thief(), new Moves.Thunderpunch(), new Moves.Torment(), new Moves.Trick(), new Moves.Trickroom(), new Moves.Willowisp(), new Moves.Wonderroom() };
 		public override int Weight => 306;
 		public override int ExpYield => 159;
 		public override int CatchRate => 90;

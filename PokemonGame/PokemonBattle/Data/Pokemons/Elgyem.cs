@@ -9,27 +9,27 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Elgyem : Pokemon
 	{
 		public override string Name => "Elgyem";
-		public override List<Ability> AvailableAbilities => new() {new Telepathy(), new Synchronize() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Analytic() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Telepathy(), new Abilities.Synchronize() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Analytic() };
 		public override Stats BaseStats => new Stats(55, 55, 55, 85, 55, 30);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Confusion(), new Growl() },
-			[6] = new List<Move>() { new Imprison() },
-			[12] = new List<Move>() { new Teleport() },
-			[18] = new List<Move>() { new Psybeam() },
-			[24] = new List<Move>() { new Powersplit(), new Guardsplit() },
-			[30] = new List<Move>() { new Headbutt() },
-			[36] = new List<Move>() { new Zenheadbutt() },
-			[43] = new List<Move>() { new Recover() },
-			[48] = new List<Move>() { new Calmmind() },
-			[54] = new List<Move>() { new Wonderroom() },
-			[60] = new List<Move>() { new Psychic() },
+			[1] = new List<Move>() { new Moves.Confusion(), new Moves.Growl() },
+			[6] = new List<Move>() { new Moves.Imprison() },
+			[12] = new List<Move>() { new Moves.Teleport() },
+			[18] = new List<Move>() { new Moves.Psybeam() },
+			[24] = new List<Move>() { new Moves.Powersplit(), new Moves.Guardsplit() },
+			[30] = new List<Move>() { new Moves.Headbutt() },
+			[36] = new List<Move>() { new Moves.Zenheadbutt() },
+			[43] = new List<Move>() { new Moves.Recover() },
+			[48] = new List<Move>() { new Moves.Calmmind() },
+			[54] = new List<Move>() { new Moves.Wonderroom() },
+			[60] = new List<Move>() { new Moves.Psychic() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Agility(), new Allyswitch(), new Attract(), new Calmmind(), new Cosmicpower(), new Darkpulse(), new Endure(), new Energyball(), new Expandingforce(), new Facade(), new Guardswap(), new Hiddenpower(), new Imprison(), new Lightscreen(), new Meteorbeam(), new Nastyplot(), new Powerswap(), new Protect(), new Psychic(), new Psyshock(), new Raindance(), new Reflect(), new Rest(), new Rockslide(), new Rocktomb(), new Round(), new Safeguard(), new Screech(), new Shadowball(), new Skillswap(), new Sleeptalk(), new Snore(), new Steelwing(), new Storedpower(), new Substitute(), new Thief(), new Thunderbolt(), new Thunderwave(), new Trick(), new Trickroom(), new Uproar(), new Wonderroom(), new Zenheadbutt() };
-		public override List<Move> EggMoves => new List<Move>() { new Astonish(), new Destinybond(), new Disable(), new Psychup() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Agility(), new Moves.Allyswitch(), new Moves.Attract(), new Moves.Calmmind(), new Moves.Cosmicpower(), new Moves.Darkpulse(), new Moves.Endure(), new Moves.Energyball(), new Moves.Expandingforce(), new Moves.Facade(), new Moves.Guardswap(), new Moves.Hiddenpower(), new Moves.Imprison(), new Moves.Lightscreen(), new Moves.Meteorbeam(), new Moves.Nastyplot(), new Moves.Powerswap(), new Moves.Protect(), new Moves.Psychic(), new Moves.Psyshock(), new Moves.Raindance(), new Moves.Reflect(), new Moves.Rest(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Safeguard(), new Moves.Screech(), new Moves.Shadowball(), new Moves.Skillswap(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Steelwing(), new Moves.Storedpower(), new Moves.Substitute(), new Moves.Thief(), new Moves.Thunderbolt(), new Moves.Thunderwave(), new Moves.Trick(), new Moves.Trickroom(), new Moves.Uproar(), new Moves.Wonderroom(), new Moves.Zenheadbutt() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Astonish(), new Moves.Destinybond(), new Moves.Disable(), new Moves.Psychup() };
 		public override int Weight => 90;
 		public override int ExpYield => 67;
 		public override int CatchRate => 255;

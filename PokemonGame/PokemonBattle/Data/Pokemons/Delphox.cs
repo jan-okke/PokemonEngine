@@ -9,32 +9,32 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Delphox : Pokemon
 	{
 		public override string Name => "Delphox";
-		public override List<Ability> AvailableAbilities => new() {new Blaze() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Magician() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Blaze() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Magician() };
 		public override Stats BaseStats => new Stats(75, 69, 72, 114, 100, 104);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Fire, PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Mysticalfire() },
-			[1] = new List<Move>() { new Mysticalfire(), new Futuresight(), new Roleplay(), new Switcheroo(), new Shadowball(), new Scratch(), new Tailwhip(), new Ember(), new Howl() },
-			[5] = new List<Move>() { new Ember() },
-			[11] = new List<Move>() { new Howl() },
-			[14] = new List<Move>() { new Flamecharge() },
-			[18] = new List<Move>() { new Psybeam() },
-			[22] = new List<Move>() { new Firespin() },
-			[28] = new List<Move>() { new Luckychant() },
-			[31] = new List<Move>() { new Lightscreen() },
-			[38] = new List<Move>() { new Psyshock() },
-			[45] = new List<Move>() { new Flamethrower() },
-			[51] = new List<Move>() { new Willowisp() },
-			[57] = new List<Move>() { new Psychic() },
-			[62] = new List<Move>() { new Sunnyday() },
-			[68] = new List<Move>() { new Magicroom() },
-			[74] = new List<Move>() { new Fireblast() },
-			[80] = new List<Move>() { new Futuresight() },
+			[0] = new List<Move>() { new Moves.Mysticalfire() },
+			[1] = new List<Move>() { new Moves.Mysticalfire(), new Moves.Futuresight(), new Moves.Roleplay(), new Moves.Switcheroo(), new Moves.Shadowball(), new Moves.Scratch(), new Moves.Tailwhip(), new Moves.Ember(), new Moves.Howl() },
+			[5] = new List<Move>() { new Moves.Ember() },
+			[11] = new List<Move>() { new Moves.Howl() },
+			[14] = new List<Move>() { new Moves.Flamecharge() },
+			[18] = new List<Move>() { new Moves.Psybeam() },
+			[22] = new List<Move>() { new Moves.Firespin() },
+			[28] = new List<Move>() { new Moves.Luckychant() },
+			[31] = new List<Move>() { new Moves.Lightscreen() },
+			[38] = new List<Move>() { new Moves.Psyshock() },
+			[45] = new List<Move>() { new Moves.Flamethrower() },
+			[51] = new List<Move>() { new Moves.Willowisp() },
+			[57] = new List<Move>() { new Moves.Psychic() },
+			[62] = new List<Move>() { new Moves.Sunnyday() },
+			[68] = new List<Move>() { new Moves.Magicroom() },
+			[74] = new List<Move>() { new Moves.Fireblast() },
+			[80] = new List<Move>() { new Moves.Futuresight() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Allyswitch(), new Attract(), new Blastburn(), new Calmmind(), new Confide(), new Covet(), new Cut(), new Dazzlinggleam(), new Doubleteam(), new Dreameater(), new Echoedvoice(), new Embargo(), new Facade(), new Fireblast(), new Firepledge(), new Firepunch(), new Flamecharge(), new Flamethrower(), new Foulplay(), new Frustration(), new Gigaimpact(), new Grassknot(), new Heatwave(), new Hiddenpower(), new Hyperbeam(), new Irontail(), new Laserfocus(), new Lightscreen(), new Lowkick(), new Magiccoat(), new Magicroom(), new Overheat(), new Poweruppunch(), new Protect(), new Psychic(), new Psychup(), new Psyshock(), new Raindance(), new Recycle(), new Rest(), new Return(), new Roleplay(), new Round(), new Safeguard(), new Shadowball(), new Shockwave(), new Signalbeam(), new Skillswap(), new Sleeptalk(), new Snatch(), new Snore(), new Solarbeam(), new Substitute(), new Sunnyday(), new Swagger(), new Telekinesis(), new Thief(), new Thunderpunch(), new Toxic(), new Trick(), new Trickroom(), new Willowisp(), new Wonderroom(), new Workup(), new Zenheadbutt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Allyswitch(), new Moves.Attract(), new Moves.Blastburn(), new Moves.Calmmind(), new Moves.Confide(), new Moves.Covet(), new Moves.Cut(), new Moves.Dazzlinggleam(), new Moves.Doubleteam(), new Moves.Dreameater(), new Moves.Echoedvoice(), new Moves.Embargo(), new Moves.Facade(), new Moves.Fireblast(), new Moves.Firepledge(), new Moves.Firepunch(), new Moves.Flamecharge(), new Moves.Flamethrower(), new Moves.Foulplay(), new Moves.Frustration(), new Moves.Gigaimpact(), new Moves.Grassknot(), new Moves.Heatwave(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Irontail(), new Moves.Laserfocus(), new Moves.Lightscreen(), new Moves.Lowkick(), new Moves.Magiccoat(), new Moves.Magicroom(), new Moves.Overheat(), new Moves.Poweruppunch(), new Moves.Protect(), new Moves.Psychic(), new Moves.Psychup(), new Moves.Psyshock(), new Moves.Raindance(), new Moves.Recycle(), new Moves.Rest(), new Moves.Return(), new Moves.Roleplay(), new Moves.Round(), new Moves.Safeguard(), new Moves.Shadowball(), new Moves.Shockwave(), new Moves.Signalbeam(), new Moves.Skillswap(), new Moves.Sleeptalk(), new Moves.Snatch(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Telekinesis(), new Moves.Thief(), new Moves.Thunderpunch(), new Moves.Toxic(), new Moves.Trick(), new Moves.Trickroom(), new Moves.Willowisp(), new Moves.Wonderroom(), new Moves.Workup(), new Moves.Zenheadbutt() };
 		public override int Weight => 390;
 		public override int ExpYield => 267;
 		public override int CatchRate => 45;

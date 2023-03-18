@@ -9,30 +9,30 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Cryogonal : Pokemon
 	{
 		public override string Name => "Cryogonal";
-		public override List<Ability> AvailableAbilities => new() {new Levitate() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Levitate() };
 		public override Stats BaseStats => new Stats(80, 50, 50, 95, 135, 105);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Ice };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Bind(), new Iceshard() },
-			[4] = new List<Move>() { new Confuseray() },
-			[8] = new List<Move>() { new Rapidspin() },
-			[12] = new List<Move>() { new Laserfocus() },
-			[16] = new List<Move>() { new Icywind() },
-			[20] = new List<Move>() { new Mist(), new Haze() },
-			[24] = new List<Move>() { new Ancientpower() },
-			[28] = new List<Move>() { new Aurorabeam() },
-			[32] = new List<Move>() { new Slash(), new Nightslash() },
-			[36] = new List<Move>() { new Freezedry() },
-			[40] = new List<Move>() { new Lightscreen(), new Reflect() },
-			[44] = new List<Move>() { new Recover() },
-			[48] = new List<Move>() { new Icebeam() },
-			[52] = new List<Move>() { new Acidarmor() },
-			[56] = new List<Move>() { new Solarbeam() },
-			[60] = new List<Move>() { new Sheercold() },
+			[1] = new List<Move>() { new Moves.Bind(), new Moves.Iceshard() },
+			[4] = new List<Move>() { new Moves.Confuseray() },
+			[8] = new List<Move>() { new Moves.Rapidspin() },
+			[12] = new List<Move>() { new Moves.Laserfocus() },
+			[16] = new List<Move>() { new Moves.Icywind() },
+			[20] = new List<Move>() { new Moves.Mist(), new Moves.Haze() },
+			[24] = new List<Move>() { new Moves.Ancientpower() },
+			[28] = new List<Move>() { new Moves.Aurorabeam() },
+			[32] = new List<Move>() { new Moves.Slash(), new Moves.Nightslash() },
+			[36] = new List<Move>() { new Moves.Freezedry() },
+			[40] = new List<Move>() { new Moves.Lightscreen(), new Moves.Reflect() },
+			[44] = new List<Move>() { new Moves.Recover() },
+			[48] = new List<Move>() { new Moves.Icebeam() },
+			[52] = new List<Move>() { new Moves.Acidarmor() },
+			[56] = new List<Move>() { new Moves.Solarbeam() },
+			[60] = new List<Move>() { new Moves.Sheercold() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Acrobatics(), new Avalanche(), new Blizzard(), new Endure(), new Facade(), new Flashcannon(), new Hail(), new Hiddenpower(), new Hyperbeam(), new Icebeam(), new Iciclespear(), new Icywind(), new Irondefense(), new Lightscreen(), new Poisonjab(), new Protect(), new Raindance(), new Reflect(), new Rest(), new Round(), new Selfdestruct(), new Sleeptalk(), new Snore(), new Solarbeam(), new Substitute(), new Tripleaxel() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Acrobatics(), new Moves.Avalanche(), new Moves.Blizzard(), new Moves.Endure(), new Moves.Facade(), new Moves.Flashcannon(), new Moves.Hail(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Icebeam(), new Moves.Iciclespear(), new Moves.Icywind(), new Moves.Irondefense(), new Moves.Lightscreen(), new Moves.Poisonjab(), new Moves.Protect(), new Moves.Raindance(), new Moves.Reflect(), new Moves.Rest(), new Moves.Round(), new Moves.Selfdestruct(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Substitute(), new Moves.Tripleaxel() };
 		public override int Weight => 1480;
 		public override int ExpYield => 180;
 		public override int CatchRate => 25;

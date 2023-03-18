@@ -9,30 +9,30 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Pawniard : Pokemon
 	{
 		public override string Name => "Pawniard";
-		public override List<Ability> AvailableAbilities => new() {new Defiant(), new Innerfocus() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Pressure() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Defiant(), new Abilities.Innerfocus() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Pressure() };
 		public override Stats BaseStats => new Stats(45, 85, 70, 40, 40, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Dark, PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Scratch(), new Leer() },
-			[5] = new List<Move>() { new Furycutter() },
-			[10] = new List<Move>() { new Metalclaw() },
-			[15] = new List<Move>() { new Torment() },
-			[20] = new List<Move>() { new Scaryface() },
-			[25] = new List<Move>() { new Assurance() },
-			[30] = new List<Move>() { new Metalsound() },
-			[35] = new List<Move>() { new Slash() },
-			[40] = new List<Move>() { new Nightslash() },
-			[45] = new List<Move>() { new Irondefense() },
-			[50] = new List<Move>() { new Laserfocus() },
-			[55] = new List<Move>() { new Ironhead() },
-			[60] = new List<Move>() { new Swordsdance() },
-			[65] = new List<Move>() { new Guillotine() },
+			[1] = new List<Move>() { new Moves.Scratch(), new Moves.Leer() },
+			[5] = new List<Move>() { new Moves.Furycutter() },
+			[10] = new List<Move>() { new Moves.Metalclaw() },
+			[15] = new List<Move>() { new Moves.Torment() },
+			[20] = new List<Move>() { new Moves.Scaryface() },
+			[25] = new List<Move>() { new Moves.Assurance() },
+			[30] = new List<Move>() { new Moves.Metalsound() },
+			[35] = new List<Move>() { new Moves.Slash() },
+			[40] = new List<Move>() { new Moves.Nightslash() },
+			[45] = new List<Move>() { new Moves.Irondefense() },
+			[50] = new List<Move>() { new Moves.Laserfocus() },
+			[55] = new List<Move>() { new Moves.Ironhead() },
+			[60] = new List<Move>() { new Moves.Swordsdance() },
+			[65] = new List<Move>() { new Moves.Guillotine() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Assurance(), new Attract(), new Beatup(), new Brickbreak(), new Darkpulse(), new Dig(), new Endure(), new Facade(), new Falseswipe(), new Fling(), new Foulplay(), new Grassknot(), new Hiddenpower(), new Irondefense(), new Ironhead(), new Lashout(), new Lowkick(), new Lowsweep(), new Payback(), new Poisonjab(), new Protect(), new Psychocut(), new Raindance(), new Rest(), new Retaliate(), new Revenge(), new Rocktomb(), new Round(), new Sandstorm(), new Scaryface(), new Screech(), new Shadowclaw(), new Sleeptalk(), new Snarl(), new Snore(), new Stealthrock(), new Steelbeam(), new Substitute(), new Swordsdance(), new Taunt(), new Thief(), new Thunderwave(), new Xscissor() };
-		public override List<Move> EggMoves => new List<Move>() { new Headbutt(), new Meanlook(), new Quickguard(), new Suckerpunch() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Assurance(), new Moves.Attract(), new Moves.Beatup(), new Moves.Brickbreak(), new Moves.Darkpulse(), new Moves.Dig(), new Moves.Endure(), new Moves.Facade(), new Moves.Falseswipe(), new Moves.Fling(), new Moves.Foulplay(), new Moves.Grassknot(), new Moves.Hiddenpower(), new Moves.Irondefense(), new Moves.Ironhead(), new Moves.Lashout(), new Moves.Lowkick(), new Moves.Lowsweep(), new Moves.Payback(), new Moves.Poisonjab(), new Moves.Protect(), new Moves.Psychocut(), new Moves.Raindance(), new Moves.Rest(), new Moves.Retaliate(), new Moves.Revenge(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Sandstorm(), new Moves.Scaryface(), new Moves.Screech(), new Moves.Shadowclaw(), new Moves.Sleeptalk(), new Moves.Snarl(), new Moves.Snore(), new Moves.Stealthrock(), new Moves.Steelbeam(), new Moves.Substitute(), new Moves.Swordsdance(), new Moves.Taunt(), new Moves.Thief(), new Moves.Thunderwave(), new Moves.Xscissor() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Headbutt(), new Moves.Meanlook(), new Moves.Quickguard(), new Moves.Suckerpunch() };
 		public override int Weight => 102;
 		public override int ExpYield => 68;
 		public override int CatchRate => 120;

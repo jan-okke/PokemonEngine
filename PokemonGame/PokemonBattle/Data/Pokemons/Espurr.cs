@@ -9,24 +9,24 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Espurr : Pokemon
 	{
 		public override string Name => "Espurr";
-		public override List<Ability> AvailableAbilities => new() {new Keeneye(), new Infiltrator() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Owntempo() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Keeneye(), new Abilities.Infiltrator() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Owntempo() };
 		public override Stats BaseStats => new Stats(62, 48, 54, 63, 60, 68);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Scratch(), new Leer() },
-			[3] = new List<Move>() { new Fakeout() },
-			[6] = new List<Move>() { new Disarmingvoice() },
-			[9] = new List<Move>() { new Confusion() },
-			[18] = new List<Move>() { new Covet() },
-			[21] = new List<Move>() { new Psybeam() },
-			[30] = new List<Move>() { new Lightscreen(), new Reflect() },
-			[33] = new List<Move>() { new Psyshock() },
+			[1] = new List<Move>() { new Moves.Scratch(), new Moves.Leer() },
+			[3] = new List<Move>() { new Moves.Fakeout() },
+			[6] = new List<Move>() { new Moves.Disarmingvoice() },
+			[9] = new List<Move>() { new Moves.Confusion() },
+			[18] = new List<Move>() { new Moves.Covet() },
+			[21] = new List<Move>() { new Moves.Psybeam() },
+			[30] = new List<Move>() { new Moves.Lightscreen(), new Moves.Reflect() },
+			[33] = new List<Move>() { new Moves.Psyshock() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Allyswitch(), new Attract(), new Calmmind(), new Darkpulse(), new Endure(), new Energyball(), new Expandingforce(), new Facade(), new Faketears(), new Helpinghand(), new Hiddenpower(), new Irontail(), new Lightscreen(), new Magicroom(), new Nastyplot(), new Payback(), new Payday(), new Playrough(), new Protect(), new Psychic(), new Psyshock(), new Raindance(), new Reflect(), new Rest(), new Round(), new Safeguard(), new Skillswap(), new Sleeptalk(), new Snore(), new Substitute(), new Sunnyday(), new Swift(), new Thunderbolt(), new Thunderwave(), new Trick(), new Trickroom(), new Wonderroom(), new Workup(), new Zenheadbutt() };
-		public override List<Move> EggMoves => new List<Move>() { new Tickle(), new Yawn() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Allyswitch(), new Moves.Attract(), new Moves.Calmmind(), new Moves.Darkpulse(), new Moves.Endure(), new Moves.Energyball(), new Moves.Expandingforce(), new Moves.Facade(), new Moves.Faketears(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Irontail(), new Moves.Lightscreen(), new Moves.Magicroom(), new Moves.Nastyplot(), new Moves.Payback(), new Moves.Payday(), new Moves.Playrough(), new Moves.Protect(), new Moves.Psychic(), new Moves.Psyshock(), new Moves.Raindance(), new Moves.Reflect(), new Moves.Rest(), new Moves.Round(), new Moves.Safeguard(), new Moves.Skillswap(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swift(), new Moves.Thunderbolt(), new Moves.Thunderwave(), new Moves.Trick(), new Moves.Trickroom(), new Moves.Wonderroom(), new Moves.Workup(), new Moves.Zenheadbutt() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Tickle(), new Moves.Yawn() };
 		public override int Weight => 35;
 		public override int ExpYield => 71;
 		public override int CatchRate => 190;

@@ -9,29 +9,29 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Stakataka : Pokemon
 	{
 		public override string Name => "Stakataka";
-		public override List<Ability> AvailableAbilities => new() {new Beastboost() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Beastboost() };
 		public override Stats BaseStats => new Stats(61, 131, 211, 53, 101, 13);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Tackle(), new Harden() },
-			[5] = new List<Move>() { new Rockthrow() },
-			[10] = new List<Move>() { new Protect() },
-			[15] = new List<Move>() { new Stomp() },
-			[20] = new List<Move>() { new Block() },
-			[25] = new List<Move>() { new Rockslide() },
-			[30] = new List<Move>() { new Wideguard() },
-			[35] = new List<Move>() { new Autotomize() },
-			[40] = new List<Move>() { new Rockblast() },
-			[45] = new List<Move>() { new Magnetrise() },
-			[50] = new List<Move>() { new Irondefense() },
-			[55] = new List<Move>() { new Ironhead() },
-			[60] = new List<Move>() { new Takedown() },
-			[65] = new List<Move>() { new Stealthrock() },
-			[70] = new List<Move>() { new Doubleedge() },
+			[1] = new List<Move>() { new Moves.Tackle(), new Moves.Harden() },
+			[5] = new List<Move>() { new Moves.Rockthrow() },
+			[10] = new List<Move>() { new Moves.Protect() },
+			[15] = new List<Move>() { new Moves.Stomp() },
+			[20] = new List<Move>() { new Moves.Block() },
+			[25] = new List<Move>() { new Moves.Rockslide() },
+			[30] = new List<Move>() { new Moves.Wideguard() },
+			[35] = new List<Move>() { new Moves.Autotomize() },
+			[40] = new List<Move>() { new Moves.Rockblast() },
+			[45] = new List<Move>() { new Moves.Magnetrise() },
+			[50] = new List<Move>() { new Moves.Irondefense() },
+			[55] = new List<Move>() { new Moves.Ironhead() },
+			[60] = new List<Move>() { new Moves.Takedown() },
+			[65] = new List<Move>() { new Moves.Stealthrock() },
+			[70] = new List<Move>() { new Moves.Doubleedge() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Allyswitch(), new Bodypress(), new Bodyslam(), new Brutalswing(), new Bulldoze(), new Earthquake(), new Endure(), new Facade(), new Flashcannon(), new Gigaimpact(), new Gyroball(), new Heatcrash(), new Heavyslam(), new Hiddenpower(), new Highhorsepower(), new Irondefense(), new Ironhead(), new Lightscreen(), new Magicroom(), new Megakick(), new Meteorbeam(), new Protect(), new Reflect(), new Rest(), new Rockblast(), new Rockslide(), new Rocktomb(), new Round(), new Safeguard(), new Sandstorm(), new Skillswap(), new Sleeptalk(), new Snore(), new Stealthrock(), new Steelbeam(), new Steelroller(), new Stompingtantrum(), new Stoneedge(), new Substitute(), new Superpower(), new Trickroom(), new Wonderroom(), new Zenheadbutt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Allyswitch(), new Moves.Bodypress(), new Moves.Bodyslam(), new Moves.Brutalswing(), new Moves.Bulldoze(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Facade(), new Moves.Flashcannon(), new Moves.Gigaimpact(), new Moves.Gyroball(), new Moves.Heatcrash(), new Moves.Heavyslam(), new Moves.Hiddenpower(), new Moves.Highhorsepower(), new Moves.Irondefense(), new Moves.Ironhead(), new Moves.Lightscreen(), new Moves.Magicroom(), new Moves.Megakick(), new Moves.Meteorbeam(), new Moves.Protect(), new Moves.Reflect(), new Moves.Rest(), new Moves.Rockblast(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Safeguard(), new Moves.Sandstorm(), new Moves.Skillswap(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Stealthrock(), new Moves.Steelbeam(), new Moves.Steelroller(), new Moves.Stompingtantrum(), new Moves.Stoneedge(), new Moves.Substitute(), new Moves.Superpower(), new Moves.Trickroom(), new Moves.Wonderroom(), new Moves.Zenheadbutt() };
 		public override int Weight => 8200;
 		public override int ExpYield => 285;
 		public override int CatchRate => 30;

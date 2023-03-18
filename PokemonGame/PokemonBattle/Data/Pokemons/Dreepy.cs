@@ -9,17 +9,17 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Dreepy : Pokemon
 	{
 		public override string Name => "Dreepy";
-		public override List<Ability> AvailableAbilities => new() {new Clearbody(), new Infiltrator() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Cursedbody() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Clearbody(), new Abilities.Infiltrator() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Cursedbody() };
 		public override Stats BaseStats => new Stats(28, 60, 30, 40, 30, 82);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dragon, PokemonType.Ghost };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Astonish(), new Infestation(), new Quickattack(), new Bite() },
+			[1] = new List<Move>() { new Moves.Astonish(), new Moves.Infestation(), new Moves.Quickattack(), new Moves.Bite() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Batonpass(), new Dracometeor(), new Endure(), new Facade(), new Helpinghand(), new Hiddenpower(), new Protect(), new Rest(), new Round(), new Sleeptalk(), new Snore(), new Substitute(), new Swift(), new Thunderwave() };
-		public override List<Move> EggMoves => new List<Move>() { new Confuseray(), new Curse(), new Disable(), new Doubleteam(), new Dragontail(), new Grudge(), new Suckerpunch() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Batonpass(), new Moves.Dracometeor(), new Moves.Endure(), new Moves.Facade(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Protect(), new Moves.Rest(), new Moves.Round(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Substitute(), new Moves.Swift(), new Moves.Thunderwave() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Confuseray(), new Moves.Curse(), new Moves.Disable(), new Moves.Doubleteam(), new Moves.Dragontail(), new Moves.Grudge(), new Moves.Suckerpunch() };
 		public override int Weight => 20;
 		public override int ExpYield => 54;
 		public override int CatchRate => 45;

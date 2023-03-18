@@ -135,7 +135,7 @@ namespace Test
     public class TestPokemon : Pokemon
     {
         public override Stats BaseStats => new Stats(70, 70, 70, 70, 70, 70);
-        public override Ability Ability => new TestAbility();
+        public override List<Ability> AvailableAbilities => new List<Ability> { new TestAbility() };
         public override string Name => "Test";
         public override ExperienceGroup ExperienceGroup => ExperienceGroup.Normal;
         public override List<PokemonType> Types => new List<PokemonType> { PokemonType.Fire, PokemonType.Flying };
@@ -150,7 +150,7 @@ namespace Test
     public class TestMove : Move
     {
         public override int BasePower => 50;
-        public override MoveCategory Category => MoveCategory.Phsyical;
+        public override MoveCategory Category => MoveCategory.Physical;
         public override string Description => "Test";
         public override bool HasAdditionalEffect => false;
         public override string Name => "Test";

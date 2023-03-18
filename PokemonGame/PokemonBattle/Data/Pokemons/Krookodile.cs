@@ -9,28 +9,28 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Krookodile : Pokemon
 	{
 		public override string Name => "Krookodile";
-		public override List<Ability> AvailableAbilities => new() {new Intimidate(), new Moxie() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Angerpoint() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Intimidate(), new Abilities.Moxie() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Angerpoint() };
 		public override Stats BaseStats => new Stats(95, 117, 80, 65, 70, 92);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Ground, PokemonType.Dark };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Powertrip(), new Leer(), new Sandattack(), new Honeclaws() },
-			[9] = new List<Move>() { new Sandtomb() },
-			[12] = new List<Move>() { new Scaryface() },
-			[15] = new List<Move>() { new Bite() },
-			[18] = new List<Move>() { new Torment() },
-			[21] = new List<Move>() { new Dig() },
-			[24] = new List<Move>() { new Swagger() },
-			[27] = new List<Move>() { new Crunch() },
-			[32] = new List<Move>() { new Sandstorm() },
-			[35] = new List<Move>() { new Foulplay() },
-			[44] = new List<Move>() { new Earthquake() },
-			[51] = new List<Move>() { new Thrash() },
-			[58] = new List<Move>() { new Outrage() },
+			[1] = new List<Move>() { new Moves.Powertrip(), new Moves.Leer(), new Moves.Sandattack(), new Moves.Honeclaws() },
+			[9] = new List<Move>() { new Moves.Sandtomb() },
+			[12] = new List<Move>() { new Moves.Scaryface() },
+			[15] = new List<Move>() { new Moves.Bite() },
+			[18] = new List<Move>() { new Moves.Torment() },
+			[21] = new List<Move>() { new Moves.Dig() },
+			[24] = new List<Move>() { new Moves.Swagger() },
+			[27] = new List<Move>() { new Moves.Crunch() },
+			[32] = new List<Move>() { new Moves.Sandstorm() },
+			[35] = new List<Move>() { new Moves.Foulplay() },
+			[44] = new List<Move>() { new Moves.Earthquake() },
+			[51] = new List<Move>() { new Moves.Thrash() },
+			[58] = new List<Move>() { new Moves.Outrage() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Assurance(), new Attract(), new Beatup(), new Bodyslam(), new Brickbreak(), new Brutalswing(), new Bulkup(), new Bulldoze(), new Closecombat(), new Crunch(), new Darkestlariat(), new Darkpulse(), new Dig(), new Dragonclaw(), new Dragonpulse(), new Earthpower(), new Earthquake(), new Endure(), new Facade(), new Firefang(), new Fling(), new Focusblast(), new Focusenergy(), new Foulplay(), new Gigaimpact(), new Grassknot(), new Hiddenpower(), new Highhorsepower(), new Hyperbeam(), new Irontail(), new Lashout(), new Lowkick(), new Lowsweep(), new Megakick(), new Megapunch(), new Outrage(), new Payback(), new Protect(), new Rest(), new Retaliate(), new Revenge(), new Rockslide(), new Rocktomb(), new Round(), new Sandstorm(), new Sandtomb(), new Scaleshot(), new Scaryface(), new Scorchingsands(), new Shadowclaw(), new Skittersmack(), new Sleeptalk(), new Sludgebomb(), new Snarl(), new Snore(), new Stealthrock(), new Stompingtantrum(), new Stoneedge(), new Substitute(), new Superpower(), new Taunt(), new Thief(), new Throatchop(), new Thunderfang(), new Uproar() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Assurance(), new Moves.Attract(), new Moves.Beatup(), new Moves.Bodyslam(), new Moves.Brickbreak(), new Moves.Brutalswing(), new Moves.Bulkup(), new Moves.Bulldoze(), new Moves.Closecombat(), new Moves.Crunch(), new Moves.Darkestlariat(), new Moves.Darkpulse(), new Moves.Dig(), new Moves.Dragonclaw(), new Moves.Dragonpulse(), new Moves.Earthpower(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Facade(), new Moves.Firefang(), new Moves.Fling(), new Moves.Focusblast(), new Moves.Focusenergy(), new Moves.Foulplay(), new Moves.Gigaimpact(), new Moves.Grassknot(), new Moves.Hiddenpower(), new Moves.Highhorsepower(), new Moves.Hyperbeam(), new Moves.Irontail(), new Moves.Lashout(), new Moves.Lowkick(), new Moves.Lowsweep(), new Moves.Megakick(), new Moves.Megapunch(), new Moves.Outrage(), new Moves.Payback(), new Moves.Protect(), new Moves.Rest(), new Moves.Retaliate(), new Moves.Revenge(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Sandstorm(), new Moves.Sandtomb(), new Moves.Scaleshot(), new Moves.Scaryface(), new Moves.Scorchingsands(), new Moves.Shadowclaw(), new Moves.Skittersmack(), new Moves.Sleeptalk(), new Moves.Sludgebomb(), new Moves.Snarl(), new Moves.Snore(), new Moves.Stealthrock(), new Moves.Stompingtantrum(), new Moves.Stoneedge(), new Moves.Substitute(), new Moves.Superpower(), new Moves.Taunt(), new Moves.Thief(), new Moves.Throatchop(), new Moves.Thunderfang(), new Moves.Uproar() };
 		public override int Weight => 963;
 		public override int ExpYield => 260;
 		public override int CatchRate => 45;

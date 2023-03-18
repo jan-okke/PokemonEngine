@@ -9,16 +9,16 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Cosmoem : Pokemon
 	{
 		public override string Name => "Cosmoem";
-		public override List<Ability> AvailableAbilities => new() {new Sturdy() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Sturdy() };
 		public override Stats BaseStats => new Stats(43, 29, 131, 29, 131, 37);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Cosmicpower() },
-			[1] = new List<Move>() { new Cosmicpower(), new Teleport() },
+			[0] = new List<Move>() { new Moves.Cosmicpower() },
+			[1] = new List<Move>() { new Moves.Cosmicpower(), new Moves.Teleport() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Cosmicpower() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Cosmicpower() };
 		public override int Weight => 9999;
 		public override int ExpYield => 140;
 		public override int CatchRate => 45;

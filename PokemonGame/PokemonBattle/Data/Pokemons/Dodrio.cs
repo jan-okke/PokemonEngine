@@ -9,31 +9,31 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Dodrio : Pokemon
 	{
 		public override string Name => "Dodrio";
-		public override List<Ability> AvailableAbilities => new() {new Runaway(), new Earlybird() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Tangledfeet() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Runaway(), new Abilities.Earlybird() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Tangledfeet() };
 		public override Stats BaseStats => new Stats(60, 110, 70, 60, 60, 110);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Triattack() },
-			[1] = new List<Move>() { new Triattack(), new Peck(), new Growl(), new Quickattack() },
-			[5] = new List<Move>() { new Quickattack() },
-			[8] = new List<Move>() { new Leer() },
-			[12] = new List<Move>() { new Furyattack() },
-			[15] = new List<Move>() { new Wingattack() },
-			[19] = new List<Move>() { new Pluck() },
-			[22] = new List<Move>() { new Doublehit() },
-			[26] = new List<Move>() { new Agility() },
-			[29] = new List<Move>() { new Uproar() },
-			[34] = new List<Move>() { new Acupressure() },
-			[38] = new List<Move>() { new Swordsdance() },
-			[43] = new List<Move>() { new Lunge() },
-			[47] = new List<Move>() { new Drillpeck() },
-			[52] = new List<Move>() { new Endeavor() },
-			[56] = new List<Move>() { new Thrash() },
+			[0] = new List<Move>() { new Moves.Triattack() },
+			[1] = new List<Move>() { new Moves.Triattack(), new Moves.Peck(), new Moves.Growl(), new Moves.Quickattack() },
+			[5] = new List<Move>() { new Moves.Quickattack() },
+			[8] = new List<Move>() { new Moves.Leer() },
+			[12] = new List<Move>() { new Moves.Furyattack() },
+			[15] = new List<Move>() { new Moves.Wingattack() },
+			[19] = new List<Move>() { new Moves.Pluck() },
+			[22] = new List<Move>() { new Moves.Doublehit() },
+			[26] = new List<Move>() { new Moves.Agility() },
+			[29] = new List<Move>() { new Moves.Uproar() },
+			[34] = new List<Move>() { new Moves.Acupressure() },
+			[38] = new List<Move>() { new Moves.Swordsdance() },
+			[43] = new List<Move>() { new Moves.Lunge() },
+			[47] = new List<Move>() { new Moves.Drillpeck() },
+			[52] = new List<Move>() { new Moves.Endeavor() },
+			[56] = new List<Move>() { new Moves.Thrash() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Aerialace(), new Attract(), new Confide(), new Doubleteam(), new Echoedvoice(), new Endeavor(), new Endure(), new Facade(), new Fly(), new Frustration(), new Gigaimpact(), new Hiddenpower(), new Hyperbeam(), new Knockoff(), new Payback(), new Pluck(), new Protect(), new Rest(), new Return(), new Roost(), new Round(), new Skyattack(), new Sleeptalk(), new Snore(), new Steelwing(), new Stompingtantrum(), new Substitute(), new Sunnyday(), new Swagger(), new Swordsdance(), new Taunt(), new Thief(), new Torment(), new Uproar(), new Workup() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Aerialace(), new Moves.Attract(), new Moves.Confide(), new Moves.Doubleteam(), new Moves.Echoedvoice(), new Moves.Endeavor(), new Moves.Endure(), new Moves.Facade(), new Moves.Fly(), new Moves.Frustration(), new Moves.Gigaimpact(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Knockoff(), new Moves.Payback(), new Moves.Pluck(), new Moves.Protect(), new Moves.Rest(), new Moves.Return(), new Moves.Roost(), new Moves.Round(), new Moves.Skyattack(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Steelwing(), new Moves.Stompingtantrum(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Swordsdance(), new Moves.Taunt(), new Moves.Thief(), new Moves.Torment(), new Moves.Uproar(), new Moves.Workup() };
 		public override int Weight => 852;
 		public override int ExpYield => 165;
 		public override int CatchRate => 45;

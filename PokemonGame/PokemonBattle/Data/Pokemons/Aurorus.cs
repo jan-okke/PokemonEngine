@@ -9,28 +9,28 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Aurorus : Pokemon
 	{
 		public override string Name => "Aurorus";
-		public override List<Ability> AvailableAbilities => new() {new Refrigerate() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Snowwarning() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Refrigerate() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Snowwarning() };
 		public override Stats BaseStats => new Stats(123, 77, 72, 99, 92, 58);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Ice };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Powdersnow(), new Growl(), new Encore(), new Ancientpower() },
-			[12] = new List<Move>() { new Icywind() },
-			[16] = new List<Move>() { new Round() },
-			[20] = new List<Move>() { new Mist() },
-			[24] = new List<Move>() { new Aurorabeam() },
-			[28] = new List<Move>() { new Thunderwave() },
-			[32] = new List<Move>() { new Naturepower() },
-			[36] = new List<Move>() { new Freezedry() },
-			[42] = new List<Move>() { new Icebeam() },
-			[48] = new List<Move>() { new Lightscreen() },
-			[54] = new List<Move>() { new Hail() },
-			[60] = new List<Move>() { new Blizzard() },
-			[66] = new List<Move>() { new Hyperbeam() },
+			[1] = new List<Move>() { new Moves.Powdersnow(), new Moves.Growl(), new Moves.Encore(), new Moves.Ancientpower() },
+			[12] = new List<Move>() { new Moves.Icywind() },
+			[16] = new List<Move>() { new Moves.Round() },
+			[20] = new List<Move>() { new Moves.Mist() },
+			[24] = new List<Move>() { new Moves.Aurorabeam() },
+			[28] = new List<Move>() { new Moves.Thunderwave() },
+			[32] = new List<Move>() { new Moves.Naturepower() },
+			[36] = new List<Move>() { new Moves.Freezedry() },
+			[42] = new List<Move>() { new Moves.Icebeam() },
+			[48] = new List<Move>() { new Moves.Lightscreen() },
+			[54] = new List<Move>() { new Moves.Hail() },
+			[60] = new List<Move>() { new Moves.Blizzard() },
+			[66] = new List<Move>() { new Moves.Hyperbeam() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Avalanche(), new Blizzard(), new Bodyslam(), new Bulldoze(), new Calmmind(), new Darkpulse(), new Earthpower(), new Earthquake(), new Encore(), new Endure(), new Facade(), new Flashcannon(), new Gigaimpact(), new Hail(), new Hiddenpower(), new Hyperbeam(), new Hypervoice(), new Icebeam(), new Iciclespear(), new Icywind(), new Irondefense(), new Ironhead(), new Irontail(), new Lightscreen(), new Meteorbeam(), new Mudshot(), new Outrage(), new Protect(), new Psychic(), new Raindance(), new Reflect(), new Rest(), new Rockblast(), new Rockslide(), new Rocktomb(), new Round(), new Safeguard(), new Sandstorm(), new Sleeptalk(), new Snore(), new Stealthrock(), new Stoneedge(), new Substitute(), new Thunder(), new Thunderbolt(), new Thunderwave(), new Weatherball(), new Zenheadbutt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Avalanche(), new Moves.Blizzard(), new Moves.Bodyslam(), new Moves.Bulldoze(), new Moves.Calmmind(), new Moves.Darkpulse(), new Moves.Earthpower(), new Moves.Earthquake(), new Moves.Encore(), new Moves.Endure(), new Moves.Facade(), new Moves.Flashcannon(), new Moves.Gigaimpact(), new Moves.Hail(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Hypervoice(), new Moves.Icebeam(), new Moves.Iciclespear(), new Moves.Icywind(), new Moves.Irondefense(), new Moves.Ironhead(), new Moves.Irontail(), new Moves.Lightscreen(), new Moves.Meteorbeam(), new Moves.Mudshot(), new Moves.Outrage(), new Moves.Protect(), new Moves.Psychic(), new Moves.Raindance(), new Moves.Reflect(), new Moves.Rest(), new Moves.Rockblast(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Safeguard(), new Moves.Sandstorm(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Stealthrock(), new Moves.Stoneedge(), new Moves.Substitute(), new Moves.Thunder(), new Moves.Thunderbolt(), new Moves.Thunderwave(), new Moves.Weatherball(), new Moves.Zenheadbutt() };
 		public override int Weight => 2250;
 		public override int ExpYield => 104;
 		public override int CatchRate => 45;

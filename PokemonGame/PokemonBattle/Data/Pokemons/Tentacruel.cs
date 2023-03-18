@@ -9,26 +9,26 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Tentacruel : Pokemon
 	{
 		public override string Name => "Tentacruel";
-		public override List<Ability> AvailableAbilities => new() {new Clearbody(), new Liquidooze() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Raindish() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Clearbody(), new Abilities.Liquidooze() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Raindish() };
 		public override Stats BaseStats => new Stats(80, 70, 65, 80, 120, 100);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Water, PokemonType.Poison };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Reflecttype(), new Poisonsting(), new Watergun(), new Acid(), new Wrap() },
-			[12] = new List<Move>() { new Supersonic() },
-			[16] = new List<Move>() { new Waterpulse() },
-			[20] = new List<Move>() { new Screech() },
-			[24] = new List<Move>() { new Bubblebeam() },
-			[28] = new List<Move>() { new Hex() },
-			[34] = new List<Move>() { new Acidarmor() },
-			[40] = new List<Move>() { new Poisonjab() },
-			[46] = new List<Move>() { new Surf() },
-			[52] = new List<Move>() { new Sludgewave() },
-			[58] = new List<Move>() { new Hydropump() },
+			[1] = new List<Move>() { new Moves.Reflecttype(), new Moves.Poisonsting(), new Moves.Watergun(), new Moves.Acid(), new Moves.Wrap() },
+			[12] = new List<Move>() { new Moves.Supersonic() },
+			[16] = new List<Move>() { new Moves.Waterpulse() },
+			[20] = new List<Move>() { new Moves.Screech() },
+			[24] = new List<Move>() { new Moves.Bubblebeam() },
+			[28] = new List<Move>() { new Moves.Hex() },
+			[34] = new List<Move>() { new Moves.Acidarmor() },
+			[40] = new List<Move>() { new Moves.Poisonjab() },
+			[46] = new List<Move>() { new Moves.Surf() },
+			[52] = new List<Move>() { new Moves.Sludgewave() },
+			[58] = new List<Move>() { new Moves.Hydropump() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Blizzard(), new Brine(), new Brutalswing(), new Corrosivegas(), new Crosspoison(), new Cut(), new Dazzlinggleam(), new Dive(), new Doubleteam(), new Endure(), new Facade(), new Gigadrain(), new Gigaimpact(), new Hail(), new Hex(), new Hiddenpower(), new Hydropump(), new Hyperbeam(), new Icebeam(), new Icywind(), new Muddywater(), new Payback(), new Poisonjab(), new Protect(), new Raindance(), new Rest(), new Round(), new Safeguard(), new Scald(), new Screech(), new Sleeptalk(), new Sludgebomb(), new Sludgewave(), new Snore(), new Substitute(), new Surf(), new Swagger(), new Swordsdance(), new Thief(), new Toxicspikes(), new Venomdrench(), new Venoshock(), new Waterfall(), new Waterpulse(), new Whirlpool() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Blizzard(), new Moves.Brine(), new Moves.Brutalswing(), new Moves.Corrosivegas(), new Moves.Crosspoison(), new Moves.Cut(), new Moves.Dazzlinggleam(), new Moves.Dive(), new Moves.Doubleteam(), new Moves.Endure(), new Moves.Facade(), new Moves.Gigadrain(), new Moves.Gigaimpact(), new Moves.Hail(), new Moves.Hex(), new Moves.Hiddenpower(), new Moves.Hydropump(), new Moves.Hyperbeam(), new Moves.Icebeam(), new Moves.Icywind(), new Moves.Muddywater(), new Moves.Payback(), new Moves.Poisonjab(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Round(), new Moves.Safeguard(), new Moves.Scald(), new Moves.Screech(), new Moves.Sleeptalk(), new Moves.Sludgebomb(), new Moves.Sludgewave(), new Moves.Snore(), new Moves.Substitute(), new Moves.Surf(), new Moves.Swagger(), new Moves.Swordsdance(), new Moves.Thief(), new Moves.Toxicspikes(), new Moves.Venomdrench(), new Moves.Venoshock(), new Moves.Waterfall(), new Moves.Waterpulse(), new Moves.Whirlpool() };
 		public override int Weight => 550;
 		public override int ExpYield => 180;
 		public override int CatchRate => 60;

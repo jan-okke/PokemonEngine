@@ -9,30 +9,30 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Gulpin : Pokemon
 	{
 		public override string Name => "Gulpin";
-		public override List<Ability> AvailableAbilities => new() {new Liquidooze(), new Stickyhold() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Gluttony() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Liquidooze(), new Abilities.Stickyhold() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Gluttony() };
 		public override Stats BaseStats => new Stats(70, 43, 53, 43, 53, 40);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fluctuating;
 		public override List<PokemonType> Types => new() {PokemonType.Poison };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Pound() },
-			[5] = new List<Move>() { new Yawn() },
-			[8] = new List<Move>() { new Poisongas() },
-			[10] = new List<Move>() { new Sludge() },
-			[12] = new List<Move>() { new Amnesia() },
-			[17] = new List<Move>() { new Acidspray() },
-			[20] = new List<Move>() { new Encore() },
-			[25] = new List<Move>() { new Toxic() },
-			[28] = new List<Move>() { new Stockpile(), new Spitup(), new Swallow() },
-			[33] = new List<Move>() { new Sludgebomb() },
-			[36] = new List<Move>() { new Gastroacid() },
-			[41] = new List<Move>() { new Belch() },
-			[44] = new List<Move>() { new Painsplit() },
-			[49] = new List<Move>() { new Gunkshot() },
+			[1] = new List<Move>() { new Moves.Pound() },
+			[5] = new List<Move>() { new Moves.Yawn() },
+			[8] = new List<Move>() { new Moves.Poisongas() },
+			[10] = new List<Move>() { new Moves.Sludge() },
+			[12] = new List<Move>() { new Moves.Amnesia() },
+			[17] = new List<Move>() { new Moves.Acidspray() },
+			[20] = new List<Move>() { new Moves.Encore() },
+			[25] = new List<Move>() { new Moves.Toxic() },
+			[28] = new List<Move>() { new Moves.Stockpile(), new Moves.Spitup(), new Moves.Swallow() },
+			[33] = new List<Move>() { new Moves.Sludgebomb() },
+			[36] = new List<Move>() { new Moves.Gastroacid() },
+			[41] = new List<Move>() { new Moves.Belch() },
+			[44] = new List<Move>() { new Moves.Painsplit() },
+			[49] = new List<Move>() { new Moves.Gunkshot() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Bulletseed(), new Confide(), new Doubleteam(), new Dreameater(), new Endure(), new Explosion(), new Facade(), new Firepunch(), new Frustration(), new Gastroacid(), new Gunkshot(), new Hiddenpower(), new Icebeam(), new Icepunch(), new Infestation(), new Painsplit(), new Poweruppunch(), new Protect(), new Raindance(), new Rest(), new Return(), new Rocksmash(), new Round(), new Seedbomb(), new Shadowball(), new Shockwave(), new Sleeptalk(), new Sludgebomb(), new Sludgewave(), new Snatch(), new Snore(), new Solarbeam(), new Strength(), new Substitute(), new Sunnyday(), new Swagger(), new Thunderpunch(), new Toxic(), new Venoshock(), new Waterpulse() };
-		public override List<Move> EggMoves => new List<Move>() { new Acidarmor(), new Curse(), new Destinybond(), new Gunkshot(), new Mudslap(), new Painsplit(), new Smog(), new Venomdrench() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Bulletseed(), new Moves.Confide(), new Moves.Doubleteam(), new Moves.Dreameater(), new Moves.Endure(), new Moves.Explosion(), new Moves.Facade(), new Moves.Firepunch(), new Moves.Frustration(), new Moves.Gastroacid(), new Moves.Gunkshot(), new Moves.Hiddenpower(), new Moves.Icebeam(), new Moves.Icepunch(), new Moves.Infestation(), new Moves.Painsplit(), new Moves.Poweruppunch(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Return(), new Moves.Rocksmash(), new Moves.Round(), new Moves.Seedbomb(), new Moves.Shadowball(), new Moves.Shockwave(), new Moves.Sleeptalk(), new Moves.Sludgebomb(), new Moves.Sludgewave(), new Moves.Snatch(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Strength(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Thunderpunch(), new Moves.Toxic(), new Moves.Venoshock(), new Moves.Waterpulse() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Acidarmor(), new Moves.Curse(), new Moves.Destinybond(), new Moves.Gunkshot(), new Moves.Mudslap(), new Moves.Painsplit(), new Moves.Smog(), new Moves.Venomdrench() };
 		public override int Weight => 103;
 		public override int ExpYield => 60;
 		public override int CatchRate => 225;

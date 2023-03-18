@@ -9,17 +9,17 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Exeggutor : Pokemon
 	{
 		public override string Name => "Exeggutor";
-		public override List<Ability> AvailableAbilities => new() {new Chlorophyll() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Harvest() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Chlorophyll() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Harvest() };
 		public override Stats BaseStats => new Stats(95, 95, 85, 125, 75, 55);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Grass, PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Stomp() },
-			[1] = new List<Move>() { new Stomp(), new Seedbomb(), new Psyshock(), new Woodhammer(), new Leafstorm(), new Megadrain(), new Confusion(), new Synthesis(), new Bulletseed(), new Gigadrain(), new Extrasensory(), new Uproar(), new Worryseed(), new Solarbeam(), new Absorb(), new Hypnosis(), new Reflect(), new Leechseed() },
+			[0] = new List<Move>() { new Moves.Stomp() },
+			[1] = new List<Move>() { new Moves.Stomp(), new Moves.Seedbomb(), new Moves.Psyshock(), new Moves.Woodhammer(), new Moves.Leafstorm(), new Moves.Megadrain(), new Moves.Confusion(), new Moves.Synthesis(), new Moves.Bulletseed(), new Moves.Gigadrain(), new Moves.Extrasensory(), new Moves.Uproar(), new Moves.Worryseed(), new Moves.Solarbeam(), new Moves.Absorb(), new Moves.Hypnosis(), new Moves.Reflect(), new Moves.Leechseed() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Bulldoze(), new Bulletseed(), new Calmmind(), new Doubleteam(), new Dreameater(), new Endure(), new Energyball(), new Expandingforce(), new Explosion(), new Facade(), new Flash(), new Futuresight(), new Gigadrain(), new Gigaimpact(), new Grassknot(), new Grassyglide(), new Grassyterrain(), new Hiddenpower(), new Hyperbeam(), new Leafstorm(), new Lightscreen(), new Lowkick(), new Magicalleaf(), new Powerswap(), new Protect(), new Psychic(), new Psychocut(), new Psychup(), new Psyshock(), new Reflect(), new Rest(), new Round(), new Seedbomb(), new Selfdestruct(), new Skillswap(), new Sleeptalk(), new Sludgebomb(), new Snore(), new Solarbeam(), new Stompingtantrum(), new Strength(), new Substitute(), new Sunnyday(), new Swagger(), new Swordsdance(), new Terrainpulse(), new Thief(), new Trickroom(), new Uproar(), new Zenheadbutt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Bulldoze(), new Moves.Bulletseed(), new Moves.Calmmind(), new Moves.Doubleteam(), new Moves.Dreameater(), new Moves.Endure(), new Moves.Energyball(), new Moves.Expandingforce(), new Moves.Explosion(), new Moves.Facade(), new Moves.Flash(), new Moves.Futuresight(), new Moves.Gigadrain(), new Moves.Gigaimpact(), new Moves.Grassknot(), new Moves.Grassyglide(), new Moves.Grassyterrain(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Leafstorm(), new Moves.Lightscreen(), new Moves.Lowkick(), new Moves.Magicalleaf(), new Moves.Powerswap(), new Moves.Protect(), new Moves.Psychic(), new Moves.Psychocut(), new Moves.Psychup(), new Moves.Psyshock(), new Moves.Reflect(), new Moves.Rest(), new Moves.Round(), new Moves.Seedbomb(), new Moves.Selfdestruct(), new Moves.Skillswap(), new Moves.Sleeptalk(), new Moves.Sludgebomb(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Stompingtantrum(), new Moves.Strength(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Swordsdance(), new Moves.Terrainpulse(), new Moves.Thief(), new Moves.Trickroom(), new Moves.Uproar(), new Moves.Zenheadbutt() };
 		public override int Weight => 1200;
 		public override int ExpYield => 186;
 		public override int CatchRate => 45;

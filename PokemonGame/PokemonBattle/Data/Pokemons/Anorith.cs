@@ -9,28 +9,28 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Anorith : Pokemon
 	{
 		public override string Name => "Anorith";
-		public override List<Ability> AvailableAbilities => new() {new Battlearmor() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Swiftswim() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Battlearmor() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Swiftswim() };
 		public override Stats BaseStats => new Stats(45, 95, 50, 40, 50, 75);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Erratic;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Bug };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Furycutter(), new Harden() },
-			[4] = new List<Move>() { new Watergun() },
-			[8] = new List<Move>() { new Smackdown() },
-			[12] = new List<Move>() { new Metalclaw() },
-			[16] = new List<Move>() { new Ancientpower() },
-			[20] = new List<Move>() { new Bugbite() },
-			[24] = new List<Move>() { new Brine() },
-			[28] = new List<Move>() { new Slash() },
-			[32] = new List<Move>() { new Crushclaw() },
-			[36] = new List<Move>() { new Rockblast() },
-			[41] = new List<Move>() { new Protect() },
-			[44] = new List<Move>() { new Xscissor() },
+			[1] = new List<Move>() { new Moves.Furycutter(), new Moves.Harden() },
+			[4] = new List<Move>() { new Moves.Watergun() },
+			[8] = new List<Move>() { new Moves.Smackdown() },
+			[12] = new List<Move>() { new Moves.Metalclaw() },
+			[16] = new List<Move>() { new Moves.Ancientpower() },
+			[20] = new List<Move>() { new Moves.Bugbite() },
+			[24] = new List<Move>() { new Moves.Brine() },
+			[28] = new List<Move>() { new Moves.Slash() },
+			[32] = new List<Move>() { new Moves.Crushclaw() },
+			[36] = new List<Move>() { new Moves.Rockblast() },
+			[41] = new List<Move>() { new Moves.Protect() },
+			[44] = new List<Move>() { new Moves.Xscissor() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Aerialace(), new Attract(), new Bodyslam(), new Brickbreak(), new Brine(), new Crosspoison(), new Cut(), new Dig(), new Doubleteam(), new Earthpower(), new Endure(), new Facade(), new Falseswipe(), new Hiddenpower(), new Irondefense(), new Meteorbeam(), new Mudshot(), new Protect(), new Rest(), new Rockblast(), new Rockpolish(), new Rockslide(), new Rocksmash(), new Rocktomb(), new Round(), new Sandstorm(), new Screech(), new Sleeptalk(), new Snore(), new Stealthrock(), new Substitute(), new Sunnyday(), new Swagger(), new Swordsdance(), new Waterpulse(), new Xscissor() };
-		public override List<Move> EggMoves => new List<Move>() { new Aquajet(), new Crosspoison(), new Curse(), new Irondefense(), new Knockoff(), new Rapidspin(), new Sandattack(), new Screech() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Aerialace(), new Moves.Attract(), new Moves.Bodyslam(), new Moves.Brickbreak(), new Moves.Brine(), new Moves.Crosspoison(), new Moves.Cut(), new Moves.Dig(), new Moves.Doubleteam(), new Moves.Earthpower(), new Moves.Endure(), new Moves.Facade(), new Moves.Falseswipe(), new Moves.Hiddenpower(), new Moves.Irondefense(), new Moves.Meteorbeam(), new Moves.Mudshot(), new Moves.Protect(), new Moves.Rest(), new Moves.Rockblast(), new Moves.Rockpolish(), new Moves.Rockslide(), new Moves.Rocksmash(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Sandstorm(), new Moves.Screech(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Stealthrock(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Swordsdance(), new Moves.Waterpulse(), new Moves.Xscissor() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Aquajet(), new Moves.Crosspoison(), new Moves.Curse(), new Moves.Irondefense(), new Moves.Knockoff(), new Moves.Rapidspin(), new Moves.Sandattack(), new Moves.Screech() };
 		public override int Weight => 125;
 		public override int ExpYield => 71;
 		public override int CatchRate => 45;

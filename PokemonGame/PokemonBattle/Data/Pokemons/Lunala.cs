@@ -9,28 +9,28 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Lunala : Pokemon
 	{
 		public override string Name => "Lunala";
-		public override List<Ability> AvailableAbilities => new() {new Shadowshield() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Shadowshield() };
 		public override Stats BaseStats => new Stats(137, 113, 89, 137, 107, 97);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic, PokemonType.Ghost };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Moongeistbeam() },
-			[1] = new List<Move>() { new Moongeistbeam(), new Cosmicpower(), new Teleport(), new Confusion(), new Hypnosis() },
-			[7] = new List<Move>() { new Nightshade() },
-			[14] = new List<Move>() { new Confuseray() },
-			[21] = new List<Move>() { new Airslash() },
-			[28] = new List<Move>() { new Shadowball() },
-			[35] = new List<Move>() { new Moonlight() },
-			[42] = new List<Move>() { new Nightdaze() },
-			[49] = new List<Move>() { new Magiccoat() },
-			[56] = new List<Move>() { new Moonblast() },
-			[63] = new List<Move>() { new Phantomforce() },
-			[70] = new List<Move>() { new Dreameater() },
-			[77] = new List<Move>() { new Wideguard() },
-			[84] = new List<Move>() { new Hyperbeam() },
+			[0] = new List<Move>() { new Moves.Moongeistbeam() },
+			[1] = new List<Move>() { new Moves.Moongeistbeam(), new Moves.Cosmicpower(), new Moves.Teleport(), new Moves.Confusion(), new Moves.Hypnosis() },
+			[7] = new List<Move>() { new Moves.Nightshade() },
+			[14] = new List<Move>() { new Moves.Confuseray() },
+			[21] = new List<Move>() { new Moves.Airslash() },
+			[28] = new List<Move>() { new Moves.Shadowball() },
+			[35] = new List<Move>() { new Moves.Moonlight() },
+			[42] = new List<Move>() { new Moves.Nightdaze() },
+			[49] = new List<Move>() { new Moves.Magiccoat() },
+			[56] = new List<Move>() { new Moves.Moonblast() },
+			[63] = new List<Move>() { new Moves.Phantomforce() },
+			[70] = new List<Move>() { new Moves.Dreameater() },
+			[77] = new List<Move>() { new Moves.Wideguard() },
+			[84] = new List<Move>() { new Moves.Hyperbeam() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Acrobatics(), new Agility(), new Airslash(), new Blizzard(), new Calmmind(), new Cosmicpower(), new Dazzlinggleam(), new Dualwingbeat(), new Endure(), new Expandingforce(), new Facade(), new Fly(), new Focusblast(), new Futuresight(), new Gigaimpact(), new Heatwave(), new Helpinghand(), new Hex(), new Hiddenpower(), new Hyperbeam(), new Icebeam(), new Icywind(), new Lightscreen(), new Magicroom(), new Meteorbeam(), new Phantomforce(), new Poltergeist(), new Protect(), new Psychic(), new Psychocut(), new Psyshock(), new Reflect(), new Rest(), new Round(), new Safeguard(), new Scaryface(), new Shadowball(), new Shadowclaw(), new Sleeptalk(), new Snore(), new Solarbeam(), new Substitute(), new Sunnyday(), new Swift(), new Thunder(), new Thunderbolt(), new Thunderwave(), new Trick(), new Trickroom(), new Willowisp(), new Wonderroom(), new Workup() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Acrobatics(), new Moves.Agility(), new Moves.Airslash(), new Moves.Blizzard(), new Moves.Calmmind(), new Moves.Cosmicpower(), new Moves.Dazzlinggleam(), new Moves.Dualwingbeat(), new Moves.Endure(), new Moves.Expandingforce(), new Moves.Facade(), new Moves.Fly(), new Moves.Focusblast(), new Moves.Futuresight(), new Moves.Gigaimpact(), new Moves.Heatwave(), new Moves.Helpinghand(), new Moves.Hex(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Icebeam(), new Moves.Icywind(), new Moves.Lightscreen(), new Moves.Magicroom(), new Moves.Meteorbeam(), new Moves.Phantomforce(), new Moves.Poltergeist(), new Moves.Protect(), new Moves.Psychic(), new Moves.Psychocut(), new Moves.Psyshock(), new Moves.Reflect(), new Moves.Rest(), new Moves.Round(), new Moves.Safeguard(), new Moves.Scaryface(), new Moves.Shadowball(), new Moves.Shadowclaw(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swift(), new Moves.Thunder(), new Moves.Thunderbolt(), new Moves.Thunderwave(), new Moves.Trick(), new Moves.Trickroom(), new Moves.Willowisp(), new Moves.Wonderroom(), new Moves.Workup() };
 		public override int Weight => 1200;
 		public override int ExpYield => 340;
 		public override int CatchRate => 45;

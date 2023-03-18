@@ -9,27 +9,27 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Dialga : Pokemon
 	{
 		public override string Name => "Dialga";
-		public override List<Ability> AvailableAbilities => new() {new Pressure() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Telepathy() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Pressure() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Telepathy() };
 		public override Stats BaseStats => new Stats(100, 120, 120, 150, 100, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Steel, PokemonType.Dragon };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Scaryface(), new Metalclaw() },
-			[8] = new List<Move>() { new Dragonbreath() },
-			[16] = new List<Move>() { new Ancientpower() },
-			[24] = new List<Move>() { new Slash() },
-			[32] = new List<Move>() { new Flashcannon() },
-			[40] = new List<Move>() { new Roaroftime() },
-			[48] = new List<Move>() { new Dragonclaw() },
-			[56] = new List<Move>() { new Aurasphere() },
-			[64] = new List<Move>() { new Powergem() },
-			[72] = new List<Move>() { new Metalburst() },
-			[80] = new List<Move>() { new Earthpower() },
-			[88] = new List<Move>() { new Irontail() },
+			[1] = new List<Move>() { new Moves.Scaryface(), new Moves.Metalclaw() },
+			[8] = new List<Move>() { new Moves.Dragonbreath() },
+			[16] = new List<Move>() { new Moves.Ancientpower() },
+			[24] = new List<Move>() { new Moves.Slash() },
+			[32] = new List<Move>() { new Moves.Flashcannon() },
+			[40] = new List<Move>() { new Moves.Roaroftime() },
+			[48] = new List<Move>() { new Moves.Dragonclaw() },
+			[56] = new List<Move>() { new Moves.Aurasphere() },
+			[64] = new List<Move>() { new Moves.Powergem() },
+			[72] = new List<Move>() { new Moves.Metalburst() },
+			[80] = new List<Move>() { new Moves.Earthpower() },
+			[88] = new List<Move>() { new Moves.Irontail() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Aerialace(), new Aurasphere(), new Blizzard(), new Bodypress(), new Bodyslam(), new Breakingswipe(), new Brickbreak(), new Bulkup(), new Bulldoze(), new Cut(), new Doubleteam(), new Dracometeor(), new Dragonclaw(), new Dragonpulse(), new Earthpower(), new Earthquake(), new Endure(), new Facade(), new Fireblast(), new Flamethrower(), new Flash(), new Flashcannon(), new Gigaimpact(), new Heavyslam(), new Hiddenpower(), new Hyperbeam(), new Hypervoice(), new Icebeam(), new Irondefense(), new Ironhead(), new Irontail(), new Outrage(), new Overheat(), new Powergem(), new Protect(), new Psychup(), new Raindance(), new Rest(), new Roar(), new Rockslide(), new Rocksmash(), new Rocktomb(), new Round(), new Safeguard(), new Sandstorm(), new Scaleshot(), new Scaryface(), new Shadowclaw(), new Shockwave(), new Sleeptalk(), new Snore(), new Stealthrock(), new Steelbeam(), new Stompingtantrum(), new Stoneedge(), new Strength(), new Substitute(), new Sunnyday(), new Swagger(), new Swift(), new Thunder(), new Thunderbolt(), new Thunderwave(), new Trickroom() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Aerialace(), new Moves.Aurasphere(), new Moves.Blizzard(), new Moves.Bodypress(), new Moves.Bodyslam(), new Moves.Breakingswipe(), new Moves.Brickbreak(), new Moves.Bulkup(), new Moves.Bulldoze(), new Moves.Cut(), new Moves.Doubleteam(), new Moves.Dracometeor(), new Moves.Dragonclaw(), new Moves.Dragonpulse(), new Moves.Earthpower(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Facade(), new Moves.Fireblast(), new Moves.Flamethrower(), new Moves.Flash(), new Moves.Flashcannon(), new Moves.Gigaimpact(), new Moves.Heavyslam(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Hypervoice(), new Moves.Icebeam(), new Moves.Irondefense(), new Moves.Ironhead(), new Moves.Irontail(), new Moves.Outrage(), new Moves.Overheat(), new Moves.Powergem(), new Moves.Protect(), new Moves.Psychup(), new Moves.Raindance(), new Moves.Rest(), new Moves.Roar(), new Moves.Rockslide(), new Moves.Rocksmash(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Safeguard(), new Moves.Sandstorm(), new Moves.Scaleshot(), new Moves.Scaryface(), new Moves.Shadowclaw(), new Moves.Shockwave(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Stealthrock(), new Moves.Steelbeam(), new Moves.Stompingtantrum(), new Moves.Stoneedge(), new Moves.Strength(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Swift(), new Moves.Thunder(), new Moves.Thunderbolt(), new Moves.Thunderwave(), new Moves.Trickroom() };
 		public override int Weight => 6830;
 		public override int ExpYield => 340;
 		public override int CatchRate => 3;

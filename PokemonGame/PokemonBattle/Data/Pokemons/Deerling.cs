@@ -9,30 +9,30 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Deerling : Pokemon
 	{
 		public override string Name => "Deerling";
-		public override List<Ability> AvailableAbilities => new() {new Chlorophyll(), new Sapsipper() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Serenegrace() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Chlorophyll(), new Abilities.Sapsipper() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Serenegrace() };
 		public override Stats BaseStats => new Stats(60, 60, 50, 40, 50, 75);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal, PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Tackle(), new Camouflage() },
-			[4] = new List<Move>() { new Growl() },
-			[7] = new List<Move>() { new Sandattack() },
-			[10] = new List<Move>() { new Doublekick() },
-			[13] = new List<Move>() { new Leechseed() },
-			[16] = new List<Move>() { new Feintattack() },
-			[20] = new List<Move>() { new Takedown() },
-			[24] = new List<Move>() { new Jumpkick() },
-			[28] = new List<Move>() { new Aromatherapy() },
-			[32] = new List<Move>() { new Energyball() },
-			[36] = new List<Move>() { new Charm() },
-			[41] = new List<Move>() { new Naturepower() },
-			[46] = new List<Move>() { new Doubleedge() },
-			[51] = new List<Move>() { new Solarbeam() },
+			[1] = new List<Move>() { new Moves.Tackle(), new Moves.Camouflage() },
+			[4] = new List<Move>() { new Moves.Growl() },
+			[7] = new List<Move>() { new Moves.Sandattack() },
+			[10] = new List<Move>() { new Moves.Doublekick() },
+			[13] = new List<Move>() { new Moves.Leechseed() },
+			[16] = new List<Move>() { new Moves.Feintattack() },
+			[20] = new List<Move>() { new Moves.Takedown() },
+			[24] = new List<Move>() { new Moves.Jumpkick() },
+			[28] = new List<Move>() { new Moves.Aromatherapy() },
+			[32] = new List<Move>() { new Moves.Energyball() },
+			[36] = new List<Move>() { new Moves.Charm() },
+			[41] = new List<Move>() { new Moves.Naturepower() },
+			[46] = new List<Move>() { new Moves.Doubleedge() },
+			[51] = new List<Move>() { new Moves.Solarbeam() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Bounce(), new Confide(), new Doubleteam(), new Echoedvoice(), new Energyball(), new Facade(), new Frustration(), new Gigadrain(), new Grassknot(), new Hiddenpower(), new Lastresort(), new Lightscreen(), new Naturepower(), new Protect(), new Raindance(), new Rest(), new Return(), new Round(), new Safeguard(), new Seedbomb(), new Shadowball(), new Sleeptalk(), new Snore(), new Solarbeam(), new Substitute(), new Sunnyday(), new Swagger(), new Synthesis(), new Thunderwave(), new Toxic(), new Wildcharge(), new Workup(), new Worryseed() };
-		public override List<Move> EggMoves => new List<Move>() { new Agility(), new Batonpass(), new Faketears(), new Grasswhistle(), new Headbutt(), new Naturalgift(), new Odorsleuth(), new Sleeptalk(), new Synthesis(), new Worryseed() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Bounce(), new Moves.Confide(), new Moves.Doubleteam(), new Moves.Echoedvoice(), new Moves.Energyball(), new Moves.Facade(), new Moves.Frustration(), new Moves.Gigadrain(), new Moves.Grassknot(), new Moves.Hiddenpower(), new Moves.Lastresort(), new Moves.Lightscreen(), new Moves.Naturepower(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Return(), new Moves.Round(), new Moves.Safeguard(), new Moves.Seedbomb(), new Moves.Shadowball(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Synthesis(), new Moves.Thunderwave(), new Moves.Toxic(), new Moves.Wildcharge(), new Moves.Workup(), new Moves.Worryseed() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Agility(), new Moves.Batonpass(), new Moves.Faketears(), new Moves.Grasswhistle(), new Moves.Headbutt(), new Moves.Naturalgift(), new Moves.Odorsleuth(), new Moves.Sleeptalk(), new Moves.Synthesis(), new Moves.Worryseed() };
 		public override int Weight => 195;
 		public override int ExpYield => 67;
 		public override int CatchRate => 190;

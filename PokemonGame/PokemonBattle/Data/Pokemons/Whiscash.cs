@@ -9,24 +9,24 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Whiscash : Pokemon
 	{
 		public override string Name => "Whiscash";
-		public override List<Ability> AvailableAbilities => new() {new Oblivious(), new Anticipation() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Hydration() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Oblivious(), new Abilities.Anticipation() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Hydration() };
 		public override Stats BaseStats => new Stats(110, 78, 73, 76, 71, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Water, PokemonType.Ground };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Thrash() },
-			[1] = new List<Move>() { new Thrash(), new Belch(), new Zenheadbutt(), new Tickle(), new Mudslap(), new Watergun(), new Rest(), new Snore() },
-			[12] = new List<Move>() { new Waterpulse() },
-			[18] = new List<Move>() { new Amnesia() },
-			[24] = new List<Move>() { new Aquatail() },
-			[33] = new List<Move>() { new Muddywater() },
-			[40] = new List<Move>() { new Earthquake() },
-			[48] = new List<Move>() { new Futuresight() },
-			[56] = new List<Move>() { new Fissure() },
+			[0] = new List<Move>() { new Moves.Thrash() },
+			[1] = new List<Move>() { new Moves.Thrash(), new Moves.Belch(), new Moves.Zenheadbutt(), new Moves.Tickle(), new Moves.Mudslap(), new Moves.Watergun(), new Moves.Rest(), new Moves.Snore() },
+			[12] = new List<Move>() { new Moves.Waterpulse() },
+			[18] = new List<Move>() { new Moves.Amnesia() },
+			[24] = new List<Move>() { new Moves.Aquatail() },
+			[33] = new List<Move>() { new Moves.Muddywater() },
+			[40] = new List<Move>() { new Moves.Earthquake() },
+			[48] = new List<Move>() { new Moves.Futuresight() },
+			[56] = new List<Move>() { new Moves.Fissure() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Amnesia(), new Attract(), new Blizzard(), new Bounce(), new Bulldoze(), new Dive(), new Doubleteam(), new Dragondance(), new Earthpower(), new Earthquake(), new Endure(), new Facade(), new Futuresight(), new Gigaimpact(), new Hail(), new Hiddenpower(), new Hydropump(), new Hyperbeam(), new Icebeam(), new Icywind(), new Liquidation(), new Muddywater(), new Mudshot(), new Protect(), new Raindance(), new Rest(), new Rockslide(), new Rocksmash(), new Rocktomb(), new Round(), new Sandstorm(), new Sandtomb(), new Scald(), new Sleeptalk(), new Snore(), new Stompingtantrum(), new Stoneedge(), new Strength(), new Substitute(), new Surf(), new Swagger(), new Uproar(), new Waterfall(), new Waterpulse(), new Weatherball(), new Whirlpool(), new Zenheadbutt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Amnesia(), new Moves.Attract(), new Moves.Blizzard(), new Moves.Bounce(), new Moves.Bulldoze(), new Moves.Dive(), new Moves.Doubleteam(), new Moves.Dragondance(), new Moves.Earthpower(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Facade(), new Moves.Futuresight(), new Moves.Gigaimpact(), new Moves.Hail(), new Moves.Hiddenpower(), new Moves.Hydropump(), new Moves.Hyperbeam(), new Moves.Icebeam(), new Moves.Icywind(), new Moves.Liquidation(), new Moves.Muddywater(), new Moves.Mudshot(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Rockslide(), new Moves.Rocksmash(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Sandstorm(), new Moves.Sandtomb(), new Moves.Scald(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Stompingtantrum(), new Moves.Stoneedge(), new Moves.Strength(), new Moves.Substitute(), new Moves.Surf(), new Moves.Swagger(), new Moves.Uproar(), new Moves.Waterfall(), new Moves.Waterpulse(), new Moves.Weatherball(), new Moves.Whirlpool(), new Moves.Zenheadbutt() };
 		public override int Weight => 236;
 		public override int ExpYield => 164;
 		public override int CatchRate => 75;

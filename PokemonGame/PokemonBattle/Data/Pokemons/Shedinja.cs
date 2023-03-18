@@ -9,23 +9,23 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Shedinja : Pokemon
 	{
 		public override string Name => "Shedinja";
-		public override List<Ability> AvailableAbilities => new() {new Wonderguard() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Wonderguard() };
 		public override Stats BaseStats => new Stats(1, 90, 45, 30, 30, 40);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Erratic;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Ghost };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Shadowclaw(), new Grudge(), new Mudslap(), new Metalclaw(), new Dig(), new Scratch(), new Sandattack(), new Harden(), new Falseswipe() },
-			[15] = new List<Move>() { new Confuseray() },
-			[23] = new List<Move>() { new Absorb() },
-			[29] = new List<Move>() { new Shadowsneak() },
-			[36] = new List<Move>() { new Furyswipes() },
-			[43] = new List<Move>() { new Mindreader() },
-			[50] = new List<Move>() { new Shadowball() },
-			[57] = new List<Move>() { new Spite() },
-			[64] = new List<Move>() { new Phantomforce() },
+			[1] = new List<Move>() { new Moves.Shadowclaw(), new Moves.Grudge(), new Moves.Mudslap(), new Moves.Metalclaw(), new Moves.Dig(), new Moves.Scratch(), new Moves.Sandattack(), new Moves.Harden(), new Moves.Falseswipe() },
+			[15] = new List<Move>() { new Moves.Confuseray() },
+			[23] = new List<Move>() { new Moves.Absorb() },
+			[29] = new List<Move>() { new Moves.Shadowsneak() },
+			[36] = new List<Move>() { new Moves.Furyswipes() },
+			[43] = new List<Move>() { new Moves.Mindreader() },
+			[50] = new List<Move>() { new Moves.Shadowball() },
+			[57] = new List<Move>() { new Moves.Spite() },
+			[64] = new List<Move>() { new Moves.Phantomforce() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Aerialace(), new Agility(), new Allyswitch(), new Bugbuzz(), new Cut(), new Dig(), new Doubleteam(), new Dreameater(), new Endure(), new Facade(), new Falseswipe(), new Flash(), new Gigadrain(), new Gigaimpact(), new Hex(), new Hiddenpower(), new Hyperbeam(), new Leechlife(), new Phantomforce(), new Poltergeist(), new Protect(), new Rest(), new Round(), new Sandstorm(), new Shadowball(), new Shadowclaw(), new Skittersmack(), new Sleeptalk(), new Snore(), new Solarbeam(), new Substitute(), new Sunnyday(), new Swagger(), new Thief(), new Trick(), new Willowisp(), new Xscissor() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Aerialace(), new Moves.Agility(), new Moves.Allyswitch(), new Moves.Bugbuzz(), new Moves.Cut(), new Moves.Dig(), new Moves.Doubleteam(), new Moves.Dreameater(), new Moves.Endure(), new Moves.Facade(), new Moves.Falseswipe(), new Moves.Flash(), new Moves.Gigadrain(), new Moves.Gigaimpact(), new Moves.Hex(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Leechlife(), new Moves.Phantomforce(), new Moves.Poltergeist(), new Moves.Protect(), new Moves.Rest(), new Moves.Round(), new Moves.Sandstorm(), new Moves.Shadowball(), new Moves.Shadowclaw(), new Moves.Skittersmack(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Thief(), new Moves.Trick(), new Moves.Willowisp(), new Moves.Xscissor() };
 		public override int Weight => 12;
 		public override int ExpYield => 83;
 		public override int CatchRate => 45;

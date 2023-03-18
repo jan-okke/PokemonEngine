@@ -9,27 +9,27 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Swinub : Pokemon
 	{
 		public override string Name => "Swinub";
-		public override List<Ability> AvailableAbilities => new() {new Oblivious(), new Snowcloak() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Thickfat() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Oblivious(), new Abilities.Snowcloak() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Thickfat() };
 		public override Stats BaseStats => new Stats(50, 50, 40, 30, 30, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Ice, PokemonType.Ground };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Tackle(), new Mudslap() },
-			[5] = new List<Move>() { new Powdersnow() },
-			[10] = new List<Move>() { new Flail() },
-			[15] = new List<Move>() { new Iceshard() },
-			[20] = new List<Move>() { new Mist() },
-			[25] = new List<Move>() { new Endure() },
-			[30] = new List<Move>() { new Icywind() },
-			[35] = new List<Move>() { new Amnesia() },
-			[40] = new List<Move>() { new Takedown() },
-			[45] = new List<Move>() { new Earthquake() },
-			[50] = new List<Move>() { new Blizzard() },
+			[1] = new List<Move>() { new Moves.Tackle(), new Moves.Mudslap() },
+			[5] = new List<Move>() { new Moves.Powdersnow() },
+			[10] = new List<Move>() { new Moves.Flail() },
+			[15] = new List<Move>() { new Moves.Iceshard() },
+			[20] = new List<Move>() { new Moves.Mist() },
+			[25] = new List<Move>() { new Moves.Endure() },
+			[30] = new List<Move>() { new Moves.Icywind() },
+			[35] = new List<Move>() { new Moves.Amnesia() },
+			[40] = new List<Move>() { new Moves.Takedown() },
+			[45] = new List<Move>() { new Moves.Earthquake() },
+			[50] = new List<Move>() { new Moves.Blizzard() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Amnesia(), new Attract(), new Avalanche(), new Blizzard(), new Bodyslam(), new Bulldoze(), new Dig(), new Doubleteam(), new Earthpower(), new Earthquake(), new Endure(), new Facade(), new Hail(), new Hiddenpower(), new Icebeam(), new Iciclespear(), new Icywind(), new Lightscreen(), new Mudshot(), new Protect(), new Raindance(), new Reflect(), new Rest(), new Roar(), new Rockslide(), new Rocksmash(), new Rocktomb(), new Round(), new Sandstorm(), new Sandtomb(), new Scaryface(), new Sleeptalk(), new Snore(), new Stealthrock(), new Strength(), new Substitute(), new Superpower(), new Swagger() };
-		public override List<Move> EggMoves => new List<Move>() { new Ancientpower(), new Bite(), new Bodyslam(), new Curse(), new Doubleedge(), new Fissure(), new Freezedry(), new Iciclecrash(), new Iciclespear(), new Mudshot(), new Mudshot(), new Takedown() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Amnesia(), new Moves.Attract(), new Moves.Avalanche(), new Moves.Blizzard(), new Moves.Bodyslam(), new Moves.Bulldoze(), new Moves.Dig(), new Moves.Doubleteam(), new Moves.Earthpower(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Facade(), new Moves.Hail(), new Moves.Hiddenpower(), new Moves.Icebeam(), new Moves.Iciclespear(), new Moves.Icywind(), new Moves.Lightscreen(), new Moves.Mudshot(), new Moves.Protect(), new Moves.Raindance(), new Moves.Reflect(), new Moves.Rest(), new Moves.Roar(), new Moves.Rockslide(), new Moves.Rocksmash(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Sandstorm(), new Moves.Sandtomb(), new Moves.Scaryface(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Stealthrock(), new Moves.Strength(), new Moves.Substitute(), new Moves.Superpower(), new Moves.Swagger() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Ancientpower(), new Moves.Bite(), new Moves.Bodyslam(), new Moves.Curse(), new Moves.Doubleedge(), new Moves.Fissure(), new Moves.Freezedry(), new Moves.Iciclecrash(), new Moves.Iciclespear(), new Moves.Mudshot(), new Moves.Mudshot(), new Moves.Takedown() };
 		public override int Weight => 65;
 		public override int ExpYield => 50;
 		public override int CatchRate => 225;

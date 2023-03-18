@@ -9,29 +9,29 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Dwebble : Pokemon
 	{
 		public override string Name => "Dwebble";
-		public override List<Ability> AvailableAbilities => new() {new Sturdy(), new Shellarmor() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Weakarmor() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Sturdy(), new Abilities.Shellarmor() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Weakarmor() };
 		public override Stats BaseStats => new Stats(50, 65, 85, 35, 35, 55);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Rock };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Furycutter(), new Sandattack() },
-			[4] = new List<Move>() { new Withdraw() },
-			[8] = new List<Move>() { new Smackdown() },
-			[12] = new List<Move>() { new Bugbite() },
-			[16] = new List<Move>() { new Flail() },
-			[20] = new List<Move>() { new Slash() },
-			[24] = new List<Move>() { new Rockslide() },
-			[28] = new List<Move>() { new Stealthrock() },
-			[32] = new List<Move>() { new Rockblast() },
-			[36] = new List<Move>() { new Xscissor() },
-			[40] = new List<Move>() { new Rockpolish() },
-			[44] = new List<Move>() { new Shellsmash() },
-			[48] = new List<Move>() { new Rockwrecker() },
+			[1] = new List<Move>() { new Moves.Furycutter(), new Moves.Sandattack() },
+			[4] = new List<Move>() { new Moves.Withdraw() },
+			[8] = new List<Move>() { new Moves.Smackdown() },
+			[12] = new List<Move>() { new Moves.Bugbite() },
+			[16] = new List<Move>() { new Moves.Flail() },
+			[20] = new List<Move>() { new Moves.Slash() },
+			[24] = new List<Move>() { new Moves.Rockslide() },
+			[28] = new List<Move>() { new Moves.Stealthrock() },
+			[32] = new List<Move>() { new Moves.Rockblast() },
+			[36] = new List<Move>() { new Moves.Xscissor() },
+			[40] = new List<Move>() { new Moves.Rockpolish() },
+			[44] = new List<Move>() { new Moves.Shellsmash() },
+			[48] = new List<Move>() { new Moves.Rockwrecker() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Bulldoze(), new Dig(), new Earthquake(), new Endure(), new Facade(), new Hiddenpower(), new Irondefense(), new Poisonjab(), new Protect(), new Rest(), new Rockblast(), new Rockslide(), new Rocktomb(), new Round(), new Sandstorm(), new Sandtomb(), new Shadowclaw(), new Skittersmack(), new Sleeptalk(), new Snore(), new Solarbeam(), new Spikes(), new Stealthrock(), new Stoneedge(), new Substitute(), new Swordsdance(), new Xscissor() };
-		public override List<Move> EggMoves => new List<Move>() { new Block(), new Counter(), new Curse(), new Knockoff(), new Nightslash(), new Wideguard() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Bulldoze(), new Moves.Dig(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Facade(), new Moves.Hiddenpower(), new Moves.Irondefense(), new Moves.Poisonjab(), new Moves.Protect(), new Moves.Rest(), new Moves.Rockblast(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Sandstorm(), new Moves.Sandtomb(), new Moves.Shadowclaw(), new Moves.Skittersmack(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Spikes(), new Moves.Stealthrock(), new Moves.Stoneedge(), new Moves.Substitute(), new Moves.Swordsdance(), new Moves.Xscissor() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Block(), new Moves.Counter(), new Moves.Curse(), new Moves.Knockoff(), new Moves.Nightslash(), new Moves.Wideguard() };
 		public override int Weight => 145;
 		public override int ExpYield => 65;
 		public override int CatchRate => 190;

@@ -9,29 +9,29 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Tropius : Pokemon
 	{
 		public override string Name => "Tropius";
-		public override List<Ability> AvailableAbilities => new() {new Chlorophyll(), new Solarpower() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Harvest() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Chlorophyll(), new Abilities.Solarpower() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Harvest() };
 		public override Stats BaseStats => new Stats(99, 68, 83, 72, 87, 51);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Grass, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Leafstorm(), new Leer(), new Gust(), new Growth(), new Razorleaf() },
-			[6] = new List<Move>() { new Sweetscent() },
-			[10] = new List<Move>() { new Stomp() },
-			[16] = new List<Move>() { new Magicalleaf() },
-			[21] = new List<Move>() { new Whirlwind() },
-			[26] = new List<Move>() { new Leaftornado() },
-			[30] = new List<Move>() { new Dragondance() },
-			[36] = new List<Move>() { new Airslash() },
-			[41] = new List<Move>() { new Bodyslam() },
-			[46] = new List<Move>() { new Dragonhammer() },
-			[50] = new List<Move>() { new Synthesis() },
-			[56] = new List<Move>() { new Solarbeam() },
-			[61] = new List<Move>() { new Leafstorm() },
+			[1] = new List<Move>() { new Moves.Leafstorm(), new Moves.Leer(), new Moves.Gust(), new Moves.Growth(), new Moves.Razorleaf() },
+			[6] = new List<Move>() { new Moves.Sweetscent() },
+			[10] = new List<Move>() { new Moves.Stomp() },
+			[16] = new List<Move>() { new Moves.Magicalleaf() },
+			[21] = new List<Move>() { new Moves.Whirlwind() },
+			[26] = new List<Move>() { new Moves.Leaftornado() },
+			[30] = new List<Move>() { new Moves.Dragondance() },
+			[36] = new List<Move>() { new Moves.Airslash() },
+			[41] = new List<Move>() { new Moves.Bodyslam() },
+			[46] = new List<Move>() { new Moves.Dragonhammer() },
+			[50] = new List<Move>() { new Moves.Synthesis() },
+			[56] = new List<Move>() { new Moves.Solarbeam() },
+			[61] = new List<Move>() { new Moves.Leafstorm() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Aerialace(), new Attract(), new Brutalswing(), new Bulldoze(), new Bulletseed(), new Confide(), new Cut(), new Defog(), new Doubleteam(), new Dragonpulse(), new Earthquake(), new Endure(), new Energyball(), new Facade(), new Flash(), new Fly(), new Frustration(), new Gigadrain(), new Gigaimpact(), new Grassknot(), new Hiddenpower(), new Hyperbeam(), new Naturepower(), new Outrage(), new Protect(), new Rest(), new Return(), new Roar(), new Rocksmash(), new Roost(), new Round(), new Safeguard(), new Seedbomb(), new Sleeptalk(), new Snore(), new Solarbeam(), new Steelwing(), new Stompingtantrum(), new Strength(), new Substitute(), new Sunnyday(), new Swagger(), new Swordsdance(), new Synthesis(), new Tailwind(), new Worryseed() };
-		public override List<Move> EggMoves => new List<Move>() { new Curse(), new Dragondance(), new Dragonhammer(), new Headbutt(), new Leafblade(), new Leafstorm(), new Leechseed(), new Naturepower(), new Slam(), new Synthesis() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Aerialace(), new Moves.Attract(), new Moves.Brutalswing(), new Moves.Bulldoze(), new Moves.Bulletseed(), new Moves.Confide(), new Moves.Cut(), new Moves.Defog(), new Moves.Doubleteam(), new Moves.Dragonpulse(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Energyball(), new Moves.Facade(), new Moves.Flash(), new Moves.Fly(), new Moves.Frustration(), new Moves.Gigadrain(), new Moves.Gigaimpact(), new Moves.Grassknot(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Naturepower(), new Moves.Outrage(), new Moves.Protect(), new Moves.Rest(), new Moves.Return(), new Moves.Roar(), new Moves.Rocksmash(), new Moves.Roost(), new Moves.Round(), new Moves.Safeguard(), new Moves.Seedbomb(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Steelwing(), new Moves.Stompingtantrum(), new Moves.Strength(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Swordsdance(), new Moves.Synthesis(), new Moves.Tailwind(), new Moves.Worryseed() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Curse(), new Moves.Dragondance(), new Moves.Dragonhammer(), new Moves.Headbutt(), new Moves.Leafblade(), new Moves.Leafstorm(), new Moves.Leechseed(), new Moves.Naturepower(), new Moves.Slam(), new Moves.Synthesis() };
 		public override int Weight => 1000;
 		public override int ExpYield => 161;
 		public override int CatchRate => 200;

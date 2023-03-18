@@ -9,29 +9,29 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Hydreigon : Pokemon
 	{
 		public override string Name => "Hydreigon";
-		public override List<Ability> AvailableAbilities => new() {new Levitate() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Levitate() };
 		public override Stats BaseStats => new Stats(92, 105, 90, 125, 90, 98);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dark, PokemonType.Dragon };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Tackle(), new Doublehit(), new Triattack(), new Focusenergy(), new Dragonbreath(), new Bite() },
-			[12] = new List<Move>() { new Roar() },
-			[16] = new List<Move>() { new Assurance() },
-			[20] = new List<Move>() { new Headbutt() },
-			[24] = new List<Move>() { new Workup() },
-			[28] = new List<Move>() { new Slam() },
-			[32] = new List<Move>() { new Crunch() },
-			[36] = new List<Move>() { new Scaryface() },
-			[40] = new List<Move>() { new Dragonpulse() },
-			[44] = new List<Move>() { new Bodyslam() },
-			[48] = new List<Move>() { new Hypervoice() },
-			[54] = new List<Move>() { new Dragonrush() },
-			[60] = new List<Move>() { new Nastyplot() },
-			[68] = new List<Move>() { new Outrage() },
-			[76] = new List<Move>() { new Hyperbeam() },
+			[1] = new List<Move>() { new Moves.Tackle(), new Moves.Doublehit(), new Moves.Triattack(), new Moves.Focusenergy(), new Moves.Dragonbreath(), new Moves.Bite() },
+			[12] = new List<Move>() { new Moves.Roar() },
+			[16] = new List<Move>() { new Moves.Assurance() },
+			[20] = new List<Move>() { new Moves.Headbutt() },
+			[24] = new List<Move>() { new Moves.Workup() },
+			[28] = new List<Move>() { new Moves.Slam() },
+			[32] = new List<Move>() { new Moves.Crunch() },
+			[36] = new List<Move>() { new Moves.Scaryface() },
+			[40] = new List<Move>() { new Moves.Dragonpulse() },
+			[44] = new List<Move>() { new Moves.Bodyslam() },
+			[48] = new List<Move>() { new Moves.Hypervoice() },
+			[54] = new List<Move>() { new Moves.Dragonrush() },
+			[60] = new List<Move>() { new Moves.Nastyplot() },
+			[68] = new List<Move>() { new Moves.Outrage() },
+			[76] = new List<Move>() { new Moves.Hyperbeam() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Acrobatics(), new Assurance(), new Attract(), new Beatup(), new Bodyslam(), new Breakingswipe(), new Brutalswing(), new Bulldoze(), new Crunch(), new Darkpulse(), new Dracometeor(), new Dragondance(), new Dragonpulse(), new Dualwingbeat(), new Earthpower(), new Earthquake(), new Endure(), new Facade(), new Fireblast(), new Firefang(), new Firespin(), new Flamethrower(), new Flashcannon(), new Fly(), new Focusblast(), new Focusenergy(), new Gigaimpact(), new Heatwave(), new Helpinghand(), new Hiddenpower(), new Hydropump(), new Hyperbeam(), new Hypervoice(), new Icefang(), new Irontail(), new Nastyplot(), new Outrage(), new Payback(), new Protect(), new Raindance(), new Reflect(), new Rest(), new Rockslide(), new Rocktomb(), new Round(), new Scaleshot(), new Scaryface(), new Screech(), new Sleeptalk(), new Snarl(), new Snore(), new Steelwing(), new Stoneedge(), new Substitute(), new Sunnyday(), new Superpower(), new Surf(), new Taunt(), new Thief(), new Throatchop(), new Thunderfang(), new Thunderwave(), new Triattack(), new Uproar(), new Uturn(), new Workup(), new Zenheadbutt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Acrobatics(), new Moves.Assurance(), new Moves.Attract(), new Moves.Beatup(), new Moves.Bodyslam(), new Moves.Breakingswipe(), new Moves.Brutalswing(), new Moves.Bulldoze(), new Moves.Crunch(), new Moves.Darkpulse(), new Moves.Dracometeor(), new Moves.Dragondance(), new Moves.Dragonpulse(), new Moves.Dualwingbeat(), new Moves.Earthpower(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Facade(), new Moves.Fireblast(), new Moves.Firefang(), new Moves.Firespin(), new Moves.Flamethrower(), new Moves.Flashcannon(), new Moves.Fly(), new Moves.Focusblast(), new Moves.Focusenergy(), new Moves.Gigaimpact(), new Moves.Heatwave(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Hydropump(), new Moves.Hyperbeam(), new Moves.Hypervoice(), new Moves.Icefang(), new Moves.Irontail(), new Moves.Nastyplot(), new Moves.Outrage(), new Moves.Payback(), new Moves.Protect(), new Moves.Raindance(), new Moves.Reflect(), new Moves.Rest(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Scaleshot(), new Moves.Scaryface(), new Moves.Screech(), new Moves.Sleeptalk(), new Moves.Snarl(), new Moves.Snore(), new Moves.Steelwing(), new Moves.Stoneedge(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Superpower(), new Moves.Surf(), new Moves.Taunt(), new Moves.Thief(), new Moves.Throatchop(), new Moves.Thunderfang(), new Moves.Thunderwave(), new Moves.Triattack(), new Moves.Uproar(), new Moves.Uturn(), new Moves.Workup(), new Moves.Zenheadbutt() };
 		public override int Weight => 1600;
 		public override int ExpYield => 300;
 		public override int CatchRate => 45;

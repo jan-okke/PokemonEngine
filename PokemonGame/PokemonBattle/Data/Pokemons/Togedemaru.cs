@@ -9,29 +9,29 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Togedemaru : Pokemon
 	{
 		public override string Name => "Togedemaru";
-		public override List<Ability> AvailableAbilities => new() {new Ironbarbs(), new Lightningrod() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Sturdy() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Ironbarbs(), new Abilities.Lightningrod() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Sturdy() };
 		public override Stats BaseStats => new Stats(65, 98, 63, 40, 73, 96);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Electric, PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Nuzzle(), new Tackle() },
-			[5] = new List<Move>() { new Defensecurl() },
-			[10] = new List<Move>() { new Charge() },
-			[15] = new List<Move>() { new Thundershock() },
-			[20] = new List<Move>() { new Fellstinger() },
-			[25] = new List<Move>() { new Spark() },
-			[30] = new List<Move>() { new Pinmissile() },
-			[35] = new List<Move>() { new Magnetrise() },
-			[40] = new List<Move>() { new Zingzap() },
-			[45] = new List<Move>() { new Discharge() },
-			[50] = new List<Move>() { new Electricterrain() },
-			[55] = new List<Move>() { new Wildcharge() },
-			[60] = new List<Move>() { new Spikyshield() },
+			[1] = new List<Move>() { new Moves.Nuzzle(), new Moves.Tackle() },
+			[5] = new List<Move>() { new Moves.Defensecurl() },
+			[10] = new List<Move>() { new Moves.Charge() },
+			[15] = new List<Move>() { new Moves.Thundershock() },
+			[20] = new List<Move>() { new Moves.Fellstinger() },
+			[25] = new List<Move>() { new Moves.Spark() },
+			[30] = new List<Move>() { new Moves.Pinmissile() },
+			[35] = new List<Move>() { new Moves.Magnetrise() },
+			[40] = new List<Move>() { new Moves.Zingzap() },
+			[45] = new List<Move>() { new Moves.Discharge() },
+			[50] = new List<Move>() { new Moves.Electricterrain() },
+			[55] = new List<Move>() { new Moves.Wildcharge() },
+			[60] = new List<Move>() { new Moves.Spikyshield() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Agility(), new Assurance(), new Attract(), new Bounce(), new Eerieimpulse(), new Electricterrain(), new Electroball(), new Electroweb(), new Encore(), new Endure(), new Facade(), new Fling(), new Gigaimpact(), new Grassknot(), new Gyroball(), new Helpinghand(), new Hiddenpower(), new Hyperbeam(), new Ironhead(), new Irontail(), new Payback(), new Pinmissile(), new Poisonjab(), new Protect(), new Reflect(), new Rest(), new Reversal(), new Risingvoltage(), new Round(), new Sleeptalk(), new Snore(), new Steelbeam(), new Steelroller(), new Substitute(), new Swift(), new Thief(), new Thunder(), new Thunderbolt(), new Thunderwave(), new Uturn(), new Voltswitch(), new Wildcharge(), new Workup(), new Zenheadbutt() };
-		public override List<Move> EggMoves => new List<Move>() { new Disarmingvoice(), new Fakeout(), new Flail(), new Present(), new Tickle(), new Wish() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Agility(), new Moves.Assurance(), new Moves.Attract(), new Moves.Bounce(), new Moves.Eerieimpulse(), new Moves.Electricterrain(), new Moves.Electroball(), new Moves.Electroweb(), new Moves.Encore(), new Moves.Endure(), new Moves.Facade(), new Moves.Fling(), new Moves.Gigaimpact(), new Moves.Grassknot(), new Moves.Gyroball(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Ironhead(), new Moves.Irontail(), new Moves.Payback(), new Moves.Pinmissile(), new Moves.Poisonjab(), new Moves.Protect(), new Moves.Reflect(), new Moves.Rest(), new Moves.Reversal(), new Moves.Risingvoltage(), new Moves.Round(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Steelbeam(), new Moves.Steelroller(), new Moves.Substitute(), new Moves.Swift(), new Moves.Thief(), new Moves.Thunder(), new Moves.Thunderbolt(), new Moves.Thunderwave(), new Moves.Uturn(), new Moves.Voltswitch(), new Moves.Wildcharge(), new Moves.Workup(), new Moves.Zenheadbutt() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Disarmingvoice(), new Moves.Fakeout(), new Moves.Flail(), new Moves.Present(), new Moves.Tickle(), new Moves.Wish() };
 		public override int Weight => 33;
 		public override int ExpYield => 152;
 		public override int CatchRate => 180;

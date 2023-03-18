@@ -9,23 +9,23 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Zacian : Pokemon
 	{
 		public override string Name => "Zacian";
-		public override List<Ability> AvailableAbilities => new() {new Intrepidsword() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Intrepidsword() };
 		public override Stats BaseStats => new Stats(92, 130, 115, 80, 115, 138);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Sacredsword(), new Quickguard(), new Metalclaw(), new Howl(), new Quickattack(), new Bite() },
-			[11] = new List<Move>() { new Slash() },
-			[22] = new List<Move>() { new Swordsdance() },
-			[33] = new List<Move>() { new Ironhead() },
-			[44] = new List<Move>() { new Laserfocus() },
-			[55] = new List<Move>() { new Crunch() },
-			[66] = new List<Move>() { new Moonblast() },
-			[77] = new List<Move>() { new Closecombat() },
-			[88] = new List<Move>() { new Gigaimpact() },
+			[1] = new List<Move>() { new Moves.Sacredsword(), new Moves.Quickguard(), new Moves.Metalclaw(), new Moves.Howl(), new Moves.Quickattack(), new Moves.Bite() },
+			[11] = new List<Move>() { new Moves.Slash() },
+			[22] = new List<Move>() { new Moves.Swordsdance() },
+			[33] = new List<Move>() { new Moves.Ironhead() },
+			[44] = new List<Move>() { new Moves.Laserfocus() },
+			[55] = new List<Move>() { new Moves.Crunch() },
+			[66] = new List<Move>() { new Moves.Moonblast() },
+			[77] = new List<Move>() { new Moves.Closecombat() },
+			[88] = new List<Move>() { new Moves.Gigaimpact() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Agility(), new Airslash(), new Assurance(), new Brickbreak(), new Brutalswing(), new Closecombat(), new Crunch(), new Dig(), new Endure(), new Facade(), new Falseswipe(), new Firefang(), new Focusblast(), new Focusenergy(), new Gigaimpact(), new Helpinghand(), new Hiddenpower(), new Hyperbeam(), new Hypervoice(), new Icefang(), new Imprison(), new Ironhead(), new Irontail(), new Playrough(), new Protect(), new Psychicfangs(), new Psychocut(), new Rest(), new Retaliate(), new Revenge(), new Reversal(), new Round(), new Scaryface(), new Sleeptalk(), new Snarl(), new Snore(), new Solarblade(), new Steelbeam(), new Substitute(), new Swift(), new Swordsdance(), new Tailslap(), new Thunderfang(), new Wildcharge(), new Workup() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Agility(), new Moves.Airslash(), new Moves.Assurance(), new Moves.Brickbreak(), new Moves.Brutalswing(), new Moves.Closecombat(), new Moves.Crunch(), new Moves.Dig(), new Moves.Endure(), new Moves.Facade(), new Moves.Falseswipe(), new Moves.Firefang(), new Moves.Focusblast(), new Moves.Focusenergy(), new Moves.Gigaimpact(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Hypervoice(), new Moves.Icefang(), new Moves.Imprison(), new Moves.Ironhead(), new Moves.Irontail(), new Moves.Playrough(), new Moves.Protect(), new Moves.Psychicfangs(), new Moves.Psychocut(), new Moves.Rest(), new Moves.Retaliate(), new Moves.Revenge(), new Moves.Reversal(), new Moves.Round(), new Moves.Scaryface(), new Moves.Sleeptalk(), new Moves.Snarl(), new Moves.Snore(), new Moves.Solarblade(), new Moves.Steelbeam(), new Moves.Substitute(), new Moves.Swift(), new Moves.Swordsdance(), new Moves.Tailslap(), new Moves.Thunderfang(), new Moves.Wildcharge(), new Moves.Workup() };
 		public override int Weight => 1100;
 		public override int ExpYield => 335;
 		public override int CatchRate => 10;

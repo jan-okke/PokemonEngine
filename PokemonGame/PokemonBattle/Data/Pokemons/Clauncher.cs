@@ -9,27 +9,27 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Clauncher : Pokemon
 	{
 		public override string Name => "Clauncher";
-		public override List<Ability> AvailableAbilities => new() {new Megalauncher() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Megalauncher() };
 		public override Stats BaseStats => new Stats(50, 53, 62, 58, 63, 44);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Splash(), new Watergun() },
-			[5] = new List<Move>() { new Visegrip() },
-			[10] = new List<Move>() { new Flail() },
-			[15] = new List<Move>() { new Aquajet() },
-			[20] = new List<Move>() { new Smackdown() },
-			[25] = new List<Move>() { new Honeclaws() },
-			[30] = new List<Move>() { new Waterpulse() },
-			[35] = new List<Move>() { new Swordsdance() },
-			[40] = new List<Move>() { new Aurasphere() },
-			[45] = new List<Move>() { new Bounce() },
-			[50] = new List<Move>() { new Muddywater() },
-			[55] = new List<Move>() { new Crabhammer() },
+			[1] = new List<Move>() { new Moves.Splash(), new Moves.Watergun() },
+			[5] = new List<Move>() { new Moves.Visegrip() },
+			[10] = new List<Move>() { new Moves.Flail() },
+			[15] = new List<Move>() { new Moves.Aquajet() },
+			[20] = new List<Move>() { new Moves.Smackdown() },
+			[25] = new List<Move>() { new Moves.Honeclaws() },
+			[30] = new List<Move>() { new Moves.Waterpulse() },
+			[35] = new List<Move>() { new Moves.Swordsdance() },
+			[40] = new List<Move>() { new Moves.Aurasphere() },
+			[45] = new List<Move>() { new Moves.Bounce() },
+			[50] = new List<Move>() { new Moves.Muddywater() },
+			[55] = new List<Move>() { new Moves.Crabhammer() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Aurasphere(), new Bounce(), new Dive(), new Dragonpulse(), new Endure(), new Facade(), new Flashcannon(), new Flipturn(), new Helpinghand(), new Hiddenpower(), new Icebeam(), new Icywind(), new Irontail(), new Muddywater(), new Protect(), new Raindance(), new Rest(), new Rockslide(), new Round(), new Scald(), new Sleeptalk(), new Sludgebomb(), new Sludgewave(), new Snore(), new Substitute(), new Surf(), new Swordsdance(), new Terrainpulse(), new Uturn(), new Venoshock(), new Waterfall() };
-		public override List<Move> EggMoves => new List<Move>() { new Aquatail(), new Bubblebeam(), new Entrainment() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Aurasphere(), new Moves.Bounce(), new Moves.Dive(), new Moves.Dragonpulse(), new Moves.Endure(), new Moves.Facade(), new Moves.Flashcannon(), new Moves.Flipturn(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Icebeam(), new Moves.Icywind(), new Moves.Irontail(), new Moves.Muddywater(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Rockslide(), new Moves.Round(), new Moves.Scald(), new Moves.Sleeptalk(), new Moves.Sludgebomb(), new Moves.Sludgewave(), new Moves.Snore(), new Moves.Substitute(), new Moves.Surf(), new Moves.Swordsdance(), new Moves.Terrainpulse(), new Moves.Uturn(), new Moves.Venoshock(), new Moves.Waterfall() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Aquatail(), new Moves.Bubblebeam(), new Moves.Entrainment() };
 		public override int Weight => 83;
 		public override int ExpYield => 66;
 		public override int CatchRate => 225;

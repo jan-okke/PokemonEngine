@@ -9,16 +9,16 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Roserade : Pokemon
 	{
 		public override string Name => "Roserade";
-		public override List<Ability> AvailableAbilities => new() {new Naturalcure(), new Poisonpoint() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Technician() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Naturalcure(), new Abilities.Poisonpoint() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Technician() };
 		public override Stats BaseStats => new Stats(60, 70, 65, 125, 105, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Grass, PokemonType.Poison };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Grassyterrain(), new Poisonsting(), new Venomdrench(), new Megadrain(), new Leechseed(), new Magicalleaf(), new Toxicspikes(), new Sweetscent(), new Gigadrain(), new Synthesis(), new Toxic(), new Petalblizzard(), new Aromatherapy(), new Ingrain(), new Petaldance(), new Absorb(), new Growth(), new Stunspore(), new Worryseed() },
+			[1] = new List<Move>() { new Moves.Grassyterrain(), new Moves.Poisonsting(), new Moves.Venomdrench(), new Moves.Megadrain(), new Moves.Leechseed(), new Moves.Magicalleaf(), new Moves.Toxicspikes(), new Moves.Sweetscent(), new Moves.Gigadrain(), new Moves.Synthesis(), new Moves.Toxic(), new Moves.Petalblizzard(), new Moves.Aromatherapy(), new Moves.Ingrain(), new Moves.Petaldance(), new Moves.Absorb(), new Moves.Growth(), new Moves.Stunspore(), new Moves.Worryseed() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Bodyslam(), new Bulletseed(), new Cut(), new Dazzlinggleam(), new Doubleteam(), new Endure(), new Energyball(), new Facade(), new Flash(), new Gigadrain(), new Gigaimpact(), new Grassknot(), new Grassyglide(), new Grassyterrain(), new Hiddenpower(), new Hyperbeam(), new Leafstorm(), new Magicalleaf(), new Pinmissile(), new Poisonjab(), new Powerwhip(), new Protect(), new Psychup(), new Raindance(), new Rest(), new Round(), new Seedbomb(), new Shadowball(), new Sleeptalk(), new Sludgebomb(), new Snore(), new Solarbeam(), new Spikes(), new Substitute(), new Sunnyday(), new Swagger(), new Swift(), new Swordsdance(), new Toxic(), new Toxicspikes(), new Uproar(), new Venomdrench(), new Venoshock(), new Weatherball() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Bodyslam(), new Moves.Bulletseed(), new Moves.Cut(), new Moves.Dazzlinggleam(), new Moves.Doubleteam(), new Moves.Endure(), new Moves.Energyball(), new Moves.Facade(), new Moves.Flash(), new Moves.Gigadrain(), new Moves.Gigaimpact(), new Moves.Grassknot(), new Moves.Grassyglide(), new Moves.Grassyterrain(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Leafstorm(), new Moves.Magicalleaf(), new Moves.Pinmissile(), new Moves.Poisonjab(), new Moves.Powerwhip(), new Moves.Protect(), new Moves.Psychup(), new Moves.Raindance(), new Moves.Rest(), new Moves.Round(), new Moves.Seedbomb(), new Moves.Shadowball(), new Moves.Sleeptalk(), new Moves.Sludgebomb(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Spikes(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Swift(), new Moves.Swordsdance(), new Moves.Toxic(), new Moves.Toxicspikes(), new Moves.Uproar(), new Moves.Venomdrench(), new Moves.Venoshock(), new Moves.Weatherball() };
 		public override int Weight => 145;
 		public override int ExpYield => 258;
 		public override int CatchRate => 75;

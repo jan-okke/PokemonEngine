@@ -9,25 +9,25 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Sliggoo : Pokemon
 	{
 		public override string Name => "Sliggoo";
-		public override List<Ability> AvailableAbilities => new() {new Sapsipper(), new Hydration() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Gooey() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Sapsipper(), new Abilities.Hydration() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Gooey() };
 		public override Stats BaseStats => new Stats(68, 75, 53, 83, 113, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dragon };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Acidspray() },
-			[1] = new List<Move>() { new Acidspray(), new Absorb(), new Tackle(), new Watergun(), new Dragonbreath() },
-			[15] = new List<Move>() { new Protect() },
-			[20] = new List<Move>() { new Flail() },
-			[25] = new List<Move>() { new Waterpulse() },
-			[30] = new List<Move>() { new Raindance() },
-			[35] = new List<Move>() { new Dragonpulse() },
-			[43] = new List<Move>() { new Curse() },
-			[49] = new List<Move>() { new Bodyslam() },
-			[56] = new List<Move>() { new Muddywater() },
+			[0] = new List<Move>() { new Moves.Acidspray() },
+			[1] = new List<Move>() { new Moves.Acidspray(), new Moves.Absorb(), new Moves.Tackle(), new Moves.Watergun(), new Moves.Dragonbreath() },
+			[15] = new List<Move>() { new Moves.Protect() },
+			[20] = new List<Move>() { new Moves.Flail() },
+			[25] = new List<Move>() { new Moves.Waterpulse() },
+			[30] = new List<Move>() { new Moves.Raindance() },
+			[35] = new List<Move>() { new Moves.Dragonpulse() },
+			[43] = new List<Move>() { new Moves.Curse() },
+			[49] = new List<Move>() { new Moves.Bodyslam() },
+			[56] = new List<Move>() { new Moves.Muddywater() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Blizzard(), new Bodyslam(), new Dracometeor(), new Dragonpulse(), new Endure(), new Facade(), new Hiddenpower(), new Icebeam(), new Irontail(), new Muddywater(), new Mudshot(), new Outrage(), new Protect(), new Raindance(), new Rest(), new Rockslide(), new Round(), new Skittersmack(), new Sleeptalk(), new Sludgebomb(), new Sludgewave(), new Snore(), new Substitute(), new Sunnyday(), new Thunderbolt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Blizzard(), new Moves.Bodyslam(), new Moves.Dracometeor(), new Moves.Dragonpulse(), new Moves.Endure(), new Moves.Facade(), new Moves.Hiddenpower(), new Moves.Icebeam(), new Moves.Irontail(), new Moves.Muddywater(), new Moves.Mudshot(), new Moves.Outrage(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Rockslide(), new Moves.Round(), new Moves.Skittersmack(), new Moves.Sleeptalk(), new Moves.Sludgebomb(), new Moves.Sludgewave(), new Moves.Snore(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Thunderbolt() };
 		public override int Weight => 175;
 		public override int ExpYield => 158;
 		public override int CatchRate => 45;

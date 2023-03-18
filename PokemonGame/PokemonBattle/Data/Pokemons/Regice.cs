@@ -9,29 +9,29 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Regice : Pokemon
 	{
 		public override string Name => "Regice";
-		public override List<Ability> AvailableAbilities => new() {new Clearbody() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Icebody() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Clearbody() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Icebody() };
 		public override Stats BaseStats => new Stats(80, 50, 100, 100, 200, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Ice };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Chargebeam(), new Icywind() },
-			[6] = new List<Move>() { new Bulldoze() },
-			[12] = new List<Move>() { new Ancientpower() },
-			[18] = new List<Move>() { new Stomp() },
-			[24] = new List<Move>() { new Icebeam() },
-			[30] = new List<Move>() { new Curse() },
-			[36] = new List<Move>() { new Amnesia() },
-			[42] = new List<Move>() { new Hammerarm() },
-			[48] = new List<Move>() { new Blizzard() },
-			[54] = new List<Move>() { new Superpower() },
-			[60] = new List<Move>() { new Lockon() },
-			[66] = new List<Move>() { new Zapcannon() },
-			[72] = new List<Move>() { new Hyperbeam() },
-			[78] = new List<Move>() { new Explosion() },
+			[1] = new List<Move>() { new Moves.Chargebeam(), new Moves.Icywind() },
+			[6] = new List<Move>() { new Moves.Bulldoze() },
+			[12] = new List<Move>() { new Moves.Ancientpower() },
+			[18] = new List<Move>() { new Moves.Stomp() },
+			[24] = new List<Move>() { new Moves.Icebeam() },
+			[30] = new List<Move>() { new Moves.Curse() },
+			[36] = new List<Move>() { new Moves.Amnesia() },
+			[42] = new List<Move>() { new Moves.Hammerarm() },
+			[48] = new List<Move>() { new Moves.Blizzard() },
+			[54] = new List<Move>() { new Moves.Superpower() },
+			[60] = new List<Move>() { new Moves.Lockon() },
+			[66] = new List<Move>() { new Moves.Zapcannon() },
+			[72] = new List<Move>() { new Moves.Hyperbeam() },
+			[78] = new List<Move>() { new Moves.Explosion() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Amnesia(), new Avalanche(), new Blizzard(), new Bodyslam(), new Brickbreak(), new Bulldoze(), new Chargebeam(), new Doubleteam(), new Earthquake(), new Endure(), new Explosion(), new Facade(), new Flashcannon(), new Fling(), new Focusblast(), new Focuspunch(), new Gigaimpact(), new Hail(), new Heavyslam(), new Hiddenpower(), new Hyperbeam(), new Icebeam(), new Icepunch(), new Iciclespear(), new Icywind(), new Ironhead(), new Megakick(), new Megapunch(), new Protect(), new Psychup(), new Raindance(), new Rest(), new Rockclimb(), new Rockpolish(), new Rockslide(), new Rocksmash(), new Rocktomb(), new Round(), new Safeguard(), new Selfdestruct(), new Shockwave(), new Sleeptalk(), new Snore(), new Stompingtantrum(), new Strength(), new Substitute(), new Superpower(), new Swagger(), new Thunder(), new Thunderbolt(), new Thunderpunch(), new Thunderwave() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Amnesia(), new Moves.Avalanche(), new Moves.Blizzard(), new Moves.Bodyslam(), new Moves.Brickbreak(), new Moves.Bulldoze(), new Moves.Chargebeam(), new Moves.Doubleteam(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Explosion(), new Moves.Facade(), new Moves.Flashcannon(), new Moves.Fling(), new Moves.Focusblast(), new Moves.Focuspunch(), new Moves.Gigaimpact(), new Moves.Hail(), new Moves.Heavyslam(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Icebeam(), new Moves.Icepunch(), new Moves.Iciclespear(), new Moves.Icywind(), new Moves.Ironhead(), new Moves.Megakick(), new Moves.Megapunch(), new Moves.Protect(), new Moves.Psychup(), new Moves.Raindance(), new Moves.Rest(), new Moves.Rockclimb(), new Moves.Rockpolish(), new Moves.Rockslide(), new Moves.Rocksmash(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Safeguard(), new Moves.Selfdestruct(), new Moves.Shockwave(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Stompingtantrum(), new Moves.Strength(), new Moves.Substitute(), new Moves.Superpower(), new Moves.Swagger(), new Moves.Thunder(), new Moves.Thunderbolt(), new Moves.Thunderpunch(), new Moves.Thunderwave() };
 		public override int Weight => 1750;
 		public override int ExpYield => 290;
 		public override int CatchRate => 3;

@@ -9,29 +9,29 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Flaaffy : Pokemon
 	{
 		public override string Name => "Flaaffy";
-		public override List<Ability> AvailableAbilities => new() {new Static() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Plus() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Static() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Plus() };
 		public override Stats BaseStats => new Stats(70, 55, 55, 80, 60, 45);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Electric };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Tackle(), new Growl(), new Thunderwave(), new Thundershock() },
-			[4] = new List<Move>() { new Thunderwave() },
-			[8] = new List<Move>() { new Thundershock() },
-			[11] = new List<Move>() { new Cottonspore() },
-			[16] = new List<Move>() { new Charge() },
-			[20] = new List<Move>() { new Takedown() },
-			[25] = new List<Move>() { new Electroball() },
-			[29] = new List<Move>() { new Confuseray() },
-			[34] = new List<Move>() { new Powergem() },
-			[38] = new List<Move>() { new Discharge() },
-			[43] = new List<Move>() { new Cottonguard() },
-			[47] = new List<Move>() { new Chargebeam() },
-			[52] = new List<Move>() { new Lightscreen() },
-			[56] = new List<Move>() { new Thunder() },
+			[1] = new List<Move>() { new Moves.Tackle(), new Moves.Growl(), new Moves.Thunderwave(), new Moves.Thundershock() },
+			[4] = new List<Move>() { new Moves.Thunderwave() },
+			[8] = new List<Move>() { new Moves.Thundershock() },
+			[11] = new List<Move>() { new Moves.Cottonspore() },
+			[16] = new List<Move>() { new Moves.Charge() },
+			[20] = new List<Move>() { new Moves.Takedown() },
+			[25] = new List<Move>() { new Moves.Electroball() },
+			[29] = new List<Move>() { new Moves.Confuseray() },
+			[34] = new List<Move>() { new Moves.Powergem() },
+			[38] = new List<Move>() { new Moves.Discharge() },
+			[43] = new List<Move>() { new Moves.Cottonguard() },
+			[47] = new List<Move>() { new Moves.Chargebeam() },
+			[52] = new List<Move>() { new Moves.Lightscreen() },
+			[56] = new List<Move>() { new Moves.Thunder() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Afteryou(), new Attract(), new Brickbreak(), new Chargebeam(), new Confide(), new Doubleteam(), new Echoedvoice(), new Electroweb(), new Endure(), new Facade(), new Firepunch(), new Flash(), new Fling(), new Focuspunch(), new Frustration(), new Healbell(), new Hiddenpower(), new Irontail(), new Lightscreen(), new Magnetrise(), new Poweruppunch(), new Protect(), new Raindance(), new Reflect(), new Rest(), new Return(), new Rocksmash(), new Round(), new Safeguard(), new Shockwave(), new Signalbeam(), new Sleeptalk(), new Snore(), new Strength(), new Substitute(), new Swagger(), new Thunder(), new Thunderbolt(), new Thunderpunch(), new Thunderwave(), new Voltswitch(), new Wildcharge() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Afteryou(), new Moves.Attract(), new Moves.Brickbreak(), new Moves.Chargebeam(), new Moves.Confide(), new Moves.Doubleteam(), new Moves.Echoedvoice(), new Moves.Electroweb(), new Moves.Endure(), new Moves.Facade(), new Moves.Firepunch(), new Moves.Flash(), new Moves.Fling(), new Moves.Focuspunch(), new Moves.Frustration(), new Moves.Healbell(), new Moves.Hiddenpower(), new Moves.Irontail(), new Moves.Lightscreen(), new Moves.Magnetrise(), new Moves.Poweruppunch(), new Moves.Protect(), new Moves.Raindance(), new Moves.Reflect(), new Moves.Rest(), new Moves.Return(), new Moves.Rocksmash(), new Moves.Round(), new Moves.Safeguard(), new Moves.Shockwave(), new Moves.Signalbeam(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Strength(), new Moves.Substitute(), new Moves.Swagger(), new Moves.Thunder(), new Moves.Thunderbolt(), new Moves.Thunderpunch(), new Moves.Thunderwave(), new Moves.Voltswitch(), new Moves.Wildcharge() };
 		public override int Weight => 133;
 		public override int ExpYield => 128;
 		public override int CatchRate => 120;

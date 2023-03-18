@@ -9,27 +9,27 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Electivire : Pokemon
 	{
 		public override string Name => "Electivire";
-		public override List<Ability> AvailableAbilities => new() {new Motordrive() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Vitalspirit() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Motordrive() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Vitalspirit() };
 		public override Stats BaseStats => new Stats(75, 123, 67, 95, 85, 95);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Electric };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Wildcharge(), new Quickattack(), new Leer(), new Thundershock(), new Charge() },
-			[12] = new List<Move>() { new Swift() },
-			[16] = new List<Move>() { new Shockwave() },
-			[20] = new List<Move>() { new Thunderwave() },
-			[24] = new List<Move>() { new Screech() },
-			[28] = new List<Move>() { new Thunderpunch() },
-			[34] = new List<Move>() { new Discharge() },
-			[40] = new List<Move>() { new Lowkick() },
-			[46] = new List<Move>() { new Thunderbolt() },
-			[52] = new List<Move>() { new Lightscreen() },
-			[58] = new List<Move>() { new Thunder() },
-			[64] = new List<Move>() { new Gigaimpact() },
+			[1] = new List<Move>() { new Moves.Wildcharge(), new Moves.Quickattack(), new Moves.Leer(), new Moves.Thundershock(), new Moves.Charge() },
+			[12] = new List<Move>() { new Moves.Swift() },
+			[16] = new List<Move>() { new Moves.Shockwave() },
+			[20] = new List<Move>() { new Moves.Thunderwave() },
+			[24] = new List<Move>() { new Moves.Screech() },
+			[28] = new List<Move>() { new Moves.Thunderpunch() },
+			[34] = new List<Move>() { new Moves.Discharge() },
+			[40] = new List<Move>() { new Moves.Lowkick() },
+			[46] = new List<Move>() { new Moves.Thunderbolt() },
+			[52] = new List<Move>() { new Moves.Lightscreen() },
+			[58] = new List<Move>() { new Moves.Thunder() },
+			[64] = new List<Move>() { new Moves.Gigaimpact() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Bodyslam(), new Brickbreak(), new Bulldoze(), new Chargebeam(), new Darkestlariat(), new Dig(), new Doubleteam(), new Earthquake(), new Electricterrain(), new Electroball(), new Electroweb(), new Endure(), new Facade(), new Firepunch(), new Flamethrower(), new Flash(), new Fling(), new Focusblast(), new Focuspunch(), new Gigaimpact(), new Helpinghand(), new Hiddenpower(), new Hyperbeam(), new Icepunch(), new Irontail(), new Lightscreen(), new Lowkick(), new Lowsweep(), new Megakick(), new Megapunch(), new Protect(), new Psychic(), new Raindance(), new Rest(), new Risingvoltage(), new Rockclimb(), new Rockslide(), new Rocksmash(), new Rocktomb(), new Round(), new Screech(), new Shockwave(), new Sleeptalk(), new Snore(), new Stompingtantrum(), new Strength(), new Substitute(), new Swagger(), new Swift(), new Taunt(), new Thief(), new Thunder(), new Thunderbolt(), new Thunderpunch(), new Thunderwave(), new Torment(), new Uproar(), new Voltswitch(), new Weatherball(), new Wildcharge() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Bodyslam(), new Moves.Brickbreak(), new Moves.Bulldoze(), new Moves.Chargebeam(), new Moves.Darkestlariat(), new Moves.Dig(), new Moves.Doubleteam(), new Moves.Earthquake(), new Moves.Electricterrain(), new Moves.Electroball(), new Moves.Electroweb(), new Moves.Endure(), new Moves.Facade(), new Moves.Firepunch(), new Moves.Flamethrower(), new Moves.Flash(), new Moves.Fling(), new Moves.Focusblast(), new Moves.Focuspunch(), new Moves.Gigaimpact(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Icepunch(), new Moves.Irontail(), new Moves.Lightscreen(), new Moves.Lowkick(), new Moves.Lowsweep(), new Moves.Megakick(), new Moves.Megapunch(), new Moves.Protect(), new Moves.Psychic(), new Moves.Raindance(), new Moves.Rest(), new Moves.Risingvoltage(), new Moves.Rockclimb(), new Moves.Rockslide(), new Moves.Rocksmash(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Screech(), new Moves.Shockwave(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Stompingtantrum(), new Moves.Strength(), new Moves.Substitute(), new Moves.Swagger(), new Moves.Swift(), new Moves.Taunt(), new Moves.Thief(), new Moves.Thunder(), new Moves.Thunderbolt(), new Moves.Thunderpunch(), new Moves.Thunderwave(), new Moves.Torment(), new Moves.Uproar(), new Moves.Voltswitch(), new Moves.Weatherball(), new Moves.Wildcharge() };
 		public override int Weight => 1386;
 		public override int ExpYield => 270;
 		public override int CatchRate => 30;

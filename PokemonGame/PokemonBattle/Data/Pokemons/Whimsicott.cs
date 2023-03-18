@@ -9,16 +9,16 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Whimsicott : Pokemon
 	{
 		public override string Name => "Whimsicott";
-		public override List<Ability> AvailableAbilities => new() {new Prankster(), new Infiltrator() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Chlorophyll() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Prankster(), new Abilities.Infiltrator() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Chlorophyll() };
 		public override Stats BaseStats => new Stats(60, 67, 85, 77, 75, 116);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Grass, PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Gust(), new Tailwind(), new Moonblast(), new Memento(), new Hurricane(), new Megadrain(), new Razorleaf(), new Growth(), new Poisonpowder(), new Gigadrain(), new Charm(), new Leechseed(), new Cottonspore(), new Energyball(), new Sunnyday(), new Endeavor(), new Cottonguard(), new Solarbeam(), new Absorb(), new Helpinghand(), new Fairywind(), new Stunspore() },
+			[1] = new List<Move>() { new Moves.Gust(), new Moves.Tailwind(), new Moves.Moonblast(), new Moves.Memento(), new Moves.Hurricane(), new Moves.Megadrain(), new Moves.Razorleaf(), new Moves.Growth(), new Moves.Poisonpowder(), new Moves.Gigadrain(), new Moves.Charm(), new Moves.Leechseed(), new Moves.Cottonspore(), new Moves.Energyball(), new Moves.Sunnyday(), new Moves.Endeavor(), new Moves.Cottonguard(), new Moves.Solarbeam(), new Moves.Absorb(), new Moves.Helpinghand(), new Moves.Fairywind(), new Moves.Stunspore() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Beatup(), new Charm(), new Dazzlinggleam(), new Encore(), new Endure(), new Energyball(), new Facade(), new Faketears(), new Fling(), new Gigadrain(), new Gigaimpact(), new Grassknot(), new Grassyglide(), new Grassyterrain(), new Helpinghand(), new Hiddenpower(), new Hurricane(), new Hyperbeam(), new Lightscreen(), new Mistyterrain(), new Playrough(), new Protect(), new Psychic(), new Rest(), new Round(), new Safeguard(), new Seedbomb(), new Shadowball(), new Sleeptalk(), new Snore(), new Solarbeam(), new Substitute(), new Sunnyday(), new Swift(), new Taunt(), new Thief(), new Trickroom(), new Uturn() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Beatup(), new Moves.Charm(), new Moves.Dazzlinggleam(), new Moves.Encore(), new Moves.Endure(), new Moves.Energyball(), new Moves.Facade(), new Moves.Faketears(), new Moves.Fling(), new Moves.Gigadrain(), new Moves.Gigaimpact(), new Moves.Grassknot(), new Moves.Grassyglide(), new Moves.Grassyterrain(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Hurricane(), new Moves.Hyperbeam(), new Moves.Lightscreen(), new Moves.Mistyterrain(), new Moves.Playrough(), new Moves.Protect(), new Moves.Psychic(), new Moves.Rest(), new Moves.Round(), new Moves.Safeguard(), new Moves.Seedbomb(), new Moves.Shadowball(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swift(), new Moves.Taunt(), new Moves.Thief(), new Moves.Trickroom(), new Moves.Uturn() };
 		public override int Weight => 66;
 		public override int ExpYield => 168;
 		public override int CatchRate => 75;

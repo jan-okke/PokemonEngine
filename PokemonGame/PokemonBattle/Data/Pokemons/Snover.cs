@@ -9,27 +9,27 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Snover : Pokemon
 	{
 		public override string Name => "Snover";
-		public override List<Ability> AvailableAbilities => new() {new Snowwarning() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Soundproof() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Snowwarning() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Soundproof() };
 		public override Stats BaseStats => new Stats(60, 62, 50, 62, 60, 40);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Grass, PokemonType.Ice };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Powdersnow(), new Leer() },
-			[5] = new List<Move>() { new Leafage() },
-			[10] = new List<Move>() { new Mist() },
-			[15] = new List<Move>() { new Iceshard() },
-			[20] = new List<Move>() { new Razorleaf() },
-			[25] = new List<Move>() { new Icywind() },
-			[30] = new List<Move>() { new Swagger() },
-			[35] = new List<Move>() { new Ingrain() },
-			[41] = new List<Move>() { new Woodhammer() },
-			[45] = new List<Move>() { new Blizzard() },
-			[50] = new List<Move>() { new Sheercold() },
+			[1] = new List<Move>() { new Moves.Powdersnow(), new Moves.Leer() },
+			[5] = new List<Move>() { new Moves.Leafage() },
+			[10] = new List<Move>() { new Moves.Mist() },
+			[15] = new List<Move>() { new Moves.Iceshard() },
+			[20] = new List<Move>() { new Moves.Razorleaf() },
+			[25] = new List<Move>() { new Moves.Icywind() },
+			[30] = new List<Move>() { new Moves.Swagger() },
+			[35] = new List<Move>() { new Moves.Ingrain() },
+			[41] = new List<Move>() { new Moves.Woodhammer() },
+			[45] = new List<Move>() { new Moves.Blizzard() },
+			[50] = new List<Move>() { new Moves.Sheercold() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Avalanche(), new Blizzard(), new Bulletseed(), new Doubleteam(), new Endure(), new Energyball(), new Facade(), new Flash(), new Gigadrain(), new Grassknot(), new Grassyglide(), new Hail(), new Hiddenpower(), new Icebeam(), new Icepunch(), new Icywind(), new Irontail(), new Lightscreen(), new Magicalleaf(), new Megapunch(), new Protect(), new Raindance(), new Rest(), new Round(), new Safeguard(), new Seedbomb(), new Shadowball(), new Sleeptalk(), new Snore(), new Solarbeam(), new Substitute(), new Swagger(), new Swordsdance(), new Waterpulse(), new Weatherball() };
-		public override List<Move> EggMoves => new List<Move>() { new Doubleedge(), new Growth(), new Leechseed(), new Magicalleaf(), new Mist(), new Seedbomb(), new Skullbash(), new Stomp() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Avalanche(), new Moves.Blizzard(), new Moves.Bulletseed(), new Moves.Doubleteam(), new Moves.Endure(), new Moves.Energyball(), new Moves.Facade(), new Moves.Flash(), new Moves.Gigadrain(), new Moves.Grassknot(), new Moves.Grassyglide(), new Moves.Hail(), new Moves.Hiddenpower(), new Moves.Icebeam(), new Moves.Icepunch(), new Moves.Icywind(), new Moves.Irontail(), new Moves.Lightscreen(), new Moves.Magicalleaf(), new Moves.Megapunch(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Round(), new Moves.Safeguard(), new Moves.Seedbomb(), new Moves.Shadowball(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Substitute(), new Moves.Swagger(), new Moves.Swordsdance(), new Moves.Waterpulse(), new Moves.Weatherball() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Doubleedge(), new Moves.Growth(), new Moves.Leechseed(), new Moves.Magicalleaf(), new Moves.Mist(), new Moves.Seedbomb(), new Moves.Skullbash(), new Moves.Stomp() };
 		public override int Weight => 505;
 		public override int ExpYield => 67;
 		public override int CatchRate => 120;

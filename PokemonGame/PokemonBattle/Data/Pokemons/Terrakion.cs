@@ -9,25 +9,25 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Terrakion : Pokemon
 	{
 		public override string Name => "Terrakion";
-		public override List<Ability> AvailableAbilities => new() {new Justified() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Justified() };
 		public override Stats BaseStats => new Stats(91, 129, 90, 72, 90, 108);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Quickattack(), new Leer(), new Helpinghand(), new Workup() },
-			[7] = new List<Move>() { new Smackdown() },
-			[14] = new List<Move>() { new Quickguard() },
-			[21] = new List<Move>() { new Doublekick() },
-			[28] = new List<Move>() { new Retaliate() },
-			[35] = new List<Move>() { new Rockslide() },
-			[42] = new List<Move>() { new Takedown() },
-			[49] = new List<Move>() { new Sacredsword() },
-			[56] = new List<Move>() { new Swordsdance() },
-			[63] = new List<Move>() { new Stoneedge() },
-			[70] = new List<Move>() { new Closecombat() },
+			[1] = new List<Move>() { new Moves.Quickattack(), new Moves.Leer(), new Moves.Helpinghand(), new Moves.Workup() },
+			[7] = new List<Move>() { new Moves.Smackdown() },
+			[14] = new List<Move>() { new Moves.Quickguard() },
+			[21] = new List<Move>() { new Moves.Doublekick() },
+			[28] = new List<Move>() { new Moves.Retaliate() },
+			[35] = new List<Move>() { new Moves.Rockslide() },
+			[42] = new List<Move>() { new Moves.Takedown() },
+			[49] = new List<Move>() { new Moves.Sacredsword() },
+			[56] = new List<Move>() { new Moves.Swordsdance() },
+			[63] = new List<Move>() { new Moves.Stoneedge() },
+			[70] = new List<Move>() { new Moves.Closecombat() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Airslash(), new Brickbreak(), new Bulldoze(), new Calmmind(), new Closecombat(), new Coaching(), new Earthpower(), new Earthquake(), new Endure(), new Facade(), new Falseswipe(), new Focusblast(), new Gigaimpact(), new Helpinghand(), new Hiddenpower(), new Hyperbeam(), new Ironhead(), new Megahorn(), new Poisonjab(), new Protect(), new Reflect(), new Rest(), new Retaliate(), new Revenge(), new Reversal(), new Rockblast(), new Rockslide(), new Rocktomb(), new Round(), new Safeguard(), new Sandstorm(), new Scaryface(), new Sleeptalk(), new Smartstrike(), new Snore(), new Stealthrock(), new Stompingtantrum(), new Stoneedge(), new Substitute(), new Superpower(), new Swift(), new Swordsdance(), new Taunt(), new Workup(), new Xscissor(), new Zenheadbutt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Airslash(), new Moves.Brickbreak(), new Moves.Bulldoze(), new Moves.Calmmind(), new Moves.Closecombat(), new Moves.Coaching(), new Moves.Earthpower(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Facade(), new Moves.Falseswipe(), new Moves.Focusblast(), new Moves.Gigaimpact(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Ironhead(), new Moves.Megahorn(), new Moves.Poisonjab(), new Moves.Protect(), new Moves.Reflect(), new Moves.Rest(), new Moves.Retaliate(), new Moves.Revenge(), new Moves.Reversal(), new Moves.Rockblast(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Safeguard(), new Moves.Sandstorm(), new Moves.Scaryface(), new Moves.Sleeptalk(), new Moves.Smartstrike(), new Moves.Snore(), new Moves.Stealthrock(), new Moves.Stompingtantrum(), new Moves.Stoneedge(), new Moves.Substitute(), new Moves.Superpower(), new Moves.Swift(), new Moves.Swordsdance(), new Moves.Taunt(), new Moves.Workup(), new Moves.Xscissor(), new Moves.Zenheadbutt() };
 		public override int Weight => 2600;
 		public override int ExpYield => 290;
 		public override int CatchRate => 3;

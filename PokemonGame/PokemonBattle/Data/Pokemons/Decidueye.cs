@@ -9,27 +9,27 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Decidueye : Pokemon
 	{
 		public override string Name => "Decidueye";
-		public override List<Ability> AvailableAbilities => new() {new Overgrow() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Longreach() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Overgrow() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Longreach() };
 		public override Stats BaseStats => new Stats(78, 107, 75, 100, 100, 70);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Grass, PokemonType.Ghost };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Spiritshackle() },
-			[1] = new List<Move>() { new Spiritshackle(), new Phantomforce(), new Leafstorm(), new Uturn(), new Spite(), new Tackle(), new Growl(), new Leafage(), new Astonish() },
-			[9] = new List<Move>() { new Peck() },
-			[12] = new List<Move>() { new Shadowsneak() },
-			[15] = new List<Move>() { new Razorleaf() },
-			[20] = new List<Move>() { new Synthesis() },
-			[25] = new List<Move>() { new Pluck() },
-			[30] = new List<Move>() { new Nastyplot() },
-			[37] = new List<Move>() { new Suckerpunch() },
-			[44] = new List<Move>() { new Leafblade() },
-			[51] = new List<Move>() { new Featherdance() },
-			[58] = new List<Move>() { new Bravebird() },
+			[0] = new List<Move>() { new Moves.Spiritshackle() },
+			[1] = new List<Move>() { new Moves.Spiritshackle(), new Moves.Phantomforce(), new Moves.Leafstorm(), new Moves.Uturn(), new Moves.Spite(), new Moves.Tackle(), new Moves.Growl(), new Moves.Leafage(), new Moves.Astonish() },
+			[9] = new List<Move>() { new Moves.Peck() },
+			[12] = new List<Move>() { new Moves.Shadowsneak() },
+			[15] = new List<Move>() { new Moves.Razorleaf() },
+			[20] = new List<Move>() { new Moves.Synthesis() },
+			[25] = new List<Move>() { new Moves.Pluck() },
+			[30] = new List<Move>() { new Moves.Nastyplot() },
+			[37] = new List<Move>() { new Moves.Suckerpunch() },
+			[44] = new List<Move>() { new Moves.Leafblade() },
+			[51] = new List<Move>() { new Moves.Featherdance() },
+			[58] = new List<Move>() { new Moves.Bravebird() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Acrobatics(), new Airslash(), new Attract(), new Batonpass(), new Bravebird(), new Dualwingbeat(), new Endure(), new Energyball(), new Facade(), new Falseswipe(), new Frenzyplant(), new Gigadrain(), new Gigaimpact(), new Grassknot(), new Grasspledge(), new Grassyglide(), new Hex(), new Hiddenpower(), new Hurricane(), new Hyperbeam(), new Imprison(), new Leafblade(), new Leafstorm(), new Lightscreen(), new Lowsweep(), new Nastyplot(), new Phantomforce(), new Poltergeist(), new Protect(), new Psychocut(), new Rest(), new Round(), new Safeguard(), new Seedbomb(), new Shadowball(), new Shadowclaw(), new Skittersmack(), new Sleeptalk(), new Snore(), new Solarbeam(), new Solarblade(), new Steelwing(), new Substitute(), new Sunnyday(), new Swift(), new Swordsdance(), new Uturn(), new Workup() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Acrobatics(), new Moves.Airslash(), new Moves.Attract(), new Moves.Batonpass(), new Moves.Bravebird(), new Moves.Dualwingbeat(), new Moves.Endure(), new Moves.Energyball(), new Moves.Facade(), new Moves.Falseswipe(), new Moves.Frenzyplant(), new Moves.Gigadrain(), new Moves.Gigaimpact(), new Moves.Grassknot(), new Moves.Grasspledge(), new Moves.Grassyglide(), new Moves.Hex(), new Moves.Hiddenpower(), new Moves.Hurricane(), new Moves.Hyperbeam(), new Moves.Imprison(), new Moves.Leafblade(), new Moves.Leafstorm(), new Moves.Lightscreen(), new Moves.Lowsweep(), new Moves.Nastyplot(), new Moves.Phantomforce(), new Moves.Poltergeist(), new Moves.Protect(), new Moves.Psychocut(), new Moves.Rest(), new Moves.Round(), new Moves.Safeguard(), new Moves.Seedbomb(), new Moves.Shadowball(), new Moves.Shadowclaw(), new Moves.Skittersmack(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Solarblade(), new Moves.Steelwing(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swift(), new Moves.Swordsdance(), new Moves.Uturn(), new Moves.Workup() };
 		public override int Weight => 366;
 		public override int ExpYield => 265;
 		public override int CatchRate => 45;

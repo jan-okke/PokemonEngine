@@ -9,20 +9,20 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Meltan : Pokemon
 	{
 		public override string Name => "Meltan";
-		public override List<Ability> AvailableAbilities => new() {new Magnetpull() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Magnetpull() };
 		public override Stats BaseStats => new Stats(46, 65, 65, 55, 35, 34);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Thundershock(), new Harden() },
-			[8] = new List<Move>() { new Tailwhip() },
-			[16] = new List<Move>() { new Headbutt() },
-			[24] = new List<Move>() { new Thunderwave() },
-			[32] = new List<Move>() { new Acidarmor() },
-			[40] = new List<Move>() { new Flashcannon() },
+			[1] = new List<Move>() { new Moves.Thundershock(), new Moves.Harden() },
+			[8] = new List<Move>() { new Moves.Tailwhip() },
+			[16] = new List<Move>() { new Moves.Headbutt() },
+			[24] = new List<Move>() { new Moves.Thunderwave() },
+			[32] = new List<Move>() { new Moves.Acidarmor() },
+			[40] = new List<Move>() { new Moves.Flashcannon() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Endure(), new Facade(), new Flashcannon(), new Gyroball(), new Hiddenpower(), new Irondefense(), new Protect(), new Rest(), new Round(), new Sleeptalk(), new Snore(), new Steelbeam(), new Substitute(), new Thunderbolt(), new Thunderwave() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Endure(), new Moves.Facade(), new Moves.Flashcannon(), new Moves.Gyroball(), new Moves.Hiddenpower(), new Moves.Irondefense(), new Moves.Protect(), new Moves.Rest(), new Moves.Round(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Steelbeam(), new Moves.Substitute(), new Moves.Thunderbolt(), new Moves.Thunderwave() };
 		public override int Weight => 80;
 		public override int ExpYield => 150;
 		public override int CatchRate => 3;

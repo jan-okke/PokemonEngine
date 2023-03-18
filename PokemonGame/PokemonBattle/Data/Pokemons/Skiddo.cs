@@ -9,31 +9,31 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Skiddo : Pokemon
 	{
 		public override string Name => "Skiddo";
-		public override List<Ability> AvailableAbilities => new() {new Sapsipper() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Grasspelt() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Sapsipper() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Grasspelt() };
 		public override Stats BaseStats => new Stats(66, 65, 48, 62, 57, 52);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Tackle(), new Growth() },
-			[7] = new List<Move>() { new Vinewhip() },
-			[9] = new List<Move>() { new Tailwhip() },
-			[12] = new List<Move>() { new Leechseed() },
-			[13] = new List<Move>() { new Razorleaf() },
-			[16] = new List<Move>() { new Worryseed() },
-			[20] = new List<Move>() { new Synthesis() },
-			[22] = new List<Move>() { new Takedown() },
-			[26] = new List<Move>() { new Bulldoze() },
-			[30] = new List<Move>() { new Seedbomb() },
-			[34] = new List<Move>() { new Bulkup() },
-			[38] = new List<Move>() { new Doubleedge() },
-			[42] = new List<Move>() { new Hornleech() },
-			[45] = new List<Move>() { new Leafblade() },
-			[50] = new List<Move>() { new Milkdrink() },
+			[1] = new List<Move>() { new Moves.Tackle(), new Moves.Growth() },
+			[7] = new List<Move>() { new Moves.Vinewhip() },
+			[9] = new List<Move>() { new Moves.Tailwhip() },
+			[12] = new List<Move>() { new Moves.Leechseed() },
+			[13] = new List<Move>() { new Moves.Razorleaf() },
+			[16] = new List<Move>() { new Moves.Worryseed() },
+			[20] = new List<Move>() { new Moves.Synthesis() },
+			[22] = new List<Move>() { new Moves.Takedown() },
+			[26] = new List<Move>() { new Moves.Bulldoze() },
+			[30] = new List<Move>() { new Moves.Seedbomb() },
+			[34] = new List<Move>() { new Moves.Bulkup() },
+			[38] = new List<Move>() { new Moves.Doubleedge() },
+			[42] = new List<Move>() { new Moves.Hornleech() },
+			[45] = new List<Move>() { new Moves.Leafblade() },
+			[50] = new List<Move>() { new Moves.Milkdrink() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Brickbreak(), new Bulkup(), new Bulldoze(), new Confide(), new Doubleteam(), new Energyball(), new Facade(), new Frustration(), new Gigadrain(), new Grassknot(), new Hiddenpower(), new Irontail(), new Naturepower(), new Payback(), new Protect(), new Raindance(), new Rest(), new Return(), new Roar(), new Rockslide(), new Rocksmash(), new Round(), new Seedbomb(), new Sleeptalk(), new Snore(), new Solarbeam(), new Strength(), new Substitute(), new Sunnyday(), new Surf(), new Swagger(), new Synthesis(), new Toxic(), new Wildcharge(), new Workup(), new Worryseed(), new Zenheadbutt() };
-		public override List<Move> EggMoves => new List<Move>() { new Defensecurl(), new Grassyterrain(), new Milkdrink(), new Rollout() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Brickbreak(), new Moves.Bulkup(), new Moves.Bulldoze(), new Moves.Confide(), new Moves.Doubleteam(), new Moves.Energyball(), new Moves.Facade(), new Moves.Frustration(), new Moves.Gigadrain(), new Moves.Grassknot(), new Moves.Hiddenpower(), new Moves.Irontail(), new Moves.Naturepower(), new Moves.Payback(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Return(), new Moves.Roar(), new Moves.Rockslide(), new Moves.Rocksmash(), new Moves.Round(), new Moves.Seedbomb(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Strength(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Surf(), new Moves.Swagger(), new Moves.Synthesis(), new Moves.Toxic(), new Moves.Wildcharge(), new Moves.Workup(), new Moves.Worryseed(), new Moves.Zenheadbutt() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Defensecurl(), new Moves.Grassyterrain(), new Moves.Milkdrink(), new Moves.Rollout() };
 		public override int Weight => 310;
 		public override int ExpYield => 70;
 		public override int CatchRate => 200;

@@ -9,28 +9,28 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Floette : Pokemon
 	{
 		public override string Name => "Floette";
-		public override List<Ability> AvailableAbilities => new() {new Flowerveil() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Symbiosis() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Flowerveil() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Symbiosis() };
 		public override Stats BaseStats => new Stats(54, 45, 47, 75, 98, 52);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Tackle(), new Vinewhip(), new Fairywind() },
-			[6] = new List<Move>() { new Fairywind() },
-			[10] = new List<Move>() { new Luckychant() },
-			[15] = new List<Move>() { new Razorleaf() },
-			[20] = new List<Move>() { new Wish() },
-			[25] = new List<Move>() { new Magicalleaf() },
-			[27] = new List<Move>() { new Grassyterrain() },
-			[33] = new List<Move>() { new Petalblizzard() },
-			[38] = new List<Move>() { new Aromatherapy() },
-			[43] = new List<Move>() { new Mistyterrain() },
-			[46] = new List<Move>() { new Moonblast() },
-			[51] = new List<Move>() { new Petaldance() },
-			[58] = new List<Move>() { new Solarbeam() },
+			[1] = new List<Move>() { new Moves.Tackle(), new Moves.Vinewhip(), new Moves.Fairywind() },
+			[6] = new List<Move>() { new Moves.Fairywind() },
+			[10] = new List<Move>() { new Moves.Luckychant() },
+			[15] = new List<Move>() { new Moves.Razorleaf() },
+			[20] = new List<Move>() { new Moves.Wish() },
+			[25] = new List<Move>() { new Moves.Magicalleaf() },
+			[27] = new List<Move>() { new Moves.Grassyterrain() },
+			[33] = new List<Move>() { new Moves.Petalblizzard() },
+			[38] = new List<Move>() { new Moves.Aromatherapy() },
+			[43] = new List<Move>() { new Moves.Mistyterrain() },
+			[46] = new List<Move>() { new Moves.Moonblast() },
+			[51] = new List<Move>() { new Moves.Petaldance() },
+			[58] = new List<Move>() { new Moves.Solarbeam() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Afteryou(), new Allyswitch(), new Attract(), new Calmmind(), new Confide(), new Covet(), new Dazzlinggleam(), new Doubleteam(), new Echoedvoice(), new Endeavor(), new Energyball(), new Facade(), new Frustration(), new Gigadrain(), new Grassknot(), new Healbell(), new Helpinghand(), new Hiddenpower(), new Magiccoat(), new Naturepower(), new Protect(), new Psychic(), new Raindance(), new Rest(), new Return(), new Round(), new Safeguard(), new Seedbomb(), new Sleeptalk(), new Snore(), new Solarbeam(), new Substitute(), new Sunnyday(), new Swagger(), new Synthesis(), new Toxic(), new Worryseed() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Afteryou(), new Moves.Allyswitch(), new Moves.Attract(), new Moves.Calmmind(), new Moves.Confide(), new Moves.Covet(), new Moves.Dazzlinggleam(), new Moves.Doubleteam(), new Moves.Echoedvoice(), new Moves.Endeavor(), new Moves.Energyball(), new Moves.Facade(), new Moves.Frustration(), new Moves.Gigadrain(), new Moves.Grassknot(), new Moves.Healbell(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Magiccoat(), new Moves.Naturepower(), new Moves.Protect(), new Moves.Psychic(), new Moves.Raindance(), new Moves.Rest(), new Moves.Return(), new Moves.Round(), new Moves.Safeguard(), new Moves.Seedbomb(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Synthesis(), new Moves.Toxic(), new Moves.Worryseed() };
 		public override int Weight => 9;
 		public override int ExpYield => 130;
 		public override int CatchRate => 120;

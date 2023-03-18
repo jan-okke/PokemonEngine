@@ -9,31 +9,31 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Pansear : Pokemon
 	{
 		public override string Name => "Pansear";
-		public override List<Ability> AvailableAbilities => new() {new Gluttony() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Blaze() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Gluttony() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Blaze() };
 		public override Stats BaseStats => new Stats(50, 53, 48, 53, 48, 64);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Scratch(), new Playnice() },
-			[4] = new List<Move>() { new Leer() },
-			[7] = new List<Move>() { new Lick() },
-			[10] = new List<Move>() { new Incinerate() },
-			[13] = new List<Move>() { new Furyswipes() },
-			[16] = new List<Move>() { new Yawn() },
-			[19] = new List<Move>() { new Bite() },
-			[22] = new List<Move>() { new Flameburst() },
-			[25] = new List<Move>() { new Amnesia() },
-			[28] = new List<Move>() { new Fling() },
-			[31] = new List<Move>() { new Acrobatics() },
-			[34] = new List<Move>() { new Fireblast() },
-			[37] = new List<Move>() { new Recycle() },
-			[40] = new List<Move>() { new Naturalgift() },
-			[43] = new List<Move>() { new Crunch() },
+			[1] = new List<Move>() { new Moves.Scratch(), new Moves.Playnice() },
+			[4] = new List<Move>() { new Moves.Leer() },
+			[7] = new List<Move>() { new Moves.Lick() },
+			[10] = new List<Move>() { new Moves.Incinerate() },
+			[13] = new List<Move>() { new Moves.Furyswipes() },
+			[16] = new List<Move>() { new Moves.Yawn() },
+			[19] = new List<Move>() { new Moves.Bite() },
+			[22] = new List<Move>() { new Moves.Flameburst() },
+			[25] = new List<Move>() { new Moves.Amnesia() },
+			[28] = new List<Move>() { new Moves.Fling() },
+			[31] = new List<Move>() { new Moves.Acrobatics() },
+			[34] = new List<Move>() { new Moves.Fireblast() },
+			[37] = new List<Move>() { new Moves.Recycle() },
+			[40] = new List<Move>() { new Moves.Naturalgift() },
+			[43] = new List<Move>() { new Moves.Crunch() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Acrobatics(), new Attract(), new Confide(), new Covet(), new Cut(), new Doubleteam(), new Endeavor(), new Facade(), new Fireblast(), new Firepledge(), new Firepunch(), new Flamecharge(), new Flamethrower(), new Fling(), new Focuspunch(), new Frustration(), new Gastroacid(), new Grassknot(), new Gunkshot(), new Heatwave(), new Helpinghand(), new Hiddenpower(), new Irontail(), new Knockoff(), new Lowkick(), new Lowsweep(), new Overheat(), new Payback(), new Protect(), new Recycle(), new Rest(), new Return(), new Rocksmash(), new Rocktomb(), new Roleplay(), new Round(), new Shadowclaw(), new Sleeptalk(), new Snore(), new Solarbeam(), new Substitute(), new Sunnyday(), new Swagger(), new Taunt(), new Thief(), new Torment(), new Toxic(), new Uproar(), new Willowisp(), new Workup() };
-		public override List<Move> EggMoves => new List<Move>() { new Astonish(), new Belch(), new Covet(), new Disarmingvoice(), new Firepunch(), new Firespin(), new Flareblitz(), new Heatwave(), new Lowkick(), new Nastyplot(), new Roleplay(), new Sleeptalk(), new Tickle() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Acrobatics(), new Moves.Attract(), new Moves.Confide(), new Moves.Covet(), new Moves.Cut(), new Moves.Doubleteam(), new Moves.Endeavor(), new Moves.Facade(), new Moves.Fireblast(), new Moves.Firepledge(), new Moves.Firepunch(), new Moves.Flamecharge(), new Moves.Flamethrower(), new Moves.Fling(), new Moves.Focuspunch(), new Moves.Frustration(), new Moves.Gastroacid(), new Moves.Grassknot(), new Moves.Gunkshot(), new Moves.Heatwave(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Irontail(), new Moves.Knockoff(), new Moves.Lowkick(), new Moves.Lowsweep(), new Moves.Overheat(), new Moves.Payback(), new Moves.Protect(), new Moves.Recycle(), new Moves.Rest(), new Moves.Return(), new Moves.Rocksmash(), new Moves.Rocktomb(), new Moves.Roleplay(), new Moves.Round(), new Moves.Shadowclaw(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Taunt(), new Moves.Thief(), new Moves.Torment(), new Moves.Toxic(), new Moves.Uproar(), new Moves.Willowisp(), new Moves.Workup() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Astonish(), new Moves.Belch(), new Moves.Covet(), new Moves.Disarmingvoice(), new Moves.Firepunch(), new Moves.Firespin(), new Moves.Flareblitz(), new Moves.Heatwave(), new Moves.Lowkick(), new Moves.Nastyplot(), new Moves.Roleplay(), new Moves.Sleeptalk(), new Moves.Tickle() };
 		public override int Weight => 110;
 		public override int ExpYield => 63;
 		public override int CatchRate => 190;

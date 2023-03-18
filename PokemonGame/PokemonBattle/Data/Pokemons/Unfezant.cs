@@ -9,25 +9,25 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Unfezant : Pokemon
 	{
 		public override string Name => "Unfezant";
-		public override List<Ability> AvailableAbilities => new() {new Bigpecks(), new Superluck() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Rivalry() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Bigpecks(), new Abilities.Superluck() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Rivalry() };
 		public override Stats BaseStats => new Stats(80, 115, 80, 65, 55, 93);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Normal, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Gust(), new Growl(), new Leer(), new Quickattack() },
-			[12] = new List<Move>() { new Taunt() },
-			[16] = new List<Move>() { new Aircutter() },
-			[20] = new List<Move>() { new Swagger() },
-			[26] = new List<Move>() { new Featherdance() },
-			[36] = new List<Move>() { new Detect() },
-			[42] = new List<Move>() { new Airslash() },
-			[50] = new List<Move>() { new Roost() },
-			[58] = new List<Move>() { new Tailwind() },
-			[66] = new List<Move>() { new Skyattack() },
+			[1] = new List<Move>() { new Moves.Gust(), new Moves.Growl(), new Moves.Leer(), new Moves.Quickattack() },
+			[12] = new List<Move>() { new Moves.Taunt() },
+			[16] = new List<Move>() { new Moves.Aircutter() },
+			[20] = new List<Move>() { new Moves.Swagger() },
+			[26] = new List<Move>() { new Moves.Featherdance() },
+			[36] = new List<Move>() { new Moves.Detect() },
+			[42] = new List<Move>() { new Moves.Airslash() },
+			[50] = new List<Move>() { new Moves.Roost() },
+			[58] = new List<Move>() { new Moves.Tailwind() },
+			[66] = new List<Move>() { new Moves.Skyattack() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Agility(), new Airslash(), new Attract(), new Bravebird(), new Dualwingbeat(), new Endure(), new Facade(), new Fly(), new Focusenergy(), new Gigaimpact(), new Heatwave(), new Hiddenpower(), new Hurricane(), new Hyperbeam(), new Protect(), new Raindance(), new Rest(), new Round(), new Sleeptalk(), new Snore(), new Steelwing(), new Substitute(), new Sunnyday(), new Swift(), new Taunt(), new Uproar(), new Uturn(), new Workup() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Agility(), new Moves.Airslash(), new Moves.Attract(), new Moves.Bravebird(), new Moves.Dualwingbeat(), new Moves.Endure(), new Moves.Facade(), new Moves.Fly(), new Moves.Focusenergy(), new Moves.Gigaimpact(), new Moves.Heatwave(), new Moves.Hiddenpower(), new Moves.Hurricane(), new Moves.Hyperbeam(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Round(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Steelwing(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swift(), new Moves.Taunt(), new Moves.Uproar(), new Moves.Uturn(), new Moves.Workup() };
 		public override int Weight => 290;
 		public override int ExpYield => 244;
 		public override int CatchRate => 45;

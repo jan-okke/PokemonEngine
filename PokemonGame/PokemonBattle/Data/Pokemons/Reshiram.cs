@@ -9,26 +9,26 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Reshiram : Pokemon
 	{
 		public override string Name => "Reshiram";
-		public override List<Ability> AvailableAbilities => new() {new Turboblaze() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Turboblaze() };
 		public override Stats BaseStats => new Stats(100, 120, 100, 150, 120, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dragon, PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Dragonbreath(), new Nobleroar(), new Ancientpower(), new Firefang() },
-			[8] = new List<Move>() { new Slash() },
-			[16] = new List<Move>() { new Crunch() },
-			[24] = new List<Move>() { new Extrasensory() },
-			[32] = new List<Move>() { new Dragonpulse() },
-			[40] = new List<Move>() { new Flamethrower() },
-			[48] = new List<Move>() { new Fusionflare() },
-			[56] = new List<Move>() { new Hypervoice() },
-			[64] = new List<Move>() { new Fireblast() },
-			[72] = new List<Move>() { new Imprison() },
-			[80] = new List<Move>() { new Outrage() },
-			[88] = new List<Move>() { new Blueflare() },
+			[1] = new List<Move>() { new Moves.Dragonbreath(), new Moves.Nobleroar(), new Moves.Ancientpower(), new Moves.Firefang() },
+			[8] = new List<Move>() { new Moves.Slash() },
+			[16] = new List<Move>() { new Moves.Crunch() },
+			[24] = new List<Move>() { new Moves.Extrasensory() },
+			[32] = new List<Move>() { new Moves.Dragonpulse() },
+			[40] = new List<Move>() { new Moves.Flamethrower() },
+			[48] = new List<Move>() { new Moves.Fusionflare() },
+			[56] = new List<Move>() { new Moves.Hypervoice() },
+			[64] = new List<Move>() { new Moves.Fireblast() },
+			[72] = new List<Move>() { new Moves.Imprison() },
+			[80] = new List<Move>() { new Moves.Outrage() },
+			[88] = new List<Move>() { new Moves.Blueflare() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Bodypress(), new Breakingswipe(), new Brutalswing(), new Crunch(), new Dracometeor(), new Dragonclaw(), new Dragondance(), new Dragonpulse(), new Dualwingbeat(), new Earthpower(), new Endure(), new Facade(), new Fireblast(), new Firefang(), new Flamethrower(), new Flareblitz(), new Fling(), new Fly(), new Focusblast(), new Gigaimpact(), new Heatcrash(), new Heatwave(), new Helpinghand(), new Hiddenpower(), new Hyperbeam(), new Hypervoice(), new Imprison(), new Lightscreen(), new Mysticalfire(), new Outrage(), new Overheat(), new Payback(), new Protect(), new Psychic(), new Raindance(), new Reflect(), new Rest(), new Rockslide(), new Rocktomb(), new Round(), new Safeguard(), new Scaleshot(), new Scorchingsands(), new Shadowball(), new Shadowclaw(), new Sleeptalk(), new Snore(), new Solarbeam(), new Steelwing(), new Stoneedge(), new Substitute(), new Sunnyday(), new Swift(), new Weatherball(), new Willowisp(), new Zenheadbutt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Bodypress(), new Moves.Breakingswipe(), new Moves.Brutalswing(), new Moves.Crunch(), new Moves.Dracometeor(), new Moves.Dragonclaw(), new Moves.Dragondance(), new Moves.Dragonpulse(), new Moves.Dualwingbeat(), new Moves.Earthpower(), new Moves.Endure(), new Moves.Facade(), new Moves.Fireblast(), new Moves.Firefang(), new Moves.Flamethrower(), new Moves.Flareblitz(), new Moves.Fling(), new Moves.Fly(), new Moves.Focusblast(), new Moves.Gigaimpact(), new Moves.Heatcrash(), new Moves.Heatwave(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Hypervoice(), new Moves.Imprison(), new Moves.Lightscreen(), new Moves.Mysticalfire(), new Moves.Outrage(), new Moves.Overheat(), new Moves.Payback(), new Moves.Protect(), new Moves.Psychic(), new Moves.Raindance(), new Moves.Reflect(), new Moves.Rest(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Safeguard(), new Moves.Scaleshot(), new Moves.Scorchingsands(), new Moves.Shadowball(), new Moves.Shadowclaw(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Steelwing(), new Moves.Stoneedge(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swift(), new Moves.Weatherball(), new Moves.Willowisp(), new Moves.Zenheadbutt() };
 		public override int Weight => 3300;
 		public override int ExpYield => 340;
 		public override int CatchRate => 3;

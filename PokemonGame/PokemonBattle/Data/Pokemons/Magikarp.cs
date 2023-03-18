@@ -9,18 +9,18 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Magikarp : Pokemon
 	{
 		public override string Name => "Magikarp";
-		public override List<Ability> AvailableAbilities => new() {new Swiftswim() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Rattled() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Swiftswim() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Rattled() };
 		public override Stats BaseStats => new Stats(20, 10, 55, 15, 20, 80);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Splash() },
-			[15] = new List<Move>() { new Tackle() },
-			[25] = new List<Move>() { new Flail() },
+			[1] = new List<Move>() { new Moves.Splash() },
+			[15] = new List<Move>() { new Moves.Tackle() },
+			[25] = new List<Move>() { new Moves.Flail() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Bounce(), new Hydropump() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Bounce(), new Moves.Hydropump() };
 		public override int Weight => 100;
 		public override int ExpYield => 40;
 		public override int CatchRate => 255;

@@ -9,31 +9,31 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Pignite : Pokemon
 	{
 		public override string Name => "Pignite";
-		public override List<Ability> AvailableAbilities => new() {new Blaze() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Thickfat() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Blaze() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Thickfat() };
 		public override Stats BaseStats => new Stats(90, 93, 55, 70, 55, 55);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Fire, PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Armthrust() },
-			[1] = new List<Move>() { new Armthrust(), new Tackle(), new Tailwhip(), new Ember(), new Odorsleuth() },
-			[3] = new List<Move>() { new Tailwhip() },
-			[7] = new List<Move>() { new Ember() },
-			[9] = new List<Move>() { new Odorsleuth() },
-			[13] = new List<Move>() { new Defensecurl() },
-			[15] = new List<Move>() { new Flamecharge() },
-			[20] = new List<Move>() { new Smog() },
-			[23] = new List<Move>() { new Rollout() },
-			[28] = new List<Move>() { new Takedown() },
-			[31] = new List<Move>() { new Heatcrash() },
-			[36] = new List<Move>() { new Assurance() },
-			[39] = new List<Move>() { new Flamethrower() },
-			[44] = new List<Move>() { new Headsmash() },
-			[47] = new List<Move>() { new Roar() },
-			[52] = new List<Move>() { new Flareblitz() },
+			[0] = new List<Move>() { new Moves.Armthrust() },
+			[1] = new List<Move>() { new Moves.Armthrust(), new Moves.Tackle(), new Moves.Tailwhip(), new Moves.Ember(), new Moves.Odorsleuth() },
+			[3] = new List<Move>() { new Moves.Tailwhip() },
+			[7] = new List<Move>() { new Moves.Ember() },
+			[9] = new List<Move>() { new Moves.Odorsleuth() },
+			[13] = new List<Move>() { new Moves.Defensecurl() },
+			[15] = new List<Move>() { new Moves.Flamecharge() },
+			[20] = new List<Move>() { new Moves.Smog() },
+			[23] = new List<Move>() { new Moves.Rollout() },
+			[28] = new List<Move>() { new Moves.Takedown() },
+			[31] = new List<Move>() { new Moves.Heatcrash() },
+			[36] = new List<Move>() { new Moves.Assurance() },
+			[39] = new List<Move>() { new Moves.Flamethrower() },
+			[44] = new List<Move>() { new Moves.Headsmash() },
+			[47] = new List<Move>() { new Moves.Roar() },
+			[52] = new List<Move>() { new Moves.Flareblitz() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Brickbreak(), new Bulldoze(), new Confide(), new Covet(), new Doubleteam(), new Echoedvoice(), new Endeavor(), new Facade(), new Fireblast(), new Firepledge(), new Firepunch(), new Flamecharge(), new Flamethrower(), new Fling(), new Focusblast(), new Focuspunch(), new Frustration(), new Grassknot(), new Gyroball(), new Heatwave(), new Helpinghand(), new Hiddenpower(), new Irontail(), new Lowkick(), new Lowsweep(), new Overheat(), new Poisonjab(), new Poweruppunch(), new Protect(), new Rest(), new Return(), new Roar(), new Rockslide(), new Rocksmash(), new Rocktomb(), new Round(), new Sleeptalk(), new Snore(), new Solarbeam(), new Stompingtantrum(), new Stoneedge(), new Strength(), new Substitute(), new Sunnyday(), new Superpower(), new Swagger(), new Taunt(), new Thunderpunch(), new Toxic(), new Wildcharge(), new Willowisp(), new Workup(), new Zenheadbutt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Brickbreak(), new Moves.Bulldoze(), new Moves.Confide(), new Moves.Covet(), new Moves.Doubleteam(), new Moves.Echoedvoice(), new Moves.Endeavor(), new Moves.Facade(), new Moves.Fireblast(), new Moves.Firepledge(), new Moves.Firepunch(), new Moves.Flamecharge(), new Moves.Flamethrower(), new Moves.Fling(), new Moves.Focusblast(), new Moves.Focuspunch(), new Moves.Frustration(), new Moves.Grassknot(), new Moves.Gyroball(), new Moves.Heatwave(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Irontail(), new Moves.Lowkick(), new Moves.Lowsweep(), new Moves.Overheat(), new Moves.Poisonjab(), new Moves.Poweruppunch(), new Moves.Protect(), new Moves.Rest(), new Moves.Return(), new Moves.Roar(), new Moves.Rockslide(), new Moves.Rocksmash(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Stompingtantrum(), new Moves.Stoneedge(), new Moves.Strength(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Superpower(), new Moves.Swagger(), new Moves.Taunt(), new Moves.Thunderpunch(), new Moves.Toxic(), new Moves.Wildcharge(), new Moves.Willowisp(), new Moves.Workup(), new Moves.Zenheadbutt() };
 		public override int Weight => 555;
 		public override int ExpYield => 146;
 		public override int CatchRate => 45;

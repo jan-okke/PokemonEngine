@@ -9,31 +9,31 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Deino : Pokemon
 	{
 		public override string Name => "Deino";
-		public override List<Ability> AvailableAbilities => new() {new Hustle() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Hustle() };
 		public override Stats BaseStats => new Stats(52, 65, 50, 45, 50, 38);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dark, PokemonType.Dragon };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Tackle(), new Focusenergy() },
-			[4] = new List<Move>() { new Dragonbreath() },
-			[8] = new List<Move>() { new Bite() },
-			[12] = new List<Move>() { new Roar() },
-			[16] = new List<Move>() { new Assurance() },
-			[20] = new List<Move>() { new Headbutt() },
-			[24] = new List<Move>() { new Workup() },
-			[28] = new List<Move>() { new Slam() },
-			[32] = new List<Move>() { new Crunch() },
-			[36] = new List<Move>() { new Scaryface() },
-			[40] = new List<Move>() { new Dragonpulse() },
-			[44] = new List<Move>() { new Bodyslam() },
-			[48] = new List<Move>() { new Hypervoice() },
-			[52] = new List<Move>() { new Dragonrush() },
-			[56] = new List<Move>() { new Nastyplot() },
-			[60] = new List<Move>() { new Outrage() },
+			[1] = new List<Move>() { new Moves.Tackle(), new Moves.Focusenergy() },
+			[4] = new List<Move>() { new Moves.Dragonbreath() },
+			[8] = new List<Move>() { new Moves.Bite() },
+			[12] = new List<Move>() { new Moves.Roar() },
+			[16] = new List<Move>() { new Moves.Assurance() },
+			[20] = new List<Move>() { new Moves.Headbutt() },
+			[24] = new List<Move>() { new Moves.Workup() },
+			[28] = new List<Move>() { new Moves.Slam() },
+			[32] = new List<Move>() { new Moves.Crunch() },
+			[36] = new List<Move>() { new Moves.Scaryface() },
+			[40] = new List<Move>() { new Moves.Dragonpulse() },
+			[44] = new List<Move>() { new Moves.Bodyslam() },
+			[48] = new List<Move>() { new Moves.Hypervoice() },
+			[52] = new List<Move>() { new Moves.Dragonrush() },
+			[56] = new List<Move>() { new Moves.Nastyplot() },
+			[60] = new List<Move>() { new Moves.Outrage() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Assurance(), new Attract(), new Bodyslam(), new Crunch(), new Darkpulse(), new Dracometeor(), new Dragonpulse(), new Earthpower(), new Endure(), new Facade(), new Firefang(), new Focusenergy(), new Hiddenpower(), new Hypervoice(), new Icefang(), new Nastyplot(), new Outrage(), new Protect(), new Raindance(), new Rest(), new Round(), new Scaryface(), new Screech(), new Sleeptalk(), new Snore(), new Substitute(), new Sunnyday(), new Superpower(), new Taunt(), new Thief(), new Thunderfang(), new Thunderwave(), new Uproar(), new Workup(), new Zenheadbutt() };
-		public override List<Move> EggMoves => new List<Move>() { new Astonish(), new Belch(), new Doublehit(), new Headsmash() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Assurance(), new Moves.Attract(), new Moves.Bodyslam(), new Moves.Crunch(), new Moves.Darkpulse(), new Moves.Dracometeor(), new Moves.Dragonpulse(), new Moves.Earthpower(), new Moves.Endure(), new Moves.Facade(), new Moves.Firefang(), new Moves.Focusenergy(), new Moves.Hiddenpower(), new Moves.Hypervoice(), new Moves.Icefang(), new Moves.Nastyplot(), new Moves.Outrage(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Round(), new Moves.Scaryface(), new Moves.Screech(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Superpower(), new Moves.Taunt(), new Moves.Thief(), new Moves.Thunderfang(), new Moves.Thunderwave(), new Moves.Uproar(), new Moves.Workup(), new Moves.Zenheadbutt() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Astonish(), new Moves.Belch(), new Moves.Doublehit(), new Moves.Headsmash() };
 		public override int Weight => 173;
 		public override int ExpYield => 60;
 		public override int CatchRate => 45;

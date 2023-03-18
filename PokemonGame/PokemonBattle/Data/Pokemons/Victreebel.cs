@@ -9,19 +9,19 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Victreebel : Pokemon
 	{
 		public override string Name => "Victreebel";
-		public override List<Ability> AvailableAbilities => new() {new Chlorophyll() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Gluttony() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Chlorophyll() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Gluttony() };
 		public override Stats BaseStats => new Stats(80, 105, 65, 100, 70, 70);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Grass, PokemonType.Poison };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Leaftornado() },
-			[1] = new List<Move>() { new Leaftornado(), new Stockpile(), new Swallow(), new Spitup(), new Vinewhip(), new Sleeppowder(), new Sweetscent(), new Razorleaf() },
-			[32] = new List<Move>() { new Leafstorm() },
-			[44] = new List<Move>() { new Leafblade() },
+			[0] = new List<Move>() { new Moves.Leaftornado() },
+			[1] = new List<Move>() { new Moves.Leaftornado(), new Moves.Stockpile(), new Moves.Swallow(), new Moves.Spitup(), new Moves.Vinewhip(), new Moves.Sleeppowder(), new Moves.Sweetscent(), new Moves.Razorleaf() },
+			[32] = new List<Move>() { new Moves.Leafstorm() },
+			[44] = new List<Move>() { new Moves.Leafblade() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Bind(), new Bulletseed(), new Confide(), new Cut(), new Doubleteam(), new Endure(), new Energyball(), new Facade(), new Flash(), new Frustration(), new Gastroacid(), new Gigadrain(), new Gigaimpact(), new Grassknot(), new Hiddenpower(), new Hyperbeam(), new Infestation(), new Knockoff(), new Naturepower(), new Poisonjab(), new Protect(), new Reflect(), new Rest(), new Return(), new Round(), new Seedbomb(), new Sleeptalk(), new Sludgebomb(), new Snore(), new Solarbeam(), new Substitute(), new Sunnyday(), new Swagger(), new Swordsdance(), new Synthesis(), new Thief(), new Venoshock(), new Worryseed() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Bind(), new Moves.Bulletseed(), new Moves.Confide(), new Moves.Cut(), new Moves.Doubleteam(), new Moves.Endure(), new Moves.Energyball(), new Moves.Facade(), new Moves.Flash(), new Moves.Frustration(), new Moves.Gastroacid(), new Moves.Gigadrain(), new Moves.Gigaimpact(), new Moves.Grassknot(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Infestation(), new Moves.Knockoff(), new Moves.Naturepower(), new Moves.Poisonjab(), new Moves.Protect(), new Moves.Reflect(), new Moves.Rest(), new Moves.Return(), new Moves.Round(), new Moves.Seedbomb(), new Moves.Sleeptalk(), new Moves.Sludgebomb(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Swordsdance(), new Moves.Synthesis(), new Moves.Thief(), new Moves.Venoshock(), new Moves.Worryseed() };
 		public override int Weight => 155;
 		public override int ExpYield => 245;
 		public override int CatchRate => 45;

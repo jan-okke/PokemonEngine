@@ -9,29 +9,29 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Minccino : Pokemon
 	{
 		public override string Name => "Minccino";
-		public override List<Ability> AvailableAbilities => new() {new Cutecharm(), new Technician() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Skilllink() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Cutecharm(), new Abilities.Technician() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Skilllink() };
 		public override Stats BaseStats => new Stats(55, 50, 40, 40, 40, 75);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Pound(), new Babydolleyes() },
-			[4] = new List<Move>() { new Helpinghand() },
-			[8] = new List<Move>() { new Echoedvoice() },
-			[12] = new List<Move>() { new Sing() },
-			[16] = new List<Move>() { new Charm() },
-			[20] = new List<Move>() { new Swift() },
-			[24] = new List<Move>() { new Encore() },
-			[28] = new List<Move>() { new Afteryou() },
-			[32] = new List<Move>() { new Tailslap() },
-			[36] = new List<Move>() { new Tickle() },
-			[40] = new List<Move>() { new Slam() },
-			[44] = new List<Move>() { new Hypervoice() },
-			[48] = new List<Move>() { new Lastresort() },
+			[1] = new List<Move>() { new Moves.Pound(), new Moves.Babydolleyes() },
+			[4] = new List<Move>() { new Moves.Helpinghand() },
+			[8] = new List<Move>() { new Moves.Echoedvoice() },
+			[12] = new List<Move>() { new Moves.Sing() },
+			[16] = new List<Move>() { new Moves.Charm() },
+			[20] = new List<Move>() { new Moves.Swift() },
+			[24] = new List<Move>() { new Moves.Encore() },
+			[28] = new List<Move>() { new Moves.Afteryou() },
+			[32] = new List<Move>() { new Moves.Tailslap() },
+			[36] = new List<Move>() { new Moves.Tickle() },
+			[40] = new List<Move>() { new Moves.Slam() },
+			[44] = new List<Move>() { new Moves.Hypervoice() },
+			[48] = new List<Move>() { new Moves.Lastresort() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Calmmind(), new Charm(), new Dazzlinggleam(), new Dig(), new Encore(), new Endure(), new Facade(), new Faketears(), new Fling(), new Grassknot(), new Gunkshot(), new Helpinghand(), new Hiddenpower(), new Hypervoice(), new Irontail(), new Playrough(), new Protect(), new Raindance(), new Rest(), new Retaliate(), new Round(), new Safeguard(), new Seedbomb(), new Sleeptalk(), new Snore(), new Substitute(), new Sunnyday(), new Swift(), new Tailslap(), new Thief(), new Thunderbolt(), new Thunderwave(), new Tripleaxel(), new Uproar(), new Uturn(), new Workup() };
-		public override List<Move> EggMoves => new List<Move>() { new Aquatail(), new Flail(), new Knockoff(), new Tailwhip() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Calmmind(), new Moves.Charm(), new Moves.Dazzlinggleam(), new Moves.Dig(), new Moves.Encore(), new Moves.Endure(), new Moves.Facade(), new Moves.Faketears(), new Moves.Fling(), new Moves.Grassknot(), new Moves.Gunkshot(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Hypervoice(), new Moves.Irontail(), new Moves.Playrough(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Retaliate(), new Moves.Round(), new Moves.Safeguard(), new Moves.Seedbomb(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swift(), new Moves.Tailslap(), new Moves.Thief(), new Moves.Thunderbolt(), new Moves.Thunderwave(), new Moves.Tripleaxel(), new Moves.Uproar(), new Moves.Uturn(), new Moves.Workup() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Aquatail(), new Moves.Flail(), new Moves.Knockoff(), new Moves.Tailwhip() };
 		public override int Weight => 58;
 		public override int ExpYield => 60;
 		public override int CatchRate => 255;

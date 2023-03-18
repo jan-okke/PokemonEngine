@@ -9,26 +9,26 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Staravia : Pokemon
 	{
 		public override string Name => "Staravia";
-		public override List<Ability> AvailableAbilities => new() {new Intimidate() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Reckless() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Intimidate() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Reckless() };
 		public override Stats BaseStats => new Stats(55, 75, 50, 40, 40, 80);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Normal, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Tackle(), new Growl(), new Quickattack() },
-			[5] = new List<Move>() { new Quickattack() },
-			[9] = new List<Move>() { new Wingattack() },
-			[13] = new List<Move>() { new Doubleteam() },
-			[18] = new List<Move>() { new Endeavor() },
-			[23] = new List<Move>() { new Whirlwind() },
-			[28] = new List<Move>() { new Aerialace() },
-			[33] = new List<Move>() { new Takedown() },
-			[38] = new List<Move>() { new Agility() },
-			[43] = new List<Move>() { new Bravebird() },
-			[48] = new List<Move>() { new Finalgambit() },
+			[1] = new List<Move>() { new Moves.Tackle(), new Moves.Growl(), new Moves.Quickattack() },
+			[5] = new List<Move>() { new Moves.Quickattack() },
+			[9] = new List<Move>() { new Moves.Wingattack() },
+			[13] = new List<Move>() { new Moves.Doubleteam() },
+			[18] = new List<Move>() { new Moves.Endeavor() },
+			[23] = new List<Move>() { new Moves.Whirlwind() },
+			[28] = new List<Move>() { new Moves.Aerialace() },
+			[33] = new List<Move>() { new Moves.Takedown() },
+			[38] = new List<Move>() { new Moves.Agility() },
+			[43] = new List<Move>() { new Moves.Bravebird() },
+			[48] = new List<Move>() { new Moves.Finalgambit() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Aerialace(), new Attract(), new Confide(), new Defog(), new Doubleteam(), new Echoedvoice(), new Endeavor(), new Endure(), new Facade(), new Fly(), new Frustration(), new Heatwave(), new Hiddenpower(), new Pluck(), new Protect(), new Raindance(), new Rest(), new Return(), new Roost(), new Round(), new Sleeptalk(), new Snore(), new Steelwing(), new Substitute(), new Sunnyday(), new Swagger(), new Tailwind(), new Thief(), new Uproar(), new Uturn(), new Workup() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Aerialace(), new Moves.Attract(), new Moves.Confide(), new Moves.Defog(), new Moves.Doubleteam(), new Moves.Echoedvoice(), new Moves.Endeavor(), new Moves.Endure(), new Moves.Facade(), new Moves.Fly(), new Moves.Frustration(), new Moves.Heatwave(), new Moves.Hiddenpower(), new Moves.Pluck(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Return(), new Moves.Roost(), new Moves.Round(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Steelwing(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Tailwind(), new Moves.Thief(), new Moves.Uproar(), new Moves.Uturn(), new Moves.Workup() };
 		public override int Weight => 155;
 		public override int ExpYield => 119;
 		public override int CatchRate => 120;

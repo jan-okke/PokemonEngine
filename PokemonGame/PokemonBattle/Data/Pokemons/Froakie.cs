@@ -9,29 +9,29 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Froakie : Pokemon
 	{
 		public override string Name => "Froakie";
-		public override List<Ability> AvailableAbilities => new() {new Torrent() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Protean() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Torrent() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Protean() };
 		public override Stats BaseStats => new Stats(41, 56, 40, 62, 44, 71);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Pound(), new Growl() },
-			[5] = new List<Move>() { new Bubble() },
-			[8] = new List<Move>() { new Quickattack() },
-			[10] = new List<Move>() { new Lick() },
-			[14] = new List<Move>() { new Waterpulse() },
-			[18] = new List<Move>() { new Smokescreen() },
-			[21] = new List<Move>() { new Round() },
-			[25] = new List<Move>() { new Fling() },
-			[29] = new List<Move>() { new Smackdown() },
-			[35] = new List<Move>() { new Substitute() },
-			[39] = new List<Move>() { new Bounce() },
-			[43] = new List<Move>() { new Doubleteam() },
-			[48] = new List<Move>() { new Hydropump() },
+			[1] = new List<Move>() { new Moves.Pound(), new Moves.Growl() },
+			[5] = new List<Move>() { new Moves.Bubble() },
+			[8] = new List<Move>() { new Moves.Quickattack() },
+			[10] = new List<Move>() { new Moves.Lick() },
+			[14] = new List<Move>() { new Moves.Waterpulse() },
+			[18] = new List<Move>() { new Moves.Smokescreen() },
+			[21] = new List<Move>() { new Moves.Round() },
+			[25] = new List<Move>() { new Moves.Fling() },
+			[29] = new List<Move>() { new Moves.Smackdown() },
+			[35] = new List<Move>() { new Moves.Substitute() },
+			[39] = new List<Move>() { new Moves.Bounce() },
+			[43] = new List<Move>() { new Moves.Doubleteam() },
+			[48] = new List<Move>() { new Moves.Hydropump() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Acrobatics(), new Aerialace(), new Attract(), new Blizzard(), new Bounce(), new Confide(), new Cut(), new Dive(), new Doubleteam(), new Echoedvoice(), new Facade(), new Fling(), new Frustration(), new Grassknot(), new Hiddenpower(), new Icebeam(), new Icywind(), new Poweruppunch(), new Protect(), new Raindance(), new Rest(), new Return(), new Rockslide(), new Rocksmash(), new Rocktomb(), new Roleplay(), new Round(), new Scald(), new Sleeptalk(), new Smackdown(), new Snatch(), new Snore(), new Spite(), new Strength(), new Substitute(), new Surf(), new Swagger(), new Taunt(), new Thief(), new Toxic(), new Uturn(), new Waterfall(), new Waterpledge(), new Waterpulse(), new Workup() };
-		public override List<Move> EggMoves => new List<Move>() { new Bestow(), new Camouflage(), new Mindreader(), new Mudsport(), new Poweruppunch(), new Toxicspikes(), new Watersport() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Acrobatics(), new Moves.Aerialace(), new Moves.Attract(), new Moves.Blizzard(), new Moves.Bounce(), new Moves.Confide(), new Moves.Cut(), new Moves.Dive(), new Moves.Doubleteam(), new Moves.Echoedvoice(), new Moves.Facade(), new Moves.Fling(), new Moves.Frustration(), new Moves.Grassknot(), new Moves.Hiddenpower(), new Moves.Icebeam(), new Moves.Icywind(), new Moves.Poweruppunch(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Return(), new Moves.Rockslide(), new Moves.Rocksmash(), new Moves.Rocktomb(), new Moves.Roleplay(), new Moves.Round(), new Moves.Scald(), new Moves.Sleeptalk(), new Moves.Smackdown(), new Moves.Snatch(), new Moves.Snore(), new Moves.Spite(), new Moves.Strength(), new Moves.Substitute(), new Moves.Surf(), new Moves.Swagger(), new Moves.Taunt(), new Moves.Thief(), new Moves.Toxic(), new Moves.Uturn(), new Moves.Waterfall(), new Moves.Waterpledge(), new Moves.Waterpulse(), new Moves.Workup() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Bestow(), new Moves.Camouflage(), new Moves.Mindreader(), new Moves.Mudsport(), new Moves.Poweruppunch(), new Moves.Toxicspikes(), new Moves.Watersport() };
 		public override int Weight => 70;
 		public override int ExpYield => 63;
 		public override int CatchRate => 45;

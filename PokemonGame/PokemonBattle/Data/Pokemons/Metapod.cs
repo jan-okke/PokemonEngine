@@ -9,16 +9,16 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Metapod : Pokemon
 	{
 		public override string Name => "Metapod";
-		public override List<Ability> AvailableAbilities => new() {new Shedskin() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Shedskin() };
 		public override Stats BaseStats => new Stats(50, 20, 55, 25, 25, 30);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Harden() },
-			[1] = new List<Move>() { new Harden() },
+			[0] = new List<Move>() { new Moves.Harden() },
+			[1] = new List<Move>() { new Moves.Harden() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Electroweb(), new Irondefense() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Electroweb(), new Moves.Irondefense() };
 		public override int Weight => 99;
 		public override int ExpYield => 72;
 		public override int CatchRate => 120;

@@ -9,25 +9,25 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Thievul : Pokemon
 	{
 		public override string Name => "Thievul";
-		public override List<Ability> AvailableAbilities => new() {new Runaway(), new Unburden() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Stakeout() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Runaway(), new Abilities.Unburden() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Stakeout() };
 		public override Stats BaseStats => new Stats(70, 58, 58, 87, 92, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Dark };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Thief() },
-			[1] = new List<Move>() { new Thief(), new Quickattack(), new Tailwhip(), new Beatup(), new Honeclaws() },
-			[12] = new List<Move>() { new Snarl() },
-			[16] = new List<Move>() { new Assurance() },
-			[22] = new List<Move>() { new Nastyplot() },
-			[28] = new List<Move>() { new Suckerpunch() },
-			[34] = new List<Move>() { new Nightslash() },
-			[40] = new List<Move>() { new Tailslap() },
-			[46] = new List<Move>() { new Foulplay() },
-			[52] = new List<Move>() { new Partingshot() },
+			[0] = new List<Move>() { new Moves.Thief() },
+			[1] = new List<Move>() { new Moves.Thief(), new Moves.Quickattack(), new Moves.Tailwhip(), new Moves.Beatup(), new Moves.Honeclaws() },
+			[12] = new List<Move>() { new Moves.Snarl() },
+			[16] = new List<Move>() { new Moves.Assurance() },
+			[22] = new List<Move>() { new Moves.Nastyplot() },
+			[28] = new List<Move>() { new Moves.Suckerpunch() },
+			[34] = new List<Move>() { new Moves.Nightslash() },
+			[40] = new List<Move>() { new Moves.Tailslap() },
+			[46] = new List<Move>() { new Moves.Foulplay() },
+			[52] = new List<Move>() { new Moves.Partingshot() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Acrobatics(), new Agility(), new Assurance(), new Attract(), new Batonpass(), new Beatup(), new Burningjealousy(), new Crunch(), new Darkpulse(), new Dig(), new Endure(), new Facade(), new Faketears(), new Firefang(), new Foulplay(), new Gigaimpact(), new Grassknot(), new Hiddenpower(), new Hyperbeam(), new Icefang(), new Lashout(), new Mudshot(), new Nastyplot(), new Playrough(), new Protect(), new Psychic(), new Rest(), new Round(), new Screech(), new Shadowball(), new Shadowclaw(), new Sleeptalk(), new Snarl(), new Snore(), new Substitute(), new Swift(), new Tailslap(), new Taunt(), new Thief(), new Thunderfang(), new Uturn() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Acrobatics(), new Moves.Agility(), new Moves.Assurance(), new Moves.Attract(), new Moves.Batonpass(), new Moves.Beatup(), new Moves.Burningjealousy(), new Moves.Crunch(), new Moves.Darkpulse(), new Moves.Dig(), new Moves.Endure(), new Moves.Facade(), new Moves.Faketears(), new Moves.Firefang(), new Moves.Foulplay(), new Moves.Gigaimpact(), new Moves.Grassknot(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Icefang(), new Moves.Lashout(), new Moves.Mudshot(), new Moves.Nastyplot(), new Moves.Playrough(), new Moves.Protect(), new Moves.Psychic(), new Moves.Rest(), new Moves.Round(), new Moves.Screech(), new Moves.Shadowball(), new Moves.Shadowclaw(), new Moves.Sleeptalk(), new Moves.Snarl(), new Moves.Snore(), new Moves.Substitute(), new Moves.Swift(), new Moves.Tailslap(), new Moves.Taunt(), new Moves.Thief(), new Moves.Thunderfang(), new Moves.Uturn() };
 		public override int Weight => 199;
 		public override int ExpYield => 159;
 		public override int CatchRate => 127;

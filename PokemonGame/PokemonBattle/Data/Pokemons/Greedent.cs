@@ -9,24 +9,24 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Greedent : Pokemon
 	{
 		public override string Name => "Greedent";
-		public override List<Ability> AvailableAbilities => new() {new Cheekpouch() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Gluttony() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Cheekpouch() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Gluttony() };
 		public override Stats BaseStats => new Stats(120, 95, 95, 55, 75, 20);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Covet() },
-			[1] = new List<Move>() { new Covet(), new Tackle(), new Tailwhip(), new Bite(), new Stuffcheeks() },
-			[15] = new List<Move>() { new Stockpile(), new Swallow(), new Spitup() },
-			[20] = new List<Move>() { new Bodyslam() },
-			[27] = new List<Move>() { new Rest() },
-			[34] = new List<Move>() { new Counter() },
-			[41] = new List<Move>() { new Bulletseed() },
-			[48] = new List<Move>() { new Superfang() },
-			[55] = new List<Move>() { new Belch() },
+			[0] = new List<Move>() { new Moves.Covet() },
+			[1] = new List<Move>() { new Moves.Covet(), new Moves.Tackle(), new Moves.Tailwhip(), new Moves.Bite(), new Moves.Stuffcheeks() },
+			[15] = new List<Move>() { new Moves.Stockpile(), new Moves.Swallow(), new Moves.Spitup() },
+			[20] = new List<Move>() { new Moves.Bodyslam() },
+			[27] = new List<Move>() { new Moves.Rest() },
+			[34] = new List<Move>() { new Moves.Counter() },
+			[41] = new List<Move>() { new Moves.Bulletseed() },
+			[48] = new List<Move>() { new Moves.Superfang() },
+			[55] = new List<Move>() { new Moves.Belch() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Amnesia(), new Assurance(), new Attract(), new Bodypress(), new Bodyslam(), new Brutalswing(), new Bulletseed(), new Crunch(), new Dig(), new Earthquake(), new Endure(), new Facade(), new Firefang(), new Fling(), new Gigaimpact(), new Gyroball(), new Hiddenpower(), new Hyperbeam(), new Hypervoice(), new Icefang(), new Irontail(), new Mudshot(), new Payback(), new Protect(), new Psychicfangs(), new Rest(), new Round(), new Seedbomb(), new Sleeptalk(), new Snore(), new Stompingtantrum(), new Substitute(), new Superpower(), new Swordsdance(), new Tailslap(), new Thief(), new Thunderfang(), new Uproar(), new Wildcharge() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Amnesia(), new Moves.Assurance(), new Moves.Attract(), new Moves.Bodypress(), new Moves.Bodyslam(), new Moves.Brutalswing(), new Moves.Bulletseed(), new Moves.Crunch(), new Moves.Dig(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Facade(), new Moves.Firefang(), new Moves.Fling(), new Moves.Gigaimpact(), new Moves.Gyroball(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Hypervoice(), new Moves.Icefang(), new Moves.Irontail(), new Moves.Mudshot(), new Moves.Payback(), new Moves.Protect(), new Moves.Psychicfangs(), new Moves.Rest(), new Moves.Round(), new Moves.Seedbomb(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Stompingtantrum(), new Moves.Substitute(), new Moves.Superpower(), new Moves.Swordsdance(), new Moves.Tailslap(), new Moves.Thief(), new Moves.Thunderfang(), new Moves.Uproar(), new Moves.Wildcharge() };
 		public override int Weight => 60;
 		public override int ExpYield => 161;
 		public override int CatchRate => 90;

@@ -9,29 +9,29 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Camerupt : Pokemon
 	{
 		public override string Name => "Camerupt";
-		public override List<Ability> AvailableAbilities => new() {new Magmaarmor(), new Solidrock() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Angerpoint() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Magmaarmor(), new Abilities.Solidrock() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Angerpoint() };
 		public override Stats BaseStats => new Stats(70, 100, 70, 105, 75, 40);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Fire, PokemonType.Ground };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Rockslide() },
-			[1] = new List<Move>() { new Rockslide(), new Fissure(), new Eruption(), new Growl(), new Tackle(), new Ember(), new Focusenergy() },
-			[8] = new List<Move>() { new Ember(), new Focusenergy() },
-			[12] = new List<Move>() { new Bulldoze() },
-			[15] = new List<Move>() { new Flamewheel() },
-			[19] = new List<Move>() { new Amnesia() },
-			[22] = new List<Move>() { new Lavaplume() },
-			[26] = new List<Move>() { new Earthpower() },
-			[29] = new List<Move>() { new Curse() },
-			[31] = new List<Move>() { new Takedown() },
-			[39] = new List<Move>() { new Yawn() },
-			[46] = new List<Move>() { new Earthquake() },
-			[52] = new List<Move>() { new Eruption() },
-			[59] = new List<Move>() { new Fissure() },
+			[0] = new List<Move>() { new Moves.Rockslide() },
+			[1] = new List<Move>() { new Moves.Rockslide(), new Moves.Fissure(), new Moves.Eruption(), new Moves.Growl(), new Moves.Tackle(), new Moves.Ember(), new Moves.Focusenergy() },
+			[8] = new List<Move>() { new Moves.Ember(), new Moves.Focusenergy() },
+			[12] = new List<Move>() { new Moves.Bulldoze() },
+			[15] = new List<Move>() { new Moves.Flamewheel() },
+			[19] = new List<Move>() { new Moves.Amnesia() },
+			[22] = new List<Move>() { new Moves.Lavaplume() },
+			[26] = new List<Move>() { new Moves.Earthpower() },
+			[29] = new List<Move>() { new Moves.Curse() },
+			[31] = new List<Move>() { new Moves.Takedown() },
+			[39] = new List<Move>() { new Moves.Yawn() },
+			[46] = new List<Move>() { new Moves.Earthquake() },
+			[52] = new List<Move>() { new Moves.Eruption() },
+			[59] = new List<Move>() { new Moves.Fissure() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Afteryou(), new Attract(), new Bulldoze(), new Confide(), new Dig(), new Doubleteam(), new Earthpower(), new Earthquake(), new Echoedvoice(), new Endure(), new Explosion(), new Facade(), new Fireblast(), new Flamecharge(), new Flamethrower(), new Flashcannon(), new Frustration(), new Gigaimpact(), new Heatwave(), new Hiddenpower(), new Hyperbeam(), new Ironhead(), new Naturepower(), new Overheat(), new Protect(), new Rest(), new Return(), new Roar(), new Rockpolish(), new Rockslide(), new Rocksmash(), new Rocktomb(), new Round(), new Sandstorm(), new Sleeptalk(), new Snore(), new Solarbeam(), new Stealthrock(), new Stompingtantrum(), new Stoneedge(), new Strength(), new Substitute(), new Sunnyday(), new Swagger(), new Willowisp() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Afteryou(), new Moves.Attract(), new Moves.Bulldoze(), new Moves.Confide(), new Moves.Dig(), new Moves.Doubleteam(), new Moves.Earthpower(), new Moves.Earthquake(), new Moves.Echoedvoice(), new Moves.Endure(), new Moves.Explosion(), new Moves.Facade(), new Moves.Fireblast(), new Moves.Flamecharge(), new Moves.Flamethrower(), new Moves.Flashcannon(), new Moves.Frustration(), new Moves.Gigaimpact(), new Moves.Heatwave(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Ironhead(), new Moves.Naturepower(), new Moves.Overheat(), new Moves.Protect(), new Moves.Rest(), new Moves.Return(), new Moves.Roar(), new Moves.Rockpolish(), new Moves.Rockslide(), new Moves.Rocksmash(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Sandstorm(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Stealthrock(), new Moves.Stompingtantrum(), new Moves.Stoneedge(), new Moves.Strength(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Willowisp() };
 		public override int Weight => 2200;
 		public override int ExpYield => 161;
 		public override int CatchRate => 150;

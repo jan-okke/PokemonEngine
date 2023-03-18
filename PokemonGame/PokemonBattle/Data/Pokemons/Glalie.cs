@@ -9,27 +9,27 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Glalie : Pokemon
 	{
 		public override string Name => "Glalie";
-		public override List<Ability> AvailableAbilities => new() {new Innerfocus(), new Icebody() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Moody() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Innerfocus(), new Abilities.Icebody() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Moody() };
 		public override Stats BaseStats => new Stats(80, 80, 80, 80, 80, 80);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Ice };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Freezedry() },
-			[1] = new List<Move>() { new Freezedry(), new Sheercold(), new Powdersnow(), new Astonish(), new Leer(), new Doubleteam() },
-			[15] = new List<Move>() { new Iceshard() },
-			[20] = new List<Move>() { new Protect() },
-			[25] = new List<Move>() { new Icywind() },
-			[30] = new List<Move>() { new Frostbreath() },
-			[35] = new List<Move>() { new Bite() },
-			[40] = new List<Move>() { new Icefang() },
-			[47] = new List<Move>() { new Hail() },
-			[54] = new List<Move>() { new Headbutt() },
-			[61] = new List<Move>() { new Crunch() },
-			[68] = new List<Move>() { new Blizzard() },
+			[0] = new List<Move>() { new Moves.Freezedry() },
+			[1] = new List<Move>() { new Moves.Freezedry(), new Moves.Sheercold(), new Moves.Powdersnow(), new Moves.Astonish(), new Moves.Leer(), new Moves.Doubleteam() },
+			[15] = new List<Move>() { new Moves.Iceshard() },
+			[20] = new List<Move>() { new Moves.Protect() },
+			[25] = new List<Move>() { new Moves.Icywind() },
+			[30] = new List<Move>() { new Moves.Frostbreath() },
+			[35] = new List<Move>() { new Moves.Bite() },
+			[40] = new List<Move>() { new Moves.Icefang() },
+			[47] = new List<Move>() { new Moves.Hail() },
+			[54] = new List<Move>() { new Moves.Headbutt() },
+			[61] = new List<Move>() { new Moves.Crunch() },
+			[68] = new List<Move>() { new Moves.Blizzard() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Avalanche(), new Blizzard(), new Bodyslam(), new Bulldoze(), new Crunch(), new Darkpulse(), new Doubleteam(), new Earthquake(), new Endure(), new Explosion(), new Facade(), new Faketears(), new Flash(), new Gigaimpact(), new Gyroball(), new Hail(), new Hex(), new Hiddenpower(), new Hyperbeam(), new Icebeam(), new Icefang(), new Iciclespear(), new Icywind(), new Ironhead(), new Lightscreen(), new Payback(), new Protect(), new Raindance(), new Rest(), new Round(), new Safeguard(), new Scaryface(), new Selfdestruct(), new Shadowball(), new Sleeptalk(), new Snore(), new Spikes(), new Steelroller(), new Substitute(), new Swagger(), new Taunt(), new Torment(), new Waterpulse(), new Weatherball() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Avalanche(), new Moves.Blizzard(), new Moves.Bodyslam(), new Moves.Bulldoze(), new Moves.Crunch(), new Moves.Darkpulse(), new Moves.Doubleteam(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Explosion(), new Moves.Facade(), new Moves.Faketears(), new Moves.Flash(), new Moves.Gigaimpact(), new Moves.Gyroball(), new Moves.Hail(), new Moves.Hex(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Icebeam(), new Moves.Icefang(), new Moves.Iciclespear(), new Moves.Icywind(), new Moves.Ironhead(), new Moves.Lightscreen(), new Moves.Payback(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Round(), new Moves.Safeguard(), new Moves.Scaryface(), new Moves.Selfdestruct(), new Moves.Shadowball(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Spikes(), new Moves.Steelroller(), new Moves.Substitute(), new Moves.Swagger(), new Moves.Taunt(), new Moves.Torment(), new Moves.Waterpulse(), new Moves.Weatherball() };
 		public override int Weight => 2565;
 		public override int ExpYield => 168;
 		public override int CatchRate => 75;

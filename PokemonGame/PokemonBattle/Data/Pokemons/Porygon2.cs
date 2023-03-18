@@ -9,27 +9,27 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Porygon2 : Pokemon
 	{
 		public override string Name => "Porygon2";
-		public override List<Ability> AvailableAbilities => new() {new Trace(), new Download() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Analytic() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Trace(), new Abilities.Download() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Analytic() };
 		public override Stats BaseStats => new Stats(85, 80, 90, 105, 95, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Defensecurl(), new Tackle(), new Conversion(), new Recycle(), new Magnetrise() },
-			[15] = new List<Move>() { new Thundershock() },
-			[20] = new List<Move>() { new Psybeam() },
-			[25] = new List<Move>() { new Conversion2() },
-			[30] = new List<Move>() { new Agility() },
-			[35] = new List<Move>() { new Recover() },
-			[40] = new List<Move>() { new Discharge() },
-			[45] = new List<Move>() { new Triattack() },
-			[50] = new List<Move>() { new Magiccoat() },
-			[55] = new List<Move>() { new Lockon() },
-			[60] = new List<Move>() { new Zapcannon() },
-			[65] = new List<Move>() { new Hyperbeam() },
+			[1] = new List<Move>() { new Moves.Defensecurl(), new Moves.Tackle(), new Moves.Conversion(), new Moves.Recycle(), new Moves.Magnetrise() },
+			[15] = new List<Move>() { new Moves.Thundershock() },
+			[20] = new List<Move>() { new Moves.Psybeam() },
+			[25] = new List<Move>() { new Moves.Conversion2() },
+			[30] = new List<Move>() { new Moves.Agility() },
+			[35] = new List<Move>() { new Moves.Recover() },
+			[40] = new List<Move>() { new Moves.Discharge() },
+			[45] = new List<Move>() { new Moves.Triattack() },
+			[50] = new List<Move>() { new Moves.Magiccoat() },
+			[55] = new List<Move>() { new Moves.Lockon() },
+			[60] = new List<Move>() { new Moves.Zapcannon() },
+			[65] = new List<Move>() { new Moves.Hyperbeam() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Aerialace(), new Agility(), new Allyswitch(), new Blizzard(), new Chargebeam(), new Doubleteam(), new Dreameater(), new Eerieimpulse(), new Electroweb(), new Endure(), new Facade(), new Flash(), new Foulplay(), new Gigaimpact(), new Guardswap(), new Hiddenpower(), new Hyperbeam(), new Icebeam(), new Icywind(), new Irontail(), new Powerswap(), new Protect(), new Psychic(), new Psychup(), new Psyshock(), new Raindance(), new Recycle(), new Rest(), new Round(), new Shadowball(), new Shockwave(), new Sleeptalk(), new Snore(), new Solarbeam(), new Speedswap(), new Substitute(), new Sunnyday(), new Swagger(), new Swift(), new Thief(), new Thunder(), new Thunderbolt(), new Thunderwave(), new Triattack(), new Trick(), new Trickroom(), new Wonderroom(), new Zenheadbutt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Aerialace(), new Moves.Agility(), new Moves.Allyswitch(), new Moves.Blizzard(), new Moves.Chargebeam(), new Moves.Doubleteam(), new Moves.Dreameater(), new Moves.Eerieimpulse(), new Moves.Electroweb(), new Moves.Endure(), new Moves.Facade(), new Moves.Flash(), new Moves.Foulplay(), new Moves.Gigaimpact(), new Moves.Guardswap(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Icebeam(), new Moves.Icywind(), new Moves.Irontail(), new Moves.Powerswap(), new Moves.Protect(), new Moves.Psychic(), new Moves.Psychup(), new Moves.Psyshock(), new Moves.Raindance(), new Moves.Recycle(), new Moves.Rest(), new Moves.Round(), new Moves.Shadowball(), new Moves.Shockwave(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Speedswap(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Swift(), new Moves.Thief(), new Moves.Thunder(), new Moves.Thunderbolt(), new Moves.Thunderwave(), new Moves.Triattack(), new Moves.Trick(), new Moves.Trickroom(), new Moves.Wonderroom(), new Moves.Zenheadbutt() };
 		public override int Weight => 325;
 		public override int ExpYield => 180;
 		public override int CatchRate => 45;

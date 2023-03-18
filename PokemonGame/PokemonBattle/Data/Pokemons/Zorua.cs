@@ -9,28 +9,28 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Zorua : Pokemon
 	{
 		public override string Name => "Zorua";
-		public override List<Ability> AvailableAbilities => new() {new Illusion() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Illusion() };
 		public override Stats BaseStats => new Stats(40, 65, 40, 80, 40, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Dark };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Scratch(), new Leer() },
-			[4] = new List<Move>() { new Torment() },
-			[8] = new List<Move>() { new Honeclaws() },
-			[12] = new List<Move>() { new Furyswipes() },
-			[16] = new List<Move>() { new Scaryface() },
-			[20] = new List<Move>() { new Taunt() },
-			[24] = new List<Move>() { new Knockoff() },
-			[28] = new List<Move>() { new Faketears() },
-			[32] = new List<Move>() { new Agility() },
-			[36] = new List<Move>() { new Imprison() },
-			[40] = new List<Move>() { new Nightdaze() },
-			[44] = new List<Move>() { new Nastyplot() },
-			[48] = new List<Move>() { new Foulplay() },
+			[1] = new List<Move>() { new Moves.Scratch(), new Moves.Leer() },
+			[4] = new List<Move>() { new Moves.Torment() },
+			[8] = new List<Move>() { new Moves.Honeclaws() },
+			[12] = new List<Move>() { new Moves.Furyswipes() },
+			[16] = new List<Move>() { new Moves.Scaryface() },
+			[20] = new List<Move>() { new Moves.Taunt() },
+			[24] = new List<Move>() { new Moves.Knockoff() },
+			[28] = new List<Move>() { new Moves.Faketears() },
+			[32] = new List<Move>() { new Moves.Agility() },
+			[36] = new List<Move>() { new Moves.Imprison() },
+			[40] = new List<Move>() { new Moves.Nightdaze() },
+			[44] = new List<Move>() { new Moves.Nastyplot() },
+			[48] = new List<Move>() { new Moves.Foulplay() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Agility(), new Assurance(), new Attract(), new Bounce(), new Burningjealousy(), new Calmmind(), new Darkpulse(), new Dig(), new Endure(), new Facade(), new Faketears(), new Fling(), new Foulplay(), new Grassknot(), new Hex(), new Hiddenpower(), new Hypervoice(), new Imprison(), new Lashout(), new Nastyplot(), new Payback(), new Protect(), new Raindance(), new Rest(), new Retaliate(), new Revenge(), new Round(), new Scaryface(), new Shadowball(), new Skittersmack(), new Sleeptalk(), new Sludgebomb(), new Snarl(), new Snore(), new Substitute(), new Sunnyday(), new Swift(), new Swordsdance(), new Taunt(), new Thief(), new Trick(), new Uproar(), new Uturn() };
-		public override List<Move> EggMoves => new List<Move>() { new Copycat(), new Counter(), new Detect(), new Extrasensory(), new Memento(), new Suckerpunch() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Agility(), new Moves.Assurance(), new Moves.Attract(), new Moves.Bounce(), new Moves.Burningjealousy(), new Moves.Calmmind(), new Moves.Darkpulse(), new Moves.Dig(), new Moves.Endure(), new Moves.Facade(), new Moves.Faketears(), new Moves.Fling(), new Moves.Foulplay(), new Moves.Grassknot(), new Moves.Hex(), new Moves.Hiddenpower(), new Moves.Hypervoice(), new Moves.Imprison(), new Moves.Lashout(), new Moves.Nastyplot(), new Moves.Payback(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Retaliate(), new Moves.Revenge(), new Moves.Round(), new Moves.Scaryface(), new Moves.Shadowball(), new Moves.Skittersmack(), new Moves.Sleeptalk(), new Moves.Sludgebomb(), new Moves.Snarl(), new Moves.Snore(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swift(), new Moves.Swordsdance(), new Moves.Taunt(), new Moves.Thief(), new Moves.Trick(), new Moves.Uproar(), new Moves.Uturn() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Copycat(), new Moves.Counter(), new Moves.Detect(), new Moves.Extrasensory(), new Moves.Memento(), new Moves.Suckerpunch() };
 		public override int Weight => 125;
 		public override int ExpYield => 66;
 		public override int CatchRate => 75;

@@ -9,28 +9,28 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Solgaleo : Pokemon
 	{
 		public override string Name => "Solgaleo";
-		public override List<Ability> AvailableAbilities => new() {new Fullmetalbody() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Fullmetalbody() };
 		public override Stats BaseStats => new Stats(137, 137, 107, 113, 89, 97);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic, PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Sunsteelstrike() },
-			[1] = new List<Move>() { new Sunsteelstrike(), new Cosmicpower(), new Teleport(), new Metalclaw(), new Nobleroar() },
-			[7] = new List<Move>() { new Ironhead() },
-			[14] = new List<Move>() { new Metalsound() },
-			[21] = new List<Move>() { new Zenheadbutt() },
-			[28] = new List<Move>() { new Flashcannon() },
-			[35] = new List<Move>() { new Morningsun() },
-			[42] = new List<Move>() { new Crunch() },
-			[49] = new List<Move>() { new Metalburst() },
-			[56] = new List<Move>() { new Wildcharge() },
-			[63] = new List<Move>() { new Solarbeam() },
-			[70] = new List<Move>() { new Flareblitz() },
-			[77] = new List<Move>() { new Wideguard() },
-			[84] = new List<Move>() { new Gigaimpact() },
+			[0] = new List<Move>() { new Moves.Sunsteelstrike() },
+			[1] = new List<Move>() { new Moves.Sunsteelstrike(), new Moves.Cosmicpower(), new Moves.Teleport(), new Moves.Metalclaw(), new Moves.Nobleroar() },
+			[7] = new List<Move>() { new Moves.Ironhead() },
+			[14] = new List<Move>() { new Moves.Metalsound() },
+			[21] = new List<Move>() { new Moves.Zenheadbutt() },
+			[28] = new List<Move>() { new Moves.Flashcannon() },
+			[35] = new List<Move>() { new Moves.Morningsun() },
+			[42] = new List<Move>() { new Moves.Crunch() },
+			[49] = new List<Move>() { new Moves.Metalburst() },
+			[56] = new List<Move>() { new Moves.Wildcharge() },
+			[63] = new List<Move>() { new Moves.Solarbeam() },
+			[70] = new List<Move>() { new Moves.Flareblitz() },
+			[77] = new List<Move>() { new Moves.Wideguard() },
+			[84] = new List<Move>() { new Moves.Gigaimpact() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Agility(), new Bulldoze(), new Calmmind(), new Closecombat(), new Cosmicpower(), new Crunch(), new Earthquake(), new Endure(), new Expandingforce(), new Facade(), new Fireblast(), new Firespin(), new Flamethrower(), new Flareblitz(), new Flashcannon(), new Focusblast(), new Futuresight(), new Gigaimpact(), new Gyroball(), new Heatcrash(), new Heavyslam(), new Helpinghand(), new Hiddenpower(), new Hyperbeam(), new Hypervoice(), new Irondefense(), new Ironhead(), new Irontail(), new Lightscreen(), new Meteorbeam(), new Mysticalfire(), new Outrage(), new Protect(), new Psychic(), new Psychicfangs(), new Psyshock(), new Reflect(), new Rest(), new Rockslide(), new Rocktomb(), new Round(), new Safeguard(), new Scaryface(), new Sleeptalk(), new Snarl(), new Snore(), new Solarbeam(), new Steelbeam(), new Steelroller(), new Stoneedge(), new Substitute(), new Sunnyday(), new Superpower(), new Swift(), new Thunder(), new Thunderbolt(), new Thunderwave(), new Trickroom(), new Wildcharge(), new Workup(), new Zenheadbutt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Agility(), new Moves.Bulldoze(), new Moves.Calmmind(), new Moves.Closecombat(), new Moves.Cosmicpower(), new Moves.Crunch(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Expandingforce(), new Moves.Facade(), new Moves.Fireblast(), new Moves.Firespin(), new Moves.Flamethrower(), new Moves.Flareblitz(), new Moves.Flashcannon(), new Moves.Focusblast(), new Moves.Futuresight(), new Moves.Gigaimpact(), new Moves.Gyroball(), new Moves.Heatcrash(), new Moves.Heavyslam(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Hypervoice(), new Moves.Irondefense(), new Moves.Ironhead(), new Moves.Irontail(), new Moves.Lightscreen(), new Moves.Meteorbeam(), new Moves.Mysticalfire(), new Moves.Outrage(), new Moves.Protect(), new Moves.Psychic(), new Moves.Psychicfangs(), new Moves.Psyshock(), new Moves.Reflect(), new Moves.Rest(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Safeguard(), new Moves.Scaryface(), new Moves.Sleeptalk(), new Moves.Snarl(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Steelbeam(), new Moves.Steelroller(), new Moves.Stoneedge(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Superpower(), new Moves.Swift(), new Moves.Thunder(), new Moves.Thunderbolt(), new Moves.Thunderwave(), new Moves.Trickroom(), new Moves.Wildcharge(), new Moves.Workup(), new Moves.Zenheadbutt() };
 		public override int Weight => 2300;
 		public override int ExpYield => 340;
 		public override int CatchRate => 45;

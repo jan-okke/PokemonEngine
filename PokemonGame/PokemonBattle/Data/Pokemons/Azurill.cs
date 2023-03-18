@@ -9,22 +9,22 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Azurill : Pokemon
 	{
 		public override string Name => "Azurill";
-		public override List<Ability> AvailableAbilities => new() {new Thickfat(), new Hugepower() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Sapsipper() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Thickfat(), new Abilities.Hugepower() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Sapsipper() };
 		public override Stats BaseStats => new Stats(50, 20, 40, 20, 40, 20);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Normal, PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Splash(), new Watergun(), new Tailwhip() },
-			[3] = new List<Move>() { new Helpinghand() },
-			[6] = new List<Move>() { new Bubblebeam() },
-			[9] = new List<Move>() { new Charm() },
-			[12] = new List<Move>() { new Slam() },
-			[15] = new List<Move>() { new Bounce() },
+			[1] = new List<Move>() { new Moves.Splash(), new Moves.Watergun(), new Moves.Tailwhip() },
+			[3] = new List<Move>() { new Moves.Helpinghand() },
+			[6] = new List<Move>() { new Moves.Bubblebeam() },
+			[9] = new List<Move>() { new Moves.Charm() },
+			[12] = new List<Move>() { new Moves.Slam() },
+			[15] = new List<Move>() { new Moves.Bounce() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Blizzard(), new Bodyslam(), new Bounce(), new Brutalswing(), new Charm(), new Doubleteam(), new Drainingkiss(), new Encore(), new Endure(), new Facade(), new Faketears(), new Hail(), new Helpinghand(), new Hiddenpower(), new Hypervoice(), new Icebeam(), new Icywind(), new Irontail(), new Lightscreen(), new Muddywater(), new Mudshot(), new Protect(), new Raindance(), new Rest(), new Round(), new Scald(), new Sleeptalk(), new Snore(), new Substitute(), new Surf(), new Swagger(), new Uproar(), new Waterfall(), new Waterpulse(), new Whirlpool(), new Workup() };
-		public override List<Move> EggMoves => new List<Move>() { new Aquajet(), new Bellydrum(), new Bodyslam(), new Copycat(), new Encore(), new Faketears(), new Muddywater(), new Perishsong(), new Present(), new Sing(), new Slam(), new Soak(), new Supersonic(), new Tickle() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Blizzard(), new Moves.Bodyslam(), new Moves.Bounce(), new Moves.Brutalswing(), new Moves.Charm(), new Moves.Doubleteam(), new Moves.Drainingkiss(), new Moves.Encore(), new Moves.Endure(), new Moves.Facade(), new Moves.Faketears(), new Moves.Hail(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Hypervoice(), new Moves.Icebeam(), new Moves.Icywind(), new Moves.Irontail(), new Moves.Lightscreen(), new Moves.Muddywater(), new Moves.Mudshot(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Round(), new Moves.Scald(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Substitute(), new Moves.Surf(), new Moves.Swagger(), new Moves.Uproar(), new Moves.Waterfall(), new Moves.Waterpulse(), new Moves.Whirlpool(), new Moves.Workup() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Aquajet(), new Moves.Bellydrum(), new Moves.Bodyslam(), new Moves.Copycat(), new Moves.Encore(), new Moves.Faketears(), new Moves.Muddywater(), new Moves.Perishsong(), new Moves.Present(), new Moves.Sing(), new Moves.Slam(), new Moves.Soak(), new Moves.Supersonic(), new Moves.Tickle() };
 		public override int Weight => 20;
 		public override int ExpYield => 38;
 		public override int CatchRate => 150;

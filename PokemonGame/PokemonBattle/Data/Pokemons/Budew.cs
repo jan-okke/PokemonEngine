@@ -9,17 +9,17 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Budew : Pokemon
 	{
 		public override string Name => "Budew";
-		public override List<Ability> AvailableAbilities => new() {new Naturalcure(), new Poisonpoint() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Leafguard() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Naturalcure(), new Abilities.Poisonpoint() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Leafguard() };
 		public override Stats BaseStats => new Stats(40, 30, 35, 50, 70, 55);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Grass, PokemonType.Poison };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Absorb(), new Growth(), new Stunspore(), new Worryseed() },
+			[1] = new List<Move>() { new Moves.Absorb(), new Moves.Growth(), new Moves.Stunspore(), new Moves.Worryseed() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Bulletseed(), new Cut(), new Dazzlinggleam(), new Doubleteam(), new Endure(), new Energyball(), new Facade(), new Flash(), new Gigadrain(), new Grassknot(), new Grassyglide(), new Hiddenpower(), new Leafstorm(), new Pinmissile(), new Protect(), new Psychup(), new Raindance(), new Rest(), new Round(), new Seedbomb(), new Shadowball(), new Sleeptalk(), new Sludgebomb(), new Snore(), new Solarbeam(), new Spikes(), new Substitute(), new Sunnyday(), new Swagger(), new Swift(), new Swordsdance(), new Uproar(), new Venoshock(), new Weatherball() };
-		public override List<Move> EggMoves => new List<Move>() { new Cottonspore(), new Extrasensory(), new Leafstorm(), new Lifedew(), new Mindreader(), new Pinmissile(), new Razorleaf(), new Seedbomb(), new Sleeppowder(), new Spikes(), new Synthesis() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Bulletseed(), new Moves.Cut(), new Moves.Dazzlinggleam(), new Moves.Doubleteam(), new Moves.Endure(), new Moves.Energyball(), new Moves.Facade(), new Moves.Flash(), new Moves.Gigadrain(), new Moves.Grassknot(), new Moves.Grassyglide(), new Moves.Hiddenpower(), new Moves.Leafstorm(), new Moves.Pinmissile(), new Moves.Protect(), new Moves.Psychup(), new Moves.Raindance(), new Moves.Rest(), new Moves.Round(), new Moves.Seedbomb(), new Moves.Shadowball(), new Moves.Sleeptalk(), new Moves.Sludgebomb(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Spikes(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Swift(), new Moves.Swordsdance(), new Moves.Uproar(), new Moves.Venoshock(), new Moves.Weatherball() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Cottonspore(), new Moves.Extrasensory(), new Moves.Leafstorm(), new Moves.Lifedew(), new Moves.Mindreader(), new Moves.Pinmissile(), new Moves.Razorleaf(), new Moves.Seedbomb(), new Moves.Sleeppowder(), new Moves.Spikes(), new Moves.Synthesis() };
 		public override int Weight => 12;
 		public override int ExpYield => 56;
 		public override int CatchRate => 255;

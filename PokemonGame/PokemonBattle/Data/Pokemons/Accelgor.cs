@@ -9,27 +9,27 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Accelgor : Pokemon
 	{
 		public override string Name => "Accelgor";
-		public override List<Ability> AvailableAbilities => new() {new Hydration(), new Stickyhold() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Unburden() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Hydration(), new Abilities.Stickyhold() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Unburden() };
 		public override Stats BaseStats => new Stats(80, 70, 40, 100, 60, 145);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Watershuriken(), new Acid(), new Curse(), new Yawn(), new Acidarmor(), new Guardswap(), new Bodyslam(), new Absorb(), new Doubleteam(), new Acidspray(), new Quickattack() },
-			[12] = new List<Move>() { new Megadrain() },
-			[16] = new List<Move>() { new Strugglebug() },
-			[20] = new List<Move>() { new Swift() },
-			[24] = new List<Move>() { new Agility() },
-			[28] = new List<Move>() { new Gigadrain() },
-			[32] = new List<Move>() { new Powerswap() },
-			[36] = new List<Move>() { new Uturn() },
-			[40] = new List<Move>() { new Recover() },
-			[44] = new List<Move>() { new Bugbuzz() },
-			[48] = new List<Move>() { new Finalgambit() },
-			[52] = new List<Move>() { new Toxic() },
+			[1] = new List<Move>() { new Moves.Watershuriken(), new Moves.Acid(), new Moves.Curse(), new Moves.Yawn(), new Moves.Acidarmor(), new Moves.Guardswap(), new Moves.Bodyslam(), new Moves.Absorb(), new Moves.Doubleteam(), new Moves.Acidspray(), new Moves.Quickattack() },
+			[12] = new List<Move>() { new Moves.Megadrain() },
+			[16] = new List<Move>() { new Moves.Strugglebug() },
+			[20] = new List<Move>() { new Moves.Swift() },
+			[24] = new List<Move>() { new Moves.Agility() },
+			[28] = new List<Move>() { new Moves.Gigadrain() },
+			[32] = new List<Move>() { new Moves.Powerswap() },
+			[36] = new List<Move>() { new Moves.Uturn() },
+			[40] = new List<Move>() { new Moves.Recover() },
+			[44] = new List<Move>() { new Moves.Bugbuzz() },
+			[48] = new List<Move>() { new Moves.Finalgambit() },
+			[52] = new List<Move>() { new Moves.Toxic() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Agility(), new Attract(), new Batonpass(), new Bodyslam(), new Bugbuzz(), new Drainpunch(), new Encore(), new Endure(), new Energyball(), new Facade(), new Focusblast(), new Gigadrain(), new Gigaimpact(), new Guardswap(), new Hiddenpower(), new Hyperbeam(), new Leechlife(), new Mudshot(), new Powerswap(), new Protect(), new Raindance(), new Rest(), new Reversal(), new Round(), new Sandstorm(), new Skittersmack(), new Sleeptalk(), new Sludgebomb(), new Snore(), new Spikes(), new Substitute(), new Swift(), new Toxicspikes(), new Uturn(), new Venomdrench(), new Venoshock() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Agility(), new Moves.Attract(), new Moves.Batonpass(), new Moves.Bodyslam(), new Moves.Bugbuzz(), new Moves.Drainpunch(), new Moves.Encore(), new Moves.Endure(), new Moves.Energyball(), new Moves.Facade(), new Moves.Focusblast(), new Moves.Gigadrain(), new Moves.Gigaimpact(), new Moves.Guardswap(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Leechlife(), new Moves.Mudshot(), new Moves.Powerswap(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Reversal(), new Moves.Round(), new Moves.Sandstorm(), new Moves.Skittersmack(), new Moves.Sleeptalk(), new Moves.Sludgebomb(), new Moves.Snore(), new Moves.Spikes(), new Moves.Substitute(), new Moves.Swift(), new Moves.Toxicspikes(), new Moves.Uturn(), new Moves.Venomdrench(), new Moves.Venoshock() };
 		public override int Weight => 253;
 		public override int ExpYield => 173;
 		public override int CatchRate => 75;

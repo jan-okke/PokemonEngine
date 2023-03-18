@@ -9,26 +9,26 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Hakamoo : Pokemon
 	{
 		public override string Name => "Hakamo-o";
-		public override List<Ability> AvailableAbilities => new() {new Bulletproof(), new Soundproof() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Overcoat() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Bulletproof(), new Abilities.Soundproof() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Overcoat() };
 		public override Stats BaseStats => new Stats(55, 75, 90, 65, 70, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dragon, PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Autotomize(), new Tackle(), new Leer(), new Protect(), new Dragontail() },
-			[12] = new List<Move>() { new Scaryface() },
-			[16] = new List<Move>() { new Headbutt() },
-			[20] = new List<Move>() { new Workup() },
-			[24] = new List<Move>() { new Screech() },
-			[28] = new List<Move>() { new Irondefense() },
-			[32] = new List<Move>() { new Dragonclaw() },
-			[38] = new List<Move>() { new Nobleroar() },
-			[44] = new List<Move>() { new Dragondance() },
-			[50] = new List<Move>() { new Outrage() },
-			[56] = new List<Move>() { new Closecombat() },
+			[1] = new List<Move>() { new Moves.Autotomize(), new Moves.Tackle(), new Moves.Leer(), new Moves.Protect(), new Moves.Dragontail() },
+			[12] = new List<Move>() { new Moves.Scaryface() },
+			[16] = new List<Move>() { new Moves.Headbutt() },
+			[20] = new List<Move>() { new Moves.Workup() },
+			[24] = new List<Move>() { new Moves.Screech() },
+			[28] = new List<Move>() { new Moves.Irondefense() },
+			[32] = new List<Move>() { new Moves.Dragonclaw() },
+			[38] = new List<Move>() { new Moves.Nobleroar() },
+			[44] = new List<Move>() { new Moves.Dragondance() },
+			[50] = new List<Move>() { new Moves.Outrage() },
+			[56] = new List<Move>() { new Moves.Closecombat() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Brickbreak(), new Brutalswing(), new Bulkup(), new Bulldoze(), new Closecombat(), new Coaching(), new Dracometeor(), new Dragonclaw(), new Dragondance(), new Dragonpulse(), new Drainpunch(), new Earthquake(), new Endure(), new Facade(), new Falseswipe(), new Fling(), new Focusblast(), new Hiddenpower(), new Irondefense(), new Ironhead(), new Irontail(), new Lowkick(), new Megakick(), new Megapunch(), new Outrage(), new Payback(), new Protect(), new Rest(), new Reversal(), new Rockslide(), new Rocktomb(), new Round(), new Safeguard(), new Sandstorm(), new Scaleshot(), new Scaryface(), new Screech(), new Shadowclaw(), new Sleeptalk(), new Snore(), new Substitute(), new Swordsdance(), new Taunt(), new Uproar(), new Workup(), new Xscissor() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Brickbreak(), new Moves.Brutalswing(), new Moves.Bulkup(), new Moves.Bulldoze(), new Moves.Closecombat(), new Moves.Coaching(), new Moves.Dracometeor(), new Moves.Dragonclaw(), new Moves.Dragondance(), new Moves.Dragonpulse(), new Moves.Drainpunch(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Facade(), new Moves.Falseswipe(), new Moves.Fling(), new Moves.Focusblast(), new Moves.Hiddenpower(), new Moves.Irondefense(), new Moves.Ironhead(), new Moves.Irontail(), new Moves.Lowkick(), new Moves.Megakick(), new Moves.Megapunch(), new Moves.Outrage(), new Moves.Payback(), new Moves.Protect(), new Moves.Rest(), new Moves.Reversal(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Safeguard(), new Moves.Sandstorm(), new Moves.Scaleshot(), new Moves.Scaryface(), new Moves.Screech(), new Moves.Shadowclaw(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Substitute(), new Moves.Swordsdance(), new Moves.Taunt(), new Moves.Uproar(), new Moves.Workup(), new Moves.Xscissor() };
 		public override int Weight => 470;
 		public override int ExpYield => 147;
 		public override int CatchRate => 45;

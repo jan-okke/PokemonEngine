@@ -9,24 +9,24 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Carkol : Pokemon
 	{
 		public override string Name => "Carkol";
-		public override List<Ability> AvailableAbilities => new() {new Steamengine(), new Flamebody() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Flashfire() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Steamengine(), new Abilities.Flamebody() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Flashfire() };
 		public override Stats BaseStats => new Stats(80, 60, 90, 60, 70, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Flamecharge() },
-			[1] = new List<Move>() { new Flamecharge(), new Tackle(), new Smokescreen(), new Rapidspin(), new Smackdown() },
-			[15] = new List<Move>() { new Rockpolish() },
-			[20] = new List<Move>() { new Ancientpower() },
-			[27] = new List<Move>() { new Incinerate() },
-			[35] = new List<Move>() { new Stealthrock() },
-			[41] = new List<Move>() { new Heatcrash() },
-			[48] = new List<Move>() { new Rockblast() },
-			[55] = new List<Move>() { new Burnup() },
+			[0] = new List<Move>() { new Moves.Flamecharge() },
+			[1] = new List<Move>() { new Moves.Flamecharge(), new Moves.Tackle(), new Moves.Smokescreen(), new Moves.Rapidspin(), new Moves.Smackdown() },
+			[15] = new List<Move>() { new Moves.Rockpolish() },
+			[20] = new List<Move>() { new Moves.Ancientpower() },
+			[27] = new List<Move>() { new Moves.Incinerate() },
+			[35] = new List<Move>() { new Moves.Stealthrock() },
+			[41] = new List<Move>() { new Moves.Heatcrash() },
+			[48] = new List<Move>() { new Moves.Rockblast() },
+			[55] = new List<Move>() { new Moves.Burnup() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Bodypress(), new Dig(), new Endure(), new Facade(), new Fireblast(), new Firespin(), new Flamethrower(), new Flareblitz(), new Gyroball(), new Heatcrash(), new Heatwave(), new Heavyslam(), new Hiddenpower(), new Highhorsepower(), new Irondefense(), new Ironhead(), new Meteorbeam(), new Overheat(), new Protect(), new Reflect(), new Rest(), new Rockblast(), new Rockslide(), new Rocktomb(), new Round(), new Sandstorm(), new Sandtomb(), new Scald(), new Scorchingsands(), new Selfdestruct(), new Sleeptalk(), new Snore(), new Spikes(), new Stealthrock(), new Stoneedge(), new Substitute(), new Willowisp() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Bodypress(), new Moves.Dig(), new Moves.Endure(), new Moves.Facade(), new Moves.Fireblast(), new Moves.Firespin(), new Moves.Flamethrower(), new Moves.Flareblitz(), new Moves.Gyroball(), new Moves.Heatcrash(), new Moves.Heatwave(), new Moves.Heavyslam(), new Moves.Hiddenpower(), new Moves.Highhorsepower(), new Moves.Irondefense(), new Moves.Ironhead(), new Moves.Meteorbeam(), new Moves.Overheat(), new Moves.Protect(), new Moves.Reflect(), new Moves.Rest(), new Moves.Rockblast(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Sandstorm(), new Moves.Sandtomb(), new Moves.Scald(), new Moves.Scorchingsands(), new Moves.Selfdestruct(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Spikes(), new Moves.Stealthrock(), new Moves.Stoneedge(), new Moves.Substitute(), new Moves.Willowisp() };
 		public override int Weight => 780;
 		public override int ExpYield => 144;
 		public override int CatchRate => 120;

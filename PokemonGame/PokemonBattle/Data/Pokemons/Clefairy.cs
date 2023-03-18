@@ -9,28 +9,28 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Clefairy : Pokemon
 	{
 		public override string Name => "Clefairy";
-		public override List<Ability> AvailableAbilities => new() {new Cutecharm(), new Magicguard() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Friendguard() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Cutecharm(), new Abilities.Magicguard() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Friendguard() };
 		public override Stats BaseStats => new Stats(70, 45, 48, 60, 65, 35);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Sing(), new Sweetkiss(), new Disarmingvoice(), new Encore(), new Charm(), new Splash(), new Pound(), new Copycat(), new Growl(), new Defensecurl() },
-			[4] = new List<Move>() { new Storedpower() },
-			[8] = new List<Move>() { new Minimize() },
-			[12] = new List<Move>() { new Afteryou() },
-			[16] = new List<Move>() { new Lifedew() },
-			[20] = new List<Move>() { new Metronome() },
-			[24] = new List<Move>() { new Moonlight() },
-			[28] = new List<Move>() { new Gravity() },
-			[32] = new List<Move>() { new Meteormash() },
-			[36] = new List<Move>() { new Followme() },
-			[40] = new List<Move>() { new Cosmicpower() },
-			[44] = new List<Move>() { new Moonblast() },
-			[48] = new List<Move>() { new Healingwish() },
+			[1] = new List<Move>() { new Moves.Sing(), new Moves.Sweetkiss(), new Moves.Disarmingvoice(), new Moves.Encore(), new Moves.Charm(), new Moves.Splash(), new Moves.Pound(), new Moves.Copycat(), new Moves.Growl(), new Moves.Defensecurl() },
+			[4] = new List<Move>() { new Moves.Storedpower() },
+			[8] = new List<Move>() { new Moves.Minimize() },
+			[12] = new List<Move>() { new Moves.Afteryou() },
+			[16] = new List<Move>() { new Moves.Lifedew() },
+			[20] = new List<Move>() { new Moves.Metronome() },
+			[24] = new List<Move>() { new Moves.Moonlight() },
+			[28] = new List<Move>() { new Moves.Gravity() },
+			[32] = new List<Move>() { new Moves.Meteormash() },
+			[36] = new List<Move>() { new Moves.Followme() },
+			[40] = new List<Move>() { new Moves.Cosmicpower() },
+			[44] = new List<Move>() { new Moves.Moonblast() },
+			[48] = new List<Move>() { new Moves.Healingwish() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Allyswitch(), new Amnesia(), new Attract(), new Batonpass(), new Blizzard(), new Bodyslam(), new Bounce(), new Brickbreak(), new Calmmind(), new Chargebeam(), new Charm(), new Cosmicpower(), new Dazzlinggleam(), new Dig(), new Doubleteam(), new Drainingkiss(), new Drainpunch(), new Dreameater(), new Dualwingbeat(), new Encore(), new Endure(), new Facade(), new Faketears(), new Fireblast(), new Firepunch(), new Flamethrower(), new Flash(), new Fling(), new Focuspunch(), new Grassknot(), new Helpinghand(), new Hiddenpower(), new Hypervoice(), new Icebeam(), new Icepunch(), new Icywind(), new Imprison(), new Irontail(), new Lightscreen(), new Magicalleaf(), new Megakick(), new Megapunch(), new Meteorbeam(), new Metronome(), new Mistyexplosion(), new Mistyterrain(), new Mysticalfire(), new Playrough(), new Protect(), new Psychic(), new Psychup(), new Psyshock(), new Raindance(), new Recycle(), new Reflect(), new Rest(), new Retaliate(), new Rocksmash(), new Round(), new Safeguard(), new Shadowball(), new Shockwave(), new Sleeptalk(), new Snore(), new Solarbeam(), new Stealthrock(), new Storedpower(), new Strength(), new Substitute(), new Sunnyday(), new Swagger(), new Thunder(), new Thunderbolt(), new Thunderpunch(), new Thunderwave(), new Triattack(), new Trick(), new Uproar(), new Waterpulse(), new Wonderroom(), new Workup(), new Zenheadbutt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Allyswitch(), new Moves.Amnesia(), new Moves.Attract(), new Moves.Batonpass(), new Moves.Blizzard(), new Moves.Bodyslam(), new Moves.Bounce(), new Moves.Brickbreak(), new Moves.Calmmind(), new Moves.Chargebeam(), new Moves.Charm(), new Moves.Cosmicpower(), new Moves.Dazzlinggleam(), new Moves.Dig(), new Moves.Doubleteam(), new Moves.Drainingkiss(), new Moves.Drainpunch(), new Moves.Dreameater(), new Moves.Dualwingbeat(), new Moves.Encore(), new Moves.Endure(), new Moves.Facade(), new Moves.Faketears(), new Moves.Fireblast(), new Moves.Firepunch(), new Moves.Flamethrower(), new Moves.Flash(), new Moves.Fling(), new Moves.Focuspunch(), new Moves.Grassknot(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Hypervoice(), new Moves.Icebeam(), new Moves.Icepunch(), new Moves.Icywind(), new Moves.Imprison(), new Moves.Irontail(), new Moves.Lightscreen(), new Moves.Magicalleaf(), new Moves.Megakick(), new Moves.Megapunch(), new Moves.Meteorbeam(), new Moves.Metronome(), new Moves.Mistyexplosion(), new Moves.Mistyterrain(), new Moves.Mysticalfire(), new Moves.Playrough(), new Moves.Protect(), new Moves.Psychic(), new Moves.Psychup(), new Moves.Psyshock(), new Moves.Raindance(), new Moves.Recycle(), new Moves.Reflect(), new Moves.Rest(), new Moves.Retaliate(), new Moves.Rocksmash(), new Moves.Round(), new Moves.Safeguard(), new Moves.Shadowball(), new Moves.Shockwave(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Stealthrock(), new Moves.Storedpower(), new Moves.Strength(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Thunder(), new Moves.Thunderbolt(), new Moves.Thunderpunch(), new Moves.Thunderwave(), new Moves.Triattack(), new Moves.Trick(), new Moves.Uproar(), new Moves.Waterpulse(), new Moves.Wonderroom(), new Moves.Workup(), new Moves.Zenheadbutt() };
 		public override int Weight => 75;
 		public override int ExpYield => 113;
 		public override int CatchRate => 150;

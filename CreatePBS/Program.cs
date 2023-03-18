@@ -160,6 +160,7 @@ namespace PBSMaker
                 value= line.Split(" = ")[1];
                 SetParams(key, value, ref poke);
             }
+            pokemons.Add(poke);
 
             // Data is in pokemons now
 
@@ -190,7 +191,7 @@ namespace PBSMaker
                 {
                     var upperAbility = p.Abilities[i];
                     var ability = upperAbility[0] + upperAbility[1..].ToLower();
-                    stream.AddText($"new {ability}()" + (p.Abilities.Length - i > 1 ? ", " : ""));
+                    stream.AddText($"new Abilities.{ability}()" + (p.Abilities.Length - i > 1 ? ", " : ""));
                 }
                 stream.AddText(" };\n");
                 if (p.HiddenAbilities != null)
@@ -200,7 +201,7 @@ namespace PBSMaker
                     {
                         var upperAbility = p.HiddenAbilities[i];
                         var ability = upperAbility[0] + upperAbility[1..].ToLower();
-                        stream.AddText($"new {ability}()" + (p.HiddenAbilities.Length - i > 1 ? ", " : ""));
+                        stream.AddText($"new Abilities.{ability}()" + (p.HiddenAbilities.Length - i > 1 ? ", " : ""));
                     }
                     stream.AddText(" };\n");
                 }
@@ -248,7 +249,7 @@ namespace PBSMaker
                     {
                         var upperMove = data[level][i];
                         var move = upperMove[0] + upperMove[1..].ToLower();
-                        stream.AddText($"new {move}()" + (data[level].Count - i > 1 ? ", " : ""));
+                        stream.AddText($"new Moves.{move}()" + (data[level].Count - i > 1 ? ", " : ""));
                     }
 
                     stream.AddText(" },\n");
@@ -261,7 +262,7 @@ namespace PBSMaker
                     {
                         var upperMove = p.TutorMoves[i];
                         var move = upperMove[0] + upperMove[1..].ToLower();
-                        stream.AddText($"new {move}()" + (p.TutorMoves.Length - i > 1 ? ", " : ""));
+                        stream.AddText($"new Moves.{move}()" + (p.TutorMoves.Length - i > 1 ? ", " : ""));
                     }
                     stream.AddText(" };\n");
                 }
@@ -272,7 +273,7 @@ namespace PBSMaker
                     {
                         var upperMove = p.EggMoves[i];
                         var move = upperMove[0] + upperMove.Substring(1).ToLower();
-                        stream.AddText($"new {move}()" + (p.EggMoves.Length - i > 1 ? ", " : ""));
+                        stream.AddText($"new Moves.{move}()" + (p.EggMoves.Length - i > 1 ? ", " : ""));
                     }
                     stream.AddText(" };\n");
                 }
@@ -337,6 +338,7 @@ namespace PBSMaker
                 value = line.Split(" = ")[1];
                 SetParams(key, value, ref mov);
             }
+            moves.Add(mov);
 
             // Data is in moves now
 
@@ -378,7 +380,7 @@ namespace PBSMaker
                 stream.Close();
             }
             #endregion
-
+            #region Abilities
             var abilitiestxt = pbsdir + "\\abilities.txt";
 
             List<BasicAbility> abilities = new List<BasicAbility>();
@@ -408,6 +410,8 @@ namespace PBSMaker
                 SetParams(key, value, ref abil);
             }
 
+            abilities.Add(abil);
+
             // Data is in abilities now
 
             targetdir = gamedir + "\\PokemonBattle\\Data\\Abilities";
@@ -435,6 +439,7 @@ namespace PBSMaker
 
                 stream.Close();
             }
+            #endregion
         }
     }
 }

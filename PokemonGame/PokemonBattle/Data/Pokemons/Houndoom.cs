@@ -9,30 +9,30 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Houndoom : Pokemon
 	{
 		public override string Name => "Houndoom";
-		public override List<Ability> AvailableAbilities => new() {new Earlybird(), new Flashfire() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Unnerve() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Earlybird(), new Abilities.Flashfire() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Unnerve() };
 		public override Stats BaseStats => new Stats(75, 90, 50, 110, 80, 95);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dark, PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Inferno(), new Nastyplot(), new Thunderfang(), new Leer(), new Ember() },
-			[4] = new List<Move>() { new Howl() },
-			[8] = new List<Move>() { new Smog() },
-			[13] = new List<Move>() { new Roar() },
-			[16] = new List<Move>() { new Bite() },
-			[20] = new List<Move>() { new Taunt() },
-			[26] = new List<Move>() { new Beatup() },
-			[30] = new List<Move>() { new Firefang() },
-			[35] = new List<Move>() { new Payback() },
-			[41] = new List<Move>() { new Flamecharge() },
-			[45] = new List<Move>() { new Foulplay() },
-			[50] = new List<Move>() { new Flamethrower() },
-			[56] = new List<Move>() { new Crunch() },
-			[60] = new List<Move>() { new Nastyplot() },
-			[65] = new List<Move>() { new Inferno() },
+			[1] = new List<Move>() { new Moves.Inferno(), new Moves.Nastyplot(), new Moves.Thunderfang(), new Moves.Leer(), new Moves.Ember() },
+			[4] = new List<Move>() { new Moves.Howl() },
+			[8] = new List<Move>() { new Moves.Smog() },
+			[13] = new List<Move>() { new Moves.Roar() },
+			[16] = new List<Move>() { new Moves.Bite() },
+			[20] = new List<Move>() { new Moves.Taunt() },
+			[26] = new List<Move>() { new Moves.Beatup() },
+			[30] = new List<Move>() { new Moves.Firefang() },
+			[35] = new List<Move>() { new Moves.Payback() },
+			[41] = new List<Move>() { new Moves.Flamecharge() },
+			[45] = new List<Move>() { new Moves.Foulplay() },
+			[50] = new List<Move>() { new Moves.Flamethrower() },
+			[56] = new List<Move>() { new Moves.Crunch() },
+			[60] = new List<Move>() { new Moves.Nastyplot() },
+			[65] = new List<Move>() { new Moves.Inferno() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Confide(), new Darkpulse(), new Doubleteam(), new Dreameater(), new Embargo(), new Endure(), new Facade(), new Fireblast(), new Flamecharge(), new Flamethrower(), new Foulplay(), new Frustration(), new Gigaimpact(), new Heatwave(), new Hiddenpower(), new Hyperbeam(), new Hypervoice(), new Irontail(), new Laserfocus(), new Nastyplot(), new Overheat(), new Payback(), new Protect(), new Rest(), new Return(), new Roar(), new Rocksmash(), new Roleplay(), new Round(), new Shadowball(), new Sleeptalk(), new Sludgebomb(), new Snarl(), new Snatch(), new Snore(), new Solarbeam(), new Spite(), new Strength(), new Substitute(), new Sunnyday(), new Superfang(), new Swagger(), new Taunt(), new Thief(), new Throatchop(), new Torment(), new Uproar(), new Willowisp() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Confide(), new Moves.Darkpulse(), new Moves.Doubleteam(), new Moves.Dreameater(), new Moves.Embargo(), new Moves.Endure(), new Moves.Facade(), new Moves.Fireblast(), new Moves.Flamecharge(), new Moves.Flamethrower(), new Moves.Foulplay(), new Moves.Frustration(), new Moves.Gigaimpact(), new Moves.Heatwave(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Hypervoice(), new Moves.Irontail(), new Moves.Laserfocus(), new Moves.Nastyplot(), new Moves.Overheat(), new Moves.Payback(), new Moves.Protect(), new Moves.Rest(), new Moves.Return(), new Moves.Roar(), new Moves.Rocksmash(), new Moves.Roleplay(), new Moves.Round(), new Moves.Shadowball(), new Moves.Sleeptalk(), new Moves.Sludgebomb(), new Moves.Snarl(), new Moves.Snatch(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Spite(), new Moves.Strength(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Superfang(), new Moves.Swagger(), new Moves.Taunt(), new Moves.Thief(), new Moves.Throatchop(), new Moves.Torment(), new Moves.Uproar(), new Moves.Willowisp() };
 		public override int Weight => 350;
 		public override int ExpYield => 175;
 		public override int CatchRate => 45;

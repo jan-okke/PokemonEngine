@@ -9,29 +9,29 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Beautifly : Pokemon
 	{
 		public override string Name => "Beautifly";
-		public override List<Ability> AvailableAbilities => new() {new Swarm() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Rivalry() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Swarm() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Rivalry() };
 		public override Stats BaseStats => new Stats(60, 70, 50, 100, 50, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Gust() },
-			[1] = new List<Move>() { new Gust() },
-			[12] = new List<Move>() { new Absorb() },
-			[15] = new List<Move>() { new Stunspore() },
-			[17] = new List<Move>() { new Morningsun() },
-			[20] = new List<Move>() { new Aircutter() },
-			[22] = new List<Move>() { new Megadrain() },
-			[25] = new List<Move>() { new Leechlife() },
-			[27] = new List<Move>() { new Attract() },
-			[30] = new List<Move>() { new Whirlwind() },
-			[32] = new List<Move>() { new Gigadrain() },
-			[35] = new List<Move>() { new Bugbuzz() },
-			[37] = new List<Move>() { new Protect() },
-			[40] = new List<Move>() { new Quiverdance() },
+			[0] = new List<Move>() { new Moves.Gust() },
+			[1] = new List<Move>() { new Moves.Gust() },
+			[12] = new List<Move>() { new Moves.Absorb() },
+			[15] = new List<Move>() { new Moves.Stunspore() },
+			[17] = new List<Move>() { new Moves.Morningsun() },
+			[20] = new List<Move>() { new Moves.Aircutter() },
+			[22] = new List<Move>() { new Moves.Megadrain() },
+			[25] = new List<Move>() { new Moves.Leechlife() },
+			[27] = new List<Move>() { new Moves.Attract() },
+			[30] = new List<Move>() { new Moves.Whirlwind() },
+			[32] = new List<Move>() { new Moves.Gigadrain() },
+			[35] = new List<Move>() { new Moves.Bugbuzz() },
+			[37] = new List<Move>() { new Moves.Protect() },
+			[40] = new List<Move>() { new Moves.Quiverdance() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Acrobatics(), new Aerialace(), new Attract(), new Bugbite(), new Bugbuzz(), new Confide(), new Defog(), new Doubleteam(), new Electroweb(), new Endure(), new Energyball(), new Facade(), new Flash(), new Frustration(), new Gigadrain(), new Gigaimpact(), new Hiddenpower(), new Hyperbeam(), new Infestation(), new Laserfocus(), new Protect(), new Psychic(), new Rest(), new Return(), new Roost(), new Round(), new Safeguard(), new Shadowball(), new Signalbeam(), new Sleeptalk(), new Snore(), new Solarbeam(), new Strugglebug(), new Substitute(), new Sunnyday(), new Swagger(), new Tailwind(), new Thief(), new Uturn(), new Venoshock() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Acrobatics(), new Moves.Aerialace(), new Moves.Attract(), new Moves.Bugbite(), new Moves.Bugbuzz(), new Moves.Confide(), new Moves.Defog(), new Moves.Doubleteam(), new Moves.Electroweb(), new Moves.Endure(), new Moves.Energyball(), new Moves.Facade(), new Moves.Flash(), new Moves.Frustration(), new Moves.Gigadrain(), new Moves.Gigaimpact(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Infestation(), new Moves.Laserfocus(), new Moves.Protect(), new Moves.Psychic(), new Moves.Rest(), new Moves.Return(), new Moves.Roost(), new Moves.Round(), new Moves.Safeguard(), new Moves.Shadowball(), new Moves.Signalbeam(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Strugglebug(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Tailwind(), new Moves.Thief(), new Moves.Uturn(), new Moves.Venoshock() };
 		public override int Weight => 284;
 		public override int ExpYield => 198;
 		public override int CatchRate => 45;

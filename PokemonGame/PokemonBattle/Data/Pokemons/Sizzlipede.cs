@@ -9,28 +9,28 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Sizzlipede : Pokemon
 	{
 		public override string Name => "Sizzlipede";
-		public override List<Ability> AvailableAbilities => new() {new Flashfire(), new Whitesmoke() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Flamebody() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Flashfire(), new Abilities.Whitesmoke() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Flamebody() };
 		public override Stats BaseStats => new Stats(50, 65, 45, 50, 50, 45);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Fire, PokemonType.Bug };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Ember(), new Smokescreen() },
-			[5] = new List<Move>() { new Wrap() },
-			[10] = new List<Move>() { new Bite() },
-			[15] = new List<Move>() { new Flamewheel() },
-			[20] = new List<Move>() { new Bugbite() },
-			[25] = new List<Move>() { new Coil() },
-			[30] = new List<Move>() { new Slam() },
-			[35] = new List<Move>() { new Firespin() },
-			[40] = new List<Move>() { new Crunch() },
-			[45] = new List<Move>() { new Firelash() },
-			[50] = new List<Move>() { new Lunge() },
-			[55] = new List<Move>() { new Burnup() },
+			[1] = new List<Move>() { new Moves.Ember(), new Moves.Smokescreen() },
+			[5] = new List<Move>() { new Moves.Wrap() },
+			[10] = new List<Move>() { new Moves.Bite() },
+			[15] = new List<Move>() { new Moves.Flamewheel() },
+			[20] = new List<Move>() { new Moves.Bugbite() },
+			[25] = new List<Move>() { new Moves.Coil() },
+			[30] = new List<Move>() { new Moves.Slam() },
+			[35] = new List<Move>() { new Moves.Firespin() },
+			[40] = new List<Move>() { new Moves.Crunch() },
+			[45] = new List<Move>() { new Moves.Firelash() },
+			[50] = new List<Move>() { new Moves.Lunge() },
+			[55] = new List<Move>() { new Moves.Burnup() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Brutalswing(), new Bugbuzz(), new Crunch(), new Endure(), new Facade(), new Firespin(), new Heatcrash(), new Heatwave(), new Hiddenpower(), new Leechlife(), new Powerwhip(), new Protect(), new Rest(), new Round(), new Scald(), new Scorchingsands(), new Skittersmack(), new Sleeptalk(), new Snore(), new Substitute(), new Sunnyday(), new Venoshock() };
-		public override List<Move> EggMoves => new List<Move>() { new Defensecurl(), new Knockoff(), new Rollout(), new Strugglebug() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Brutalswing(), new Moves.Bugbuzz(), new Moves.Crunch(), new Moves.Endure(), new Moves.Facade(), new Moves.Firespin(), new Moves.Heatcrash(), new Moves.Heatwave(), new Moves.Hiddenpower(), new Moves.Leechlife(), new Moves.Powerwhip(), new Moves.Protect(), new Moves.Rest(), new Moves.Round(), new Moves.Scald(), new Moves.Scorchingsands(), new Moves.Skittersmack(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Venoshock() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Defensecurl(), new Moves.Knockoff(), new Moves.Rollout(), new Moves.Strugglebug() };
 		public override int Weight => 10;
 		public override int ExpYield => 61;
 		public override int CatchRate => 190;

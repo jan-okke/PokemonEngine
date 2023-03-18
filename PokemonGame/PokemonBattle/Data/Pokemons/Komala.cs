@@ -9,25 +9,25 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Komala : Pokemon
 	{
 		public override string Name => "Komala";
-		public override List<Ability> AvailableAbilities => new() {new Comatose() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Comatose() };
 		public override Stats BaseStats => new Stats(65, 115, 65, 75, 95, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Defensecurl(), new Rollout() },
-			[6] = new List<Move>() { new Stockpile(), new Spitup(), new Swallow() },
-			[11] = new List<Move>() { new Rapidspin() },
-			[16] = new List<Move>() { new Yawn() },
-			[21] = new List<Move>() { new Slam() },
-			[26] = new List<Move>() { new Flail() },
-			[31] = new List<Move>() { new Suckerpunch() },
-			[36] = new List<Move>() { new Psychup() },
-			[41] = new List<Move>() { new Woodhammer() },
-			[46] = new List<Move>() { new Thrash() },
+			[1] = new List<Move>() { new Moves.Defensecurl(), new Moves.Rollout() },
+			[6] = new List<Move>() { new Moves.Stockpile(), new Moves.Spitup(), new Moves.Swallow() },
+			[11] = new List<Move>() { new Moves.Rapidspin() },
+			[16] = new List<Move>() { new Moves.Yawn() },
+			[21] = new List<Move>() { new Moves.Slam() },
+			[26] = new List<Move>() { new Moves.Flail() },
+			[31] = new List<Move>() { new Moves.Suckerpunch() },
+			[36] = new List<Move>() { new Moves.Psychup() },
+			[41] = new List<Move>() { new Moves.Woodhammer() },
+			[46] = new List<Move>() { new Moves.Thrash() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Acrobatics(), new Attract(), new Brickbreak(), new Bulkup(), new Bulldoze(), new Calmmind(), new Confide(), new Doubleteam(), new Earthquake(), new Endeavor(), new Facade(), new Frustration(), new Hiddenpower(), new Ironhead(), new Knockoff(), new Lastresort(), new Lowsweep(), new Payback(), new Protect(), new Psychup(), new Quash(), new Return(), new Rockslide(), new Round(), new Shadowclaw(), new Sleeptalk(), new Snore(), new Stompingtantrum(), new Substitute(), new Sunnyday(), new Superpower(), new Swagger(), new Swordsdance(), new Toxic(), new Uturn(), new Workup(), new Zenheadbutt() };
-		public override List<Move> EggMoves => new List<Move>() { new Charm(), new Playrough(), new Sing(), new Wish() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Acrobatics(), new Moves.Attract(), new Moves.Brickbreak(), new Moves.Bulkup(), new Moves.Bulldoze(), new Moves.Calmmind(), new Moves.Confide(), new Moves.Doubleteam(), new Moves.Earthquake(), new Moves.Endeavor(), new Moves.Facade(), new Moves.Frustration(), new Moves.Hiddenpower(), new Moves.Ironhead(), new Moves.Knockoff(), new Moves.Lastresort(), new Moves.Lowsweep(), new Moves.Payback(), new Moves.Protect(), new Moves.Psychup(), new Moves.Quash(), new Moves.Return(), new Moves.Rockslide(), new Moves.Round(), new Moves.Shadowclaw(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Stompingtantrum(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Superpower(), new Moves.Swagger(), new Moves.Swordsdance(), new Moves.Toxic(), new Moves.Uturn(), new Moves.Workup(), new Moves.Zenheadbutt() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Charm(), new Moves.Playrough(), new Moves.Sing(), new Moves.Wish() };
 		public override int Weight => 199;
 		public override int ExpYield => 168;
 		public override int CatchRate => 45;

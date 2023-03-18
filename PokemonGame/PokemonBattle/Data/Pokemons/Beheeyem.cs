@@ -9,24 +9,24 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Beheeyem : Pokemon
 	{
 		public override string Name => "Beheeyem";
-		public override List<Ability> AvailableAbilities => new() {new Telepathy(), new Synchronize() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Analytic() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Telepathy(), new Abilities.Synchronize() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Analytic() };
 		public override Stats BaseStats => new Stats(75, 75, 75, 125, 95, 40);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Psychicterrain(), new Confusion(), new Growl(), new Imprison(), new Teleport() },
-			[18] = new List<Move>() { new Psybeam() },
-			[24] = new List<Move>() { new Powersplit(), new Guardsplit() },
-			[30] = new List<Move>() { new Headbutt() },
-			[36] = new List<Move>() { new Zenheadbutt() },
-			[45] = new List<Move>() { new Recover() },
-			[52] = new List<Move>() { new Calmmind() },
-			[60] = new List<Move>() { new Wonderroom() },
-			[68] = new List<Move>() { new Psychic() },
+			[1] = new List<Move>() { new Moves.Psychicterrain(), new Moves.Confusion(), new Moves.Growl(), new Moves.Imprison(), new Moves.Teleport() },
+			[18] = new List<Move>() { new Moves.Psybeam() },
+			[24] = new List<Move>() { new Moves.Powersplit(), new Moves.Guardsplit() },
+			[30] = new List<Move>() { new Moves.Headbutt() },
+			[36] = new List<Move>() { new Moves.Zenheadbutt() },
+			[45] = new List<Move>() { new Moves.Recover() },
+			[52] = new List<Move>() { new Moves.Calmmind() },
+			[60] = new List<Move>() { new Moves.Wonderroom() },
+			[68] = new List<Move>() { new Moves.Psychic() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Agility(), new Allyswitch(), new Attract(), new Calmmind(), new Cosmicpower(), new Darkpulse(), new Endure(), new Energyball(), new Expandingforce(), new Facade(), new Flashcannon(), new Futuresight(), new Gigaimpact(), new Guardswap(), new Hiddenpower(), new Hyperbeam(), new Imprison(), new Lightscreen(), new Meteorbeam(), new Nastyplot(), new Powerswap(), new Protect(), new Psychic(), new Psychicterrain(), new Psyshock(), new Raindance(), new Reflect(), new Rest(), new Rockslide(), new Rocktomb(), new Round(), new Safeguard(), new Screech(), new Shadowball(), new Skillswap(), new Sleeptalk(), new Snore(), new Steelwing(), new Storedpower(), new Substitute(), new Thief(), new Thunderbolt(), new Thunderwave(), new Triattack(), new Trick(), new Trickroom(), new Uproar(), new Wonderroom(), new Zenheadbutt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Agility(), new Moves.Allyswitch(), new Moves.Attract(), new Moves.Calmmind(), new Moves.Cosmicpower(), new Moves.Darkpulse(), new Moves.Endure(), new Moves.Energyball(), new Moves.Expandingforce(), new Moves.Facade(), new Moves.Flashcannon(), new Moves.Futuresight(), new Moves.Gigaimpact(), new Moves.Guardswap(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Imprison(), new Moves.Lightscreen(), new Moves.Meteorbeam(), new Moves.Nastyplot(), new Moves.Powerswap(), new Moves.Protect(), new Moves.Psychic(), new Moves.Psychicterrain(), new Moves.Psyshock(), new Moves.Raindance(), new Moves.Reflect(), new Moves.Rest(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Safeguard(), new Moves.Screech(), new Moves.Shadowball(), new Moves.Skillswap(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Steelwing(), new Moves.Storedpower(), new Moves.Substitute(), new Moves.Thief(), new Moves.Thunderbolt(), new Moves.Thunderwave(), new Moves.Triattack(), new Moves.Trick(), new Moves.Trickroom(), new Moves.Uproar(), new Moves.Wonderroom(), new Moves.Zenheadbutt() };
 		public override int Weight => 345;
 		public override int ExpYield => 170;
 		public override int CatchRate => 90;

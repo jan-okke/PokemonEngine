@@ -9,28 +9,28 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Misdreavus : Pokemon
 	{
 		public override string Name => "Misdreavus";
-		public override List<Ability> AvailableAbilities => new() {new Levitate() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Levitate() };
 		public override Stats BaseStats => new Stats(60, 60, 60, 85, 85, 85);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Ghost };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Growl(), new Confusion() },
-			[5] = new List<Move>() { new Spite() },
-			[10] = new List<Move>() { new Astonish() },
-			[14] = new List<Move>() { new Confuseray() },
-			[19] = new List<Move>() { new Meanlook() },
-			[23] = new List<Move>() { new Hex() },
-			[28] = new List<Move>() { new Psybeam() },
-			[32] = new List<Move>() { new Painsplit() },
-			[37] = new List<Move>() { new Payback() },
-			[41] = new List<Move>() { new Shadowball() },
-			[46] = new List<Move>() { new Perishsong() },
-			[50] = new List<Move>() { new Grudge() },
-			[55] = new List<Move>() { new Powergem() },
+			[1] = new List<Move>() { new Moves.Growl(), new Moves.Confusion() },
+			[5] = new List<Move>() { new Moves.Spite() },
+			[10] = new List<Move>() { new Moves.Astonish() },
+			[14] = new List<Move>() { new Moves.Confuseray() },
+			[19] = new List<Move>() { new Moves.Meanlook() },
+			[23] = new List<Move>() { new Moves.Hex() },
+			[28] = new List<Move>() { new Moves.Psybeam() },
+			[32] = new List<Move>() { new Moves.Painsplit() },
+			[37] = new List<Move>() { new Moves.Payback() },
+			[41] = new List<Move>() { new Moves.Shadowball() },
+			[46] = new List<Move>() { new Moves.Perishsong() },
+			[50] = new List<Move>() { new Moves.Grudge() },
+			[55] = new List<Move>() { new Moves.Powergem() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Aerialace(), new Allyswitch(), new Attract(), new Calmmind(), new Chargebeam(), new Confide(), new Darkpulse(), new Dazzlinggleam(), new Doubleteam(), new Dreameater(), new Echoedvoice(), new Embargo(), new Endure(), new Facade(), new Flash(), new Foulplay(), new Frustration(), new Healbell(), new Hiddenpower(), new Hypervoice(), new Icywind(), new Magiccoat(), new Magicroom(), new Nastyplot(), new Painsplit(), new Payback(), new Protect(), new Psychic(), new Psychup(), new Raindance(), new Rest(), new Return(), new Round(), new Shadowball(), new Shockwave(), new Skillswap(), new Sleeptalk(), new Snatch(), new Snore(), new Spite(), new Substitute(), new Sunnyday(), new Swagger(), new Taunt(), new Telekinesis(), new Thief(), new Thunder(), new Thunderbolt(), new Thunderwave(), new Torment(), new Trick(), new Trickroom(), new Uproar(), new Willowisp(), new Wonderroom() };
-		public override List<Move> EggMoves => new List<Move>() { new Curse(), new Destinybond(), new Imprison(), new Memento(), new Screech(), new Shadowsneak(), new Spite(), new Suckerpunch(), new Wonderroom() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Aerialace(), new Moves.Allyswitch(), new Moves.Attract(), new Moves.Calmmind(), new Moves.Chargebeam(), new Moves.Confide(), new Moves.Darkpulse(), new Moves.Dazzlinggleam(), new Moves.Doubleteam(), new Moves.Dreameater(), new Moves.Echoedvoice(), new Moves.Embargo(), new Moves.Endure(), new Moves.Facade(), new Moves.Flash(), new Moves.Foulplay(), new Moves.Frustration(), new Moves.Healbell(), new Moves.Hiddenpower(), new Moves.Hypervoice(), new Moves.Icywind(), new Moves.Magiccoat(), new Moves.Magicroom(), new Moves.Nastyplot(), new Moves.Painsplit(), new Moves.Payback(), new Moves.Protect(), new Moves.Psychic(), new Moves.Psychup(), new Moves.Raindance(), new Moves.Rest(), new Moves.Return(), new Moves.Round(), new Moves.Shadowball(), new Moves.Shockwave(), new Moves.Skillswap(), new Moves.Sleeptalk(), new Moves.Snatch(), new Moves.Snore(), new Moves.Spite(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Taunt(), new Moves.Telekinesis(), new Moves.Thief(), new Moves.Thunder(), new Moves.Thunderbolt(), new Moves.Thunderwave(), new Moves.Torment(), new Moves.Trick(), new Moves.Trickroom(), new Moves.Uproar(), new Moves.Willowisp(), new Moves.Wonderroom() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Curse(), new Moves.Destinybond(), new Moves.Imprison(), new Moves.Memento(), new Moves.Screech(), new Moves.Shadowsneak(), new Moves.Spite(), new Moves.Suckerpunch(), new Moves.Wonderroom() };
 		public override int Weight => 10;
 		public override int ExpYield => 87;
 		public override int CatchRate => 45;

@@ -9,30 +9,30 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Feraligatr : Pokemon
 	{
 		public override string Name => "Feraligatr";
-		public override List<Ability> AvailableAbilities => new() {new Torrent() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Sheerforce() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Torrent() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Sheerforce() };
 		public override Stats BaseStats => new Stats(85, 105, 100, 79, 83, 78);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Agility(), new Scratch(), new Leer(), new Watergun(), new Mudslap() },
-			[6] = new List<Move>() { new Watergun() },
-			[8] = new List<Move>() { new Mudslap() },
-			[13] = new List<Move>() { new Bite() },
-			[15] = new List<Move>() { new Scaryface() },
-			[21] = new List<Move>() { new Icefang() },
-			[24] = new List<Move>() { new Flail() },
-			[32] = new List<Move>() { new Crunch() },
-			[37] = new List<Move>() { new Lowkick() },
-			[45] = new List<Move>() { new Slash() },
-			[50] = new List<Move>() { new Screech() },
-			[58] = new List<Move>() { new Thrash() },
-			[63] = new List<Move>() { new Aquatail() },
-			[71] = new List<Move>() { new Superpower() },
-			[76] = new List<Move>() { new Hydropump() },
+			[1] = new List<Move>() { new Moves.Agility(), new Moves.Scratch(), new Moves.Leer(), new Moves.Watergun(), new Moves.Mudslap() },
+			[6] = new List<Move>() { new Moves.Watergun() },
+			[8] = new List<Move>() { new Moves.Mudslap() },
+			[13] = new List<Move>() { new Moves.Bite() },
+			[15] = new List<Move>() { new Moves.Scaryface() },
+			[21] = new List<Move>() { new Moves.Icefang() },
+			[24] = new List<Move>() { new Moves.Flail() },
+			[32] = new List<Move>() { new Moves.Crunch() },
+			[37] = new List<Move>() { new Moves.Lowkick() },
+			[45] = new List<Move>() { new Moves.Slash() },
+			[50] = new List<Move>() { new Moves.Screech() },
+			[58] = new List<Move>() { new Moves.Thrash() },
+			[63] = new List<Move>() { new Moves.Aquatail() },
+			[71] = new List<Move>() { new Moves.Superpower() },
+			[76] = new List<Move>() { new Moves.Hydropump() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Aerialace(), new Aquatail(), new Attract(), new Avalanche(), new Blizzard(), new Block(), new Brickbreak(), new Bulldoze(), new Confide(), new Cut(), new Dig(), new Dive(), new Doubleteam(), new Dragonclaw(), new Dragonpulse(), new Dragontail(), new Earthquake(), new Endure(), new Facade(), new Fling(), new Focusblast(), new Focuspunch(), new Frustration(), new Gigaimpact(), new Hail(), new Hiddenpower(), new Hydrocannon(), new Hyperbeam(), new Icebeam(), new Icepunch(), new Icywind(), new Irontail(), new Liquidation(), new Lowkick(), new Outrage(), new Poweruppunch(), new Protect(), new Raindance(), new Rest(), new Return(), new Roar(), new Rockclimb(), new Rockslide(), new Rocksmash(), new Rocktomb(), new Round(), new Scald(), new Shadowclaw(), new Sleeptalk(), new Snore(), new Spite(), new Strength(), new Substitute(), new Superpower(), new Surf(), new Swagger(), new Swordsdance(), new Uproar(), new Waterfall(), new Waterpledge(), new Waterpulse(), new Workup() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Aerialace(), new Moves.Aquatail(), new Moves.Attract(), new Moves.Avalanche(), new Moves.Blizzard(), new Moves.Block(), new Moves.Brickbreak(), new Moves.Bulldoze(), new Moves.Confide(), new Moves.Cut(), new Moves.Dig(), new Moves.Dive(), new Moves.Doubleteam(), new Moves.Dragonclaw(), new Moves.Dragonpulse(), new Moves.Dragontail(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Facade(), new Moves.Fling(), new Moves.Focusblast(), new Moves.Focuspunch(), new Moves.Frustration(), new Moves.Gigaimpact(), new Moves.Hail(), new Moves.Hiddenpower(), new Moves.Hydrocannon(), new Moves.Hyperbeam(), new Moves.Icebeam(), new Moves.Icepunch(), new Moves.Icywind(), new Moves.Irontail(), new Moves.Liquidation(), new Moves.Lowkick(), new Moves.Outrage(), new Moves.Poweruppunch(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Return(), new Moves.Roar(), new Moves.Rockclimb(), new Moves.Rockslide(), new Moves.Rocksmash(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Scald(), new Moves.Shadowclaw(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Spite(), new Moves.Strength(), new Moves.Substitute(), new Moves.Superpower(), new Moves.Surf(), new Moves.Swagger(), new Moves.Swordsdance(), new Moves.Uproar(), new Moves.Waterfall(), new Moves.Waterpledge(), new Moves.Waterpulse(), new Moves.Workup() };
 		public override int Weight => 888;
 		public override int ExpYield => 265;
 		public override int CatchRate => 45;

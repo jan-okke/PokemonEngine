@@ -9,24 +9,24 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Sewaddle : Pokemon
 	{
 		public override string Name => "Sewaddle";
-		public override List<Ability> AvailableAbilities => new() {new Swarm(), new Chlorophyll() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Overcoat() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Swarm(), new Abilities.Chlorophyll() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Overcoat() };
 		public override Stats BaseStats => new Stats(45, 53, 70, 40, 60, 42);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Tackle(), new Stringshot() },
-			[8] = new List<Move>() { new Bugbite() },
-			[15] = new List<Move>() { new Razorleaf() },
-			[22] = new List<Move>() { new Strugglebug() },
-			[29] = new List<Move>() { new Endure() },
-			[31] = new List<Move>() { new Stickyweb() },
-			[36] = new List<Move>() { new Bugbuzz() },
-			[43] = new List<Move>() { new Flail() },
+			[1] = new List<Move>() { new Moves.Tackle(), new Moves.Stringshot() },
+			[8] = new List<Move>() { new Moves.Bugbite() },
+			[15] = new List<Move>() { new Moves.Razorleaf() },
+			[22] = new List<Move>() { new Moves.Strugglebug() },
+			[29] = new List<Move>() { new Moves.Endure() },
+			[31] = new List<Move>() { new Moves.Stickyweb() },
+			[36] = new List<Move>() { new Moves.Bugbuzz() },
+			[43] = new List<Move>() { new Moves.Flail() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Bugbite(), new Calmmind(), new Confide(), new Cut(), new Doubleteam(), new Dreameater(), new Electroweb(), new Energyball(), new Facade(), new Frustration(), new Gigadrain(), new Grassknot(), new Hiddenpower(), new Irondefense(), new Lightscreen(), new Magiccoat(), new Naturepower(), new Payback(), new Protect(), new Rest(), new Return(), new Round(), new Safeguard(), new Seedbomb(), new Signalbeam(), new Sleeptalk(), new Snore(), new Solarbeam(), new Strugglebug(), new Substitute(), new Sunnyday(), new Swagger(), new Synthesis(), new Toxic(), new Worryseed() };
-		public override List<Move> EggMoves => new List<Move>() { new Agility(), new Airslash(), new Batonpass(), new Camouflage(), new Grassyterrain(), new Mefirst(), new Mindreader(), new Razorwind(), new Screech(), new Silverwind() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Bugbite(), new Moves.Calmmind(), new Moves.Confide(), new Moves.Cut(), new Moves.Doubleteam(), new Moves.Dreameater(), new Moves.Electroweb(), new Moves.Energyball(), new Moves.Facade(), new Moves.Frustration(), new Moves.Gigadrain(), new Moves.Grassknot(), new Moves.Hiddenpower(), new Moves.Irondefense(), new Moves.Lightscreen(), new Moves.Magiccoat(), new Moves.Naturepower(), new Moves.Payback(), new Moves.Protect(), new Moves.Rest(), new Moves.Return(), new Moves.Round(), new Moves.Safeguard(), new Moves.Seedbomb(), new Moves.Signalbeam(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Strugglebug(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Synthesis(), new Moves.Toxic(), new Moves.Worryseed() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Agility(), new Moves.Airslash(), new Moves.Batonpass(), new Moves.Camouflage(), new Moves.Grassyterrain(), new Moves.Mefirst(), new Moves.Mindreader(), new Moves.Razorwind(), new Moves.Screech(), new Moves.Silverwind() };
 		public override int Weight => 25;
 		public override int ExpYield => 62;
 		public override int CatchRate => 255;

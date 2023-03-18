@@ -9,25 +9,25 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Talonflame : Pokemon
 	{
 		public override string Name => "Talonflame";
-		public override List<Ability> AvailableAbilities => new() {new Flamebody() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Galewings() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Flamebody() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Galewings() };
 		public override Stats BaseStats => new Stats(78, 81, 71, 74, 69, 126);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Fire, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Flamecharge(), new Flareblitz(), new Feint(), new Peck(), new Growl(), new Quickattack(), new Ember() },
-			[15] = new List<Move>() { new Flail() },
-			[22] = new List<Move>() { new Acrobatics() },
-			[29] = new List<Move>() { new Agility() },
-			[38] = new List<Move>() { new Aerialace() },
-			[47] = new List<Move>() { new Tailwind() },
-			[56] = new List<Move>() { new Steelwing() },
-			[65] = new List<Move>() { new Roost() },
-			[74] = new List<Move>() { new Fly() },
-			[83] = new List<Move>() { new Bravebird() },
+			[1] = new List<Move>() { new Moves.Flamecharge(), new Moves.Flareblitz(), new Moves.Feint(), new Moves.Peck(), new Moves.Growl(), new Moves.Quickattack(), new Moves.Ember() },
+			[15] = new List<Move>() { new Moves.Flail() },
+			[22] = new List<Move>() { new Moves.Acrobatics() },
+			[29] = new List<Move>() { new Moves.Agility() },
+			[38] = new List<Move>() { new Moves.Aerialace() },
+			[47] = new List<Move>() { new Moves.Tailwind() },
+			[56] = new List<Move>() { new Moves.Steelwing() },
+			[65] = new List<Move>() { new Moves.Roost() },
+			[74] = new List<Move>() { new Moves.Fly() },
+			[83] = new List<Move>() { new Moves.Bravebird() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Acrobatics(), new Agility(), new Attract(), new Bravebird(), new Bulkup(), new Dualwingbeat(), new Endure(), new Facade(), new Fireblast(), new Firespin(), new Flamethrower(), new Flareblitz(), new Fly(), new Gigaimpact(), new Heatwave(), new Hiddenpower(), new Hurricane(), new Hyperbeam(), new Overheat(), new Protect(), new Rest(), new Round(), new Sleeptalk(), new Snore(), new Solarbeam(), new Steelwing(), new Substitute(), new Sunnyday(), new Swift(), new Swordsdance(), new Taunt(), new Thief(), new Uturn(), new Willowisp(), new Workup() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Acrobatics(), new Moves.Agility(), new Moves.Attract(), new Moves.Bravebird(), new Moves.Bulkup(), new Moves.Dualwingbeat(), new Moves.Endure(), new Moves.Facade(), new Moves.Fireblast(), new Moves.Firespin(), new Moves.Flamethrower(), new Moves.Flareblitz(), new Moves.Fly(), new Moves.Gigaimpact(), new Moves.Heatwave(), new Moves.Hiddenpower(), new Moves.Hurricane(), new Moves.Hyperbeam(), new Moves.Overheat(), new Moves.Protect(), new Moves.Rest(), new Moves.Round(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Steelwing(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swift(), new Moves.Swordsdance(), new Moves.Taunt(), new Moves.Thief(), new Moves.Uturn(), new Moves.Willowisp(), new Moves.Workup() };
 		public override int Weight => 245;
 		public override int ExpYield => 175;
 		public override int CatchRate => 45;

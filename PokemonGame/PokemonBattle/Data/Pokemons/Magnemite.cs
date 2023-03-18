@@ -9,29 +9,29 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Magnemite : Pokemon
 	{
 		public override string Name => "Magnemite";
-		public override List<Ability> AvailableAbilities => new() {new Magnetpull(), new Sturdy() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Analytic() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Magnetpull(), new Abilities.Sturdy() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Analytic() };
 		public override Stats BaseStats => new Stats(25, 35, 70, 95, 55, 45);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Electric, PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Thundershock(), new Tackle() },
-			[4] = new List<Move>() { new Supersonic() },
-			[8] = new List<Move>() { new Thunderwave() },
-			[12] = new List<Move>() { new Electroball() },
-			[16] = new List<Move>() { new Gyroball() },
-			[20] = new List<Move>() { new Spark() },
-			[24] = new List<Move>() { new Screech() },
-			[28] = new List<Move>() { new Magnetrise() },
-			[32] = new List<Move>() { new Flashcannon() },
-			[36] = new List<Move>() { new Discharge() },
-			[40] = new List<Move>() { new Metalsound() },
-			[44] = new List<Move>() { new Lightscreen() },
-			[48] = new List<Move>() { new Lockon() },
-			[52] = new List<Move>() { new Zapcannon() },
+			[1] = new List<Move>() { new Moves.Thundershock(), new Moves.Tackle() },
+			[4] = new List<Move>() { new Moves.Supersonic() },
+			[8] = new List<Move>() { new Moves.Thunderwave() },
+			[12] = new List<Move>() { new Moves.Electroball() },
+			[16] = new List<Move>() { new Moves.Gyroball() },
+			[20] = new List<Move>() { new Moves.Spark() },
+			[24] = new List<Move>() { new Moves.Screech() },
+			[28] = new List<Move>() { new Moves.Magnetrise() },
+			[32] = new List<Move>() { new Moves.Flashcannon() },
+			[36] = new List<Move>() { new Moves.Discharge() },
+			[40] = new List<Move>() { new Moves.Metalsound() },
+			[44] = new List<Move>() { new Moves.Lightscreen() },
+			[48] = new List<Move>() { new Moves.Lockon() },
+			[52] = new List<Move>() { new Moves.Zapcannon() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Chargebeam(), new Doubleteam(), new Electroball(), new Electroweb(), new Endure(), new Explosion(), new Facade(), new Flash(), new Flashcannon(), new Gyroball(), new Hiddenpower(), new Irondefense(), new Lightscreen(), new Protect(), new Psychup(), new Raindance(), new Recycle(), new Reflect(), new Rest(), new Risingvoltage(), new Round(), new Screech(), new Shockwave(), new Sleeptalk(), new Snore(), new Steelbeam(), new Substitute(), new Sunnyday(), new Swagger(), new Swift(), new Thunder(), new Thunderbolt(), new Thunderwave(), new Voltswitch(), new Wildcharge() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Chargebeam(), new Moves.Doubleteam(), new Moves.Electroball(), new Moves.Electroweb(), new Moves.Endure(), new Moves.Explosion(), new Moves.Facade(), new Moves.Flash(), new Moves.Flashcannon(), new Moves.Gyroball(), new Moves.Hiddenpower(), new Moves.Irondefense(), new Moves.Lightscreen(), new Moves.Protect(), new Moves.Psychup(), new Moves.Raindance(), new Moves.Recycle(), new Moves.Reflect(), new Moves.Rest(), new Moves.Risingvoltage(), new Moves.Round(), new Moves.Screech(), new Moves.Shockwave(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Steelbeam(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Swift(), new Moves.Thunder(), new Moves.Thunderbolt(), new Moves.Thunderwave(), new Moves.Voltswitch(), new Moves.Wildcharge() };
 		public override int Weight => 60;
 		public override int ExpYield => 65;
 		public override int CatchRate => 190;

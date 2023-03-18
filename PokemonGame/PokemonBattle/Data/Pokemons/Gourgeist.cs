@@ -9,25 +9,25 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Gourgeist : Pokemon
 	{
 		public override string Name => "Gourgeist";
-		public override List<Ability> AvailableAbilities => new() {new Pickup(), new Frisk() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Pickup(), new Abilities.Frisk() };
 		public override Stats BaseStats => new Stats(55, 85, 122, 58, 75, 99);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Ghost, PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Explosion(), new Moonblast(), new Trickortreat(), new Astonish(), new Shadowsneak(), new Confuseray() },
-			[12] = new List<Move>() { new Trickortreat(), new Razorleaf() },
-			[16] = new List<Move>() { new Leechseed() },
-			[20] = new List<Move>() { new Bulletseed() },
-			[24] = new List<Move>() { new Trickortreat(), new Scaryface() },
-			[28] = new List<Move>() { new Worryseed() },
-			[32] = new List<Move>() { new Seedbomb() },
-			[36] = new List<Move>() { new Trickortreat(), new Shadowball() },
-			[40] = new List<Move>() { new Trick() },
-			[44] = new List<Move>() { new Painsplit() },
-			[48] = new List<Move>() { new Phantomforce() },
+			[1] = new List<Move>() { new Moves.Explosion(), new Moves.Moonblast(), new Moves.Trickortreat(), new Moves.Astonish(), new Moves.Shadowsneak(), new Moves.Confuseray() },
+			[12] = new List<Move>() { new Moves.Trickortreat(), new Moves.Razorleaf() },
+			[16] = new List<Move>() { new Moves.Leechseed() },
+			[20] = new List<Move>() { new Moves.Bulletseed() },
+			[24] = new List<Move>() { new Moves.Trickortreat(), new Moves.Scaryface() },
+			[28] = new List<Move>() { new Moves.Worryseed() },
+			[32] = new List<Move>() { new Moves.Seedbomb() },
+			[36] = new List<Move>() { new Moves.Trickortreat(), new Moves.Shadowball() },
+			[40] = new List<Move>() { new Moves.Trick() },
+			[44] = new List<Move>() { new Moves.Painsplit() },
+			[48] = new List<Move>() { new Moves.Phantomforce() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Allyswitch(), new Attract(), new Brutalswing(), new Bulletseed(), new Darkpulse(), new Endure(), new Energyball(), new Facade(), new Fireblast(), new Flamethrower(), new Focusblast(), new Foulplay(), new Gigadrain(), new Gigaimpact(), new Grassknot(), new Grassyglide(), new Gyroball(), new Hex(), new Hiddenpower(), new Hyperbeam(), new Imprison(), new Lightscreen(), new Mysticalfire(), new Nastyplot(), new Phantomforce(), new Poltergeist(), new Powerwhip(), new Protect(), new Psychic(), new Rest(), new Rockslide(), new Round(), new Safeguard(), new Scaryface(), new Seedbomb(), new Shadowball(), new Skillswap(), new Skittersmack(), new Sleeptalk(), new Sludgebomb(), new Snore(), new Solarbeam(), new Substitute(), new Sunnyday(), new Thief(), new Trick(), new Trickroom(), new Willowisp() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Allyswitch(), new Moves.Attract(), new Moves.Brutalswing(), new Moves.Bulletseed(), new Moves.Darkpulse(), new Moves.Endure(), new Moves.Energyball(), new Moves.Facade(), new Moves.Fireblast(), new Moves.Flamethrower(), new Moves.Focusblast(), new Moves.Foulplay(), new Moves.Gigadrain(), new Moves.Gigaimpact(), new Moves.Grassknot(), new Moves.Grassyglide(), new Moves.Gyroball(), new Moves.Hex(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Imprison(), new Moves.Lightscreen(), new Moves.Mysticalfire(), new Moves.Nastyplot(), new Moves.Phantomforce(), new Moves.Poltergeist(), new Moves.Powerwhip(), new Moves.Protect(), new Moves.Psychic(), new Moves.Rest(), new Moves.Rockslide(), new Moves.Round(), new Moves.Safeguard(), new Moves.Scaryface(), new Moves.Seedbomb(), new Moves.Shadowball(), new Moves.Skillswap(), new Moves.Skittersmack(), new Moves.Sleeptalk(), new Moves.Sludgebomb(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Thief(), new Moves.Trick(), new Moves.Trickroom(), new Moves.Willowisp() };
 		public override int Weight => 95;
 		public override int ExpYield => 173;
 		public override int CatchRate => 60;

@@ -5,5 +5,9 @@ namespace PokemonGame.PokemonBattle.Enums
         Normal,
         Slow,
         Medium,
+        Parabolic,
+        Fast,
+        Erratic,
+        Fluctuating,
     }
 }

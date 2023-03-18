@@ -9,28 +9,28 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Butterfree : Pokemon
 	{
 		public override string Name => "Butterfree";
-		public override List<Ability> AvailableAbilities => new() {new Compoundeyes() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Tintedlens() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Compoundeyes() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Tintedlens() };
 		public override Stats BaseStats => new Stats(60, 45, 50, 90, 80, 70);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Gust() },
-			[1] = new List<Move>() { new Gust(), new Harden(), new Tackle(), new Stringshot(), new Bugbite() },
-			[4] = new List<Move>() { new Supersonic() },
-			[8] = new List<Move>() { new Confusion() },
-			[12] = new List<Move>() { new Poisonpowder(), new Stunspore(), new Sleeppowder() },
-			[16] = new List<Move>() { new Psybeam() },
-			[20] = new List<Move>() { new Whirlwind() },
-			[24] = new List<Move>() { new Airslash() },
-			[28] = new List<Move>() { new Safeguard() },
-			[32] = new List<Move>() { new Bugbuzz() },
-			[36] = new List<Move>() { new Tailwind() },
-			[40] = new List<Move>() { new Ragepowder() },
-			[44] = new List<Move>() { new Quiverdance() },
+			[0] = new List<Move>() { new Moves.Gust() },
+			[1] = new List<Move>() { new Moves.Gust(), new Moves.Harden(), new Moves.Tackle(), new Moves.Stringshot(), new Moves.Bugbite() },
+			[4] = new List<Move>() { new Moves.Supersonic() },
+			[8] = new List<Move>() { new Moves.Confusion() },
+			[12] = new List<Move>() { new Moves.Poisonpowder(), new Moves.Stunspore(), new Moves.Sleeppowder() },
+			[16] = new List<Move>() { new Moves.Psybeam() },
+			[20] = new List<Move>() { new Moves.Whirlwind() },
+			[24] = new List<Move>() { new Moves.Airslash() },
+			[28] = new List<Move>() { new Moves.Safeguard() },
+			[32] = new List<Move>() { new Moves.Bugbuzz() },
+			[36] = new List<Move>() { new Moves.Tailwind() },
+			[40] = new List<Move>() { new Moves.Ragepowder() },
+			[44] = new List<Move>() { new Moves.Quiverdance() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Acrobatics(), new Aerialace(), new Airslash(), new Attract(), new Batonpass(), new Bugbuzz(), new Defog(), new Doubleteam(), new Drainingkiss(), new Dreameater(), new Dualwingbeat(), new Electroweb(), new Endure(), new Energyball(), new Facade(), new Flash(), new Gigadrain(), new Gigaimpact(), new Hiddenpower(), new Hurricane(), new Hyperbeam(), new Irondefense(), new Pollenpuff(), new Protect(), new Psychic(), new Psychup(), new Raindance(), new Rest(), new Roost(), new Round(), new Safeguard(), new Shadowball(), new Skillswap(), new Sleeptalk(), new Snore(), new Solarbeam(), new Substitute(), new Sunnyday(), new Swagger(), new Swift(), new Thief(), new Uturn(), new Venoshock() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Acrobatics(), new Moves.Aerialace(), new Moves.Airslash(), new Moves.Attract(), new Moves.Batonpass(), new Moves.Bugbuzz(), new Moves.Defog(), new Moves.Doubleteam(), new Moves.Drainingkiss(), new Moves.Dreameater(), new Moves.Dualwingbeat(), new Moves.Electroweb(), new Moves.Endure(), new Moves.Energyball(), new Moves.Facade(), new Moves.Flash(), new Moves.Gigadrain(), new Moves.Gigaimpact(), new Moves.Hiddenpower(), new Moves.Hurricane(), new Moves.Hyperbeam(), new Moves.Irondefense(), new Moves.Pollenpuff(), new Moves.Protect(), new Moves.Psychic(), new Moves.Psychup(), new Moves.Raindance(), new Moves.Rest(), new Moves.Roost(), new Moves.Round(), new Moves.Safeguard(), new Moves.Shadowball(), new Moves.Skillswap(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Swift(), new Moves.Thief(), new Moves.Uturn(), new Moves.Venoshock() };
 		public override int Weight => 320;
 		public override int ExpYield => 198;
 		public override int CatchRate => 45;

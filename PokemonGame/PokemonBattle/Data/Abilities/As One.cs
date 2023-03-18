@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 namespace PokemonGame.PokemonBattle.Data.Abilities
 {
-	public class Asonechillingneigh : Ability
+	public class Asonegrimneigh : Ability
 	{
 		public override string Name => "As One";
-		public override string Description => "Combines Unnerve and Chilling Neigh Abilities.";
+		public override string Description => "Combines Unnerve and Grim Neigh Abilities.";
 	}
 }

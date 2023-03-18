@@ -9,22 +9,22 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Honchkrow : Pokemon
 	{
 		public override string Name => "Honchkrow";
-		public override List<Ability> AvailableAbilities => new() {new Insomnia(), new Superluck() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Moxie() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Insomnia(), new Abilities.Superluck() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Moxie() };
 		public override Stats BaseStats => new Stats(100, 125, 52, 105, 52, 71);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Dark, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Nightslash(), new Suckerpunch(), new Astonish(), new Haze(), new Wingattack() },
-			[25] = new List<Move>() { new Swagger() },
-			[35] = new List<Move>() { new Nastyplot() },
-			[45] = new List<Move>() { new Foulplay() },
-			[55] = new List<Move>() { new Nightslash() },
-			[65] = new List<Move>() { new Quash() },
-			[75] = new List<Move>() { new Darkpulse() },
+			[1] = new List<Move>() { new Moves.Nightslash(), new Moves.Suckerpunch(), new Moves.Astonish(), new Moves.Haze(), new Moves.Wingattack() },
+			[25] = new List<Move>() { new Moves.Swagger() },
+			[35] = new List<Move>() { new Moves.Nastyplot() },
+			[45] = new List<Move>() { new Moves.Foulplay() },
+			[55] = new List<Move>() { new Moves.Nightslash() },
+			[65] = new List<Move>() { new Moves.Quash() },
+			[75] = new List<Move>() { new Moves.Darkpulse() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Aerialace(), new Attract(), new Calmmind(), new Confide(), new Darkpulse(), new Defog(), new Doubleteam(), new Dreameater(), new Embargo(), new Endure(), new Facade(), new Fly(), new Foulplay(), new Frustration(), new Gigaimpact(), new Heatwave(), new Hiddenpower(), new Hyperbeam(), new Icywind(), new Nastyplot(), new Payback(), new Pluck(), new Protect(), new Psychic(), new Psychup(), new Quash(), new Raindance(), new Rest(), new Return(), new Roost(), new Round(), new Shadowball(), new Skyattack(), new Sleeptalk(), new Snarl(), new Snatch(), new Snore(), new Spite(), new Steelwing(), new Substitute(), new Sunnyday(), new Superpower(), new Swagger(), new Tailwind(), new Taunt(), new Thief(), new Thunderwave(), new Torment(), new Uproar() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Aerialace(), new Moves.Attract(), new Moves.Calmmind(), new Moves.Confide(), new Moves.Darkpulse(), new Moves.Defog(), new Moves.Doubleteam(), new Moves.Dreameater(), new Moves.Embargo(), new Moves.Endure(), new Moves.Facade(), new Moves.Fly(), new Moves.Foulplay(), new Moves.Frustration(), new Moves.Gigaimpact(), new Moves.Heatwave(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Icywind(), new Moves.Nastyplot(), new Moves.Payback(), new Moves.Pluck(), new Moves.Protect(), new Moves.Psychic(), new Moves.Psychup(), new Moves.Quash(), new Moves.Raindance(), new Moves.Rest(), new Moves.Return(), new Moves.Roost(), new Moves.Round(), new Moves.Shadowball(), new Moves.Skyattack(), new Moves.Sleeptalk(), new Moves.Snarl(), new Moves.Snatch(), new Moves.Snore(), new Moves.Spite(), new Moves.Steelwing(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Superpower(), new Moves.Swagger(), new Moves.Tailwind(), new Moves.Taunt(), new Moves.Thief(), new Moves.Thunderwave(), new Moves.Torment(), new Moves.Uproar() };
 		public override int Weight => 273;
 		public override int ExpYield => 177;
 		public override int CatchRate => 30;

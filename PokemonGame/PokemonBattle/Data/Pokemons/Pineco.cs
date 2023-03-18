@@ -9,29 +9,29 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Pineco : Pokemon
 	{
 		public override string Name => "Pineco";
-		public override List<Ability> AvailableAbilities => new() {new Sturdy() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Overcoat() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Sturdy() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Overcoat() };
 		public override Stats BaseStats => new Stats(50, 65, 90, 35, 35, 15);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Tackle(), new Protect() },
-			[6] = new List<Move>() { new Selfdestruct() },
-			[9] = new List<Move>() { new Bugbite() },
-			[12] = new List<Move>() { new Takedown() },
-			[17] = new List<Move>() { new Rapidspin() },
-			[20] = new List<Move>() { new Autotomize() },
-			[23] = new List<Move>() { new Rollout() },
-			[28] = new List<Move>() { new Spikes() },
-			[31] = new List<Move>() { new Payback() },
-			[34] = new List<Move>() { new Explosion() },
-			[39] = new List<Move>() { new Irondefense() },
-			[42] = new List<Move>() { new Gyroball() },
-			[45] = new List<Move>() { new Doubleedge() },
+			[1] = new List<Move>() { new Moves.Tackle(), new Moves.Protect() },
+			[6] = new List<Move>() { new Moves.Selfdestruct() },
+			[9] = new List<Move>() { new Moves.Bugbite() },
+			[12] = new List<Move>() { new Moves.Takedown() },
+			[17] = new List<Move>() { new Moves.Rapidspin() },
+			[20] = new List<Move>() { new Moves.Autotomize() },
+			[23] = new List<Move>() { new Moves.Rollout() },
+			[28] = new List<Move>() { new Moves.Spikes() },
+			[31] = new List<Move>() { new Moves.Payback() },
+			[34] = new List<Move>() { new Moves.Explosion() },
+			[39] = new List<Move>() { new Moves.Irondefense() },
+			[42] = new List<Move>() { new Moves.Gyroball() },
+			[45] = new List<Move>() { new Moves.Doubleedge() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Bugbite(), new Bugbuzz(), new Bulldoze(), new Confide(), new Dig(), new Doubleteam(), new Drillrun(), new Earthquake(), new Endure(), new Explosion(), new Facade(), new Frustration(), new Gigadrain(), new Gravity(), new Gyroball(), new Hiddenpower(), new Irondefense(), new Lightscreen(), new Painsplit(), new Payback(), new Protect(), new Reflect(), new Rest(), new Return(), new Rockslide(), new Rocksmash(), new Rocktomb(), new Round(), new Sandstorm(), new Sleeptalk(), new Snore(), new Solarbeam(), new Strength(), new Strugglebug(), new Substitute(), new Sunnyday(), new Swagger(), new Venoshock() };
-		public override List<Move> EggMoves => new List<Move>() { new Counter(), new Doubleedge(), new Flail(), new Pinmissile(), new Powertrick(), new Revenge(), new Sandtomb(), new Swift(), new Toxicspikes() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Bugbite(), new Moves.Bugbuzz(), new Moves.Bulldoze(), new Moves.Confide(), new Moves.Dig(), new Moves.Doubleteam(), new Moves.Drillrun(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Explosion(), new Moves.Facade(), new Moves.Frustration(), new Moves.Gigadrain(), new Moves.Gravity(), new Moves.Gyroball(), new Moves.Hiddenpower(), new Moves.Irondefense(), new Moves.Lightscreen(), new Moves.Painsplit(), new Moves.Payback(), new Moves.Protect(), new Moves.Reflect(), new Moves.Rest(), new Moves.Return(), new Moves.Rockslide(), new Moves.Rocksmash(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Sandstorm(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Strength(), new Moves.Strugglebug(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Venoshock() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Counter(), new Moves.Doubleedge(), new Moves.Flail(), new Moves.Pinmissile(), new Moves.Powertrick(), new Moves.Revenge(), new Moves.Sandtomb(), new Moves.Swift(), new Moves.Toxicspikes() };
 		public override int Weight => 72;
 		public override int ExpYield => 58;
 		public override int CatchRate => 190;

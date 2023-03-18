@@ -9,25 +9,25 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Nincada : Pokemon
 	{
 		public override string Name => "Nincada";
-		public override List<Ability> AvailableAbilities => new() {new Compoundeyes() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Runaway() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Compoundeyes() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Runaway() };
 		public override Stats BaseStats => new Stats(31, 45, 90, 30, 30, 40);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Erratic;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Ground };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Sandattack(), new Scratch() },
-			[5] = new List<Move>() { new Harden() },
-			[10] = new List<Move>() { new Falseswipe() },
-			[15] = new List<Move>() { new Mudslap() },
-			[21] = new List<Move>() { new Absorb() },
-			[25] = new List<Move>() { new Metalclaw() },
-			[30] = new List<Move>() { new Furyswipes() },
-			[35] = new List<Move>() { new Mindreader() },
-			[40] = new List<Move>() { new Dig() },
+			[1] = new List<Move>() { new Moves.Sandattack(), new Moves.Scratch() },
+			[5] = new List<Move>() { new Moves.Harden() },
+			[10] = new List<Move>() { new Moves.Falseswipe() },
+			[15] = new List<Move>() { new Moves.Mudslap() },
+			[21] = new List<Move>() { new Moves.Absorb() },
+			[25] = new List<Move>() { new Moves.Metalclaw() },
+			[30] = new List<Move>() { new Moves.Furyswipes() },
+			[35] = new List<Move>() { new Moves.Mindreader() },
+			[40] = new List<Move>() { new Moves.Dig() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Aerialace(), new Bugbuzz(), new Cut(), new Dig(), new Doubleteam(), new Endure(), new Facade(), new Falseswipe(), new Flash(), new Gigadrain(), new Hiddenpower(), new Leechlife(), new Protect(), new Rest(), new Round(), new Sandstorm(), new Shadowball(), new Skittersmack(), new Sleeptalk(), new Snore(), new Solarbeam(), new Substitute(), new Sunnyday(), new Swagger(), new Xscissor() };
-		public override List<Move> EggMoves => new List<Move>() { new Bugbite(), new Finalgambit(), new Flail(), new Gust(), new Nightslash() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Aerialace(), new Moves.Bugbuzz(), new Moves.Cut(), new Moves.Dig(), new Moves.Doubleteam(), new Moves.Endure(), new Moves.Facade(), new Moves.Falseswipe(), new Moves.Flash(), new Moves.Gigadrain(), new Moves.Hiddenpower(), new Moves.Leechlife(), new Moves.Protect(), new Moves.Rest(), new Moves.Round(), new Moves.Sandstorm(), new Moves.Shadowball(), new Moves.Skittersmack(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Xscissor() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Bugbite(), new Moves.Finalgambit(), new Moves.Flail(), new Moves.Gust(), new Moves.Nightslash() };
 		public override int Weight => 55;
 		public override int ExpYield => 53;
 		public override int CatchRate => 255;

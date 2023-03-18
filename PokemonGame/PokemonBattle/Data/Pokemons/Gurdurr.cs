@@ -9,26 +9,26 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Gurdurr : Pokemon
 	{
 		public override string Name => "Gurdurr";
-		public override List<Ability> AvailableAbilities => new() {new Guts(), new Sheerforce() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Ironfist() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Guts(), new Abilities.Sheerforce() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Ironfist() };
 		public override Stats BaseStats => new Stats(85, 105, 85, 40, 50, 40);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Pound(), new Leer(), new Lowkick(), new Rockthrow() },
-			[12] = new List<Move>() { new Focusenergy() },
-			[16] = new List<Move>() { new Bulkup() },
-			[20] = new List<Move>() { new Rockslide() },
-			[24] = new List<Move>() { new Slam() },
-			[30] = new List<Move>() { new Scaryface() },
-			[36] = new List<Move>() { new Dynamicpunch() },
-			[42] = new List<Move>() { new Hammerarm() },
-			[48] = new List<Move>() { new Stoneedge() },
-			[54] = new List<Move>() { new Superpower() },
-			[60] = new List<Move>() { new Focuspunch() },
+			[1] = new List<Move>() { new Moves.Pound(), new Moves.Leer(), new Moves.Lowkick(), new Moves.Rockthrow() },
+			[12] = new List<Move>() { new Moves.Focusenergy() },
+			[16] = new List<Move>() { new Moves.Bulkup() },
+			[20] = new List<Move>() { new Moves.Rockslide() },
+			[24] = new List<Move>() { new Moves.Slam() },
+			[30] = new List<Move>() { new Moves.Scaryface() },
+			[36] = new List<Move>() { new Moves.Dynamicpunch() },
+			[42] = new List<Move>() { new Moves.Hammerarm() },
+			[48] = new List<Move>() { new Moves.Stoneedge() },
+			[54] = new List<Move>() { new Moves.Superpower() },
+			[60] = new List<Move>() { new Moves.Focuspunch() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Brickbreak(), new Brutalswing(), new Bulkup(), new Closecombat(), new Coaching(), new Dig(), new Drainpunch(), new Endure(), new Facade(), new Firepunch(), new Fling(), new Focusblast(), new Focusenergy(), new Grassknot(), new Helpinghand(), new Hiddenpower(), new Highhorsepower(), new Icepunch(), new Lowkick(), new Lowsweep(), new Megakick(), new Megapunch(), new Payback(), new Poisonjab(), new Protect(), new Raindance(), new Rest(), new Retaliate(), new Revenge(), new Reversal(), new Rockslide(), new Rocktomb(), new Round(), new Scaryface(), new Sleeptalk(), new Snore(), new Stoneedge(), new Substitute(), new Sunnyday(), new Superpower(), new Taunt(), new Thunderpunch(), new Workup() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Brickbreak(), new Moves.Brutalswing(), new Moves.Bulkup(), new Moves.Closecombat(), new Moves.Coaching(), new Moves.Dig(), new Moves.Drainpunch(), new Moves.Endure(), new Moves.Facade(), new Moves.Firepunch(), new Moves.Fling(), new Moves.Focusblast(), new Moves.Focusenergy(), new Moves.Grassknot(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Highhorsepower(), new Moves.Icepunch(), new Moves.Lowkick(), new Moves.Lowsweep(), new Moves.Megakick(), new Moves.Megapunch(), new Moves.Payback(), new Moves.Poisonjab(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Retaliate(), new Moves.Revenge(), new Moves.Reversal(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Scaryface(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Stoneedge(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Superpower(), new Moves.Taunt(), new Moves.Thunderpunch(), new Moves.Workup() };
 		public override int Weight => 400;
 		public override int ExpYield => 142;
 		public override int CatchRate => 90;

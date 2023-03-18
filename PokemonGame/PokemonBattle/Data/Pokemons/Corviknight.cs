@@ -9,24 +9,24 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Corviknight : Pokemon
 	{
 		public override string Name => "Corviknight";
-		public override List<Ability> AvailableAbilities => new() {new Pressure(), new Unnerve() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Mirrorarmor() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Pressure(), new Abilities.Unnerve() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Mirrorarmor() };
 		public override Stats BaseStats => new Stats(98, 87, 105, 53, 85, 67);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Flying, PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Steelwing() },
-			[1] = new List<Move>() { new Steelwing(), new Irondefense(), new Metalsound(), new Peck(), new Leer(), new Powertrip(), new Honeclaws() },
-			[12] = new List<Move>() { new Furyattack() },
-			[16] = new List<Move>() { new Pluck() },
-			[22] = new List<Move>() { new Taunt() },
-			[28] = new List<Move>() { new Scaryface() },
-			[34] = new List<Move>() { new Drillpeck() },
-			[42] = new List<Move>() { new Swagger() },
-			[50] = new List<Move>() { new Bravebird() },
+			[0] = new List<Move>() { new Moves.Steelwing() },
+			[1] = new List<Move>() { new Moves.Steelwing(), new Moves.Irondefense(), new Moves.Metalsound(), new Moves.Peck(), new Moves.Leer(), new Moves.Powertrip(), new Moves.Honeclaws() },
+			[12] = new List<Move>() { new Moves.Furyattack() },
+			[16] = new List<Move>() { new Moves.Pluck() },
+			[22] = new List<Move>() { new Moves.Taunt() },
+			[28] = new List<Move>() { new Moves.Scaryface() },
+			[34] = new List<Move>() { new Moves.Drillpeck() },
+			[42] = new List<Move>() { new Moves.Swagger() },
+			[50] = new List<Move>() { new Moves.Bravebird() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Agility(), new Airslash(), new Assurance(), new Attract(), new Bodypress(), new Bodyslam(), new Bravebird(), new Bulkup(), new Dualwingbeat(), new Endure(), new Facade(), new Faketears(), new Flashcannon(), new Fly(), new Focusenergy(), new Gigaimpact(), new Heavyslam(), new Hiddenpower(), new Hurricane(), new Hyperbeam(), new Irondefense(), new Ironhead(), new Lightscreen(), new Nastyplot(), new Payback(), new Protect(), new Reflect(), new Rest(), new Retaliate(), new Revenge(), new Reversal(), new Round(), new Scaryface(), new Screech(), new Sleeptalk(), new Snore(), new Steelbeam(), new Steelwing(), new Substitute(), new Swift(), new Taunt(), new Thief(), new Uturn(), new Workup() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Agility(), new Moves.Airslash(), new Moves.Assurance(), new Moves.Attract(), new Moves.Bodypress(), new Moves.Bodyslam(), new Moves.Bravebird(), new Moves.Bulkup(), new Moves.Dualwingbeat(), new Moves.Endure(), new Moves.Facade(), new Moves.Faketears(), new Moves.Flashcannon(), new Moves.Fly(), new Moves.Focusenergy(), new Moves.Gigaimpact(), new Moves.Heavyslam(), new Moves.Hiddenpower(), new Moves.Hurricane(), new Moves.Hyperbeam(), new Moves.Irondefense(), new Moves.Ironhead(), new Moves.Lightscreen(), new Moves.Nastyplot(), new Moves.Payback(), new Moves.Protect(), new Moves.Reflect(), new Moves.Rest(), new Moves.Retaliate(), new Moves.Revenge(), new Moves.Reversal(), new Moves.Round(), new Moves.Scaryface(), new Moves.Screech(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Steelbeam(), new Moves.Steelwing(), new Moves.Substitute(), new Moves.Swift(), new Moves.Taunt(), new Moves.Thief(), new Moves.Uturn(), new Moves.Workup() };
 		public override int Weight => 750;
 		public override int ExpYield => 248;
 		public override int CatchRate => 45;

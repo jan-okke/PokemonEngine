@@ -9,32 +9,32 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Probopass : Pokemon
 	{
 		public override string Name => "Probopass";
-		public override List<Ability> AvailableAbilities => new() {new Sturdy(), new Magnetpull() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Sandforce() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Sturdy(), new Abilities.Magnetpull() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Sandforce() };
 		public override Stats BaseStats => new Stats(60, 55, 145, 75, 150, 40);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Triattack() },
-			[1] = new List<Move>() { new Triattack(), new Magneticflux(), new Magnetrise(), new Gravity(), new Wideguard(), new Tackle(), new Irondefense(), new Block() },
-			[4] = new List<Move>() { new Irondefense() },
-			[7] = new List<Move>() { new Block() },
-			[10] = new List<Move>() { new Smackdown() },
-			[13] = new List<Move>() { new Thunderwave() },
-			[16] = new List<Move>() { new Rest() },
-			[19] = new List<Move>() { new Spark() },
-			[22] = new List<Move>() { new Rockslide() },
-			[25] = new List<Move>() { new Powergem() },
-			[28] = new List<Move>() { new Rockblast() },
-			[31] = new List<Move>() { new Discharge() },
-			[34] = new List<Move>() { new Sandstorm() },
-			[37] = new List<Move>() { new Earthpower() },
-			[40] = new List<Move>() { new Stoneedge() },
-			[43] = new List<Move>() { new Lockon(), new Zapcannon() },
-			[50] = new List<Move>() { new Bodypress() },
+			[0] = new List<Move>() { new Moves.Triattack() },
+			[1] = new List<Move>() { new Moves.Triattack(), new Moves.Magneticflux(), new Moves.Magnetrise(), new Moves.Gravity(), new Moves.Wideguard(), new Moves.Tackle(), new Moves.Irondefense(), new Moves.Block() },
+			[4] = new List<Move>() { new Moves.Irondefense() },
+			[7] = new List<Move>() { new Moves.Block() },
+			[10] = new List<Move>() { new Moves.Smackdown() },
+			[13] = new List<Move>() { new Moves.Thunderwave() },
+			[16] = new List<Move>() { new Moves.Rest() },
+			[19] = new List<Move>() { new Moves.Spark() },
+			[22] = new List<Move>() { new Moves.Rockslide() },
+			[25] = new List<Move>() { new Moves.Powergem() },
+			[28] = new List<Move>() { new Moves.Rockblast() },
+			[31] = new List<Move>() { new Moves.Discharge() },
+			[34] = new List<Move>() { new Moves.Sandstorm() },
+			[37] = new List<Move>() { new Moves.Earthpower() },
+			[40] = new List<Move>() { new Moves.Stoneedge() },
+			[43] = new List<Move>() { new Moves.Lockon(), new Moves.Zapcannon() },
+			[50] = new List<Move>() { new Moves.Bodypress() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Allyswitch(), new Attract(), new Block(), new Bulldoze(), new Confide(), new Dazzlinggleam(), new Doubleteam(), new Earthpower(), new Earthquake(), new Endure(), new Explosion(), new Facade(), new Firepunch(), new Flashcannon(), new Frustration(), new Gigaimpact(), new Gravity(), new Hiddenpower(), new Hyperbeam(), new Icepunch(), new Irondefense(), new Ironhead(), new Magiccoat(), new Magnetrise(), new Painsplit(), new Protect(), new Rest(), new Return(), new Rockpolish(), new Rockslide(), new Rocksmash(), new Rocktomb(), new Round(), new Sandstorm(), new Shockwave(), new Sleeptalk(), new Smackdown(), new Snore(), new Stealthrock(), new Stompingtantrum(), new Stoneedge(), new Strength(), new Substitute(), new Sunnyday(), new Swagger(), new Taunt(), new Telekinesis(), new Thunder(), new Thunderbolt(), new Thunderpunch(), new Thunderwave(), new Torment(), new Voltswitch() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Allyswitch(), new Moves.Attract(), new Moves.Block(), new Moves.Bulldoze(), new Moves.Confide(), new Moves.Dazzlinggleam(), new Moves.Doubleteam(), new Moves.Earthpower(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Explosion(), new Moves.Facade(), new Moves.Firepunch(), new Moves.Flashcannon(), new Moves.Frustration(), new Moves.Gigaimpact(), new Moves.Gravity(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Icepunch(), new Moves.Irondefense(), new Moves.Ironhead(), new Moves.Magiccoat(), new Moves.Magnetrise(), new Moves.Painsplit(), new Moves.Protect(), new Moves.Rest(), new Moves.Return(), new Moves.Rockpolish(), new Moves.Rockslide(), new Moves.Rocksmash(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Sandstorm(), new Moves.Shockwave(), new Moves.Sleeptalk(), new Moves.Smackdown(), new Moves.Snore(), new Moves.Stealthrock(), new Moves.Stompingtantrum(), new Moves.Stoneedge(), new Moves.Strength(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Taunt(), new Moves.Telekinesis(), new Moves.Thunder(), new Moves.Thunderbolt(), new Moves.Thunderpunch(), new Moves.Thunderwave(), new Moves.Torment(), new Moves.Voltswitch() };
 		public override int Weight => 3400;
 		public override int ExpYield => 184;
 		public override int CatchRate => 60;

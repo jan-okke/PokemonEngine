@@ -9,27 +9,27 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Spearow : Pokemon
 	{
 		public override string Name => "Spearow";
-		public override List<Ability> AvailableAbilities => new() {new Keeneye() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Sniper() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Keeneye() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Sniper() };
 		public override Stats BaseStats => new Stats(40, 60, 30, 31, 31, 70);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Peck(), new Growl() },
-			[4] = new List<Move>() { new Leer() },
-			[8] = new List<Move>() { new Assurance() },
-			[11] = new List<Move>() { new Furyattack() },
-			[15] = new List<Move>() { new Aerialace() },
-			[18] = new List<Move>() { new Wingattack() },
-			[22] = new List<Move>() { new Takedown() },
-			[25] = new List<Move>() { new Agility() },
-			[29] = new List<Move>() { new Focusenergy() },
-			[32] = new List<Move>() { new Roost() },
-			[36] = new List<Move>() { new Drillpeck() },
+			[1] = new List<Move>() { new Moves.Peck(), new Moves.Growl() },
+			[4] = new List<Move>() { new Moves.Leer() },
+			[8] = new List<Move>() { new Moves.Assurance() },
+			[11] = new List<Move>() { new Moves.Furyattack() },
+			[15] = new List<Move>() { new Moves.Aerialace() },
+			[18] = new List<Move>() { new Moves.Wingattack() },
+			[22] = new List<Move>() { new Moves.Takedown() },
+			[25] = new List<Move>() { new Moves.Agility() },
+			[29] = new List<Move>() { new Moves.Focusenergy() },
+			[32] = new List<Move>() { new Moves.Roost() },
+			[36] = new List<Move>() { new Moves.Drillpeck() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Aerialace(), new Attract(), new Confide(), new Defog(), new Doubleteam(), new Drillrun(), new Echoedvoice(), new Endure(), new Facade(), new Falseswipe(), new Fly(), new Frustration(), new Heatwave(), new Hiddenpower(), new Pluck(), new Protect(), new Raindance(), new Rest(), new Return(), new Roost(), new Round(), new Skyattack(), new Sleeptalk(), new Snore(), new Steelwing(), new Substitute(), new Sunnyday(), new Swagger(), new Tailwind(), new Thief(), new Uproar(), new Uturn(), new Workup() };
-		public override List<Move> EggMoves => new List<Move>() { new Astonish(), new Featherdance(), new Quickattack(), new Scaryface(), new Skyattack(), new Triattack(), new Uproar(), new Whirlwind() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Aerialace(), new Moves.Attract(), new Moves.Confide(), new Moves.Defog(), new Moves.Doubleteam(), new Moves.Drillrun(), new Moves.Echoedvoice(), new Moves.Endure(), new Moves.Facade(), new Moves.Falseswipe(), new Moves.Fly(), new Moves.Frustration(), new Moves.Heatwave(), new Moves.Hiddenpower(), new Moves.Pluck(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Return(), new Moves.Roost(), new Moves.Round(), new Moves.Skyattack(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Steelwing(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Tailwind(), new Moves.Thief(), new Moves.Uproar(), new Moves.Uturn(), new Moves.Workup() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Astonish(), new Moves.Featherdance(), new Moves.Quickattack(), new Moves.Scaryface(), new Moves.Skyattack(), new Moves.Triattack(), new Moves.Uproar(), new Moves.Whirlwind() };
 		public override int Weight => 20;
 		public override int ExpYield => 52;
 		public override int CatchRate => 255;

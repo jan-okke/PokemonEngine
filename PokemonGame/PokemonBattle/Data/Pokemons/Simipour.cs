@@ -9,16 +9,16 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Simipour : Pokemon
 	{
 		public override string Name => "Simipour";
-		public override List<Ability> AvailableAbilities => new() {new Gluttony() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Torrent() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Gluttony() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Torrent() };
 		public override Stats BaseStats => new Stats(75, 98, 63, 98, 63, 101);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Leer(), new Lick(), new Furyswipes(), new Scald() },
+			[1] = new List<Move>() { new Moves.Leer(), new Moves.Lick(), new Moves.Furyswipes(), new Moves.Scald() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Acrobatics(), new Aquatail(), new Attract(), new Blizzard(), new Brickbreak(), new Confide(), new Covet(), new Cut(), new Dive(), new Doubleteam(), new Endeavor(), new Facade(), new Fling(), new Focusblast(), new Focuspunch(), new Frustration(), new Gastroacid(), new Gigaimpact(), new Grassknot(), new Gunkshot(), new Hail(), new Helpinghand(), new Hiddenpower(), new Hyperbeam(), new Icebeam(), new Icepunch(), new Icywind(), new Irontail(), new Knockoff(), new Lowkick(), new Lowsweep(), new Payback(), new Poweruppunch(), new Protect(), new Raindance(), new Recycle(), new Rest(), new Return(), new Rockslide(), new Rocksmash(), new Rocktomb(), new Roleplay(), new Round(), new Scald(), new Shadowclaw(), new Sleeptalk(), new Snore(), new Substitute(), new Superpower(), new Surf(), new Swagger(), new Taunt(), new Thief(), new Throatchop(), new Torment(), new Toxic(), new Uproar(), new Waterfall(), new Waterpledge(), new Waterpulse(), new Workup() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Acrobatics(), new Moves.Aquatail(), new Moves.Attract(), new Moves.Blizzard(), new Moves.Brickbreak(), new Moves.Confide(), new Moves.Covet(), new Moves.Cut(), new Moves.Dive(), new Moves.Doubleteam(), new Moves.Endeavor(), new Moves.Facade(), new Moves.Fling(), new Moves.Focusblast(), new Moves.Focuspunch(), new Moves.Frustration(), new Moves.Gastroacid(), new Moves.Gigaimpact(), new Moves.Grassknot(), new Moves.Gunkshot(), new Moves.Hail(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Icebeam(), new Moves.Icepunch(), new Moves.Icywind(), new Moves.Irontail(), new Moves.Knockoff(), new Moves.Lowkick(), new Moves.Lowsweep(), new Moves.Payback(), new Moves.Poweruppunch(), new Moves.Protect(), new Moves.Raindance(), new Moves.Recycle(), new Moves.Rest(), new Moves.Return(), new Moves.Rockslide(), new Moves.Rocksmash(), new Moves.Rocktomb(), new Moves.Roleplay(), new Moves.Round(), new Moves.Scald(), new Moves.Shadowclaw(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Substitute(), new Moves.Superpower(), new Moves.Surf(), new Moves.Swagger(), new Moves.Taunt(), new Moves.Thief(), new Moves.Throatchop(), new Moves.Torment(), new Moves.Toxic(), new Moves.Uproar(), new Moves.Waterfall(), new Moves.Waterpledge(), new Moves.Waterpulse(), new Moves.Workup() };
 		public override int Weight => 290;
 		public override int ExpYield => 174;
 		public override int CatchRate => 75;

@@ -9,32 +9,32 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Audino : Pokemon
 	{
 		public override string Name => "Audino";
-		public override List<Ability> AvailableAbilities => new() {new Healer(), new Regenerator() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Klutz() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Healer(), new Abilities.Regenerator() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Klutz() };
 		public override Stats BaseStats => new Stats(103, 60, 86, 60, 86, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Pound(), new Playnice() },
-			[4] = new List<Move>() { new Disarmingvoice() },
-			[9] = new List<Move>() { new Babydolleyes() },
-			[12] = new List<Move>() { new Helpinghand() },
-			[16] = new List<Move>() { new Growl() },
-			[20] = new List<Move>() { new Zenheadbutt() },
-			[24] = new List<Move>() { new Lifedew() },
-			[28] = new List<Move>() { new Afteryou() },
-			[32] = new List<Move>() { new Takedown() },
-			[36] = new List<Move>() { new Simplebeam() },
-			[40] = new List<Move>() { new Hypervoice() },
-			[44] = new List<Move>() { new Healpulse() },
-			[48] = new List<Move>() { new Doubleedge() },
-			[52] = new List<Move>() { new Entrainment() },
-			[56] = new List<Move>() { new Mistyterrain() },
-			[60] = new List<Move>() { new Lastresort() },
+			[1] = new List<Move>() { new Moves.Pound(), new Moves.Playnice() },
+			[4] = new List<Move>() { new Moves.Disarmingvoice() },
+			[9] = new List<Move>() { new Moves.Babydolleyes() },
+			[12] = new List<Move>() { new Moves.Helpinghand() },
+			[16] = new List<Move>() { new Moves.Growl() },
+			[20] = new List<Move>() { new Moves.Zenheadbutt() },
+			[24] = new List<Move>() { new Moves.Lifedew() },
+			[28] = new List<Move>() { new Moves.Afteryou() },
+			[32] = new List<Move>() { new Moves.Takedown() },
+			[36] = new List<Move>() { new Moves.Simplebeam() },
+			[40] = new List<Move>() { new Moves.Hypervoice() },
+			[44] = new List<Move>() { new Moves.Healpulse() },
+			[48] = new List<Move>() { new Moves.Doubleedge() },
+			[52] = new List<Move>() { new Moves.Entrainment() },
+			[56] = new List<Move>() { new Moves.Mistyterrain() },
+			[60] = new List<Move>() { new Moves.Lastresort() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Allyswitch(), new Amnesia(), new Attract(), new Blizzard(), new Bodyslam(), new Calmmind(), new Dazzlinggleam(), new Dig(), new Drainingkiss(), new Drainpunch(), new Encore(), new Endure(), new Facade(), new Fireblast(), new Firepunch(), new Flamethrower(), new Fling(), new Gigaimpact(), new Grassknot(), new Helpinghand(), new Hiddenpower(), new Hyperbeam(), new Hypervoice(), new Icebeam(), new Icepunch(), new Icywind(), new Irontail(), new Lightscreen(), new Lowkick(), new Megakick(), new Megapunch(), new Mistyterrain(), new Protect(), new Psychic(), new Psyshock(), new Raindance(), new Reflect(), new Rest(), new Retaliate(), new Round(), new Safeguard(), new Shadowball(), new Skillswap(), new Sleeptalk(), new Snore(), new Solarbeam(), new Stompingtantrum(), new Substitute(), new Sunnyday(), new Surf(), new Throatchop(), new Thunder(), new Thunderbolt(), new Thunderpunch(), new Thunderwave(), new Trickroom(), new Uproar(), new Wildcharge(), new Workup(), new Zenheadbutt() };
-		public override List<Move> EggMoves => new List<Move>() { new Healingwish(), new Sweetkiss(), new Wish(), new Yawn() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Allyswitch(), new Moves.Amnesia(), new Moves.Attract(), new Moves.Blizzard(), new Moves.Bodyslam(), new Moves.Calmmind(), new Moves.Dazzlinggleam(), new Moves.Dig(), new Moves.Drainingkiss(), new Moves.Drainpunch(), new Moves.Encore(), new Moves.Endure(), new Moves.Facade(), new Moves.Fireblast(), new Moves.Firepunch(), new Moves.Flamethrower(), new Moves.Fling(), new Moves.Gigaimpact(), new Moves.Grassknot(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Hypervoice(), new Moves.Icebeam(), new Moves.Icepunch(), new Moves.Icywind(), new Moves.Irontail(), new Moves.Lightscreen(), new Moves.Lowkick(), new Moves.Megakick(), new Moves.Megapunch(), new Moves.Mistyterrain(), new Moves.Protect(), new Moves.Psychic(), new Moves.Psyshock(), new Moves.Raindance(), new Moves.Reflect(), new Moves.Rest(), new Moves.Retaliate(), new Moves.Round(), new Moves.Safeguard(), new Moves.Shadowball(), new Moves.Skillswap(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Stompingtantrum(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Surf(), new Moves.Throatchop(), new Moves.Thunder(), new Moves.Thunderbolt(), new Moves.Thunderpunch(), new Moves.Thunderwave(), new Moves.Trickroom(), new Moves.Uproar(), new Moves.Wildcharge(), new Moves.Workup(), new Moves.Zenheadbutt() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Healingwish(), new Moves.Sweetkiss(), new Moves.Wish(), new Moves.Yawn() };
 		public override int Weight => 310;
 		public override int ExpYield => 390;
 		public override int CatchRate => 255;

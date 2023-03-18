@@ -9,29 +9,29 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Cubone : Pokemon
 	{
 		public override string Name => "Cubone";
-		public override List<Ability> AvailableAbilities => new() {new Rockhead(), new Lightningrod() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Battlearmor() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Rockhead(), new Abilities.Lightningrod() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Battlearmor() };
 		public override Stats BaseStats => new Stats(50, 50, 95, 40, 50, 35);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Ground };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Mudslap(), new Growl() },
-			[4] = new List<Move>() { new Tailwhip() },
-			[8] = new List<Move>() { new Falseswipe() },
-			[12] = new List<Move>() { new Headbutt() },
-			[16] = new List<Move>() { new Retaliate() },
-			[20] = new List<Move>() { new Fling() },
-			[24] = new List<Move>() { new Stompingtantrum() },
-			[29] = new List<Move>() { new Bonerush() },
-			[32] = new List<Move>() { new Focusenergy() },
-			[36] = new List<Move>() { new Endeavor() },
-			[40] = new List<Move>() { new Bonemerang() },
-			[44] = new List<Move>() { new Thrash() },
-			[48] = new List<Move>() { new Doubleedge() },
+			[1] = new List<Move>() { new Moves.Mudslap(), new Moves.Growl() },
+			[4] = new List<Move>() { new Moves.Tailwhip() },
+			[8] = new List<Move>() { new Moves.Falseswipe() },
+			[12] = new List<Move>() { new Moves.Headbutt() },
+			[16] = new List<Move>() { new Moves.Retaliate() },
+			[20] = new List<Move>() { new Moves.Fling() },
+			[24] = new List<Move>() { new Moves.Stompingtantrum() },
+			[29] = new List<Move>() { new Moves.Bonerush() },
+			[32] = new List<Move>() { new Moves.Focusenergy() },
+			[36] = new List<Move>() { new Moves.Endeavor() },
+			[40] = new List<Move>() { new Moves.Bonemerang() },
+			[44] = new List<Move>() { new Moves.Thrash() },
+			[48] = new List<Move>() { new Moves.Doubleedge() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Aerialace(), new Attract(), new Blizzard(), new Bodyslam(), new Brickbreak(), new Brutalswing(), new Bulldoze(), new Dig(), new Doubleteam(), new Earthpower(), new Earthquake(), new Endure(), new Facade(), new Falseswipe(), new Fireblast(), new Firepunch(), new Flamethrower(), new Fling(), new Focusenergy(), new Focuspunch(), new Hiddenpower(), new Icebeam(), new Icywind(), new Irondefense(), new Ironhead(), new Irontail(), new Lowkick(), new Megakick(), new Megapunch(), new Protect(), new Rest(), new Retaliate(), new Rockclimb(), new Rockslide(), new Rocksmash(), new Rocktomb(), new Round(), new Sandstorm(), new Scorchingsands(), new Screech(), new Sleeptalk(), new Snore(), new Stealthrock(), new Stompingtantrum(), new Strength(), new Substitute(), new Sunnyday(), new Swagger(), new Swift(), new Swordsdance(), new Thief(), new Thunderpunch(), new Uproar() };
-		public override List<Move> EggMoves => new List<Move>() { new Ancientpower(), new Bellydrum(), new Curse(), new Detect(), new Doublekick(), new Ironhead(), new Leer(), new Perishsong(), new Screech(), new Skullbash() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Aerialace(), new Moves.Attract(), new Moves.Blizzard(), new Moves.Bodyslam(), new Moves.Brickbreak(), new Moves.Brutalswing(), new Moves.Bulldoze(), new Moves.Dig(), new Moves.Doubleteam(), new Moves.Earthpower(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Facade(), new Moves.Falseswipe(), new Moves.Fireblast(), new Moves.Firepunch(), new Moves.Flamethrower(), new Moves.Fling(), new Moves.Focusenergy(), new Moves.Focuspunch(), new Moves.Hiddenpower(), new Moves.Icebeam(), new Moves.Icywind(), new Moves.Irondefense(), new Moves.Ironhead(), new Moves.Irontail(), new Moves.Lowkick(), new Moves.Megakick(), new Moves.Megapunch(), new Moves.Protect(), new Moves.Rest(), new Moves.Retaliate(), new Moves.Rockclimb(), new Moves.Rockslide(), new Moves.Rocksmash(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Sandstorm(), new Moves.Scorchingsands(), new Moves.Screech(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Stealthrock(), new Moves.Stompingtantrum(), new Moves.Strength(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Swift(), new Moves.Swordsdance(), new Moves.Thief(), new Moves.Thunderpunch(), new Moves.Uproar() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Ancientpower(), new Moves.Bellydrum(), new Moves.Curse(), new Moves.Detect(), new Moves.Doublekick(), new Moves.Ironhead(), new Moves.Leer(), new Moves.Perishsong(), new Moves.Screech(), new Moves.Skullbash() };
 		public override int Weight => 65;
 		public override int ExpYield => 64;
 		public override int CatchRate => 190;

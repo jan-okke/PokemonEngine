@@ -9,18 +9,18 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Kricketot : Pokemon
 	{
 		public override string Name => "Kricketot";
-		public override List<Ability> AvailableAbilities => new() {new Shedskin() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Runaway() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Shedskin() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Runaway() };
 		public override Stats BaseStats => new Stats(37, 25, 41, 25, 41, 25);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Bug };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Growl(), new Pound() },
-			[6] = new List<Move>() { new Strugglebug() },
-			[16] = new List<Move>() { new Bugbite() },
+			[1] = new List<Move>() { new Moves.Growl(), new Moves.Pound() },
+			[6] = new List<Move>() { new Moves.Strugglebug() },
+			[16] = new List<Move>() { new Moves.Bugbite() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Bugbite(), new Endeavor(), new Strugglebug(), new Uproar() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Bugbite(), new Moves.Endeavor(), new Moves.Strugglebug(), new Moves.Uproar() };
 		public override int Weight => 22;
 		public override int ExpYield => 39;
 		public override int CatchRate => 255;

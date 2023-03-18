@@ -9,27 +9,27 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Seismitoad : Pokemon
 	{
 		public override string Name => "Seismitoad";
-		public override List<Ability> AvailableAbilities => new() {new Swiftswim(), new Poisontouch() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Waterabsorb() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Swiftswim(), new Abilities.Poisontouch() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Waterabsorb() };
 		public override Stats BaseStats => new Stats(105, 95, 75, 85, 75, 74);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Water, PokemonType.Ground };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Drainpunch() },
-			[1] = new List<Move>() { new Drainpunch(), new Gastroacid(), new Echoedvoice(), new Growl(), new Acid(), new Supersonic() },
-			[12] = new List<Move>() { new Mudshot() },
-			[16] = new List<Move>() { new Round() },
-			[20] = new List<Move>() { new Bubblebeam() },
-			[24] = new List<Move>() { new Flail() },
-			[30] = new List<Move>() { new Uproar() },
-			[39] = new List<Move>() { new Aquaring() },
-			[46] = new List<Move>() { new Hypervoice() },
-			[54] = new List<Move>() { new Muddywater() },
-			[62] = new List<Move>() { new Raindance() },
-			[70] = new List<Move>() { new Hydropump() },
+			[0] = new List<Move>() { new Moves.Drainpunch() },
+			[1] = new List<Move>() { new Moves.Drainpunch(), new Moves.Gastroacid(), new Moves.Echoedvoice(), new Moves.Growl(), new Moves.Acid(), new Moves.Supersonic() },
+			[12] = new List<Move>() { new Moves.Mudshot() },
+			[16] = new List<Move>() { new Moves.Round() },
+			[20] = new List<Move>() { new Moves.Bubblebeam() },
+			[24] = new List<Move>() { new Moves.Flail() },
+			[30] = new List<Move>() { new Moves.Uproar() },
+			[39] = new List<Move>() { new Moves.Aquaring() },
+			[46] = new List<Move>() { new Moves.Hypervoice() },
+			[54] = new List<Move>() { new Moves.Muddywater() },
+			[62] = new List<Move>() { new Moves.Raindance() },
+			[70] = new List<Move>() { new Moves.Hydropump() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Bounce(), new Brickbreak(), new Bulldoze(), new Dig(), new Dive(), new Drainpunch(), new Earthpower(), new Earthquake(), new Endure(), new Facade(), new Fling(), new Focusblast(), new Gigaimpact(), new Grassknot(), new Hail(), new Hiddenpower(), new Hydropump(), new Hyperbeam(), new Hypervoice(), new Icepunch(), new Icywind(), new Liquidation(), new Lowkick(), new Megakick(), new Megapunch(), new Muddywater(), new Mudshot(), new Payback(), new Poisonjab(), new Powerwhip(), new Protect(), new Raindance(), new Rest(), new Rockslide(), new Rocktomb(), new Round(), new Scald(), new Screech(), new Sleeptalk(), new Sludgebomb(), new Sludgewave(), new Snore(), new Stealthrock(), new Stompingtantrum(), new Substitute(), new Surf(), new Uproar(), new Venomdrench(), new Venoshock(), new Weatherball() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Bounce(), new Moves.Brickbreak(), new Moves.Bulldoze(), new Moves.Dig(), new Moves.Dive(), new Moves.Drainpunch(), new Moves.Earthpower(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Facade(), new Moves.Fling(), new Moves.Focusblast(), new Moves.Gigaimpact(), new Moves.Grassknot(), new Moves.Hail(), new Moves.Hiddenpower(), new Moves.Hydropump(), new Moves.Hyperbeam(), new Moves.Hypervoice(), new Moves.Icepunch(), new Moves.Icywind(), new Moves.Liquidation(), new Moves.Lowkick(), new Moves.Megakick(), new Moves.Megapunch(), new Moves.Muddywater(), new Moves.Mudshot(), new Moves.Payback(), new Moves.Poisonjab(), new Moves.Powerwhip(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Scald(), new Moves.Screech(), new Moves.Sleeptalk(), new Moves.Sludgebomb(), new Moves.Sludgewave(), new Moves.Snore(), new Moves.Stealthrock(), new Moves.Stompingtantrum(), new Moves.Substitute(), new Moves.Surf(), new Moves.Uproar(), new Moves.Venomdrench(), new Moves.Venoshock(), new Moves.Weatherball() };
 		public override int Weight => 620;
 		public override int ExpYield => 255;
 		public override int CatchRate => 45;

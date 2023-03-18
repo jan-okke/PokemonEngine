@@ -9,27 +9,27 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Bronzor : Pokemon
 	{
 		public override string Name => "Bronzor";
-		public override List<Ability> AvailableAbilities => new() {new Levitate(), new Heatproof() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Heavymetal() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Levitate(), new Abilities.Heatproof() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Heavymetal() };
 		public override Stats BaseStats => new Stats(57, 24, 86, 24, 86, 23);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Steel, PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Tackle(), new Confusion() },
-			[4] = new List<Move>() { new Confuseray() },
-			[8] = new List<Move>() { new Payback() },
-			[12] = new List<Move>() { new Imprison() },
-			[16] = new List<Move>() { new Gyroball() },
-			[20] = new List<Move>() { new Hypnosis() },
-			[24] = new List<Move>() { new Safeguard() },
-			[28] = new List<Move>() { new Extrasensory() },
-			[32] = new List<Move>() { new Heavyslam() },
-			[36] = new List<Move>() { new Irondefense() },
-			[40] = new List<Move>() { new Metalsound() },
-			[44] = new List<Move>() { new Futuresight() },
+			[1] = new List<Move>() { new Moves.Tackle(), new Moves.Confusion() },
+			[4] = new List<Move>() { new Moves.Confuseray() },
+			[8] = new List<Move>() { new Moves.Payback() },
+			[12] = new List<Move>() { new Moves.Imprison() },
+			[16] = new List<Move>() { new Moves.Gyroball() },
+			[20] = new List<Move>() { new Moves.Hypnosis() },
+			[24] = new List<Move>() { new Moves.Safeguard() },
+			[28] = new List<Move>() { new Moves.Extrasensory() },
+			[32] = new List<Move>() { new Moves.Heavyslam() },
+			[36] = new List<Move>() { new Moves.Irondefense() },
+			[40] = new List<Move>() { new Moves.Metalsound() },
+			[44] = new List<Move>() { new Moves.Futuresight() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Allyswitch(), new Bulldoze(), new Calmmind(), new Chargebeam(), new Doubleteam(), new Dreameater(), new Earthquake(), new Endure(), new Expandingforce(), new Facade(), new Flash(), new Flashcannon(), new Futuresight(), new Grassknot(), new Guardswap(), new Gyroball(), new Heavyslam(), new Hex(), new Hiddenpower(), new Imprison(), new Irondefense(), new Lightscreen(), new Payback(), new Powerswap(), new Protect(), new Psychic(), new Psychup(), new Psyshock(), new Raindance(), new Recycle(), new Reflect(), new Rest(), new Rockpolish(), new Rockslide(), new Rocktomb(), new Round(), new Safeguard(), new Sandstorm(), new Shadowball(), new Skillswap(), new Sleeptalk(), new Snore(), new Solarbeam(), new Speedswap(), new Stealthrock(), new Steelbeam(), new Steelroller(), new Substitute(), new Sunnyday(), new Swagger(), new Trick(), new Trickroom(), new Wonderroom() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Allyswitch(), new Moves.Bulldoze(), new Moves.Calmmind(), new Moves.Chargebeam(), new Moves.Doubleteam(), new Moves.Dreameater(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Expandingforce(), new Moves.Facade(), new Moves.Flash(), new Moves.Flashcannon(), new Moves.Futuresight(), new Moves.Grassknot(), new Moves.Guardswap(), new Moves.Gyroball(), new Moves.Heavyslam(), new Moves.Hex(), new Moves.Hiddenpower(), new Moves.Imprison(), new Moves.Irondefense(), new Moves.Lightscreen(), new Moves.Payback(), new Moves.Powerswap(), new Moves.Protect(), new Moves.Psychic(), new Moves.Psychup(), new Moves.Psyshock(), new Moves.Raindance(), new Moves.Recycle(), new Moves.Reflect(), new Moves.Rest(), new Moves.Rockpolish(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Safeguard(), new Moves.Sandstorm(), new Moves.Shadowball(), new Moves.Skillswap(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Speedswap(), new Moves.Stealthrock(), new Moves.Steelbeam(), new Moves.Steelroller(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Trick(), new Moves.Trickroom(), new Moves.Wonderroom() };
 		public override int Weight => 605;
 		public override int ExpYield => 60;
 		public override int CatchRate => 255;

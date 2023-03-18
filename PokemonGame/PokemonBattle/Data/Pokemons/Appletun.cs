@@ -9,28 +9,28 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Appletun : Pokemon
 	{
 		public override string Name => "Appletun";
-		public override List<Ability> AvailableAbilities => new() {new Ripen(), new Gluttony() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Thickfat() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Ripen(), new Abilities.Gluttony() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Thickfat() };
 		public override Stats BaseStats => new Stats(110, 85, 80, 100, 80, 30);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Erratic;
 		public override List<PokemonType> Types => new() {PokemonType.Grass, PokemonType.Dragon };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Headbutt() },
-			[1] = new List<Move>() { new Headbutt(), new Recycle(), new Withdraw(), new Astonish(), new Growth(), new Sweetscent() },
-			[4] = new List<Move>() { new Curse() },
-			[8] = new List<Move>() { new Stomp() },
-			[12] = new List<Move>() { new Leechseed() },
-			[16] = new List<Move>() { new Protect() },
-			[20] = new List<Move>() { new Bulletseed() },
-			[24] = new List<Move>() { new Recover() },
-			[28] = new List<Move>() { new Appleacid() },
-			[32] = new List<Move>() { new Bodyslam() },
-			[36] = new List<Move>() { new Irondefense() },
-			[40] = new List<Move>() { new Dragonpulse() },
-			[44] = new List<Move>() { new Energyball() },
+			[0] = new List<Move>() { new Moves.Headbutt() },
+			[1] = new List<Move>() { new Moves.Headbutt(), new Moves.Recycle(), new Moves.Withdraw(), new Moves.Astonish(), new Moves.Growth(), new Moves.Sweetscent() },
+			[4] = new List<Move>() { new Moves.Curse() },
+			[8] = new List<Move>() { new Moves.Stomp() },
+			[12] = new List<Move>() { new Moves.Leechseed() },
+			[16] = new List<Move>() { new Moves.Protect() },
+			[20] = new List<Move>() { new Moves.Bulletseed() },
+			[24] = new List<Move>() { new Moves.Recover() },
+			[28] = new List<Move>() { new Moves.Appleacid() },
+			[32] = new List<Move>() { new Moves.Bodyslam() },
+			[36] = new List<Move>() { new Moves.Irondefense() },
+			[40] = new List<Move>() { new Moves.Dragonpulse() },
+			[44] = new List<Move>() { new Moves.Energyball() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Amnesia(), new Attract(), new Bodypress(), new Bodyslam(), new Bulldoze(), new Bulletseed(), new Dracometeor(), new Dragonpulse(), new Earthquake(), new Endure(), new Energyball(), new Facade(), new Gigadrain(), new Gigaimpact(), new Grassknot(), new Grassyglide(), new Gyroball(), new Heavyslam(), new Hiddenpower(), new Highhorsepower(), new Hyperbeam(), new Irondefense(), new Lightscreen(), new Outrage(), new Payback(), new Protect(), new Reflect(), new Rest(), new Round(), new Safeguard(), new Seedbomb(), new Sleeptalk(), new Snore(), new Solarbeam(), new Substitute(), new Sunnyday(), new Superpower() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Amnesia(), new Moves.Attract(), new Moves.Bodypress(), new Moves.Bodyslam(), new Moves.Bulldoze(), new Moves.Bulletseed(), new Moves.Dracometeor(), new Moves.Dragonpulse(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Energyball(), new Moves.Facade(), new Moves.Gigadrain(), new Moves.Gigaimpact(), new Moves.Grassknot(), new Moves.Grassyglide(), new Moves.Gyroball(), new Moves.Heavyslam(), new Moves.Hiddenpower(), new Moves.Highhorsepower(), new Moves.Hyperbeam(), new Moves.Irondefense(), new Moves.Lightscreen(), new Moves.Outrage(), new Moves.Payback(), new Moves.Protect(), new Moves.Reflect(), new Moves.Rest(), new Moves.Round(), new Moves.Safeguard(), new Moves.Seedbomb(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Superpower() };
 		public override int Weight => 130;
 		public override int ExpYield => 170;
 		public override int CatchRate => 45;

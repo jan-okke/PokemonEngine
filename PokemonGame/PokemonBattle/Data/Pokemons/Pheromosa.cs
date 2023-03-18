@@ -9,29 +9,29 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Pheromosa : Pokemon
 	{
 		public override string Name => "Pheromosa";
-		public override List<Ability> AvailableAbilities => new() {new Beastboost() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Beastboost() };
 		public override Stats BaseStats => new Stats(71, 137, 37, 137, 37, 151);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Feint(), new Rapidspin() },
-			[5] = new List<Move>() { new Leer() },
-			[10] = new List<Move>() { new Quickguard() },
-			[15] = new List<Move>() { new Bugbite() },
-			[20] = new List<Move>() { new Lowkick() },
-			[25] = new List<Move>() { new Doublekick() },
-			[30] = new List<Move>() { new Triplekick() },
-			[35] = new List<Move>() { new Stomp() },
-			[40] = new List<Move>() { new Agility() },
-			[45] = new List<Move>() { new Lunge() },
-			[50] = new List<Move>() { new Bounce() },
-			[55] = new List<Move>() { new Speedswap() },
-			[60] = new List<Move>() { new Bugbuzz() },
-			[65] = new List<Move>() { new Quiverdance() },
-			[70] = new List<Move>() { new Highjumpkick() },
+			[1] = new List<Move>() { new Moves.Feint(), new Moves.Rapidspin() },
+			[5] = new List<Move>() { new Moves.Leer() },
+			[10] = new List<Move>() { new Moves.Quickguard() },
+			[15] = new List<Move>() { new Moves.Bugbite() },
+			[20] = new List<Move>() { new Moves.Lowkick() },
+			[25] = new List<Move>() { new Moves.Doublekick() },
+			[30] = new List<Move>() { new Moves.Triplekick() },
+			[35] = new List<Move>() { new Moves.Stomp() },
+			[40] = new List<Move>() { new Moves.Agility() },
+			[45] = new List<Move>() { new Moves.Lunge() },
+			[50] = new List<Move>() { new Moves.Bounce() },
+			[55] = new List<Move>() { new Moves.Speedswap() },
+			[60] = new List<Move>() { new Moves.Bugbuzz() },
+			[65] = new List<Move>() { new Moves.Quiverdance() },
+			[70] = new List<Move>() { new Moves.Highjumpkick() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Agility(), new Assurance(), new Blizzard(), new Bounce(), new Brickbreak(), new Bugbuzz(), new Closecombat(), new Coaching(), new Drillrun(), new Electroweb(), new Endure(), new Facade(), new Falseswipe(), new Fling(), new Focusblast(), new Foulplay(), new Gigaimpact(), new Hiddenpower(), new Hyperbeam(), new Icebeam(), new Icywind(), new Lowkick(), new Lowsweep(), new Outrage(), new Poisonjab(), new Protect(), new Rest(), new Round(), new Skittersmack(), new Sleeptalk(), new Snore(), new Speedswap(), new Substitute(), new Swift(), new Taunt(), new Throatchop(), new Tripleaxel(), new Uturn() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Agility(), new Moves.Assurance(), new Moves.Blizzard(), new Moves.Bounce(), new Moves.Brickbreak(), new Moves.Bugbuzz(), new Moves.Closecombat(), new Moves.Coaching(), new Moves.Drillrun(), new Moves.Electroweb(), new Moves.Endure(), new Moves.Facade(), new Moves.Falseswipe(), new Moves.Fling(), new Moves.Focusblast(), new Moves.Foulplay(), new Moves.Gigaimpact(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Icebeam(), new Moves.Icywind(), new Moves.Lowkick(), new Moves.Lowsweep(), new Moves.Outrage(), new Moves.Poisonjab(), new Moves.Protect(), new Moves.Rest(), new Moves.Round(), new Moves.Skittersmack(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Speedswap(), new Moves.Substitute(), new Moves.Swift(), new Moves.Taunt(), new Moves.Throatchop(), new Moves.Tripleaxel(), new Moves.Uturn() };
 		public override int Weight => 250;
 		public override int ExpYield => 285;
 		public override int CatchRate => 45;

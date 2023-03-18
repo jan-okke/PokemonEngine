@@ -9,26 +9,26 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Vanilluxe : Pokemon
 	{
 		public override string Name => "Vanilluxe";
-		public override List<Ability> AvailableAbilities => new() {new Icebody(), new Snowwarning() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Weakarmor() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Icebody(), new Abilities.Snowwarning() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Weakarmor() };
 		public override Stats BaseStats => new Stats(71, 95, 85, 110, 95, 79);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Ice };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Weatherball(), new Iciclecrash(), new Freezedry(), new Astonish(), new Harden(), new Taunt(), new Mist() },
-			[12] = new List<Move>() { new Icywind() },
-			[16] = new List<Move>() { new Avalanche() },
-			[20] = new List<Move>() { new Hail() },
-			[24] = new List<Move>() { new Iciclespear() },
-			[28] = new List<Move>() { new Uproar() },
-			[32] = new List<Move>() { new Acidarmor() },
-			[38] = new List<Move>() { new Mirrorcoat() },
-			[44] = new List<Move>() { new Icebeam() },
-			[52] = new List<Move>() { new Blizzard() },
-			[60] = new List<Move>() { new Sheercold() },
+			[1] = new List<Move>() { new Moves.Weatherball(), new Moves.Iciclecrash(), new Moves.Freezedry(), new Moves.Astonish(), new Moves.Harden(), new Moves.Taunt(), new Moves.Mist() },
+			[12] = new List<Move>() { new Moves.Icywind() },
+			[16] = new List<Move>() { new Moves.Avalanche() },
+			[20] = new List<Move>() { new Moves.Hail() },
+			[24] = new List<Move>() { new Moves.Iciclespear() },
+			[28] = new List<Move>() { new Moves.Uproar() },
+			[32] = new List<Move>() { new Moves.Acidarmor() },
+			[38] = new List<Move>() { new Moves.Mirrorcoat() },
+			[44] = new List<Move>() { new Moves.Icebeam() },
+			[52] = new List<Move>() { new Moves.Blizzard() },
+			[60] = new List<Move>() { new Moves.Sheercold() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Allyswitch(), new Attract(), new Avalanche(), new Beatup(), new Blizzard(), new Endure(), new Facade(), new Flashcannon(), new Gigaimpact(), new Hail(), new Hiddenpower(), new Hyperbeam(), new Hypervoice(), new Icebeam(), new Iciclespear(), new Icywind(), new Imprison(), new Irondefense(), new Lightscreen(), new Protect(), new Raindance(), new Rest(), new Round(), new Selfdestruct(), new Sleeptalk(), new Snore(), new Substitute(), new Taunt(), new Uproar(), new Weatherball() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Allyswitch(), new Moves.Attract(), new Moves.Avalanche(), new Moves.Beatup(), new Moves.Blizzard(), new Moves.Endure(), new Moves.Facade(), new Moves.Flashcannon(), new Moves.Gigaimpact(), new Moves.Hail(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Hypervoice(), new Moves.Icebeam(), new Moves.Iciclespear(), new Moves.Icywind(), new Moves.Imprison(), new Moves.Irondefense(), new Moves.Lightscreen(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Round(), new Moves.Selfdestruct(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Substitute(), new Moves.Taunt(), new Moves.Uproar(), new Moves.Weatherball() };
 		public override int Weight => 575;
 		public override int ExpYield => 268;
 		public override int CatchRate => 45;

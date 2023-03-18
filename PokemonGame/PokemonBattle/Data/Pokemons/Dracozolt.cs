@@ -9,27 +9,27 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Dracozolt : Pokemon
 	{
 		public override string Name => "Dracozolt";
-		public override List<Ability> AvailableAbilities => new() {new Voltabsorb(), new Hustle() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Sandrush() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Voltabsorb(), new Abilities.Hustle() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Sandrush() };
 		public override Stats BaseStats => new Stats(90, 100, 90, 80, 70, 75);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Electric, PokemonType.Dragon };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Tackle(), new Thundershock() },
-			[7] = new List<Move>() { new Charge() },
-			[14] = new List<Move>() { new Aerialace() },
-			[21] = new List<Move>() { new Ancientpower() },
-			[28] = new List<Move>() { new Pluck() },
-			[35] = new List<Move>() { new Dragontail() },
-			[42] = new List<Move>() { new Stomp() },
-			[49] = new List<Move>() { new Slam() },
-			[56] = new List<Move>() { new Discharge() },
-			[63] = new List<Move>() { new Boltbeak() },
-			[70] = new List<Move>() { new Dragonpulse() },
-			[77] = new List<Move>() { new Dragonrush() },
+			[1] = new List<Move>() { new Moves.Tackle(), new Moves.Thundershock() },
+			[7] = new List<Move>() { new Moves.Charge() },
+			[14] = new List<Move>() { new Moves.Aerialace() },
+			[21] = new List<Move>() { new Moves.Ancientpower() },
+			[28] = new List<Move>() { new Moves.Pluck() },
+			[35] = new List<Move>() { new Moves.Dragontail() },
+			[42] = new List<Move>() { new Moves.Stomp() },
+			[49] = new List<Move>() { new Moves.Slam() },
+			[56] = new List<Move>() { new Moves.Discharge() },
+			[63] = new List<Move>() { new Moves.Boltbeak() },
+			[70] = new List<Move>() { new Moves.Dragonpulse() },
+			[77] = new List<Move>() { new Moves.Dragonrush() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Bodyslam(), new Breakingswipe(), new Brutalswing(), new Bulldoze(), new Dracometeor(), new Dragonclaw(), new Dragonpulse(), new Earthpower(), new Earthquake(), new Electroball(), new Endure(), new Facade(), new Fireblast(), new Firefang(), new Firespin(), new Flamethrower(), new Gigaimpact(), new Hiddenpower(), new Highhorsepower(), new Hyperbeam(), new Irontail(), new Lowkick(), new Megakick(), new Megapunch(), new Meteorbeam(), new Outrage(), new Protect(), new Raindance(), new Rest(), new Risingvoltage(), new Rockblast(), new Rockslide(), new Rocktomb(), new Round(), new Sleeptalk(), new Snore(), new Stompingtantrum(), new Stoneedge(), new Substitute(), new Sunnyday(), new Taunt(), new Thunder(), new Thunderbolt(), new Thunderfang(), new Thunderpunch(), new Thunderwave(), new Wildcharge() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Bodyslam(), new Moves.Breakingswipe(), new Moves.Brutalswing(), new Moves.Bulldoze(), new Moves.Dracometeor(), new Moves.Dragonclaw(), new Moves.Dragonpulse(), new Moves.Earthpower(), new Moves.Earthquake(), new Moves.Electroball(), new Moves.Endure(), new Moves.Facade(), new Moves.Fireblast(), new Moves.Firefang(), new Moves.Firespin(), new Moves.Flamethrower(), new Moves.Gigaimpact(), new Moves.Hiddenpower(), new Moves.Highhorsepower(), new Moves.Hyperbeam(), new Moves.Irontail(), new Moves.Lowkick(), new Moves.Megakick(), new Moves.Megapunch(), new Moves.Meteorbeam(), new Moves.Outrage(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Risingvoltage(), new Moves.Rockblast(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Stompingtantrum(), new Moves.Stoneedge(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Taunt(), new Moves.Thunder(), new Moves.Thunderbolt(), new Moves.Thunderfang(), new Moves.Thunderpunch(), new Moves.Thunderwave(), new Moves.Wildcharge() };
 		public override int Weight => 1900;
 		public override int ExpYield => 177;
 		public override int CatchRate => 45;

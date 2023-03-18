@@ -9,24 +9,24 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Coalossal : Pokemon
 	{
 		public override string Name => "Coalossal";
-		public override List<Ability> AvailableAbilities => new() {new Steamengine(), new Flamebody() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Flashfire() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Steamengine(), new Abilities.Flamebody() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Flashfire() };
 		public override Stats BaseStats => new Stats(110, 80, 120, 80, 90, 30);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Rock, PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Tarshot() },
-			[1] = new List<Move>() { new Tarshot(), new Flamecharge(), new Tackle(), new Smokescreen(), new Rapidspin(), new Smackdown() },
-			[15] = new List<Move>() { new Rockpolish() },
-			[20] = new List<Move>() { new Ancientpower() },
-			[27] = new List<Move>() { new Incinerate() },
-			[37] = new List<Move>() { new Stealthrock() },
-			[45] = new List<Move>() { new Heatcrash() },
-			[54] = new List<Move>() { new Rockblast() },
-			[63] = new List<Move>() { new Burnup() },
+			[0] = new List<Move>() { new Moves.Tarshot() },
+			[1] = new List<Move>() { new Moves.Tarshot(), new Moves.Flamecharge(), new Moves.Tackle(), new Moves.Smokescreen(), new Moves.Rapidspin(), new Moves.Smackdown() },
+			[15] = new List<Move>() { new Moves.Rockpolish() },
+			[20] = new List<Move>() { new Moves.Ancientpower() },
+			[27] = new List<Move>() { new Moves.Incinerate() },
+			[37] = new List<Move>() { new Moves.Stealthrock() },
+			[45] = new List<Move>() { new Moves.Heatcrash() },
+			[54] = new List<Move>() { new Moves.Rockblast() },
+			[63] = new List<Move>() { new Moves.Burnup() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Bodypress(), new Bodyslam(), new Bulldoze(), new Dig(), new Earthpower(), new Earthquake(), new Endure(), new Facade(), new Fireblast(), new Firepunch(), new Firespin(), new Flamethrower(), new Flareblitz(), new Gigaimpact(), new Gyroball(), new Heatcrash(), new Heatwave(), new Heavyslam(), new Hiddenpower(), new Highhorsepower(), new Hyperbeam(), new Irondefense(), new Ironhead(), new Megakick(), new Megapunch(), new Meteorbeam(), new Overheat(), new Protect(), new Reflect(), new Rest(), new Rockblast(), new Rockslide(), new Rocktomb(), new Round(), new Sandstorm(), new Sandtomb(), new Scald(), new Scorchingsands(), new Selfdestruct(), new Sleeptalk(), new Snore(), new Solarbeam(), new Spikes(), new Stealthrock(), new Stoneedge(), new Substitute(), new Willowisp() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Bodypress(), new Moves.Bodyslam(), new Moves.Bulldoze(), new Moves.Dig(), new Moves.Earthpower(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Facade(), new Moves.Fireblast(), new Moves.Firepunch(), new Moves.Firespin(), new Moves.Flamethrower(), new Moves.Flareblitz(), new Moves.Gigaimpact(), new Moves.Gyroball(), new Moves.Heatcrash(), new Moves.Heatwave(), new Moves.Heavyslam(), new Moves.Hiddenpower(), new Moves.Highhorsepower(), new Moves.Hyperbeam(), new Moves.Irondefense(), new Moves.Ironhead(), new Moves.Megakick(), new Moves.Megapunch(), new Moves.Meteorbeam(), new Moves.Overheat(), new Moves.Protect(), new Moves.Reflect(), new Moves.Rest(), new Moves.Rockblast(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Sandstorm(), new Moves.Sandtomb(), new Moves.Scald(), new Moves.Scorchingsands(), new Moves.Selfdestruct(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Spikes(), new Moves.Stealthrock(), new Moves.Stoneedge(), new Moves.Substitute(), new Moves.Willowisp() };
 		public override int Weight => 3105;
 		public override int ExpYield => 255;
 		public override int CatchRate => 45;

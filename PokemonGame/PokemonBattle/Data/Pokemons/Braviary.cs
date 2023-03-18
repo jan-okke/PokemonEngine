@@ -9,27 +9,27 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Braviary : Pokemon
 	{
 		public override string Name => "Braviary";
-		public override List<Ability> AvailableAbilities => new() {new Keeneye(), new Sheerforce() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Defiant() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Keeneye(), new Abilities.Sheerforce() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Defiant() };
 		public override Stats BaseStats => new Stats(100, 123, 75, 57, 75, 80);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Normal, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Superpower() },
-			[1] = new List<Move>() { new Superpower(), new Skyattack(), new Peck(), new Leer(), new Honeclaws(), new Wingattack() },
-			[18] = new List<Move>() { new Tailwind() },
-			[24] = new List<Move>() { new Scaryface() },
-			[30] = new List<Move>() { new Aerialace() },
-			[36] = new List<Move>() { new Slash() },
-			[42] = new List<Move>() { new Whirlwind() },
-			[48] = new List<Move>() { new Crushclaw() },
-			[57] = new List<Move>() { new Airslash() },
-			[64] = new List<Move>() { new Defog() },
-			[72] = new List<Move>() { new Thrash() },
-			[80] = new List<Move>() { new Bravebird() },
+			[0] = new List<Move>() { new Moves.Superpower() },
+			[1] = new List<Move>() { new Moves.Superpower(), new Moves.Skyattack(), new Moves.Peck(), new Moves.Leer(), new Moves.Honeclaws(), new Moves.Wingattack() },
+			[18] = new List<Move>() { new Moves.Tailwind() },
+			[24] = new List<Move>() { new Moves.Scaryface() },
+			[30] = new List<Move>() { new Moves.Aerialace() },
+			[36] = new List<Move>() { new Moves.Slash() },
+			[42] = new List<Move>() { new Moves.Whirlwind() },
+			[48] = new List<Move>() { new Moves.Crushclaw() },
+			[57] = new List<Move>() { new Moves.Airslash() },
+			[64] = new List<Move>() { new Moves.Defog() },
+			[72] = new List<Move>() { new Moves.Thrash() },
+			[80] = new List<Move>() { new Moves.Bravebird() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Agility(), new Airslash(), new Assurance(), new Attract(), new Bravebird(), new Bulkup(), new Closecombat(), new Dualwingbeat(), new Endure(), new Facade(), new Fly(), new Gigaimpact(), new Heatwave(), new Hiddenpower(), new Hurricane(), new Hyperbeam(), new Ironhead(), new Protect(), new Raindance(), new Rest(), new Retaliate(), new Rockslide(), new Rocktomb(), new Round(), new Scaryface(), new Shadowclaw(), new Sleeptalk(), new Snore(), new Steelwing(), new Substitute(), new Sunnyday(), new Superpower(), new Swift(), new Uturn(), new Workup(), new Zenheadbutt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Agility(), new Moves.Airslash(), new Moves.Assurance(), new Moves.Attract(), new Moves.Bravebird(), new Moves.Bulkup(), new Moves.Closecombat(), new Moves.Dualwingbeat(), new Moves.Endure(), new Moves.Facade(), new Moves.Fly(), new Moves.Gigaimpact(), new Moves.Heatwave(), new Moves.Hiddenpower(), new Moves.Hurricane(), new Moves.Hyperbeam(), new Moves.Ironhead(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Retaliate(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Scaryface(), new Moves.Shadowclaw(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Steelwing(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Superpower(), new Moves.Swift(), new Moves.Uturn(), new Moves.Workup(), new Moves.Zenheadbutt() };
 		public override int Weight => 410;
 		public override int ExpYield => 179;
 		public override int CatchRate => 60;

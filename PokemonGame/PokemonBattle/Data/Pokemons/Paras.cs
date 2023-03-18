@@ -9,27 +9,27 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Paras : Pokemon
 	{
 		public override string Name => "Paras";
-		public override List<Ability> AvailableAbilities => new() {new Effectspore(), new Dryskin() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Damp() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Effectspore(), new Abilities.Dryskin() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Damp() };
 		public override Stats BaseStats => new Stats(35, 70, 55, 45, 55, 25);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Scratch() },
-			[6] = new List<Move>() { new Stunspore(), new Poisonpowder() },
-			[11] = new List<Move>() { new Absorb() },
-			[17] = new List<Move>() { new Furycutter() },
-			[22] = new List<Move>() { new Spore() },
-			[27] = new List<Move>() { new Slash() },
-			[33] = new List<Move>() { new Growth() },
-			[38] = new List<Move>() { new Gigadrain() },
-			[43] = new List<Move>() { new Aromatherapy() },
-			[49] = new List<Move>() { new Ragepowder() },
-			[54] = new List<Move>() { new Xscissor() },
+			[1] = new List<Move>() { new Moves.Scratch() },
+			[6] = new List<Move>() { new Moves.Stunspore(), new Moves.Poisonpowder() },
+			[11] = new List<Move>() { new Moves.Absorb() },
+			[17] = new List<Move>() { new Moves.Furycutter() },
+			[22] = new List<Move>() { new Moves.Spore() },
+			[27] = new List<Move>() { new Moves.Slash() },
+			[33] = new List<Move>() { new Moves.Growth() },
+			[38] = new List<Move>() { new Moves.Gigadrain() },
+			[43] = new List<Move>() { new Moves.Aromatherapy() },
+			[49] = new List<Move>() { new Moves.Ragepowder() },
+			[54] = new List<Move>() { new Moves.Xscissor() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Aerialace(), new Afteryou(), new Attract(), new Brickbreak(), new Bugbite(), new Bulletseed(), new Confide(), new Cut(), new Dig(), new Doubleteam(), new Endure(), new Facade(), new Falseswipe(), new Flash(), new Frustration(), new Gigadrain(), new Grassknot(), new Hiddenpower(), new Knockoff(), new Leechlife(), new Lightscreen(), new Naturepower(), new Protect(), new Rest(), new Return(), new Rocksmash(), new Round(), new Seedbomb(), new Sleeptalk(), new Sludgebomb(), new Snore(), new Solarbeam(), new Strugglebug(), new Substitute(), new Sunnyday(), new Swagger(), new Swordsdance(), new Synthesis(), new Thief(), new Venoshock(), new Worryseed(), new Xscissor() };
-		public override List<Move> EggMoves => new List<Move>() { new Agility(), new Bugbite(), new Counter(), new Crosspoison(), new Fellstinger(), new Flail(), new Grassyterrain(), new Leechseed(), new Metalclaw(), new Psybeam(), new Screech(), new Sweetscent(), new Wideguard() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Aerialace(), new Moves.Afteryou(), new Moves.Attract(), new Moves.Brickbreak(), new Moves.Bugbite(), new Moves.Bulletseed(), new Moves.Confide(), new Moves.Cut(), new Moves.Dig(), new Moves.Doubleteam(), new Moves.Endure(), new Moves.Facade(), new Moves.Falseswipe(), new Moves.Flash(), new Moves.Frustration(), new Moves.Gigadrain(), new Moves.Grassknot(), new Moves.Hiddenpower(), new Moves.Knockoff(), new Moves.Leechlife(), new Moves.Lightscreen(), new Moves.Naturepower(), new Moves.Protect(), new Moves.Rest(), new Moves.Return(), new Moves.Rocksmash(), new Moves.Round(), new Moves.Seedbomb(), new Moves.Sleeptalk(), new Moves.Sludgebomb(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Strugglebug(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Swordsdance(), new Moves.Synthesis(), new Moves.Thief(), new Moves.Venoshock(), new Moves.Worryseed(), new Moves.Xscissor() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Agility(), new Moves.Bugbite(), new Moves.Counter(), new Moves.Crosspoison(), new Moves.Fellstinger(), new Moves.Flail(), new Moves.Grassyterrain(), new Moves.Leechseed(), new Moves.Metalclaw(), new Moves.Psybeam(), new Moves.Screech(), new Moves.Sweetscent(), new Moves.Wideguard() };
 		public override int Weight => 54;
 		public override int ExpYield => 57;
 		public override int CatchRate => 190;

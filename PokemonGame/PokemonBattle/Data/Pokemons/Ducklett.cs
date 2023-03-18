@@ -9,31 +9,31 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Ducklett : Pokemon
 	{
 		public override string Name => "Ducklett";
-		public override List<Ability> AvailableAbilities => new() {new Keeneye(), new Bigpecks() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Hydration() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Keeneye(), new Abilities.Bigpecks() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Hydration() };
 		public override Stats BaseStats => new Stats(62, 44, 50, 44, 50, 55);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Water, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Watergun() },
-			[3] = new List<Move>() { new Watersport() },
-			[6] = new List<Move>() { new Defog() },
-			[9] = new List<Move>() { new Wingattack() },
-			[13] = new List<Move>() { new Waterpulse() },
-			[15] = new List<Move>() { new Aerialace() },
-			[19] = new List<Move>() { new Bubblebeam() },
-			[21] = new List<Move>() { new Featherdance() },
-			[24] = new List<Move>() { new Aquaring() },
-			[27] = new List<Move>() { new Airslash() },
-			[30] = new List<Move>() { new Roost() },
-			[34] = new List<Move>() { new Raindance() },
-			[37] = new List<Move>() { new Tailwind() },
-			[41] = new List<Move>() { new Bravebird() },
-			[46] = new List<Move>() { new Hurricane() },
+			[1] = new List<Move>() { new Moves.Watergun() },
+			[3] = new List<Move>() { new Moves.Watersport() },
+			[6] = new List<Move>() { new Moves.Defog() },
+			[9] = new List<Move>() { new Moves.Wingattack() },
+			[13] = new List<Move>() { new Moves.Waterpulse() },
+			[15] = new List<Move>() { new Moves.Aerialace() },
+			[19] = new List<Move>() { new Moves.Bubblebeam() },
+			[21] = new List<Move>() { new Moves.Featherdance() },
+			[24] = new List<Move>() { new Moves.Aquaring() },
+			[27] = new List<Move>() { new Moves.Airslash() },
+			[30] = new List<Move>() { new Moves.Roost() },
+			[34] = new List<Move>() { new Moves.Raindance() },
+			[37] = new List<Move>() { new Moves.Tailwind() },
+			[41] = new List<Move>() { new Moves.Bravebird() },
+			[46] = new List<Move>() { new Moves.Hurricane() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Aerialace(), new Attract(), new Confide(), new Defog(), new Dive(), new Doubleteam(), new Endeavor(), new Facade(), new Fly(), new Frustration(), new Hail(), new Hiddenpower(), new Icebeam(), new Icywind(), new Liquidation(), new Protect(), new Raindance(), new Rest(), new Return(), new Roost(), new Round(), new Scald(), new Sleeptalk(), new Snore(), new Steelwing(), new Substitute(), new Surf(), new Swagger(), new Tailwind(), new Toxic(), new Uproar(), new Waterpulse() };
-		public override List<Move> EggMoves => new List<Move>() { new Aircutter(), new Aquajet(), new Brine(), new Gust(), new Luckychant(), new Mefirst(), new Mirrormove(), new Mudsport(), new Steelwing() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Aerialace(), new Moves.Attract(), new Moves.Confide(), new Moves.Defog(), new Moves.Dive(), new Moves.Doubleteam(), new Moves.Endeavor(), new Moves.Facade(), new Moves.Fly(), new Moves.Frustration(), new Moves.Hail(), new Moves.Hiddenpower(), new Moves.Icebeam(), new Moves.Icywind(), new Moves.Liquidation(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Return(), new Moves.Roost(), new Moves.Round(), new Moves.Scald(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Steelwing(), new Moves.Substitute(), new Moves.Surf(), new Moves.Swagger(), new Moves.Tailwind(), new Moves.Toxic(), new Moves.Uproar(), new Moves.Waterpulse() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Aircutter(), new Moves.Aquajet(), new Moves.Brine(), new Moves.Gust(), new Moves.Luckychant(), new Moves.Mefirst(), new Moves.Mirrormove(), new Moves.Mudsport(), new Moves.Steelwing() };
 		public override int Weight => 55;
 		public override int ExpYield => 61;
 		public override int CatchRate => 190;

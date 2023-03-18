@@ -9,33 +9,33 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Comfey : Pokemon
 	{
 		public override string Name => "Comfey";
-		public override List<Ability> AvailableAbilities => new() {new Flowerveil(), new Triage() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Naturalcure() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Flowerveil(), new Abilities.Triage() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Naturalcure() };
 		public override Stats BaseStats => new Stats(51, 52, 90, 82, 110, 100);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Wrap(), new Growth() },
-			[3] = new List<Move>() { new Vinewhip() },
-			[6] = new List<Move>() { new Helpinghand() },
-			[9] = new List<Move>() { new Drainingkiss() },
-			[12] = new List<Move>() { new Flowershield() },
-			[15] = new List<Move>() { new Magicalleaf() },
-			[18] = new List<Move>() { new Synthesis() },
-			[21] = new List<Move>() { new Leechseed() },
-			[24] = new List<Move>() { new Grassknot() },
-			[27] = new List<Move>() { new Sweetkiss() },
-			[30] = new List<Move>() { new Floralhealing() },
-			[33] = new List<Move>() { new Petalblizzard() },
-			[36] = new List<Move>() { new Aromatherapy() },
-			[39] = new List<Move>() { new Playrough() },
-			[42] = new List<Move>() { new Sweetscent() },
-			[45] = new List<Move>() { new Petaldance() },
-			[48] = new List<Move>() { new Grassyterrain() },
+			[1] = new List<Move>() { new Moves.Wrap(), new Moves.Growth() },
+			[3] = new List<Move>() { new Moves.Vinewhip() },
+			[6] = new List<Move>() { new Moves.Helpinghand() },
+			[9] = new List<Move>() { new Moves.Drainingkiss() },
+			[12] = new List<Move>() { new Moves.Flowershield() },
+			[15] = new List<Move>() { new Moves.Magicalleaf() },
+			[18] = new List<Move>() { new Moves.Synthesis() },
+			[21] = new List<Move>() { new Moves.Leechseed() },
+			[24] = new List<Move>() { new Moves.Grassknot() },
+			[27] = new List<Move>() { new Moves.Sweetkiss() },
+			[30] = new List<Move>() { new Moves.Floralhealing() },
+			[33] = new List<Move>() { new Moves.Petalblizzard() },
+			[36] = new List<Move>() { new Moves.Aromatherapy() },
+			[39] = new List<Move>() { new Moves.Playrough() },
+			[42] = new List<Move>() { new Moves.Sweetscent() },
+			[45] = new List<Move>() { new Moves.Petaldance() },
+			[48] = new List<Move>() { new Moves.Grassyterrain() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Acrobatics(), new Allyswitch(), new Amnesia(), new Attract(), new Bulletseed(), new Calmmind(), new Charm(), new Dazzlinggleam(), new Drainingkiss(), new Encore(), new Endure(), new Energyball(), new Facade(), new Fling(), new Gigadrain(), new Grassknot(), new Grassyglide(), new Grassyterrain(), new Helpinghand(), new Hiddenpower(), new Hyperbeam(), new Lightscreen(), new Magicalleaf(), new Playrough(), new Pollenpuff(), new Protect(), new Rest(), new Round(), new Safeguard(), new Seedbomb(), new Sleeptalk(), new Snore(), new Solarbeam(), new Storedpower(), new Substitute(), new Sunnyday(), new Taunt(), new Thief(), new Trick(), new Trickroom(), new Uturn() };
-		public override List<Move> EggMoves => new List<Move>() { new Afteryou(), new Leaftornado(), new Worryseed() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Acrobatics(), new Moves.Allyswitch(), new Moves.Amnesia(), new Moves.Attract(), new Moves.Bulletseed(), new Moves.Calmmind(), new Moves.Charm(), new Moves.Dazzlinggleam(), new Moves.Drainingkiss(), new Moves.Encore(), new Moves.Endure(), new Moves.Energyball(), new Moves.Facade(), new Moves.Fling(), new Moves.Gigadrain(), new Moves.Grassknot(), new Moves.Grassyglide(), new Moves.Grassyterrain(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Lightscreen(), new Moves.Magicalleaf(), new Moves.Playrough(), new Moves.Pollenpuff(), new Moves.Protect(), new Moves.Rest(), new Moves.Round(), new Moves.Safeguard(), new Moves.Seedbomb(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Storedpower(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Taunt(), new Moves.Thief(), new Moves.Trick(), new Moves.Trickroom(), new Moves.Uturn() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Afteryou(), new Moves.Leaftornado(), new Moves.Worryseed() };
 		public override int Weight => 3;
 		public override int ExpYield => 170;
 		public override int CatchRate => 60;

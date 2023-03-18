@@ -9,16 +9,16 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Delcatty : Pokemon
 	{
 		public override string Name => "Delcatty";
-		public override List<Ability> AvailableAbilities => new() {new Cutecharm(), new Normalize() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Wonderskin() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Cutecharm(), new Abilities.Normalize() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Wonderskin() };
 		public override Stats BaseStats => new Stats(70, 65, 65, 55, 55, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Fakeout(), new Sing(), new Attract() },
+			[1] = new List<Move>() { new Moves.Fakeout(), new Moves.Sing(), new Moves.Attract() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Blizzard(), new Calmmind(), new Chargebeam(), new Confide(), new Covet(), new Dig(), new Doubleteam(), new Dreameater(), new Echoedvoice(), new Endure(), new Facade(), new Flash(), new Frustration(), new Gigaimpact(), new Grassknot(), new Healbell(), new Helpinghand(), new Hiddenpower(), new Hyperbeam(), new Hypervoice(), new Icebeam(), new Icywind(), new Irontail(), new Laserfocus(), new Lastresort(), new Nastyplot(), new Payback(), new Protect(), new Psychup(), new Raindance(), new Rest(), new Return(), new Rocksmash(), new Round(), new Safeguard(), new Shadowball(), new Shockwave(), new Sleeptalk(), new Snore(), new Solarbeam(), new Stompingtantrum(), new Strength(), new Substitute(), new Sunnyday(), new Swagger(), new Thunder(), new Thunderbolt(), new Thunderwave(), new Uproar(), new Waterpulse(), new Wildcharge(), new Workup(), new Zenheadbutt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Blizzard(), new Moves.Calmmind(), new Moves.Chargebeam(), new Moves.Confide(), new Moves.Covet(), new Moves.Dig(), new Moves.Doubleteam(), new Moves.Dreameater(), new Moves.Echoedvoice(), new Moves.Endure(), new Moves.Facade(), new Moves.Flash(), new Moves.Frustration(), new Moves.Gigaimpact(), new Moves.Grassknot(), new Moves.Healbell(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Hypervoice(), new Moves.Icebeam(), new Moves.Icywind(), new Moves.Irontail(), new Moves.Laserfocus(), new Moves.Lastresort(), new Moves.Nastyplot(), new Moves.Payback(), new Moves.Protect(), new Moves.Psychup(), new Moves.Raindance(), new Moves.Rest(), new Moves.Return(), new Moves.Rocksmash(), new Moves.Round(), new Moves.Safeguard(), new Moves.Shadowball(), new Moves.Shockwave(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Stompingtantrum(), new Moves.Strength(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Thunder(), new Moves.Thunderbolt(), new Moves.Thunderwave(), new Moves.Uproar(), new Moves.Waterpulse(), new Moves.Wildcharge(), new Moves.Workup(), new Moves.Zenheadbutt() };
 		public override int Weight => 326;
 		public override int ExpYield => 140;
 		public override int CatchRate => 60;

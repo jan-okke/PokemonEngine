@@ -9,30 +9,30 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Tornadus : Pokemon
 	{
 		public override string Name => "Tornadus";
-		public override List<Ability> AvailableAbilities => new() {new Prankster() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Defiant() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Prankster() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Defiant() };
 		public override Stats BaseStats => new Stats(79, 115, 70, 125, 80, 111);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Astonish(), new Gust() },
-			[5] = new List<Move>() { new Leer() },
-			[10] = new List<Move>() { new Swagger() },
-			[15] = new List<Move>() { new Bite() },
-			[20] = new List<Move>() { new Aircutter() },
-			[25] = new List<Move>() { new Agility() },
-			[30] = new List<Move>() { new Tailwind() },
-			[35] = new List<Move>() { new Airslash() },
-			[40] = new List<Move>() { new Crunch() },
-			[45] = new List<Move>() { new Extrasensory() },
-			[50] = new List<Move>() { new Uproar() },
-			[55] = new List<Move>() { new Hammerarm() },
-			[60] = new List<Move>() { new Raindance() },
-			[65] = new List<Move>() { new Hurricane() },
-			[70] = new List<Move>() { new Thrash() },
+			[1] = new List<Move>() { new Moves.Astonish(), new Moves.Gust() },
+			[5] = new List<Move>() { new Moves.Leer() },
+			[10] = new List<Move>() { new Moves.Swagger() },
+			[15] = new List<Move>() { new Moves.Bite() },
+			[20] = new List<Move>() { new Moves.Aircutter() },
+			[25] = new List<Move>() { new Moves.Agility() },
+			[30] = new List<Move>() { new Moves.Tailwind() },
+			[35] = new List<Move>() { new Moves.Airslash() },
+			[40] = new List<Move>() { new Moves.Crunch() },
+			[45] = new List<Move>() { new Moves.Extrasensory() },
+			[50] = new List<Move>() { new Moves.Uproar() },
+			[55] = new List<Move>() { new Moves.Hammerarm() },
+			[60] = new List<Move>() { new Moves.Raindance() },
+			[65] = new List<Move>() { new Moves.Hurricane() },
+			[70] = new List<Move>() { new Moves.Thrash() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Acrobatics(), new Agility(), new Airslash(), new Assurance(), new Attract(), new Bodyslam(), new Brickbreak(), new Brutalswing(), new Bulkup(), new Crunch(), new Darkpulse(), new Endure(), new Facade(), new Fling(), new Fly(), new Focusblast(), new Foulplay(), new Gigaimpact(), new Grassknot(), new Heatwave(), new Hiddenpower(), new Hurricane(), new Hyperbeam(), new Icywind(), new Irontail(), new Lashout(), new Nastyplot(), new Payback(), new Protect(), new Psychic(), new Raindance(), new Rest(), new Revenge(), new Round(), new Scaryface(), new Sleeptalk(), new Sludgebomb(), new Sludgewave(), new Snore(), new Substitute(), new Superpower(), new Taunt(), new Thief(), new Uproar(), new Uturn(), new Weatherball() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Acrobatics(), new Moves.Agility(), new Moves.Airslash(), new Moves.Assurance(), new Moves.Attract(), new Moves.Bodyslam(), new Moves.Brickbreak(), new Moves.Brutalswing(), new Moves.Bulkup(), new Moves.Crunch(), new Moves.Darkpulse(), new Moves.Endure(), new Moves.Facade(), new Moves.Fling(), new Moves.Fly(), new Moves.Focusblast(), new Moves.Foulplay(), new Moves.Gigaimpact(), new Moves.Grassknot(), new Moves.Heatwave(), new Moves.Hiddenpower(), new Moves.Hurricane(), new Moves.Hyperbeam(), new Moves.Icywind(), new Moves.Irontail(), new Moves.Lashout(), new Moves.Nastyplot(), new Moves.Payback(), new Moves.Protect(), new Moves.Psychic(), new Moves.Raindance(), new Moves.Rest(), new Moves.Revenge(), new Moves.Round(), new Moves.Scaryface(), new Moves.Sleeptalk(), new Moves.Sludgebomb(), new Moves.Sludgewave(), new Moves.Snore(), new Moves.Substitute(), new Moves.Superpower(), new Moves.Taunt(), new Moves.Thief(), new Moves.Uproar(), new Moves.Uturn(), new Moves.Weatherball() };
 		public override int Weight => 630;
 		public override int ExpYield => 290;
 		public override int CatchRate => 3;

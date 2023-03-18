@@ -9,26 +9,26 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Cutiefly : Pokemon
 	{
 		public override string Name => "Cutiefly";
-		public override List<Ability> AvailableAbilities => new() {new Honeygather(), new Shielddust() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Sweetveil() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Honeygather(), new Abilities.Shielddust() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Sweetveil() };
 		public override Stats BaseStats => new Stats(40, 45, 40, 55, 40, 84);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Absorb(), new Fairywind() },
-			[6] = new List<Move>() { new Stunspore() },
-			[12] = new List<Move>() { new Sweetscent() },
-			[18] = new List<Move>() { new Drainingkiss() },
-			[24] = new List<Move>() { new Strugglebug() },
-			[30] = new List<Move>() { new Aromatherapy() },
-			[36] = new List<Move>() { new Switcheroo() },
-			[42] = new List<Move>() { new Dazzlinggleam() },
-			[48] = new List<Move>() { new Bugbuzz() },
-			[54] = new List<Move>() { new Quiverdance() },
+			[1] = new List<Move>() { new Moves.Absorb(), new Moves.Fairywind() },
+			[6] = new List<Move>() { new Moves.Stunspore() },
+			[12] = new List<Move>() { new Moves.Sweetscent() },
+			[18] = new List<Move>() { new Moves.Drainingkiss() },
+			[24] = new List<Move>() { new Moves.Strugglebug() },
+			[30] = new List<Move>() { new Moves.Aromatherapy() },
+			[36] = new List<Move>() { new Moves.Switcheroo() },
+			[42] = new List<Move>() { new Moves.Dazzlinggleam() },
+			[48] = new List<Move>() { new Moves.Bugbuzz() },
+			[54] = new List<Move>() { new Moves.Quiverdance() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Acrobatics(), new Allyswitch(), new Attract(), new Batonpass(), new Bugbuzz(), new Calmmind(), new Charm(), new Dazzlinggleam(), new Drainingkiss(), new Dualwingbeat(), new Endure(), new Energyball(), new Facade(), new Faketears(), new Helpinghand(), new Hiddenpower(), new Imprison(), new Leechlife(), new Lightscreen(), new Magicroom(), new Playrough(), new Protect(), new Psychic(), new Reflect(), new Rest(), new Round(), new Safeguard(), new Skillswap(), new Sleeptalk(), new Snore(), new Speedswap(), new Substitute(), new Sunnyday(), new Swift(), new Thief(), new Trick(), new Uturn(), new Wonderroom() };
-		public override List<Move> EggMoves => new List<Move>() { new Aromaticmist(), new Moonblast(), new Stickyweb() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Acrobatics(), new Moves.Allyswitch(), new Moves.Attract(), new Moves.Batonpass(), new Moves.Bugbuzz(), new Moves.Calmmind(), new Moves.Charm(), new Moves.Dazzlinggleam(), new Moves.Drainingkiss(), new Moves.Dualwingbeat(), new Moves.Endure(), new Moves.Energyball(), new Moves.Facade(), new Moves.Faketears(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Imprison(), new Moves.Leechlife(), new Moves.Lightscreen(), new Moves.Magicroom(), new Moves.Playrough(), new Moves.Protect(), new Moves.Psychic(), new Moves.Reflect(), new Moves.Rest(), new Moves.Round(), new Moves.Safeguard(), new Moves.Skillswap(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Speedswap(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swift(), new Moves.Thief(), new Moves.Trick(), new Moves.Uturn(), new Moves.Wonderroom() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Aromaticmist(), new Moves.Moonblast(), new Moves.Stickyweb() };
 		public override int Weight => 2;
 		public override int ExpYield => 61;
 		public override int CatchRate => 190;

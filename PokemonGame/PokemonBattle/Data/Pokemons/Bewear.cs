@@ -9,27 +9,27 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Bewear : Pokemon
 	{
 		public override string Name => "Bewear";
-		public override List<Ability> AvailableAbilities => new() {new Fluffy(), new Klutz() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Unnerve() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Fluffy(), new Abilities.Klutz() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Unnerve() };
 		public override Stats BaseStats => new Stats(120, 125, 80, 55, 60, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal, PokemonType.Fighting };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Bind() },
-			[1] = new List<Move>() { new Bind(), new Tackle(), new Leer(), new Babydolleyes(), new Payback() },
-			[12] = new List<Move>() { new Brutalswing() },
-			[16] = new List<Move>() { new Endure() },
-			[20] = new List<Move>() { new Strength() },
-			[24] = new List<Move>() { new Takedown() },
-			[30] = new List<Move>() { new Flail() },
-			[36] = new List<Move>() { new Hammerarm() },
-			[42] = new List<Move>() { new Thrash() },
-			[48] = new List<Move>() { new Painsplit() },
-			[54] = new List<Move>() { new Doubleedge() },
-			[60] = new List<Move>() { new Superpower() },
+			[0] = new List<Move>() { new Moves.Bind() },
+			[1] = new List<Move>() { new Moves.Bind(), new Moves.Tackle(), new Moves.Leer(), new Moves.Babydolleyes(), new Moves.Payback() },
+			[12] = new List<Move>() { new Moves.Brutalswing() },
+			[16] = new List<Move>() { new Moves.Endure() },
+			[20] = new List<Move>() { new Moves.Strength() },
+			[24] = new List<Move>() { new Moves.Takedown() },
+			[30] = new List<Move>() { new Moves.Flail() },
+			[36] = new List<Move>() { new Moves.Hammerarm() },
+			[42] = new List<Move>() { new Moves.Thrash() },
+			[48] = new List<Move>() { new Moves.Painsplit() },
+			[54] = new List<Move>() { new Moves.Doubleedge() },
+			[60] = new List<Move>() { new Moves.Superpower() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Bodypress(), new Bodyslam(), new Brickbreak(), new Brutalswing(), new Bulkup(), new Bulldoze(), new Charm(), new Closecombat(), new Coaching(), new Darkestlariat(), new Dragonclaw(), new Drainpunch(), new Earthquake(), new Endure(), new Facade(), new Fling(), new Focusblast(), new Gigaimpact(), new Hiddenpower(), new Highhorsepower(), new Hyperbeam(), new Icepunch(), new Ironhead(), new Lowkick(), new Lowsweep(), new Megakick(), new Megapunch(), new Payback(), new Protect(), new Rest(), new Revenge(), new Reversal(), new Rockslide(), new Rocktomb(), new Round(), new Shadowclaw(), new Sleeptalk(), new Snore(), new Stompingtantrum(), new Substitute(), new Superpower(), new Swordsdance(), new Taunt(), new Thunderpunch(), new Workup(), new Zenheadbutt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Bodypress(), new Moves.Bodyslam(), new Moves.Brickbreak(), new Moves.Brutalswing(), new Moves.Bulkup(), new Moves.Bulldoze(), new Moves.Charm(), new Moves.Closecombat(), new Moves.Coaching(), new Moves.Darkestlariat(), new Moves.Dragonclaw(), new Moves.Drainpunch(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Facade(), new Moves.Fling(), new Moves.Focusblast(), new Moves.Gigaimpact(), new Moves.Hiddenpower(), new Moves.Highhorsepower(), new Moves.Hyperbeam(), new Moves.Icepunch(), new Moves.Ironhead(), new Moves.Lowkick(), new Moves.Lowsweep(), new Moves.Megakick(), new Moves.Megapunch(), new Moves.Payback(), new Moves.Protect(), new Moves.Rest(), new Moves.Revenge(), new Moves.Reversal(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Shadowclaw(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Stompingtantrum(), new Moves.Substitute(), new Moves.Superpower(), new Moves.Swordsdance(), new Moves.Taunt(), new Moves.Thunderpunch(), new Moves.Workup(), new Moves.Zenheadbutt() };
 		public override int Weight => 1350;
 		public override int ExpYield => 175;
 		public override int CatchRate => 70;

@@ -9,28 +9,28 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Drampa : Pokemon
 	{
 		public override string Name => "Drampa";
-		public override List<Ability> AvailableAbilities => new() {new Berserk(), new Sapsipper() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Cloudnine() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Berserk(), new Abilities.Sapsipper() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Cloudnine() };
 		public override Stats BaseStats => new Stats(78, 60, 85, 135, 91, 36);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal, PokemonType.Dragon };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Playnice(), new Echoedvoice() },
-			[5] = new List<Move>() { new Twister() },
-			[10] = new List<Move>() { new Protect() },
-			[15] = new List<Move>() { new Glare() },
-			[20] = new List<Move>() { new Safeguard() },
-			[25] = new List<Move>() { new Dragonbreath() },
-			[30] = new List<Move>() { new Extrasensory() },
-			[35] = new List<Move>() { new Dragonpulse() },
-			[40] = new List<Move>() { new Lightscreen() },
-			[45] = new List<Move>() { new Fly() },
-			[50] = new List<Move>() { new Hypervoice() },
-			[55] = new List<Move>() { new Outrage() },
+			[1] = new List<Move>() { new Moves.Playnice(), new Moves.Echoedvoice() },
+			[5] = new List<Move>() { new Moves.Twister() },
+			[10] = new List<Move>() { new Moves.Protect() },
+			[15] = new List<Move>() { new Moves.Glare() },
+			[20] = new List<Move>() { new Moves.Safeguard() },
+			[25] = new List<Move>() { new Moves.Dragonbreath() },
+			[30] = new List<Move>() { new Moves.Extrasensory() },
+			[35] = new List<Move>() { new Moves.Dragonpulse() },
+			[40] = new List<Move>() { new Moves.Lightscreen() },
+			[45] = new List<Move>() { new Moves.Fly() },
+			[50] = new List<Move>() { new Moves.Hypervoice() },
+			[55] = new List<Move>() { new Moves.Outrage() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Amnesia(), new Attract(), new Blizzard(), new Breakingswipe(), new Bulldoze(), new Calmmind(), new Dracometeor(), new Dragonclaw(), new Dragondance(), new Dragonpulse(), new Earthquake(), new Endure(), new Energyball(), new Facade(), new Fireblast(), new Flamethrower(), new Fling(), new Fly(), new Focusblast(), new Gigaimpact(), new Grassknot(), new Heatwave(), new Helpinghand(), new Hiddenpower(), new Hurricane(), new Hydropump(), new Hyperbeam(), new Hypervoice(), new Icebeam(), new Icywind(), new Lashout(), new Lightscreen(), new Outrage(), new Playrough(), new Protect(), new Raindance(), new Rest(), new Rockslide(), new Round(), new Safeguard(), new Scaleshot(), new Shadowball(), new Shadowclaw(), new Sleeptalk(), new Snarl(), new Snore(), new Solarbeam(), new Steelwing(), new Stompingtantrum(), new Substitute(), new Sunnyday(), new Superpower(), new Surf(), new Swift(), new Thunder(), new Thunderbolt(), new Thunderwave(), new Uproar(), new Workup() };
-		public override List<Move> EggMoves => new List<Move>() { new Dragonrush(), new Mist(), new Tickle() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Amnesia(), new Moves.Attract(), new Moves.Blizzard(), new Moves.Breakingswipe(), new Moves.Bulldoze(), new Moves.Calmmind(), new Moves.Dracometeor(), new Moves.Dragonclaw(), new Moves.Dragondance(), new Moves.Dragonpulse(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Energyball(), new Moves.Facade(), new Moves.Fireblast(), new Moves.Flamethrower(), new Moves.Fling(), new Moves.Fly(), new Moves.Focusblast(), new Moves.Gigaimpact(), new Moves.Grassknot(), new Moves.Heatwave(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Hurricane(), new Moves.Hydropump(), new Moves.Hyperbeam(), new Moves.Hypervoice(), new Moves.Icebeam(), new Moves.Icywind(), new Moves.Lashout(), new Moves.Lightscreen(), new Moves.Outrage(), new Moves.Playrough(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Rockslide(), new Moves.Round(), new Moves.Safeguard(), new Moves.Scaleshot(), new Moves.Shadowball(), new Moves.Shadowclaw(), new Moves.Sleeptalk(), new Moves.Snarl(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Steelwing(), new Moves.Stompingtantrum(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Superpower(), new Moves.Surf(), new Moves.Swift(), new Moves.Thunder(), new Moves.Thunderbolt(), new Moves.Thunderwave(), new Moves.Uproar(), new Moves.Workup() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Dragonrush(), new Moves.Mist(), new Moves.Tickle() };
 		public override int Weight => 1850;
 		public override int ExpYield => 170;
 		public override int CatchRate => 70;

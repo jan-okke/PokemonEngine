@@ -9,17 +9,17 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Wobbuffet : Pokemon
 	{
 		public override string Name => "Wobbuffet";
-		public override List<Ability> AvailableAbilities => new() {new Shadowtag() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Telepathy() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Shadowtag() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Telepathy() };
 		public override Stats BaseStats => new Stats(190, 33, 58, 33, 58, 33);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Counter(), new Mirrorcoat(), new Safeguard(), new Destinybond() },
-			[1] = new List<Move>() { new Splash(), new Charm(), new Encore(), new Amnesia(), new Counter(), new Mirrorcoat(), new Safeguard(), new Destinybond() },
+			[0] = new List<Move>() { new Moves.Counter(), new Moves.Mirrorcoat(), new Moves.Safeguard(), new Moves.Destinybond() },
+			[1] = new List<Move>() { new Moves.Splash(), new Moves.Charm(), new Moves.Encore(), new Moves.Amnesia(), new Moves.Counter(), new Moves.Mirrorcoat(), new Moves.Safeguard(), new Moves.Destinybond() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Amnesia(), new Charm(), new Encore(), new Safeguard() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Amnesia(), new Moves.Charm(), new Moves.Encore(), new Moves.Safeguard() };
 		public override int Weight => 285;
 		public override int ExpYield => 142;
 		public override int CatchRate => 45;

@@ -9,26 +9,26 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Rapidash : Pokemon
 	{
 		public override string Name => "Rapidash";
-		public override List<Ability> AvailableAbilities => new() {new Runaway(), new Flashfire() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Flamebody() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Runaway(), new Abilities.Flashfire() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Flamebody() };
 		public override Stats BaseStats => new Stats(65, 100, 70, 80, 80, 105);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Smartstrike() },
-			[1] = new List<Move>() { new Smartstrike(), new Megahorn(), new Poisonjab(), new Tackle(), new Quickattack(), new Growl(), new Tailwhip(), new Ember() },
-			[15] = new List<Move>() { new Flamecharge() },
-			[20] = new List<Move>() { new Agility() },
-			[25] = new List<Move>() { new Flamewheel() },
-			[30] = new List<Move>() { new Stomp() },
-			[35] = new List<Move>() { new Firespin() },
-			[43] = new List<Move>() { new Takedown() },
-			[49] = new List<Move>() { new Inferno() },
-			[56] = new List<Move>() { new Fireblast() },
-			[63] = new List<Move>() { new Flareblitz() },
+			[0] = new List<Move>() { new Moves.Smartstrike() },
+			[1] = new List<Move>() { new Moves.Smartstrike(), new Moves.Megahorn(), new Moves.Poisonjab(), new Moves.Tackle(), new Moves.Quickattack(), new Moves.Growl(), new Moves.Tailwhip(), new Moves.Ember() },
+			[15] = new List<Move>() { new Moves.Flamecharge() },
+			[20] = new List<Move>() { new Moves.Agility() },
+			[25] = new List<Move>() { new Moves.Flamewheel() },
+			[30] = new List<Move>() { new Moves.Stomp() },
+			[35] = new List<Move>() { new Moves.Firespin() },
+			[43] = new List<Move>() { new Moves.Takedown() },
+			[49] = new List<Move>() { new Moves.Inferno() },
+			[56] = new List<Move>() { new Moves.Fireblast() },
+			[63] = new List<Move>() { new Moves.Flareblitz() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Agility(), new Allyswitch(), new Attract(), new Batonpass(), new Bodyslam(), new Bounce(), new Charm(), new Doubleteam(), new Drillrun(), new Endure(), new Facade(), new Fireblast(), new Firespin(), new Flamethrower(), new Flareblitz(), new Gigaimpact(), new Heatwave(), new Hiddenpower(), new Highhorsepower(), new Hyperbeam(), new Irontail(), new Lowkick(), new Megahorn(), new Mysticalfire(), new Overheat(), new Payday(), new Playrough(), new Poisonjab(), new Protect(), new Rest(), new Round(), new Scorchingsands(), new Sleeptalk(), new Smartstrike(), new Snore(), new Solarbeam(), new Solarblade(), new Strength(), new Substitute(), new Sunnyday(), new Swagger(), new Swift(), new Swordsdance(), new Throatchop(), new Wildcharge(), new Willowisp() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Agility(), new Moves.Allyswitch(), new Moves.Attract(), new Moves.Batonpass(), new Moves.Bodyslam(), new Moves.Bounce(), new Moves.Charm(), new Moves.Doubleteam(), new Moves.Drillrun(), new Moves.Endure(), new Moves.Facade(), new Moves.Fireblast(), new Moves.Firespin(), new Moves.Flamethrower(), new Moves.Flareblitz(), new Moves.Gigaimpact(), new Moves.Heatwave(), new Moves.Hiddenpower(), new Moves.Highhorsepower(), new Moves.Hyperbeam(), new Moves.Irontail(), new Moves.Lowkick(), new Moves.Megahorn(), new Moves.Mysticalfire(), new Moves.Overheat(), new Moves.Payday(), new Moves.Playrough(), new Moves.Poisonjab(), new Moves.Protect(), new Moves.Rest(), new Moves.Round(), new Moves.Scorchingsands(), new Moves.Sleeptalk(), new Moves.Smartstrike(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Solarblade(), new Moves.Strength(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Swift(), new Moves.Swordsdance(), new Moves.Throatchop(), new Moves.Wildcharge(), new Moves.Willowisp() };
 		public override int Weight => 950;
 		public override int ExpYield => 175;
 		public override int CatchRate => 60;

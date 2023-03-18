@@ -9,33 +9,33 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Alomomola : Pokemon
 	{
 		public override string Name => "Alomomola";
-		public override List<Ability> AvailableAbilities => new() {new Healer(), new Hydration() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Regenerator() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Healer(), new Abilities.Hydration() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Regenerator() };
 		public override Stats BaseStats => new Stats(165, 75, 80, 40, 45, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Playnice(), new Hydropump(), new Wideguard(), new Healingwish(), new Helpinghand(), new Pound(), new Watersport() },
-			[5] = new List<Move>() { new Aquaring() },
-			[9] = new List<Move>() { new Aquajet() },
-			[13] = new List<Move>() { new Doubleslap() },
-			[17] = new List<Move>() { new Healpulse() },
-			[21] = new List<Move>() { new Protect() },
-			[25] = new List<Move>() { new Waterpulse() },
-			[29] = new List<Move>() { new Wakeupslap() },
-			[33] = new List<Move>() { new Soak() },
-			[37] = new List<Move>() { new Wish() },
-			[41] = new List<Move>() { new Brine() },
-			[45] = new List<Move>() { new Safeguard() },
-			[49] = new List<Move>() { new Whirlpool() },
-			[53] = new List<Move>() { new Helpinghand() },
-			[57] = new List<Move>() { new Healingwish() },
-			[61] = new List<Move>() { new Wideguard() },
-			[65] = new List<Move>() { new Hydropump() },
+			[1] = new List<Move>() { new Moves.Playnice(), new Moves.Hydropump(), new Moves.Wideguard(), new Moves.Healingwish(), new Moves.Helpinghand(), new Moves.Pound(), new Moves.Watersport() },
+			[5] = new List<Move>() { new Moves.Aquaring() },
+			[9] = new List<Move>() { new Moves.Aquajet() },
+			[13] = new List<Move>() { new Moves.Doubleslap() },
+			[17] = new List<Move>() { new Moves.Healpulse() },
+			[21] = new List<Move>() { new Moves.Protect() },
+			[25] = new List<Move>() { new Moves.Waterpulse() },
+			[29] = new List<Move>() { new Moves.Wakeupslap() },
+			[33] = new List<Move>() { new Moves.Soak() },
+			[37] = new List<Move>() { new Moves.Wish() },
+			[41] = new List<Move>() { new Moves.Brine() },
+			[45] = new List<Move>() { new Moves.Safeguard() },
+			[49] = new List<Move>() { new Moves.Whirlpool() },
+			[53] = new List<Move>() { new Moves.Helpinghand() },
+			[57] = new List<Move>() { new Moves.Healingwish() },
+			[61] = new List<Move>() { new Moves.Wideguard() },
+			[65] = new List<Move>() { new Moves.Hydropump() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Blizzard(), new Bounce(), new Calmmind(), new Confide(), new Dive(), new Doubleteam(), new Facade(), new Frustration(), new Hail(), new Helpinghand(), new Hiddenpower(), new Icebeam(), new Icywind(), new Knockoff(), new Lightscreen(), new Liquidation(), new Magiccoat(), new Painsplit(), new Protect(), new Psychic(), new Psychup(), new Raindance(), new Rest(), new Return(), new Round(), new Safeguard(), new Scald(), new Shadowball(), new Sleeptalk(), new Snore(), new Substitute(), new Surf(), new Swagger(), new Toxic(), new Waterfall(), new Waterpulse() };
-		public override List<Move> EggMoves => new List<Move>() { new Endure(), new Mirrorcoat(), new Mist(), new Painsplit(), new Refresh(), new Tickle() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Blizzard(), new Moves.Bounce(), new Moves.Calmmind(), new Moves.Confide(), new Moves.Dive(), new Moves.Doubleteam(), new Moves.Facade(), new Moves.Frustration(), new Moves.Hail(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Icebeam(), new Moves.Icywind(), new Moves.Knockoff(), new Moves.Lightscreen(), new Moves.Liquidation(), new Moves.Magiccoat(), new Moves.Painsplit(), new Moves.Protect(), new Moves.Psychic(), new Moves.Psychup(), new Moves.Raindance(), new Moves.Rest(), new Moves.Return(), new Moves.Round(), new Moves.Safeguard(), new Moves.Scald(), new Moves.Shadowball(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Substitute(), new Moves.Surf(), new Moves.Swagger(), new Moves.Toxic(), new Moves.Waterfall(), new Moves.Waterpulse() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Endure(), new Moves.Mirrorcoat(), new Moves.Mist(), new Moves.Painsplit(), new Moves.Refresh(), new Moves.Tickle() };
 		public override int Weight => 316;
 		public override int ExpYield => 165;
 		public override int CatchRate => 75;

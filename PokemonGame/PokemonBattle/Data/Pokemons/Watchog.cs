@@ -9,33 +9,33 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Watchog : Pokemon
 	{
 		public override string Name => "Watchog";
-		public override List<Ability> AvailableAbilities => new() {new Illuminate(), new Keeneye() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Analytic() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Illuminate(), new Abilities.Keeneye() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Analytic() };
 		public override Stats BaseStats => new Stats(60, 85, 69, 60, 69, 77);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Confuseray() },
-			[1] = new List<Move>() { new Confuseray(), new Rototiller(), new Tackle(), new Leer(), new Bite(), new Lowkick() },
-			[3] = new List<Move>() { new Leer() },
-			[6] = new List<Move>() { new Bite() },
-			[8] = new List<Move>() { new Bide() },
-			[11] = new List<Move>() { new Detect() },
-			[13] = new List<Move>() { new Sandattack() },
-			[16] = new List<Move>() { new Crunch() },
-			[18] = new List<Move>() { new Hypnosis() },
-			[22] = new List<Move>() { new Superfang() },
-			[25] = new List<Move>() { new Afteryou() },
-			[29] = new List<Move>() { new Focusenergy() },
-			[32] = new List<Move>() { new Psychup() },
-			[36] = new List<Move>() { new Hyperfang() },
-			[39] = new List<Move>() { new Nastyplot() },
-			[43] = new List<Move>() { new Meanlook() },
-			[46] = new List<Move>() { new Batonpass() },
-			[50] = new List<Move>() { new Slam() },
+			[0] = new List<Move>() { new Moves.Confuseray() },
+			[1] = new List<Move>() { new Moves.Confuseray(), new Moves.Rototiller(), new Moves.Tackle(), new Moves.Leer(), new Moves.Bite(), new Moves.Lowkick() },
+			[3] = new List<Move>() { new Moves.Leer() },
+			[6] = new List<Move>() { new Moves.Bite() },
+			[8] = new List<Move>() { new Moves.Bide() },
+			[11] = new List<Move>() { new Moves.Detect() },
+			[13] = new List<Move>() { new Moves.Sandattack() },
+			[16] = new List<Move>() { new Moves.Crunch() },
+			[18] = new List<Move>() { new Moves.Hypnosis() },
+			[22] = new List<Move>() { new Moves.Superfang() },
+			[25] = new List<Move>() { new Moves.Afteryou() },
+			[29] = new List<Move>() { new Moves.Focusenergy() },
+			[32] = new List<Move>() { new Moves.Psychup() },
+			[36] = new List<Move>() { new Moves.Hyperfang() },
+			[39] = new List<Move>() { new Moves.Nastyplot() },
+			[43] = new List<Move>() { new Moves.Meanlook() },
+			[46] = new List<Move>() { new Moves.Batonpass() },
+			[50] = new List<Move>() { new Moves.Slam() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Afteryou(), new Aquatail(), new Attract(), new Confide(), new Covet(), new Cut(), new Doubleteam(), new Dreameater(), new Endeavor(), new Facade(), new Firepunch(), new Flamethrower(), new Fling(), new Focusblast(), new Focuspunch(), new Frustration(), new Gigaimpact(), new Grassknot(), new Gunkshot(), new Helpinghand(), new Hiddenpower(), new Hyperbeam(), new Icepunch(), new Irontail(), new Knockoff(), new Laserfocus(), new Lastresort(), new Lightscreen(), new Lowkick(), new Poweruppunch(), new Protect(), new Psychup(), new Raindance(), new Rest(), new Return(), new Rocksmash(), new Round(), new Seedbomb(), new Shadowball(), new Shockwave(), new Signalbeam(), new Sleeptalk(), new Snore(), new Stompingtantrum(), new Strength(), new Substitute(), new Sunnyday(), new Superfang(), new Swagger(), new Swordsdance(), new Thunder(), new Thunderbolt(), new Thunderpunch(), new Thunderwave(), new Toxic(), new Workup(), new Zenheadbutt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Afteryou(), new Moves.Aquatail(), new Moves.Attract(), new Moves.Confide(), new Moves.Covet(), new Moves.Cut(), new Moves.Doubleteam(), new Moves.Dreameater(), new Moves.Endeavor(), new Moves.Facade(), new Moves.Firepunch(), new Moves.Flamethrower(), new Moves.Fling(), new Moves.Focusblast(), new Moves.Focuspunch(), new Moves.Frustration(), new Moves.Gigaimpact(), new Moves.Grassknot(), new Moves.Gunkshot(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Icepunch(), new Moves.Irontail(), new Moves.Knockoff(), new Moves.Laserfocus(), new Moves.Lastresort(), new Moves.Lightscreen(), new Moves.Lowkick(), new Moves.Poweruppunch(), new Moves.Protect(), new Moves.Psychup(), new Moves.Raindance(), new Moves.Rest(), new Moves.Return(), new Moves.Rocksmash(), new Moves.Round(), new Moves.Seedbomb(), new Moves.Shadowball(), new Moves.Shockwave(), new Moves.Signalbeam(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Stompingtantrum(), new Moves.Strength(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Superfang(), new Moves.Swagger(), new Moves.Swordsdance(), new Moves.Thunder(), new Moves.Thunderbolt(), new Moves.Thunderpunch(), new Moves.Thunderwave(), new Moves.Toxic(), new Moves.Workup(), new Moves.Zenheadbutt() };
 		public override int Weight => 270;
 		public override int ExpYield => 147;
 		public override int CatchRate => 255;

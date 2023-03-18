@@ -9,31 +9,31 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Growlithe : Pokemon
 	{
 		public override string Name => "Growlithe";
-		public override List<Ability> AvailableAbilities => new() {new Intimidate(), new Flashfire() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Justified() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Intimidate(), new Abilities.Flashfire() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Justified() };
 		public override Stats BaseStats => new Stats(55, 70, 45, 70, 50, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Ember(), new Leer() },
-			[4] = new List<Move>() { new Howl() },
-			[8] = new List<Move>() { new Bite() },
-			[12] = new List<Move>() { new Flamewheel() },
-			[16] = new List<Move>() { new Helpinghand() },
-			[20] = new List<Move>() { new Agility() },
-			[24] = new List<Move>() { new Firefang() },
-			[28] = new List<Move>() { new Retaliate() },
-			[32] = new List<Move>() { new Crunch() },
-			[36] = new List<Move>() { new Takedown() },
-			[40] = new List<Move>() { new Flamethrower() },
-			[44] = new List<Move>() { new Roar() },
-			[48] = new List<Move>() { new Playrough() },
-			[52] = new List<Move>() { new Reversal() },
-			[56] = new List<Move>() { new Flareblitz() },
+			[1] = new List<Move>() { new Moves.Ember(), new Moves.Leer() },
+			[4] = new List<Move>() { new Moves.Howl() },
+			[8] = new List<Move>() { new Moves.Bite() },
+			[12] = new List<Move>() { new Moves.Flamewheel() },
+			[16] = new List<Move>() { new Moves.Helpinghand() },
+			[20] = new List<Move>() { new Moves.Agility() },
+			[24] = new List<Move>() { new Moves.Firefang() },
+			[28] = new List<Move>() { new Moves.Retaliate() },
+			[32] = new List<Move>() { new Moves.Crunch() },
+			[36] = new List<Move>() { new Moves.Takedown() },
+			[40] = new List<Move>() { new Moves.Flamethrower() },
+			[44] = new List<Move>() { new Moves.Roar() },
+			[48] = new List<Move>() { new Moves.Playrough() },
+			[52] = new List<Move>() { new Moves.Reversal() },
+			[56] = new List<Move>() { new Moves.Flareblitz() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Aerialace(), new Agility(), new Attract(), new Bodyslam(), new Closecombat(), new Crunch(), new Dig(), new Doubleteam(), new Endure(), new Facade(), new Fireblast(), new Firefang(), new Firespin(), new Flamethrower(), new Flareblitz(), new Heatwave(), new Helpinghand(), new Hiddenpower(), new Irontail(), new Outrage(), new Overheat(), new Playrough(), new Protect(), new Psychicfangs(), new Rest(), new Retaliate(), new Reversal(), new Roar(), new Rocksmash(), new Round(), new Safeguard(), new Sleeptalk(), new Snarl(), new Snore(), new Strength(), new Substitute(), new Sunnyday(), new Swagger(), new Swift(), new Thief(), new Wildcharge(), new Willowisp() };
-		public override List<Move> EggMoves => new List<Move>() { new Bodyslam(), new Burnup(), new Closecombat(), new Covet(), new Crunch(), new Doubleedge(), new Doublekick(), new Firespin(), new Flareblitz(), new Heatwave(), new Howl(), new Morningsun(), new Thrash() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Aerialace(), new Moves.Agility(), new Moves.Attract(), new Moves.Bodyslam(), new Moves.Closecombat(), new Moves.Crunch(), new Moves.Dig(), new Moves.Doubleteam(), new Moves.Endure(), new Moves.Facade(), new Moves.Fireblast(), new Moves.Firefang(), new Moves.Firespin(), new Moves.Flamethrower(), new Moves.Flareblitz(), new Moves.Heatwave(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Irontail(), new Moves.Outrage(), new Moves.Overheat(), new Moves.Playrough(), new Moves.Protect(), new Moves.Psychicfangs(), new Moves.Rest(), new Moves.Retaliate(), new Moves.Reversal(), new Moves.Roar(), new Moves.Rocksmash(), new Moves.Round(), new Moves.Safeguard(), new Moves.Sleeptalk(), new Moves.Snarl(), new Moves.Snore(), new Moves.Strength(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Swift(), new Moves.Thief(), new Moves.Wildcharge(), new Moves.Willowisp() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Bodyslam(), new Moves.Burnup(), new Moves.Closecombat(), new Moves.Covet(), new Moves.Crunch(), new Moves.Doubleedge(), new Moves.Doublekick(), new Moves.Firespin(), new Moves.Flareblitz(), new Moves.Heatwave(), new Moves.Howl(), new Moves.Morningsun(), new Moves.Thrash() };
 		public override int Weight => 190;
 		public override int ExpYield => 70;
 		public override int CatchRate => 190;

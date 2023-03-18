@@ -9,27 +9,27 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Excadrill : Pokemon
 	{
 		public override string Name => "Excadrill";
-		public override List<Ability> AvailableAbilities => new() {new Sandrush(), new Sandforce() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Moldbreaker() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Sandrush(), new Abilities.Sandforce() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Moldbreaker() };
 		public override Stats BaseStats => new Stats(110, 135, 60, 50, 65, 88);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Ground, PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Horndrill() },
-			[1] = new List<Move>() { new Horndrill(), new Mudslap(), new Rapidspin(), new Scratch(), new Honeclaws() },
-			[12] = new List<Move>() { new Furyswipes() },
-			[16] = new List<Move>() { new Metalclaw() },
-			[20] = new List<Move>() { new Sandstorm() },
-			[24] = new List<Move>() { new Crushclaw() },
-			[28] = new List<Move>() { new Rockslide() },
-			[34] = new List<Move>() { new Dig() },
-			[40] = new List<Move>() { new Swordsdance() },
-			[46] = new List<Move>() { new Drillrun() },
-			[52] = new List<Move>() { new Earthquake() },
-			[58] = new List<Move>() { new Fissure() },
+			[0] = new List<Move>() { new Moves.Horndrill() },
+			[1] = new List<Move>() { new Moves.Horndrill(), new Moves.Mudslap(), new Moves.Rapidspin(), new Moves.Scratch(), new Moves.Honeclaws() },
+			[12] = new List<Move>() { new Moves.Furyswipes() },
+			[16] = new List<Move>() { new Moves.Metalclaw() },
+			[20] = new List<Move>() { new Moves.Sandstorm() },
+			[24] = new List<Move>() { new Moves.Crushclaw() },
+			[28] = new List<Move>() { new Moves.Rockslide() },
+			[34] = new List<Move>() { new Moves.Dig() },
+			[40] = new List<Move>() { new Moves.Swordsdance() },
+			[46] = new List<Move>() { new Moves.Drillrun() },
+			[52] = new List<Move>() { new Moves.Earthquake() },
+			[58] = new List<Move>() { new Moves.Fissure() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Brickbreak(), new Brutalswing(), new Bulldoze(), new Dig(), new Drillrun(), new Earthpower(), new Earthquake(), new Endure(), new Facade(), new Fling(), new Focusblast(), new Gigaimpact(), new Hiddenpower(), new Highhorsepower(), new Hyperbeam(), new Irondefense(), new Ironhead(), new Mudshot(), new Poisonjab(), new Protect(), new Rest(), new Rockblast(), new Rockslide(), new Rocktomb(), new Round(), new Sandstorm(), new Sandtomb(), new Scorchingsands(), new Shadowclaw(), new Sleeptalk(), new Sludgebomb(), new Smartstrike(), new Snore(), new Stealthrock(), new Steelbeam(), new Stompingtantrum(), new Substitute(), new Swordsdance(), new Xscissor() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Brickbreak(), new Moves.Brutalswing(), new Moves.Bulldoze(), new Moves.Dig(), new Moves.Drillrun(), new Moves.Earthpower(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Facade(), new Moves.Fling(), new Moves.Focusblast(), new Moves.Gigaimpact(), new Moves.Hiddenpower(), new Moves.Highhorsepower(), new Moves.Hyperbeam(), new Moves.Irondefense(), new Moves.Ironhead(), new Moves.Mudshot(), new Moves.Poisonjab(), new Moves.Protect(), new Moves.Rest(), new Moves.Rockblast(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Sandstorm(), new Moves.Sandtomb(), new Moves.Scorchingsands(), new Moves.Shadowclaw(), new Moves.Sleeptalk(), new Moves.Sludgebomb(), new Moves.Smartstrike(), new Moves.Snore(), new Moves.Stealthrock(), new Moves.Steelbeam(), new Moves.Stompingtantrum(), new Moves.Substitute(), new Moves.Swordsdance(), new Moves.Xscissor() };
 		public override int Weight => 404;
 		public override int ExpYield => 178;
 		public override int CatchRate => 60;

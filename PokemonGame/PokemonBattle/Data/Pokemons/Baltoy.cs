@@ -9,29 +9,29 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Baltoy : Pokemon
 	{
 		public override string Name => "Baltoy";
-		public override List<Ability> AvailableAbilities => new() {new Levitate() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Levitate() };
 		public override Stats BaseStats => new Stats(40, 40, 55, 40, 70, 55);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Ground, PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Harden(), new Mudslap() },
-			[3] = new List<Move>() { new Rapidspin() },
-			[6] = new List<Move>() { new Confusion() },
-			[9] = new List<Move>() { new Rocktomb() },
-			[12] = new List<Move>() { new Powertrick() },
-			[15] = new List<Move>() { new Psybeam() },
-			[18] = new List<Move>() { new Ancientpower() },
-			[21] = new List<Move>() { new Imprison() },
-			[24] = new List<Move>() { new Cosmicpower() },
-			[27] = new List<Move>() { new Extrasensory() },
-			[30] = new List<Move>() { new Earthpower() },
-			[33] = new List<Move>() { new Selfdestruct() },
-			[36] = new List<Move>() { new Guardsplit(), new Powersplit() },
-			[39] = new List<Move>() { new Sandstorm() },
-			[42] = new List<Move>() { new Explosion() },
+			[1] = new List<Move>() { new Moves.Harden(), new Moves.Mudslap() },
+			[3] = new List<Move>() { new Moves.Rapidspin() },
+			[6] = new List<Move>() { new Moves.Confusion() },
+			[9] = new List<Move>() { new Moves.Rocktomb() },
+			[12] = new List<Move>() { new Moves.Powertrick() },
+			[15] = new List<Move>() { new Moves.Psybeam() },
+			[18] = new List<Move>() { new Moves.Ancientpower() },
+			[21] = new List<Move>() { new Moves.Imprison() },
+			[24] = new List<Move>() { new Moves.Cosmicpower() },
+			[27] = new List<Move>() { new Moves.Extrasensory() },
+			[30] = new List<Move>() { new Moves.Earthpower() },
+			[33] = new List<Move>() { new Moves.Selfdestruct() },
+			[36] = new List<Move>() { new Moves.Guardsplit(), new Moves.Powersplit() },
+			[39] = new List<Move>() { new Moves.Sandstorm() },
+			[42] = new List<Move>() { new Moves.Explosion() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Allyswitch(), new Bulldoze(), new Calmmind(), new Chargebeam(), new Cosmicpower(), new Dazzlinggleam(), new Dig(), new Doubleteam(), new Dreameater(), new Drillrun(), new Earthpower(), new Earthquake(), new Eerieimpulse(), new Endure(), new Expandingforce(), new Explosion(), new Facade(), new Flash(), new Grassknot(), new Guardswap(), new Gyroball(), new Hex(), new Hiddenpower(), new Icebeam(), new Imprison(), new Lightscreen(), new Powerswap(), new Protect(), new Psychic(), new Psychicterrain(), new Psychup(), new Psyshock(), new Raindance(), new Recycle(), new Reflect(), new Rest(), new Rockpolish(), new Rockslide(), new Rocktomb(), new Round(), new Safeguard(), new Sandstorm(), new Sandtomb(), new Scorchingsands(), new Selfdestruct(), new Shadowball(), new Skillswap(), new Sleeptalk(), new Snore(), new Solarbeam(), new Stealthrock(), new Substitute(), new Sunnyday(), new Swagger(), new Trick(), new Trickroom(), new Wonderroom(), new Zenheadbutt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Allyswitch(), new Moves.Bulldoze(), new Moves.Calmmind(), new Moves.Chargebeam(), new Moves.Cosmicpower(), new Moves.Dazzlinggleam(), new Moves.Dig(), new Moves.Doubleteam(), new Moves.Dreameater(), new Moves.Drillrun(), new Moves.Earthpower(), new Moves.Earthquake(), new Moves.Eerieimpulse(), new Moves.Endure(), new Moves.Expandingforce(), new Moves.Explosion(), new Moves.Facade(), new Moves.Flash(), new Moves.Grassknot(), new Moves.Guardswap(), new Moves.Gyroball(), new Moves.Hex(), new Moves.Hiddenpower(), new Moves.Icebeam(), new Moves.Imprison(), new Moves.Lightscreen(), new Moves.Powerswap(), new Moves.Protect(), new Moves.Psychic(), new Moves.Psychicterrain(), new Moves.Psychup(), new Moves.Psyshock(), new Moves.Raindance(), new Moves.Recycle(), new Moves.Reflect(), new Moves.Rest(), new Moves.Rockpolish(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Safeguard(), new Moves.Sandstorm(), new Moves.Sandtomb(), new Moves.Scorchingsands(), new Moves.Selfdestruct(), new Moves.Shadowball(), new Moves.Skillswap(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Stealthrock(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Trick(), new Moves.Trickroom(), new Moves.Wonderroom(), new Moves.Zenheadbutt() };
 		public override int Weight => 215;
 		public override int ExpYield => 60;
 		public override int CatchRate => 255;

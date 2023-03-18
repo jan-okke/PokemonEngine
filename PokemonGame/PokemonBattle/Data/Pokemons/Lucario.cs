@@ -9,30 +9,30 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Lucario : Pokemon
 	{
 		public override string Name => "Lucario";
-		public override List<Ability> AvailableAbilities => new() {new Steadfast(), new Innerfocus() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Justified() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Steadfast(), new Abilities.Innerfocus() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Justified() };
 		public override Stats BaseStats => new Stats(70, 110, 70, 115, 70, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Fighting, PokemonType.Steel };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Aurasphere() },
-			[1] = new List<Move>() { new Aurasphere(), new Lifedew(), new Workup(), new Rocksmash(), new Nastyplot(), new Screech(), new Forcepalm(), new Helpinghand(), new Copycat(), new Finalgambit(), new Reversal(), new Quickattack(), new Detect(), new Feint(), new Metalclaw() },
-			[12] = new List<Move>() { new Counter() },
-			[16] = new List<Move>() { new Laserfocus() },
-			[20] = new List<Move>() { new Poweruppunch() },
-			[24] = new List<Move>() { new Calmmind() },
-			[28] = new List<Move>() { new Metalsound() },
-			[32] = new List<Move>() { new Quickguard() },
-			[36] = new List<Move>() { new Bonerush() },
-			[40] = new List<Move>() { new Swordsdance() },
-			[44] = new List<Move>() { new Healpulse() },
-			[48] = new List<Move>() { new Meteormash() },
-			[52] = new List<Move>() { new Dragonpulse() },
-			[56] = new List<Move>() { new Extremespeed() },
-			[60] = new List<Move>() { new Closecombat() },
+			[0] = new List<Move>() { new Moves.Aurasphere() },
+			[1] = new List<Move>() { new Moves.Aurasphere(), new Moves.Lifedew(), new Moves.Workup(), new Moves.Rocksmash(), new Moves.Nastyplot(), new Moves.Screech(), new Moves.Forcepalm(), new Moves.Helpinghand(), new Moves.Copycat(), new Moves.Finalgambit(), new Moves.Reversal(), new Moves.Quickattack(), new Moves.Detect(), new Moves.Feint(), new Moves.Metalclaw() },
+			[12] = new List<Move>() { new Moves.Counter() },
+			[16] = new List<Move>() { new Moves.Laserfocus() },
+			[20] = new List<Move>() { new Moves.Poweruppunch() },
+			[24] = new List<Move>() { new Moves.Calmmind() },
+			[28] = new List<Move>() { new Moves.Metalsound() },
+			[32] = new List<Move>() { new Moves.Quickguard() },
+			[36] = new List<Move>() { new Moves.Bonerush() },
+			[40] = new List<Move>() { new Moves.Swordsdance() },
+			[44] = new List<Move>() { new Moves.Healpulse() },
+			[48] = new List<Move>() { new Moves.Meteormash() },
+			[52] = new List<Move>() { new Moves.Dragonpulse() },
+			[56] = new List<Move>() { new Moves.Extremespeed() },
+			[60] = new List<Move>() { new Moves.Closecombat() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Agility(), new Attract(), new Aurasphere(), new Blazekick(), new Brickbreak(), new Bulkup(), new Bulldoze(), new Calmmind(), new Closecombat(), new Coaching(), new Crunch(), new Darkpulse(), new Dig(), new Doubleteam(), new Dragonpulse(), new Drainpunch(), new Earthquake(), new Endure(), new Facade(), new Flashcannon(), new Fling(), new Focusblast(), new Focusenergy(), new Focuspunch(), new Gigaimpact(), new Helpinghand(), new Hiddenpower(), new Hyperbeam(), new Icepunch(), new Irondefense(), new Irontail(), new Lowkick(), new Lowsweep(), new Megakick(), new Megapunch(), new Nastyplot(), new Payback(), new Poisonjab(), new Protect(), new Psychic(), new Raindance(), new Rest(), new Retaliate(), new Revenge(), new Reversal(), new Roar(), new Rockclimb(), new Rockslide(), new Rocksmash(), new Rocktomb(), new Round(), new Scaryface(), new Screech(), new Shadowball(), new Shadowclaw(), new Sleeptalk(), new Snore(), new Steelbeam(), new Stoneedge(), new Strength(), new Substitute(), new Sunnyday(), new Swagger(), new Swift(), new Swordsdance(), new Terrainpulse(), new Thunderpunch(), new Waterpulse(), new Workup(), new Zenheadbutt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Agility(), new Moves.Attract(), new Moves.Aurasphere(), new Moves.Blazekick(), new Moves.Brickbreak(), new Moves.Bulkup(), new Moves.Bulldoze(), new Moves.Calmmind(), new Moves.Closecombat(), new Moves.Coaching(), new Moves.Crunch(), new Moves.Darkpulse(), new Moves.Dig(), new Moves.Doubleteam(), new Moves.Dragonpulse(), new Moves.Drainpunch(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Facade(), new Moves.Flashcannon(), new Moves.Fling(), new Moves.Focusblast(), new Moves.Focusenergy(), new Moves.Focuspunch(), new Moves.Gigaimpact(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Icepunch(), new Moves.Irondefense(), new Moves.Irontail(), new Moves.Lowkick(), new Moves.Lowsweep(), new Moves.Megakick(), new Moves.Megapunch(), new Moves.Nastyplot(), new Moves.Payback(), new Moves.Poisonjab(), new Moves.Protect(), new Moves.Psychic(), new Moves.Raindance(), new Moves.Rest(), new Moves.Retaliate(), new Moves.Revenge(), new Moves.Reversal(), new Moves.Roar(), new Moves.Rockclimb(), new Moves.Rockslide(), new Moves.Rocksmash(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Scaryface(), new Moves.Screech(), new Moves.Shadowball(), new Moves.Shadowclaw(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Steelbeam(), new Moves.Stoneedge(), new Moves.Strength(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Swift(), new Moves.Swordsdance(), new Moves.Terrainpulse(), new Moves.Thunderpunch(), new Moves.Waterpulse(), new Moves.Workup(), new Moves.Zenheadbutt() };
 		public override int Weight => 540;
 		public override int ExpYield => 184;
 		public override int CatchRate => 45;

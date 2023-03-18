@@ -9,31 +9,31 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Landorus : Pokemon
 	{
 		public override string Name => "Landorus";
-		public override List<Ability> AvailableAbilities => new() {new Sandforce() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Sheerforce() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Sandforce() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Sheerforce() };
 		public override Stats BaseStats => new Stats(89, 125, 90, 115, 80, 101);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Ground, PokemonType.Flying };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Sandtomb(), new Rockthrow() },
-			[5] = new List<Move>() { new Leer() },
-			[10] = new List<Move>() { new Block() },
-			[15] = new List<Move>() { new Bulldoze() },
-			[20] = new List<Move>() { new Rocktomb() },
-			[25] = new List<Move>() { new Swordsdance() },
-			[30] = new List<Move>() { new Imprison() },
-			[35] = new List<Move>() { new Rockslide() },
-			[40] = new List<Move>() { new Earthpower() },
-			[45] = new List<Move>() { new Extrasensory() },
-			[50] = new List<Move>() { new Stoneedge() },
-			[55] = new List<Move>() { new Hammerarm() },
-			[60] = new List<Move>() { new Sandstorm() },
-			[65] = new List<Move>() { new Earthquake() },
-			[70] = new List<Move>() { new Outrage() },
-			[75] = new List<Move>() { new Fissure() },
+			[1] = new List<Move>() { new Moves.Sandtomb(), new Moves.Rockthrow() },
+			[5] = new List<Move>() { new Moves.Leer() },
+			[10] = new List<Move>() { new Moves.Block() },
+			[15] = new List<Move>() { new Moves.Bulldoze() },
+			[20] = new List<Move>() { new Moves.Rocktomb() },
+			[25] = new List<Move>() { new Moves.Swordsdance() },
+			[30] = new List<Move>() { new Moves.Imprison() },
+			[35] = new List<Move>() { new Moves.Rockslide() },
+			[40] = new List<Move>() { new Moves.Earthpower() },
+			[45] = new List<Move>() { new Moves.Extrasensory() },
+			[50] = new List<Move>() { new Moves.Stoneedge() },
+			[55] = new List<Move>() { new Moves.Hammerarm() },
+			[60] = new List<Move>() { new Moves.Sandstorm() },
+			[65] = new List<Move>() { new Moves.Earthquake() },
+			[70] = new List<Move>() { new Moves.Outrage() },
+			[75] = new List<Move>() { new Moves.Fissure() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Bodyslam(), new Brickbreak(), new Brutalswing(), new Bulkup(), new Bulldoze(), new Calmmind(), new Dig(), new Earthpower(), new Earthquake(), new Endure(), new Facade(), new Fling(), new Fly(), new Focusblast(), new Gigaimpact(), new Grassknot(), new Hiddenpower(), new Hyperbeam(), new Imprison(), new Irontail(), new Mudshot(), new Outrage(), new Payback(), new Protect(), new Psychic(), new Rest(), new Rockslide(), new Rocktomb(), new Round(), new Sandstorm(), new Sandtomb(), new Scaryface(), new Selfdestruct(), new Sleeptalk(), new Sludgebomb(), new Sludgewave(), new Snore(), new Stealthrock(), new Stoneedge(), new Substitute(), new Superpower(), new Swordsdance(), new Uturn(), new Weatherball() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Bodyslam(), new Moves.Brickbreak(), new Moves.Brutalswing(), new Moves.Bulkup(), new Moves.Bulldoze(), new Moves.Calmmind(), new Moves.Dig(), new Moves.Earthpower(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Facade(), new Moves.Fling(), new Moves.Fly(), new Moves.Focusblast(), new Moves.Gigaimpact(), new Moves.Grassknot(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Imprison(), new Moves.Irontail(), new Moves.Mudshot(), new Moves.Outrage(), new Moves.Payback(), new Moves.Protect(), new Moves.Psychic(), new Moves.Rest(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Sandstorm(), new Moves.Sandtomb(), new Moves.Scaryface(), new Moves.Selfdestruct(), new Moves.Sleeptalk(), new Moves.Sludgebomb(), new Moves.Sludgewave(), new Moves.Snore(), new Moves.Stealthrock(), new Moves.Stoneedge(), new Moves.Substitute(), new Moves.Superpower(), new Moves.Swordsdance(), new Moves.Uturn(), new Moves.Weatherball() };
 		public override int Weight => 680;
 		public override int ExpYield => 300;
 		public override int CatchRate => 3;

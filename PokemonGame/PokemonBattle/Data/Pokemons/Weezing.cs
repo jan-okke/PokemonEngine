@@ -9,28 +9,28 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Weezing : Pokemon
 	{
 		public override string Name => "Weezing";
-		public override List<Ability> AvailableAbilities => new() {new Levitate(), new Neutralizinggas() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Stench() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Levitate(), new Abilities.Neutralizinggas() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Stench() };
 		public override Stats BaseStats => new Stats(65, 90, 120, 85, 70, 60);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Poison };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Doublehit() },
-			[1] = new List<Move>() { new Doublehit(), new Heatwave(), new Poisongas(), new Tackle(), new Smog(), new Smokescreen() },
-			[12] = new List<Move>() { new Clearsmog() },
-			[16] = new List<Move>() { new Assurance() },
-			[20] = new List<Move>() { new Sludge() },
-			[24] = new List<Move>() { new Haze() },
-			[28] = new List<Move>() { new Selfdestruct() },
-			[32] = new List<Move>() { new Sludgebomb() },
-			[38] = new List<Move>() { new Toxic() },
-			[44] = new List<Move>() { new Belch() },
-			[50] = new List<Move>() { new Explosion() },
-			[56] = new List<Move>() { new Memento() },
-			[62] = new List<Move>() { new Destinybond() },
+			[0] = new List<Move>() { new Moves.Doublehit() },
+			[1] = new List<Move>() { new Moves.Doublehit(), new Moves.Heatwave(), new Moves.Poisongas(), new Moves.Tackle(), new Moves.Smog(), new Moves.Smokescreen() },
+			[12] = new List<Move>() { new Moves.Clearsmog() },
+			[16] = new List<Move>() { new Moves.Assurance() },
+			[20] = new List<Move>() { new Moves.Sludge() },
+			[24] = new List<Move>() { new Moves.Haze() },
+			[28] = new List<Move>() { new Moves.Selfdestruct() },
+			[32] = new List<Move>() { new Moves.Sludgebomb() },
+			[38] = new List<Move>() { new Moves.Toxic() },
+			[44] = new List<Move>() { new Moves.Belch() },
+			[50] = new List<Move>() { new Moves.Explosion() },
+			[56] = new List<Move>() { new Moves.Memento() },
+			[62] = new List<Move>() { new Moves.Destinybond() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Assurance(), new Attract(), new Corrosivegas(), new Darkpulse(), new Doubleteam(), new Endure(), new Explosion(), new Facade(), new Fireblast(), new Flamethrower(), new Flash(), new Gigaimpact(), new Gyroball(), new Heatwave(), new Hiddenpower(), new Hyperbeam(), new Payback(), new Protect(), new Raindance(), new Rest(), new Round(), new Screech(), new Selfdestruct(), new Shadowball(), new Shockwave(), new Sleeptalk(), new Sludgebomb(), new Sludgewave(), new Snore(), new Substitute(), new Sunnyday(), new Swagger(), new Taunt(), new Thief(), new Thunder(), new Thunderbolt(), new Torment(), new Toxic(), new Toxicspikes(), new Uproar(), new Venomdrench(), new Venoshock(), new Willowisp() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Assurance(), new Moves.Attract(), new Moves.Corrosivegas(), new Moves.Darkpulse(), new Moves.Doubleteam(), new Moves.Endure(), new Moves.Explosion(), new Moves.Facade(), new Moves.Fireblast(), new Moves.Flamethrower(), new Moves.Flash(), new Moves.Gigaimpact(), new Moves.Gyroball(), new Moves.Heatwave(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Payback(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Round(), new Moves.Screech(), new Moves.Selfdestruct(), new Moves.Shadowball(), new Moves.Shockwave(), new Moves.Sleeptalk(), new Moves.Sludgebomb(), new Moves.Sludgewave(), new Moves.Snore(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Taunt(), new Moves.Thief(), new Moves.Thunder(), new Moves.Thunderbolt(), new Moves.Torment(), new Moves.Toxic(), new Moves.Toxicspikes(), new Moves.Uproar(), new Moves.Venomdrench(), new Moves.Venoshock(), new Moves.Willowisp() };
 		public override int Weight => 95;
 		public override int ExpYield => 172;
 		public override int CatchRate => 60;

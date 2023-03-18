@@ -9,29 +9,29 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Darumaka : Pokemon
 	{
 		public override string Name => "Darumaka";
-		public override List<Ability> AvailableAbilities => new() {new Hustle() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Innerfocus() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Hustle() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Innerfocus() };
 		public override Stats BaseStats => new Stats(70, 90, 45, 15, 45, 50);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Fire };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Ember(), new Tackle() },
-			[4] = new List<Move>() { new Taunt() },
-			[8] = new List<Move>() { new Bite() },
-			[12] = new List<Move>() { new Incinerate() },
-			[16] = new List<Move>() { new Workup() },
-			[20] = new List<Move>() { new Firefang() },
-			[24] = new List<Move>() { new Headbutt() },
-			[28] = new List<Move>() { new Firepunch() },
-			[32] = new List<Move>() { new Uproar() },
-			[36] = new List<Move>() { new Bellydrum() },
-			[40] = new List<Move>() { new Flareblitz() },
-			[44] = new List<Move>() { new Thrash() },
-			[48] = new List<Move>() { new Superpower() },
+			[1] = new List<Move>() { new Moves.Ember(), new Moves.Tackle() },
+			[4] = new List<Move>() { new Moves.Taunt() },
+			[8] = new List<Move>() { new Moves.Bite() },
+			[12] = new List<Move>() { new Moves.Incinerate() },
+			[16] = new List<Move>() { new Moves.Workup() },
+			[20] = new List<Move>() { new Moves.Firefang() },
+			[24] = new List<Move>() { new Moves.Headbutt() },
+			[28] = new List<Move>() { new Moves.Firepunch() },
+			[32] = new List<Move>() { new Moves.Uproar() },
+			[36] = new List<Move>() { new Moves.Bellydrum() },
+			[40] = new List<Move>() { new Moves.Flareblitz() },
+			[44] = new List<Move>() { new Moves.Thrash() },
+			[48] = new List<Move>() { new Moves.Superpower() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Brickbreak(), new Dig(), new Encore(), new Endure(), new Facade(), new Fireblast(), new Firefang(), new Firepunch(), new Firespin(), new Flamethrower(), new Flareblitz(), new Fling(), new Focusenergy(), new Grassknot(), new Gyroball(), new Heatwave(), new Hiddenpower(), new Megakick(), new Megapunch(), new Overheat(), new Protect(), new Rest(), new Rockslide(), new Rocktomb(), new Round(), new Sleeptalk(), new Snore(), new Solarbeam(), new Substitute(), new Sunnyday(), new Superpower(), new Taunt(), new Thief(), new Uproar(), new Uturn(), new Willowisp(), new Workup(), new Zenheadbutt() };
-		public override List<Move> EggMoves => new List<Move>() { new Extrasensory(), new Flamewheel(), new Focuspunch(), new Hammerarm(), new Takedown(), new Yawn() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Brickbreak(), new Moves.Dig(), new Moves.Encore(), new Moves.Endure(), new Moves.Facade(), new Moves.Fireblast(), new Moves.Firefang(), new Moves.Firepunch(), new Moves.Firespin(), new Moves.Flamethrower(), new Moves.Flareblitz(), new Moves.Fling(), new Moves.Focusenergy(), new Moves.Grassknot(), new Moves.Gyroball(), new Moves.Heatwave(), new Moves.Hiddenpower(), new Moves.Megakick(), new Moves.Megapunch(), new Moves.Overheat(), new Moves.Protect(), new Moves.Rest(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Superpower(), new Moves.Taunt(), new Moves.Thief(), new Moves.Uproar(), new Moves.Uturn(), new Moves.Willowisp(), new Moves.Workup(), new Moves.Zenheadbutt() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Extrasensory(), new Moves.Flamewheel(), new Moves.Focuspunch(), new Moves.Hammerarm(), new Moves.Takedown(), new Moves.Yawn() };
 		public override int Weight => 375;
 		public override int ExpYield => 63;
 		public override int CatchRate => 120;

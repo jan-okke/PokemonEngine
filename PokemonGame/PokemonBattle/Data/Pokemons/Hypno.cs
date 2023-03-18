@@ -9,31 +9,31 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Hypno : Pokemon
 	{
 		public override string Name => "Hypno";
-		public override List<Ability> AvailableAbilities => new() {new Insomnia(), new Forewarn() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Innerfocus() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Insomnia(), new Abilities.Forewarn() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Innerfocus() };
 		public override Stats BaseStats => new Stats(85, 73, 70, 73, 115, 67);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Psychic };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Futuresight(), new Nastyplot(), new Switcheroo(), new Pound(), new Hypnosis(), new Disable(), new Confusion() },
-			[5] = new List<Move>() { new Disable() },
-			[9] = new List<Move>() { new Confusion() },
-			[13] = new List<Move>() { new Headbutt() },
-			[17] = new List<Move>() { new Poisongas() },
-			[21] = new List<Move>() { new Hypnosis() },
-			[25] = new List<Move>() { new Psybeam() },
-			[29] = new List<Move>() { new Mindreader() },
-			[33] = new List<Move>() { new Psychup() },
-			[37] = new List<Move>() { new Hypnosis() },
-			[41] = new List<Move>() { new Zenheadbutt() },
-			[45] = new List<Move>() { new Swagger() },
-			[49] = new List<Move>() { new Psychic() },
-			[53] = new List<Move>() { new Nastyplot() },
-			[57] = new List<Move>() { new Psyshock() },
-			[61] = new List<Move>() { new Futuresight() },
+			[1] = new List<Move>() { new Moves.Futuresight(), new Moves.Nastyplot(), new Moves.Switcheroo(), new Moves.Pound(), new Moves.Hypnosis(), new Moves.Disable(), new Moves.Confusion() },
+			[5] = new List<Move>() { new Moves.Disable() },
+			[9] = new List<Move>() { new Moves.Confusion() },
+			[13] = new List<Move>() { new Moves.Headbutt() },
+			[17] = new List<Move>() { new Moves.Poisongas() },
+			[21] = new List<Move>() { new Moves.Hypnosis() },
+			[25] = new List<Move>() { new Moves.Psybeam() },
+			[29] = new List<Move>() { new Moves.Mindreader() },
+			[33] = new List<Move>() { new Moves.Psychup() },
+			[37] = new List<Move>() { new Moves.Hypnosis() },
+			[41] = new List<Move>() { new Moves.Zenheadbutt() },
+			[45] = new List<Move>() { new Moves.Swagger() },
+			[49] = new List<Move>() { new Moves.Psychic() },
+			[53] = new List<Move>() { new Moves.Nastyplot() },
+			[57] = new List<Move>() { new Moves.Psyshock() },
+			[61] = new List<Move>() { new Moves.Futuresight() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Allyswitch(), new Attract(), new Brickbreak(), new Calmmind(), new Confide(), new Dazzlinggleam(), new Doubleteam(), new Drainpunch(), new Dreameater(), new Endure(), new Facade(), new Firepunch(), new Flash(), new Fling(), new Focusblast(), new Focuspunch(), new Foulplay(), new Frustration(), new Gigaimpact(), new Grassknot(), new Hiddenpower(), new Hyperbeam(), new Icepunch(), new Lightscreen(), new Lowkick(), new Lowsweep(), new Magiccoat(), new Magicroom(), new Nastyplot(), new Poweruppunch(), new Protect(), new Psychic(), new Psychup(), new Psyshock(), new Raindance(), new Recycle(), new Reflect(), new Rest(), new Return(), new Roleplay(), new Round(), new Safeguard(), new Shadowball(), new Signalbeam(), new Skillswap(), new Sleeptalk(), new Snatch(), new Snore(), new Substitute(), new Sunnyday(), new Swagger(), new Taunt(), new Telekinesis(), new Thief(), new Thunderpunch(), new Thunderwave(), new Torment(), new Trick(), new Trickroom(), new Zenheadbutt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Allyswitch(), new Moves.Attract(), new Moves.Brickbreak(), new Moves.Calmmind(), new Moves.Confide(), new Moves.Dazzlinggleam(), new Moves.Doubleteam(), new Moves.Drainpunch(), new Moves.Dreameater(), new Moves.Endure(), new Moves.Facade(), new Moves.Firepunch(), new Moves.Flash(), new Moves.Fling(), new Moves.Focusblast(), new Moves.Focuspunch(), new Moves.Foulplay(), new Moves.Frustration(), new Moves.Gigaimpact(), new Moves.Grassknot(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Icepunch(), new Moves.Lightscreen(), new Moves.Lowkick(), new Moves.Lowsweep(), new Moves.Magiccoat(), new Moves.Magicroom(), new Moves.Nastyplot(), new Moves.Poweruppunch(), new Moves.Protect(), new Moves.Psychic(), new Moves.Psychup(), new Moves.Psyshock(), new Moves.Raindance(), new Moves.Recycle(), new Moves.Reflect(), new Moves.Rest(), new Moves.Return(), new Moves.Roleplay(), new Moves.Round(), new Moves.Safeguard(), new Moves.Shadowball(), new Moves.Signalbeam(), new Moves.Skillswap(), new Moves.Sleeptalk(), new Moves.Snatch(), new Moves.Snore(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Taunt(), new Moves.Telekinesis(), new Moves.Thief(), new Moves.Thunderpunch(), new Moves.Thunderwave(), new Moves.Torment(), new Moves.Trick(), new Moves.Trickroom(), new Moves.Zenheadbutt() };
 		public override int Weight => 756;
 		public override int ExpYield => 169;
 		public override int CatchRate => 75;

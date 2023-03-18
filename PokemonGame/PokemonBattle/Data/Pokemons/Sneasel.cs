@@ -9,27 +9,27 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Sneasel : Pokemon
 	{
 		public override string Name => "Sneasel";
-		public override List<Ability> AvailableAbilities => new() {new Innerfocus(), new Keeneye() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Pickpocket() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Innerfocus(), new Abilities.Keeneye() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Pickpocket() };
 		public override Stats BaseStats => new Stats(55, 95, 55, 35, 75, 115);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Dark, PokemonType.Ice };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Scratch(), new Leer() },
-			[6] = new List<Move>() { new Taunt() },
-			[12] = new List<Move>() { new Quickattack() },
-			[18] = new List<Move>() { new Metalclaw() },
-			[24] = new List<Move>() { new Icywind() },
-			[30] = new List<Move>() { new Furyswipes() },
-			[36] = new List<Move>() { new Honeclaws() },
-			[42] = new List<Move>() { new Beatup() },
-			[48] = new List<Move>() { new Agility() },
-			[54] = new List<Move>() { new Screech() },
-			[60] = new List<Move>() { new Slash() },
+			[1] = new List<Move>() { new Moves.Scratch(), new Moves.Leer() },
+			[6] = new List<Move>() { new Moves.Taunt() },
+			[12] = new List<Move>() { new Moves.Quickattack() },
+			[18] = new List<Move>() { new Moves.Metalclaw() },
+			[24] = new List<Move>() { new Moves.Icywind() },
+			[30] = new List<Move>() { new Moves.Furyswipes() },
+			[36] = new List<Move>() { new Moves.Honeclaws() },
+			[42] = new List<Move>() { new Moves.Beatup() },
+			[48] = new List<Move>() { new Moves.Agility() },
+			[54] = new List<Move>() { new Moves.Screech() },
+			[60] = new List<Move>() { new Moves.Slash() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Aerialace(), new Agility(), new Attract(), new Avalanche(), new Beatup(), new Blizzard(), new Brickbreak(), new Calmmind(), new Cut(), new Darkpulse(), new Dig(), new Doubleteam(), new Dreameater(), new Endure(), new Facade(), new Faketears(), new Falseswipe(), new Fling(), new Focuspunch(), new Foulplay(), new Hail(), new Hiddenpower(), new Icebeam(), new Icepunch(), new Icywind(), new Irontail(), new Lashout(), new Lowkick(), new Lowsweep(), new Megakick(), new Megapunch(), new Payback(), new Poisonjab(), new Protect(), new Psychocut(), new Psychup(), new Raindance(), new Reflect(), new Rest(), new Retaliate(), new Rocksmash(), new Round(), new Screech(), new Shadowball(), new Shadowclaw(), new Sleeptalk(), new Snarl(), new Snore(), new Strength(), new Substitute(), new Sunnyday(), new Surf(), new Swagger(), new Swift(), new Swordsdance(), new Taunt(), new Thief(), new Throatchop(), new Torment(), new Tripleaxel(), new Whirlpool(), new Xscissor() };
-		public override List<Move> EggMoves => new List<Move>() { new Bite(), new Counter(), new Crushclaw(), new Doublehit(), new Fakeout(), new Feint(), new Icepunch(), new Iceshard(), new Iciclecrash(), new Spite(), new Throatchop() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Aerialace(), new Moves.Agility(), new Moves.Attract(), new Moves.Avalanche(), new Moves.Beatup(), new Moves.Blizzard(), new Moves.Brickbreak(), new Moves.Calmmind(), new Moves.Cut(), new Moves.Darkpulse(), new Moves.Dig(), new Moves.Doubleteam(), new Moves.Dreameater(), new Moves.Endure(), new Moves.Facade(), new Moves.Faketears(), new Moves.Falseswipe(), new Moves.Fling(), new Moves.Focuspunch(), new Moves.Foulplay(), new Moves.Hail(), new Moves.Hiddenpower(), new Moves.Icebeam(), new Moves.Icepunch(), new Moves.Icywind(), new Moves.Irontail(), new Moves.Lashout(), new Moves.Lowkick(), new Moves.Lowsweep(), new Moves.Megakick(), new Moves.Megapunch(), new Moves.Payback(), new Moves.Poisonjab(), new Moves.Protect(), new Moves.Psychocut(), new Moves.Psychup(), new Moves.Raindance(), new Moves.Reflect(), new Moves.Rest(), new Moves.Retaliate(), new Moves.Rocksmash(), new Moves.Round(), new Moves.Screech(), new Moves.Shadowball(), new Moves.Shadowclaw(), new Moves.Sleeptalk(), new Moves.Snarl(), new Moves.Snore(), new Moves.Strength(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Surf(), new Moves.Swagger(), new Moves.Swift(), new Moves.Swordsdance(), new Moves.Taunt(), new Moves.Thief(), new Moves.Throatchop(), new Moves.Torment(), new Moves.Tripleaxel(), new Moves.Whirlpool(), new Moves.Xscissor() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Bite(), new Moves.Counter(), new Moves.Crushclaw(), new Moves.Doublehit(), new Moves.Fakeout(), new Moves.Feint(), new Moves.Icepunch(), new Moves.Iceshard(), new Moves.Iciclecrash(), new Moves.Spite(), new Moves.Throatchop() };
 		public override int Weight => 280;
 		public override int ExpYield => 86;
 		public override int CatchRate => 60;

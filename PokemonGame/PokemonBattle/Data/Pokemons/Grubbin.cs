@@ -9,24 +9,24 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Grubbin : Pokemon
 	{
 		public override string Name => "Grubbin";
-		public override List<Ability> AvailableAbilities => new() {new Swarm() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Swarm() };
 		public override Stats BaseStats => new Stats(47, 62, 45, 55, 45, 46);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Visegrip(), new Mudslap() },
-			[5] = new List<Move>() { new Stringshot() },
-			[10] = new List<Move>() { new Bugbite() },
-			[15] = new List<Move>() { new Bite() },
-			[21] = new List<Move>() { new Spark() },
-			[25] = new List<Move>() { new Stickyweb() },
-			[30] = new List<Move>() { new Xscissor() },
-			[35] = new List<Move>() { new Crunch() },
-			[40] = new List<Move>() { new Dig() },
+			[1] = new List<Move>() { new Moves.Visegrip(), new Moves.Mudslap() },
+			[5] = new List<Move>() { new Moves.Stringshot() },
+			[10] = new List<Move>() { new Moves.Bugbite() },
+			[15] = new List<Move>() { new Moves.Bite() },
+			[21] = new List<Move>() { new Moves.Spark() },
+			[25] = new List<Move>() { new Moves.Stickyweb() },
+			[30] = new List<Move>() { new Moves.Xscissor() },
+			[35] = new List<Move>() { new Moves.Crunch() },
+			[40] = new List<Move>() { new Moves.Dig() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Acrobatics(), new Attract(), new Crunch(), new Dig(), new Electroweb(), new Endure(), new Facade(), new Hiddenpower(), new Lightscreen(), new Mudshot(), new Poisonjab(), new Protect(), new Raindance(), new Rest(), new Risingvoltage(), new Round(), new Screech(), new Skittersmack(), new Sleeptalk(), new Snore(), new Substitute(), new Thunderbolt(), new Thunderwave(), new Voltswitch(), new Wildcharge(), new Xscissor() };
-		public override List<Move> EggMoves => new List<Move>() { new Discharge(), new Harden() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Acrobatics(), new Moves.Attract(), new Moves.Crunch(), new Moves.Dig(), new Moves.Electroweb(), new Moves.Endure(), new Moves.Facade(), new Moves.Hiddenpower(), new Moves.Lightscreen(), new Moves.Mudshot(), new Moves.Poisonjab(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Risingvoltage(), new Moves.Round(), new Moves.Screech(), new Moves.Skittersmack(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Substitute(), new Moves.Thunderbolt(), new Moves.Thunderwave(), new Moves.Voltswitch(), new Moves.Wildcharge(), new Moves.Xscissor() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Discharge(), new Moves.Harden() };
 		public override int Weight => 44;
 		public override int ExpYield => 60;
 		public override int CatchRate => 255;

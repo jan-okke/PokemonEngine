@@ -9,23 +9,23 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Steenee : Pokemon
 	{
 		public override string Name => "Steenee";
-		public override List<Ability> AvailableAbilities => new() {new Leafguard(), new Oblivious() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Sweetveil() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Leafguard(), new Abilities.Oblivious() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Sweetveil() };
 		public override Stats BaseStats => new Stats(52, 40, 48, 40, 48, 62);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Flail(), new Splash(), new Playnice(), new Rapidspin(), new Razorleaf() },
-			[16] = new List<Move>() { new Sweetscent() },
-			[22] = new List<Move>() { new Magicalleaf() },
-			[28] = new List<Move>() { new Stomp() },
-			[34] = new List<Move>() { new Teeterdance() },
-			[40] = new List<Move>() { new Aromaticmist() },
-			[46] = new List<Move>() { new Aromatherapy() },
-			[52] = new List<Move>() { new Leafstorm() },
+			[1] = new List<Move>() { new Moves.Flail(), new Moves.Splash(), new Moves.Playnice(), new Moves.Rapidspin(), new Moves.Razorleaf() },
+			[16] = new List<Move>() { new Moves.Sweetscent() },
+			[22] = new List<Move>() { new Moves.Magicalleaf() },
+			[28] = new List<Move>() { new Moves.Stomp() },
+			[34] = new List<Move>() { new Moves.Teeterdance() },
+			[40] = new List<Move>() { new Moves.Aromaticmist() },
+			[46] = new List<Move>() { new Moves.Aromatherapy() },
+			[52] = new List<Move>() { new Moves.Leafstorm() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Bounce(), new Charm(), new Dazzlinggleam(), new Drainingkiss(), new Endure(), new Energyball(), new Facade(), new Fling(), new Gigadrain(), new Grassknot(), new Grassyglide(), new Helpinghand(), new Hiddenpower(), new Leafstorm(), new Lightscreen(), new Lowsweep(), new Magicalleaf(), new Payback(), new Playrough(), new Protect(), new Reflect(), new Rest(), new Round(), new Safeguard(), new Seedbomb(), new Sleeptalk(), new Snore(), new Solarbeam(), new Substitute(), new Sunnyday(), new Tripleaxel(), new Zenheadbutt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Bounce(), new Moves.Charm(), new Moves.Dazzlinggleam(), new Moves.Drainingkiss(), new Moves.Endure(), new Moves.Energyball(), new Moves.Facade(), new Moves.Fling(), new Moves.Gigadrain(), new Moves.Grassknot(), new Moves.Grassyglide(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Leafstorm(), new Moves.Lightscreen(), new Moves.Lowsweep(), new Moves.Magicalleaf(), new Moves.Payback(), new Moves.Playrough(), new Moves.Protect(), new Moves.Reflect(), new Moves.Rest(), new Moves.Round(), new Moves.Safeguard(), new Moves.Seedbomb(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Tripleaxel(), new Moves.Zenheadbutt() };
 		public override int Weight => 82;
 		public override int ExpYield => 102;
 		public override int CatchRate => 120;

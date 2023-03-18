@@ -9,22 +9,22 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Cleffa : Pokemon
 	{
 		public override string Name => "Cleffa";
-		public override List<Ability> AvailableAbilities => new() {new Cutecharm(), new Magicguard() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Friendguard() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Cutecharm(), new Abilities.Magicguard() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Friendguard() };
 		public override Stats BaseStats => new Stats(50, 25, 28, 45, 55, 15);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Splash(), new Pound(), new Copycat() },
-			[4] = new List<Move>() { new Sing() },
-			[8] = new List<Move>() { new Sweetkiss() },
-			[12] = new List<Move>() { new Disarmingvoice() },
-			[16] = new List<Move>() { new Encore() },
-			[20] = new List<Move>() { new Charm() },
+			[1] = new List<Move>() { new Moves.Splash(), new Moves.Pound(), new Moves.Copycat() },
+			[4] = new List<Move>() { new Moves.Sing() },
+			[8] = new List<Move>() { new Moves.Sweetkiss() },
+			[12] = new List<Move>() { new Moves.Disarmingvoice() },
+			[16] = new List<Move>() { new Moves.Encore() },
+			[20] = new List<Move>() { new Moves.Charm() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Amnesia(), new Attract(), new Bodyslam(), new Charm(), new Dig(), new Doubleteam(), new Drainingkiss(), new Dreameater(), new Encore(), new Endure(), new Facade(), new Faketears(), new Fireblast(), new Flamethrower(), new Flash(), new Fling(), new Grassknot(), new Helpinghand(), new Hiddenpower(), new Hypervoice(), new Icywind(), new Irontail(), new Lightscreen(), new Magicalleaf(), new Megakick(), new Megapunch(), new Metronome(), new Mistyterrain(), new Playrough(), new Protect(), new Psychic(), new Psychup(), new Psyshock(), new Raindance(), new Recycle(), new Reflect(), new Rest(), new Round(), new Safeguard(), new Shadowball(), new Shockwave(), new Sleeptalk(), new Snore(), new Solarbeam(), new Storedpower(), new Substitute(), new Sunnyday(), new Swagger(), new Thunderwave(), new Trick(), new Uproar(), new Waterpulse(), new Wonderroom(), new Workup(), new Zenheadbutt() };
-		public override List<Move> EggMoves => new List<Move>() { new Amnesia(), new Aromatherapy(), new Bellydrum(), new Covet(), new Faketears(), new Healpulse(), new Metronome(), new Mimic(), new Mistyterrain(), new Present(), new Splash(), new Storedpower(), new Tickle(), new Wish() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Amnesia(), new Moves.Attract(), new Moves.Bodyslam(), new Moves.Charm(), new Moves.Dig(), new Moves.Doubleteam(), new Moves.Drainingkiss(), new Moves.Dreameater(), new Moves.Encore(), new Moves.Endure(), new Moves.Facade(), new Moves.Faketears(), new Moves.Fireblast(), new Moves.Flamethrower(), new Moves.Flash(), new Moves.Fling(), new Moves.Grassknot(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Hypervoice(), new Moves.Icywind(), new Moves.Irontail(), new Moves.Lightscreen(), new Moves.Magicalleaf(), new Moves.Megakick(), new Moves.Megapunch(), new Moves.Metronome(), new Moves.Mistyterrain(), new Moves.Playrough(), new Moves.Protect(), new Moves.Psychic(), new Moves.Psychup(), new Moves.Psyshock(), new Moves.Raindance(), new Moves.Recycle(), new Moves.Reflect(), new Moves.Rest(), new Moves.Round(), new Moves.Safeguard(), new Moves.Shadowball(), new Moves.Shockwave(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Storedpower(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Thunderwave(), new Moves.Trick(), new Moves.Uproar(), new Moves.Waterpulse(), new Moves.Wonderroom(), new Moves.Workup(), new Moves.Zenheadbutt() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Amnesia(), new Moves.Aromatherapy(), new Moves.Bellydrum(), new Moves.Covet(), new Moves.Faketears(), new Moves.Healpulse(), new Moves.Metronome(), new Moves.Mimic(), new Moves.Mistyterrain(), new Moves.Present(), new Moves.Splash(), new Moves.Storedpower(), new Moves.Tickle(), new Moves.Wish() };
 		public override int Weight => 30;
 		public override int ExpYield => 44;
 		public override int CatchRate => 150;

@@ -9,22 +9,22 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Happiny : Pokemon
 	{
 		public override string Name => "Happiny";
-		public override List<Ability> AvailableAbilities => new() {new Naturalcure(), new Serenegrace() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Friendguard() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Naturalcure(), new Abilities.Serenegrace() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Friendguard() };
 		public override Stats BaseStats => new Stats(100, 5, 5, 15, 65, 30);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Minimize(), new Pound(), new Copycat() },
-			[4] = new List<Move>() { new Defensecurl() },
-			[8] = new List<Move>() { new Sweetkiss() },
-			[12] = new List<Move>() { new Disarmingvoice() },
-			[16] = new List<Move>() { new Covet() },
-			[20] = new List<Move>() { new Charm() },
+			[1] = new List<Move>() { new Moves.Minimize(), new Moves.Pound(), new Moves.Copycat() },
+			[4] = new List<Move>() { new Moves.Defensecurl() },
+			[8] = new List<Move>() { new Moves.Sweetkiss() },
+			[12] = new List<Move>() { new Moves.Disarmingvoice() },
+			[16] = new List<Move>() { new Moves.Covet() },
+			[20] = new List<Move>() { new Moves.Charm() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Charm(), new Doubleteam(), new Drainpunch(), new Dreameater(), new Endure(), new Facade(), new Fireblast(), new Flamethrower(), new Flash(), new Fling(), new Grassknot(), new Hail(), new Helpinghand(), new Hiddenpower(), new Hypervoice(), new Icywind(), new Lightscreen(), new Metronome(), new Protect(), new Psychic(), new Psychup(), new Raindance(), new Recycle(), new Rest(), new Round(), new Safeguard(), new Shadowball(), new Shockwave(), new Sleeptalk(), new Snore(), new Solarbeam(), new Storedpower(), new Substitute(), new Sunnyday(), new Swagger(), new Thunderwave(), new Uproar(), new Waterpulse(), new Workup(), new Zenheadbutt() };
-		public override List<Move> EggMoves => new List<Move>() { new Aromatherapy(), new Counter(), new Gravity(), new Healbell(), new Helpinghand(), new Lastresort(), new Metronome(), new Present(), new Seismictoss() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Charm(), new Moves.Doubleteam(), new Moves.Drainpunch(), new Moves.Dreameater(), new Moves.Endure(), new Moves.Facade(), new Moves.Fireblast(), new Moves.Flamethrower(), new Moves.Flash(), new Moves.Fling(), new Moves.Grassknot(), new Moves.Hail(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Hypervoice(), new Moves.Icywind(), new Moves.Lightscreen(), new Moves.Metronome(), new Moves.Protect(), new Moves.Psychic(), new Moves.Psychup(), new Moves.Raindance(), new Moves.Recycle(), new Moves.Rest(), new Moves.Round(), new Moves.Safeguard(), new Moves.Shadowball(), new Moves.Shockwave(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Storedpower(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Thunderwave(), new Moves.Uproar(), new Moves.Waterpulse(), new Moves.Workup(), new Moves.Zenheadbutt() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Aromatherapy(), new Moves.Counter(), new Moves.Gravity(), new Moves.Healbell(), new Moves.Helpinghand(), new Moves.Lastresort(), new Moves.Metronome(), new Moves.Present(), new Moves.Seismictoss() };
 		public override int Weight => 244;
 		public override int ExpYield => 110;
 		public override int CatchRate => 130;

@@ -9,27 +9,27 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Milcery : Pokemon
 	{
 		public override string Name => "Milcery";
-		public override List<Ability> AvailableAbilities => new() {new Sweetveil() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Aromaveil() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Sweetveil() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Aromaveil() };
 		public override Stats BaseStats => new Stats(45, 40, 40, 50, 61, 34);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Fairy };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Tackle(), new Aromaticmist() },
-			[5] = new List<Move>() { new Sweetkiss() },
-			[10] = new List<Move>() { new Sweetscent() },
-			[15] = new List<Move>() { new Drainingkiss() },
-			[20] = new List<Move>() { new Aromatherapy() },
-			[25] = new List<Move>() { new Attract() },
-			[30] = new List<Move>() { new Acidarmor() },
-			[35] = new List<Move>() { new Dazzlinggleam() },
-			[40] = new List<Move>() { new Recover() },
-			[45] = new List<Move>() { new Mistyterrain() },
-			[50] = new List<Move>() { new Entrainment() },
+			[1] = new List<Move>() { new Moves.Tackle(), new Moves.Aromaticmist() },
+			[5] = new List<Move>() { new Moves.Sweetkiss() },
+			[10] = new List<Move>() { new Moves.Sweetscent() },
+			[15] = new List<Move>() { new Moves.Drainingkiss() },
+			[20] = new List<Move>() { new Moves.Aromatherapy() },
+			[25] = new List<Move>() { new Moves.Attract() },
+			[30] = new List<Move>() { new Moves.Acidarmor() },
+			[35] = new List<Move>() { new Moves.Dazzlinggleam() },
+			[40] = new List<Move>() { new Moves.Recover() },
+			[45] = new List<Move>() { new Moves.Mistyterrain() },
+			[50] = new List<Move>() { new Moves.Entrainment() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Charm(), new Dazzlinggleam(), new Drainingkiss(), new Endure(), new Facade(), new Fling(), new Helpinghand(), new Hiddenpower(), new Mistyterrain(), new Protect(), new Rest(), new Round(), new Sleeptalk(), new Snore(), new Storedpower(), new Substitute() };
-		public override List<Move> EggMoves => new List<Move>() { new Babydolleyes(), new Lastresort() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Charm(), new Moves.Dazzlinggleam(), new Moves.Drainingkiss(), new Moves.Endure(), new Moves.Facade(), new Moves.Fling(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Mistyterrain(), new Moves.Protect(), new Moves.Rest(), new Moves.Round(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Storedpower(), new Moves.Substitute() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Babydolleyes(), new Moves.Lastresort() };
 		public override int Weight => 3;
 		public override int ExpYield => 54;
 		public override int CatchRate => 200;

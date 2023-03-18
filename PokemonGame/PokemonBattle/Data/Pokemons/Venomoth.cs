@@ -9,30 +9,30 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Venomoth : Pokemon
 	{
 		public override string Name => "Venomoth";
-		public override List<Ability> AvailableAbilities => new() {new Shielddust(), new Tintedlens() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Wonderskin() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Shielddust(), new Abilities.Tintedlens() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Wonderskin() };
 		public override Stats BaseStats => new Stats(70, 65, 60, 90, 75, 90);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Bug, PokemonType.Poison };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Gust() },
-			[1] = new List<Move>() { new Gust(), new Quiverdance(), new Bugbuzz(), new Whirlwind(), new Tackle(), new Disable(), new Strugglebug(), new Supersonic() },
-			[5] = new List<Move>() { new Supersonic() },
-			[11] = new List<Move>() { new Confusion() },
-			[13] = new List<Move>() { new Poisonpowder() },
-			[17] = new List<Move>() { new Psybeam() },
-			[23] = new List<Move>() { new Stunspore() },
-			[25] = new List<Move>() { new Megadrain() },
-			[29] = new List<Move>() { new Sleeppowder() },
-			[37] = new List<Move>() { new Leechlife() },
-			[41] = new List<Move>() { new Zenheadbutt() },
-			[47] = new List<Move>() { new Poisonfang() },
-			[55] = new List<Move>() { new Psychic() },
-			[59] = new List<Move>() { new Bugbuzz() },
-			[63] = new List<Move>() { new Quiverdance() },
+			[0] = new List<Move>() { new Moves.Gust() },
+			[1] = new List<Move>() { new Moves.Gust(), new Moves.Quiverdance(), new Moves.Bugbuzz(), new Moves.Whirlwind(), new Moves.Tackle(), new Moves.Disable(), new Moves.Strugglebug(), new Moves.Supersonic() },
+			[5] = new List<Move>() { new Moves.Supersonic() },
+			[11] = new List<Move>() { new Moves.Confusion() },
+			[13] = new List<Move>() { new Moves.Poisonpowder() },
+			[17] = new List<Move>() { new Moves.Psybeam() },
+			[23] = new List<Move>() { new Moves.Stunspore() },
+			[25] = new List<Move>() { new Moves.Megadrain() },
+			[29] = new List<Move>() { new Moves.Sleeppowder() },
+			[37] = new List<Move>() { new Moves.Leechlife() },
+			[41] = new List<Move>() { new Moves.Zenheadbutt() },
+			[47] = new List<Move>() { new Moves.Poisonfang() },
+			[55] = new List<Move>() { new Moves.Psychic() },
+			[59] = new List<Move>() { new Moves.Bugbuzz() },
+			[63] = new List<Move>() { new Moves.Quiverdance() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Acrobatics(), new Aerialace(), new Attract(), new Bugbite(), new Bugbuzz(), new Confide(), new Defog(), new Doubleteam(), new Endure(), new Energyball(), new Facade(), new Flash(), new Frustration(), new Gigadrain(), new Gigaimpact(), new Hiddenpower(), new Hyperbeam(), new Infestation(), new Leechlife(), new Protect(), new Psychic(), new Rest(), new Return(), new Roost(), new Round(), new Signalbeam(), new Skillswap(), new Sleeptalk(), new Sludgebomb(), new Snore(), new Solarbeam(), new Strugglebug(), new Substitute(), new Sunnyday(), new Swagger(), new Tailwind(), new Thief(), new Uturn(), new Venoshock(), new Zenheadbutt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Acrobatics(), new Moves.Aerialace(), new Moves.Attract(), new Moves.Bugbite(), new Moves.Bugbuzz(), new Moves.Confide(), new Moves.Defog(), new Moves.Doubleteam(), new Moves.Endure(), new Moves.Energyball(), new Moves.Facade(), new Moves.Flash(), new Moves.Frustration(), new Moves.Gigadrain(), new Moves.Gigaimpact(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Infestation(), new Moves.Leechlife(), new Moves.Protect(), new Moves.Psychic(), new Moves.Rest(), new Moves.Return(), new Moves.Roost(), new Moves.Round(), new Moves.Signalbeam(), new Moves.Skillswap(), new Moves.Sleeptalk(), new Moves.Sludgebomb(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Strugglebug(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Tailwind(), new Moves.Thief(), new Moves.Uturn(), new Moves.Venoshock(), new Moves.Zenheadbutt() };
 		public override int Weight => 125;
 		public override int ExpYield => 158;
 		public override int CatchRate => 75;

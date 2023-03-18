@@ -9,28 +9,28 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Stunfisk : Pokemon
 	{
 		public override string Name => "Stunfisk";
-		public override List<Ability> AvailableAbilities => new() {new Static(), new Limber() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Sandveil() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Static(), new Abilities.Limber() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Sandveil() };
 		public override Stats BaseStats => new Stats(109, 66, 84, 81, 99, 32);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Ground, PokemonType.Electric };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Mudslap(), new Tackle(), new Watergun(), new Thundershock() },
-			[5] = new List<Move>() { new Endure() },
-			[10] = new List<Move>() { new Mudshot() },
-			[15] = new List<Move>() { new Revenge() },
-			[20] = new List<Move>() { new Charge() },
-			[25] = new List<Move>() { new Suckerpunch() },
-			[30] = new List<Move>() { new Electricterrain() },
-			[35] = new List<Move>() { new Bounce() },
-			[40] = new List<Move>() { new Muddywater() },
-			[45] = new List<Move>() { new Discharge() },
-			[50] = new List<Move>() { new Flail() },
-			[55] = new List<Move>() { new Fissure() },
+			[1] = new List<Move>() { new Moves.Mudslap(), new Moves.Tackle(), new Moves.Watergun(), new Moves.Thundershock() },
+			[5] = new List<Move>() { new Moves.Endure() },
+			[10] = new List<Move>() { new Moves.Mudshot() },
+			[15] = new List<Move>() { new Moves.Revenge() },
+			[20] = new List<Move>() { new Moves.Charge() },
+			[25] = new List<Move>() { new Moves.Suckerpunch() },
+			[30] = new List<Move>() { new Moves.Electricterrain() },
+			[35] = new List<Move>() { new Moves.Bounce() },
+			[40] = new List<Move>() { new Moves.Muddywater() },
+			[45] = new List<Move>() { new Moves.Discharge() },
+			[50] = new List<Move>() { new Moves.Flail() },
+			[55] = new List<Move>() { new Moves.Fissure() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Bounce(), new Bulldoze(), new Dig(), new Earthpower(), new Earthquake(), new Eerieimpulse(), new Electricterrain(), new Electroweb(), new Endure(), new Facade(), new Foulplay(), new Hiddenpower(), new Lashout(), new Muddywater(), new Mudshot(), new Payback(), new Protect(), new Raindance(), new Rest(), new Revenge(), new Rockslide(), new Rocktomb(), new Round(), new Sandstorm(), new Scald(), new Sleeptalk(), new Sludgebomb(), new Sludgewave(), new Snore(), new Stealthrock(), new Stompingtantrum(), new Stoneedge(), new Substitute(), new Surf(), new Thunder(), new Thunderbolt(), new Thunderwave(), new Uproar() };
-		public override List<Move> EggMoves => new List<Move>() { new Astonish(), new Curse(), new Painsplit(), new Reflecttype(), new Spark(), new Spite(), new Yawn() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Bounce(), new Moves.Bulldoze(), new Moves.Dig(), new Moves.Earthpower(), new Moves.Earthquake(), new Moves.Eerieimpulse(), new Moves.Electricterrain(), new Moves.Electroweb(), new Moves.Endure(), new Moves.Facade(), new Moves.Foulplay(), new Moves.Hiddenpower(), new Moves.Lashout(), new Moves.Muddywater(), new Moves.Mudshot(), new Moves.Payback(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Revenge(), new Moves.Rockslide(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Sandstorm(), new Moves.Scald(), new Moves.Sleeptalk(), new Moves.Sludgebomb(), new Moves.Sludgewave(), new Moves.Snore(), new Moves.Stealthrock(), new Moves.Stompingtantrum(), new Moves.Stoneedge(), new Moves.Substitute(), new Moves.Surf(), new Moves.Thunder(), new Moves.Thunderbolt(), new Moves.Thunderwave(), new Moves.Uproar() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Astonish(), new Moves.Curse(), new Moves.Painsplit(), new Moves.Reflecttype(), new Moves.Spark(), new Moves.Spite(), new Moves.Yawn() };
 		public override int Weight => 110;
 		public override int ExpYield => 165;
 		public override int CatchRate => 75;

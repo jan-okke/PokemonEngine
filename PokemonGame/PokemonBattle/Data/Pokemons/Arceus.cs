@@ -9,25 +9,25 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Arceus : Pokemon
 	{
 		public override string Name => "Arceus";
-		public override List<Ability> AvailableAbilities => new() {new Multitype() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Multitype() };
 		public override Stats BaseStats => new Stats(120, 120, 120, 120, 120, 120);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Seismictoss(), new Cosmicpower() },
-			[10] = new List<Move>() { new Gravity() },
-			[20] = new List<Move>() { new Earthpower() },
-			[30] = new List<Move>() { new Hypervoice() },
-			[40] = new List<Move>() { new Extremespeed() },
-			[50] = new List<Move>() { new Healingwish() },
-			[60] = new List<Move>() { new Futuresight() },
-			[70] = new List<Move>() { new Recover() },
-			[80] = new List<Move>() { new Hyperbeam() },
-			[90] = new List<Move>() { new Perishsong() },
-			[100] = new List<Move>() { new Judgment() },
+			[1] = new List<Move>() { new Moves.Seismictoss(), new Moves.Cosmicpower() },
+			[10] = new List<Move>() { new Moves.Gravity() },
+			[20] = new List<Move>() { new Moves.Earthpower() },
+			[30] = new List<Move>() { new Moves.Hypervoice() },
+			[40] = new List<Move>() { new Moves.Extremespeed() },
+			[50] = new List<Move>() { new Moves.Healingwish() },
+			[60] = new List<Move>() { new Moves.Futuresight() },
+			[70] = new List<Move>() { new Moves.Recover() },
+			[80] = new List<Move>() { new Moves.Hyperbeam() },
+			[90] = new List<Move>() { new Moves.Perishsong() },
+			[100] = new List<Move>() { new Moves.Judgment() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Aerialace(), new Aquatail(), new Avalanche(), new Blizzard(), new Brickbreak(), new Brine(), new Bulldoze(), new Bulletseed(), new Calmmind(), new Chargebeam(), new Confide(), new Cut(), new Darkpulse(), new Defog(), new Dive(), new Doubleteam(), new Dracometeor(), new Dragonclaw(), new Dragonpulse(), new Dreameater(), new Earthpower(), new Earthquake(), new Echoedvoice(), new Endure(), new Energyball(), new Facade(), new Fireblast(), new Flamethrower(), new Flash(), new Flashcannon(), new Fly(), new Focusblast(), new Frustration(), new Gigadrain(), new Gigaimpact(), new Grassknot(), new Gravity(), new Hail(), new Heatwave(), new Hiddenpower(), new Hyperbeam(), new Hypervoice(), new Icebeam(), new Icywind(), new Irondefense(), new Ironhead(), new Irontail(), new Laserfocus(), new Lastresort(), new Lightscreen(), new Liquidation(), new Magiccoat(), new Outrage(), new Overheat(), new Payback(), new Poisonjab(), new Protect(), new Psychic(), new Psychup(), new Psyshock(), new Quash(), new Raindance(), new Recycle(), new Reflect(), new Rest(), new Return(), new Roar(), new Rockclimb(), new Rockslide(), new Rocksmash(), new Rocktomb(), new Round(), new Safeguard(), new Sandstorm(), new Shadowball(), new Shadowclaw(), new Shockwave(), new Signalbeam(), new Sleeptalk(), new Sludgebomb(), new Snarl(), new Snore(), new Solarbeam(), new Stealthrock(), new Stoneedge(), new Strength(), new Substitute(), new Sunnyday(), new Surf(), new Swagger(), new Swordsdance(), new Tailwind(), new Telekinesis(), new Thunder(), new Thunderbolt(), new Thunderwave(), new Trick(), new Trickroom(), new Waterfall(), new Waterpulse(), new Willowisp(), new Workup(), new Xscissor(), new Zenheadbutt() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Aerialace(), new Moves.Aquatail(), new Moves.Avalanche(), new Moves.Blizzard(), new Moves.Brickbreak(), new Moves.Brine(), new Moves.Bulldoze(), new Moves.Bulletseed(), new Moves.Calmmind(), new Moves.Chargebeam(), new Moves.Confide(), new Moves.Cut(), new Moves.Darkpulse(), new Moves.Defog(), new Moves.Dive(), new Moves.Doubleteam(), new Moves.Dracometeor(), new Moves.Dragonclaw(), new Moves.Dragonpulse(), new Moves.Dreameater(), new Moves.Earthpower(), new Moves.Earthquake(), new Moves.Echoedvoice(), new Moves.Endure(), new Moves.Energyball(), new Moves.Facade(), new Moves.Fireblast(), new Moves.Flamethrower(), new Moves.Flash(), new Moves.Flashcannon(), new Moves.Fly(), new Moves.Focusblast(), new Moves.Frustration(), new Moves.Gigadrain(), new Moves.Gigaimpact(), new Moves.Grassknot(), new Moves.Gravity(), new Moves.Hail(), new Moves.Heatwave(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Hypervoice(), new Moves.Icebeam(), new Moves.Icywind(), new Moves.Irondefense(), new Moves.Ironhead(), new Moves.Irontail(), new Moves.Laserfocus(), new Moves.Lastresort(), new Moves.Lightscreen(), new Moves.Liquidation(), new Moves.Magiccoat(), new Moves.Outrage(), new Moves.Overheat(), new Moves.Payback(), new Moves.Poisonjab(), new Moves.Protect(), new Moves.Psychic(), new Moves.Psychup(), new Moves.Psyshock(), new Moves.Quash(), new Moves.Raindance(), new Moves.Recycle(), new Moves.Reflect(), new Moves.Rest(), new Moves.Return(), new Moves.Roar(), new Moves.Rockclimb(), new Moves.Rockslide(), new Moves.Rocksmash(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Safeguard(), new Moves.Sandstorm(), new Moves.Shadowball(), new Moves.Shadowclaw(), new Moves.Shockwave(), new Moves.Signalbeam(), new Moves.Sleeptalk(), new Moves.Sludgebomb(), new Moves.Snarl(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Stealthrock(), new Moves.Stoneedge(), new Moves.Strength(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Surf(), new Moves.Swagger(), new Moves.Swordsdance(), new Moves.Tailwind(), new Moves.Telekinesis(), new Moves.Thunder(), new Moves.Thunderbolt(), new Moves.Thunderwave(), new Moves.Trick(), new Moves.Trickroom(), new Moves.Waterfall(), new Moves.Waterpulse(), new Moves.Willowisp(), new Moves.Workup(), new Moves.Xscissor(), new Moves.Zenheadbutt() };
 		public override int Weight => 3200;
 		public override int ExpYield => 360;
 		public override int CatchRate => 3;

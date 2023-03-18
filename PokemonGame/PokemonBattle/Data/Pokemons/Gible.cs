@@ -9,27 +9,27 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Gible : Pokemon
 	{
 		public override string Name => "Gible";
-		public override List<Ability> AvailableAbilities => new() {new Sandveil() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Roughskin() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Sandveil() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Roughskin() };
 		public override Stats BaseStats => new Stats(58, 70, 45, 40, 45, 42);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Slow;
 		public override List<PokemonType> Types => new() {PokemonType.Dragon, PokemonType.Ground };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Sandtomb(), new Tackle() },
-			[6] = new List<Move>() { new Sandattack() },
-			[12] = new List<Move>() { new Dragonbreath() },
-			[18] = new List<Move>() { new Bulldoze() },
-			[25] = new List<Move>() { new Bite() },
-			[30] = new List<Move>() { new Slash() },
-			[36] = new List<Move>() { new Dragonclaw() },
-			[42] = new List<Move>() { new Dig() },
-			[48] = new List<Move>() { new Sandstorm() },
-			[54] = new List<Move>() { new Takedown() },
-			[60] = new List<Move>() { new Dragonrush() },
+			[1] = new List<Move>() { new Moves.Sandtomb(), new Moves.Tackle() },
+			[6] = new List<Move>() { new Moves.Sandattack() },
+			[12] = new List<Move>() { new Moves.Dragonbreath() },
+			[18] = new List<Move>() { new Moves.Bulldoze() },
+			[25] = new List<Move>() { new Moves.Bite() },
+			[30] = new List<Move>() { new Moves.Slash() },
+			[36] = new List<Move>() { new Moves.Dragonclaw() },
+			[42] = new List<Move>() { new Moves.Dig() },
+			[48] = new List<Move>() { new Moves.Sandstorm() },
+			[54] = new List<Move>() { new Moves.Takedown() },
+			[60] = new List<Move>() { new Moves.Dragonrush() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Aerialace(), new Attract(), new Bodyslam(), new Bulldoze(), new Cut(), new Dig(), new Doubleteam(), new Dracometeor(), new Dragonclaw(), new Dragonpulse(), new Earthpower(), new Earthquake(), new Endure(), new Facade(), new Fireblast(), new Flamethrower(), new Hiddenpower(), new Ironhead(), new Irontail(), new Mudshot(), new Outrage(), new Protect(), new Raindance(), new Rest(), new Roar(), new Rockclimb(), new Rockslide(), new Rocksmash(), new Rocktomb(), new Round(), new Sandstorm(), new Sandtomb(), new Scaleshot(), new Scaryface(), new Scorchingsands(), new Shadowclaw(), new Sleeptalk(), new Snore(), new Stealthrock(), new Stoneedge(), new Strength(), new Substitute(), new Sunnyday(), new Swagger(), new Swift() };
-		public override List<Move> EggMoves => new List<Move>() { new Bodyslam(), new Doubleedge(), new Dragonbreath(), new Ironhead(), new Metalclaw(), new Mudshot(), new Outrage(), new Sandtomb(), new Scaryface(), new Thrash(), new Twister() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Aerialace(), new Moves.Attract(), new Moves.Bodyslam(), new Moves.Bulldoze(), new Moves.Cut(), new Moves.Dig(), new Moves.Doubleteam(), new Moves.Dracometeor(), new Moves.Dragonclaw(), new Moves.Dragonpulse(), new Moves.Earthpower(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Facade(), new Moves.Fireblast(), new Moves.Flamethrower(), new Moves.Hiddenpower(), new Moves.Ironhead(), new Moves.Irontail(), new Moves.Mudshot(), new Moves.Outrage(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Roar(), new Moves.Rockclimb(), new Moves.Rockslide(), new Moves.Rocksmash(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Sandstorm(), new Moves.Sandtomb(), new Moves.Scaleshot(), new Moves.Scaryface(), new Moves.Scorchingsands(), new Moves.Shadowclaw(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Stealthrock(), new Moves.Stoneedge(), new Moves.Strength(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Swift() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Bodyslam(), new Moves.Doubleedge(), new Moves.Dragonbreath(), new Moves.Ironhead(), new Moves.Metalclaw(), new Moves.Mudshot(), new Moves.Outrage(), new Moves.Sandtomb(), new Moves.Scaryface(), new Moves.Thrash(), new Moves.Twister() };
 		public override int Weight => 205;
 		public override int ExpYield => 60;
 		public override int CatchRate => 45;

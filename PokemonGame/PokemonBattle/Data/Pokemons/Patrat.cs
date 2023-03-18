@@ -9,33 +9,33 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Patrat : Pokemon
 	{
 		public override string Name => "Patrat";
-		public override List<Ability> AvailableAbilities => new() {new Runaway(), new Keeneye() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Analytic() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Runaway(), new Abilities.Keeneye() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Analytic() };
 		public override Stats BaseStats => new Stats(45, 55, 39, 35, 39, 42);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Tackle() },
-			[3] = new List<Move>() { new Leer() },
-			[6] = new List<Move>() { new Bite() },
-			[8] = new List<Move>() { new Bide() },
-			[11] = new List<Move>() { new Detect() },
-			[13] = new List<Move>() { new Sandattack() },
-			[16] = new List<Move>() { new Crunch() },
-			[18] = new List<Move>() { new Hypnosis() },
-			[21] = new List<Move>() { new Superfang() },
-			[23] = new List<Move>() { new Afteryou() },
-			[26] = new List<Move>() { new Focusenergy() },
-			[28] = new List<Move>() { new Workup() },
-			[31] = new List<Move>() { new Hyperfang() },
-			[33] = new List<Move>() { new Nastyplot() },
-			[36] = new List<Move>() { new Meanlook() },
-			[38] = new List<Move>() { new Batonpass() },
-			[41] = new List<Move>() { new Slam() },
+			[1] = new List<Move>() { new Moves.Tackle() },
+			[3] = new List<Move>() { new Moves.Leer() },
+			[6] = new List<Move>() { new Moves.Bite() },
+			[8] = new List<Move>() { new Moves.Bide() },
+			[11] = new List<Move>() { new Moves.Detect() },
+			[13] = new List<Move>() { new Moves.Sandattack() },
+			[16] = new List<Move>() { new Moves.Crunch() },
+			[18] = new List<Move>() { new Moves.Hypnosis() },
+			[21] = new List<Move>() { new Moves.Superfang() },
+			[23] = new List<Move>() { new Moves.Afteryou() },
+			[26] = new List<Move>() { new Moves.Focusenergy() },
+			[28] = new List<Move>() { new Moves.Workup() },
+			[31] = new List<Move>() { new Moves.Hyperfang() },
+			[33] = new List<Move>() { new Moves.Nastyplot() },
+			[36] = new List<Move>() { new Moves.Meanlook() },
+			[38] = new List<Move>() { new Moves.Batonpass() },
+			[41] = new List<Move>() { new Moves.Slam() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Afteryou(), new Aquatail(), new Attract(), new Confide(), new Covet(), new Cut(), new Doubleteam(), new Endeavor(), new Facade(), new Fling(), new Frustration(), new Grassknot(), new Gunkshot(), new Helpinghand(), new Hiddenpower(), new Irontail(), new Laserfocus(), new Lastresort(), new Lowkick(), new Protect(), new Raindance(), new Rest(), new Return(), new Round(), new Seedbomb(), new Shadowball(), new Shockwave(), new Sleeptalk(), new Snore(), new Substitute(), new Sunnyday(), new Superfang(), new Swagger(), new Swordsdance(), new Thunderbolt(), new Toxic(), new Workup(), new Zenheadbutt() };
-		public override List<Move> EggMoves => new List<Move>() { new Assurance(), new Bulletseed(), new Flail(), new Foresight(), new Irontail(), new Pursuit(), new Revenge(), new Screech(), new Tearfullook() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Afteryou(), new Moves.Aquatail(), new Moves.Attract(), new Moves.Confide(), new Moves.Covet(), new Moves.Cut(), new Moves.Doubleteam(), new Moves.Endeavor(), new Moves.Facade(), new Moves.Fling(), new Moves.Frustration(), new Moves.Grassknot(), new Moves.Gunkshot(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Irontail(), new Moves.Laserfocus(), new Moves.Lastresort(), new Moves.Lowkick(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Return(), new Moves.Round(), new Moves.Seedbomb(), new Moves.Shadowball(), new Moves.Shockwave(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Superfang(), new Moves.Swagger(), new Moves.Swordsdance(), new Moves.Thunderbolt(), new Moves.Toxic(), new Moves.Workup(), new Moves.Zenheadbutt() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Assurance(), new Moves.Bulletseed(), new Moves.Flail(), new Moves.Foresight(), new Moves.Irontail(), new Moves.Pursuit(), new Moves.Revenge(), new Moves.Screech(), new Moves.Tearfullook() };
 		public override int Weight => 116;
 		public override int ExpYield => 51;
 		public override int CatchRate => 255;

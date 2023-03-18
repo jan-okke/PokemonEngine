@@ -9,16 +9,16 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Cinccino : Pokemon
 	{
 		public override string Name => "Cinccino";
-		public override List<Ability> AvailableAbilities => new() {new Cutecharm(), new Technician() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Skilllink() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Cutecharm(), new Abilities.Technician() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Skilllink() };
 		public override Stats BaseStats => new Stats(75, 95, 60, 65, 60, 115);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Fast;
 		public override List<PokemonType> Types => new() {PokemonType.Normal };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Bulletseed(), new Rockblast(), new Sing(), new Charm(), new Swift(), new Encore(), new Afteryou(), new Tailslap(), new Tickle(), new Slam(), new Hypervoice(), new Lastresort(), new Pound(), new Babydolleyes(), new Helpinghand(), new Echoedvoice() },
+			[1] = new List<Move>() { new Moves.Bulletseed(), new Moves.Rockblast(), new Moves.Sing(), new Moves.Charm(), new Moves.Swift(), new Moves.Encore(), new Moves.Afteryou(), new Moves.Tailslap(), new Moves.Tickle(), new Moves.Slam(), new Moves.Hypervoice(), new Moves.Lastresort(), new Moves.Pound(), new Moves.Babydolleyes(), new Moves.Helpinghand(), new Moves.Echoedvoice() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Bulletseed(), new Calmmind(), new Charm(), new Dazzlinggleam(), new Dig(), new Encore(), new Endure(), new Facade(), new Faketears(), new Fling(), new Focusblast(), new Gigaimpact(), new Grassknot(), new Gunkshot(), new Helpinghand(), new Hiddenpower(), new Hyperbeam(), new Hypervoice(), new Irontail(), new Lightscreen(), new Playrough(), new Protect(), new Raindance(), new Rest(), new Retaliate(), new Rockblast(), new Round(), new Safeguard(), new Seedbomb(), new Sleeptalk(), new Snore(), new Substitute(), new Sunnyday(), new Swift(), new Tailslap(), new Thief(), new Thunder(), new Thunderbolt(), new Thunderwave(), new Tripleaxel(), new Uproar(), new Uturn(), new Workup() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Bulletseed(), new Moves.Calmmind(), new Moves.Charm(), new Moves.Dazzlinggleam(), new Moves.Dig(), new Moves.Encore(), new Moves.Endure(), new Moves.Facade(), new Moves.Faketears(), new Moves.Fling(), new Moves.Focusblast(), new Moves.Gigaimpact(), new Moves.Grassknot(), new Moves.Gunkshot(), new Moves.Helpinghand(), new Moves.Hiddenpower(), new Moves.Hyperbeam(), new Moves.Hypervoice(), new Moves.Irontail(), new Moves.Lightscreen(), new Moves.Playrough(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Retaliate(), new Moves.Rockblast(), new Moves.Round(), new Moves.Safeguard(), new Moves.Seedbomb(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swift(), new Moves.Tailslap(), new Moves.Thief(), new Moves.Thunder(), new Moves.Thunderbolt(), new Moves.Thunderwave(), new Moves.Tripleaxel(), new Moves.Uproar(), new Moves.Uturn(), new Moves.Workup() };
 		public override int Weight => 75;
 		public override int ExpYield => 165;
 		public override int CatchRate => 60;

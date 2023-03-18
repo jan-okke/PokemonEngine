@@ -9,27 +9,27 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Walrein : Pokemon
 	{
 		public override string Name => "Walrein";
-		public override List<Ability> AvailableAbilities => new() {new Thickfat(), new Icebody() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Oblivious() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Thickfat(), new Abilities.Icebody() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Oblivious() };
 		public override Stats BaseStats => new Stats(110, 80, 90, 95, 90, 65);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Ice, PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Swagger(), new Crunch(), new Icefang(), new Rollout(), new Defensecurl(), new Growl(), new Watergun() },
-			[12] = new List<Move>() { new Powdersnow() },
-			[16] = new List<Move>() { new Rest() },
-			[20] = new List<Move>() { new Snore() },
-			[24] = new List<Move>() { new Brine() },
-			[28] = new List<Move>() { new Aurorabeam() },
-			[35] = new List<Move>() { new Encore() },
-			[40] = new List<Move>() { new Bodyslam() },
-			[48] = new List<Move>() { new Surf() },
-			[56] = new List<Move>() { new Blizzard() },
-			[64] = new List<Move>() { new Hail() },
-			[72] = new List<Move>() { new Sheercold() },
+			[1] = new List<Move>() { new Moves.Swagger(), new Moves.Crunch(), new Moves.Icefang(), new Moves.Rollout(), new Moves.Defensecurl(), new Moves.Growl(), new Moves.Watergun() },
+			[12] = new List<Move>() { new Moves.Powdersnow() },
+			[16] = new List<Move>() { new Moves.Rest() },
+			[20] = new List<Move>() { new Moves.Snore() },
+			[24] = new List<Move>() { new Moves.Brine() },
+			[28] = new List<Move>() { new Moves.Aurorabeam() },
+			[35] = new List<Move>() { new Moves.Encore() },
+			[40] = new List<Move>() { new Moves.Bodyslam() },
+			[48] = new List<Move>() { new Moves.Surf() },
+			[56] = new List<Move>() { new Moves.Blizzard() },
+			[64] = new List<Move>() { new Moves.Hail() },
+			[72] = new List<Move>() { new Moves.Sheercold() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Avalanche(), new Blizzard(), new Bodypress(), new Bodyslam(), new Brine(), new Bulldoze(), new Crunch(), new Dive(), new Doubleteam(), new Earthquake(), new Encore(), new Endure(), new Facade(), new Gigaimpact(), new Hail(), new Heavyslam(), new Hiddenpower(), new Hydropump(), new Hyperbeam(), new Icebeam(), new Icefang(), new Iciclespear(), new Icywind(), new Ironhead(), new Irontail(), new Liquidation(), new Protect(), new Raindance(), new Rest(), new Roar(), new Rockslide(), new Rocksmash(), new Rocktomb(), new Round(), new Sleeptalk(), new Snore(), new Steelroller(), new Stompingtantrum(), new Strength(), new Substitute(), new Surf(), new Swagger(), new Swordsdance(), new Waterfall(), new Waterpulse(), new Whirlpool() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Avalanche(), new Moves.Blizzard(), new Moves.Bodypress(), new Moves.Bodyslam(), new Moves.Brine(), new Moves.Bulldoze(), new Moves.Crunch(), new Moves.Dive(), new Moves.Doubleteam(), new Moves.Earthquake(), new Moves.Encore(), new Moves.Endure(), new Moves.Facade(), new Moves.Gigaimpact(), new Moves.Hail(), new Moves.Heavyslam(), new Moves.Hiddenpower(), new Moves.Hydropump(), new Moves.Hyperbeam(), new Moves.Icebeam(), new Moves.Icefang(), new Moves.Iciclespear(), new Moves.Icywind(), new Moves.Ironhead(), new Moves.Irontail(), new Moves.Liquidation(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Roar(), new Moves.Rockslide(), new Moves.Rocksmash(), new Moves.Rocktomb(), new Moves.Round(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Steelroller(), new Moves.Stompingtantrum(), new Moves.Strength(), new Moves.Substitute(), new Moves.Surf(), new Moves.Swagger(), new Moves.Swordsdance(), new Moves.Waterfall(), new Moves.Waterpulse(), new Moves.Whirlpool() };
 		public override int Weight => 1506;
 		public override int ExpYield => 265;
 		public override int CatchRate => 45;

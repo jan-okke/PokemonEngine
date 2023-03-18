@@ -9,32 +9,32 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Cacnea : Pokemon
 	{
 		public override string Name => "Cacnea";
-		public override List<Ability> AvailableAbilities => new() {new Sandveil() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Waterabsorb() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Sandveil() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Waterabsorb() };
 		public override Stats BaseStats => new Stats(50, 85, 40, 85, 40, 35);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Poisonsting(), new Leer() },
-			[4] = new List<Move>() { new Absorb() },
-			[7] = new List<Move>() { new Growth() },
-			[10] = new List<Move>() { new Leechseed() },
-			[13] = new List<Move>() { new Sandattack() },
-			[16] = new List<Move>() { new Poisonjab() },
-			[19] = new List<Move>() { new Assurance() },
-			[22] = new List<Move>() { new Ingrain() },
-			[26] = new List<Move>() { new Payback() },
-			[30] = new List<Move>() { new Spikes() },
-			[34] = new List<Move>() { new Suckerpunch() },
-			[38] = new List<Move>() { new Pinmissile() },
-			[42] = new List<Move>() { new Energyball() },
-			[46] = new List<Move>() { new Cottonspore() },
-			[50] = new List<Move>() { new Sandstorm() },
-			[54] = new List<Move>() { new Destinybond() },
+			[1] = new List<Move>() { new Moves.Poisonsting(), new Moves.Leer() },
+			[4] = new List<Move>() { new Moves.Absorb() },
+			[7] = new List<Move>() { new Moves.Growth() },
+			[10] = new List<Move>() { new Moves.Leechseed() },
+			[13] = new List<Move>() { new Moves.Sandattack() },
+			[16] = new List<Move>() { new Moves.Poisonjab() },
+			[19] = new List<Move>() { new Moves.Assurance() },
+			[22] = new List<Move>() { new Moves.Ingrain() },
+			[26] = new List<Move>() { new Moves.Payback() },
+			[30] = new List<Move>() { new Moves.Spikes() },
+			[34] = new List<Move>() { new Moves.Suckerpunch() },
+			[38] = new List<Move>() { new Moves.Pinmissile() },
+			[42] = new List<Move>() { new Moves.Energyball() },
+			[46] = new List<Move>() { new Moves.Cottonspore() },
+			[50] = new List<Move>() { new Moves.Sandstorm() },
+			[54] = new List<Move>() { new Moves.Destinybond() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Attract(), new Block(), new Brickbreak(), new Bulletseed(), new Confide(), new Cut(), new Darkpulse(), new Doubleteam(), new Drainpunch(), new Endure(), new Energyball(), new Facade(), new Flash(), new Fling(), new Focuspunch(), new Frustration(), new Gigadrain(), new Grassknot(), new Hiddenpower(), new Lowkick(), new Nastyplot(), new Naturepower(), new Payback(), new Poisonjab(), new Poweruppunch(), new Protect(), new Rest(), new Return(), new Roleplay(), new Round(), new Sandstorm(), new Seedbomb(), new Sleeptalk(), new Snore(), new Solarbeam(), new Spite(), new Substitute(), new Sunnyday(), new Swagger(), new Swordsdance(), new Synthesis(), new Thunderpunch(), new Venoshock(), new Worryseed() };
-		public override List<Move> EggMoves => new List<Move>() { new Acid(), new Belch(), new Block(), new Counter(), new Disable(), new Dynamicpunch(), new Fellstinger(), new Lowkick(), new Magicalleaf(), new Poweruppunch(), new Seedbomb(), new Switcheroo(), new Teeterdance(), new Worryseed() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Attract(), new Moves.Block(), new Moves.Brickbreak(), new Moves.Bulletseed(), new Moves.Confide(), new Moves.Cut(), new Moves.Darkpulse(), new Moves.Doubleteam(), new Moves.Drainpunch(), new Moves.Endure(), new Moves.Energyball(), new Moves.Facade(), new Moves.Flash(), new Moves.Fling(), new Moves.Focuspunch(), new Moves.Frustration(), new Moves.Gigadrain(), new Moves.Grassknot(), new Moves.Hiddenpower(), new Moves.Lowkick(), new Moves.Nastyplot(), new Moves.Naturepower(), new Moves.Payback(), new Moves.Poisonjab(), new Moves.Poweruppunch(), new Moves.Protect(), new Moves.Rest(), new Moves.Return(), new Moves.Roleplay(), new Moves.Round(), new Moves.Sandstorm(), new Moves.Seedbomb(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Spite(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Swagger(), new Moves.Swordsdance(), new Moves.Synthesis(), new Moves.Thunderpunch(), new Moves.Venoshock(), new Moves.Worryseed() };
+		public override List<Move> EggMoves => new List<Move>() { new Moves.Acid(), new Moves.Belch(), new Moves.Block(), new Moves.Counter(), new Moves.Disable(), new Moves.Dynamicpunch(), new Moves.Fellstinger(), new Moves.Lowkick(), new Moves.Magicalleaf(), new Moves.Poweruppunch(), new Moves.Seedbomb(), new Moves.Switcheroo(), new Moves.Teeterdance(), new Moves.Worryseed() };
 		public override int Weight => 513;
 		public override int ExpYield => 67;
 		public override int CatchRate => 190;

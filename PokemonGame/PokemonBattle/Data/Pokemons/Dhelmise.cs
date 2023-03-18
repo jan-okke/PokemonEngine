@@ -9,31 +9,31 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Dhelmise : Pokemon
 	{
 		public override string Name => "Dhelmise";
-		public override List<Ability> AvailableAbilities => new() {new Steelworker() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Steelworker() };
 		public override Stats BaseStats => new Stats(70, 131, 100, 86, 90, 40);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Medium;
 		public override List<PokemonType> Types => new() {PokemonType.Ghost, PokemonType.Grass };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[1] = new List<Move>() { new Absorb(), new Rapidspin() },
-			[4] = new List<Move>() { new Astonish() },
-			[8] = new List<Move>() { new Wrap() },
-			[12] = new List<Move>() { new Megadrain() },
-			[16] = new List<Move>() { new Growth() },
-			[20] = new List<Move>() { new Gyroball() },
-			[24] = new List<Move>() { new Switcheroo() },
-			[28] = new List<Move>() { new Gigadrain() },
-			[32] = new List<Move>() { new Whirlpool() },
-			[36] = new List<Move>() { new Heavyslam() },
-			[40] = new List<Move>() { new Slam() },
-			[44] = new List<Move>() { new Shadowball() },
-			[48] = new List<Move>() { new Metalsound() },
-			[52] = new List<Move>() { new Anchorshot() },
-			[56] = new List<Move>() { new Energyball() },
-			[60] = new List<Move>() { new Phantomforce() },
-			[64] = new List<Move>() { new Powerwhip() },
+			[1] = new List<Move>() { new Moves.Absorb(), new Moves.Rapidspin() },
+			[4] = new List<Move>() { new Moves.Astonish() },
+			[8] = new List<Move>() { new Moves.Wrap() },
+			[12] = new List<Move>() { new Moves.Megadrain() },
+			[16] = new List<Move>() { new Moves.Growth() },
+			[20] = new List<Move>() { new Moves.Gyroball() },
+			[24] = new List<Move>() { new Moves.Switcheroo() },
+			[28] = new List<Move>() { new Moves.Gigadrain() },
+			[32] = new List<Move>() { new Moves.Whirlpool() },
+			[36] = new List<Move>() { new Moves.Heavyslam() },
+			[40] = new List<Move>() { new Moves.Slam() },
+			[44] = new List<Move>() { new Moves.Shadowball() },
+			[48] = new List<Move>() { new Moves.Metalsound() },
+			[52] = new List<Move>() { new Moves.Anchorshot() },
+			[56] = new List<Move>() { new Moves.Energyball() },
+			[60] = new List<Move>() { new Moves.Phantomforce() },
+			[64] = new List<Move>() { new Moves.Powerwhip() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Allyswitch(), new Assurance(), new Bodypress(), new Brickbreak(), new Brine(), new Brutalswing(), new Bulldoze(), new Earthquake(), new Endure(), new Energyball(), new Facade(), new Flashcannon(), new Gigadrain(), new Gigaimpact(), new Grassknot(), new Grassyglide(), new Gyroball(), new Heavyslam(), new Helpinghand(), new Hex(), new Hiddenpower(), new Hydropump(), new Hyperbeam(), new Irondefense(), new Ironhead(), new Liquidation(), new Muddywater(), new Payback(), new Phantomforce(), new Poltergeist(), new Powerwhip(), new Protect(), new Raindance(), new Rest(), new Rockslide(), new Round(), new Shadowball(), new Shadowclaw(), new Sleeptalk(), new Sludgewave(), new Snore(), new Solarbeam(), new Solarblade(), new Steelroller(), new Substitute(), new Sunnyday(), new Surf(), new Swordsdance(), new Thief(), new Whirlpool() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Allyswitch(), new Moves.Assurance(), new Moves.Bodypress(), new Moves.Brickbreak(), new Moves.Brine(), new Moves.Brutalswing(), new Moves.Bulldoze(), new Moves.Earthquake(), new Moves.Endure(), new Moves.Energyball(), new Moves.Facade(), new Moves.Flashcannon(), new Moves.Gigadrain(), new Moves.Gigaimpact(), new Moves.Grassknot(), new Moves.Grassyglide(), new Moves.Gyroball(), new Moves.Heavyslam(), new Moves.Helpinghand(), new Moves.Hex(), new Moves.Hiddenpower(), new Moves.Hydropump(), new Moves.Hyperbeam(), new Moves.Irondefense(), new Moves.Ironhead(), new Moves.Liquidation(), new Moves.Muddywater(), new Moves.Payback(), new Moves.Phantomforce(), new Moves.Poltergeist(), new Moves.Powerwhip(), new Moves.Protect(), new Moves.Raindance(), new Moves.Rest(), new Moves.Rockslide(), new Moves.Round(), new Moves.Shadowball(), new Moves.Shadowclaw(), new Moves.Sleeptalk(), new Moves.Sludgewave(), new Moves.Snore(), new Moves.Solarbeam(), new Moves.Solarblade(), new Moves.Steelroller(), new Moves.Substitute(), new Moves.Sunnyday(), new Moves.Surf(), new Moves.Swordsdance(), new Moves.Thief(), new Moves.Whirlpool() };
 		public override int Weight => 2100;
 		public override int ExpYield => 181;
 		public override int CatchRate => 25;

@@ -9,25 +9,25 @@ namespace PokemonGame.PokemonBattle.Data.Pokemons
 	public class Inteleon : Pokemon
 	{
 		public override string Name => "Inteleon";
-		public override List<Ability> AvailableAbilities => new() {new Torrent() };
-		public override List<Ability> AvailableHiddenAbilities => new() {new Sniper() };
+		public override List<Ability> AvailableAbilities => new() {new Abilities.Torrent() };
+		public override List<Ability> AvailableHiddenAbilities => new() {new Abilities.Sniper() };
 		public override Stats BaseStats => new Stats(70, 85, 65, 125, 65, 120);
 		public override ExperienceGroup ExperienceGroup => ExperienceGroup.Parabolic;
 		public override List<PokemonType> Types => new() {PokemonType.Water };
 		public override Dictionary<int, List<Move>> LevelUpLearnSet => new()
 		{
-			[0] = new List<Move>() { new Snipeshot() },
-			[1] = new List<Move>() { new Snipeshot(), new Acrobatics(), new Pound(), new Growl(), new Watergun(), new Bind() },
-			[12] = new List<Move>() { new Waterpulse() },
-			[19] = new List<Move>() { new Tearfullook() },
-			[24] = new List<Move>() { new Suckerpunch() },
-			[30] = new List<Move>() { new Uturn() },
-			[38] = new List<Move>() { new Liquidation() },
-			[46] = new List<Move>() { new Soak() },
-			[54] = new List<Move>() { new Raindance() },
-			[62] = new List<Move>() { new Hydropump() },
+			[0] = new List<Move>() { new Moves.Snipeshot() },
+			[1] = new List<Move>() { new Moves.Snipeshot(), new Moves.Acrobatics(), new Moves.Pound(), new Moves.Growl(), new Moves.Watergun(), new Moves.Bind() },
+			[12] = new List<Move>() { new Moves.Waterpulse() },
+			[19] = new List<Move>() { new Moves.Tearfullook() },
+			[24] = new List<Move>() { new Moves.Suckerpunch() },
+			[30] = new List<Move>() { new Moves.Uturn() },
+			[38] = new List<Move>() { new Moves.Liquidation() },
+			[46] = new List<Move>() { new Moves.Soak() },
+			[54] = new List<Move>() { new Moves.Raindance() },
+			[62] = new List<Move>() { new Moves.Hydropump() },
 		};
-		public override List<Move> TutorMoves => new List<Move>() { new Acrobatics(), new Agility(), new Airslash(), new Attract(), new Batonpass(), new Blizzard(), new Bounce(), new Breakingswipe(), new Darkpulse(), new Dive(), new Endure(), new Facade(), new Fling(), new Focusenergy(), new Gigaimpact(), new Hiddenpower(), new Hydrocannon(), new Hydropump(), new Hyperbeam(), new Icebeam(), new Iciclespear(), new Icywind(), new Lightscreen(), new Liquidation(), new Metronome(), new Muddywater(), new Mudshot(), new Protect(), new Raindance(), new Reflect(), new Rest(), new Round(), new Safeguard(), new Scald(), new Scaleshot(), new Shadowball(), new Sleeptalk(), new Snore(), new Substitute(), new Surf(), new Swift(), new Swordsdance(), new Uturn(), new Waterfall(), new Waterpledge(), new Weatherball(), new Whirlpool(), new Workup() };
+		public override List<Move> TutorMoves => new List<Move>() { new Moves.Acrobatics(), new Moves.Agility(), new Moves.Airslash(), new Moves.Attract(), new Moves.Batonpass(), new Moves.Blizzard(), new Moves.Bounce(), new Moves.Breakingswipe(), new Moves.Darkpulse(), new Moves.Dive(), new Moves.Endure(), new Moves.Facade(), new Moves.Fling(), new Moves.Focusenergy(), new Moves.Gigaimpact(), new Moves.Hiddenpower(), new Moves.Hydrocannon(), new Moves.Hydropump(), new Moves.Hyperbeam(), new Moves.Icebeam(), new Moves.Iciclespear(), new Moves.Icywind(), new Moves.Lightscreen(), new Moves.Liquidation(), new Moves.Metronome(), new Moves.Muddywater(), new Moves.Mudshot(), new Moves.Protect(), new Moves.Raindance(), new Moves.Reflect(), new Moves.Rest(), new Moves.Round(), new Moves.Safeguard(), new Moves.Scald(), new Moves.Scaleshot(), new Moves.Shadowball(), new Moves.Sleeptalk(), new Moves.Snore(), new Moves.Substitute(), new Moves.Surf(), new Moves.Swift(), new Moves.Swordsdance(), new Moves.Uturn(), new Moves.Waterfall(), new Moves.Waterpledge(), new Moves.Weatherball(), new Moves.Whirlpool(), new Moves.Workup() };
 		public override int Weight => 452;
 		public override int ExpYield => 265;
 		public override int CatchRate => 45;
