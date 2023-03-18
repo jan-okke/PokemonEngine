@@ -11,6 +11,9 @@ namespace PokemonGame.PokemonBattle.Data.Moves
 		public override int BasePower => 100;
 		public override int PowerPoints => 5;
 		public override int Priority => 0;
+		public override int Accuracy => 95;
+		public override int EffectChance => 50;
+		public override MoveTarget Target => MoveTarget.AllNearFoes;
 		public override MoveCategory Category => MoveCategory.Physical;
 		public override PokemonType Type => PokemonType.Rock;
 		public override bool IgnoresProtect => false;

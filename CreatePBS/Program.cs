@@ -366,6 +366,9 @@ namespace PBSMaker
                     $"\t\tpublic override int BasePower => {m.Power};\n" +
                     $"\t\tpublic override int PowerPoints => {m.PowerPoints};\n" +
                     $"\t\tpublic override int Priority => {m.Priority};\n" +
+                    $"\t\tpublic override int Accuracy => {m.Accuracy};\n" +
+                    $"\t\tpublic override int EffectChance => {m.EffectChance};\n" +
+                    $"\t\tpublic override MoveTarget Target => MoveTarget.{m.Target};\n" +
                     $"\t\tpublic override MoveCategory Category => MoveCategory.{m.Category};\n" +
                     $"\t\tpublic override PokemonType Type => PokemonType.{m.Type[0] + m.Type[1..].ToLower()};\n");
 

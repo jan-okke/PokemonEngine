@@ -11,7 +11,10 @@ namespace PokemonGame.PokemonBattle.Entities
         public virtual PokemonType Type { get; }
         public virtual MoveCategory Category { get; }
         public virtual int Priority { get; }
+        public virtual int Accuracy { get; }
+        public virtual int EffectChance { get; } // out of 100
         public virtual string Description { get; }
+        public virtual MoveTarget Target { get; }
 
         public int CurrentPowerPoints { get; internal set; }
 
