@@ -15,6 +15,7 @@ namespace PokemonGame.Entities
     public class Player
     {
         public List<Pokemon> PokemonBox { get; } = new List<Pokemon>();
+        public Dictionary<Item, int> Bag { get; } = new Dictionary<Item, int>();
 
         public int X { get; set; }
         public int Y { get; set; }

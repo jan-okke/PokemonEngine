@@ -9,6 +9,9 @@ namespace PokemonGame.PokemonBattle.Entities
         public virtual bool IsMedicine => false;
         public virtual bool IsBerry => false;
         public virtual bool IsXItem => false;
+        public virtual bool IsRepel => false;
+        public virtual int Price => 0;
+        public virtual bool CanBeSold => false;
 
         public Item(string name, string description)
         {
