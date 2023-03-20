@@ -105,7 +105,14 @@ namespace PokemonGame.PokemonBattle.Extensions
 
         // TODO this might not? work
         public static List<Move> GetAvailableMoves(this Pokemon pokemon) => pokemon.EggMoves.Concat(pokemon.TutorMoves).Concat(pokemon.LevelUpLearnSet.Where(l => l.Key > 0).SelectMany(x => x.Value)).ToList();
-        
-       
+
+        public static bool IsGrounded(this Pokemon pokemon)
+        {
+            if (pokemon.HasType(PokemonType.Flying)) return false;
+            if (pokemon.HasAbility("Levitate")) return false; // TODO, unless surpressed
+            if (pokemon.HasItem("Air Balloon")) return false; // TODO, unless ability is klutz xD
+            if (pokemon.HasEffect(EffectType.MagnetRise, EffectType.Telekenesis)) return false;
+            return true;
+        }
     }
 }
