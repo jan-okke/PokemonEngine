@@ -91,8 +91,8 @@ namespace PokemonGame.PokemonBattle.Extensions
                 case "Solar Blade" or "Solar Beam": if (!battle.Weather.Surpressed(battle) && battle.Weather.IsConditionActive(WeatherCondition.Rain, WeatherCondition.Sand, WeatherCondition.Hail)) power *= 0.5; break;
                 case "Knock Off": if (defender.Item.CanGetRemoved()) power *= 1.5; break;
                 case "Grav Apple": if (battle.Gravity.Active) power *= 1.5; break;
-                case "Misty Explosion": if (battle.IsTerrainEffectActive(TerrainEffect.Fairy) && IsGrounded(battle, attacker)) power *= 1.5; break;
-                case "Expanding Force": if (battle.IsTerrainEffectActive(TerrainEffect.Psychic) && IsGrounded(battle, attacker)) power *= 1.5; break;
+                case "Misty Explosion": if (battle.IsTerrainEffectActive(TerrainEffect.Fairy) && attacker.IsGrounded()) power *= 1.5; break;
+                case "Expanding Force": if (battle.IsTerrainEffectActive(TerrainEffect.Psychic) && attacker.IsGrounded()) power *= 1.5; break;
 
                 case "Gust" or "Twister": if (defender.IsFlying) power *= 2; break;
                 // TODO Pursuit *= 2 if defender wants to switch
@@ -108,12 +108,12 @@ namespace PokemonGame.PokemonBattle.Extensions
             if (defenderSide.HasBuff(BattlerSideBuff.MudSport) && CheckMoveType(move, PokemonType.Electric, attacker)) power *= 0.5;
             if (defenderSide.HasBuff(BattlerSideBuff.WaterSport) && CheckMoveType(move, PokemonType.Fire, attacker)) power *= 0.5;
             // Terrain
-            if (battle.IsTerrainEffectActive(TerrainEffect.Grass) && IsGrounded(battle, defender) && move.NameIsAnyOf("Earthquake", "Magnitude", "Bulldoze")) power *= 0.5;
-            if (battle.IsTerrainEffectActive(TerrainEffect.Fairy) && IsGrounded(battle, defender) && CheckMoveType(move, PokemonType.Dragon, attacker)) power *= 0.5;
+            if (battle.IsTerrainEffectActive(TerrainEffect.Grass) && defender.IsGrounded() && move.NameIsAnyOf("Earthquake", "Magnitude", "Bulldoze")) power *= 0.5;
+            if (battle.IsTerrainEffectActive(TerrainEffect.Fairy) && defender.IsGrounded() && CheckMoveType(move, PokemonType.Dragon, attacker)) power *= 0.5;
             
-            if (battle.IsTerrainEffectActive(TerrainEffect.Grass) && IsGrounded(battle, attacker) && CheckMoveType(move, PokemonType.Grass, attacker)) power *= 1.5;
-            if (battle.IsTerrainEffectActive(TerrainEffect.Electric) && IsGrounded(battle, attacker) && CheckMoveType(move, PokemonType.Electric, attacker)) power *= 1.5;
-            if (battle.IsTerrainEffectActive(TerrainEffect.Psychic) && IsGrounded(battle, attacker) && CheckMoveType(move, PokemonType.Psychic, attacker)) power *= 1.5;
+            if (battle.IsTerrainEffectActive(TerrainEffect.Grass) && attacker.IsGrounded() && CheckMoveType(move, PokemonType.Grass, attacker)) power *= 1.5;
+            if (battle.IsTerrainEffectActive(TerrainEffect.Electric) && attacker.IsGrounded() && CheckMoveType(move, PokemonType.Electric, attacker)) power *= 1.5;
+            if (battle.IsTerrainEffectActive(TerrainEffect.Psychic) && attacker.IsGrounded() && CheckMoveType(move, PokemonType.Psychic, attacker)) power *= 1.5;
             
             // Attacker Ability
             if (attacker.HasAbility("Rivalry")) power *= attacker.IsSameGender(defender) ? 0.75 : attacker.IsOpposingGender(defender) ? 1.25 : 1;
@@ -473,8 +473,6 @@ namespace PokemonGame.PokemonBattle.Extensions
         private static bool IsRetaliateBoosted(Battle battle) => false; // TODO
 
         private static bool StatsLoweredSameTurn(Battle battle, Pokemon pokemon) => false; // TODO
-
-        private static bool IsGrounded(Battle battle, Pokemon pokemon) => true; // TODO
 
         private static bool MoveWasStolenByMeFirst(Battle battle, Move move) => false; // TODO
 
