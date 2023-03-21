@@ -28,5 +28,15 @@ namespace PokemonGame.PokemonBattle.Validation
         public static bool CanDynamax(this Pokemon pokemon) => false; // TODO
 
          public static bool IsMoveValid(this Pokemon pokemon, Move move) => pokemon.CheckEggMoveCompatability(move) || pokemon.CheckMoveTutorCompatability(move) || pokemon.LevelUpLearnSet.Where(l => l.Key > 0).Any(x => x.Value.Any(m => m.NameIsAnyOf(move.Name)));
+
+         public static bool CanHaveAbility(this Pokemon pokemon, Ability ability) {
+            foreach (Ability a in pokemon.AvailableAbilities) {
+                if (a.HasName(ability.Name)) return true;
+            }
+            foreach (Ability a in pokemon.AvailableHiddenAbilities) {
+                if (a.HasName(ability.Name)) return true;
+            }
+            return false;
+         }
     }
 }

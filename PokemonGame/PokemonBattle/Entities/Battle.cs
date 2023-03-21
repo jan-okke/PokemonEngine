@@ -17,7 +17,7 @@ namespace PokemonGame.PokemonBattle.Entities
         public List<FieldEffect> FieldEffects { get; }
         public List<BattleFlag> BattleFlags { get; }
 
-
+        public Trainer OpposingTrainer { get; internal set; }
         public BattleLog Log { get; }
         public BattleType BattleType { get; }
         public int Turn { get; set; }

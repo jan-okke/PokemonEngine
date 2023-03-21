@@ -83,6 +83,7 @@ namespace PokemonGame.PokemonBattle.Entities
                 throw new ArgumentException($"Object name {name} not recognized.", nameof(name));
             }
             var result = Activator.CreateInstance(pkmn) as Pokemon;
+            result.Ability = result.AvailableAbilities[0];
             result.CalculateStats();
             result.HealHP();
 

@@ -208,5 +208,12 @@ namespace PokemonGame.PokemonBattle.Actions
                 pokemon.OnLevelUp(pokemon.Level, pokemon.Experience.AsLevel(pokemon.ExperienceGroup));
             }
         }
+
+        public static void ChangeAbility(this Pokemon pokemon, Ability ability) {
+            if (!pokemon.CanHaveAbility(ability)) { throw new Exception("Ability invalid"); }
+            pokemon.Ability = ability;
+        }
+
+        
     }
 }

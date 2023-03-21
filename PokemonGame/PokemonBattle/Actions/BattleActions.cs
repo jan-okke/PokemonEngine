@@ -32,6 +32,13 @@ namespace PokemonGame.PokemonBattle.Actions
             return battle;
         }
 
+        public static Battle StartTrainerBattle(PokemonParty playerParty, Trainer trainer) {
+            var battle = new Battle(playerParty, trainer.Party);
+            battle.SetFlag(BattleFlag.TrainerBattle);
+            battle.OpposingTrainer = trainer;
+            return battle;
+        }
+
         public static bool SetTerrain(this Battle battle, TerrainEffect effect, int startingTurns)
         {
             if (battle.Terrain != null & !BattleValidation.CanTerrainChanged(battle.Terrain.Effect, effect)) return false;
@@ -66,6 +73,10 @@ namespace PokemonGame.PokemonBattle.Actions
             }
             if (item.IsMedicine) {
                 switch (item.Name) {
+                    case "Energy Root": user.HealHP(120); break; // todo lower happiness
+                    case "Moomoo Milk": user.HealHP(100); break;
+                    case "Lemonade": user.HealHP(80); break;
+                    case "Fresh Water": user.HealHP(50); break;
                     case "Full Restore": user.HealHP(); user.HealStatusCondition(); break;
                     case "Max Potion": user.HealHP(); break;
                     case "Hyper Potion": user.HealHP(120); break;

@@ -84,7 +84,8 @@ namespace Test
 {
     public class Program {
         public static void Main(string[] args) {
-            TestCase1();
+            //TestCase1();
+            new ConsoleTest();
         }
 
         static void TestCase1() {
