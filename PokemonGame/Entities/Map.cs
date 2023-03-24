@@ -73,7 +73,7 @@ namespace PokemonGame.Entities
                             case "Width": map.Width = int.Parse(value); break;
                             case "Height": map.Height = int.Parse(value); break;
                             case "Events": map.Events.AddRange(value.Split(';').Select(s => Event.Parse(s))); break;
-                            case "Tileset": map.TilesetAtlas = new TextureAtlas(ContentCollection.Textures[value], TilesetPixels); break;
+                            case "Tileset": map.TilesetAtlas = ContentCollection.Splits[value]; break;
                             case "TilesetKey": map.Tileset = TilesetCollection.Tilesets[int.Parse(value)]; break;
                             case "Tiledata1": map.TileData.Add(1, value.Split(',').Select(s => int.Parse(s)).ToList()); break;
                             case "Tiledata2": map.TileData.Add(2, value.Split(',').Select(s => int.Parse(s)).ToList()); break;

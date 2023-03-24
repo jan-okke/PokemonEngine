@@ -5,10 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using PokemonGame.Entities;
+
 namespace PokemonGame.Static
 {
     public class ContentCollection
     {
         public static Dictionary<string, Texture2D> Textures { get; } = new Dictionary<string, Texture2D>();
+        public static Dictionary<string, TextureAtlas> Splits { get; } = new Dictionary<string, TextureAtlas>();
     }
 }

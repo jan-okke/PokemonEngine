@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace PokemonGame
@@ -21,9 +22,17 @@ namespace PokemonGame
 
         public static void LoadContent(ContentManager content)
         {
-            DebugConsole.Write("Loading content...", ConsoleColor.Green);
+            DebugConsole.Write("Loading tilesets...", ConsoleColor.Green);
     
-            ContentCollection.Textures.Add("Outside", content.Load<Texture2D>("Tilesets\\Outside"));
+            foreach (string file in Directory.GetFiles("Content\\Tilesets")) {
+                string shortName = file.Split("Content\\Tilesets\\")[1].Split(".")[0];
+                DebugConsole.Write($"<{shortName}>", ConsoleColor.DarkMagenta);
+                ContentCollection.Textures.Add(shortName, content.Load<Texture2D>($"Tilesets\\{shortName}"));
+                ContentCollection.Splits.Add(shortName, new TextureAtlas(ContentCollection.Textures[shortName], 32));
+            }
+            DebugConsole.WriteLine("done", ConsoleColor.Green);
+
+            DebugConsole.Write("Loading characters...", ConsoleColor.Green);
             ContentCollection.Textures.Add("Player", content.Load<Texture2D>("Characters\\boy_run"));
 
             DebugConsole.WriteLine("done", ConsoleColor.Green);
@@ -48,10 +57,13 @@ namespace PokemonGame
             var mapPath = "GameFiles\\Data\\Maps";
             foreach (string file in Directory.GetFiles(mapPath))
             {
-                //int mapID = int.Parse(file.Split("GameFiles\\Data\\Maps\\Map")[1].Split(".txt")[0]);
-                Map map = Map.LoadFromFile(file);
-                MapCollection.Maps.Add(map.MapID, map);
+                LoadMap(file);
             }
+        }
+
+        private static void LoadMap(string file) {
+            Map map = Map.LoadFromFile(file);
+            MapCollection.Maps.Add(map.MapID, map);
         }
     }
 }
