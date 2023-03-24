@@ -63,8 +63,6 @@ namespace PokemonGame
         }
         public void Update(KeyboardState keyboardState)
         {
-            DebugConsole.WriteLine(MovementQueue.Count());
-            DebugConsole.WriteLine(Player.Position, ConsoleColor.Green);
             // if the player is currently in an animation, continue animation
             if (Player.InAnimation)
             {
@@ -188,9 +186,7 @@ namespace PokemonGame
 
         private void WarpPlayer(int x, int y)
         {
-            DebugConsole.WriteLine($"{x}.{y}", ConsoleColor.Magenta);
-            Player.X = x;
-            Player.Y = y;
+            Player.Position = new Point(x, y);
         }
         private void DrawTextBox(SpriteBatch spriteBatch)
         {
