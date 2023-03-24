@@ -48,9 +48,9 @@ namespace PokemonGame
             var mapPath = "GameFiles\\Data\\Maps";
             foreach (string file in Directory.GetFiles(mapPath))
             {
-                int mapID = int.Parse(file.Split("GameFiles\\Data\\Maps\\Map")[1].Split(".txt")[0]);
+                //int mapID = int.Parse(file.Split("GameFiles\\Data\\Maps\\Map")[1].Split(".txt")[0]);
                 Map map = Map.LoadFromFile(file);
-                MapCollection.Maps.Add(mapID, map);
+                MapCollection.Maps.Add(map.MapID, map);
             }
         }
     }

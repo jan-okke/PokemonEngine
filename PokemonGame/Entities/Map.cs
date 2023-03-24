@@ -16,6 +16,7 @@ namespace PokemonGame.Entities
         private const int TilesetWidth = 8;
         private const int Layers = 3;
 
+        public int MapID { get; set; }
         public int Width { get; private set; }
         public int Height { get; private set; }
         private TextureAtlas TilesetAtlas;
@@ -26,8 +27,9 @@ namespace PokemonGame.Entities
 
         private Map() { Events = new(); }
 
-        public Map(string name, int width, int height)
+        public Map(int mapID, string name, int width, int height)
         {
+            MapID = mapID;
             Name = name;
             Width = width;
             Height = height;
@@ -52,7 +54,9 @@ namespace PokemonGame.Entities
             DebugConsole.Write($"Loading map {fileName}...", ConsoleColor.Green);
             string attribute;
             string value;
+            int mapID = int.Parse(fileName.Split("GameFiles\\Data\\Maps\\Map")[1].Split(".txt")[0]);
             Map map = new();
+            map.MapID = mapID;
             map.TileData = new();
             try 
 	    {

@@ -4,11 +4,12 @@ namespace PokemonGame.Entities
 {
     public class WarpCommand : ICommand
     {
-        // public int MapID; TODO later
+        public int MapID;
         public int X;
         public int Y;
 
-        public WarpCommand(int x, int y) {
+        public WarpCommand(int mapID, int x, int y) {
+            MapID = mapID;
             X = x;
             Y = y;
         }

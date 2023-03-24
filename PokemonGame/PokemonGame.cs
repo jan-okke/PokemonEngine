@@ -129,7 +129,7 @@ namespace PokemonGame
                         return true;
                     case EventCommandType.WarpCommand:
                         var __cmd = (WarpCommand)cmd;
-                        WarpPlayer(__cmd.X, __cmd.Y);
+                        WarpPlayer(__cmd.MapID, __cmd.X, __cmd.Y);
                         return true;
                     default:
                         DebugConsole.WriteLine("Warning - Unknown Movement Command EventCommandType.", ConsoleColor.Yellow);
@@ -184,9 +184,15 @@ namespace PokemonGame
             }
         }
 
-        private void WarpPlayer(int x, int y)
+        private void WarpPlayer(int mapID, int x, int y)
         {
-            Player.Position = new Point(x, y);
+            if (mapID == CurrentMap.MapID) {
+                Player.Position = new Point(x, y);
+            }
+            else {
+                SetMap(MapCollection.Maps[mapID]);
+                Player.Position = new Point(x, y);
+            }
         }
         private void DrawTextBox(SpriteBatch spriteBatch)
         {
