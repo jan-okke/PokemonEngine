@@ -1,16 +1,16 @@
 namespace PokemonGame.Entities
 {
-    public class MoveCommand : ICommand
+    public class RotateCommand : ICommand
     {
         public string Direction { get; set; }
 
-        public MoveCommand(string direction)
+        public RotateCommand(string direction)
         {
             Direction = direction;
         }
 
         public void ExecuteCommand(PokemonGame game) {
-            game.MovePlayer(Direction);
+            game.RotatePlayer(Direction);
         }
     }
 }

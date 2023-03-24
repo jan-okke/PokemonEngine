@@ -85,10 +85,10 @@ namespace PokemonGame.Entities
                         game.TextQueue.Add(cmd.Args[0]);
                         break;
                     case EventCommandType.MoveCommmand:
-                        game.MovementQueue.Add(new MoveCommand(cmd.Args[0], EventCommandType.MoveCommmand));
+                        game.MovementQueue.Add(new MoveCommand(cmd.Args[0]));
                         break;
                     case EventCommandType.RotateCommand:
-                        game.MovementQueue.Add(new MoveCommand(cmd.Args[0], EventCommandType.RotateCommand));
+                        game.MovementQueue.Add(new RotateCommand(cmd.Args[0]));
                         break;
                     case EventCommandType.WarpCommand:
                         game.MovementQueue.Add(new WarpCommand(int.Parse(cmd.Args[0]), int.Parse(cmd.Args[1]), int.Parse(cmd.Args[2])));

@@ -14,8 +14,8 @@ namespace PokemonGame.Entities
             Y = y;
         }
 
-        public EventCommandType GetEventCommandType() {
-            return EventCommandType.WarpCommand;
+        public void ExecuteCommand(PokemonGame game) {
+            game.WarpPlayer(MapID, X, Y);
         }
 
     }

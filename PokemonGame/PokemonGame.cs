@@ -117,24 +117,8 @@ namespace PokemonGame
             if (MovementQueue.HasNext())
             {
                 ICommand cmd = MovementQueue.Next();
-                switch (cmd.GetEventCommandType()) 
-                {
-                    case EventCommandType.MoveCommmand:
-                        var _cmd = (MoveCommand)cmd;
-                        MovePlayer(_cmd.Direction);
-                        return true;
-                    case EventCommandType.RotateCommand:
-                        _cmd = (MoveCommand)cmd;
-                        RotatePlayer(_cmd.Direction);
-                        return true;
-                    case EventCommandType.WarpCommand:
-                        var __cmd = (WarpCommand)cmd;
-                        WarpPlayer(__cmd.MapID, __cmd.X, __cmd.Y);
-                        return true;
-                    default:
-                        DebugConsole.WriteLine("Warning - Unknown Movement Command EventCommandType.", ConsoleColor.Yellow);
-                        return false;
-                }
+                cmd.ExecuteCommand(this);
+                return true;
             }
             return false;
         }
@@ -145,7 +129,7 @@ namespace PokemonGame
             CurrentMap.Draw(Width, Height, Player, spriteBatch);
             spriteBatch.End();
         }
-        private void MovePlayer(string direction)
+        public void MovePlayer(string direction)
         {
             // This method should only be called by Events since it bypasses Collision Detection.
             switch (direction)
@@ -164,7 +148,7 @@ namespace PokemonGame
                     Player.DisplayY += PlayerMoves; break;
             }
         }
-        private void RotatePlayer(string direction)
+        public void RotatePlayer(string direction)
         {
             // This method should only be called by Events since it bypasses Collision Detection.
             switch (direction)
@@ -184,7 +168,7 @@ namespace PokemonGame
             }
         }
 
-        private void WarpPlayer(int mapID, int x, int y)
+        public void WarpPlayer(int mapID, int x, int y)
         {
             if (mapID == CurrentMap.MapID) {
                 Player.Position = new Point(x, y);

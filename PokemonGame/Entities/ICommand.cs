@@ -4,6 +4,6 @@ namespace PokemonGame.Entities
 {
     public interface ICommand
     {
-        EventCommandType GetEventCommandType();
+        void ExecuteCommand(PokemonGame game);
     }
 }

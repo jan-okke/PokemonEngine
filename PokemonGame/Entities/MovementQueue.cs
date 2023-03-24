@@ -11,11 +11,8 @@ namespace PokemonGame.Entities
         {
             Commands = new();
         }
-        public void Add(MoveCommand cmd)
+        public void Add(ICommand cmd)
         {
-            Commands.Add(cmd);
-        }
-        public void Add(WarpCommand cmd) {
             Commands.Add(cmd);
         }
         public int Count() => Commands.Count;
