@@ -9,6 +9,6 @@ namespace PokemonGame.Static
 {
     public class TilesetCollection
     {
-        public static Dictionary<int, Tileset> Tilesets { get; set; }
+        public static Dictionary<int, Tileset> Tilesets { get; } = new Dictionary<int, Tileset>();
     }
 }

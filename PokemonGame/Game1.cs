@@ -44,6 +44,7 @@ namespace PokemonGame
 
             Initialization.LoadContent(Content);
             Initialization.LoadTilesets();
+            Initialization.LoadMaps();
 
             _game.SetDefaultMap();
             _game.SetPlayer();

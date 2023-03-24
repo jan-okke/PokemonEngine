@@ -198,7 +198,7 @@ namespace PokemonGame
 
         public void SetDefaultMap()
         {
-            SetMap(Map.LoadFromFile("GameFiles\\Data\\Maps\\Map" + Helpers.StringHelper.Get4DigitString(Settings.StartMapID) + ".txt"));
+            SetMap(MapCollection.Maps[Settings.StartMapID]);
         }
 
         public void SetPlayer()
