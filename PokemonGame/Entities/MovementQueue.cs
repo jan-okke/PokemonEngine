@@ -15,11 +15,8 @@ namespace PokemonGame.Entities
         {
             Commands.Add(cmd);
         }
-        public int Count() => Commands.Count;
-        public bool HasNext()
-        {
-            return Commands.Count > 0;
-        }
+        public int Count => Commands.Count;
+        public bool HasNext() => Count > 0;
         public ICommand Next()
         {
             if (!HasNext()) 
