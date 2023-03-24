@@ -68,10 +68,10 @@ namespace PokemonGame
             {
                 switch (Player.State)
                 {
-                    case PlayerState.Left: Player.X -= PlayerMoves; break;
-                    case PlayerState.Right: Player.X += PlayerMoves; break;
-                    case PlayerState.Down: Player.Y += PlayerMoves; break;
-                    case PlayerState.Up: Player.Y -= PlayerMoves; break;
+                    case PlayerState.Left: Player.DisplayX -= PlayerMoves; break;
+                    case PlayerState.Right: Player.DisplayX += PlayerMoves; break;
+                    case PlayerState.Down: Player.DisplayY += PlayerMoves; break;
+                    case PlayerState.Up: Player.DisplayY -= PlayerMoves; break;
                 }
                 return;
             }
@@ -89,16 +89,16 @@ namespace PokemonGame
                         HandleEventsActiveButton();
                         Player.RunningState = 0; break;
                     case Keys.Left:
-                        if (Player.State == PlayerState.Left && CurrentMap.IsTilePassable(Player.Position.X - 1, Player.Position.Y)) { Player.X -= PlayerMoves; Player.RunningState++; break; }
+                        if (Player.State == PlayerState.Left && CurrentMap.IsTilePassable(Player.Position.X - 1, Player.Position.Y)) { Player.DisplayX -= PlayerMoves; Player.RunningState++; break; }
                         Player.State = PlayerState.Left; Player.RunningState = 0; break;
                     case Keys.Right:
-                        if (Player.State == PlayerState.Right && CurrentMap.IsTilePassable(Player.Position.X + 1, Player.Position.Y)) { Player.X += PlayerMoves; Player.RunningState++; break; }
+                        if (Player.State == PlayerState.Right && CurrentMap.IsTilePassable(Player.Position.X + 1, Player.Position.Y)) { Player.DisplayX += PlayerMoves; Player.RunningState++; break; }
                         Player.State = PlayerState.Right; Player.RunningState = 0; break;
                     case Keys.Down:
-                        if (Player.State == PlayerState.Down && CurrentMap.IsTilePassable(Player.Position.X, Player.Position.Y + 1)) { Player.Y += PlayerMoves; Player.RunningState++; break; }
+                        if (Player.State == PlayerState.Down && CurrentMap.IsTilePassable(Player.Position.X, Player.Position.Y + 1)) { Player.DisplayY += PlayerMoves; Player.RunningState++; break; }
                         Player.State = PlayerState.Down; Player.RunningState = 0; break;
                     case Keys.Up:
-                        if (Player.State == PlayerState.Up && CurrentMap.IsTilePassable(Player.Position.X, Player.Position.Y - 1)) { Player.Y -= PlayerMoves; Player.RunningState++; break; }
+                        if (Player.State == PlayerState.Up && CurrentMap.IsTilePassable(Player.Position.X, Player.Position.Y - 1)) { Player.DisplayY -= PlayerMoves; Player.RunningState++; break; }
                         Player.State = PlayerState.Up; Player.RunningState = 0; break;
                     // if some other key is pressed, ignore it.
                     default:
@@ -152,16 +152,16 @@ namespace PokemonGame
             {
                 case "left" or "Left":
                     Player.State = PlayerState.Left;
-                    Player.X -= PlayerMoves; break;
+                    Player.DisplayX -= PlayerMoves; break;
                 case "right" or "Right":
                     Player.State = PlayerState.Right;
-                    Player.X += PlayerMoves; break;
+                    Player.DisplayX += PlayerMoves; break;
                 case "up" or "Up":
                     Player.State = PlayerState.Up;
-                    Player.Y -= PlayerMoves; break;
+                    Player.DisplayY -= PlayerMoves; break;
                 case "down" or "Down":
                     Player.State = PlayerState.Down;
-                    Player.Y += PlayerMoves; break;
+                    Player.DisplayY += PlayerMoves; break;
             }
         }
         private void RotatePlayer(string direction)
