@@ -63,6 +63,8 @@ namespace PokemonGame
         }
         public void Update(KeyboardState keyboardState)
         {
+            DebugConsole.WriteLine(MovementQueue.Count());
+            DebugConsole.WriteLine(Player.Position, ConsoleColor.Green);
             // if the player is currently in an animation, continue animation
             if (Player.InAnimation)
             {
@@ -116,14 +118,20 @@ namespace PokemonGame
             // returns true if forced move
             if (MovementQueue.HasNext())
             {
-                var cmd = MovementQueue.Next();
-                switch (cmd.CommandType) 
+                ICommand cmd = MovementQueue.Next();
+                switch (cmd.GetEventCommandType()) 
                 {
                     case EventCommandType.MoveCommmand:
-                        MovePlayer(cmd.Direction);
+                        var _cmd = (MoveCommand)cmd;
+                        MovePlayer(_cmd.Direction);
                         return true;
                     case EventCommandType.RotateCommand:
-                        RotatePlayer(cmd.Direction);
+                        _cmd = (MoveCommand)cmd;
+                        RotatePlayer(_cmd.Direction);
+                        return true;
+                    case EventCommandType.WarpCommand:
+                        var __cmd = (WarpCommand)cmd;
+                        WarpPlayer(__cmd.X, __cmd.Y);
                         return true;
                     default:
                         DebugConsole.WriteLine("Warning - Unknown Movement Command EventCommandType.", ConsoleColor.Yellow);
@@ -176,6 +184,13 @@ namespace PokemonGame
                     Player.State = PlayerState.Down;
                     break;
             }
+        }
+
+        private void WarpPlayer(int x, int y)
+        {
+            DebugConsole.WriteLine($"{x}.{y}", ConsoleColor.Magenta);
+            Player.X = x;
+            Player.Y = y;
         }
         private void DrawTextBox(SpriteBatch spriteBatch)
         {

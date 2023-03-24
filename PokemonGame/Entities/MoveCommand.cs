@@ -2,7 +2,7 @@ using PokemonGame.Enums;
 
 namespace PokemonGame.Entities
 {
-    public class MoveCommand
+    public class MoveCommand : ICommand
     {
         public string Direction { get; set; }
         public EventCommandType CommandType { get; set; }
@@ -11,6 +11,11 @@ namespace PokemonGame.Entities
         {
             Direction = direction;
             CommandType = commandType;
+        }
+
+        public EventCommandType GetEventCommandType()
+        {
+            return CommandType;
         }
     }
 }

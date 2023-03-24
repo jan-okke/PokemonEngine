@@ -5,7 +5,7 @@ namespace PokemonGame.Entities
 {
     public class MovementQueue
     {
-        private List<MoveCommand> Commands;
+        private List<ICommand> Commands;
 
         public MovementQueue()
         {
@@ -15,11 +15,15 @@ namespace PokemonGame.Entities
         {
             Commands.Add(cmd);
         }
+        public void Add(WarpCommand cmd) {
+            Commands.Add(cmd);
+        }
+        public int Count() => Commands.Count;
         public bool HasNext()
         {
             return Commands.Count > 0;
         }
-        public MoveCommand Next()
+        public ICommand Next()
         {
             if (!HasNext()) 
             {

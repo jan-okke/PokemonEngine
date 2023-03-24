@@ -39,5 +39,6 @@ namespace PokemonGame.PokemonBattle.Extensions
         
         public static double GetBurnMod(this Move move) => IsAffectedByBurn(move) ? 0.5 : throw new Exception("Attempted to get Burn Mod without checking if affected by burn.");
 
+        public static bool PowerPointsAbove(this Move move, int amount) => move.PowerPoints > amount;
     }
 }

@@ -34,6 +34,7 @@ namespace PokemonGame.Entities
                 0 => EventCommandType.TextCommand,
                 1 => EventCommandType.MoveCommmand,
                 2 => EventCommandType.RotateCommand,
+                3 => EventCommandType.WarpCommand,
                 _ => throw new ArgumentException(null, nameof(id)),
             };
         }
@@ -63,7 +64,7 @@ namespace PokemonGame.Entities
             var newEventData = eventData;
             foreach (string s in eventData.Substring(0, eventData.IndexOf(']')).Split('|'))
             {
-                var s_split = s.Split(',');
+                var s_split = s.Split(',', 2);
                 var commandId = s_split[0];
                 var args = s_split[1].Split(','); // TODO this wont work lol
                 e.Commands.Add(new EventCommand(GetEventCommandType(int.Parse(commandId)), args));
@@ -88,6 +89,9 @@ namespace PokemonGame.Entities
                         break;
                     case EventCommandType.RotateCommand:
                         game.MovementQueue.Add(new MoveCommand(cmd.Args[0], EventCommandType.RotateCommand));
+                        break;
+                    case EventCommandType.WarpCommand:
+                        game.MovementQueue.Add(new WarpCommand(int.Parse(cmd.Args[0]), int.Parse(cmd.Args[1])));
                         break;
                 }
             }

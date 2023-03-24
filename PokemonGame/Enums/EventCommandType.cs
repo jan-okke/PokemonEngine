@@ -11,5 +11,6 @@ namespace PokemonGame.Enums
         TextCommand = 0,
         MoveCommmand = 1,
         RotateCommand = 2,
+        WarpCommand = 3,
     }
 }
