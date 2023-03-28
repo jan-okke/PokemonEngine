@@ -73,7 +73,15 @@ namespace PokemonGame.PokemonBattle.Extensions
             return answer; // TODO
         }
 
-        private static bool CriticalHitCheck(Pokemon attacker, Pokemon defender, Move move) => false; // TODO
+        private static bool CriticalHitCheck(Pokemon attacker, Pokemon defender, Move move)
+        {
+            return false; // TODO
+            if (defender.HasAbility())
+            if (move.HasHighCriticalHitRate)
+            {
+
+            }
+        }
 
         private static double CalculateMovePower(Battle battle, PokemonParty attackingParty, BattlerSide defenderSide, Pokemon attacker, Pokemon defender, Move move) 
         {

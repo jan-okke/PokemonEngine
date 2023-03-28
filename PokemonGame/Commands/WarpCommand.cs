@@ -1,6 +1,6 @@
 using PokemonGame.Enums;
 
-namespace PokemonGame.Entities
+namespace PokemonGame.Commands
 {
     public class WarpCommand : ICommand
     {
@@ -8,13 +8,15 @@ namespace PokemonGame.Entities
         public int X;
         public int Y;
 
-        public WarpCommand(int mapID, int x, int y) {
+        public WarpCommand(int mapID, int x, int y)
+        {
             MapID = mapID;
             X = x;
             Y = y;
         }
 
-        public void ExecuteCommand(PokemonGame game) {
+        public void ExecuteCommand(PokemonGame game)
+        {
             game.WarpPlayer(MapID, X, Y);
         }
 

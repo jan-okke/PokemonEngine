@@ -1,4 +1,4 @@
-namespace PokemonGame.Entities
+namespace PokemonGame.Commands
 {
     public class RotateCommand : ICommand
     {
@@ -9,7 +9,8 @@ namespace PokemonGame.Entities
             Direction = direction;
         }
 
-        public void ExecuteCommand(PokemonGame game) {
+        public void ExecuteCommand(PokemonGame game)
+        {
             game.RotatePlayer(Direction);
         }
     }

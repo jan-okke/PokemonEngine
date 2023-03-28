@@ -1,6 +1,6 @@
 using PokemonGame.Enums;
 
-namespace PokemonGame.Entities
+namespace PokemonGame.Commands
 {
     public interface ICommand
     {
