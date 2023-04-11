@@ -1,11 +1,13 @@
 using PokemonGame.PokemonBattle.Actions;
 using PokemonGame.PokemonBattle.Enums;
 using PokemonGame.PokemonBattle.Extensions;
+using PokemonGame.PokemonBattle.Interfaces;
+using PokemonGame.Entities;
 using System.Collections.Generic;
 
 namespace PokemonGame.PokemonBattle.Entities
 {
-    public class Battle
+    public class Battle : ISingleBattleCommands
     {
         public PokemonParty PlayerParty { get; }
         public PokemonParty EnemyParty { get; }
@@ -49,6 +51,25 @@ namespace PokemonGame.PokemonBattle.Entities
             Gravity = null;
             Turn = 0;
         }
-        
+
+        public void UseMove(Move move)
+        {
+            BattleActions.UseMove(this, ActivePlayerBattler, ActiveOpponentBattler, move);
+        }
+
+        public void UseItem(Player player, Item item, Pokemon target)
+        {
+            BattleActions.UseItem(this, player, target, ActiveOpponentBattler, item);
+        }
+
+        public void SwitchPokemon(Pokemon pokemon)
+        {
+            BattleActions.SwitchTo(this, pokemon);
+        }
+
+        public void Run()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
