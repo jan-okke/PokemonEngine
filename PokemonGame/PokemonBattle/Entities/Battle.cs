@@ -136,228 +136,1210 @@ public class Battle : IBattle
         switch (move.Name)
         {
             #region Damaging Moves with secondary effect
+
             // TODO: abilities that increase the chance
-            case "Acid": if (Chance(10)) defendingPokemon.LowerStatStage(Stat.SpecialDefense, 1); break;
-            case "Acid Spray": defendingPokemon.LowerStatStage(Stat.SpecialDefense, 2); break;
-            case "Air Slash": if (Chance(30)) defendingPokemon.Flinch(); break;
-            case "Anchor Shot": defendingPokemon.Trap(); break;
-            case "Ancient Power": if (Chance(10)) attackingPokemon.IncreaseAllStatStagesBy(1); break;
-            case "Apple Acid": defendingPokemon.LowerStatStage(Stat.Defense, 1); break;
-            case "Astonish": if (Chance(30)) defendingPokemon.Flinch(); break;
-            case "Aura Wheel": attackingPokemon.IncreaseStatStage(Stat.Speed, 1); break;
-            case "Bite": if (Chance(30)) defendingPokemon.Flinch(); break;
-            case "Blaze Kick": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Burned, -1); break;
-            case "Blizzard": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Frozen, -1); break;
-            case "Blue Flare": if (Chance(20)) defendingPokemon.SetStatus(StatusConditionType.Burned, -1); break;
-            case "Body Slam": if (Chance(30)) defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1); break;
-            case "Bolt Strike": if (Chance(20)) defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1); break;
-            case "Bone Club": if (Chance(10)) defendingPokemon.Flinch(); break;
-            case "Bounce": if (Chance(30)) defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1); break;
-            case "Breaking Swipe": defendingPokemon.LowerStatStage(Stat.Attack, 1); break;
-            case "Bubble": if (Chance(10)) defendingPokemon.LowerStatStage(Stat.Speed, 1); break;
-            case "Bubble Beam": if (Chance(10)) defendingPokemon.LowerStatStage(Stat.Speed, 1); break;
-            case "Bug Buzz": if (Chance(10)) defendingPokemon.LowerStatStage(Stat.SpecialDefense, 1); break;
-            case "Bulldoze": defendingPokemon.LowerStatStage(Stat.Speed, 1); break;
+            case "Acid":
+                if (Chance(10))
+                {
+                    defendingPokemon.LowerStatStage(Stat.SpecialDefense, 1);
+                }
+
+                break;
+            case "Acid Spray":
+                defendingPokemon.LowerStatStage(Stat.SpecialDefense, 2);
+                break;
+            case "Air Slash":
+                if (Chance(30))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Anchor Shot":
+                defendingPokemon.Trap();
+                break;
+            case "Ancient Power":
+                if (Chance(10))
+                {
+                    attackingPokemon.IncreaseAllStatStagesBy(1);
+                }
+
+                break;
+            case "Apple Acid":
+                defendingPokemon.LowerStatStage(Stat.Defense, 1);
+                break;
+            case "Astonish":
+                if (Chance(30))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Aura Wheel":
+                attackingPokemon.IncreaseStatStage(Stat.Speed, 1);
+                break;
+            case "Bite":
+                if (Chance(30))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Blaze Kick":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Burned, -1);
+                }
+
+                break;
+            case "Blizzard":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Frozen, -1);
+                }
+
+                break;
+            case "Blue Flare":
+                if (Chance(20))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Burned, -1);
+                }
+
+                break;
+            case "Body Slam":
+                if (Chance(30))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1);
+                }
+
+                break;
+            case "Bolt Strike":
+                if (Chance(20))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1);
+                }
+
+                break;
+            case "Bone Club":
+                if (Chance(10))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Bounce":
+                if (Chance(30))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1);
+                }
+
+                break;
+            case "Breaking Swipe":
+                defendingPokemon.LowerStatStage(Stat.Attack, 1);
+                break;
+            case "Bubble":
+                if (Chance(10))
+                {
+                    defendingPokemon.LowerStatStage(Stat.Speed, 1);
+                }
+
+                break;
+            case "Bubble Beam":
+                if (Chance(10))
+                {
+                    defendingPokemon.LowerStatStage(Stat.Speed, 1);
+                }
+
+                break;
+            case "Bug Buzz":
+                if (Chance(10))
+                {
+                    defendingPokemon.LowerStatStage(Stat.SpecialDefense, 1);
+                }
+
+                break;
+            case "Bulldoze":
+                defendingPokemon.LowerStatStage(Stat.Speed, 1);
+                break;
             // TODO Burning Jealousy https://bulbapedia.bulbagarden.net/wiki/Burning_Jealousy_(move)
-            case "Buzzy Buzz": defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1); break;
-            case "Charge Beam": if (Chance(70)) attackingPokemon.IncreaseStatStage(Stat.SpecialAttack, 1); break;
-            case "Chatter": defendingPokemon.Confuse(); break;
-            case "Clangorous Soulblaze": attackingPokemon.IncreaseAllStatStagesBy(1); break;
-            case "Confusion": if (Chance(10)) defendingPokemon.Confuse(); break;
-            case "Constrict": if (Chance(10)) defendingPokemon.LowerStatStage(Stat.Speed, 1); break;
-            case "Cross Poison": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Poisoned, -1); break;
-            case "Crunch": if (Chance(20)) defendingPokemon.LowerStatStage(Stat.Defense, 1); break;
-            case "Crush Claw": if (Chance(50)) defendingPokemon.LowerStatStage(Stat.Defense, 1); break;
-            case "Dark Pulse": if (Chance(20)) defendingPokemon.Flinch(); break;
-            case "Diamond Storm": if (Chance(50)) attackingPokemon.IncreaseStatStage(Stat.Defense, 2); break;
-            case "Discharge": if (Chance(30)) defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1); break;
-            case "Dizzy Punch": if (Chance(20)) defendingPokemon.Confuse(); break;
-            case "Double Iron Bash": if (Chance(30)) defendingPokemon.Flinch(); break;
-            case "Dragon Breath": if (Chance(30)) defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1); break;
-            case "Dragon Rush": if (Chance(20)) defendingPokemon.Flinch(); break;
-            case "Drum Beating": defendingPokemon.LowerStatStage(Stat.Speed, 1); break;
-            case "Dynamic Punch": defendingPokemon.Confuse(); break;
-            case "Earth Power": if (Chance(10)) defendingPokemon.LowerStatStage(Stat.SpecialDefense, 1); break;
-            case "Eerie Spell": GetLastMove().ReducePowerPoints(3); break; // TODO this should target the opposing pokemons last move. might not work!
-            case "Electroweb": if (Chance(10)) defendingPokemon.LowerStatStage(Stat.Speed, 1); break;
-            case "Ember": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Burned, -1); break;
-            case "Energy Ball": if (Chance(10)) defendingPokemon.LowerStatStage(Stat.SpecialDefense, 1); break;
-            case "Extrasensory": if (Chance(10)) defendingPokemon.Flinch(); break;
-            case "Fake Out": defendingPokemon.Flinch(); break;
-            case "Fiery Dance": if (Chance(50)) attackingPokemon.IncreaseStatStage(Stat.SpecialAttack, 1); break;
-            case "Fiery Wrath": if (Chance(20)) defendingPokemon.Flinch(); break;
-            case "Fire Blast": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Burned, -1); break;
-            case "Fire Fang": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Burned, -1); if (Chance(10)) defendingPokemon.Flinch(); break;
-            case "Fire Lash": defendingPokemon.LowerStatStage(Stat.Defense, 1); break;
-            case "Fire Punch": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Burned, -1); break;
-            case "Flame Charge": attackingPokemon.IncreaseStatStage(Stat.Speed, 1); break;
-            case "Flame Wheel": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Burned, -1); break;
-            case "Flamethrower": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Burned, -1); break;
-            case "Flare Blitz": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Burned, -1); break;
-            case "Flash Cannon": if (Chance(10)) defendingPokemon.LowerStatStage(Stat.SpecialDefense, 1); break;
+            case "Buzzy Buzz":
+                defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1);
+                break;
+            case "Charge Beam":
+                if (Chance(70))
+                {
+                    attackingPokemon.IncreaseStatStage(Stat.SpecialAttack, 1);
+                }
+
+                break;
+            case "Chatter":
+                defendingPokemon.Confuse();
+                break;
+            case "Clangorous Soulblaze":
+                attackingPokemon.IncreaseAllStatStagesBy(1);
+                break;
+            case "Confusion":
+                if (Chance(10))
+                {
+                    defendingPokemon.Confuse();
+                }
+
+                break;
+            case "Constrict":
+                if (Chance(10))
+                {
+                    defendingPokemon.LowerStatStage(Stat.Speed, 1);
+                }
+
+                break;
+            case "Cross Poison":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Poisoned, -1);
+                }
+
+                break;
+            case "Crunch":
+                if (Chance(20))
+                {
+                    defendingPokemon.LowerStatStage(Stat.Defense, 1);
+                }
+
+                break;
+            case "Crush Claw":
+                if (Chance(50))
+                {
+                    defendingPokemon.LowerStatStage(Stat.Defense, 1);
+                }
+
+                break;
+            case "Dark Pulse":
+                if (Chance(20))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Diamond Storm":
+                if (Chance(50))
+                {
+                    attackingPokemon.IncreaseStatStage(Stat.Defense, 2);
+                }
+
+                break;
+            case "Discharge":
+                if (Chance(30))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1);
+                }
+
+                break;
+            case "Dizzy Punch":
+                if (Chance(20))
+                {
+                    defendingPokemon.Confuse();
+                }
+
+                break;
+            case "Double Iron Bash":
+                if (Chance(30))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Dragon Breath":
+                if (Chance(30))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1);
+                }
+
+                break;
+            case "Dragon Rush":
+                if (Chance(20))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Drum Beating":
+                defendingPokemon.LowerStatStage(Stat.Speed, 1);
+                break;
+            case "Dynamic Punch":
+                defendingPokemon.Confuse();
+                break;
+            case "Earth Power":
+                if (Chance(10))
+                {
+                    defendingPokemon.LowerStatStage(Stat.SpecialDefense, 1);
+                }
+
+                break;
+            case "Eerie Spell":
+                GetLastMove().ReducePowerPoints(3);
+                break; // TODO this should target the opposing pokemons last move. might not work!
+            case "Electroweb":
+                if (Chance(10))
+                {
+                    defendingPokemon.LowerStatStage(Stat.Speed, 1);
+                }
+
+                break;
+            case "Ember":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Burned, -1);
+                }
+
+                break;
+            case "Energy Ball":
+                if (Chance(10))
+                {
+                    defendingPokemon.LowerStatStage(Stat.SpecialDefense, 1);
+                }
+
+                break;
+            case "Extrasensory":
+                if (Chance(10))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Fake Out":
+                defendingPokemon.Flinch();
+                break;
+            case "Fiery Dance":
+                if (Chance(50))
+                {
+                    attackingPokemon.IncreaseStatStage(Stat.SpecialAttack, 1);
+                }
+
+                break;
+            case "Fiery Wrath":
+                if (Chance(20))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Fire Blast":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Burned, -1);
+                }
+
+                break;
+            case "Fire Fang":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Burned, -1);
+                }
+
+                if (Chance(10))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Fire Lash":
+                defendingPokemon.LowerStatStage(Stat.Defense, 1);
+                break;
+            case "Fire Punch":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Burned, -1);
+                }
+
+                break;
+            case "Flame Charge":
+                attackingPokemon.IncreaseStatStage(Stat.Speed, 1);
+                break;
+            case "Flame Wheel":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Burned, -1);
+                }
+
+                break;
+            case "Flamethrower":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Burned, -1);
+                }
+
+                break;
+            case "Flare Blitz":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Burned, -1);
+                }
+
+                break;
+            case "Flash Cannon":
+                if (Chance(10))
+                {
+                    defendingPokemon.LowerStatStage(Stat.SpecialDefense, 1);
+                }
+
+                break;
             // TODO Fling https://bulbapedia.bulbagarden.net/wiki/Fling_(move)
-            case "Floaty Fall": if (Chance(30)) defendingPokemon.Flinch(); break;
-            case "Focus Blast": if (Chance(10)) defendingPokemon.LowerStatStage(Stat.SpecialDefense, 1); break;
-            case "Force Palm": if (Chance(30)) defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1); break;
-            case "Freeze Dry": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Frozen, -1); break;
-            case "Freeze Shock": if (Chance(30)) defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1); break;
-            case "Freezing Glare": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Frozen, -1); break;
-            case "Genesis Supernova": SetTerrain(TerrainEffect.Psychic, attackingPokemon.HasItem("Terrain Extender") ? 8 : 5); break;
-            case "Glaciate": defendingPokemon.LowerStatStage(Stat.Speed, 1); break;
-            case "Grav Apple": defendingPokemon.LowerStatStage(Stat.Defense, 1); break;
-            case "Headbutt": if (Chance(30)) defendingPokemon.Flinch(); break;
-            case "Heart Stamp": if (Chance(30)) defendingPokemon.Flinch(); break;
-            case "Heat Wave": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Burned, -1); break;
-            case "Hurricane": if (Chance(30)) defendingPokemon.Confuse(); break;
-            case "Hyper Fang": if (Chance(10)) defendingPokemon.Flinch(); break;
-            case "Ice Beam": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Frozen, -1); break;
-            case "Ice Burn": if (Chance(30)) defendingPokemon.SetStatus(StatusConditionType.Burned, -1); break;
-            case "Ice Fang": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Frozen, -1); if (Chance(10)) defendingPokemon.Flinch(); break;
-            case "Ice Punch": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Frozen, -1); break;
-            case "Icicle Crash": if (Chance(30)) defendingPokemon.Flinch(); break;
-            case "Icy Wind": defendingPokemon.LowerStatStage(Stat.Speed, 1); break;
-            case "Inferno": defendingPokemon.SetStatus(StatusConditionType.Burned, -1); break;
-            case "Iron Head": if (Chance(30)) defendingPokemon.Flinch(); break;
-            case "Iron Tail": if (Chance(10)) defendingPokemon.LowerStatStage(Stat.Defense, 1); break;
-            case "Lava Plume": if (Chance(30)) defendingPokemon.SetStatus(StatusConditionType.Burned, -1); break;
-            case "Leaf Tornado": if (Chance(30)) defendingPokemon.LowerStatStage(SecondaryStat.Accuracy, 1); break;
-            case "Lick": if (Chance(30)) defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1); break;
-            case "Liquidation": if (Chance(20)) defendingPokemon.LowerStatStage(Stat.Defense, 1); break;
-            case "Low Sweep": defendingPokemon.LowerStatStage(Stat.Speed, 1); break;
-            case "Lunge": defendingPokemon.LowerStatStage(Stat.Attack, 1); break;
-            case "Luster Purge": if (Chance(50)) defendingPokemon.LowerStatStage(Stat.SpecialDefense, 1); break;
-            case "Metal Claw": if (Chance(10)) attackingPokemon.IncreaseStatStage(Stat.Attack, 1); break;
-            case "Meteor Mash": if (Chance(20)) attackingPokemon.IncreaseStatStage(Stat.Attack, 1); break;
-            case "Mirror Shot": if (Chance(30)) defendingPokemon.LowerStatStage(SecondaryStat.Accuracy, 1); break;
-            case "Mist Ball": if (Chance(50)) defendingPokemon.LowerStatStage(Stat.SpecialAttack, 1); break;
-            case "Moonblast": if (Chance(30)) defendingPokemon.LowerStatStage(Stat.SpecialAttack, 1); break;
-            case "Mud Bomb": if (Chance(30)) defendingPokemon.LowerStatStage(SecondaryStat.Accuracy, 1); break;
-            case "Mud Shot": defendingPokemon.LowerStatStage(Stat.Speed, 1); break;
-            case "Mud Slap": defendingPokemon.LowerStatStage(SecondaryStat.Accuracy, 1); break;
-            case "Muddy Water": if (Chance(30)) defendingPokemon.LowerStatStage(SecondaryStat.Accuracy, 1); break;
-            case "Mystical Fire": defendingPokemon.LowerStatStage(Stat.SpecialAttack, 1); break;
-            case "Needle Arm": if (Chance(30)) defendingPokemon.Flinch(); break;
-            case "Night Daze": if (Chance(40)) defendingPokemon.LowerStatStage(SecondaryStat.Accuracy, 1); break;
-            case "Nuzzle": defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1); break;
-            case "Octazooka": if (Chance(50)) defendingPokemon.LowerStatStage(SecondaryStat.Accuracy, 1); break;
-            case "Ominous Wind": if (Chance(10)) attackingPokemon.IncreaseAllStatStagesBy(1); break;
-            case "Play Rough": if (Chance(10)) defendingPokemon.LowerStatStage(Stat.Attack, 1); break;
-            case "Poison Fang": if (Chance(50)) defendingPokemon.SetStatus(StatusConditionType.BadlyPoisoned, -1); break;
-            case "Poison Jab": if (Chance(30)) defendingPokemon.SetStatus(StatusConditionType.Poisoned, -1); break;
-            case "Poison Sting": if (Chance(30)) defendingPokemon.SetStatus(StatusConditionType.Poisoned, -1); break;
-            case "Poison Tail": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Poisoned, -1); break;
-            case "Powder Snow": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Frozen, -1); break;
-            case "Power-Up Punch": attackingPokemon.IncreaseStatStage(Stat.Attack, 1); break;
-            case "Psybeam": if (Chance(10)) defendingPokemon.Confuse(); break;
-            case "Psychic": if (Chance(10)) defendingPokemon.LowerStatStage(Stat.SpecialDefense, 1); break;
-            case "Pyro Ball": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Burned, -1); break;
-            case "Razor Shell": if (Chance(50)) defendingPokemon.LowerStatStage(Stat.Defense, 1); break;
-            case "Relic Song": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Sleeping, new Random().Next(1, 4)); break;
-            case "Rock Climb": if (Chance(20)) defendingPokemon.Confuse(); break;
-            case "Rock Slide": if (Chance(30)) defendingPokemon.Flinch(); break;
-            case "Rock Smash": if (Chance(50)) defendingPokemon.LowerStatStage(Stat.Defense, 1); break;
-            case "Rock Tomb": defendingPokemon.LowerStatStage(Stat.Speed, 1); break;
-            case "Rolling Kick": if (Chance(30)) defendingPokemon.Flinch(); break;
-            case "Sacred Fire": if (Chance(50)) defendingPokemon.SetStatus(StatusConditionType.Burned, -1); break;
-            case "Scald": if (Chance(30)) defendingPokemon.SetStatus(StatusConditionType.Burned, -1); break;
-            case "Scorching Sands": if (Chance(30)) defendingPokemon.SetStatus(StatusConditionType.Burned, -1); break;
-            case "Searing Shot": if (Chance(30)) defendingPokemon.SetStatus(StatusConditionType.Burned, -1); break;
+            case "Floaty Fall":
+                if (Chance(30))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Focus Blast":
+                if (Chance(10))
+                {
+                    defendingPokemon.LowerStatStage(Stat.SpecialDefense, 1);
+                }
+
+                break;
+            case "Force Palm":
+                if (Chance(30))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1);
+                }
+
+                break;
+            case "Freeze Dry":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Frozen, -1);
+                }
+
+                break;
+            case "Freeze Shock":
+                if (Chance(30))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1);
+                }
+
+                break;
+            case "Freezing Glare":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Frozen, -1);
+                }
+
+                break;
+            case "Genesis Supernova":
+                SetTerrain(TerrainEffect.Psychic, attackingPokemon.HasItem("Terrain Extender") ? 8 : 5);
+                break;
+            case "Glaciate":
+                defendingPokemon.LowerStatStage(Stat.Speed, 1);
+                break;
+            case "Grav Apple":
+                defendingPokemon.LowerStatStage(Stat.Defense, 1);
+                break;
+            case "Headbutt":
+                if (Chance(30))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Heart Stamp":
+                if (Chance(30))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Heat Wave":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Burned, -1);
+                }
+
+                break;
+            case "Hurricane":
+                if (Chance(30))
+                {
+                    defendingPokemon.Confuse();
+                }
+
+                break;
+            case "Hyper Fang":
+                if (Chance(10))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Ice Beam":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Frozen, -1);
+                }
+
+                break;
+            case "Ice Burn":
+                if (Chance(30))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Burned, -1);
+                }
+
+                break;
+            case "Ice Fang":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Frozen, -1);
+                }
+
+                if (Chance(10))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Ice Punch":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Frozen, -1);
+                }
+
+                break;
+            case "Icicle Crash":
+                if (Chance(30))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Icy Wind":
+                defendingPokemon.LowerStatStage(Stat.Speed, 1);
+                break;
+            case "Inferno":
+                defendingPokemon.SetStatus(StatusConditionType.Burned, -1);
+                break;
+            case "Iron Head":
+                if (Chance(30))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Iron Tail":
+                if (Chance(10))
+                {
+                    defendingPokemon.LowerStatStage(Stat.Defense, 1);
+                }
+
+                break;
+            case "Lava Plume":
+                if (Chance(30))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Burned, -1);
+                }
+
+                break;
+            case "Leaf Tornado":
+                if (Chance(30))
+                {
+                    defendingPokemon.LowerStatStage(SecondaryStat.Accuracy, 1);
+                }
+
+                break;
+            case "Lick":
+                if (Chance(30))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1);
+                }
+
+                break;
+            case "Liquidation":
+                if (Chance(20))
+                {
+                    defendingPokemon.LowerStatStage(Stat.Defense, 1);
+                }
+
+                break;
+            case "Low Sweep":
+                defendingPokemon.LowerStatStage(Stat.Speed, 1);
+                break;
+            case "Lunge":
+                defendingPokemon.LowerStatStage(Stat.Attack, 1);
+                break;
+            case "Luster Purge":
+                if (Chance(50))
+                {
+                    defendingPokemon.LowerStatStage(Stat.SpecialDefense, 1);
+                }
+
+                break;
+            case "Metal Claw":
+                if (Chance(10))
+                {
+                    attackingPokemon.IncreaseStatStage(Stat.Attack, 1);
+                }
+
+                break;
+            case "Meteor Mash":
+                if (Chance(20))
+                {
+                    attackingPokemon.IncreaseStatStage(Stat.Attack, 1);
+                }
+
+                break;
+            case "Mirror Shot":
+                if (Chance(30))
+                {
+                    defendingPokemon.LowerStatStage(SecondaryStat.Accuracy, 1);
+                }
+
+                break;
+            case "Mist Ball":
+                if (Chance(50))
+                {
+                    defendingPokemon.LowerStatStage(Stat.SpecialAttack, 1);
+                }
+
+                break;
+            case "Moonblast":
+                if (Chance(30))
+                {
+                    defendingPokemon.LowerStatStage(Stat.SpecialAttack, 1);
+                }
+
+                break;
+            case "Mud Bomb":
+                if (Chance(30))
+                {
+                    defendingPokemon.LowerStatStage(SecondaryStat.Accuracy, 1);
+                }
+
+                break;
+            case "Mud Shot":
+                defendingPokemon.LowerStatStage(Stat.Speed, 1);
+                break;
+            case "Mud Slap":
+                defendingPokemon.LowerStatStage(SecondaryStat.Accuracy, 1);
+                break;
+            case "Muddy Water":
+                if (Chance(30))
+                {
+                    defendingPokemon.LowerStatStage(SecondaryStat.Accuracy, 1);
+                }
+
+                break;
+            case "Mystical Fire":
+                defendingPokemon.LowerStatStage(Stat.SpecialAttack, 1);
+                break;
+            case "Needle Arm":
+                if (Chance(30))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Night Daze":
+                if (Chance(40))
+                {
+                    defendingPokemon.LowerStatStage(SecondaryStat.Accuracy, 1);
+                }
+
+                break;
+            case "Nuzzle":
+                defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1);
+                break;
+            case "Octazooka":
+                if (Chance(50))
+                {
+                    defendingPokemon.LowerStatStage(SecondaryStat.Accuracy, 1);
+                }
+
+                break;
+            case "Ominous Wind":
+                if (Chance(10))
+                {
+                    attackingPokemon.IncreaseAllStatStagesBy(1);
+                }
+
+                break;
+            case "Play Rough":
+                if (Chance(10))
+                {
+                    defendingPokemon.LowerStatStage(Stat.Attack, 1);
+                }
+
+                break;
+            case "Poison Fang":
+                if (Chance(50))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.BadlyPoisoned, -1);
+                }
+
+                break;
+            case "Poison Jab":
+                if (Chance(30))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Poisoned, -1);
+                }
+
+                break;
+            case "Poison Sting":
+                if (Chance(30))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Poisoned, -1);
+                }
+
+                break;
+            case "Poison Tail":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Poisoned, -1);
+                }
+
+                break;
+            case "Powder Snow":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Frozen, -1);
+                }
+
+                break;
+            case "Power-Up Punch":
+                attackingPokemon.IncreaseStatStage(Stat.Attack, 1);
+                break;
+            case "Psybeam":
+                if (Chance(10))
+                {
+                    defendingPokemon.Confuse();
+                }
+
+                break;
+            case "Psychic":
+                if (Chance(10))
+                {
+                    defendingPokemon.LowerStatStage(Stat.SpecialDefense, 1);
+                }
+
+                break;
+            case "Pyro Ball":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Burned, -1);
+                }
+
+                break;
+            case "Razor Shell":
+                if (Chance(50))
+                {
+                    defendingPokemon.LowerStatStage(Stat.Defense, 1);
+                }
+
+                break;
+            case "Relic Song":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Sleeping, new Random().Next(1, 4));
+                }
+
+                break;
+            case "Rock Climb":
+                if (Chance(20))
+                {
+                    defendingPokemon.Confuse();
+                }
+
+                break;
+            case "Rock Slide":
+                if (Chance(30))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Rock Smash":
+                if (Chance(50))
+                {
+                    defendingPokemon.LowerStatStage(Stat.Defense, 1);
+                }
+
+                break;
+            case "Rock Tomb":
+                defendingPokemon.LowerStatStage(Stat.Speed, 1);
+                break;
+            case "Rolling Kick":
+                if (Chance(30))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Sacred Fire":
+                if (Chance(50))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Burned, -1);
+                }
+
+                break;
+            case "Scald":
+                if (Chance(30))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Burned, -1);
+                }
+
+                break;
+            case "Scorching Sands":
+                if (Chance(30))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Burned, -1);
+                }
+
+                break;
+            case "Searing Shot":
+                if (Chance(30))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Burned, -1);
+                }
+
+                break;
             // TODO Secret Power https://bulbapedia.bulbagarden.net/wiki/Secret_Power_(move)
-            case "Seed Flare": if (Chance(40)) defendingPokemon.LowerStatStage(Stat.SpecialDefense, 2); break;
-            case "Shadow Ball": if (Chance(20)) defendingPokemon.LowerStatStage(Stat.SpecialDefense, 1); break;
-            case "Shadow Bone": if (Chance(20)) defendingPokemon.LowerStatStage(Stat.Defense, 1); break;
-            case "Shell Side Arm": if (Chance(20)) defendingPokemon.SetStatus(StatusConditionType.Poisoned, -1); break;
-            case "Signal Beam": if (Chance(10)) defendingPokemon.Confuse(); break;
-            case "Silver Wind": if (Chance(10)) attackingPokemon.IncreaseAllStatStagesBy(1); break;
-            case "Sizzly Slide": defendingPokemon.SetStatus(StatusConditionType.Burned, -1); break;
-            case "Skitter Smack": defendingPokemon.LowerStatStage(Stat.SpecialAttack, 1); break;
-            case "Sky Attack": if (Chance(30)) defendingPokemon.Flinch(); break;
-            case "Sludge": if (Chance(30)) defendingPokemon.SetStatus(StatusConditionType.Poisoned, -1); break;
-            case "Sludge Bomb": if (Chance(30)) defendingPokemon.SetStatus(StatusConditionType.Poisoned, -1); break;
-            case "Sludge Wave": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Poisoned, -1); break;
-            case "Smog": if (Chance(40)) defendingPokemon.SetStatus(StatusConditionType.Poisoned, -1); break;
-            case "Snarl": defendingPokemon.LowerStatStage(Stat.SpecialAttack, 1); break;
-            case "Snore": if (Chance(30)) defendingPokemon.Flinch(); break;
-            case "Spark": if (Chance(30)) defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1); break;
-            case "Sparkling Aria": if (defendingPokemon.HasStatusCondition(StatusConditionType.Burned)) defendingPokemon.HealStatusCondition(); break;
-            case "Spirit Break": defendingPokemon.LowerStatStage(Stat.SpecialAttack, 1); break;
-            case "Spirit Shackle": defendingPokemon.Trap(); break;
-            case "Splishy Splash": if (Chance(30)) defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1); break;
-            case "Steam Eruption": if (Chance(30)) defendingPokemon.SetStatus(StatusConditionType.Burned, -1); break;
-            case "Steamroller": if (Chance(30)) defendingPokemon.Flinch(); break;
-            case "Steel Wing": if (Chance(10)) attackingPokemon.IncreaseStatStage(Stat.Attack, 1); break;
-            case "Stoked Sparksurfer": defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1); break;
-            case "Stomp": if (Chance(30)) defendingPokemon.Flinch(); break;
-            case "Strange Steam": if (Chance(20)) defendingPokemon.Flinch(); break;
-            case "Struggle Bug": defendingPokemon.LowerStatStage(Stat.SpecialAttack, 1); break;
-            case "Throat Chop": defendingPokemon.Mute(); break;
-            case "Thunder": if (Chance(30)) defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1); break;
-            case "Thunder Fang": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1); if (Chance(10)) defendingPokemon.Flinch(); break;
-            case "Thunder Punch": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1); break;
-            case "Thunder Shock": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1); break;
-            case "Thunderbolt": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1); break;
-            case "Thunderous Kick": if (Chance(10)) defendingPokemon.LowerStatStage(Stat.Defense, 1); break;
+            case "Seed Flare":
+                if (Chance(40))
+                {
+                    defendingPokemon.LowerStatStage(Stat.SpecialDefense, 2);
+                }
+
+                break;
+            case "Shadow Ball":
+                if (Chance(20))
+                {
+                    defendingPokemon.LowerStatStage(Stat.SpecialDefense, 1);
+                }
+
+                break;
+            case "Shadow Bone":
+                if (Chance(20))
+                {
+                    defendingPokemon.LowerStatStage(Stat.Defense, 1);
+                }
+
+                break;
+            case "Shell Side Arm":
+                if (Chance(20))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Poisoned, -1);
+                }
+
+                break;
+            case "Signal Beam":
+                if (Chance(10))
+                {
+                    defendingPokemon.Confuse();
+                }
+
+                break;
+            case "Silver Wind":
+                if (Chance(10))
+                {
+                    attackingPokemon.IncreaseAllStatStagesBy(1);
+                }
+
+                break;
+            case "Sizzly Slide":
+                defendingPokemon.SetStatus(StatusConditionType.Burned, -1);
+                break;
+            case "Skitter Smack":
+                defendingPokemon.LowerStatStage(Stat.SpecialAttack, 1);
+                break;
+            case "Sky Attack":
+                if (Chance(30))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Sludge":
+                if (Chance(30))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Poisoned, -1);
+                }
+
+                break;
+            case "Sludge Bomb":
+                if (Chance(30))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Poisoned, -1);
+                }
+
+                break;
+            case "Sludge Wave":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Poisoned, -1);
+                }
+
+                break;
+            case "Smog":
+                if (Chance(40))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Poisoned, -1);
+                }
+
+                break;
+            case "Snarl":
+                defendingPokemon.LowerStatStage(Stat.SpecialAttack, 1);
+                break;
+            case "Snore":
+                if (Chance(30))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Spark":
+                if (Chance(30))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1);
+                }
+
+                break;
+            case "Sparkling Aria":
+                if (defendingPokemon.HasStatusCondition(StatusConditionType.Burned))
+                {
+                    defendingPokemon.HealStatusCondition();
+                }
+
+                break;
+            case "Spirit Break":
+                defendingPokemon.LowerStatStage(Stat.SpecialAttack, 1);
+                break;
+            case "Spirit Shackle":
+                defendingPokemon.Trap();
+                break;
+            case "Splishy Splash":
+                if (Chance(30))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1);
+                }
+
+                break;
+            case "Steam Eruption":
+                if (Chance(30))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Burned, -1);
+                }
+
+                break;
+            case "Steamroller":
+                if (Chance(30))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Steel Wing":
+                if (Chance(10))
+                {
+                    attackingPokemon.IncreaseStatStage(Stat.Attack, 1);
+                }
+
+                break;
+            case "Stoked Sparksurfer":
+                defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1);
+                break;
+            case "Stomp":
+                if (Chance(30))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Strange Steam":
+                if (Chance(20))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Struggle Bug":
+                defendingPokemon.LowerStatStage(Stat.SpecialAttack, 1);
+                break;
+            case "Throat Chop":
+                defendingPokemon.Mute();
+                break;
+            case "Thunder":
+                if (Chance(30))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1);
+                }
+
+                break;
+            case "Thunder Fang":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1);
+                }
+
+                if (Chance(10))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Thunder Punch":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1);
+                }
+
+                break;
+            case "Thunder Shock":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1);
+                }
+
+                break;
+            case "Thunderbolt":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1);
+                }
+
+                break;
+            case "Thunderous Kick":
+                if (Chance(10))
+                {
+                    defendingPokemon.LowerStatStage(Stat.Defense, 1);
+                }
+
+                break;
             // Tri Attack has 7% for each when it should have 6.67 (20 / 3) % TODO
-            case "Tri Attack": if (Chance(7)) defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1); if (Chance(7)) defendingPokemon.SetStatus(StatusConditionType.Burned, -1); if (Chance(7)) defendingPokemon.SetStatus(StatusConditionType.Frozen, -1); break;
-            case "Trop Kick": defendingPokemon.LowerStatStage(Stat.Attack, 1); break;
-            case "Twineedle": if (Chance(20)) defendingPokemon.SetStatus(StatusConditionType.Poisoned, -1); break;
-            case "Twister": if (Chance(20)) defendingPokemon.Flinch(); break;
-            case "Volt Tackle": if (Chance(10)) defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1); break;
-            case "Water Pulse": if (Chance(20)) defendingPokemon.Confuse(); break;
-            case "Waterfall": if (Chance(20)) defendingPokemon.Flinch(); break;
-            case "Zap Cannon": defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1); break;
-            case "Zen Headbutt": if (Chance(20)) defendingPokemon.Flinch(); break;
-            case "Zing Zap": if (Chance(30)) defendingPokemon.Flinch(); break;
+            case "Tri Attack":
+                if (Chance(7))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1);
+                }
+
+                if (Chance(7))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Burned, -1);
+                }
+
+                if (Chance(7))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Frozen, -1);
+                }
+
+                break;
+            case "Trop Kick":
+                defendingPokemon.LowerStatStage(Stat.Attack, 1);
+                break;
+            case "Twineedle":
+                if (Chance(20))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Poisoned, -1);
+                }
+
+                break;
+            case "Twister":
+                if (Chance(20))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Volt Tackle":
+                if (Chance(10))
+                {
+                    defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1);
+                }
+
+                break;
+            case "Water Pulse":
+                if (Chance(20))
+                {
+                    defendingPokemon.Confuse();
+                }
+
+                break;
+            case "Waterfall":
+                if (Chance(20))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Zap Cannon":
+                defendingPokemon.SetStatus(StatusConditionType.Paralyzed, -1);
+                break;
+            case "Zen Headbutt":
+                if (Chance(20))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+            case "Zing Zap":
+                if (Chance(30))
+                {
+                    defendingPokemon.Flinch();
+                }
+
+                break;
+
             #endregion
 
-            case "Acid Armor": attackingPokemon.IncreaseStatStage(Stat.Defense, 2); break;
-            case "Acupressure": attackingPokemon.IncreaseRandomAvailableStatBy(2); break;
+            case "Acid Armor":
+                attackingPokemon.IncreaseStatStage(Stat.Defense, 2);
+                break;
+            case "Acupressure":
+                attackingPokemon.IncreaseRandomAvailableStatBy(2);
+                break;
             case "After You": break; //TODO
-            case "Agility": attackingPokemon.IncreaseStatStage(Stat.Speed, 2); break;
+            case "Agility":
+                attackingPokemon.IncreaseStatStage(Stat.Speed, 2);
+                break;
             case "Ally Switch": break; //TODO
-            case "Amnesia": attackingPokemon.IncreaseStatStage(Stat.SpecialDefense, 2); break;
-            case "Aqua Ring": attackingPokemon.GiveEffect(EffectType.AquaRing, -1); break;
-            case "Aromatherapy": attackingParty.GetPokemons().ForEach(p => p.HealStatusCondition()); break;
+            case "Amnesia":
+                attackingPokemon.IncreaseStatStage(Stat.SpecialDefense, 2);
+                break;
+            case "Aqua Ring":
+                attackingPokemon.GiveEffect(EffectType.AquaRing, -1);
+                break;
+            case "Aromatherapy":
+                attackingParty.GetPokemons().ForEach(p => p.HealStatusCondition());
+                break;
             case "Aromatic Mist": break; // TODO
             case "Assist": break; // TODO
-            case "Attract": if (attackingPokemon.IsOpposingGender(defendingPokemon)) defendingPokemon.Infatuate(attackingPokemon); break;
-            case "Aurora Veil": if (IsWeatherConditionActive(WeatherCondition.Hail) & !attackingSide.HasBuff(BattlerSideBuff.AuroraVeil)) attackingSide.GiveBuff(BattlerSideBuff.AuroraVeil); break;
-            case "Autotomize": attackingPokemon.Weight /= 2; attackingPokemon.IncreaseStatStage(Stat.Speed, 2); break;
-            case "Baby-Doll Eyes": defendingPokemon.LowerStatStage(Stat.Attack, 1); break;
-            case "Baneful Bunker": attackingPokemon.GiveEffect(EffectType.BanefulBunker, 1); break;
-            case "Barrier": attackingPokemon.IncreaseStatStage(Stat.Defense, 2); break;
+            case "Attract":
+                if (attackingPokemon.IsOpposingGender(defendingPokemon))
+                {
+                    defendingPokemon.Infatuate(attackingPokemon);
+                }
+
+                break;
+            case "Aurora Veil":
+                if (IsWeatherConditionActive(WeatherCondition.Hail) &
+                    !attackingSide.HasBuff(BattlerSideBuff.AuroraVeil))
+                {
+                    attackingSide.GiveBuff(BattlerSideBuff.AuroraVeil);
+                }
+
+                break;
+            case "Autotomize":
+                attackingPokemon.Weight /= 2;
+                attackingPokemon.IncreaseStatStage(Stat.Speed, 2);
+                break;
+            case "Baby-Doll Eyes":
+                defendingPokemon.LowerStatStage(Stat.Attack, 1);
+                break;
+            case "Baneful Bunker":
+                attackingPokemon.GiveEffect(EffectType.BanefulBunker, 1);
+                break;
+            case "Barrier":
+                attackingPokemon.IncreaseStatStage(Stat.Defense, 2);
+                break;
             case "Baton Pass": break; // TODO
-            case "Belly Drum": if (attackingPokemon.BelowHalfHP()) throw new Exception("Not enough hp left"); attackingPokemon.TakeDamage(attackingPokemon.Stats.HP / 2); attackingPokemon.IncreaseStatStage(Stat.Attack, 12); break;
-            case "Bestow": attackingPokemon.TransferItem(attackingPokemon.Item, defendingPokemon); break;
-            case "Block": defendingPokemon.Trap(); break;
-            case "Bulk Up": attackingPokemon.IncreaseStatStage(Stat.Attack, 1); attackingPokemon.IncreaseStatStage(Stat.Defense, 1); break;
-            case "Calm Mind": attackingPokemon.IncreaseStatStage(Stat.SpecialAttack, 1); attackingPokemon.IncreaseStatStage(Stat.SpecialDefense, 1); break;
+            case "Belly Drum":
+                if (attackingPokemon.BelowHalfHP())
+                {
+                    throw new Exception("Not enough hp left");
+                }
+
+                attackingPokemon.TakeDamage(attackingPokemon.Stats.HP / 2);
+                attackingPokemon.IncreaseStatStage(Stat.Attack, 12);
+                break;
+            case "Bestow":
+                attackingPokemon.TransferItem(attackingPokemon.Item, defendingPokemon);
+                break;
+            case "Block":
+                defendingPokemon.Trap();
+                break;
+            case "Bulk Up":
+                attackingPokemon.IncreaseStatStage(Stat.Attack, 1);
+                attackingPokemon.IncreaseStatStage(Stat.Defense, 1);
+                break;
+            case "Calm Mind":
+                attackingPokemon.IncreaseStatStage(Stat.SpecialAttack, 1);
+                attackingPokemon.IncreaseStatStage(Stat.SpecialDefense, 1);
+                break;
             case "Camouflage": break; // TODO
-            case "Captivate": if (attackingPokemon.IsOpposingGender(defendingPokemon)) defendingPokemon.LowerStatStage(Stat.SpecialAttack, 2); break;
+            case "Captivate":
+                if (attackingPokemon.IsOpposingGender(defendingPokemon))
+                {
+                    defendingPokemon.LowerStatStage(Stat.SpecialAttack, 2);
+                }
+
+                break;
             case "Celebrate": break; // no effect
-            case "Charge": attackingPokemon.IncreaseStatStage(Stat.SpecialDefense, 1); attackingPokemon.GiveEffect(EffectType.Charged, 1); break;
-            case "Charm": defendingPokemon.LowerStatStage(Stat.Attack, 2); break;
+            case "Charge":
+                attackingPokemon.IncreaseStatStage(Stat.SpecialDefense, 1);
+                attackingPokemon.GiveEffect(EffectType.Charged, 1);
+                break;
+            case "Charm":
+                defendingPokemon.LowerStatStage(Stat.Attack, 2);
+                break;
             case "Chilly Reception": break; // TOOD this sets up hail then switches user out
-            case "Clangorous Soul": if (attackingPokemon.BelowThirdHP()) throw new Exception("Not enough hp left"); attackingPokemon.TakeDamage(attackingPokemon.Stats.HP / 3); attackingPokemon.IncreaseAllStatStagesBy(1); break;
+            case "Clangorous Soul":
+                if (attackingPokemon.BelowThirdHP())
+                {
+                    throw new Exception("Not enough hp left");
+                }
+
+                attackingPokemon.TakeDamage(attackingPokemon.Stats.HP / 3);
+                attackingPokemon.IncreaseAllStatStagesBy(1);
+                break;
             case "Coaching": break; // TODO
-            case "Coil": attackingPokemon.IncreaseStatStage(Stat.Attack, 1); attackingPokemon.IncreaseStatStage(Stat.Defense, 1); attackingPokemon.IncreaseStatStage(SecondaryStat.Accuracy, 1); break;
-            case "Confide": defendingPokemon.LowerStatStage(Stat.SpecialAttack, 1); break;
-            case "Confuse Ray": defendingPokemon.Confuse(); break;
+            case "Coil":
+                attackingPokemon.IncreaseStatStage(Stat.Attack, 1);
+                attackingPokemon.IncreaseStatStage(Stat.Defense, 1);
+                attackingPokemon.IncreaseStatStage(SecondaryStat.Accuracy, 1);
+                break;
+            case "Confide":
+                defendingPokemon.LowerStatStage(Stat.SpecialAttack, 1);
+                break;
+            case "Confuse Ray":
+                defendingPokemon.Confuse();
+                break;
             case "Conversion": break; // TODO
             case "Conversion 2": break; // TODO
             case "Copycat": break; // TODO
-            case "Corrosive Gas": defendingPokemon.RemoveItem(); break;
-            case "Cosmic Power": attackingPokemon.IncreaseStatStage(Stat.SpecialAttack, 1); attackingPokemon.IncreaseStatStage(Stat.SpecialDefense, 1); break;
-            case "Cotton Guard": attackingPokemon.IncreaseStatStage(Stat.Defense, 3); break;
-            case "Cotton Spore": defendingPokemon.LowerStatStage(Stat.Speed, 2); break;
-            case "Court Change": attackingSide.SwapBuffs(defendingSide); break;
-            case "Crafty Shield": break; // TODO
-            case "Curse": if (attackingPokemon.HasType(PokemonType.Ghost)) {
-                    if (attackingPokemon.BelowHalfHP()) throw new MoveFailsException(move);
-                    defendingPokemon.Curse(); }
-                else { attackingPokemon.LowerStatStage(Stat.Speed, 1); attackingPokemon.IncreaseStatStage(Stat.Attack, 1); attackingPokemon.IncreaseStatStage(Stat.Defense, 1);}
+            case "Corrosive Gas":
+                defendingPokemon.RemoveItem();
                 break;
-            case "Dark Void": defendingPokemon.SetStatus(StatusConditionType.Sleeping, new Random().Next(1, 4)); break;
+            case "Cosmic Power":
+                attackingPokemon.IncreaseStatStage(Stat.SpecialAttack, 1);
+                attackingPokemon.IncreaseStatStage(Stat.SpecialDefense, 1);
+                break;
+            case "Cotton Guard":
+                attackingPokemon.IncreaseStatStage(Stat.Defense, 3);
+                break;
+            case "Cotton Spore":
+                defendingPokemon.LowerStatStage(Stat.Speed, 2);
+                break;
+            case "Court Change":
+                attackingSide.SwapBuffs(defendingSide);
+                break;
+            case "Crafty Shield": break; // TODO
+            case "Curse":
+                if (attackingPokemon.HasType(PokemonType.Ghost))
+                {
+                    if (attackingPokemon.BelowHalfHP())
+                    {
+                        throw new MoveFailsException(move);
+                    }
+
+                    defendingPokemon.Curse();
+                }
+                else
+                {
+                    attackingPokemon.LowerStatStage(Stat.Speed, 1);
+                    attackingPokemon.IncreaseStatStage(Stat.Attack, 1);
+                    attackingPokemon.IncreaseStatStage(Stat.Defense, 1);
+                }
+
+                break;
+            case "Dark Void":
+                defendingPokemon.SetStatus(StatusConditionType.Sleeping, new Random().Next(1, 4));
+                break;
         }
     }
 
@@ -409,48 +1391,63 @@ public class Battle : IBattle
             switch (item.Name)
             {
                 case "Energy Root":
-                    target.HealHP(120);
+                    target.HealHp(120);
                     break; // todo lower happiness
                 case "Moomoo Milk":
-                    target.HealHP(100);
+                    target.HealHp(100);
                     break;
                 case "Lemonade":
-                    target.HealHP(80);
+                    target.HealHp(80);
                     break;
                 case "Fresh Water":
-                    target.HealHP(50);
+                    target.HealHp(50);
                     break;
                 case "Full Restore":
-                    target.HealHP();
+                    target.HealHp();
                     target.HealStatusCondition();
                     break;
                 case "Max Potion":
-                    target.HealHP();
+                    target.HealHp();
                     break;
                 case "Hyper Potion":
-                    target.HealHP(120);
+                    target.HealHp(120);
                     break;
                 case "Super Potion":
-                    target.HealHP(60);
+                    target.HealHp(60);
                     break;
                 case "Potion":
-                    target.HealHP(20);
+                    target.HealHp(20);
                     break;
                 case "Full Heal":
                     target.HealStatusCondition();
                     break;
                 case "Burn Heal":
-                    if (target.HasStatusCondition(StatusConditionType.Burned)) target.HealStatusCondition();
+                    if (target.HasStatusCondition(StatusConditionType.Burned))
+                    {
+                        target.HealStatusCondition();
+                    }
+
                     break;
                 case "Antidote":
                     if (target.HasStatusCondition(StatusConditionType.Poisoned, StatusConditionType.BadlyPoisoned))
+                    {
                         target.HealStatusCondition();
+                    }
+
                     break;
                 case "Paralyze Heal":
-                    if (target.HasStatusCondition(StatusConditionType.Paralyzed)) target.HealStatusCondition();
+                    if (target.HasStatusCondition(StatusConditionType.Paralyzed))
+                    {
+                        target.HealStatusCondition();
+                    }
+
                     break;
                 case "Ice Heal":
-                    if (target.HasStatusCondition(StatusConditionType.Frozen)) target.HealStatusCondition();
+                    if (target.HasStatusCondition(StatusConditionType.Frozen))
+                    {
+                        target.HealStatusCondition();
+                    }
+
                     break;
                 default: throw new Exception("Item was unknown medicine.");
             }
@@ -522,7 +1519,10 @@ public class Battle : IBattle
         var attackingSide = playerTurn ? PlayerSide : EnemySide;
         var defendingSide = playerTurn ? EnemySide : PlayerSide;
 
-        if (move.IsStatus) return 0;
+        if (move.IsStatus)
+        {
+            return 0;
+        }
 
         var isCriticalHit = CriticalHitCheck(attackingPokemon, defendingPokemon, move);
 
@@ -539,7 +1539,9 @@ public class Battle : IBattle
         var effMod = CalculateEffectivityMod(move, defendingPokemon.Types);
 
         if (effMod == 0)
+        {
             throw new MoveHasNoEffectException(move); //return new Answer(AnswerCodes.Answer_Calculation_NoEffect, 0);
+        }
 
         var burnMod = CalculateBurnMod(attackingPokemon, move);
         var otherMod = CalculateOtherMod(attackingPokemon, defendingPokemon, attackingParty, defendingSide, move,
@@ -558,9 +1560,11 @@ public class Battle : IBattle
     {
         return false; // TODO
         if (defender.HasAbility())
+        {
             if (move.HasHighCriticalHitRate)
             {
             }
+        }
     }
 
     private double CalculateMovePower(IPokemonParty attackingParty, BattlerSide defenderSide, Pokemon attacker,
@@ -572,147 +1576,380 @@ public class Battle : IBattle
         {
             case "Facade":
                 if (attacker.HasStatusCondition(StatusConditionType.Burned, StatusConditionType.Paralyzed,
-                        StatusConditionType.Poisoned, StatusConditionType.BadlyPoisoned)) power *= 2;
+                        StatusConditionType.Poisoned, StatusConditionType.BadlyPoisoned))
+                {
+                    power *= 2;
+                }
+
                 break;
             case "Brine":
-                if (defender.BelowHalfHP()) power *= 2;
+                if (defender.BelowHalfHP())
+                {
+                    power *= 2;
+                }
+
                 break;
             case "Venoshock":
                 if (defender.HasStatusCondition(StatusConditionType.Poisoned, StatusConditionType.BadlyPoisoned))
+                {
                     power *= 2;
+                }
+
                 break;
             case "Retaliate":
-                if (IsRetaliateBoosted()) power *= 2;
+                if (IsRetaliateBoosted())
+                {
+                    power *= 2;
+                }
+
                 break;
             case "Fusion Flare":
-                if (GetLastMove().Name == "Fusion Bolt") power *= 2;
+                if (GetLastMove().Name == "Fusion Bolt")
+                {
+                    power *= 2;
+                }
+
                 break;
             case "Fusion Bolt":
-                if (GetLastMove().Name == "Fusion Flare") power *= 2;
+                if (GetLastMove().Name == "Fusion Flare")
+                {
+                    power *= 2;
+                }
+
                 break;
             case "Lash Out":
-                if (StatsLoweredSameTurn(attacker)) power *= 2;
+                if (StatsLoweredSameTurn(attacker))
+                {
+                    power *= 2;
+                }
+
                 break;
             case "Solar Blade" or "Solar Beam":
                 if (!IsSurpressingWeather() && Weather.IsConditionActive(WeatherCondition.Rain,
-                        WeatherCondition.Sand, WeatherCondition.Hail)) power *= 0.5;
+                        WeatherCondition.Sand, WeatherCondition.Hail))
+                {
+                    power *= 0.5;
+                }
+
                 break;
             case "Knock Off":
-                if (defender.Item.CanGetRemoved()) power *= 1.5;
+                if (defender.Item.CanGetRemoved())
+                {
+                    power *= 1.5;
+                }
+
                 break;
             case "Grav Apple":
-                if (Gravity.Active) power *= 1.5;
+                if (Gravity.Active)
+                {
+                    power *= 1.5;
+                }
+
                 break;
             case "Misty Explosion":
-                if (IsTerrainEffectActive(TerrainEffect.Fairy) && attacker.IsGrounded()) power *= 1.5;
+                if (IsTerrainEffectActive(TerrainEffect.Fairy) && attacker.IsGrounded())
+                {
+                    power *= 1.5;
+                }
+
                 break;
             case "Expanding Force":
-                if (IsTerrainEffectActive(TerrainEffect.Psychic) && attacker.IsGrounded()) power *= 1.5;
+                if (IsTerrainEffectActive(TerrainEffect.Psychic) && attacker.IsGrounded())
+                {
+                    power *= 1.5;
+                }
+
                 break;
 
             case "Gust" or "Twister":
-                if (defender.IsFlying) power *= 2;
+                if (defender.IsFlying)
+                {
+                    power *= 2;
+                }
+
                 break;
             // TODO Pursuit *= 2 if defender wants to switch
             case "Smelling Salt":
-                if (defender.HasStatusCondition(StatusConditionType.Paralyzed)) power *= 2;
+                if (defender.HasStatusCondition(StatusConditionType.Paralyzed))
+                {
+                    power *= 2;
+                }
+
                 break;
             case "Wake-Up Slap":
-                if (defender.HasStatusCondition(StatusConditionType.Sleeping)) power *= 2;
+                if (defender.HasStatusCondition(StatusConditionType.Sleeping))
+                {
+                    power *= 2;
+                }
+
                 break;
         }
 
         // other Boosts
         // TODO: Electromorposis and Wind Power apply this boost too (it counts as the same one and do not stack)
-        if (CheckMoveType(move, PokemonType.Electric, attacker) && attacker.HasEffect(EffectType.Charged)) power *= 2;
-        if (MoveWasStolenByMeFirst(move)) power *= 1.5;
+        if (CheckMoveType(move, PokemonType.Electric, attacker) && attacker.HasEffect(EffectType.Charged))
+        {
+            power *= 2;
+        }
+
+        if (MoveWasStolenByMeFirst(move))
+        {
+            power *= 1.5;
+        }
+
         // Helping Hand can be applied multiple times by giving the Pokemon multiple Effect instances of Helping Hand
         if (attacker.HasEffect(EffectType.HelpingHand))
+        {
             power *= Math.Pow(1.5, attacker.EffectCount(EffectType.HelpingHand));
+        }
+
         if (defenderSide.HasBuff(BattlerSideBuff.MudSport) &&
-            CheckMoveType(move, PokemonType.Electric, attacker)) power *= 0.5;
+            CheckMoveType(move, PokemonType.Electric, attacker))
+        {
+            power *= 0.5;
+        }
+
         if (defenderSide.HasBuff(BattlerSideBuff.WaterSport) &&
-            CheckMoveType(move, PokemonType.Fire, attacker)) power *= 0.5;
+            CheckMoveType(move, PokemonType.Fire, attacker))
+        {
+            power *= 0.5;
+        }
+
         // Terrain
         if (IsTerrainEffectActive(TerrainEffect.Grass) && defender.IsGrounded() &&
-            move.NameIsAnyOf("Earthquake", "Magnitude", "Bulldoze")) power *= 0.5;
+            move.NameIsAnyOf("Earthquake", "Magnitude", "Bulldoze"))
+        {
+            power *= 0.5;
+        }
+
         if (IsTerrainEffectActive(TerrainEffect.Fairy) && defender.IsGrounded() &&
-            CheckMoveType(move, PokemonType.Dragon, attacker)) power *= 0.5;
+            CheckMoveType(move, PokemonType.Dragon, attacker))
+        {
+            power *= 0.5;
+        }
 
         if (IsTerrainEffectActive(TerrainEffect.Grass) && attacker.IsGrounded() &&
-            CheckMoveType(move, PokemonType.Grass, attacker)) power *= 1.5;
+            CheckMoveType(move, PokemonType.Grass, attacker))
+        {
+            power *= 1.5;
+        }
+
         if (IsTerrainEffectActive(TerrainEffect.Electric) && attacker.IsGrounded() &&
-            CheckMoveType(move, PokemonType.Electric, attacker)) power *= 1.5;
+            CheckMoveType(move, PokemonType.Electric, attacker))
+        {
+            power *= 1.5;
+        }
+
         if (IsTerrainEffectActive(TerrainEffect.Psychic) && attacker.IsGrounded() &&
-            CheckMoveType(move, PokemonType.Psychic, attacker)) power *= 1.5;
+            CheckMoveType(move, PokemonType.Psychic, attacker))
+        {
+            power *= 1.5;
+        }
 
         // Attacker Ability
         if (attacker.HasAbility("Rivalry"))
+        {
             power *= attacker.IsSameGender(defender) ? 0.75 : attacker.IsOpposingGender(defender) ? 1.25 : 1;
-        if (attacker.HasAbility("Supreme Overlord")) power *= Math.Pow(1.1, Math.Min(attackingParty.GetFaintedCount(), 5));
-        if (attacker.HasAbility("Reckless") && (move.IsRecoilMove || move.HurtsOnMiss)) power *= 1.2;
+        }
+
+        if (attacker.HasAbility("Supreme Overlord"))
+        {
+            power *= Math.Pow(1.1, Math.Min(attackingParty.GetFaintedCount(), 5));
+        }
+
+        if (attacker.HasAbility("Reckless") && (move.IsRecoilMove || move.HurtsOnMiss))
+        {
+            power *= 1.2;
+        }
 
         if (attacker.HasAbility("Overgrow") && attacker.BelowThirdHP() &&
-            CheckMoveType(move, PokemonType.Grass, attacker)) power *= 1.5;
+            CheckMoveType(move, PokemonType.Grass, attacker))
+        {
+            power *= 1.5;
+        }
+
         if (attacker.HasAbility("Torrent") && attacker.BelowThirdHP() &&
-            CheckMoveType(move, PokemonType.Water, attacker)) power *= 1.5;
+            CheckMoveType(move, PokemonType.Water, attacker))
+        {
+            power *= 1.5;
+        }
+
         if (attacker.HasAbility("Blaze") && attacker.BelowThirdHP() &&
-            CheckMoveType(move, PokemonType.Fire, attacker)) power *= 1.5;
+            CheckMoveType(move, PokemonType.Fire, attacker))
+        {
+            power *= 1.5;
+        }
+
         if (attacker.HasAbility("Swarm") && attacker.BelowThirdHP() &&
-            CheckMoveType(move, PokemonType.Bug, attacker)) power *= 1.5;
+            CheckMoveType(move, PokemonType.Bug, attacker))
+        {
+            power *= 1.5;
+        }
 
         // Iron Fist and Punching Glove do not stack.
         if ((attacker.HasAbility("Iron Fist") || attacker.HasItem("Punching Glove")) && move.IsPunchingMove)
+        {
             power *= 1.2;
-        if (attacker.HasAbility("Normalize")) power *= 1.2;
+        }
+
+        if (attacker.HasAbility("Normalize"))
+        {
+            power *= 1.2;
+        }
+
         if (attacker.HasAbility("Aerilate", "Pixilate", "Refrigerate", "Galvanize") &&
-            move.HasType(PokemonType.Normal)) power *= 1.2;
-        if (attacker.HasAbility("Analytic") && PokemonMovedBefore(defender, attacker)) power *= 1.3;
+            move.HasType(PokemonType.Normal))
+        {
+            power *= 1.2;
+        }
+
+        if (attacker.HasAbility("Analytic") && PokemonMovedBefore(defender, attacker))
+        {
+            power *= 1.3;
+        }
+
         if (attacker.HasAbility("Sand Force") &&
             Weather.IsConditionActive(WeatherCondition.Sand) & !IsSurpressingWeather() &&
-            move.HasType(PokemonType.Ground, PokemonType.Steel, PokemonType.Rock)) power *= 1.3;
-        if (attacker.HasAbility("Sheer Force") && move.HasAdditionalEffect) power *= 1.3;
-        if (attacker.HasAbility("Tough Claws") && move.IsContactMove) power *= 1.3;
-        if (_battleType != BattleType.SingleBattle && attackingParty.GetAllies(this, attacker).Any(p => p.HasAbility("Battery")) &&
-            move.IsSpecial) power *= 1.3;
+            move.HasType(PokemonType.Ground, PokemonType.Steel, PokemonType.Rock))
+        {
+            power *= 1.3;
+        }
+
+        if (attacker.HasAbility("Sheer Force") && move.HasAdditionalEffect)
+        {
+            power *= 1.3;
+        }
+
+        if (attacker.HasAbility("Tough Claws") && move.IsContactMove)
+        {
+            power *= 1.3;
+        }
+
         if (_battleType != BattleType.SingleBattle &&
-            attackingParty.GetAllies(this, attacker).Any(p => p.HasAbility("Power Spot"))) power *= 1.3;
-        if (attacker.HasAbility("Punk Rock") && move.IsSoundMove) power *= 1.3;
-        if (attacker.HasAbility("Strong Jaw") && move.IsBitingMove) power *= 1.5;
-        if (attacker.HasAbility("Mega Launcher") && (move.IsAuraMove || move.IsPulseMove)) power *= 1.5;
-        if (attacker.HasAbility("Technician") && move.BasePowerBelow(60)) power *= 1.5;
+            attackingParty.GetAllies(this, attacker).Any(p => p.HasAbility("Battery")) &&
+            move.IsSpecial)
+        {
+            power *= 1.3;
+        }
+
+        if (_battleType != BattleType.SingleBattle &&
+            attackingParty.GetAllies(this, attacker).Any(p => p.HasAbility("Power Spot")))
+        {
+            power *= 1.3;
+        }
+
+        if (attacker.HasAbility("Punk Rock") && move.IsSoundMove)
+        {
+            power *= 1.3;
+        }
+
+        if (attacker.HasAbility("Strong Jaw") && move.IsBitingMove)
+        {
+            power *= 1.5;
+        }
+
+        if (attacker.HasAbility("Mega Launcher") && (move.IsAuraMove || move.IsPulseMove))
+        {
+            power *= 1.5;
+        }
+
+        if (attacker.HasAbility("Technician") && move.BasePowerBelow(60))
+        {
+            power *= 1.5;
+        }
+
         if (attacker.HasAbility("Toxic Boost") && move.IsPhysical &&
-            attacker.HasStatusCondition(StatusConditionType.Poisoned, StatusConditionType.BadlyPoisoned)) power *= 1.5;
+            attacker.HasStatusCondition(StatusConditionType.Poisoned, StatusConditionType.BadlyPoisoned))
+        {
+            power *= 1.5;
+        }
+
         if (attacker.HasAbility("Flare Boost") && move.IsSpecial &&
-            attacker.HasStatusCondition(StatusConditionType.Burned)) power *= 1.5;
-        if (attacker.HasAbility("Steely Spirit") && CheckMoveType(move, PokemonType.Steel, attacker)) power *= 1.5;
+            attacker.HasStatusCondition(StatusConditionType.Burned))
+        {
+            power *= 1.5;
+        }
+
+        if (attacker.HasAbility("Steely Spirit") && CheckMoveType(move, PokemonType.Steel, attacker))
+        {
+            power *= 1.5;
+        }
+
         if (_battleType != BattleType.SingleBattle &&
             attackingParty.GetAllies(this, attacker).Any(p => p.HasAbility("Steely Spirit")) &&
-            CheckMoveType(move, PokemonType.Steel, attacker)) power *= 1.5;
-        if (attacker.HasAbility("Sharpness") && move.IsSlasingMove) power *= 1.5;
+            CheckMoveType(move, PokemonType.Steel, attacker))
+        {
+            power *= 1.5;
+        }
+
+        if (attacker.HasAbility("Sharpness") && move.IsSlasingMove)
+        {
+            power *= 1.5;
+        }
+
         // Defender Ability
         if (defender.HasAbility("Heatproof") &&
-            move.HasType(PokemonType.Fire) & !attacker.Ability.IgnoresOtherAbilities()) power *= 0.5;
+            move.HasType(PokemonType.Fire) & !attacker.Ability.IgnoresOtherAbilities())
+        {
+            power *= 0.5;
+        }
+
         if (defender.HasAbility("Dry Skin") &&
-            move.HasType(PokemonType.Fire) & !attacker.Ability.IgnoresOtherAbilities()) power *= 1.25;
+            move.HasType(PokemonType.Fire) & !attacker.Ability.IgnoresOtherAbilities())
+        {
+            power *= 1.25;
+        }
+
         if (defender.HasAbility("Thick Fat") && CheckMoveType(move, PokemonType.Fire, attacker) ||
-            CheckMoveType(move, PokemonType.Ice, attacker) & !attacker.Ability.IgnoresOtherAbilities()) power *= 0.5;
+            CheckMoveType(move, PokemonType.Ice, attacker) & !attacker.Ability.IgnoresOtherAbilities())
+        {
+            power *= 0.5;
+        }
+
         // Dark and Faira aura
         if (HasActiveFieldEffect(Enums.FieldEffects.DarkAura) & !attacker.Ability.IgnoresOtherAbilities() &&
             CheckMoveType(move, PokemonType.Dark, attacker))
+        {
             power *= HasActiveFieldEffect(Enums.FieldEffects.AuraBreak) ? 0.75 : 4.0 / 3.0;
+        }
+
         if (HasActiveFieldEffect(Enums.FieldEffects.FairyAura) & !attacker.Ability.IgnoresOtherAbilities() &&
             CheckMoveType(move, PokemonType.Fairy, attacker))
+        {
             power *= HasActiveFieldEffect(Enums.FieldEffects.AuraBreak) ? 0.75 : 4.0 / 3.0;
-        // Items
-        if (move.IsPhysical && attacker.HasItem("Muscle Band")) power *= 1.1;
-        if (move.IsSpecial && attacker.HasItem("Wise Glasses")) power *= 1.1;
-        if (TypeEnhancingItemMatches(move, attacker) || IncenseMatches(move, attacker) ||
-            PlateMatches(move, attacker)) power *= 1.2;
-        if (LegendaryItemMatches(move, attacker)) power *= 1.2;
-        if (GemMatches(move, attacker)) power *= 1.3;
+        }
 
-        if (attacker.Name == "Pikachu" && attacker.HasItem("Light Ball")) power *= 2;
+        // Items
+        if (move.IsPhysical && attacker.HasItem("Muscle Band"))
+        {
+            power *= 1.1;
+        }
+
+        if (move.IsSpecial && attacker.HasItem("Wise Glasses"))
+        {
+            power *= 1.1;
+        }
+
+        if (TypeEnhancingItemMatches(move, attacker) || IncenseMatches(move, attacker) ||
+            PlateMatches(move, attacker))
+        {
+            power *= 1.2;
+        }
+
+        if (LegendaryItemMatches(move, attacker))
+        {
+            power *= 1.2;
+        }
+
+        if (GemMatches(move, attacker))
+        {
+            power *= 1.3;
+        }
+
+        if (attacker.Name == "Pikachu" && attacker.HasItem("Light Ball"))
+        {
+            power *= 2;
+        }
 
         return power;
     }
@@ -1036,50 +2273,140 @@ public class Battle : IBattle
         switch (move.Name)
         {
             case "Behemoth Blade" or "Behemoth Bash" or "Dynamax Cannon":
-                if (defender.IsDynamaxed) mod *= 2;
+                if (defender.IsDynamaxed)
+                {
+                    mod *= 2;
+                }
+
                 break;
             case "Earthquake" or "Magnitude":
-                if (defender.IsUnderground) mod *= 2;
+                if (defender.IsUnderground)
+                {
+                    mod *= 2;
+                }
+
                 break;
             case "Surf" or "Whirlpool":
-                if (defender.IsUnderwater) mod *= 2;
+                if (defender.IsUnderwater)
+                {
+                    mod *= 2;
+                }
+
                 break;
             case "Collision Course" or "Electro Drift":
-                if (CalculateEffectivityMod(move, defender.Types) > 1) mod *= 4.0 / 3.0;
+                if (CalculateEffectivityMod(move, defender.Types) > 1)
+                {
+                    mod *= 4.0 / 3.0;
+                }
+
                 break;
         }
 
-        if (move.HasExtraDamageOnMinimize && defender.IsMinimized) mod *= 2;
-        if (move.IsPhysical && defenderSide.HasBuff(BattlerSideBuff.Reflect, BattlerSideBuff.AuroraVeil)) mod *= 0.5;
-        if (move.IsSpecial && defenderSide.HasBuff(BattlerSideBuff.LightScreen, BattlerSideBuff.AuroraVeil)) mod *= 0.5;
+        if (move.HasExtraDamageOnMinimize && defender.IsMinimized)
+        {
+            mod *= 2;
+        }
+
+        if (move.IsPhysical && defenderSide.HasBuff(BattlerSideBuff.Reflect, BattlerSideBuff.AuroraVeil))
+        {
+            mod *= 0.5;
+        }
+
+        if (move.IsSpecial && defenderSide.HasBuff(BattlerSideBuff.LightScreen, BattlerSideBuff.AuroraVeil))
+        {
+            mod *= 0.5;
+        }
+
         // Defender Ability
         if (defender.HasAbility("Multiscale", "Shadow Shield") &&
-            defender.AtFullHP() & !attacker.Ability.IgnoresOtherAbilities()) mod *= 0.5;
+            defender.AtFullHP() & !attacker.Ability.IgnoresOtherAbilities())
+        {
+            mod *= 0.5;
+        }
+
         if (defender.HasAbility("Fluffy") & !attacker.Ability.IgnoresOtherAbilities() &&
-            move.IsContactMove & !attacker.HasAbility("Long Reach")) mod *= 0.5;
+            move.IsContactMove & !attacker.HasAbility("Long Reach"))
+        {
+            mod *= 0.5;
+        }
+
         if (defender.HasAbility("Fluffy") & !attacker.Ability.IgnoresOtherAbilities() &&
-            CheckMoveType(move, PokemonType.Fire, attacker)) mod *= 2;
+            CheckMoveType(move, PokemonType.Fire, attacker))
+        {
+            mod *= 2;
+        }
+
         if (defender.HasAbility("Punk Rock") & !attacker.Ability.IgnoresOtherAbilities() &&
-            move.IsSoundMove) mod *= 0.5;
-        if (defender.HasAbility("Ice Scales") & !attacker.Ability.IgnoresOtherAbilities() && move.IsSpecial) mod *= 0.5;
+            move.IsSoundMove)
+        {
+            mod *= 0.5;
+        }
+
+        if (defender.HasAbility("Ice Scales") & !attacker.Ability.IgnoresOtherAbilities() && move.IsSpecial)
+        {
+            mod *= 0.5;
+        }
+
         if (defender.HasAbility("Filter", "Prism Armor", "Solid Rock") & !attacker.Ability.IgnoresOtherAbilities() &&
-            CalculateEffectivityMod(move, defender.Types) > 1) mod *= 0.75;
+            CalculateEffectivityMod(move, defender.Types) > 1)
+        {
+            mod *= 0.75;
+        }
+
         // Partner Ability (hitting Partner)
         if (_battleType != BattleType.SingleBattle &&
             attackingParty.GetAllies(this, attacker).Find(p => p.HasAbility("Friend Guard")) == defender &
-            !attacker.Ability.IgnoresOtherAbilities()) mod *= 0.75;
+            !attacker.Ability.IgnoresOtherAbilities())
+        {
+            mod *= 0.75;
+        }
+
         // Attacker Ability
-        if (attacker.HasAbility("Neuroforce") && CalculateEffectivityMod(move, defender.Types) > 1) mod *= 1.25;
-        if (attacker.HasAbility("Sniper") && isCriticalHit) mod *= 1.5;
-        if (attacker.HasAbility("Tinted Lens") && CalculateEffectivityMod(move, defender.Types) < 1) mod *= 2;
+        if (attacker.HasAbility("Neuroforce") && CalculateEffectivityMod(move, defender.Types) > 1)
+        {
+            mod *= 1.25;
+        }
+
+        if (attacker.HasAbility("Sniper") && isCriticalHit)
+        {
+            mod *= 1.5;
+        }
+
+        if (attacker.HasAbility("Tinted Lens") && CalculateEffectivityMod(move, defender.Types) < 1)
+        {
+            mod *= 2;
+        }
+
         // Items
-        if (TypeResistBerryMatches(move, defender)) mod *= 0.5;
-        if (attacker.HasItem("Expert Belt") && CalculateEffectivityMod(move, defender.Types) > 1) mod *= 1.2;
-        if (attacker.HasItem("Life Orb")) mod *= 1.3;
-        if (attacker.HasItem("Choice Band") && move.IsPhysical) mod *= 1.5;
-        if (attacker.HasItem("Choice Specs") && move.IsSpecial) mod *= 1.5;
+        if (TypeResistBerryMatches(move, defender))
+        {
+            mod *= 0.5;
+        }
+
+        if (attacker.HasItem("Expert Belt") && CalculateEffectivityMod(move, defender.Types) > 1)
+        {
+            mod *= 1.2;
+        }
+
+        if (attacker.HasItem("Life Orb"))
+        {
+            mod *= 1.3;
+        }
+
+        if (attacker.HasItem("Choice Band") && move.IsPhysical)
+        {
+            mod *= 1.5;
+        }
+
+        if (attacker.HasItem("Choice Specs") && move.IsSpecial)
+        {
+            mod *= 1.5;
+        }
+
         if (attacker.HasItem("Metronome"))
+        {
             mod *= Math.Min(1 + 0.2 * attacker.EffectCount(EffectType.MetronomeStack), 2);
+        }
 
         return mod;
     }
@@ -1099,59 +2426,221 @@ public class Battle : IBattle
 
     private static bool TypeEnhancingItemMatches(Move move, Pokemon attacker)
     {
-        if (attacker.HasItem("Silk Scarf") && CheckMoveType(move, PokemonType.Normal, attacker)) return true;
-        if (attacker.HasItem("Charcoal") && CheckMoveType(move, PokemonType.Fire, attacker)) return true;
-        if (attacker.HasItem("Mystic Water") && CheckMoveType(move, PokemonType.Water, attacker)) return true;
-        if (attacker.HasItem("Magnet") && CheckMoveType(move, PokemonType.Electric, attacker)) return true;
-        if (attacker.HasItem("Black Belt") && CheckMoveType(move, PokemonType.Fighting, attacker)) return true;
-        if (attacker.HasItem("Black Glasses") && CheckMoveType(move, PokemonType.Dark, attacker)) return true;
-        if (attacker.HasItem("Dragon Fang") && CheckMoveType(move, PokemonType.Dragon, attacker)) return true;
-        if (attacker.HasItem("Hard Stone") && CheckMoveType(move, PokemonType.Rock, attacker)) return true;
-        if (attacker.HasItem("Metal Coat") && CheckMoveType(move, PokemonType.Steel, attacker)) return true;
-        if (attacker.HasItem("Miracle Seed") && CheckMoveType(move, PokemonType.Grass, attacker)) return true;
-        if (attacker.HasItem("Never-Melt Ice") && CheckMoveType(move, PokemonType.Ice, attacker)) return true;
-        if (attacker.HasItem("Poison Barb") && CheckMoveType(move, PokemonType.Poison, attacker)) return true;
-        if (attacker.HasItem("Sharp Beak") && CheckMoveType(move, PokemonType.Flying, attacker)) return true;
-        if (attacker.HasItem("Silver Powder") && CheckMoveType(move, PokemonType.Bug, attacker)) return true;
-        if (attacker.HasItem("Soft Sand") && CheckMoveType(move, PokemonType.Ground, attacker)) return true;
-        if (attacker.HasItem("Spell Tag") && CheckMoveType(move, PokemonType.Ghost, attacker)) return true;
-        if (attacker.HasItem("Twisted Spoon") && CheckMoveType(move, PokemonType.Psychic, attacker)) return true;
+        if (attacker.HasItem("Silk Scarf") && CheckMoveType(move, PokemonType.Normal, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Charcoal") && CheckMoveType(move, PokemonType.Fire, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Mystic Water") && CheckMoveType(move, PokemonType.Water, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Magnet") && CheckMoveType(move, PokemonType.Electric, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Black Belt") && CheckMoveType(move, PokemonType.Fighting, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Black Glasses") && CheckMoveType(move, PokemonType.Dark, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Dragon Fang") && CheckMoveType(move, PokemonType.Dragon, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Hard Stone") && CheckMoveType(move, PokemonType.Rock, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Metal Coat") && CheckMoveType(move, PokemonType.Steel, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Miracle Seed") && CheckMoveType(move, PokemonType.Grass, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Never-Melt Ice") && CheckMoveType(move, PokemonType.Ice, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Poison Barb") && CheckMoveType(move, PokemonType.Poison, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Sharp Beak") && CheckMoveType(move, PokemonType.Flying, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Silver Powder") && CheckMoveType(move, PokemonType.Bug, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Soft Sand") && CheckMoveType(move, PokemonType.Ground, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Spell Tag") && CheckMoveType(move, PokemonType.Ghost, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Twisted Spoon") && CheckMoveType(move, PokemonType.Psychic, attacker))
+        {
+            return true;
+        }
+
         return false;
     }
 
     private static bool IncenseMatches(Move move, Pokemon attacker)
     {
-        if (!attacker.HasItem()) return false; // save time if not needed to check for specific item
-        if (attacker.HasItem("Odd Incense") && CheckMoveType(move, PokemonType.Psychic, attacker)) return true;
-        if (attacker.HasItem("Rock Incense") && CheckMoveType(move, PokemonType.Rock, attacker)) return true;
-        if (attacker.HasItem("Rose Incense") && CheckMoveType(move, PokemonType.Grass, attacker)) return true;
+        if (!attacker.HasItem())
+        {
+            return false; // save time if not needed to check for specific item
+        }
+
+        if (attacker.HasItem("Odd Incense") && CheckMoveType(move, PokemonType.Psychic, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Rock Incense") && CheckMoveType(move, PokemonType.Rock, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Rose Incense") && CheckMoveType(move, PokemonType.Grass, attacker))
+        {
+            return true;
+        }
+
         if (attacker.HasItem("Sea Incense", "Wave Incense") &&
-            CheckMoveType(move, PokemonType.Water, attacker)) return true;
+            CheckMoveType(move, PokemonType.Water, attacker))
+        {
+            return true;
+        }
 
         return false;
     }
 
     private static bool PlateMatches(Move move, Pokemon attacker)
     {
-        if (!attacker.HasItem()) return false; // save time if not needed to check for specific item
-        if (attacker.HasItem("Blank Plate") && CheckMoveType(move, PokemonType.Normal, attacker)) return true;
-        if (attacker.HasItem("Draco Plate") && CheckMoveType(move, PokemonType.Dragon, attacker)) return true;
-        if (attacker.HasItem("Dread Plate") && CheckMoveType(move, PokemonType.Dark, attacker)) return true;
-        if (attacker.HasItem("Earth Plate") && CheckMoveType(move, PokemonType.Ground, attacker)) return true;
-        if (attacker.HasItem("Fist Plate") && CheckMoveType(move, PokemonType.Fighting, attacker)) return true;
-        if (attacker.HasItem("Flame Plate") && CheckMoveType(move, PokemonType.Fire, attacker)) return true;
-        if (attacker.HasItem("Icicle Plate") && CheckMoveType(move, PokemonType.Ice, attacker)) return true;
-        if (attacker.HasItem("Insect Plate") && CheckMoveType(move, PokemonType.Bug, attacker)) return true;
-        if (attacker.HasItem("Iron Plate") && CheckMoveType(move, PokemonType.Steel, attacker)) return true;
-        if (attacker.HasItem("Meadow Plate") && CheckMoveType(move, PokemonType.Grass, attacker)) return true;
-        if (attacker.HasItem("Mind Plate") && CheckMoveType(move, PokemonType.Psychic, attacker)) return true;
-        if (attacker.HasItem("Pixie Plate") && CheckMoveType(move, PokemonType.Fairy, attacker)) return true;
-        if (attacker.HasItem("Sky Plate") && CheckMoveType(move, PokemonType.Flying, attacker)) return true;
-        if (attacker.HasItem("Splash Plate") && CheckMoveType(move, PokemonType.Water, attacker)) return true;
-        if (attacker.HasItem("Spooky Plate") && CheckMoveType(move, PokemonType.Ghost, attacker)) return true;
-        if (attacker.HasItem("Stone Plate") && CheckMoveType(move, PokemonType.Rock, attacker)) return true;
-        if (attacker.HasItem("Toxic Plate") && CheckMoveType(move, PokemonType.Poison, attacker)) return true;
-        if (attacker.HasItem("Zap Plate") && CheckMoveType(move, PokemonType.Electric, attacker)) return true;
+        if (!attacker.HasItem())
+        {
+            return false; // save time if not needed to check for specific item
+        }
+
+        if (attacker.HasItem("Blank Plate") && CheckMoveType(move, PokemonType.Normal, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Draco Plate") && CheckMoveType(move, PokemonType.Dragon, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Dread Plate") && CheckMoveType(move, PokemonType.Dark, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Earth Plate") && CheckMoveType(move, PokemonType.Ground, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Fist Plate") && CheckMoveType(move, PokemonType.Fighting, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Flame Plate") && CheckMoveType(move, PokemonType.Fire, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Icicle Plate") && CheckMoveType(move, PokemonType.Ice, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Insect Plate") && CheckMoveType(move, PokemonType.Bug, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Iron Plate") && CheckMoveType(move, PokemonType.Steel, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Meadow Plate") && CheckMoveType(move, PokemonType.Grass, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Mind Plate") && CheckMoveType(move, PokemonType.Psychic, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Pixie Plate") && CheckMoveType(move, PokemonType.Fairy, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Sky Plate") && CheckMoveType(move, PokemonType.Flying, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Splash Plate") && CheckMoveType(move, PokemonType.Water, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Spooky Plate") && CheckMoveType(move, PokemonType.Ghost, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Stone Plate") && CheckMoveType(move, PokemonType.Rock, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Toxic Plate") && CheckMoveType(move, PokemonType.Poison, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Zap Plate") && CheckMoveType(move, PokemonType.Electric, attacker))
+        {
+            return true;
+        }
 
         return false;
     }
@@ -1163,25 +2652,100 @@ public class Battle : IBattle
 
     private static bool GemMatches(Move move, Pokemon attacker)
     {
-        if (!attacker.HasItem()) return false; // save time if not needed to check for specific item
-        if (attacker.HasItem("Normal Gem") && CheckMoveType(move, PokemonType.Normal, attacker)) return true;
-        if (attacker.HasItem("Dragon Gem") && CheckMoveType(move, PokemonType.Dragon, attacker)) return true;
-        if (attacker.HasItem("Dark Gem") && CheckMoveType(move, PokemonType.Dark, attacker)) return true;
-        if (attacker.HasItem("Ground Gem") && CheckMoveType(move, PokemonType.Ground, attacker)) return true;
-        if (attacker.HasItem("Fighting Gem") && CheckMoveType(move, PokemonType.Fighting, attacker)) return true;
-        if (attacker.HasItem("Fire Gem") && CheckMoveType(move, PokemonType.Fire, attacker)) return true;
-        if (attacker.HasItem("Ice Gem") && CheckMoveType(move, PokemonType.Ice, attacker)) return true;
-        if (attacker.HasItem("Bug Gem") && CheckMoveType(move, PokemonType.Bug, attacker)) return true;
-        if (attacker.HasItem("Steel Gem") && CheckMoveType(move, PokemonType.Steel, attacker)) return true;
-        if (attacker.HasItem("Grass Gem") && CheckMoveType(move, PokemonType.Grass, attacker)) return true;
-        if (attacker.HasItem("Psychic Gem") && CheckMoveType(move, PokemonType.Psychic, attacker)) return true;
-        if (attacker.HasItem("Fairy Gem") && CheckMoveType(move, PokemonType.Fairy, attacker)) return true;
-        if (attacker.HasItem("Flying Gem") && CheckMoveType(move, PokemonType.Flying, attacker)) return true;
-        if (attacker.HasItem("Water Gem") && CheckMoveType(move, PokemonType.Water, attacker)) return true;
-        if (attacker.HasItem("Ghost Gem") && CheckMoveType(move, PokemonType.Ghost, attacker)) return true;
-        if (attacker.HasItem("Rock Gem") && CheckMoveType(move, PokemonType.Rock, attacker)) return true;
-        if (attacker.HasItem("Poison Gem") && CheckMoveType(move, PokemonType.Poison, attacker)) return true;
-        if (attacker.HasItem("Electric Gem") && CheckMoveType(move, PokemonType.Electric, attacker)) return true;
+        if (!attacker.HasItem())
+        {
+            return false; // save time if not needed to check for specific item
+        }
+
+        if (attacker.HasItem("Normal Gem") && CheckMoveType(move, PokemonType.Normal, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Dragon Gem") && CheckMoveType(move, PokemonType.Dragon, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Dark Gem") && CheckMoveType(move, PokemonType.Dark, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Ground Gem") && CheckMoveType(move, PokemonType.Ground, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Fighting Gem") && CheckMoveType(move, PokemonType.Fighting, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Fire Gem") && CheckMoveType(move, PokemonType.Fire, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Ice Gem") && CheckMoveType(move, PokemonType.Ice, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Bug Gem") && CheckMoveType(move, PokemonType.Bug, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Steel Gem") && CheckMoveType(move, PokemonType.Steel, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Grass Gem") && CheckMoveType(move, PokemonType.Grass, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Psychic Gem") && CheckMoveType(move, PokemonType.Psychic, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Fairy Gem") && CheckMoveType(move, PokemonType.Fairy, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Flying Gem") && CheckMoveType(move, PokemonType.Flying, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Water Gem") && CheckMoveType(move, PokemonType.Water, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Ghost Gem") && CheckMoveType(move, PokemonType.Ghost, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Rock Gem") && CheckMoveType(move, PokemonType.Rock, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Poison Gem") && CheckMoveType(move, PokemonType.Poison, attacker))
+        {
+            return true;
+        }
+
+        if (attacker.HasItem("Electric Gem") && CheckMoveType(move, PokemonType.Electric, attacker))
+        {
+            return true;
+        }
 
         return false;
     }

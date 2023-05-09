@@ -9,15 +9,30 @@ namespace PokemonGame.PokemonBattle.Handles;
 
 public static class PokemonHandlesExtension
 {
+    /*
     public static void OnLevelUp(this Pokemon pokemon, int oldLevel, int newLevel) { pokemon.Level = newLevel; }
 
     public static void OnTurnEnd(this Pokemon pokemon) {
-        if (!pokemon.IsAlive) throw new PokemonNotAliveException(pokemon);
-        foreach (Effect e in pokemon.Effects) {
-            if (e.IsActive) e.Turns--;
+        if (!pokemon.IsAlive)
+        {
+            throw new PokemonNotAliveException(pokemon);
         }
-        if (pokemon.Flinched) pokemon.Flinched = false;
-        if (pokemon.DynamaxState.Active) pokemon.DynamaxState.Turns--;
+
+        foreach (Effect e in pokemon.Effects) {
+            if (e.IsActive)
+            {
+                e.Turns--;
+            }
+        }
+        if (pokemon.Flinched)
+        {
+            pokemon.Flinched = false;
+        }
+
+        if (pokemon.DynamaxState.Active)
+        {
+            pokemon.DynamaxState.Turns--;
+        }
 
         // check damage from status conditions
 
@@ -28,7 +43,11 @@ public static class PokemonHandlesExtension
             pokemon.TakeDamage(1.0 / 8);
         }
         if (pokemon.HasStatusCondition(StatusConditionType.BadlyPoisoned)) {
-            if (pokemon.Status.CurrentTurn < 1) throw new Exception("Status Turn below 1");
+            if (pokemon.Status.CurrentTurn < 1)
+            {
+                throw new Exception("Status Turn below 1");
+            }
+
             pokemon.TakeDamage((pokemon.Stats.HP / 16) * pokemon.Status.CurrentTurn);
         }
         if (pokemon.HasStatusCondition(SecondaryStatusConditionType.LeechSeed)) {
@@ -39,4 +58,5 @@ public static class PokemonHandlesExtension
             pokemon.TakeDamage(1.0 / 8);
         }
     }
+    */
 }

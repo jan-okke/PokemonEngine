@@ -85,7 +85,16 @@ public static class PokemonExtension
 
     public static bool HasStatusCondition(this Pokemon pokemon, params SecondaryStatusConditionType[] conditionTypes) => conditionTypes.Any(c => pokemon.HasStatusCondition(c));
 
-    public static void RemoveItem(this Pokemon pokemon) { if (pokemon.Item == null) return; if (pokemon.Item.CanGetRemoved()) pokemon.Item = null; }
+    public static void RemoveItem(this Pokemon pokemon) { if (pokemon.Item == null)
+        {
+            return;
+        }
+
+        if (pokemon.Item.CanGetRemoved())
+        {
+            pokemon.Item = null;
+        }
+    }
 
     public static double GetStabModBoost(this Pokemon pokemon) => pokemon.HasAbility("Adaptability") ? 2 : 1.5;
 
@@ -108,10 +117,26 @@ public static class PokemonExtension
 
     public static bool IsGrounded(this Pokemon pokemon)
     {
-        if (pokemon.HasType(PokemonType.Flying)) return false;
-        if (pokemon.HasAbility("Levitate")) return false; // TODO, unless surpressed
-        if (pokemon.HasItem("Air Balloon")) return false; // TODO, unless ability is klutz xD
-        if (pokemon.HasEffect(EffectType.MagnetRise, EffectType.Telekenesis)) return false;
+        if (pokemon.HasType(PokemonType.Flying))
+        {
+            return false;
+        }
+
+        if (pokemon.HasAbility("Levitate"))
+        {
+            return false; // TODO, unless surpressed
+        }
+
+        if (pokemon.HasItem("Air Balloon"))
+        {
+            return false; // TODO, unless ability is klutz xD
+        }
+
+        if (pokemon.HasEffect(EffectType.MagnetRise, EffectType.Telekenesis))
+        {
+            return false;
+        }
+
         return true;
     }
 }

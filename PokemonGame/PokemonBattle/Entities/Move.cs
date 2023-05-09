@@ -66,4 +66,13 @@ public class Move
     }
 
     public override string ToString() => Name;
+
+    public void ReducePowerPoints(int amount)
+    {
+        CurrentPowerPoints -= amount;
+        if (CurrentPowerPoints < 0)
+        {
+            CurrentPowerPoints = 0;
+        }
+    }
 }

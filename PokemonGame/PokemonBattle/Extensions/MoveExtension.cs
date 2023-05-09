@@ -12,7 +12,11 @@ public static class MoveExtension
 {
     public static Stat GetTargetDefense(this Move move)
     {
-        if (move.NameIsAnyOf("Psyshock")) return Stat.Defense;
+        if (move.NameIsAnyOf("Psyshock"))
+        {
+            return Stat.Defense;
+        }
+
         return move.Category switch
         {
             MoveCategory.Physical => Stat.Defense,

@@ -41,7 +41,11 @@ public class PokemonGame
     {
         foreach (Event e in _currentMap.Events)
         {
-            if (e.Handled) continue;
+            if (e.Handled)
+            {
+                continue;
+            }
+
             if (e.Trigger == EventTrigger.Touch &&
                 e.Tile == _player.Position.X + _player.Position.Y * _currentMap.Width)
             {
@@ -98,7 +102,11 @@ public class PokemonGame
         }
 
         // if there are still Movements left in the Queue, handle those first
-        if (HandleMovementQueue()) return;
+        if (HandleMovementQueue())
+        {
+            return;
+        }
+
         // Handle Events
         HandleEvents();
         // otherwise get the key press
@@ -175,7 +183,11 @@ public class PokemonGame
     private bool HandleMovementQueue()
     {
         // returns true if forced move
-        if (!MovementQueue.HasNext()) return false;
+        if (!MovementQueue.HasNext())
+        {
+            return false;
+        }
+
         var cmd = MovementQueue.Next();
         cmd.ExecuteCommand(this);
         return true;

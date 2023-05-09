@@ -134,7 +134,7 @@ public abstract class Program {
 public class TestPokemon : Pokemon
 {
     public override Stats BaseStats => new Stats(70, 70, 70, 70, 70, 70);
-    public override List<Ability> AvailableAbilities => new List<Ability> { new TestAbility() };
+    public override List<Ability?> AvailableAbilities => new List<Ability?> { new TestAbility() };
     public override string Name => "Test";
     public override ExperienceGroup ExperienceGroup => ExperienceGroup.Normal;
     public override List<PokemonType> Types => new List<PokemonType> { PokemonType.Fire, PokemonType.Flying };

@@ -6,6 +6,7 @@ namespace PokemonGame.PokemonBattle.Actions;
 
 public static class MoveActions
 {
+    /*
     public static void ReducePowerPoints(this Move move, int amount = 1)
     {
         if (move.CurrentPowerPoints == 0) throw new MoveNoPowerPointsLeftException();
@@ -34,4 +35,5 @@ public static class MoveActions
         move.PowerPointUps = 3;
         move.RestorePowerPoints(move.PowerPoints / 5 * (3 - oldPPUps));
     }
+    */
 }

@@ -99,7 +99,11 @@ public class Event
             }
         }
             
-        if (_autoHandle) Handled = true;
+        if (_autoHandle)
+        {
+            Handled = true;
+        }
+
         return true;
     }
 }

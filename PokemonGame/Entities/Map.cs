@@ -40,7 +40,11 @@ public class Map
 
     public bool IsTilePassable(int x, int y)
     {
-        if (x < 0 || y < 0 || x > Width || y > Height) return false;
+        if (x < 0 || y < 0 || x > Width || y > Height)
+        {
+            return false;
+        }
+
         try
         {
             var a = _tileset.GetMovementPermission(_tileData[1][x + y * Width + y]);
@@ -134,9 +138,12 @@ public class Map
             foreach (var tile in tileData)
             {
                 if (tile != 0)
+                {
                     spriteBatch.Draw(_tilesetAtlas.GetTextureAt(tile % TilesetWidth, tile / TilesetWidth),
                         new Rectangle(x * TilesetPixels - player.DisplayX, y * TilesetPixels - player.DisplayY,
                             TilesetPixels, TilesetPixels), Color.White);
+                }
+
                 x++;
                 if (x > Width)
                 {

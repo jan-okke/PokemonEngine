@@ -17,4 +17,9 @@ public class BattlerSide
         Hazards = new List<Hazard>();
         Buffs = new List<BattlerSideBuff>();
     }
+
+    public void GiveBuff(BattlerSideBuff buff)
+    {
+        Buffs.Add(buff);
+    }
 }

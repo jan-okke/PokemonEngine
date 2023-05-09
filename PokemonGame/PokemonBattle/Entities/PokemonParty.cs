@@ -59,7 +59,11 @@ public class PokemonParty : IPokemonParty
 
     public List<Pokemon> GetAllies(IBattle battle, Pokemon source)
     {
-        if (battle.GetBattleType() == BattleType.SingleBattle) throw new ArgumentException(null, nameof(battle));
+        if (battle.GetBattleType() == BattleType.SingleBattle)
+        {
+            throw new ArgumentException(null, nameof(battle));
+        }
+
         var currentBattlers = battle.GetActiveBattlers();
 
         return currentBattlers.Where(p => !object.ReferenceEquals(p, source)).ToList();

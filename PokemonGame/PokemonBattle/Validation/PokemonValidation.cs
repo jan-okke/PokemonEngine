@@ -31,10 +31,16 @@ public static class PokemonValidation
 
     public static bool CanHaveAbility(this Pokemon pokemon, Ability ability) {
         foreach (Ability a in pokemon.AvailableAbilities) {
-            if (a.HasName(ability.Name)) return true;
+            if (a.HasName(ability.Name))
+            {
+                return true;
+            }
         }
         foreach (Ability a in pokemon.AvailableHiddenAbilities) {
-            if (a.HasName(ability.Name)) return true;
+            if (a.HasName(ability.Name))
+            {
+                return true;
+            }
         }
         return false;
     }

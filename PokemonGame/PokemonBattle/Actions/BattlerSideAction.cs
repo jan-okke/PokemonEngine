@@ -5,6 +5,7 @@ namespace PokemonGame.PokemonBattle.Actions;
 
 public static class BattleSideAction
 {
+    /*
     public static void GiveBuff(this BattlerSide side, BattlerSideBuff buff)
     {
         side.Buffs.Add(buff);
@@ -14,4 +15,5 @@ public static class BattleSideAction
     {
         side.Hazards.Add(hazard);
     }
+    */
 }
