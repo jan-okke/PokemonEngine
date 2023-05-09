@@ -1,12 +1,16 @@
 using PokemonGame.PokemonBattle.Entities;
 using System.Collections.Generic;
+using PokemonGame.PokemonBattle.Enums;
 
-namespace PokemonGame.PokemonBattle.Interfaces
+namespace PokemonGame.PokemonBattle.Interfaces;
+
+public interface IBattle
 {
-    public interface IBattle
-    {
-        List<Pokemon> GetPlayerParty();
-        List<Pokemon> GetAIParty();
-        bool IsBattleOver();
-    }
+    void UseMove(Move move);
+    void UseItem(Item item, Pokemon target);
+    void SwitchPokemon(Pokemon target);
+    List<Pokemon> GetActiveBattlers();
+    BattleType GetBattleType();
+    BattleView GetCurrentState();
+
 }

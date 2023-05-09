@@ -1,11 +1,10 @@
-namespace PokemonGame.PokemonBattle.Enums
+namespace PokemonGame.PokemonBattle.Enums;
+
+public enum WeatherCondition
 {
-    public enum WeatherCondition
-    {
-        None,
-        Rain,
-        Sun,
-        Hail,
-        Sand
-    }
+    None,
+    Rain,
+    Sun,
+    Hail,
+    Sand
 }

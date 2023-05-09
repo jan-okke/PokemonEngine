@@ -4,15 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PokemonGame.PokemonBattle.Enums
+namespace PokemonGame.PokemonBattle.Enums;
+
+public enum Stat
 {
-    public enum Stat
-    {
-        HP,
-        Attack,
-        Defense,
-        SpecialAttack,
-        SpecialDefense,
-        Speed
-    }
+    HP,
+    Attack,
+    Defense,
+    SpecialAttack,
+    SpecialDefense,
+    Speed
 }

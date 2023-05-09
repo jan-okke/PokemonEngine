@@ -5,21 +5,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PokemonGame.PokemonBattle.Entities
+namespace PokemonGame.PokemonBattle.Entities;
+
+public class StatusCondition
 {
-    public class StatusCondition
+    public StatusConditionType Conditon { get; }
+    public int Turns { get; internal set; }
+
+    public int CurrentTurn { get; internal set; }
+    public bool IsActive => Turns > 0;
+
+    public StatusCondition(StatusConditionType conditon, int startingTurns)
     {
-        public StatusConditionType Conditon { get; }
-        public int Turns { get; internal set; }
-
-        public int CurrentTurn { get; internal set; }
-        public bool IsActive => Turns > 0;
-
-        public StatusCondition(StatusConditionType conditon, int startingTurns)
-        {
-            Conditon = conditon;
-            Turns = startingTurns;
-            CurrentTurn = 0;
-        }
+        Conditon = conditon;
+        Turns = startingTurns;
+        CurrentTurn = 0;
     }
 }

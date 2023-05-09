@@ -6,10 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PokemonGame.PokemonBattle.Extensions
+namespace PokemonGame.PokemonBattle.Extensions;
+
+public static class TerrainExtension
 {
-    public static class TerrainExtension
-    {
-        public static bool HasEffect(this Terrain terrain, TerrainEffect effect) => terrain.Effect == effect;
-    }
+    public static bool HasEffect(this Terrain terrain, TerrainEffect effect) => terrain.Effect == effect;
 }

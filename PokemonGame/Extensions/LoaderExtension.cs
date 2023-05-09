@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PokemonGame.Extensions
+namespace PokemonGame.Extensions;
+
+public class LoaderExtension
 {
-    public class LoaderExtension
-    {
         
-    }
 }

@@ -1,11 +1,6 @@
 ﻿using PokemonGame.PokemonBattle.Entities;
-using PokemonGame.PokemonBattle.Extensions;
-using PokemonGame;
 using PokemonGame.PokemonBattle.Enums;
-using PokemonGame.PokemonBattle.Actions;
-using PokemonGame.PokemonBattle.Data.Pokemons;
-using PokemonGame.PokemonBattle.Data.Moves;
-using PokemonGame.PokemonBattle.Handles;
+
 /*
 static void AssertEqual<T>(T actual, T expected) 
 {
@@ -80,83 +75,85 @@ AssertEqual(battle.IsOngoing, false);
 
 */
 
-namespace Test
-{
-    public class Program {
-        public static void Main(string[] args) {
-            //TestCase1();
-            new ConsoleTest();
-        }
+namespace PokemonTest;
 
-        static void TestCase1() {
-            var attacker = new TestPokemon();
-            var defender = new TestPokemon();
+public abstract class Program {
+    public static void Main(string[] args)
+    {
+        //TestCase1();
+        var consoleTest = new ConsoleTest();
+    }
 
-            attacker.OnLevelUp(attacker.Level, 50);
-            defender.OnLevelUp(attacker.Level, 50);
+    private static void TestCase1() {
+        /*
+        var attacker = new TestPokemon();
+        var defender = new TestPokemon();
 
-            attacker.GiveItem(new Item("Choice Band", "burn em up"));
+        attacker.OnLevelUp(attacker.Level, 50);
+        defender.OnLevelUp(attacker.Level, 50);
 
-            attacker.CalculateStats();
-            defender.CalculateStats();
-            attacker.HealHP();
-            defender.HealHP();
+        attacker.GiveItem(new Item("Choice Band", "burn em up"));
 
-            attacker.LearnMove(new TestMove());
-            defender.LearnMove(new TestMove());
+        attacker.CalculateStats();
+        defender.CalculateStats();
+        attacker.HealHP();
+        defender.HealHP();
 
-            attacker.Moves[0].RestorePowerPoints();
-            defender.Moves[0].RestorePowerPoints();
+        attacker.LearnMove(new TestMove());
+        defender.LearnMove(new TestMove());
 
-            var playerParty = new PokemonParty(attacker);
+        attacker.Moves[0].RestorePowerPoints();
+        defender.Moves[0].RestorePowerPoints();
 
-            var battle = BattleActions.StartWildBattle(playerParty, defender);
+        var playerParty = new PokemonParty(attacker);
 
-            DebugConsole.WriteLine(attacker.CurrentHP);
-            DebugConsole.WriteLine(defender.CurrentHP, ConsoleColor.Yellow);
-            for (int i = 0; i < 5; i++) {
+        var battle = BattleActions.StartWildBattle(playerParty, defender);
+
+        DebugConsole.WriteLine(attacker.CurrentHP);
+        DebugConsole.WriteLine(defender.CurrentHP, ConsoleColor.Yellow);
+        for (int i = 0; i < 5; i++) {
             battle.UseMove(attacker, defender, attacker.FindMove("Test"));
 
             DebugConsole.WriteLine("After", ConsoleColor.Green);
 
             DebugConsole.WriteLine(attacker.CurrentHP);
             DebugConsole.WriteLine(defender.CurrentHP, ConsoleColor.Yellow);
-            }
-
-            foreach (BattleData d in battle.Log.Data) {
-                DebugConsole.WriteLine("{");
-                foreach (var key in d.Data.Keys) {
-                    DebugConsole.WriteLine($"  {key}: {d.Data[key]}");
-                }
-                DebugConsole.WriteLine("}");
-            }
         }
+
+        foreach (BattleData d in battle.Log.Data) {
+            DebugConsole.WriteLine("{");
+            foreach (var key in d.Data.Keys) {
+                DebugConsole.WriteLine($"  {key}: {d.Data[key]}");
+            }
+            DebugConsole.WriteLine("}");
+        }
+        */
     }
+}
     
-    public class TestPokemon : Pokemon
-    {
-        public override Stats BaseStats => new Stats(70, 70, 70, 70, 70, 70);
-        public override List<Ability> AvailableAbilities => new List<Ability> { new TestAbility() };
-        public override string Name => "Test";
-        public override ExperienceGroup ExperienceGroup => ExperienceGroup.Normal;
-        public override List<PokemonType> Types => new List<PokemonType> { PokemonType.Fire, PokemonType.Flying };
-    }
+public class TestPokemon : Pokemon
+{
+    public override Stats BaseStats => new Stats(70, 70, 70, 70, 70, 70);
+    public override List<Ability> AvailableAbilities => new List<Ability> { new TestAbility() };
+    public override string Name => "Test";
+    public override ExperienceGroup ExperienceGroup => ExperienceGroup.Normal;
+    public override List<PokemonType> Types => new List<PokemonType> { PokemonType.Fire, PokemonType.Flying };
+}
 
-    public class TestAbility : Ability
-    {
-        public override string Name => "Test";
-        public override string Description => "Test";
-    }
+public class TestAbility : Ability
+{
+    public override string Name => "Test";
+    public override string Description => "Test";
+}
 
-    public class TestMove : Move
-    {
-        public override int BasePower => 50;
-        public override MoveCategory Category => MoveCategory.Physical;
-        public override string Description => "Test";
-        public override bool HasAdditionalEffect => false;
-        public override string Name => "Test";
-        public override int PowerPoints => 15;
-        public override int Priority => 0;
-        public override PokemonType Type => PokemonType.Fire;
-    }
+public class TestMove : Move
+{
+    public override int BasePower => 50;
+    public override MoveCategory Category => MoveCategory.Physical;
+    public override string Description => "Test";
+    public override bool HasAdditionalEffect => false;
+    public override string Name => "Test";
+    public override int PowerPoints => 15;
+    public override int Priority => 0;
+    public override PokemonType Type => PokemonType.Fire;
 }

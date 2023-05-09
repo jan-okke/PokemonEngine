@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PokemonGame.PokemonBattle.Enums
+namespace PokemonGame.PokemonBattle.Enums;
+
+public enum BattleFlag
 {
-    public enum BattleFlag
-    {
-        WildBattle,
-        TrainerBattle
-    }
+    WildBattle,
+    TrainerBattle
 }

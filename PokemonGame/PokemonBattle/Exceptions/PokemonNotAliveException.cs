@@ -1,10 +1,9 @@
 using PokemonGame.PokemonBattle.Entities;
 using System;
 
-namespace PokemonGame.PokemonBattle.Exceptions
+namespace PokemonGame.PokemonBattle.Exceptions;
+
+public class PokemonNotAliveException : Exception
 {
-    public class PokemonNotAliveException : Exception
-    {
-        public PokemonNotAliveException(Pokemon p) : base($"{p} not alive!") {}
-    }
+    public PokemonNotAliveException(Pokemon p) : base($"{p} not alive!") {}
 }

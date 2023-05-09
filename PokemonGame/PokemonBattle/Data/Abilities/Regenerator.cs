@@ -2,11 +2,10 @@ using PokemonGame.PokemonBattle.Entities;
 using PokemonGame.PokemonBattle.Enums;
 using System.Collections.Generic;
 
-namespace PokemonGame.PokemonBattle.Data.Abilities
+namespace PokemonGame.PokemonBattle.Data.Abilities;
+
+public class Regenerator : Ability
 {
-	public class Regenerator : Ability
-	{
-		public override string Name => "Regenerator";
-		public override string Description => "Restores a little HP when withdrawn from battle.";
-	}
+	public override string Name => "Regenerator";
+	public override string Description => "Restores a little HP when withdrawn from battle.";
 }

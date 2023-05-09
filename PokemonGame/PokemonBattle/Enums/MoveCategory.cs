@@ -1,9 +1,8 @@
-namespace PokemonGame.PokemonBattle.Enums
+namespace PokemonGame.PokemonBattle.Enums;
+
+public enum MoveCategory
 {
-    public enum MoveCategory
-    {
-        Physical,
-        Special,
-        Status
-    }
+    Physical,
+    Special,
+    Status
 }

@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PokemonGame.PokemonBattle.Enums
+namespace PokemonGame.PokemonBattle.Enums;
+
+public enum FieldEffects
 {
-    public enum FieldEffects
-    {
-        FairyAura,
-        DarkAura,
-        AuraBreak
-    }
+    FairyAura,
+    DarkAura,
+    AuraBreak
 }

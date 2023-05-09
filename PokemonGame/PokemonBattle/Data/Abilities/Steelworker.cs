@@ -2,11 +2,10 @@ using PokemonGame.PokemonBattle.Entities;
 using PokemonGame.PokemonBattle.Enums;
 using System.Collections.Generic;
 
-namespace PokemonGame.PokemonBattle.Data.Abilities
+namespace PokemonGame.PokemonBattle.Data.Abilities;
+
+public class Steelworker : Ability
 {
-	public class Steelworker : Ability
-	{
-		public override string Name => "Steelworker";
-		public override string Description => "Powers up Steel-type moves.";
-	}
+	public override string Name => "Steelworker";
+	public override string Description => "Powers up Steel-type moves.";
 }

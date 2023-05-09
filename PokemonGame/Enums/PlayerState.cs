@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PokemonGame.Enums
+namespace PokemonGame.Enums;
+
+public enum PlayerState
 {
-    public enum PlayerState
-    {
-        Down = 0,
-        Left = 1,
-        Right = 2,
-        Up = 3
-    }
+    Down = 0,
+    Left = 1,
+    Right = 2,
+    Up = 3
 }

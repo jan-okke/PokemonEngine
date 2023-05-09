@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PokemonGame.PokemonBattle.Enums
+namespace PokemonGame.PokemonBattle.Enums;
+
+public enum Hazard
 {
-    public enum Hazard
-    {
-        Spikes,
-        StealthRock,
-        ToxicSpikes,
-        SpiderWeb
-    }
+    Spikes,
+    StealthRock,
+    ToxicSpikes,
+    SpiderWeb
 }

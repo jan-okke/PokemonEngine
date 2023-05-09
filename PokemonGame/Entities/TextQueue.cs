@@ -4,34 +4,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PokemonGame.Entities
-{
-    public class TextQueue
-    {
-        private List<string> Texts { get; set; }
+namespace PokemonGame.Entities;
 
-        public TextQueue()
+public class TextQueue
+{
+    private List<string> Texts { get; }
+
+    public TextQueue()
+    {
+        Texts = new List<string>();
+    }
+
+    public void Add(string text)
+    {
+        Texts.Add(text);
+    }
+
+    public bool HasNext()
+    {
+        return Texts.Count > 0;
+    }
+
+    public string Next()
+    {
+        if (!HasNext())
         {
-            Texts = new();
+            DebugConsole.WriteLine("Warning - TextQueue is empty!", ConsoleColor.Yellow);
+            return default;
         }
-        public void Add(string text)
-        {
-            Texts.Add(text);
-        }
-        public bool HasNext()
-        {
-            return Texts.Count > 0;
-        }
-        public string Next()
-        {
-            if (!HasNext()) 
-            {
-                DebugConsole.WriteLine("Warning - TextQueue is empty!", ConsoleColor.Yellow);
-                return default;
-            }
-            var text = Texts[0];
-            Texts.Remove(text);
-            return text;
-        }
+
+        var text = Texts[0];
+        Texts.Remove(text);
+        return text;
     }
 }

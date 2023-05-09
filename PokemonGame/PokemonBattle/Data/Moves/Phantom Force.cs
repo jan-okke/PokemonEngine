@@ -2,24 +2,23 @@ using PokemonGame.PokemonBattle.Entities;
 using PokemonGame.PokemonBattle.Enums;
 using System.Collections.Generic;
 
-namespace PokemonGame.PokemonBattle.Data.Moves
+namespace PokemonGame.PokemonBattle.Data.Moves;
+
+public class Phantomforce : Move
 {
-	public class Phantomforce : Move
+	public override string Name => "Phantom Force";
+	public override string Description => "The user vanishes somewhere, then strikes on the next turn. Hits through protections.";
+	public override int BasePower => 90;
+	public override int PowerPoints => 10;
+	public override int Priority => 0;
+	public override int Accuracy => 100;
+	public override int EffectChance => 0;
+	public override MoveTarget Target => MoveTarget.NearOther;
+	public override MoveCategory Category => MoveCategory.Physical;
+	public override PokemonType Type => PokemonType.Ghost;
+	public override bool IsContactMove => true;
+	public Phantomforce()
 	{
-		public override string Name => "Phantom Force";
-		public override string Description => "The user vanishes somewhere, then strikes on the next turn. Hits through protections.";
-		public override int BasePower => 90;
-		public override int PowerPoints => 10;
-		public override int Priority => 0;
-		public override int Accuracy => 100;
-		public override int EffectChance => 0;
-		public override MoveTarget Target => MoveTarget.NearOther;
-		public override MoveCategory Category => MoveCategory.Physical;
-		public override PokemonType Type => PokemonType.Ghost;
-		public override bool IsContactMove => true;
-		public Phantomforce()
-		{
-			CurrentPowerPoints = PowerPoints;
-		}
+		CurrentPowerPoints = PowerPoints;
 	}
 }

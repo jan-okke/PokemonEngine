@@ -10,60 +10,62 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PokemonGame
+namespace PokemonGame;
+
+public class Initialization
 {
-    public class Initialization
+    public static void Initialize()
     {
-        public static void Initialize()
+        DebugConsole.Write("Initializing...", ConsoleColor.Green);
+        DebugConsole.WriteLine("done", ConsoleColor.Green);
+    }
+
+    public static void LoadContent(ContentManager content)
+    {
+        DebugConsole.Write("Loading tilesets...", ConsoleColor.Green);
+
+        foreach (var file in Directory.GetFiles("Content\\Tilesets"))
         {
-            DebugConsole.Write("Initializing...", ConsoleColor.Green);
-            DebugConsole.WriteLine("done", ConsoleColor.Green);
+            var shortName = file.Split("Content\\Tilesets\\")[1].Split(".")[0];
+            DebugConsole.Write($"<{shortName}>", ConsoleColor.DarkMagenta);
+            ContentCollection.Textures.Add(shortName, content.Load<Texture2D>($"Tilesets\\{shortName}"));
+            ContentCollection.Splits.Add(shortName, new TextureAtlas(ContentCollection.Textures[shortName], 32));
         }
 
-        public static void LoadContent(ContentManager content)
+        DebugConsole.WriteLine("done", ConsoleColor.Green);
+
+        DebugConsole.Write("Loading characters...", ConsoleColor.Green);
+        ContentCollection.Textures.Add("Player", content.Load<Texture2D>("Characters\\boy_run"));
+
+        DebugConsole.WriteLine("done", ConsoleColor.Green);
+    }
+
+    public static void LoadTilesets()
+    {
+        DebugConsole.Write("Loading tilesets...", ConsoleColor.Green);
+        foreach (var line in File.ReadAllLines("GameFiles\\Data\\TilesetData.txt"))
         {
-            DebugConsole.Write("Loading tilesets...", ConsoleColor.Green);
-    
-            foreach (string file in Directory.GetFiles("Content\\Tilesets")) {
-                string shortName = file.Split("Content\\Tilesets\\")[1].Split(".")[0];
-                DebugConsole.Write($"<{shortName}>", ConsoleColor.DarkMagenta);
-                ContentCollection.Textures.Add(shortName, content.Load<Texture2D>($"Tilesets\\{shortName}"));
-                ContentCollection.Splits.Add(shortName, new TextureAtlas(ContentCollection.Textures[shortName], 32));
-            }
-            DebugConsole.WriteLine("done", ConsoleColor.Green);
-
-            DebugConsole.Write("Loading characters...", ConsoleColor.Green);
-            ContentCollection.Textures.Add("Player", content.Load<Texture2D>("Characters\\boy_run"));
-
-            DebugConsole.WriteLine("done", ConsoleColor.Green);
+            var split = line.Split('=');
+            var attribute = split[0];
+            var value = split[1];
+            TilesetCollection.Tilesets.Add(int.Parse(attribute), Tileset.LoadFromData(value.Split(',')));
         }
-        public static void LoadTilesets()
+
+        DebugConsole.WriteLine("done", ConsoleColor.Green);
+    }
+
+    public static void LoadMaps()
+    {
+        const string mapPath = "GameFiles\\Data\\Maps";
+        foreach (var file in Directory.GetFiles(mapPath))
         {
-            DebugConsole.Write("Loading tilesets...", ConsoleColor.Green);
-            string attribute;
-            string value;
-            foreach (string line in File.ReadAllLines("GameFiles\\Data\\TilesetData.txt"))
-            {
-                var split = line.Split('=');
-                attribute = split[0];
-                value = split[1];
-                TilesetCollection.Tilesets.Add(int.Parse(attribute), Tileset.LoadFromData(value.Split(',')));
-            }
-            DebugConsole.WriteLine("done", ConsoleColor.Green);
+            LoadMap(file);
         }
+    }
 
-        public static void LoadMaps()
-        {
-            var mapPath = "GameFiles\\Data\\Maps";
-            foreach (string file in Directory.GetFiles(mapPath))
-            {
-                LoadMap(file);
-            }
-        }
-
-        private static void LoadMap(string file) {
-            Map map = Map.LoadFromFile(file);
-            MapCollection.Maps.Add(map.MapID, map);
-        }
+    private static void LoadMap(string file)
+    {
+        var map = Map.LoadFromFile(file);
+        MapCollection.Maps.Add(map.MapId, map);
     }
 }

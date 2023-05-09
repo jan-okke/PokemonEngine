@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PokemonGame.PokemonBattle.Enums
+namespace PokemonGame.PokemonBattle.Enums;
+
+public enum BattlerSideBuff
 {
-    public enum BattlerSideBuff
-    {
-        MudSport,
-        WaterSport,
-        LightScreen,
-        Reflect,
-        AuroraVeil
-    }
+    MudSport,
+    WaterSport,
+    LightScreen,
+    Reflect,
+    AuroraVeil
 }

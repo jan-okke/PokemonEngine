@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PokemonGame.PokemonBattle.Enums
+namespace PokemonGame.PokemonBattle.Enums;
+
+public enum BattleType
 {
-    public enum BattleType
-    {
-        SingleBattle,
-        DoubleBattle,
-        // TODO add more
-    }
+    SingleBattle,
+    DoubleBattle,
+    // TODO add more
 }

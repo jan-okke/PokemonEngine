@@ -1,9 +1,8 @@
 using System;
 
-namespace PokemonGame.PokemonBattle.Exceptions
+namespace PokemonGame.PokemonBattle.Exceptions;
+
+public class MoveNoPowerPointsLeftException : Exception
 {
-    public class MoveNoPowerPointsLeftException : Exception
-    {
-        public MoveNoPowerPointsLeftException() : base("Move has no PP left!") {}
-    }
+    public MoveNoPowerPointsLeftException() : base("Move has no PP left!") {}
 }

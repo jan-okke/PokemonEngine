@@ -1,11 +1,10 @@
-namespace PokemonGame.PokemonBattle.Enums
+namespace PokemonGame.PokemonBattle.Enums;
+
+public enum TerrainEffect
 {
-    public enum TerrainEffect
-    {
-        None,
-        Grass,
-        Psychic,
-        Fairy,
-        Electric
-    }
+    None,
+    Grass,
+    Psychic,
+    Fairy,
+    Electric
 }

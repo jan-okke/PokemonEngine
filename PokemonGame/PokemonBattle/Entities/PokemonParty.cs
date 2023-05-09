@@ -1,24 +1,67 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using PokemonGame.PokemonBattle.Extensions;
+using PokemonGame.PokemonBattle.Enums;
+using PokemonGame.PokemonBattle.Exceptions;
+using PokemonGame.PokemonBattle.Interfaces;
 
-namespace PokemonGame.PokemonBattle.Entities
+namespace PokemonGame.PokemonBattle.Entities;
+
+public class PokemonParty : IPokemonParty
 {
-    public class PokemonParty
+    private List<Pokemon> Pokemons { get; }
+    private int AliveCount => Pokemons.Count(p => p.IsAlive);
+    private int PokemonCount => Pokemons.Count;
+
+    public PokemonParty(List<Pokemon> pokemons)
     {
-        public List<Pokemon> Pokemons { get; }
-        public bool IsAlive => Pokemons.Where(p => p.IsAlive).Any();
-        public int AliveCount => Pokemons.Where(p => p.IsAlive).Count();
-        public int FaintedCount => Pokemons.Where(p => !p.IsAlive).Count();
-        public int PokemonCount => Pokemons.Count;
+        Pokemons = pokemons;
+    }
 
-        public PokemonParty(List<Pokemon> pokemons)
+    public PokemonParty(Pokemon pokemon)
+    {
+        Pokemons = new List<Pokemon> { pokemon };
+    }
+
+    public List<Pokemon> GetPokemons()
+    {
+        return Pokemons;
+    }
+
+    public void AddPokemon(Pokemon pokemon)
+    {
+        if (PokemonCount == 6)
         {
-            Pokemons = pokemons;
+            throw new PartyFullException();
+        }
+        Pokemons.Add(pokemon);
+    }
+
+    public Pokemon GetFirstAlivePokemon()
+    {
+        if (AliveCount == 0)
+        {
+            throw new PartyNotAliveException();
         }
 
-        public PokemonParty(Pokemon pokemon) {
-            Pokemons = new List<Pokemon> { pokemon };
-        }
+        return Pokemons.First(p => p.IsAlive);
+    }
+
+    bool IPokemonParty.IsAlive()
+    {
+        return Pokemons.Any(p => p.IsAlive);
+    }
+
+    public int GetFaintedCount()
+    {
+        return Pokemons.Count(p => !p.IsAlive);
+    }
+
+    public List<Pokemon> GetAllies(IBattle battle, Pokemon source)
+    {
+        if (battle.GetBattleType() == BattleType.SingleBattle) throw new ArgumentException(null, nameof(battle));
+        var currentBattlers = battle.GetActiveBattlers();
+
+        return currentBattlers.Where(p => !object.ReferenceEquals(p, source)).ToList();
     }
 }

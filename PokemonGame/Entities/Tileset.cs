@@ -7,36 +7,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PokemonGame.Entities
+namespace PokemonGame.Entities;
+
+public class Tileset
 {
-    public class Tileset
+    private readonly List<TilePassability> _tileData;
+
+    public Tileset()
     {
-        private List<TilePassability> TileData;
-        public Tileset() 
+        _tileData = new List<TilePassability>();
+    }
+
+    public bool GetMovementPermission(int tileId)
+    {
+        return _tileData[tileId] == TilePassability.Passable;
+    }
+
+    private static TilePassability GetTilePassabilityFromId(int id)
+    {
+        return id switch
         {
-            TileData = new List<TilePassability>();
-        }
-        public bool GetMovementPermission(int tileID)
+            0 => TilePassability.Passable,
+            1 => TilePassability.Impassable,
+            _ => throw new ArgumentException(null, nameof(id))
+        };
+    }
+
+    public static Tileset LoadFromData(string[] data)
+    {
+        Tileset t = new();
+        foreach (var s in data)
         {
-            return TileData[tileID] == TilePassability.Passable;
+            t._tileData.Add(GetTilePassabilityFromId(int.Parse(s)));
         }
-        private static TilePassability GetTilePassabilityFromID(int id)
-        {
-            return id switch
-            {
-                0 => TilePassability.Passable,
-                1 => TilePassability.Impassable,
-                _ => throw new ArgumentException(null, nameof(id))
-            };
-        }
-        public static Tileset LoadFromData(string[] data)
-        {
-            Tileset t = new();
-            foreach (string s in data)
-            {
-                t.TileData.Add(GetTilePassabilityFromID(int.Parse(s)));
-            }
-            return t;
-        }
+
+        return t;
     }
 }

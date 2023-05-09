@@ -4,76 +4,75 @@ using Microsoft.Xna.Framework.Input;
 using System;
 using PokemonGame.Entities;
 
-namespace PokemonGame
+namespace PokemonGame;
+
+public class Game1 : Game
 {
-    public class Game1 : Game
+    private GraphicsDeviceManager _graphics;
+    private SpriteBatch _spriteBatch;
+    private PokemonGame _game;
+
+    public Game1()
     {
-        private GraphicsDeviceManager _graphics;
-        private SpriteBatch _spriteBatch;
-        private PokemonGame _game;
+        _graphics = new GraphicsDeviceManager(this);
+        Content.RootDirectory = "Content";
+        IsMouseVisible = false;
 
-        public Game1()
-        {
-            _graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
-            IsMouseVisible = false;
+        _graphics.PreferredBackBufferWidth = Settings.DisplayWidth;
+        _graphics.PreferredBackBufferHeight = Settings.DisplayHeight;
 
-            _graphics.PreferredBackBufferWidth = Settings.DisplayWidth;
-            _graphics.PreferredBackBufferHeight = Settings.DisplayHeight;
+        IsFixedTimeStep = true;
+        _graphics.SynchronizeWithVerticalRetrace = false;
 
-            IsFixedTimeStep = true;
-            _graphics.SynchronizeWithVerticalRetrace = false;
+        TargetElapsedTime = new TimeSpan(0, 0, 1) / Settings.FrameRate;
 
-            TargetElapsedTime = new TimeSpan(0, 0, 1) / Settings.FrameRate;
+        _game = new PokemonGame(_graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight);
+    }
 
-            _game = new PokemonGame(_graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight);
-        }
+    protected override void Initialize()
+    {
+        // TODO: Add your initialization logic here
 
-        protected override void Initialize()
-        {
-            // TODO: Add your initialization logic here
+        Initialization.Initialize();
 
-            Initialization.Initialize();
+        base.Initialize();
+    }
 
-            base.Initialize();
-        }
+    protected override void LoadContent()
+    {
+        _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-        protected override void LoadContent()
-        {
-            _spriteBatch = new SpriteBatch(GraphicsDevice);
+        Initialization.LoadContent(Content);
+        Initialization.LoadTilesets();
+        Initialization.LoadMaps();
 
-            Initialization.LoadContent(Content);
-            Initialization.LoadTilesets();
-            Initialization.LoadMaps();
+        _game.SetDefaultMap();
+        _game.SetPlayer();
+        _game.SetPlayerCoord(2, 2);
 
-            _game.SetDefaultMap();
-            _game.SetPlayer();
-            _game.SetPlayerCoord(2, 2);
+        // TODO: use this.Content to load your game content here
+    }
 
-            // TODO: use this.Content to load your game content here
-        }
+    protected override void Update(GameTime gameTime)
+    {
+        if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            Exit();
 
-        protected override void Update(GameTime gameTime)
-        {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
+        // TODO: Add your update logic here
 
-            // TODO: Add your update logic here
+        _game.Update(Keyboard.GetState());
 
-            _game.Update(Keyboard.GetState());
+        base.Update(gameTime);
+    }
 
-            base.Update(gameTime);
-        }
+    protected override void Draw(GameTime gameTime)
+    {
+        GraphicsDevice.Clear(Color.Black);
 
-        protected override void Draw(GameTime gameTime)
-        {
-            GraphicsDevice.Clear(Color.Black);
+        _game.Draw(_spriteBatch);
 
-            _game.Draw(_spriteBatch);
+        // TODO: Add your drawing code here
 
-            // TODO: Add your drawing code here
-
-            base.Draw(gameTime);
-        }
+        base.Draw(gameTime);
     }
 }

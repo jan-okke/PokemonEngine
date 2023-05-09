@@ -2,25 +2,24 @@ using PokemonGame.PokemonBattle.Entities;
 using PokemonGame.PokemonBattle.Enums;
 using System.Collections.Generic;
 
-namespace PokemonGame.PokemonBattle.Data.Moves
+namespace PokemonGame.PokemonBattle.Data.Moves;
+
+public class Scratch : Move
 {
-	public class Scratch : Move
+	public override string Name => "Scratch";
+	public override string Description => "Hard, pointed, and sharp claws rake the target to inflict damage.";
+	public override int BasePower => 40;
+	public override int PowerPoints => 35;
+	public override int Priority => 0;
+	public override int Accuracy => 100;
+	public override int EffectChance => 0;
+	public override MoveTarget Target => MoveTarget.NearOther;
+	public override MoveCategory Category => MoveCategory.Physical;
+	public override PokemonType Type => PokemonType.Normal;
+	public override bool IsContactMove => true;
+	public override bool IgnoresProtect => false;
+	public Scratch()
 	{
-		public override string Name => "Scratch";
-		public override string Description => "Hard, pointed, and sharp claws rake the target to inflict damage.";
-		public override int BasePower => 40;
-		public override int PowerPoints => 35;
-		public override int Priority => 0;
-		public override int Accuracy => 100;
-		public override int EffectChance => 0;
-		public override MoveTarget Target => MoveTarget.NearOther;
-		public override MoveCategory Category => MoveCategory.Physical;
-		public override PokemonType Type => PokemonType.Normal;
-		public override bool IsContactMove => true;
-		public override bool IgnoresProtect => false;
-		public Scratch()
-		{
-			CurrentPowerPoints = PowerPoints;
-		}
+		CurrentPowerPoints = PowerPoints;
 	}
 }

@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PokemonGame.Enums
+namespace PokemonGame.Enums;
+
+public enum TilePassability
 {
-    public enum TilePassability
-    {
-        Passable,
-        Impassable
-    }
+    Passable,
+    Impassable
 }

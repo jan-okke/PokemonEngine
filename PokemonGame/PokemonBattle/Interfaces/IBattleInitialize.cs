@@ -1,11 +1,10 @@
 using PokemonGame.PokemonBattle.Entities;
 
-namespace PokemonGame.PokemonBattle.Interfaces
+namespace PokemonGame.PokemonBattle.Interfaces;
+
+public interface IBattleInitialize
 {
-    public interface IBattleInitialize
-    {
-        void StartTrainerBattle(Trainer trainer);
-        void StartWildBattle(Pokemon pokemon);
-        void StartWildBattle(string name, int level);
-    }
+    IBattle StartTrainerBattle(IPokemonParty party, Trainer trainer);
+    IBattle StartWildBattle(IPokemonParty party, Pokemon pokemon);
+    IBattle StartWildBattle(IPokemonParty party, string name, int level);
 }

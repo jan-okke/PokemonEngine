@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PokemonGame.Enums
+namespace PokemonGame.Enums;
+
+public enum EventCommandType
 {
-    public enum EventCommandType
-    {
-        TextCommand = 0,
-        MoveCommmand = 1,
-        RotateCommand = 2,
-        WarpCommand = 3,
-    }
+    TextCommand = 0,
+    MoveCommmand = 1,
+    RotateCommand = 2,
+    WarpCommand = 3,
 }

@@ -4,15 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PokemonGame.PokemonBattle.Entities
-{
-    public class BattleData
-    {
-        public Dictionary<string, object> Data { get; }
+namespace PokemonGame.PokemonBattle.Entities;
 
-        public BattleData()
-        {
-            Data = new Dictionary<string, object>();
-        }
+public class BattleData
+{
+    public Dictionary<string, object> Data { get; }
+
+    public BattleData()
+    {
+        Data = new Dictionary<string, object>();
     }
 }

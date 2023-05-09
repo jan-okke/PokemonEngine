@@ -1,9 +1,8 @@
 using PokemonGame.Enums;
 
-namespace PokemonGame.Commands
+namespace PokemonGame.Commands;
+
+public interface ICommand
 {
-    public interface ICommand
-    {
-        void ExecuteCommand(PokemonGame game);
-    }
+    void ExecuteCommand(PokemonGame game);
 }

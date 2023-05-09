@@ -1,13 +1,12 @@
-namespace PokemonGame.PokemonBattle.Enums
+namespace PokemonGame.PokemonBattle.Enums;
+
+public enum ExperienceGroup
 {
-    public enum ExperienceGroup
-    {
-        Normal,
-        Slow,
-        Medium,
-        Parabolic,
-        Fast,
-        Erratic,
-        Fluctuating,
-    }
+    Normal,
+    Slow,
+    Medium,
+    Parabolic,
+    Fast,
+    Erratic,
+    Fluctuating,
 }

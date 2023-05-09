@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PokemonGame.PokemonBattle.Enums
+namespace PokemonGame.PokemonBattle.Enums;
+
+public enum Gender
 {
-    public enum Gender
-    {
-        None,
-        Male,
-        Female
-    }
+    None,
+    Male,
+    Female
 }

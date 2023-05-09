@@ -1,9 +1,8 @@
 using System;
 
-namespace PokemonGame.PokemonBattle.Exceptions
+namespace PokemonGame.PokemonBattle.Exceptions;
+
+public class PartyNotAliveException : Exception
 {
-    public class PartyNotAliveException : Exception
-    {
-        public PartyNotAliveException() : base("Party is not alive!") {}
-    }
+    public PartyNotAliveException() : base("Party is not alive!") {}
 }

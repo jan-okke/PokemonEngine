@@ -6,31 +6,31 @@ using System.Text;
 using System.Threading.Tasks;
 using PokemonGame.Extensions;
 
-namespace PokemonGame.Entities
+namespace PokemonGame.Entities;
+
+public class TextureAtlas
 {
-    public class TextureAtlas
+    private readonly Texture2D _graphic;
+    private Texture2D[,] _textures;
+
+    private void ConvertTextureToAtlas(int splitSize)
     {
-        private Texture2D Graphic;
-        private Texture2D[,] Textures;
+        _textures = TextureSplitExtension.Split(_graphic, splitSize);
+    }
 
-        private void ConvertTextureToAtlas(int splitSize)
-        {
-            Textures = TextureSplitExtension.Split(Graphic, splitSize);
-        }
+    public TextureAtlas(Texture2D graphic, int splitSize)
+    {
+        _graphic = graphic;
+        ConvertTextureToAtlas(splitSize);
+    }
 
-        public TextureAtlas(Texture2D graphic, int splitSize)
-        {
-            Graphic = graphic;
-            ConvertTextureToAtlas(splitSize);
-        }
-        public Texture2D[,] GetTextures()
-        {
-            return Textures;
-        }
-        public Texture2D GetTextureAt(int x, int y)
-        {
-            return Textures[x, y];
-        }
+    public Texture2D[,] GetTextures()
+    {
+        return _textures;
+    }
+
+    public Texture2D GetTextureAt(int x, int y)
+    {
+        return _textures[x, y];
     }
 }
-
