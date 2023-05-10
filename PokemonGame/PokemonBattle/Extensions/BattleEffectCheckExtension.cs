@@ -1,14 +1,4 @@
-﻿using PokemonGame.PokemonBattle.Actions;
-using PokemonGame.PokemonBattle.Entities;
-using PokemonGame.PokemonBattle.Enums;
-using PokemonGame.PokemonBattle.Exceptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PokemonGame.PokemonBattle.Extensions;
+﻿namespace PokemonGame.PokemonBattle.Extensions;
 
 public static class BattleEffectCheckExtension
 {

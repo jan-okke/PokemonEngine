@@ -12,6 +12,7 @@ public class PokemonParty : IPokemonParty
     private List<Pokemon> Pokemons { get; }
     private int AliveCount => Pokemons.Count(p => p.IsAlive);
     private int PokemonCount => Pokemons.Count;
+    public List<Pokemon> ActiveBattlers { get; } = new();
 
     public PokemonParty(List<Pokemon> pokemons)
     {
@@ -47,7 +48,7 @@ public class PokemonParty : IPokemonParty
         return Pokemons.First(p => p.IsAlive);
     }
 
-    bool IPokemonParty.IsAlive()
+    public bool IsAlive()
     {
         return Pokemons.Any(p => p.IsAlive);
     }
@@ -66,6 +67,17 @@ public class PokemonParty : IPokemonParty
 
         var currentBattlers = battle.GetActiveBattlers();
 
-        return currentBattlers.Where(p => !object.ReferenceEquals(p, source)).ToList();
+        return currentBattlers.Where(p => !ReferenceEquals(p, source)).ToList();
+    }
+
+    public void SendOut(Pokemon pokemon)
+    {
+        ActiveBattlers.Add(pokemon);
+    }
+
+    public void ChangeActiveBattler(Pokemon toSwitchOut, Pokemon replacement)
+    {
+        ActiveBattlers.Remove(toSwitchOut);
+        ActiveBattlers.Add(replacement);
     }
 }

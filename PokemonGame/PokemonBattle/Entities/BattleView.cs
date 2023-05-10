@@ -1,6 +1,4 @@
-﻿using PokemonGame.PokemonBattle.Interfaces;
-
-namespace PokemonGame.PokemonBattle.Entities;
+﻿namespace PokemonGame.PokemonBattle.Entities;
 
 public class BattleView
 {
@@ -14,10 +12,10 @@ public class BattleView
 
     public BattleView(int currentTurn, Pokemon playerPokemon, Pokemon opponentPokemon)
     {
-        PlayerPokemonHp = playerPokemon.CurrentHP;
+        PlayerPokemonHp = playerPokemon.CurrentHp;
         PlayerPokemonMaxHp = playerPokemon.Stats.HP;
         PlayerPokemonName = playerPokemon.Name;
-        EnemyPokemonHp = opponentPokemon.CurrentHP;
+        EnemyPokemonHp = opponentPokemon.CurrentHp;
         EnemyPokemonMaxHp = opponentPokemon.Stats.HP;
         EnemyPokemonName = opponentPokemon.Name;
         CurrentTurn = currentTurn;

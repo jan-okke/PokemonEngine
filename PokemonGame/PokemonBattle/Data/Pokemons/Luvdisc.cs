@@ -1,5 +1,3 @@
-using PokemonGame.PokemonBattle.Data.Abilities;
-using PokemonGame.PokemonBattle.Data.Moves;
 using PokemonGame.PokemonBattle.Entities;
 using PokemonGame.PokemonBattle.Enums;
 using System.Collections.Generic;
@@ -38,7 +36,7 @@ public class Luvdisc : Pokemon
 	public override int Weight => 87;
 	public override int ExpYield => 116;
 	public override int CatchRate => 225;
-	public override Dictionary<Stat, int> EVYield => new()
+	public override Dictionary<Stat, int> EvYield => new()
 	{
 		[Stat.HP] = 0,
 		[Stat.Attack] = 0,

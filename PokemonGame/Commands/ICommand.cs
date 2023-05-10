@@ -1,5 +1,3 @@
-using PokemonGame.Enums;
-
 namespace PokemonGame.Commands;
 
 public interface ICommand

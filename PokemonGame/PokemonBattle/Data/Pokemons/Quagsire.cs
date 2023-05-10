@@ -1,5 +1,3 @@
-using PokemonGame.PokemonBattle.Data.Abilities;
-using PokemonGame.PokemonBattle.Data.Moves;
 using PokemonGame.PokemonBattle.Entities;
 using PokemonGame.PokemonBattle.Enums;
 using System.Collections.Generic;
@@ -30,7 +28,7 @@ public class Quagsire : Pokemon
 	public override int Weight => 750;
 	public override int ExpYield => 151;
 	public override int CatchRate => 90;
-	public override Dictionary<Stat, int> EVYield => new()
+	public override Dictionary<Stat, int> EvYield => new()
 	{
 		[Stat.HP] = 2,
 		[Stat.Attack] = 0,

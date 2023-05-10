@@ -1,15 +1,4 @@
-﻿using PokemonGame.PokemonBattle.Constants;
-using PokemonGame.PokemonBattle.Entities;
-using PokemonGame.PokemonBattle.Enums;
-using PokemonGame.PokemonBattle.Exceptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PokemonGame.PokemonBattle.Interfaces;
-
-namespace PokemonGame.PokemonBattle.Extensions;
+﻿namespace PokemonGame.PokemonBattle.Extensions;
 
 public static class BattleCalculationExtension
 {

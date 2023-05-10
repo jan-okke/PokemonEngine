@@ -1,5 +1,3 @@
-using PokemonGame.PokemonBattle.Data.Abilities;
-using PokemonGame.PokemonBattle.Data.Moves;
 using PokemonGame.PokemonBattle.Entities;
 using PokemonGame.PokemonBattle.Enums;
 using System.Collections.Generic;
@@ -35,7 +33,7 @@ public class Stakataka : Pokemon
 	public override int Weight => 8200;
 	public override int ExpYield => 285;
 	public override int CatchRate => 30;
-	public override Dictionary<Stat, int> EVYield => new()
+	public override Dictionary<Stat, int> EvYield => new()
 	{
 		[Stat.HP] = 0,
 		[Stat.Attack] = 0,

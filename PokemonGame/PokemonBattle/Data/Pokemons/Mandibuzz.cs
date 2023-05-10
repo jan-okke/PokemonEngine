@@ -1,5 +1,3 @@
-using PokemonGame.PokemonBattle.Data.Abilities;
-using PokemonGame.PokemonBattle.Data.Moves;
 using PokemonGame.PokemonBattle.Entities;
 using PokemonGame.PokemonBattle.Enums;
 using System.Collections.Generic;
@@ -33,7 +31,7 @@ public class Mandibuzz : Pokemon
 	public override int Weight => 395;
 	public override int ExpYield => 179;
 	public override int CatchRate => 60;
-	public override Dictionary<Stat, int> EVYield => new()
+	public override Dictionary<Stat, int> EvYield => new()
 	{
 		[Stat.HP] = 0,
 		[Stat.Attack] = 0,

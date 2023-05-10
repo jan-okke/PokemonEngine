@@ -1,53 +1,48 @@
 using System;
-using PokemonGame.PokemonBattle.Actions;
 using PokemonGame.PokemonBattle.Enums;
 using PokemonGame.PokemonBattle.Extensions;
 using PokemonGame.PokemonBattle.Interfaces;
-using PokemonGame.Entities;
 using System.Collections.Generic;
 using System.Linq;
 using PokemonGame.PokemonBattle.AI;
-using PokemonGame.PokemonBattle.Constants;
 using PokemonGame.PokemonBattle.Exceptions;
-using PokemonGame.PokemonBattle.Handles;
-using PokemonGame.PokemonBattle.Validation;
 
 namespace PokemonGame.PokemonBattle.Entities;
 
 public class Battle : IBattle
 {
-    private IPokemonParty PlayerParty { get; }
-    private IPokemonParty EnemyParty { get; }
+    private PokemonParty PlayerParty { get; }
+    private PokemonParty EnemyParty { get; }
     private BattlerSide PlayerSide { get; }
     private BattlerSide EnemySide { get; }
-    private Weather Weather { get; set; }
-    private Terrain Terrain { get; set; }
-    private Gravity Gravity { get; set; }
+    private Weather? Weather { get; set; }
+    private Terrain? Terrain { get; set; }
+    private Gravity? Gravity { get; set; }
     private List<FieldEffect> FieldEffects { get; }
     public List<BattleFlag> BattleFlags { get; }
 
-    public Trainer OpposingTrainer { get; internal set; }
+    public Trainer? OpposingTrainer { get; internal set; }
     public BattleLog Log { get; }
     private readonly BattleType _battleType;
 
     private int Turn { get; set; }
     private bool IsOngoing => PlayerParty.IsAlive() && EnemyParty.IsAlive();
 
-    private Pokemon ActivePlayerBattler => PlayerParty.GetFirstAlivePokemon();
-    private Pokemon ActiveOpponentBattler => EnemyParty.GetFirstAlivePokemon();
+    private Pokemon ActivePlayerBattler => PlayerParty.ActiveBattlers[0];
+    private Pokemon ActiveOpponentBattler => EnemyParty.ActiveBattlers[0];
 
-    public Battle(IPokemonParty playerParty, IPokemonParty enemyParty, Weather weather = null, Terrain terrain = null,
+    public Battle(IPokemonParty playerParty, IPokemonParty enemyParty, Weather? weather = null, Terrain? terrain = null,
         BattleType type = BattleType.SingleBattle)
     {
-        PlayerParty = playerParty;
-        EnemyParty = enemyParty;
+        PlayerParty = (PokemonParty)playerParty;
+        EnemyParty = (PokemonParty)enemyParty;
         if (weather != null)
         {
             SetWeather(weather.Condition, weather.Turns);
         }
         else
         {
-            Weather = new Weather(WeatherCondition.None, -1);
+            Weather = null;
         }
 
         if (terrain != null)
@@ -56,7 +51,7 @@ public class Battle : IBattle
         }
         else
         {
-            Terrain = new Terrain(TerrainEffect.None, -1);
+            Terrain = null;
         }
 
         PlayerSide = new BattlerSide();
@@ -67,6 +62,9 @@ public class Battle : IBattle
         Gravity = null;
         Turn = 0;
         _battleType = type;
+        
+        PlayerParty.SendOut(PlayerParty.GetFirstAlivePokemon());
+        EnemyParty.SendOut(EnemyParty.GetFirstAlivePokemon());
     }
 
     private void SetTerrain(TerrainEffect terrainEffect, int terrainTurns)
@@ -117,18 +115,18 @@ public class Battle : IBattle
         */
 
         var damage = CalculateDamage(user, target, playerTurn, move);
-        CheckEffects(playerTurn, move);
+        CheckEffects(user, target, playerTurn, move);
         target.TakeDamage(damage);
         move.ReducePowerPoints(target.HasAbility("Pressure") ? 2 : 1);
     }
 
-    private void CheckEffects(bool playerTurn, Move move)
+    private void CheckEffects(Pokemon user, Pokemon target, bool playerTurn, Move move)
     {
         var attackingParty = playerTurn ? PlayerParty : EnemyParty;
         var defendingParty = playerTurn ? EnemyParty : PlayerParty;
 
-        var attackingPokemon = attackingParty.GetFirstAlivePokemon();
-        var defendingPokemon = defendingParty.GetFirstAlivePokemon();
+        var attackingPokemon = user;
+        var defendingPokemon = target;
 
         var attackingSide = playerTurn ? PlayerSide : EnemySide;
         var defendingSide = playerTurn ? EnemySide : PlayerSide;
@@ -1248,7 +1246,8 @@ public class Battle : IBattle
                 attackingPokemon.IncreaseStatStage(Stat.Attack, 12);
                 break;
             case "Bestow":
-                attackingPokemon.TransferItem(attackingPokemon.Item, defendingPokemon);
+                if (attackingPokemon.Item != null)
+                    attackingPokemon.TransferItem(attackingPokemon.Item, defendingPokemon);
                 break;
             case "Block":
                 defendingPokemon.Trap();
@@ -1346,7 +1345,7 @@ public class Battle : IBattle
 
     private bool IsWeatherConditionActive(WeatherCondition condition)
     {
-        return Weather.IsConditionActive(condition);
+        return Weather != null && Weather.IsConditionActive(condition);
     }
 
     private static bool Chance(int outOfHundred) => new Random().Next(0, 100) <= outOfHundred;
@@ -1492,16 +1491,19 @@ public class Battle : IBattle
 
     public void SwitchPokemon(Pokemon target)
     {
-        // TODO
+        if (_battleType == BattleType.SingleBattle)
+        {
+            PlayerParty.ChangeActiveBattler(PlayerParty.ActiveBattlers[0], target);
+        }
+        else
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public List<Pokemon> GetActiveBattlers()
     {
-        if (_battleType != BattleType.SingleBattle)
-        {
-            throw new NotImplementedException();
-        }
-        return new List<Pokemon> { PlayerParty.GetFirstAlivePokemon(), EnemyParty.GetFirstAlivePokemon() };
+        return PlayerParty.ActiveBattlers;
     }
 
     public BattleType GetBattleType()
@@ -1628,7 +1630,7 @@ public class Battle : IBattle
 
                 break;
             case "Solar Blade" or "Solar Beam":
-                if (!IsSurpressingWeather() && Weather.IsConditionActive(WeatherCondition.Rain,
+                if (Weather != null && !IsSurpressingWeather() && Weather.IsConditionActive(WeatherCondition.Rain,
                         WeatherCondition.Sand, WeatherCondition.Hail))
                 {
                     power *= 0.5;
@@ -1636,14 +1638,14 @@ public class Battle : IBattle
 
                 break;
             case "Knock Off":
-                if (defender.Item.CanGetRemoved())
+                if (defender.Item != null && defender.Item.CanGetRemoved())
                 {
                     power *= 1.5;
                 }
 
                 break;
             case "Grav Apple":
-                if (Gravity.Active)
+                if (Gravity is { Active: true })
                 {
                     power *= 1.5;
                 }
@@ -1811,7 +1813,8 @@ public class Battle : IBattle
             power *= 1.3;
         }
 
-        if (attacker.HasAbility("Sand Force") &&
+        if (Weather != null &&
+            attacker.HasAbility("Sand Force") &&
             Weather.IsConditionActive(WeatherCondition.Sand) & !IsSurpressingWeather() &&
             move.HasType(PokemonType.Ground, PokemonType.Steel, PokemonType.Rock))
         {
@@ -1891,32 +1894,36 @@ public class Battle : IBattle
         }
         #endregion
         #region Defender Ability
-        if (defender.HasAbility("Heatproof") &&
-            move.HasType(PokemonType.Fire) & !attacker.Ability.IgnoresOtherAbilities())
+        if (attacker.Ability != null &&
+            defender.HasAbility("Heatproof") &&
+            move.HasType(PokemonType.Fire) & !attacker.Ability.IgnoresOtherAbilities)
         {
             power *= 0.5;
         }
 
-        if (defender.HasAbility("Dry Skin") &&
-            move.HasType(PokemonType.Fire) & !attacker.Ability.IgnoresOtherAbilities())
+        if (attacker.Ability != null &&
+            defender.HasAbility("Dry Skin") &&
+            move.HasType(PokemonType.Fire) & !attacker.Ability.IgnoresOtherAbilities)
         {
             power *= 1.25;
         }
 
-        if (defender.HasAbility("Thick Fat") && CheckMoveType(move, PokemonType.Fire, attacker) ||
-            CheckMoveType(move, PokemonType.Ice, attacker) & !attacker.Ability.IgnoresOtherAbilities())
+        if (attacker.Ability != null && (defender.HasAbility("Thick Fat") && CheckMoveType(move, PokemonType.Fire, attacker) ||
+                                         CheckMoveType(move, PokemonType.Ice, attacker) & !attacker.Ability.IgnoresOtherAbilities))
         {
             power *= 0.5;
         }
         #endregion
         #region Aura
-        if (HasActiveFieldEffect(Enums.FieldEffects.DarkAura) & !attacker.Ability.IgnoresOtherAbilities() &&
+        if (attacker.Ability != null &&
+            HasActiveFieldEffect(Enums.FieldEffects.DarkAura) & !attacker.Ability.IgnoresOtherAbilities &&
             CheckMoveType(move, PokemonType.Dark, attacker))
         {
             power *= HasActiveFieldEffect(Enums.FieldEffects.AuraBreak) ? 0.75 : 4.0 / 3.0;
         }
 
-        if (HasActiveFieldEffect(Enums.FieldEffects.FairyAura) & !attacker.Ability.IgnoresOtherAbilities() &&
+        if (attacker.Ability != null &&
+            HasActiveFieldEffect(Enums.FieldEffects.FairyAura) & !attacker.Ability.IgnoresOtherAbilities &&
             CheckMoveType(move, PokemonType.Fairy, attacker))
         {
             power *= HasActiveFieldEffect(Enums.FieldEffects.AuraBreak) ? 0.75 : 4.0 / 3.0;
@@ -1964,7 +1971,7 @@ public class Battle : IBattle
 
     private bool IsTerrainEffectActive(TerrainEffect effect)
     {
-        return Terrain.HasEffect(effect);
+        return Terrain != null && Terrain.HasEffect(effect);
     }
 
     private Move GetLastMove()
@@ -2030,27 +2037,29 @@ public class Battle : IBattle
 
     private double CalculateParentalBondMod(Move move) => 1; // TODO
 
-    private static double CalculateWeatherMod(Weather weather, Move move) // TODO Abilities that boost in weather?
+    private static double CalculateWeatherMod(Weather? weather, Move move) // TODO Abilities that boost in weather?
     {
-        return weather.Condition switch
-        {
-            WeatherCondition.None => 1,
-            WeatherCondition.Rain => move.Type switch
+        if (weather != null)
+            return weather.Condition switch
             {
-                PokemonType.Water => 1.5,
-                PokemonType.Fire => 0.5,
-                _ => 1
-            },
-            WeatherCondition.Sun => move.Type switch
-            {
-                PokemonType.Fire => 1.5,
-                PokemonType.Water => 0.5,
-                _ => 1
-            },
-            WeatherCondition.Hail => 1,
-            WeatherCondition.Sand => 1,
-            _ => throw new NotImplementedException(),
-        };
+                WeatherCondition.None => 1,
+                WeatherCondition.Rain => move.Type switch
+                {
+                    PokemonType.Water => 1.5,
+                    PokemonType.Fire => 0.5,
+                    _ => 1
+                },
+                WeatherCondition.Sun => move.Type switch
+                {
+                    PokemonType.Fire => 1.5,
+                    PokemonType.Water => 0.5,
+                    _ => 1
+                },
+                WeatherCondition.Hail => 1,
+                WeatherCondition.Sand => 1,
+                _ => throw new NotImplementedException(),
+            };
+        return 1;
     }
 
     private double CalculateGlaiveRushMod(Move move) => 1; // TODO
@@ -2321,45 +2330,51 @@ public class Battle : IBattle
         }
 
         // Defender Ability
-        if (defender.HasAbility("Multiscale", "Shadow Shield") &&
-            defender.AtFullHP() & !attacker.Ability.IgnoresOtherAbilities())
+        if (attacker.Ability != null &&
+            defender.HasAbility("Multiscale", "Shadow Shield") &&
+            defender.AtFullHP() & !attacker.Ability.IgnoresOtherAbilities)
         {
             mod *= 0.5;
         }
 
-        if (defender.HasAbility("Fluffy") & !attacker.Ability.IgnoresOtherAbilities() &&
+        if (attacker.Ability != null &&
+            defender.HasAbility("Fluffy") & !attacker.Ability.IgnoresOtherAbilities &&
             move.IsContactMove & !attacker.HasAbility("Long Reach"))
         {
             mod *= 0.5;
         }
 
-        if (defender.HasAbility("Fluffy") & !attacker.Ability.IgnoresOtherAbilities() &&
+        if (attacker.Ability != null &&
+            defender.HasAbility("Fluffy") & !attacker.Ability.IgnoresOtherAbilities &&
             CheckMoveType(move, PokemonType.Fire, attacker))
         {
             mod *= 2;
         }
 
-        if (defender.HasAbility("Punk Rock") & !attacker.Ability.IgnoresOtherAbilities() &&
+        if (attacker.Ability != null &&
+            defender.HasAbility("Punk Rock") & !attacker.Ability.IgnoresOtherAbilities &&
             move.IsSoundMove)
         {
             mod *= 0.5;
         }
 
-        if (defender.HasAbility("Ice Scales") & !attacker.Ability.IgnoresOtherAbilities() && move.IsSpecial)
+        if (attacker.Ability != null && defender.HasAbility("Ice Scales") & !attacker.Ability.IgnoresOtherAbilities && move.IsSpecial)
         {
             mod *= 0.5;
         }
 
-        if (defender.HasAbility("Filter", "Prism Armor", "Solid Rock") & !attacker.Ability.IgnoresOtherAbilities() &&
+        if (attacker.Ability != null &&
+            defender.HasAbility("Filter", "Prism Armor", "Solid Rock") & !attacker.Ability.IgnoresOtherAbilities &&
             CalculateEffectivityMod(move, defender.Types) > 1)
         {
             mod *= 0.75;
         }
 
         // Partner Ability (hitting Partner)
-        if (_battleType != BattleType.SingleBattle &&
+        if (attacker.Ability != null &&
+            _battleType != BattleType.SingleBattle &&
             attackingParty.GetAllies(this, attacker).Find(p => p.HasAbility("Friend Guard")) == defender &
-            !attacker.Ability.IgnoresOtherAbilities())
+            !attacker.Ability.IgnoresOtherAbilities)
         {
             mod *= 0.75;
         }

@@ -1,5 +1,3 @@
-using PokemonGame.PokemonBattle.Data.Abilities;
-using PokemonGame.PokemonBattle.Data.Moves;
 using PokemonGame.PokemonBattle.Entities;
 using PokemonGame.PokemonBattle.Enums;
 using System.Collections.Generic;
@@ -31,7 +29,7 @@ public class Arceus : Pokemon
 	public override int Weight => 3200;
 	public override int ExpYield => 360;
 	public override int CatchRate => 3;
-	public override Dictionary<Stat, int> EVYield => new()
+	public override Dictionary<Stat, int> EvYield => new()
 	{
 		[Stat.HP] = 3,
 		[Stat.Attack] = 0,

@@ -1,10 +1,3 @@
-using PokemonGame.PokemonBattle.Constants;
-using PokemonGame.PokemonBattle.Entities;
-using PokemonGame.PokemonBattle.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
 namespace PokemonGame.PokemonBattle.Extensions;
 
 public static class BattleExtension

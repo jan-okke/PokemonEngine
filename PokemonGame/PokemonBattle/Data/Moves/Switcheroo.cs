@@ -1,6 +1,5 @@
 using PokemonGame.PokemonBattle.Entities;
 using PokemonGame.PokemonBattle.Enums;
-using System.Collections.Generic;
 
 namespace PokemonGame.PokemonBattle.Data.Moves;
 

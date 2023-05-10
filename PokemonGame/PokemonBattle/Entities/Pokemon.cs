@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using PokemonGame.PokemonBattle.Enums;
 using PokemonGame.PokemonBattle.Extensions;
-using PokemonGame.PokemonBattle.Actions;
 using System.Linq;
 using System;
 using PokemonGame.PokemonBattle.Exceptions;
@@ -12,18 +11,18 @@ namespace PokemonGame.PokemonBattle.Entities;
 
 public class Pokemon
 {
-    public virtual string Name { get; }
+    public virtual string Name => "";
     public int Level { get; internal set; }
     public int Experience { get; internal set; }
     public Ability? Ability { get; internal set; }
-    public virtual List<Ability?> AvailableAbilities { get; }
-    public virtual List<Ability>? AvailableHiddenAbilities { get; }
+    public virtual List<Ability> AvailableAbilities => new();
+    public virtual List<Ability> AvailableHiddenAbilities => new();
     public Item? Item { get; internal set; }
     public List<Move> Moves { get; } = new();
-    public virtual Dictionary<int, List<Move>> LevelUpLearnSet { get; }
-    public virtual List<Move> EggMoves { get; }
-    public virtual List<Move> TutorMoves { get; }
-    public virtual Stats BaseStats { get; }
+    public virtual Dictionary<int, List<Move>> LevelUpLearnSet => new();
+    public virtual List<Move> EggMoves => new();
+    public virtual List<Move> TutorMoves => new();
+    public virtual Stats BaseStats => new();
     public Stats IVs { get; } = new();
     public Stats EVs { get; } = new();
     public Stats Stats { get; } = new();
@@ -32,7 +31,7 @@ public class Pokemon
     public List<SecondaryStatusCondition> SecondaryStatusConditions { get; } = new();
     public virtual ExperienceGroup ExperienceGroup { get; }
 
-    public int CurrentHP { get; internal set; }
+    public int CurrentHp { get; internal set; }
     public List<Effect> Effects { get; internal set; } = new();
     public virtual List<PokemonType> Types { get; } = new();
     public Gender Gender { get; internal set; }
@@ -40,10 +39,19 @@ public class Pokemon
 
     public virtual int Weight { get; internal set; }
     public virtual int ExpYield { get; }
-    public virtual Dictionary<Stat, int> EVYield { get; }
+
+    public virtual Dictionary<Stat, int> EvYield => new()
+    {
+        [Stat.HP] = 0,
+        [Stat.Attack] = 0,
+        [Stat.Defense] = 0,
+        [Stat.SpecialAttack] = 0,
+        [Stat.SpecialDefense] = 0,
+        [Stat.Speed] = 0,
+    };
     public virtual int CatchRate { get; }
 
-    public bool IsAlive => CurrentHP > 0;
+    public bool IsAlive => CurrentHp > 0;
     public bool IsDynamaxed => DynamaxState.Active;
     public bool IsUnderground => false; // TODO
     public bool IsUnderwater => false; // TODO
@@ -63,7 +71,7 @@ public class Pokemon
     private static Pokemon GetPokemon(string name)
     {
         const string space = "PokemonGame.PokemonBattle.Data.Pokemons";
-        var pokemon = System.Type.GetType($"{space}.{name}");
+        var pokemon = Type.GetType($"{space}.{name}");
         if (pokemon == null)
         {
             throw new ArgumentException($"Object name {name} not recognized.", nameof(name));
@@ -204,8 +212,6 @@ public class Pokemon
             default:
                 throw new ArgumentOutOfRangeException(nameof(stat), stat, null);
         }
-
-        ;
     }
 
     public void IncreaseStatStage(Stat stat, int amount)
@@ -282,8 +288,6 @@ public class Pokemon
             default:
                 throw new ArgumentOutOfRangeException(nameof(stat), stat, null);
         }
-
-        ;
     }
 
     public void GiveEffect(EffectType effectType, int turns)
@@ -311,9 +315,9 @@ public class Pokemon
 
     public void TakeDamage(int amount)
     {
-        CurrentHP -= amount;
-        if (CurrentHP >= 0) return;
-        CurrentHP = 0;
+        CurrentHp -= amount;
+        if (CurrentHp >= 0) return;
+        CurrentHp = 0;
         OnFaint();
     }
 
@@ -384,16 +388,16 @@ public class Pokemon
 
     public void HealHp(int amount)
     {
-        CurrentHP += amount;
-        if (CurrentHP > Stats.HP)
+        CurrentHp += amount;
+        if (CurrentHp > Stats.HP)
         {
-            CurrentHP = Stats.HP;
+            CurrentHp = Stats.HP;
         }
     }
 
     public void HealHp()
     {
-        CurrentHP = Stats.HP;
+        CurrentHp = Stats.HP;
     }
 
     public void IncreaseRandomAvailableStatBy(int amount)

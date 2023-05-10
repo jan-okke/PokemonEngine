@@ -30,17 +30,15 @@ public static class DeepCloningExtension
         var properties = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
         foreach (var property in properties)
         {
-            if (property.CanWrite && property.CanRead)
+            if (!property.CanWrite || !property.CanRead) continue;
+            var propertyValue = property.GetValue(obj);
+            if (propertyValue != null && !propertyValue.GetType().IsPrimitive)
             {
-                var propertyValue = property.GetValue(obj);
-                if (propertyValue != null && !propertyValue.GetType().IsPrimitive)
-                {
-                    property.SetValue(newObj, DeepClone(propertyValue));
-                }
-                else
-                {
-                    property.SetValue(newObj, propertyValue);
-                }
+                property.SetValue(newObj, DeepClone(propertyValue));
+            }
+            else
+            {
+                property.SetValue(newObj, propertyValue);
             }
         }
 

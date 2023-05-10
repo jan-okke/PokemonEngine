@@ -1,17 +1,13 @@
 namespace PokemonGame.PokemonBattle.Entities;
 
-public class Ability
+public abstract class Ability
 {
-    public virtual string Name { get; }
-    public virtual string Description { get; }
+    public virtual string Name => "";
+    public virtual string Description => "";
+    public virtual bool IgnoresOtherAbilities => false;
 
-    public Ability(string name, string description)
+    public bool HasName(string name)
     {
-        Name = name;
-        Description = description;
-    }
-
-    public Ability()
-    {
+        return Name == name;
     }
 }

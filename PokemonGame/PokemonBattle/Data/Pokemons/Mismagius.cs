@@ -1,5 +1,3 @@
-using PokemonGame.PokemonBattle.Data.Abilities;
-using PokemonGame.PokemonBattle.Data.Moves;
 using PokemonGame.PokemonBattle.Entities;
 using PokemonGame.PokemonBattle.Enums;
 using System.Collections.Generic;
@@ -21,7 +19,7 @@ public class Mismagius : Pokemon
 	public override int Weight => 44;
 	public override int ExpYield => 173;
 	public override int CatchRate => 45;
-	public override Dictionary<Stat, int> EVYield => new()
+	public override Dictionary<Stat, int> EvYield => new()
 	{
 		[Stat.HP] = 0,
 		[Stat.Attack] = 0,

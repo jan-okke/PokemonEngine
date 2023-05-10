@@ -3,12 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using PokemonGame.Entities;
 using PokemonGame.Static;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace PokemonGame;
 

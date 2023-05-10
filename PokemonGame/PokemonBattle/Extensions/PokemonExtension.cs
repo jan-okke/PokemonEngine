@@ -2,7 +2,6 @@ using PokemonGame.PokemonBattle.Entities;
 using System.Linq;
 using System.Collections.Generic;
 using PokemonGame.PokemonBattle.Enums;
-using System;
 
 namespace PokemonGame.PokemonBattle.Extensions;
 
@@ -39,13 +38,13 @@ public static class PokemonExtension
 
     public static bool IsOpposingGender(this Pokemon pokemon, Pokemon other) => pokemon.Gender != Gender.None && pokemon.Gender == other.Gender;
 
-    public static int GetHPPercentage(this Pokemon pokemon) => (int)(pokemon.CurrentHP * 100.0 / pokemon.Stats.HP);
+    public static int GetHPPercentage(this Pokemon pokemon) => (int)(pokemon.CurrentHp * 100.0 / pokemon.Stats.HP);
 
     public static bool BelowThirdHP(this Pokemon pokemon) => pokemon.GetHPPercentage() < 33.33;
         
     public static bool BelowHalfHP(this Pokemon pokemon) => pokemon.GetHPPercentage() < 50;
 
-    public static bool AtFullHP(this Pokemon pokemon) => pokemon.CurrentHP == pokemon.Stats.HP;
+    public static bool AtFullHP(this Pokemon pokemon) => pokemon.CurrentHp == pokemon.Stats.HP;
 
     public static bool HasEffect(this Pokemon pokemon, EffectType effect) => pokemon.Effects.Any(e => e.Type == effect && e.IsActive);
 

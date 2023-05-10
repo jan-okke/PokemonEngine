@@ -1,12 +1,4 @@
-﻿using PokemonGame.PokemonBattle.Entities;
-using PokemonGame.PokemonBattle.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PokemonGame.PokemonBattle.Extensions;
+﻿namespace PokemonGame.PokemonBattle.Extensions;
 
 public static class WeatherExtension
 {

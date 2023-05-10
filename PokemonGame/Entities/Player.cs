@@ -2,11 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using PokemonGame.Enums;
 using PokemonGame.PokemonBattle.Entities;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PokemonGame.Entities;
 

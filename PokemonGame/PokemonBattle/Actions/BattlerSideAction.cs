@@ -1,6 +1,3 @@
-using PokemonGame.PokemonBattle.Enums;
-using PokemonGame.PokemonBattle.Entities;
-
 namespace PokemonGame.PokemonBattle.Actions;
 
 public static class BattleSideAction

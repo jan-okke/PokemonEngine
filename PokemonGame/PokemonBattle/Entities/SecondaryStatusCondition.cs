@@ -5,8 +5,8 @@ namespace PokemonGame.PokemonBattle.Entities;
 public class SecondaryStatusCondition
 {
     public SecondaryStatusConditionType Condition { get; }
-    public int Turns { get; internal set; }
-    public int CurrentTurn { get; internal set; }
+    private int Turns { get; set; }
+    private int CurrentTurn { get; set; }
 
     public bool IsActive => Turns > 0;
 
@@ -14,5 +14,11 @@ public class SecondaryStatusCondition
         Condition = conditionType;
         Turns = startingTurns;
         CurrentTurn = 0;
+    }
+
+    public void OnTurnEnd()
+    {
+        CurrentTurn++;
+        Turns--;
     }
 }
