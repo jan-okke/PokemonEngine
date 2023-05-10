@@ -57,6 +57,7 @@ public class Pokemon
     public bool Trapped { get; internal set; }
     public bool Muted { get; internal set; } // can not use sound moves xd
     public bool Cursed { get; internal set; }
+    private int Happiness { get; set; }
 
 
     private static Pokemon GetPokemon(string name)
@@ -451,5 +452,21 @@ public class Pokemon
     private void OnFaint()
     {
         throw new NotImplementedException();
+    }
+
+    public void LowerHappiness(int lowHappinessMod, int midHappinessMod, int highHappinessMod)
+    {
+        Happiness -= Happiness switch
+        {
+            < 100 => lowHappinessMod,
+            < 200 => midHappinessMod,
+            < 255 => highHappinessMod,
+            >= 255 => throw new Exception("Invalid Happiness")
+        };
+
+        if (Happiness < 0)
+        {
+            Happiness = 0;
+        }
     }
 }

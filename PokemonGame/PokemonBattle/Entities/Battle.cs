@@ -1186,7 +1186,7 @@ public class Battle : IBattle
                 break;
 
             #endregion
-
+            #region Pure Status Moves
             case "Acid Armor":
                 attackingPokemon.IncreaseStatStage(Stat.Defense, 2);
                 break;
@@ -1340,6 +1340,7 @@ public class Battle : IBattle
             case "Dark Void":
                 defendingPokemon.SetStatus(StatusConditionType.Sleeping, new Random().Next(1, 4));
                 break;
+            #endregion
         }
     }
 
@@ -1392,7 +1393,8 @@ public class Battle : IBattle
             {
                 case "Energy Root":
                     target.HealHp(120);
-                    break; // todo lower happiness
+                    target.LowerHappiness(10, 10, 15);
+                    break;
                 case "Moomoo Milk":
                     target.HealHp(100);
                     break;
@@ -1449,7 +1451,8 @@ public class Battle : IBattle
                     }
 
                     break;
-                default: throw new Exception("Item was unknown medicine.");
+                default: 
+                    throw new Exception("Item was unknown medicine.");
             }
         }
 
@@ -1494,7 +1497,10 @@ public class Battle : IBattle
 
     public List<Pokemon> GetActiveBattlers()
     {
-        // this is only single battle rn TODO
+        if (_battleType != BattleType.SingleBattle)
+        {
+            throw new NotImplementedException();
+        }
         return new List<Pokemon> { PlayerParty.GetFirstAlivePokemon(), EnemyParty.GetFirstAlivePokemon() };
     }
 
@@ -1513,9 +1519,6 @@ public class Battle : IBattle
         var attackingParty = playerTurn ? PlayerParty : EnemyParty;
         var defendingParty = playerTurn ? EnemyParty : PlayerParty;
 
-        var attackingPokemon = attackingParty.GetFirstAlivePokemon();
-        var defendingPokemon = defendingParty.GetFirstAlivePokemon();
-
         var attackingSide = playerTurn ? PlayerSide : EnemySide;
         var defendingSide = playerTurn ? EnemySide : PlayerSide;
 
@@ -1524,32 +1527,32 @@ public class Battle : IBattle
             return 0;
         }
 
-        var isCriticalHit = CriticalHitCheck(attackingPokemon, defendingPokemon, move);
+        var isCriticalHit = CriticalHitCheck(user, target, move);
 
-        var power = CalculateMovePower(attackingParty, defendingSide, attackingPokemon, defendingPokemon, move);
-        var attack = CalculateAttack(attackingPokemon, move);
-        var defense = CalculateDefense(defendingPokemon, move);
+        var power = CalculateMovePower(attackingParty, defendingSide, user, target, move);
+        var attack = CalculateAttack(user, move);
+        var defense = CalculateDefense(target, move);
         var targetMod = CalculateTargetMod(move);
         var parentalBondMod = CalculateParentalBondMod(move);
         var weatherMod = CalculateWeatherMod(Weather, move);
         var glaiveRushMod = CalculateGlaiveRushMod(move);
-        var critMod = isCriticalHit ? CalculateCritMod(attackingPokemon) : 1;
+        var critMod = isCriticalHit ? CalculateCritMod(user) : 1;
         var randomMod = CalculateRandomMod(move);
-        var stabMod = CalculateStabMod(attackingPokemon, move);
-        var effMod = CalculateEffectivityMod(move, defendingPokemon.Types);
+        var stabMod = CalculateStabMod(user, move);
+        var effMod = CalculateEffectivityMod(move, target.Types);
 
         if (effMod == 0)
         {
             throw new MoveHasNoEffectException(move); //return new Answer(AnswerCodes.Answer_Calculation_NoEffect, 0);
         }
 
-        var burnMod = CalculateBurnMod(attackingPokemon, move);
-        var otherMod = CalculateOtherMod(attackingPokemon, defendingPokemon, attackingParty, defendingSide, move,
+        var burnMod = CalculateBurnMod(user, move);
+        var otherMod = CalculateOtherMod(user, target, attackingParty, defendingSide, move,
             isCriticalHit);
-        var zMod = CalculateZMod(defendingPokemon, move);
+        var zMod = CalculateZMod(target, move);
         var terraMod = CalculateTerraMod(move);
 
-        var damage = (int)(((2 * attackingPokemon.Level / 5 + 2) * power * attack / defense / 50 + 2) * targetMod *
+        var damage = (int)(((2 * user.Level / 5 + 2) * power * attack / defense / 50 + 2) * targetMod *
                            parentalBondMod * weatherMod * glaiveRushMod * critMod * randomMod * stabMod * effMod *
                            burnMod * otherMod * zMod * terraMod);
 
@@ -1571,7 +1574,7 @@ public class Battle : IBattle
         Pokemon defender, Move move)
     {
         double power = move.BasePower;
-        // Moves
+        #region Moves
         switch (move.Name)
         {
             case "Facade":
@@ -1684,9 +1687,9 @@ public class Battle : IBattle
 
                 break;
         }
-
-        // other Boosts
-        // TODO: Electromorposis and Wind Power apply this boost too (it counts as the same one and do not stack)
+        #endregion
+        #region Other Boosts
+        // TODO: Electromorphosis and Wind Power apply this boost too (it counts as the same one and do not stack)
         if (CheckMoveType(move, PokemonType.Electric, attacker) && attacker.HasEffect(EffectType.Charged))
         {
             power *= 2;
@@ -1714,8 +1717,8 @@ public class Battle : IBattle
         {
             power *= 0.5;
         }
-
-        // Terrain
+        #endregion
+        #region Terrain
         if (IsTerrainEffectActive(TerrainEffect.Grass) && defender.IsGrounded() &&
             move.NameIsAnyOf("Earthquake", "Magnitude", "Bulldoze"))
         {
@@ -1745,8 +1748,8 @@ public class Battle : IBattle
         {
             power *= 1.5;
         }
-
-        // Attacker Ability
+        #endregion
+        #region Attacker Ability
         if (attacker.HasAbility("Rivalry"))
         {
             power *= attacker.IsSameGender(defender) ? 0.75 : attacker.IsOpposingGender(defender) ? 1.25 : 1;
@@ -1886,8 +1889,8 @@ public class Battle : IBattle
         {
             power *= 1.5;
         }
-
-        // Defender Ability
+        #endregion
+        #region Defender Ability
         if (defender.HasAbility("Heatproof") &&
             move.HasType(PokemonType.Fire) & !attacker.Ability.IgnoresOtherAbilities())
         {
@@ -1905,8 +1908,8 @@ public class Battle : IBattle
         {
             power *= 0.5;
         }
-
-        // Dark and Faira aura
+        #endregion
+        #region Aura
         if (HasActiveFieldEffect(Enums.FieldEffects.DarkAura) & !attacker.Ability.IgnoresOtherAbilities() &&
             CheckMoveType(move, PokemonType.Dark, attacker))
         {
@@ -1918,8 +1921,8 @@ public class Battle : IBattle
         {
             power *= HasActiveFieldEffect(Enums.FieldEffects.AuraBreak) ? 0.75 : 4.0 / 3.0;
         }
-
-        // Items
+        #endregion
+        #region Items
         if (move.IsPhysical && attacker.HasItem("Muscle Band"))
         {
             power *= 1.1;
@@ -1950,7 +1953,7 @@ public class Battle : IBattle
         {
             power *= 2;
         }
-
+        #endregion
         return power;
     }
 
