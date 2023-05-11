@@ -26,4 +26,9 @@ public class Command
     {
         return SplitText[1];
     }
+
+    public string GetThirdWord()
+    {
+        return SplitText[2];
+    }
 }

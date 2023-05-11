@@ -14,9 +14,9 @@ public class PokemonParty : IPokemonParty
     private int PokemonCount => Pokemons.Count;
     public List<Pokemon> ActiveBattlers { get; } = new();
 
-    public PokemonParty(List<Pokemon> pokemons)
+    public PokemonParty(List<Pokemon>? pokemons)
     {
-        Pokemons = pokemons;
+        Pokemons = pokemons ?? new List<Pokemon>();
     }
 
     public PokemonParty(Pokemon pokemon)

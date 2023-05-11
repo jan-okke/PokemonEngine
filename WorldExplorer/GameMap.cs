@@ -1,14 +1,21 @@
-﻿namespace WorldExplorer;
+﻿using PokemonGame.PokemonBattle.Entities;
+using PokemonGame.PokemonBattle.Interfaces;
+
+namespace WorldExplorer;
 
 public class GameMap
 {
     private string Name { get; }
-    private List<Connection> Connections { get; } = new List<Connection>();
+    private List<Connection> Connections { get; } = new();
+    private Dictionary<string, int> Pokemons { get; } = new();
+    private Action? MapEnterScript { get; }
 
-    public GameMap(string name, params Connection[] connections)
+    public GameMap(string name, IEnumerable<Connection> connections, Dictionary<string, int>? pokemons, Action? mapEnterScript)
     {
         Name = name;
         Connections.AddRange(connections);
+        if (pokemons != null) Pokemons = pokemons;
+        MapEnterScript = mapEnterScript;
     }
 
     public string? GetConnection(Direction direction)
@@ -28,5 +35,18 @@ public class GameMap
         {
             Console.WriteLine($"[{connection.Direction}] {connection.TargetMap}");
         }
+    }
+
+    public void Encounter(IPokemonParty playerParty)
+    {
+        var pokemon = Pokemons.Keys.ElementAt(new Random().Next(Pokemons.Keys.Count));
+        var level = Pokemons[pokemon];
+        
+        BattleCommands.StartWildBattle(new BattleInitialization(), playerParty, pokemon, level);
+    }
+
+    public void OnEnter()
+    {
+        MapEnterScript?.Invoke();
     }
 }

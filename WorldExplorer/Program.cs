@@ -29,6 +29,14 @@ public abstract class Program
                         player.GoSouth();
                         player.CurrentMap.Display();
                         break;
+                    case "left" or "west":
+                        player.GoWest();
+                        player.CurrentMap.Display();
+                        break;
+                    case "right" or "east":
+                        player.GoEast();
+                        player.CurrentMap.Display();
+                        break;
                 }
                 break;
             case "look":
