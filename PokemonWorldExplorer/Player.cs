@@ -3,39 +3,47 @@ using PokemonGame.PokemonBattle.Interfaces;
 
 namespace WorldExplorer;
 
-public class Player
+public sealed class Player
 {
-    private GameMap _currentMap;
-    public GameMap CurrentMap
+    private GameMap? _currentMap;
+    public GameMap? CurrentMap
     {
         get => _currentMap;
         private set
         {
             _currentMap = value;
-            value.OnEnter();
+            value?.OnEnter();
         }
     }
 
-    private static Player? _instance;
-    private readonly IPokemonParty _party;
+    private static Player? instance = null;
+
+    static Player()
+    {
+    }
 
     private Player()
     {
-        _currentMap = GameMaps.GetInstance().GetMap(Settings.StartMap) ?? throw new InvalidOperationException();
-        _party = new PokemonParty(pokemons: null);
-        _currentMap.OnEnter();
+        
     }
 
-    public static Player GetInstance()
+    public static Player Instance
     {
-        if (_instance is null)
+        get
         {
-            _instance = new Player();
-        }
+            if (instance == null)
+            {
+                instance = new Player();
+                instance.CurrentMap = GameMaps.GetInstance().GetMap(Settings.StartMap);
+                
+            }
 
-        return _instance;
+            return instance;
+        }
     }
 
+    private readonly IPokemonParty _party = new PokemonParty(pokemons: null);
+    
     public void GoNorth()
     {
         var newMap = GameMaps.GetInstance().GetMap(CurrentMap.GetConnection(Direction.North));
@@ -67,5 +75,10 @@ public class Player
     public void AddPokemon(string name, int level)
     {
         _party.AddPokemon(Pokemon.GetPokemon(name, level));
+    }
+
+    public IPokemonParty GetParty()
+    {
+        return _party;
     }
 }

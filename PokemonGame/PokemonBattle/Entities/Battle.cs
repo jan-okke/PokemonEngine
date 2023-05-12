@@ -38,7 +38,7 @@ public class Battle : IBattle
         EnemyParty = (PokemonParty)enemyParty;
         if (weather != null)
         {
-            SetWeather(weather.Condition, weather.Turns);
+            SetWeather(weather.Condition, 5);
         }
         else
         {
@@ -47,7 +47,7 @@ public class Battle : IBattle
 
         if (terrain != null)
         {
-            SetTerrain(terrain.Effect, terrain.Turns);
+            SetTerrain(terrain.Effect, 5);
         }
         else
         {
@@ -75,6 +75,21 @@ public class Battle : IBattle
     private void SetWeather(WeatherCondition weatherCondition, int weatherTurns)
     {
         Weather = new Weather(weatherCondition, weatherTurns);
+    }
+
+    public bool IsOver()
+    {
+        return !IsOngoing;
+    }
+
+    public void UseMove(string name)
+    {
+        var move = ActivePlayerBattler.Moves.Find(m => m.Name == name);
+        if (move == null)
+        {
+            throw new MoveNotKnownException();
+        }
+        UseMove(move);
     }
 
     public void UseMove(Move move)
@@ -1364,6 +1379,9 @@ public class Battle : IBattle
         {
             p.OnTurnEnd();
         }
+
+        Terrain?.OnTurnEnd();
+        Weather?.OnTurnEnd();
     }
 
     public void UseItem(Item item, Pokemon target)
@@ -1971,7 +1989,7 @@ public class Battle : IBattle
 
     private bool IsTerrainEffectActive(TerrainEffect effect)
     {
-        return Terrain != null && Terrain.HasEffect(effect);
+        return Terrain is { Active: true } && Terrain.HasEffect(effect);
     }
 
     private Move GetLastMove()
@@ -2039,7 +2057,7 @@ public class Battle : IBattle
 
     private static double CalculateWeatherMod(Weather? weather, Move move) // TODO Abilities that boost in weather?
     {
-        if (weather != null)
+        if (weather is { Active: true })
             return weather.Condition switch
             {
                 WeatherCondition.None => 1,

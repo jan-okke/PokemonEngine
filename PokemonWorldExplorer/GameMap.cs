@@ -5,10 +5,22 @@ namespace WorldExplorer;
 
 public class GameMap
 {
+    private readonly Action? _mapEnterScript;
     private string Name { get; }
     private List<Connection> Connections { get; } = new();
     private Dictionary<string, int> Pokemons { get; } = new();
-    private Action? MapEnterScript { get; }
+
+    private Action? MapEnterScript
+    {
+        get
+        {
+            ScriptHandled = true;
+            return _mapEnterScript;
+        }
+        init => _mapEnterScript = value;
+    }
+
+    private bool ScriptHandled { get; set; }
 
     public GameMap(string name, IEnumerable<Connection> connections, Dictionary<string, int>? pokemons, Action? mapEnterScript)
     {
@@ -37,7 +49,7 @@ public class GameMap
         }
     }
 
-    public void Encounter(IPokemonParty playerParty)
+    private void Encounter(IPokemonParty playerParty)
     {
         var pokemon = Pokemons.Keys.ElementAt(new Random().Next(Pokemons.Keys.Count));
         var level = Pokemons[pokemon];
@@ -47,6 +59,13 @@ public class GameMap
 
     public void OnEnter()
     {
-        MapEnterScript?.Invoke();
+        if (Pokemons.Count > 0)
+        {
+            Encounter(Player.Instance.GetParty());
+        }
+        if (!ScriptHandled)
+        {
+            MapEnterScript?.Invoke();
+        }
     }
 }

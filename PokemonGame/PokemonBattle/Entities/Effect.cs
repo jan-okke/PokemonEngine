@@ -5,7 +5,7 @@ namespace PokemonGame.PokemonBattle.Entities;
 public class Effect
 {
     public EffectType Type { get; }
-    public int Turns { get; internal set; }
+    private int Turns { get; set; }
 
     public bool IsActive => Turns > 0;
 
@@ -13,5 +13,10 @@ public class Effect
     {
         Type = type;
         Turns = startingTurns;
+    }
+
+    public void OnTurnEnd()
+    {
+        Turns--;
     }
 }

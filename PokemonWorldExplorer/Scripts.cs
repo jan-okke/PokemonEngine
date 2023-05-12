@@ -13,7 +13,7 @@ public static class Scripts
             switch (starter)
             {
                 case "Charmander" or "Squirtle" or "Bulbasaur":
-                    Player.GetInstance().AddPokemon(starter, 5);
+                    Player.Instance.AddPokemon(starter, 5);
                     gotStarter = true;
                     break;
             }

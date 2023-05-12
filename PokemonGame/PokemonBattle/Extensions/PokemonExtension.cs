@@ -72,11 +72,11 @@ public static class PokemonExtension
         
     public static bool HasItem(this Pokemon pokemon) => pokemon.Item != null;
 
-    public static bool HasStatusCondition(this Pokemon pokemon, StatusConditionType conditionType) => pokemon.Status != null && pokemon.Status.IsActive && pokemon.Status.Conditon == conditionType;
+    public static bool HasStatusCondition(this Pokemon pokemon, StatusConditionType conditionType) => pokemon.Status != null && pokemon.Status.IsActive && pokemon.Status.Condition == conditionType;
 
     public static bool HasStatusCondition(this Pokemon pokemon) => pokemon.Status == null || pokemon.Status.IsActive;
 
-    public static bool HasStatusCondition(this Pokemon pokemon, List<StatusCondition> conditions) => conditions.Any(c => pokemon.HasStatusCondition(c.Conditon));
+    public static bool HasStatusCondition(this Pokemon pokemon, List<StatusCondition> conditions) => conditions.Any(c => pokemon.HasStatusCondition(c.Condition));
 
     public static bool HasStatusCondition(this Pokemon pokemon, params StatusConditionType[] conditionTypes) => conditionTypes.Any(c => pokemon.HasStatusCondition(c));
 

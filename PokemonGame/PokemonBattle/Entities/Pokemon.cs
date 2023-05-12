@@ -56,6 +56,7 @@ public class Pokemon
     public bool IsUnderground => false; // TODO
     public bool IsUnderwater => false; // TODO
     public bool IsProtected => Effects.Any(e => e.HasType(EffectType.Protect, EffectType.BanefulBunker));
+
     public bool IsFlying => false; // TODO
     public bool IsMinimized => false; // TODO
 
@@ -102,9 +103,17 @@ public class Pokemon
         return pokemon;
     }
 
-    private void LearnMove(Move move)
+    private void LearnMove(Move move, int? indexToReplace = null)
     {
-        throw new NotImplementedException();
+        if (indexToReplace != null && Moves.Count == 4)
+        {
+            Moves[(int)indexToReplace] = move;
+        }
+        else
+        {
+            Moves.Add(move);
+        }
+        
     }
 
     public override string ToString()
@@ -321,6 +330,30 @@ public class Pokemon
         OnFaint();
     }
 
+    private int TakeDamage(double percentage)
+    {
+        if (percentage > 1)
+        {
+            throw new ArgumentException(null, nameof(percentage));
+        }
+
+        var damage = Stats.HP * percentage;
+        
+        TakeDamage((int)damage);
+        return (int)damage;
+    }
+    private void HealHp(double percentage)
+    {
+        if (percentage > 1)
+        {
+            throw new ArgumentException(null, nameof(percentage));
+        }
+
+        var heal = Stats.HP * percentage;
+        
+        HealHp((int)heal);
+    }
+
     public void TransferItem(Item attackingPokemonItem, Pokemon defendingPokemon)
     {
         throw new NotImplementedException();
@@ -450,8 +483,134 @@ public class Pokemon
 
     public void OnTurnEnd()
     {
-        throw new NotImplementedException();
+        if (Status is { IsActive: true })
+        {
+            switch (Status.Condition)
+            {
+                case StatusConditionType.None:
+                    break;
+                case StatusConditionType.Burned:
+                    if (!this.HasAbility("Guts", "Facade"))
+                    {
+                        TakeDamage(1.0 / (this.HasAbility("Heatproof") ? 32 : 16));
+                    }
+                    break;
+                case StatusConditionType.Paralyzed:
+                    break;
+                case StatusConditionType.Frozen:
+                    break;
+                case StatusConditionType.Poisoned:
+                    if (this.HasAbility("Poison Heal"))
+                    {
+                        HealHp(1.0 / 16);
+                    }
+                    else
+                    {
+                        TakeDamage(1.0 / 16);
+                    }
+                    break;
+                case StatusConditionType.BadlyPoisoned:
+                    if (this.HasAbility("Poison Heal"))
+                    {
+                        HealHp(1.0 / 16);
+                    }
+                    else
+                    {
+                        TakeDamage((double)Status.CurrentTurn / 16);
+                    }
+                    break;
+                case StatusConditionType.Sleeping:
+                    // TODO Nightmare
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+
+            Status.OnEndTurn();
+        }
+
+        foreach (var condition in SecondaryStatusConditions)
+        {
+            switch (condition.Condition)
+            {
+                case SecondaryStatusConditionType.LeechSeed:
+                    var dmg = TakeDamage(1.0 / 8);
+                    // TODO defender gets healed {dmg}
+                    break;
+                case SecondaryStatusConditionType.Bind:
+                    TakeDamage(1.0 / 8);
+                    break;
+                case SecondaryStatusConditionType.Clamp:
+                    TakeDamage(1.0 / 8);
+                    break;
+                case SecondaryStatusConditionType.FireSpin:
+                    TakeDamage(1.0 / 8);
+                    break;
+                case SecondaryStatusConditionType.Infestation:
+                    TakeDamage(1.0 / 8);
+                    break;
+                case SecondaryStatusConditionType.MagmaStorm:
+                    TakeDamage(1.0 / 8);
+                    break;
+                case SecondaryStatusConditionType.SandTomb:
+                    TakeDamage(1.0 / 8);
+                    break;
+                case SecondaryStatusConditionType.SnapTrap:
+                    TakeDamage(1.0 / 8);
+                    break;
+                case SecondaryStatusConditionType.ThunderCage:
+                    TakeDamage(1.0 / 8);
+                    break;
+                case SecondaryStatusConditionType.Whirlpool:
+                    TakeDamage(1.0 / 8);
+                    break;
+                case SecondaryStatusConditionType.Wrap:
+                    TakeDamage(1.0 / 8);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+            {
+                
+            }
+        }
+
+        if (Item != null)
+        {
+            switch (Item.Name)
+            {
+                case "Leftovers":
+                    HealHp(1.0 / 16);
+                    break;
+                case "Black Sludge":
+                    if (this.HasType(PokemonType.Poison))
+                    {
+                        HealHp(1.0 / 16);
+                        break;
+                    }
+                    else
+                    {
+                        TakeDamage(1.0 / 8);
+                        break;
+                    }
+            } 
+        }
+
+        Flinched = false;
+        // TODO more
+        foreach (var effect in Effects)
+        {
+            if (effect is { IsActive: true, Type: EffectType.AquaRing })
+            {
+                HealHp(1.0 / 16);
+            }
+            effect.OnTurnEnd();
+        }
+        
+        // TODO Perish Song
     }
+
+    
 
     private void OnFaint()
     {

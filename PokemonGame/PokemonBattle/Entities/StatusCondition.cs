@@ -4,16 +4,22 @@ namespace PokemonGame.PokemonBattle.Entities;
 
 public class StatusCondition
 {
-    public StatusConditionType Conditon { get; }
-    public int Turns { get; internal set; }
+    public StatusConditionType Condition { get; }
+    private int Turns { get; set; }
 
-    public int CurrentTurn { get; internal set; }
+    public int CurrentTurn { get; private set; }
     public bool IsActive => Turns > 0;
 
-    public StatusCondition(StatusConditionType conditon, int startingTurns)
+    public StatusCondition(StatusConditionType condition, int startingTurns)
     {
-        Conditon = conditon;
+        Condition = condition;
         Turns = startingTurns;
         CurrentTurn = 0;
+    }
+
+    public void OnEndTurn()
+    {
+        CurrentTurn++;
+        Turns--;
     }
 }

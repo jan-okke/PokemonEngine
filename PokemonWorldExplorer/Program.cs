@@ -4,9 +4,9 @@ public abstract class Program
 {
     public static void Main(string[] args)
     {
-        var player = Player.GetInstance();
+        var player = Player.Instance;
 
-        player.CurrentMap.Display();
+        player.CurrentMap?.Display();
         while (true)
         {
             var command = Command.GetCommand();
@@ -23,24 +23,24 @@ public abstract class Program
                 {
                     case "up" or "north":
                         player.GoNorth();
-                        player.CurrentMap.Display();
+                        player.CurrentMap?.Display();
                         break;
                     case "down" or "south":
                         player.GoSouth();
-                        player.CurrentMap.Display();
+                        player.CurrentMap?.Display();
                         break;
                     case "left" or "west":
                         player.GoWest();
-                        player.CurrentMap.Display();
+                        player.CurrentMap?.Display();
                         break;
                     case "right" or "east":
                         player.GoEast();
-                        player.CurrentMap.Display();
+                        player.CurrentMap?.Display();
                         break;
                 }
                 break;
             case "look":
-                player.CurrentMap.DisplayConnections();
+                player.CurrentMap?.DisplayConnections();
                 break;
         }
     }

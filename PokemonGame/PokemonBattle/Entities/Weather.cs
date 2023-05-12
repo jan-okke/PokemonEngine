@@ -6,7 +6,7 @@ namespace PokemonGame.PokemonBattle.Entities;
 public class Weather
 {
     public WeatherCondition Condition { get; }
-    public int Turns { get; }
+    private int Turns { get; set; }
 
     public bool Active => Turns > 0;
 
@@ -23,5 +23,10 @@ public class Weather
     public bool IsConditionActive(params WeatherCondition[] conditions)
     {
         return conditions.Any(IsConditionActive);
+    }
+
+    public void OnTurnEnd()
+    {
+        Turns--;
     }
 }
