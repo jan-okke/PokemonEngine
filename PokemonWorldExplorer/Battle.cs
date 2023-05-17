@@ -1,4 +1,5 @@
-﻿using PokemonGame.PokemonBattle.Entities;
+﻿using PokemonGame;
+using PokemonGame.PokemonBattle.Entities;
 using PokemonGame.PokemonBattle.Interfaces;
 
 namespace WorldExplorer;
@@ -37,21 +38,28 @@ public static class BattleCommands
     {
         while (_battle != null && !_battle.IsOver())
         {
-            var view = GetView();
-            Console.WriteLine(view);
-            var command = Command.GetCommand();
-            switch (command.GetFirstWord())
+            try
             {
-                case "use":
-                    switch (command.GetSecondWord())
-                    {
-                        case "move":
-                            UseMove(command.GetThirdWord());
-                            break;
-                    }
-                    break;
+                var view = GetView();
+                Console.WriteLine(view);
+                var command = Command.GetCommand();
+                switch (command.GetFirstWord())
+                {
+                    case "use":
+                        switch (command.GetSecondWord())
+                        {
+                            case "move":
+                                UseMove(command.GetThirdWord());
+                                break;
+                        }
+
+                        break;
+                }
             }
-            
+            catch (Exception e)
+            {
+                DebugConsole.WriteLine(e.Message, ConsoleColor.Red);
+            }
         }
     }
 }

@@ -322,12 +322,12 @@ public class Pokemon
         }
     }
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(int amount, Pokemon dealer)
     {
         CurrentHp -= amount;
         if (CurrentHp >= 0) return;
         CurrentHp = 0;
-        OnFaint();
+        OnFaint(dealer);
     }
 
     private int TakeDamage(double percentage)
@@ -612,9 +612,63 @@ public class Pokemon
 
     
 
-    private void OnFaint()
+    private void OnFaint(Pokemon killer, bool expShared = false, bool originalTrainer = true, bool luckyEgg = false)
     {
-        throw new NotImplementedException();
+        killer.GainExperience(this, expShared, originalTrainer, luckyEgg);
+    }
+
+    private void GainExperience(Pokemon defeated, bool expShared, bool originalTrainer, bool luckyEgg)
+    {
+        double exp = defeated.ExpYield * defeated.Level;
+        exp /= 5.0;
+        if (expShared)
+        {
+            exp /= 2;
+        }
+
+        var lvMod = Math.Pow((double)(2 * defeated.Level + 10) / (defeated.Level + this.Level + 10), 2.5);
+
+        exp *= lvMod;
+        exp += 1;
+
+        if (!originalTrainer)
+        {
+            exp *= 1.5;
+        }
+
+        if (luckyEgg)
+        {
+            exp *= 1.5;
+        }
+        
+        // TODO 1,2x if past evo level
+        
+        // TODO 1,2x if affection
+        
+        // TODO EXP Powers.
+        
+        GainExperience((int)exp);
+    }
+
+    private void GainExperience(int amount)
+    {
+        Experience += amount;
+        var newLevel = Experience.AsLevel(ExperienceGroup);
+
+        if (newLevel > Level)
+        {
+            OnLevelUp(Level, newLevel);
+        }
+    }
+
+    private void OnLevelUp(int oldLevel, int newLevel)
+    {
+        Level = newLevel;
+        for (var i = oldLevel; i < newLevel; i++)
+        {
+            Console.WriteLine($"{this} Leveled up to level {i}!");
+        }
+        
     }
 
     public void LowerHappiness(int lowHappinessMod, int midHappinessMod, int highHappinessMod)

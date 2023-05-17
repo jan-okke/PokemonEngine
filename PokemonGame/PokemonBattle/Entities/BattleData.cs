@@ -1,13 +1,18 @@
 ﻿using System.Collections.Generic;
+using PokemonGame.PokemonBattle.Extensions;
 
 namespace PokemonGame.PokemonBattle.Entities;
 
 public class BattleData
 {
-    public Dictionary<string, object> Data { get; }
+    public int Turn { get; }
+    public Move Move { get; }
+    public bool IsPlayerTurn { get; }
 
-    public BattleData()
+    public BattleData(int turn, Move move, bool isPlayerTurn)
     {
-        Data = new Dictionary<string, object>();
+        Turn = turn;
+        Move = move;
+        IsPlayerTurn = isPlayerTurn;
     }
 }

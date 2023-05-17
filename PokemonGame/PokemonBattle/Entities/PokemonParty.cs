@@ -24,6 +24,11 @@ public class PokemonParty : IPokemonParty
         Pokemons = new List<Pokemon> { pokemon };
     }
 
+    public PokemonParty()
+    {
+        Pokemons = new List<Pokemon>();
+    }
+
     public List<Pokemon> GetPokemons()
     {
         return Pokemons;

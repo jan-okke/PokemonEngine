@@ -131,8 +131,10 @@ public class Battle : IBattle
 
         var damage = CalculateDamage(user, target, playerTurn, move);
         CheckEffects(user, target, playerTurn, move);
-        target.TakeDamage(damage);
+        target.TakeDamage(damage, user);
         move.ReducePowerPoints(target.HasAbility("Pressure") ? 2 : 1);
+
+        Log.AddData(Turn, move, playerTurn);
     }
 
     private void CheckEffects(Pokemon user, Pokemon target, bool playerTurn, Move move)
@@ -389,7 +391,7 @@ public class Battle : IBattle
 
                 break;
             case "Eerie Spell":
-                GetLastMove().ReducePowerPoints(3);
+                GetLastMove(playerTurn, true)?.ReducePowerPoints(3);
                 break; // TODO this should target the opposing pokemons last move. might not work!
             case "Electroweb":
                 if (Chance(10))
@@ -1257,7 +1259,7 @@ public class Battle : IBattle
                     throw new Exception("Not enough hp left");
                 }
 
-                attackingPokemon.TakeDamage(attackingPokemon.Stats.HP / 2);
+                attackingPokemon.TakeDamage(attackingPokemon.Stats.HP / 2, defendingPokemon);
                 attackingPokemon.IncreaseStatStage(Stat.Attack, 12);
                 break;
             case "Bestow":
@@ -1298,7 +1300,7 @@ public class Battle : IBattle
                     throw new Exception("Not enough hp left");
                 }
 
-                attackingPokemon.TakeDamage(attackingPokemon.Stats.HP / 3);
+                attackingPokemon.TakeDamage(attackingPokemon.Stats.HP / 3, defendingPokemon);
                 attackingPokemon.IncreaseAllStatStagesBy(1);
                 break;
             case "Coaching": break; // TODO
@@ -1549,7 +1551,7 @@ public class Battle : IBattle
 
         var isCriticalHit = CriticalHitCheck(user, target, move);
 
-        var power = CalculateMovePower(attackingParty, defendingSide, user, target, move);
+        var power = CalculateMovePower(attackingParty, defendingSide, user, target, move, playerTurn);
         var attack = CalculateAttack(user, move);
         var defense = CalculateDefense(target, move);
         var targetMod = CalculateTargetMod(move);
@@ -1591,7 +1593,7 @@ public class Battle : IBattle
     }
 
     private double CalculateMovePower(IPokemonParty attackingParty, BattlerSide defenderSide, Pokemon attacker,
-        Pokemon defender, Move move)
+        Pokemon defender, Move move, bool playerTurn)
     {
         double power = move.BasePower;
         #region Moves
@@ -1627,14 +1629,14 @@ public class Battle : IBattle
 
                 break;
             case "Fusion Flare":
-                if (GetLastMove().Name == "Fusion Bolt")
+                if (GetLastMove(playerTurn)?.Name == "Fusion Bolt")
                 {
                     power *= 2;
                 }
 
                 break;
             case "Fusion Bolt":
-                if (GetLastMove().Name == "Fusion Flare")
+                if (GetLastMove(playerTurn)?.Name == "Fusion Flare")
                 {
                     power *= 2;
                 }
@@ -1992,9 +1994,9 @@ public class Battle : IBattle
         return Terrain is { Active: true } && Terrain.HasEffect(effect);
     }
 
-    private Move GetLastMove()
+    private Move? GetLastMove(bool playerTurn, bool includingLastTurn = false)
     {
-        throw new NotImplementedException();
+        return !includingLastTurn ? Log.Data[Turn].FirstOrDefault(b => b.IsPlayerTurn != playerTurn)?.Move : Log.Data.FirstOrDefault(k => k.Value.Any(b => b.IsPlayerTurn != playerTurn)).Value.FirstOrDefault(b => b.IsPlayerTurn)?.Move;
     }
 
     private bool IsSurpressingWeather()
