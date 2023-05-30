@@ -69,15 +69,12 @@ public class Battle : IBattle
         PlayerParty.SendOut(PlayerParty.GetFirstAlivePokemon());
         EnemyParty.SendOut(EnemyParty.GetFirstAlivePokemon());
 
-        if (Weather != null)
-        {
-            OnTurnEnd += Weather.HandleOnTurnEnd;
-        }
     }
 
     private void SetTerrain(TerrainEffect terrainEffect, int terrainTurns)
     {
         Terrain = new Terrain(terrainEffect, terrainTurns);
+        
         if (Terrain != null)
         {
             OnTurnEnd += Terrain.HandleOnTurnEnd;
@@ -87,6 +84,11 @@ public class Battle : IBattle
     private void SetWeather(WeatherCondition weatherCondition, int weatherTurns)
     {
         Weather = new Weather(weatherCondition, weatherTurns);
+        
+        if (Weather != null)
+        {
+            OnTurnEnd += Weather.HandleOnTurnEnd;
+        }
     }
 
     public bool IsOver()
