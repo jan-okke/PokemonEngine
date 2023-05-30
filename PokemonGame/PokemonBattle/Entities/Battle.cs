@@ -78,7 +78,7 @@ public class Battle : IBattle
     private void SetTerrain(TerrainEffect terrainEffect, int terrainTurns)
     {
         Terrain = new Terrain(terrainEffect, terrainTurns);
-        if (Weather != null)
+        if (Terrain != null)
         {
             OnTurnEnd += Terrain.HandleOnTurnEnd;
         }
@@ -128,7 +128,6 @@ public class Battle : IBattle
             }
         }
         OnTurnEnd?.Invoke(this, new TurnEndEventHandlerArgs());
-        //EndTurn();
     }
 
     private void HandleMoveTurn(Pokemon user, Pokemon target, Move move, bool playerTurn)
