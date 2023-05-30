@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using PokemonGame.PokemonBattle.Enums;
 
@@ -5,6 +6,9 @@ namespace PokemonGame.PokemonBattle.Entities;
 
 public class Weather
 {
+    public event OnWeatherEnd? OnWeatherEnd;
+    public event OnWeatherCreate? OnWeatherCreate;
+    
     public WeatherCondition Condition { get; }
     private int Turns { get; set; }
 
@@ -14,6 +18,7 @@ public class Weather
     {
         Condition = condition;
         Turns = startingTurns;
+        OnWeatherCreate?.Invoke(this, new OnWeatherCreateArgs());
     }
 
     public bool IsConditionActive(WeatherCondition condition)
@@ -25,8 +30,18 @@ public class Weather
         return conditions.Any(IsConditionActive);
     }
 
-    public void OnTurnEnd()
+    private void OnTurnEnd()
     {
+        Console.WriteLine("Yo a weather turn ended lol");
         Turns--;
+        if (Turns == 0)
+        {
+            OnWeatherEnd?.Invoke(this, new OnWeatherEndArgs());
+        }
+    }
+
+    public void HandleOnTurnEnd(object sender, TurnEndEventHandlerArgs e)
+    {
+        OnTurnEnd();
     }
 }

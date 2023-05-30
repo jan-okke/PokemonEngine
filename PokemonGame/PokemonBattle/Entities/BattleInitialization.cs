@@ -18,4 +18,9 @@ public class BattleInitialization : IBattleInitialize
     {
         return new Battle(party, new PokemonParty(Pokemon.GetPokemon(name, level)));
     }
+
+    public IBattle StartWildBattle(IPokemonParty party, string name, int level, Weather weather)
+    {
+        return new Battle(party, new PokemonParty(Pokemon.GetPokemon(name, level)), weather: weather);
+    }
 }

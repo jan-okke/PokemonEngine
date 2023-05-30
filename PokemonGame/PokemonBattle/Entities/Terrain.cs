@@ -4,6 +4,8 @@ namespace PokemonGame.PokemonBattle.Entities;
 
 public class Terrain
 {
+    public event OnTerrainEnd? OnTerrainEnd;
+    public event OnTerrainCreate? OnTerrainCreate;
     public TerrainEffect Effect { get; }
     private int Turns { get; set; }
 
@@ -13,10 +15,20 @@ public class Terrain
     {
         Effect = effect;
         Turns = startingTurns;
+        OnTerrainCreate?.Invoke(this, new OnTerrainCreateArgs());
     }
 
-    public void OnTurnEnd()
+    private void OnTurnEnd()
     {
         Turns--;
+        if (Turns == 0)
+        {
+            OnTerrainEnd?.Invoke(this, new OnTerrainEndArgs());
+        }
+    }
+
+    public void HandleOnTurnEnd(object sender, TurnEndEventHandlerArgs e)
+    {
+        OnTurnEnd();
     }
 }

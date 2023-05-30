@@ -11,10 +11,15 @@ namespace PokemonGame.PokemonBattle.Entities;
 
 public class Pokemon
 {
+    public event OnFaint? OnFaint;
+    public event OnGainExp? OnGainExp;
+    public event OnLevelUp? OnLevelUp;
+    public event OnTakeDamage? OnTakeDamage;
+    
     public virtual string Name => "";
-    public int Level { get; internal set; }
-    public int Experience { get; internal set; }
-    public Ability? Ability { get; internal set; }
+    public int Level { get; private set; }
+    private int Experience { get; set; }
+    public Ability? Ability { get; private set; }
     public virtual List<Ability> AvailableAbilities => new();
     public virtual List<Ability> AvailableHiddenAbilities => new();
     public Item? Item { get; internal set; }
@@ -327,7 +332,8 @@ public class Pokemon
         CurrentHp -= amount;
         if (CurrentHp >= 0) return;
         CurrentHp = 0;
-        OnFaint(dealer);
+        OnTakeDamage?.Invoke(this, new OnTakeDamageArgs(amount, dealer));
+        Faint(dealer);
     }
 
     private int TakeDamage(double percentage)
@@ -612,8 +618,9 @@ public class Pokemon
 
     
 
-    private void OnFaint(Pokemon killer, bool expShared = false, bool originalTrainer = true, bool luckyEgg = false)
+    private void Faint(Pokemon killer, bool expShared = false, bool originalTrainer = true, bool luckyEgg = false)
     {
+        OnFaint?.Invoke(this, new OnFaintArgs(killer));
         killer.GainExperience(this, expShared, originalTrainer, luckyEgg);
     }
 
@@ -652,23 +659,13 @@ public class Pokemon
 
     private void GainExperience(int amount)
     {
+        OnGainExp?.Invoke(this, new OnGainExpArgs(amount));
         Experience += amount;
         var newLevel = Experience.AsLevel(ExperienceGroup);
 
-        if (newLevel > Level)
-        {
-            OnLevelUp(Level, newLevel);
-        }
-    }
-
-    private void OnLevelUp(int oldLevel, int newLevel)
-    {
+        if (newLevel == Level) return;
+        OnLevelUp?.Invoke(this, new OnLevelUpArgs(Level, newLevel));
         Level = newLevel;
-        for (var i = oldLevel; i < newLevel; i++)
-        {
-            Console.WriteLine($"{this} Leveled up to level {i}!");
-        }
-        
     }
 
     public void LowerHappiness(int lowHappinessMod, int midHappinessMod, int highHappinessMod)

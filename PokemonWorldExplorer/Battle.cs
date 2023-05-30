@@ -1,5 +1,6 @@
 ﻿using PokemonGame;
 using PokemonGame.PokemonBattle.Entities;
+using PokemonGame.PokemonBattle.Enums;
 using PokemonGame.PokemonBattle.Interfaces;
 
 namespace WorldExplorer;
@@ -11,7 +12,7 @@ public static class BattleCommands
     public static void StartWildBattle(IBattleInitialize initializer, IPokemonParty party, string name, int level)
     {
         Console.WriteLine("Starting a battle!");
-        _battle = initializer.StartWildBattle(party, name, level);
+        _battle = initializer.StartWildBattle(party, name, level, new Weather(WeatherCondition.Rain, 5));
         Loop();
     }
 

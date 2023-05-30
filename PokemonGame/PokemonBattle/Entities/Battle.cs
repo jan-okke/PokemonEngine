@@ -11,6 +11,9 @@ namespace PokemonGame.PokemonBattle.Entities;
 
 public class Battle : IBattle
 {
+    public event TurnEndEventHandler? OnTurnEnd = EndTurn;
+    
+    
     private PokemonParty PlayerParty { get; }
     private PokemonParty EnemyParty { get; }
     private BattlerSide PlayerSide { get; }
@@ -65,11 +68,20 @@ public class Battle : IBattle
         
         PlayerParty.SendOut(PlayerParty.GetFirstAlivePokemon());
         EnemyParty.SendOut(EnemyParty.GetFirstAlivePokemon());
+
+        if (Weather != null)
+        {
+            OnTurnEnd += Weather.HandleOnTurnEnd;
+        }
     }
 
     private void SetTerrain(TerrainEffect terrainEffect, int terrainTurns)
     {
         Terrain = new Terrain(terrainEffect, terrainTurns);
+        if (Weather != null)
+        {
+            OnTurnEnd += Terrain.HandleOnTurnEnd;
+        }
     }
 
     private void SetWeather(WeatherCondition weatherCondition, int weatherTurns)
@@ -115,8 +127,8 @@ public class Battle : IBattle
                 HandleMoveTurn(user, target, move, true);
             }
         }
-
-        EndTurn();
+        OnTurnEnd?.Invoke(this, new TurnEndEventHandlerArgs());
+        //EndTurn();
     }
 
     private void HandleMoveTurn(Pokemon user, Pokemon target, Move move, bool playerTurn)
@@ -1367,23 +1379,24 @@ public class Battle : IBattle
 
     private static bool Chance(int outOfHundred) => new Random().Next(0, 100) <= outOfHundred;
 
-    private void EndTurn()
+    private static void EndTurn(object sender, TurnEndEventHandlerArgs e)
     {
-        if (!IsOngoing)
+        if (sender is not Battle battle)
+        {
+            return;
+        }
+        if (!battle.IsOngoing)
         {
             DebugConsole.WriteLine("Battle is over!");
             return;
         }
 
-        Turn++;
+        battle.Turn++;
         // TODO active battlers might need a fix (can cause to be the new pokemon before its sent out)
-        foreach (var p in GetActiveBattlers())
+        foreach (var p in battle.GetActiveBattlers())
         {
             p.OnTurnEnd();
         }
-
-        Terrain?.OnTurnEnd();
-        Weather?.OnTurnEnd();
     }
 
     public void UseItem(Item item, Pokemon target)
